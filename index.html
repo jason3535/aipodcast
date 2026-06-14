@@ -4,6 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AI Podcast · AI 播客 — 双语播客阅读</title>
+<meta name="description" content="知名 AI 人物的播客 · 双语全文阅读,原文与翻译对照,核心观点速览。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AI Podcast · AI 播客">
+<meta property="og:title" content="AI Podcast · AI 播客 — 双语播客全文阅读">
+<meta property="og:description" content="知名 AI 人物的播客 · 双语全文阅读,原文与翻译对照,核心观点速览。">
+<meta property="og:url" content="https://aipodcast.jasonlin.tech/">
+<meta property="og:image" content="https://aipodcast.jasonlin.tech/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Podcast · AI 播客">
+<meta name="twitter:description" content="知名 AI 人物的播客 · 双语全文阅读。">
+<meta name="twitter:image" content="https://aipodcast.jasonlin.tech/assets/og.png">
 <style>
   :root{
     --bg:#ffffff; --bg-alt:#fbfbfd; --surface:#ffffff; --surface-2:#f5f5f7;
@@ -797,7 +810,7 @@ async function ttsPlay(){
   try{
     const r=await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voice}`,{
       method:'POST',headers:{'xi-api-key':key,'Content-Type':'application/json','Accept':'audio/mpeg'},
-      body:JSON.stringify({text:text.slice(0,2500),model_id:'eleven_multilingual_v2'})});
+      body:JSON.stringify({text:text.slice(0,2500),model_id:'eleven_flash_v2_5'})});
     if(!r.ok){const t=await r.text();if(r.status===401)localStorage.removeItem('el_key');throw new Error(r.status+' '+t.slice(0,140));}
     const url=URL.createObjectURL(await r.blob());
     if(ttsAudio)ttsAudio.pause();
@@ -877,10 +890,28 @@ function render(){
   else html=vHome();
   $('#app').innerHTML=html;
   document.querySelectorAll('.nav .links a').forEach(a=>a.classList.toggle('on',a.dataset.route===parts[0]));
+  updateMeta(parts);
   window.scrollTo(0,0);
   syncSeg();
   observeReveals();
   initTOC();
+}
+/* 按路由更新标题/描述/OG —— 微信在内置浏览器分享当前页时会读实时标题 */
+function metaSet(key,isProp,val){const sel=isProp?`meta[property="${key}"]`:`meta[name="${key}"]`;
+  let m=document.querySelector(sel);if(!m){m=document.createElement('meta');m.setAttribute(isProp?'property':'name',key);document.head.appendChild(m);}
+  m.setAttribute('content',val);}
+function updateMeta(parts){
+  let title='AI Podcast · AI 播客 — 双语播客全文阅读';
+  let desc='知名 AI 人物的播客 · 双语全文阅读,原文与翻译对照,核心观点速览。';
+  if(parts[0]==='episode'){const e=EPISODES.find(x=>x.id===parts[1]);if(e){const p=PEOPLE[e.pid];
+    title=`${e.tZh} · ${p.zh} — AI Podcast`;desc=`${p.zh}（${e.pod.zh}）双语全文 + 核心观点。${e.sZh||''}`;}}
+  else if(parts[0]==='person'){const p=PEOPLE[parts[1]];if(p){title=`${p.zh} · ${p.en} — AI Podcast`;desc=`${p.zh}（${p.tiZh}）的播客,双语全文阅读。`;}}
+  else if(parts[0]==='pod'){const k=POD_SLUG[parts[1]],i=POD_INFO[k];if(i){title=`${k} · ${i.zh} — AI Podcast`;desc=i.cn;}}
+  document.title=title;
+  metaSet('description',false,desc);
+  metaSet('og:title',true,title);metaSet('twitter:title',true,title);
+  metaSet('og:description',true,desc);metaSet('twitter:description',true,desc);
+  metaSet('og:url',true,'https://aipodcast.jasonlin.tech/'+(location.hash||''));
 }
 function observeReveals(){
   const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.08});

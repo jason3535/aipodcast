@@ -1,4 +1,3 @@
-config.js
 .venv/
 pipeline/.venv/
 __pycache__/
