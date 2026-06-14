@@ -1,0 +1,54 @@
+{
+ "consensus": [
+  {
+   "en": "Pre-training scaling laws continue to deliver gains as expected.",
+   "zh": "预训练的缩放定律继续如预期带来收益。"
+  },
+  {
+   "en": "RL scaling shows similar log-linear improvements as pre-training.",
+   "zh": "强化学习缩放展现出与预训练类似的对数线性改进。"
+  },
+  {
+   "en": "Economic diffusion of AI is fast but not instantaneous.",
+   "zh": "AI的经济扩散快速但并非瞬间完成。"
+  },
+  {
+   "en": "AI progress follows a soft takeoff with steep exponentials.",
+   "zh": "AI进展遵循陡峭指数曲线的软起飞模式。"
+  },
+  {
+   "en": "Frontier labs need safeguards like bio classifiers and alignment work.",
+   "zh": "前沿实验室需要生物分类器和对齐工作等保障措施。"
+  },
+  {
+   "en": "AGI will likely be achieved within a decade, with high confidence.",
+   "zh": "AGI很可能在十年内实现，信心很高。"
+  }
+ ],
+ "contrarian": [
+  {
+   "en": "The public fails to recognize how close we are to the end of the exponential.",
+   "zh": "公众未能认识到我们离指数增长的终点有多近。"
+  },
+  {
+   "en": "Continual learning may not be a barrier; generalization from pre-training and RL may suffice.",
+   "zh": "持续学习可能不是障碍；预训练和强化学习的泛化可能就足够了。"
+  },
+  {
+   "en": "Profitability in AI labs comes from underestimating demand, not from underinvestment.",
+   "zh": "AI实验室的盈利来自低估需求，而非投资不足。"
+  },
+  {
+   "en": "A country of geniuses in a data center could arrive in 1-3 years, not 10.",
+   "zh": "数据中心里的天才之国可能在1-3年内到来，而非10年。"
+  },
+  {
+   "en": "Authoritarianism may become morally obsolete in the age of powerful AI.",
+   "zh": "在强大AI时代，威权主义可能在道德上变得过时。"
+  },
+  {
+   "en": "AI constitutions should be set through competition between companies, not government mandate.",
+   "zh": "AI宪法应通过公司间的竞争来制定，而非政府指令。"
+  }
+ ]
+}
