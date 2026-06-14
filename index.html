@@ -354,8 +354,6 @@
   <div class="spacer"></div>
   <button class="icon" title="搜索 (/)" aria-label="搜索" onclick="toggleSearch()">
     <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8" cy="8" r="5"/><line x1="11.7" y1="11.7" x2="15.5" y2="15.5"/></svg></button>
-  <button class="icon" title="语音朗读设置" aria-label="语音设置" onclick="ttsSettings()">
-    <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M3.5 7h2.4L9.5 4v10L5.9 11H3.5z"/><path d="M12.4 6.6c1.2 1.3 1.2 4.5 0 5.8"/></svg></button>
   <button class="icon" title="深色 / 浅色" aria-label="主题" onclick="toggleTheme()" id="themeBtn">
     <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="9" r="6"/><path d="M9 3a6 6 0 000 12z" fill="currentColor" stroke="none"/></svg></button>
 </nav>
@@ -376,8 +374,6 @@
 </div>
 
 <div id="app"></div>
-
-<script src="config.js"></script>
 
 <script>
 /* ============================ DATA ============================ */
@@ -772,9 +768,10 @@ function initTOC(){
   heads.forEach(h=>tocObserver.observe(h));
 }
 
-/* ============================ TTS 选中朗读 (ElevenLabs) ============================ */
-/* ElevenLabs Key 由 config.js 注入(已 gitignore,不进仓库);缺失时回退到 🔊 设置里手填。 */
-const EL_KEY=(window.AIPODCAST_EL_KEY||localStorage.el_key||'');
+/* ============================ TTS 选中朗读 ============================ */
+/* 朗读经 Cloudflare Worker 代理(密钥存于 Worker,不在前端/仓库)。部署见 tts-worker/README.md。
+   若你的 workers.dev subdomain 不同,改这里为 wrangler deploy 输出的实际地址。 */
+const TTS_PROXY='https://aipodcast-tts.992978142.workers.dev';
 let ttsAudio=null;
 function inReader(node){const el=node&&node.nodeType===3?node.parentElement:node;return !!(el&&el.closest&&el.closest('.reader'));}
 function ttsCheckSel(){
@@ -789,35 +786,21 @@ function ttsCheckSel(){
   btn.style.top=(window.scrollY+r.top-46)+'px';
   btn.dataset.text=text;
 }
-function ttsSettings(){
-  const cur=localStorage.el_key||'';
-  const k=prompt('ElevenLabs API Key（仅存于本地浏览器,不上传服务器；留空可清除）：',cur);
-  if(k===null)return;
-  if(k.trim()){localStorage.el_key=k.trim();
-    const v=prompt('语音 Voice ID（可选,默认 Rachel）：',localStorage.el_voice||'21m00Tcm4TlvDq8ikWAM');
-    if(v&&v.trim())localStorage.el_voice=v.trim();
-    alert('已保存。在阅读页选中文本即可朗读。');
-  }else{localStorage.removeItem('el_key');alert('已清除 API Key。');}
-}
 async function ttsPlay(){
   const btn=$('#ttsBtn');const text=btn.dataset.text;if(!text)return;
   if(btn.classList.contains('loading'))return;                 // 处理中:忽略重复点击
   if(ttsAudio&&!ttsAudio.paused){ttsAudio.pause();ttsAudio=null;btn.classList.remove('playing');btn.querySelector('.lbl').textContent='朗读所选';return;}
-  const key=localStorage.el_key||EL_KEY;
-  if(!key){ttsSettings();return;}
-  const voice=localStorage.el_voice||'21m00Tcm4TlvDq8ikWAM';
   btn.classList.add('loading');btn.classList.remove('playing');btn.querySelector('.lbl').textContent='处理中…';
   try{
-    const r=await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voice}`,{
-      method:'POST',headers:{'xi-api-key':key,'Content-Type':'application/json','Accept':'audio/mpeg'},
-      body:JSON.stringify({text:text.slice(0,2500),model_id:'eleven_flash_v2_5'})});
+    const r=await fetch(TTS_PROXY,{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({text:text.slice(0,2500)})});
     if(!r.ok){
       let msg=`HTTP ${r.status}`;
       try{const j=JSON.parse(await r.text());const dt=j.detail||j;const code=(dt.code||'')+'';
-        if(/quota/i.test(code)||/quota/i.test(dt.message||'')) msg='ElevenLabs 额度/限额不足 —— 请在后台把该 API Key 的字符限额调高(或确认账户余额)';
-        else if(/invalid_api_key|unauthorized/i.test(code)) msg='ElevenLabs API Key 无效,请在 🔊 设置里更新';
+        if(/quota/i.test(code)||/quota/i.test(dt.message||'')) msg='额度/限额不足 —— 请在 ElevenLabs 后台调高该 Key 限额或确认余额';
         else msg=dt.message||code||msg;
-      }catch(_){}
+      }catch(_){ if(r.status===403) msg='朗读代理拒绝(来源不在白名单)'; }
       throw new Error(msg);
     }
     const url=URL.createObjectURL(await r.blob());
