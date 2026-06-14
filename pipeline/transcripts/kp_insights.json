@@ -1,0 +1,54 @@
+{
+ "consensus": [
+  {
+   "en": "Pre-training is like crappy evolution, booting up intelligence via internet imitation.",
+   "zh": "预训练就像粗糙的进化，通过模仿互联网来启动智能。"
+  },
+  {
+   "en": "In-context learning is working memory; weights are hazy recollection.",
+   "zh": "上下文学习是工作记忆；权重是模糊的记忆。"
+  },
+  {
+   "en": "RL is terrible but better than pure imitation; it sucks supervision through a straw.",
+   "zh": "强化学习很糟糕，但比纯模仿好；它通过吸管吸取监督信号。"
+  },
+  {
+   "en": "Agents will take a decade to mature, not a year.",
+   "zh": "智能体需要十年才能成熟，而不是一年。"
+  },
+  {
+   "en": "Self-driving analogy: demos are easy, product is hard; march of nines.",
+   "zh": "自动驾驶类比：演示容易，产品难；九的推进。"
+  },
+  {
+   "en": "Education should maximize 'Eurekas per second' via well-built ramps to knowledge.",
+   "zh": "教育应通过精心构建的知识阶梯最大化‘每秒顿悟次数’。"
+  }
+ ],
+ "contrarian": [
+  {
+   "en": "We're building ghosts, not animals; AI is a different kind of intelligence.",
+   "zh": "我们建造的是幽灵，不是动物；AI是一种不同的智能。"
+  },
+  {
+   "en": "Humans don't really use reinforcement learning for intelligence tasks.",
+   "zh": "人类实际上并不使用强化学习来完成智能任务。"
+  },
+  {
+   "en": "AI progress is continuous with computing automation, not a discrete explosion.",
+   "zh": "AI进步与计算自动化是连续的，而非离散的爆发。"
+  },
+  {
+   "en": "The cognitive core could be as small as a billion parameters, stripped of memory.",
+   "zh": "认知核心可能小到十亿参数，剥离记忆。"
+  },
+  {
+   "en": "Model collapse from synthetic data is a fundamental problem; entropy is needed.",
+   "zh": "合成数据导致的模型崩溃是一个根本性问题；需要熵。"
+  },
+  {
+   "en": "Current coding agents are like slop; autocomplete is the sweet spot.",
+   "zh": "当前的编码智能体就像垃圾；自动补全才是最佳点。"
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+# 必装
+anthropic>=0.92
+
+# 取转录（按需，三选一/链式回退）
+youtube-transcript-api>=0.6      # 首选：直接拉字幕轨
+yt-dlp>=2024.0                   # 拉自动字幕 / 下音频
+# openai-whisper>=20231117       # 最后回退：本地转录（另需系统装 ffmpeg）

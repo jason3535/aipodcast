@@ -1,0 +1,6 @@
+config.js
+.venv/
+pipeline/.venv/
+__pycache__/
+*.pyc
+.DS_Store
