@@ -811,7 +811,15 @@ async function ttsPlay(){
     const r=await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voice}`,{
       method:'POST',headers:{'xi-api-key':key,'Content-Type':'application/json','Accept':'audio/mpeg'},
       body:JSON.stringify({text:text.slice(0,2500),model_id:'eleven_flash_v2_5'})});
-    if(!r.ok){const t=await r.text();if(r.status===401)localStorage.removeItem('el_key');throw new Error(r.status+' '+t.slice(0,140));}
+    if(!r.ok){
+      let msg=`HTTP ${r.status}`;
+      try{const j=JSON.parse(await r.text());const dt=j.detail||j;const code=(dt.code||'')+'';
+        if(/quota/i.test(code)||/quota/i.test(dt.message||'')) msg='ElevenLabs 额度/限额不足 —— 请在后台把该 API Key 的字符限额调高(或确认账户余额)';
+        else if(/invalid_api_key|unauthorized/i.test(code)) msg='ElevenLabs API Key 无效,请在 🔊 设置里更新';
+        else msg=dt.message||code||msg;
+      }catch(_){}
+      throw new Error(msg);
+    }
     const url=URL.createObjectURL(await r.blob());
     if(ttsAudio)ttsAudio.pause();
     ttsAudio=new Audio(url);ttsAudio.play();
@@ -819,7 +827,8 @@ async function ttsPlay(){
     ttsAudio.onended=()=>{btn.classList.remove('playing');btn.style.display='none';URL.revokeObjectURL(url);};
   }catch(err){
     btn.classList.remove('loading','playing');btn.querySelector('.lbl').textContent='朗读所选';
-    alert('朗读失败：'+err.message+'\n（若为 401 请检查 Key；本地 file:// 可能受 CORS 限制,建议用本地服务器或部署后使用）');
+    const net=/fetch|network|load failed/i.test(err.message||'');
+    alert('朗读失败：'+err.message+(net?'\n（网络问题,请检查连接或代理）':''));
   }
 }
 function ttsInit(){document.addEventListener('mouseup',()=>setTimeout(ttsCheckSel,10));}
