@@ -113,7 +113,7 @@ def translate(text, guest):
 def insights(text):
     ins_sys = (f"""你是 AI Podcast 编辑。读访谈英文转录,提炼两组要点,输出 JSON:
 {{"consensus":[{{"en":"...","zh":"..."}}],"contrarian":[{{"en":"...","zh":"..."}}]}}
-- consensus(共识):与业界主流一致的关键判断,4-6 条。
+- consensus(核心观点):嘉宾在本期最重要、最值得记住的主张与判断,4-6 条。
 - contrarian(反共识):与主流/普遍预期相左的逆向、反直觉观点,4-6 条。
 每条 en≤22 词 + 地道中文 zh,基于真实内容不杜撰。严格用术语表。只输出 JSON。
 术语表:
