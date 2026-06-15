@@ -118,7 +118,7 @@ def insights(text):
 每条 en≤22 词 + 地道中文 zh,基于真实内容不杜撰。严格用术语表。只输出 JSON。
 术语表:
 {GT}""")
-    return call(ins_sys, "英文转录:\n" + text, mx=4000)
+    return call(ins_sys, "英文转录:\n" + text[:120000], mx=4000)
 
 
 def meta(text, guest):
@@ -166,7 +166,7 @@ def main():
 
     json.dump({"ts": ts, "insights": ins}, open(TRANS / f"ep_{vid}.json", "w"), ensure_ascii=False)
 
-    ep = {"id": f"{a.pid}-{re.sub(r'[^a-z0-9]+','',a.pod_en.lower())[:8]}", "pid": a.pid,
+    ep = {"id": f"{a.pid}-{re.sub(r'[^a-z0-9]+','',a.pod_en.lower())[:8]}-{(a.date or (ydate[:4] if ydate else ''))[:4]}", "pid": a.pid,
           "pod": {"en": a.pod_en, "zh": a.pod_zh}, "date": a.date or (f"{ydate[:4]}-{ydate[4:6]}-{ydate[6:]}" if ydate else ""),
           "min": a.min or ymin, "fields": [f.strip() for f in a.fields.split(",") if f.strip()],
           "src": f"https://youtu.be/{vid}", "tEn": tEn, "tZh": tZh, "sEn": sEn, "sZh": sZh,
