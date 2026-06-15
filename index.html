@@ -880,6 +880,17 @@ function searchKey(e){
 
 /* ============================ ROUTER ============================ */
 function go(h){location.hash=h;}
+/* 盘古之白:中文与英文/数字之间自动补空格(渲染时处理文本节点,纯英文节点不受影响) */
+const CJK='\\u4e00-\\u9fff\\u3040-\\u30ff\\u3400-\\u4dbf';
+const RE1=new RegExp('(['+CJK+'])([A-Za-z0-9%])','g');
+const RE2=new RegExp('([A-Za-z0-9%\\)\\]])(['+CJK+'])','g');
+function pangu(t){return t.replace(RE1,'$1 $2').replace(RE2,'$1 $2');}
+function pangufy(root){
+  const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),nodes=[];let n;
+  while(n=w.nextNode())nodes.push(n);
+  const cjk=/[一-鿿]/;
+  nodes.forEach(nd=>{const v=nd.nodeValue;if(v&&cjk.test(v)){const nv=pangu(v);if(nv!==v)nd.nodeValue=nv;}});
+}
 function render(){
   const h=location.hash||'#/';
   const[path,query]=h.slice(2).split('?');
@@ -895,6 +906,7 @@ function render(){
   else if(parts[0]==='episode')html=vEpisode(parts[1]);
   else html=vHome();
   $('#app').innerHTML=html;
+  pangufy($('#app'));
   document.body.dataset.route=parts[0]||'home';
   document.querySelectorAll('.nav .links a').forEach(a=>a.classList.toggle('on',a.dataset.route===parts[0]));
   updateMeta(parts);
