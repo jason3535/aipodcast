@@ -36,20 +36,22 @@ export default {
     if (!text.trim()) return new Response('no text', { status: 400, headers: cors });
     const voice = (body.voice || DEFAULT_VOICE).toString().replace(/[^A-Za-z0-9]/g, '');
 
-    const r = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voice}`, {
+    // with-timestamps:返回 JSON {audio_base64, alignment:{characters[], character_start_times_seconds[], ...}}
+    // 供前端做「朗读跟读」字符级进度高亮。
+    const r = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voice}/with-timestamps`, {
       method: 'POST',
       headers: {
         'xi-api-key': env.ELEVENLABS_KEY,
         'Content-Type': 'application/json',
-        'Accept': 'audio/mpeg',
+        'Accept': 'application/json',
       },
       body: JSON.stringify({ text, model_id: MODEL }),
     });
 
-    // 透传错误体(便于前端显示额度/限额等信息),成功则透传音频流
+    // 透传错误体(便于前端显示额度/限额等信息),成功则透传 JSON
     return new Response(r.body, {
       status: r.status,
-      headers: { ...cors, 'Content-Type': r.headers.get('Content-Type') || 'audio/mpeg' },
+      headers: { ...cors, 'Content-Type': r.headers.get('Content-Type') || 'application/json' },
     });
   },
 };
