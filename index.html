@@ -1035,10 +1035,19 @@ function sentsOf(t,zh){
   const m=t.match(zh?/[^。！？!?…\n]+[。！？!?…]*/g:/[^.!?。！？\n]+[.!?]*["”’']*\s*/g);
   return (m&&m.length)?m:[t];
 }
+// 选区端点在 el 内的真实字符偏移(累加 el 内所有文本节点长度,避开 indexOf 的重复词坑)
+function offsetInEl(el,container,off){
+  const w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);let n,sum=0;
+  while(n=w.nextNode()){if(n===container)return sum+off;sum+=n.nodeValue.length;}
+  return sum;
+}
+// 字符偏移 → 该偏移落在第几句
+function sentAt(sents,pos){let a=0,si=0;
+  for(let i=0;i<sents.length;i++){si=i;if(pos<a+sents[i].length)break;a+=sents[i].length;}return si;}
 function syncCross(){
   const sel=window.getSelection();const selText=(sel?sel.toString():'').trim();
   clearCross();
-  if(!selText||!sel.anchorNode||!inReader(sel.anchorNode))return;
+  if(!selText||!sel.rangeCount||!sel.anchorNode||!inReader(sel.anchorNode))return;
   const node=sel.anchorNode.nodeType===3?sel.anchorNode.parentElement:sel.anchorNode;
   const turn=node&&node.closest?node.closest('.turn'):null;if(!turn)return;
   const enDiv=turn.querySelector('.en'),zhDiv=turn.querySelector('.zh');
@@ -1046,15 +1055,18 @@ function syncCross(){
   if(!srcIsEn&&!srcIsZh)return;
   const src=srcIsEn?enDiv:zhDiv, cp=srcIsEn?zhDiv:enDiv;
   if(!src||!cp)return;
-  // 1) 选中落在 src 第几句
-  const srcText=src.textContent;let idx=srcText.indexOf(selText);if(idx<0)idx=0;
-  const srcSents=sentsOf(srcText,srcIsZh);
-  let acc=0,si=0;
-  for(let i=0;i<srcSents.length;i++){si=i;if(idx<acc+srcSents[i].length)break;acc+=srcSents[i].length;}
-  // 2) 映射到 cp 的句子索引(句数相同→同序;不同→按比例)
-  const cpSents=sentsOf(cp.textContent,srcIsEn);
-  let ci=srcSents.length===cpSents.length?si
-        :Math.round(si/Math.max(1,srcSents.length-1)*(cpSents.length-1));
+  const srcLen=src.textContent.length||1, cpLen=cp.textContent.length;
+  // 1) 选区中点在 src 的真实字符偏移
+  const rg=sel.getRangeAt(0);
+  let a=offsetInEl(src,rg.startContainer,rg.startOffset);
+  let b=offsetInEl(src,rg.endContainer,rg.endOffset);
+  if(b<a)[a,b]=[b,a];
+  const mid=Math.min(srcLen-1,Math.max(0,(a+b)/2));
+  const srcSents=sentsOf(src.textContent,srcIsZh), cpSents=sentsOf(cp.textContent,srcIsEn);
+  // 2) 映射到 cp 句子:句数相同→同序;否则按字符比例落点
+  let ci;
+  if(srcSents.length===cpSents.length){ci=sentAt(srcSents,mid);}
+  else{ci=sentAt(cpSents,(mid/srcLen)*cpLen);}
   ci=Math.max(0,Math.min(cpSents.length-1,ci));
   // 3) 改写 cp:只把目标句包进 .xseg
   crossOrig.push({el:cp,html:cp.innerHTML});
