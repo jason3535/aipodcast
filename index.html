@@ -205,8 +205,13 @@
     font-family:var(--ui);font-size:12px;padding:4px 12px;border-radius:980px;cursor:pointer}
   #ttsBar .tb-prog{height:2px;background:var(--border);flex:none}
   #ttsBar .tb-prog i{display:block;height:100%;width:var(--p,0%);background:var(--accent);transition:width .2s linear}
-  #ttsBar.min{width:auto;max-width:calc(100vw - 32px)}
+  #ttsBar .tb-speed{display:flex;align-items:center;gap:10px;padding:8px 14px;
+    font-family:var(--ui);font-size:12px;color:var(--text-3);border-bottom:1px solid var(--border)}
+  #ttsBar .tb-speed input{flex:1;min-width:96px;accent-color:var(--accent);cursor:pointer;height:4px}
+  #ttsBar .tb-rate{min-width:34px;text-align:right;font-variant-numeric:tabular-nums;color:var(--text-2)}
+  #ttsBar.min{width:min(380px,calc(100vw - 32px))}
   #ttsBar.min .tb-h{border-bottom:none}
+  #ttsBar.min .tb-speed{border-bottom:none}
   #ttsBar.min .tb-prog,#ttsBar.min .tb-body{display:none}
   #ttsBar .tb-body{padding:14px 16px 16px;overflow-y:auto;font-family:var(--serif);
     font-size:18px;line-height:1.72;color:var(--text-3);scroll-behavior:smooth}
@@ -423,6 +428,9 @@
   <div class="tb-h"><span class="tb-eq"><i></i><i></i><i></i></span><span class="tb-title">朗读中</span>
     <button class="tb-toggle" onclick="ttsBarToggle()">展开</button>
     <button class="tb-x" onclick="ttsStop(true)">停止</button></div>
+  <div class="tb-speed"><span>速度</span>
+    <input id="ttsRate" type="range" min="0.5" max="2" step="0.1" value="1" oninput="ttsSetRate(this.value)">
+    <span class="tb-rate">1.0×</span></div>
   <div class="tb-prog"><i></i></div>
   <div class="tb-body"></div>
 </div>
@@ -961,6 +969,13 @@ function ttsBarToggle(){
   const min=bar.classList.toggle('min');localStorage.ttsMin=min?'1':'0';
   bar.querySelector('.tb-toggle').textContent=min?'展开':'收起';
 }
+function ttsRate(){const r=parseFloat(localStorage.ttsRate);return r>=0.5&&r<=2?r:1;}
+function ttsSetRate(v){
+  const r=Math.max(0.5,Math.min(2,parseFloat(v)||1));localStorage.ttsRate=r;
+  if(ttsAudio)ttsAudio.playbackRate=r;
+  const lab=$('#ttsBar .tb-rate');if(lab)lab.textContent=r.toFixed(1)+'×';
+  const inp=$('#ttsRate');if(inp&&+inp.value!==r)inp.value=r;
+}
 function ttsBuildBar(align,text){
   const bar=$('#ttsBar');if(!bar)return;const body=bar.querySelector('.tb-body');
   const ch=align&&align.characters, st=align&&(align.character_start_times_seconds||[]);
@@ -972,6 +987,7 @@ function ttsBuildBar(align,text){
   bar.classList.toggle('min',min);
   bar.querySelector('.tb-toggle').textContent=min?'展开':'收起';
   bar.style.setProperty('--p','0%');
+  ttsSetRate(ttsRate());                            // 同步倍速 UI 到当前值
   bar.classList.add('on');
 }
 function ttsTick(){
@@ -1014,6 +1030,7 @@ async function ttsPlay(){
     }
     if(ttsAudio)ttsAudio.pause();
     ttsAudio=new Audio(url);
+    ttsAudio.playbackRate=ttsRate();
     ttsBuildBar(align,text);
     if(align)ttsAudio.ontimeupdate=ttsTick;
     ttsAudio.onended=()=>ttsStop(true);
