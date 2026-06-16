@@ -198,8 +198,16 @@
   #ttsBar.on{display:flex;opacity:1;transform:translateX(-50%) translateY(0)}
   #ttsBar .tb-h{display:flex;align-items:center;gap:8px;padding:10px 14px;font-family:var(--ui);
     font-size:12px;font-weight:600;color:var(--text-3);border-bottom:1px solid var(--border);letter-spacing:.02em}
-  #ttsBar .tb-x{margin-left:auto;border:none;background:var(--surface-2);color:var(--text-2);
+  #ttsBar .tb-title{color:var(--text-2)}
+  #ttsBar .tb-toggle{margin-left:auto;border:none;background:transparent;color:var(--accent);
+    font-family:var(--ui);font-size:12px;font-weight:600;padding:4px 8px;cursor:pointer}
+  #ttsBar .tb-x{border:none;background:var(--surface-2);color:var(--text-2);
     font-family:var(--ui);font-size:12px;padding:4px 12px;border-radius:980px;cursor:pointer}
+  #ttsBar .tb-prog{height:2px;background:var(--border);flex:none}
+  #ttsBar .tb-prog i{display:block;height:100%;width:var(--p,0%);background:var(--accent);transition:width .2s linear}
+  #ttsBar.min{width:auto;max-width:calc(100vw - 32px)}
+  #ttsBar.min .tb-h{border-bottom:none}
+  #ttsBar.min .tb-prog,#ttsBar.min .tb-body{display:none}
   #ttsBar .tb-body{padding:14px 16px 16px;overflow-y:auto;font-family:var(--serif);
     font-size:18px;line-height:1.72;color:var(--text-3);scroll-behavior:smooth}
   #ttsBar .tb-body span.spoken{color:var(--text)}
@@ -211,11 +219,9 @@
   #ttsBar .tb-eq i:nth-child(2){height:12px;animation-delay:.2s}
   #ttsBar .tb-eq i:nth-child(3){height:8px;animation-delay:.4s}
   @keyframes eq{0%,100%{transform:scaleY(.4)}50%{transform:scaleY(1)}}
-  /* 中英选中互定位:高亮对应译文(双语模式) */
-  .turn .en.xhl,.turn .zh.xhl{background:rgba(255,193,7,.26);border-radius:5px;
-    box-shadow:0 0 0 3px rgba(255,193,7,.26);transition:background .2s,box-shadow .2s}
-  [data-theme="dark"] .turn .en.xhl,[data-theme="dark"] .turn .zh.xhl{
-    background:rgba(255,209,71,.18);box-shadow:0 0 0 3px rgba(255,209,71,.18)}
+  /* 中英选中互定位:只高亮对应那一句(句子级) */
+  .turn .xseg{background:rgba(255,193,7,.32);border-radius:4px;box-shadow:0 0 0 2px rgba(255,193,7,.32)}
+  [data-theme="dark"] .turn .xseg{background:rgba(255,209,71,.22);box-shadow:0 0 0 2px rgba(255,209,71,.22)}
   /* 单语模式:就地展开对应译文(原文),方便查不会的词 */
   body[data-lang="en"] .turn.peek .zh,body[data-lang="zh"] .turn.peek .en{
     display:block;margin-top:8px;padding:8px 12px;border-left:2px solid var(--accent);
@@ -414,8 +420,10 @@
   <span class="lbl">朗读所选</span></button>
 
 <div id="ttsBar">
-  <div class="tb-h"><span class="tb-eq"><i></i><i></i><i></i></span>朗读跟读 · 进度高亮
+  <div class="tb-h"><span class="tb-eq"><i></i><i></i><i></i></span><span class="tb-title">朗读中</span>
+    <button class="tb-toggle" onclick="ttsBarToggle()">展开</button>
     <button class="tb-x" onclick="ttsStop(true)">停止</button></div>
+  <div class="tb-prog"><i></i></div>
   <div class="tb-body"></div>
 </div>
 
@@ -948,6 +956,11 @@ function ttsStop(hide){
   const btn=$('#ttsBtn');if(btn){btn.classList.remove('playing','loading');
     btn.querySelector('.lbl').textContent='朗读所选';if(hide)btn.style.display='none';}
 }
+function ttsBarToggle(){
+  const bar=$('#ttsBar');if(!bar)return;
+  const min=bar.classList.toggle('min');localStorage.ttsMin=min?'1':'0';
+  bar.querySelector('.tb-toggle').textContent=min?'展开':'收起';
+}
 function ttsBuildBar(align,text){
   const bar=$('#ttsBar');if(!bar)return;const body=bar.querySelector('.tb-body');
   const ch=align&&align.characters, st=align&&(align.character_start_times_seconds||[]);
@@ -955,16 +968,22 @@ function ttsBuildBar(align,text){
     body.innerHTML=ch.map((c,i)=>c==='\n'?'<br>':`<span data-t="${st[i]||0}">${escHtml(c)}</span>`).join('');
     ttsBarChars=[...body.querySelectorAll('span')];
   }else{body.textContent=text;ttsBarChars=null;}   // 无时间戳:仅显示文本
+  const min=localStorage.ttsMin!=='0';              // 默认收起,只显示小条+进度
+  bar.classList.toggle('min',min);
+  bar.querySelector('.tb-toggle').textContent=min?'展开':'收起';
+  bar.style.setProperty('--p','0%');
   bar.classList.add('on');
 }
 function ttsTick(){
-  if(!ttsBarChars||!ttsAudio)return;
+  const bar=$('#ttsBar');if(!ttsAudio||!bar)return;
+  if(ttsAudio.duration)bar.style.setProperty('--p',(ttsAudio.currentTime/ttsAudio.duration*100)+'%');
+  if(!ttsBarChars)return;
   const t=ttsAudio.currentTime;let cur=-1;
   for(let i=0;i<ttsBarChars.length;i++){if(+ttsBarChars[i].dataset.t<=t)cur=i;else break;}
   for(let i=0;i<ttsBarChars.length;i++){const s=ttsBarChars[i];
     s.classList.toggle('spoken',i<cur);s.classList.toggle('cur',i===cur);}
-  if(cur>=0){const c=ttsBarChars[cur],bar=$('#ttsBar .tb-body');
-    const cr=c.getBoundingClientRect(),br=bar.getBoundingClientRect();
+  if(cur>=0&&!bar.classList.contains('min')){const c=ttsBarChars[cur],b=bar.querySelector('.tb-body');
+    const cr=c.getBoundingClientRect(),br=b.getBoundingClientRect();
     if(cr.bottom>br.bottom-8||cr.top<br.top+8)c.scrollIntoView({block:'center',behavior:'smooth'});}
 }
 async function ttsPlay(){
@@ -1006,21 +1025,41 @@ async function ttsPlay(){
     alert('朗读失败：'+err.message+(net?'\n（网络问题,请检查连接或代理）':''));
   }
 }
-/* 中英选中互定位:选中某条 turn 的原文/译文,定位其对应译文/原文 */
+/* 中英选中互定位:选中原文中某句/词,只定位并高亮对应译文「那一句」(句子级) */
+let crossOrig=[];   // [{el,html}] 用于还原被改写的 div
 function clearCross(){
-  document.querySelectorAll('.turn .xhl').forEach(el=>el.classList.remove('xhl'));
+  crossOrig.forEach(o=>{o.el.innerHTML=o.html;});crossOrig=[];
   document.querySelectorAll('.turn.peek').forEach(el=>el.classList.remove('peek'));
 }
+function sentsOf(t,zh){
+  const m=t.match(zh?/[^。！？!?…\n]+[。！？!?…]*/g:/[^.!?。！？\n]+[.!?]*["”’']*\s*/g);
+  return (m&&m.length)?m:[t];
+}
 function syncCross(){
-  const sel=window.getSelection();const text=(sel?sel.toString():'').trim();
+  const sel=window.getSelection();const selText=(sel?sel.toString():'').trim();
   clearCross();
-  if(!text||!sel.anchorNode||!inReader(sel.anchorNode))return;
-  const el=sel.anchorNode.nodeType===3?sel.anchorNode.parentElement:sel.anchorNode;
-  const turn=el&&el.closest?el.closest('.turn'):null;if(!turn)return;
-  const cp=el.closest('.en')?turn.querySelector('.zh'):el.closest('.zh')?turn.querySelector('.en'):null;
-  if(!cp)return;
+  if(!selText||!sel.anchorNode||!inReader(sel.anchorNode))return;
+  const node=sel.anchorNode.nodeType===3?sel.anchorNode.parentElement:sel.anchorNode;
+  const turn=node&&node.closest?node.closest('.turn'):null;if(!turn)return;
+  const enDiv=turn.querySelector('.en'),zhDiv=turn.querySelector('.zh');
+  const srcIsEn=!!node.closest('.en'),srcIsZh=!!node.closest('.zh');
+  if(!srcIsEn&&!srcIsZh)return;
+  const src=srcIsEn?enDiv:zhDiv, cp=srcIsEn?zhDiv:enDiv;
+  if(!src||!cp)return;
+  // 1) 选中落在 src 第几句
+  const srcText=src.textContent;let idx=srcText.indexOf(selText);if(idx<0)idx=0;
+  const srcSents=sentsOf(srcText,srcIsZh);
+  let acc=0,si=0;
+  for(let i=0;i<srcSents.length;i++){si=i;if(idx<acc+srcSents[i].length)break;acc+=srcSents[i].length;}
+  // 2) 映射到 cp 的句子索引(句数相同→同序;不同→按比例)
+  const cpSents=sentsOf(cp.textContent,srcIsEn);
+  let ci=srcSents.length===cpSents.length?si
+        :Math.round(si/Math.max(1,srcSents.length-1)*(cpSents.length-1));
+  ci=Math.max(0,Math.min(cpSents.length-1,ci));
+  // 3) 改写 cp:只把目标句包进 .xseg
+  crossOrig.push({el:cp,html:cp.innerHTML});
+  cp.innerHTML=cpSents.map((s,i)=>i===ci?`<span class="xseg">${escHtml(s)}</span>`:escHtml(s)).join('');
   if(getComputedStyle(cp).display==='none')turn.classList.add('peek');   // 单语:就地展开
-  else cp.classList.add('xhl');                                          // 双语:高亮对应
 }
 function ttsInit(){
   const h=()=>setTimeout(()=>{ttsCheckSel();syncCross();},10);
