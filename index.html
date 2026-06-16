@@ -199,19 +199,18 @@
   #ttsBar .tb-h{display:flex;align-items:center;gap:8px;padding:10px 14px;font-family:var(--ui);
     font-size:12px;font-weight:600;color:var(--text-3);border-bottom:1px solid var(--border);letter-spacing:.02em}
   #ttsBar .tb-title{color:var(--text-2)}
-  #ttsBar .tb-toggle{margin-left:auto;border:none;background:transparent;color:var(--accent);
+  #ttsBar .tb-toggle{border:none;background:transparent;color:var(--accent);
     font-family:var(--ui);font-size:12px;font-weight:600;padding:4px 8px;cursor:pointer}
   #ttsBar .tb-x{border:none;background:var(--surface-2);color:var(--text-2);
     font-family:var(--ui);font-size:12px;padding:4px 12px;border-radius:980px;cursor:pointer}
   #ttsBar .tb-prog{height:2px;background:var(--border);flex:none}
   #ttsBar .tb-prog i{display:block;height:100%;width:var(--p,0%);background:var(--accent);transition:width .2s linear}
-  #ttsBar .tb-speed{display:flex;align-items:center;gap:10px;padding:8px 14px;
-    font-family:var(--ui);font-size:12px;color:var(--text-3);border-bottom:1px solid var(--border)}
-  #ttsBar .tb-speed input{flex:1;min-width:96px;accent-color:var(--accent);cursor:pointer;height:4px}
-  #ttsBar .tb-rate{min-width:34px;text-align:right;font-variant-numeric:tabular-nums;color:var(--text-2)}
-  #ttsBar.min{width:min(380px,calc(100vw - 32px))}
+  #ttsBar .tb-speed{display:inline-flex;align-items:center;gap:7px;margin-left:auto}
+  #ttsBar .tb-speed input{width:64px;accent-color:var(--accent);cursor:pointer;height:3px}
+  #ttsBar .tb-rate{min-width:30px;text-align:right;font-variant-numeric:tabular-nums;
+    font-weight:600;color:var(--text-2)}
+  #ttsBar.min{width:min(420px,calc(100vw - 32px))}
   #ttsBar.min .tb-h{border-bottom:none}
-  #ttsBar.min .tb-speed{border-bottom:none}
   #ttsBar.min .tb-prog,#ttsBar.min .tb-body{display:none}
   #ttsBar .tb-body{padding:14px 16px 16px;overflow-y:auto;font-family:var(--serif);
     font-size:18px;line-height:1.72;color:var(--text-3);scroll-behavior:smooth}
@@ -426,11 +425,11 @@
 
 <div id="ttsBar">
   <div class="tb-h"><span class="tb-eq"><i></i><i></i><i></i></span><span class="tb-title">朗读中</span>
+    <span class="tb-speed">
+      <input id="ttsRate" type="range" min="0.5" max="2" step="0.1" value="1" oninput="ttsSetRate(this.value)">
+      <span class="tb-rate">1.0×</span></span>
     <button class="tb-toggle" onclick="ttsBarToggle()">展开</button>
     <button class="tb-x" onclick="ttsStop(true)">停止</button></div>
-  <div class="tb-speed"><span>速度</span>
-    <input id="ttsRate" type="range" min="0.5" max="2" step="0.1" value="1" oninput="ttsSetRate(this.value)">
-    <span class="tb-rate">1.0×</span></div>
   <div class="tb-prog"><i></i></div>
   <div class="tb-body"></div>
 </div>
