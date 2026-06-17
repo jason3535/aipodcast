@@ -166,13 +166,24 @@ def main():
 
     json.dump({"ts": ts, "insights": ins}, open(TRANS / f"ep_{vid}.json", "w"), ensure_ascii=False)
 
-    ep = {"id": f"{a.pid}-{re.sub(r'[^a-z0-9]+','',a.pod_en.lower())[:8]}-{(a.date or (ydate[:4] if ydate else ''))[:4]}", "pid": a.pid,
-          "pod": {"en": a.pod_en, "zh": a.pod_zh}, "date": a.date or (f"{ydate[:4]}-{ydate[4:6]}-{ydate[6:]}" if ydate else ""),
-          "min": a.min or ymin, "fields": [f.strip() for f in a.fields.split(",") if f.strip()],
-          "src": f"https://youtu.be/{vid}", "tEn": tEn, "tZh": tZh, "sEn": sEn, "sZh": sZh,
-          "ts": ts, "insights": ins}
+    eid = f"{a.pid}-{re.sub(r'[^a-z0-9]+','',a.pod_en.lower())[:8]}-{(a.date or (ydate[:4] if ydate else ''))[:4]}"
+    edate = a.date or (f"{ydate[:4]}-{ydate[4:6]}-{ydate[6:]}" if ydate else "")
+    pod = {"en": a.pod_en, "zh": a.pod_zh}
+    fields = [f.strip() for f in a.fields.split(",") if f.strip()]
+    src = f"https://youtu.be/{vid}"
 
-    print(f"[4/5] 写入 index.html", file=sys.stderr)
+    # 逐字稿权威源:写 mcp-data/ep/<id>.json(网页懒加载 + MCP 都用它);内联只存元数据,首屏才不臃肿
+    epdir = BASE.parent / "mcp-data" / "ep"; epdir.mkdir(parents=True, exist_ok=True)
+    json.dump({"id": eid, "pid": a.pid, "podEn": a.pod_en, "podZh": a.pod_zh,
+               "date": edate, "min": a.min or ymin, "fields": fields, "tEn": tEn, "tZh": tZh, "sEn": sEn, "sZh": sZh,
+               "src": src, "insights": ins, "transcript": ts},
+              open(epdir / f"{eid}.json", "w"), ensure_ascii=False)
+
+    # 内联 EPISODES 只存元数据 + insights(不含 ts),保持 index.html 轻量
+    ep = {"id": eid, "pid": a.pid, "pod": pod, "date": edate, "min": a.min or ymin,
+          "fields": fields, "src": src, "tEn": tEn, "tZh": tZh, "sEn": sEn, "sZh": sZh, "insights": ins}
+
+    print(f"[4/5] 写入 index.html(元数据)+ mcp-data/ep(全文)", file=sys.stderr)
     html = HTML.read_text(encoding="utf-8")
     if a.pid not in html:
         print(f"  ⚠️ 提醒:PEOPLE 里似乎没有 '{a.pid}',请先用 add_person.py 新增人物+照片。", file=sys.stderr)
@@ -181,7 +192,8 @@ def main():
     eps.sort(key=lambda e: e.get("date", ""), reverse=True)
     html = html[:ai] + "const EPISODES = " + json.dumps(eps, ensure_ascii=False) + ";\n\n" + html[bi:]
     HTML.write_text(html, encoding="utf-8")
-    print(f"[5/5] 完成:{ep['id']} | {len(ts)} 章 + 共识{len(ins.get('consensus',[]))}/反{len(ins.get('contrarian',[]))}")
+    print(f"[5/5] 完成:{eid} | {len(ts)} 章 + 共识{len(ins.get('consensus',[]))}/反{len(ins.get('contrarian',[]))}", file=sys.stderr)
+    print(f"  提示:跑 `node pipeline/build_mcp_data.js` 刷新 MCP 检索索引,然后 git add mcp-data && push")
 
 
 if __name__ == "__main__":
