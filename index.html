@@ -304,7 +304,6 @@
     color:var(--text-2);font-family:var(--ui);font-size:12.5px;border-radius:9px;padding:5px 11px;cursor:pointer;
     white-space:nowrap;transition:color .15s,border-color .15s}
   .ordbtn:hover{color:var(--text);border-color:var(--text-3)}
-  .ordbtn::before{content:"⇅";font-size:13px;opacity:.7}
   body:not([data-lang="both"]) #orderBtn{display:none}
   @media(max-width:560px){.ordbtn .ol{display:none}.ordbtn{padding:6px 9px}}
 
@@ -860,14 +859,14 @@ function vHome(){
 
   <section class="wrap reveal">
     <div class="eyebrow">Latest · 最新单集</div>
-    <h2 class="title">聆听 AI 大神</h2>
-    <div class="sub">知名 AI 人物的播客,双语对照,为阅读而生。</div>
+    <h2 class="title">最新播客</h2>
+    <div class="sub">知名 AI 人物的播客,中英双语对照全文。</div>
     <div class="rail" style="margin-top:22px">${EPISODES.map(epCard).join('')}</div>
   </section>
 
   <section class="wrap reveal" style="padding-top:8px">
     <div class="eyebrow">By field · 按领域浏览</div>
-    <h2 class="title">你关心哪个方向?</h2>
+    <h2 class="title">按研究领域浏览</h2>
     <div class="chips" style="margin-top:20px">
       ${Object.keys(FIELDS).map(f=>`<span class="chip" onclick="go('#/browse?field=${f}')">${fdot(f)}${FIELDS[f].zh}</span>`).join('')}
     </div>
@@ -884,7 +883,7 @@ function vHome(){
 function pplCard(pid){const p=PEOPLE[pid];const n=epsOf(pid).length;
   return `<div class="ppl-card" onclick="go('#/person/${pid}')">
     ${av(pid)}<div class="n">${p.en}</div><div class="nz">${p.zh}</div>
-    <div class="ti">${p.tiZh}</div><div class="cnt">${n} 期播客 →</div></div>`;}
+    <div class="ti">${p.tiZh}</div><div class="cnt">${n} 期播客</div></div>`;}
 
 let pplFilter=null;
 function vPeople(){
@@ -929,7 +928,7 @@ function vTopic(slug){
         <div class="tp-head" onclick="go('#/person/${pid}')">${av(pid)}<span class="tp-name">${p.en||pid}<i>${p.zh||''}</i></span></div>
         <div class="tp-quotes">${qs.map(q=>`<div class="tp-q" onclick="go('#/episode/${q.ep}')">
           <div class="tq-zh">${q.zh}</div><div class="tq-en">${q.en}</div>
-          <div class="tq-src">${epTitle(q.ep)} · ${fmtDate(q.date)} ›</div></div>`).join('')}</div>
+          <div class="tq-src">${epTitle(q.ep)} · ${fmtDate(q.date)}</div></div>`).join('')}</div>
       </div>`;}).join('')}
     </div></section></div>${footer()}`;
 }
@@ -943,7 +942,7 @@ function vFields(){
       return `<div class="ppl-card" onclick="go('#/browse?field=${f}')">
         <div class="av" style="width:96px;height:96px;font-size:30px;margin:0 auto 14px;background:${FIELDS[f].c}">${FIELDS[f].en[0]}</div>
         <div class="n">${FIELDS[f].zh}</div><div class="nz">${FIELDS[f].en}</div>
-        <div class="cnt">${p} 人 · ${n} 期 →</div></div>`;}).join('')}
+        <div class="cnt">${p} 人 · ${n} 期</div></div>`;}).join('')}
     </div></section></div>${footer()}`;
 }
 
@@ -959,10 +958,10 @@ function vPerson(pid){
     </div>
     <div class="pp-bio reveal">
       <div class="en">${p.bioEn}</div><div class="zh">${p.bioZh}</div>
-      <div class="xlink" onclick="window.open('https://ai.jasonlin.tech','_blank')">↗ 在关系图谱中查看 ${p.zh}</div>
+      <div class="xlink" onclick="window.open('https://ai.jasonlin.tech','_blank')">在关系图谱中查看 ${p.zh}</div>
     </div>
     ${VIEWS[pid]&&VIEWS[pid].length?`<section class="reveal" style="padding-bottom:0">
-      <div class="sec-h" style="margin-top:40px">观点演变 · How the views evolved<span class="evhint">由早及近 ↓</span></div>
+      <div class="sec-h" style="margin-top:40px">观点演变 · How the views evolved<span class="evhint">由早及近</span></div>
       <ol class="viewlist">${VIEWS[pid].map(v=>`<li>${v.t?`<span class="vt">${v.t}</span>`:''}<span class="ve">${v.en}</span><span class="vz">${v.zh}</span></li>`).join('')}</ol>
     </section>`:''}
     <section class="reveal" style="padding-bottom:0">
@@ -987,7 +986,7 @@ function vPod(slug){
     </div>
     <div class="pp-bio reveal">
       <div class="en">${info.en}</div><div class="zh">${info.cn}</div>
-      ${info.url?`<div class="xlink" onclick="window.open('${info.url}','_blank')">↗ 访问 ${key} 官网</div>`:''}
+      ${info.url?`<div class="xlink" onclick="window.open('${info.url}','_blank')">访问 ${key} 官网</div>`:''}
     </div>
     <section class="reveal" style="padding-bottom:0">
       <div class="sec-h" style="margin-top:44px">本站收录 · ${eps.length} 期</div>
@@ -1050,7 +1049,7 @@ function vEpisode(id){
          <a class="btn" href="${e.src}" target="_blank">收听 / 观看原节目</a>
        </div>`
     : loading ? ''
-    : `<div class="note"><b>真实转录</b> · 来自 ${e.pod.en}（${fmtDate(e.date)}）,字幕轨提取 + 带术语表的 AI 双语校对,左侧目录可跳转章节。完整音视频 → <a href="${e.src}" target="_blank" style="color:var(--accent)">原节目</a>。版权归原播客所有。译文为 AI 生成,个别词偶有瑕疵。</div>`;
+    : `<div class="note"><b>真实转录</b> · 来自 ${e.pod.en}（${fmtDate(e.date)}）,字幕轨提取 + 带术语表的 AI 双语校对,左侧目录可跳转章节。完整音视频见 <a href="${e.src}" target="_blank" style="color:var(--accent)">原节目</a>。版权归原播客所有。译文为 AI 生成,个别词偶有瑕疵。</div>`;
   const reader=`
   <div class="reader">
     <div class="ep-head reveal in">
@@ -1410,7 +1409,7 @@ function copyMcp(){navigator.clipboard&&navigator.clipboard.writeText(MCP_URL);c
 function copyShare(id){const u='https://aipodcast.jasonlin.tech/e/'+id+'/';if(navigator.clipboard)navigator.clipboard.writeText(u);const b=$('#shareBtn');if(b){b.textContent='已复制链接';setTimeout(()=>b.textContent='分享',1600);}}
 function footer(){return `<footer class="footer"><div class="wrap">
   <div class="mcp-note">
-    <b style="color:var(--text-2)">接入你的 AI 助手 · MCP</b> — 把本站全部 102 期双语全文接进任意支持 MCP 的 Agent(Claude、Cursor 等)做问答。<br>
+    <b style="color:var(--text-2)">接入你的 AI 助手 · MCP</b> — 把本站全部 ${EPISODES.length} 期双语全文接进任意支持 MCP 的 Agent(Claude、Cursor 等)做问答。<br>
     在 AI 助手里添加远程 MCP(Streamable HTTP),地址:
     <code class="mcp-url">${MCP_URL}</code><button id="mcpCopy" class="mcp-copy" onclick="copyMcp()">复制</button><br>
     <span class="mcp-tools">工具:list_people · get_person(含观点演变) · search_episodes · get_episode(双语全文)。只读、免费、无需 key。</span>
