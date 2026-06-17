@@ -946,9 +946,12 @@ function vFields(){
     </div></section></div>${footer()}`;
 }
 
+/* 播客 pid → 人物图谱节点 id(两边命名不同;deep link 到 ai.jasonlin.tech/?node= 会聚焦节点+弹卡片) */
+const GRAPH_ID={ilya:'sutskever',demis:'hassabis',dario:'damodei',karpathy:'karpathy',feifei:'feifei',bengio:'bengio',hinton:'hinton',lecun:'lecun',leike:'janleike',suleyman:'suleyman',altman:'altman',murati:'miramurati',andrewng:'ng',sutton:'sutton',brockman:'gregbrockman',mensch:'mensch',elon:'musk',kaiser:'kaiser',boris:'bcherny',catwu:'catwu',truell:'truell',steinberger:'steinberger',jensen:'jensen',kolter:'kolter',sholto:'sholto',lambert:'lambert',awang:'awang',jeffdean:'dean',shazeer:'shazeer',schulman:'schulman',noambrown:'noambrown',kaplan:'jaredkaplan',schmidhuber:'schmidhuber',abbeel:'abbeel',aravind:'aravindsrinivas'};
 function vPerson(pid){
   const p=PEOPLE[pid];if(!p)return vHome();
   const eps=epsOf(pid);
+  const gid=GRAPH_ID[pid];
   return `<div class="wrap">
     <div class="pp-head reveal">${av(pid)}
       <div><h1>${p.en}</h1><div class="nz">${p.zh}</div>
@@ -958,7 +961,7 @@ function vPerson(pid){
     </div>
     <div class="pp-bio reveal">
       <div class="en">${p.bioEn}</div><div class="zh">${p.bioZh}</div>
-      <div class="xlink" onclick="window.open('https://ai.jasonlin.tech','_blank')">在关系图谱中查看 ${p.zh}</div>
+      ${gid?`<div class="xlink" onclick="window.open('https://ai.jasonlin.tech/?node=${gid}','_blank')">在关系图谱中查看 ${p.zh}</div>`:''}
     </div>
     ${VIEWS[pid]&&VIEWS[pid].length?`<section class="reveal" style="padding-bottom:0">
       <div class="sec-h" style="margin-top:40px">观点演变 · How the views evolved<span class="evhint">由早及近</span></div>
