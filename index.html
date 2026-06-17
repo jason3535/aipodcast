@@ -774,8 +774,8 @@ function epCard(e){return `<div class="ep-card" onclick="go('#/episode/${e.id}')
 
 /* ============================ VIEWS ============================ */
 function vHome(){
-  const feat=EPISODES.find(e=>e.ts&&e.ts.length),fp=PEOPLE[feat.pid];
-  const featTurn=(feat.quotes&&feat.quotes[0])||(feat.insights&&feat.insights.consensus&&feat.insights.consensus[0])||feat.ts[0].turns[1];
+  const feat=EPISODES.find(e=>!e.stub)||EPISODES[0],fp=PEOPLE[feat.pid];
+  const featTurn=(feat.quotes&&feat.quotes[0])||(feat.insights&&feat.insights.consensus&&feat.insights.consensus[0])||{en:feat.sEn,zh:feat.sZh};
   return `
   <div class="wrap hero">
     <div class="hero-card reveal">
