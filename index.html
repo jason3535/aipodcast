@@ -1269,6 +1269,7 @@ function sentAt(sents,pos){let a=0,si=0;
 function syncCross(){
   const sel=window.getSelection();const selText=(sel?sel.toString():'').trim();
   clearCross();
+  if(document.body.dataset.lang!=='both')return;   // 仅双语模式做对照;单语(中/英)下不展开、不高亮另一语言
   if(!selText||!sel.rangeCount||!sel.anchorNode||!inReader(sel.anchorNode))return;
   const node=sel.anchorNode.nodeType===3?sel.anchorNode.parentElement:sel.anchorNode;
   const turn=node&&node.closest?node.closest('.turn'):null;if(!turn)return;
