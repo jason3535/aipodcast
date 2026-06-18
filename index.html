@@ -63,7 +63,7 @@
   .nav .kbd{display:none;font-size:11px;color:var(--text-3);border:1px solid var(--line);border-radius:6px;
     padding:2px 6px;margin-left:-14px}
   @media(min-width:760px){.nav .kbd{display:inline-block}}
-  @media(max-width:640px){.nav .links{display:none}}
+  @media(max-width:640px){.nav .links{gap:15px;font-size:13.5px}.nav{gap:10px}}
 
   /* ---------- SEARCH OVERLAY ---------- */
   .search-overlay{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.32);
@@ -1426,7 +1426,7 @@ function updateMeta(parts){
   metaSet('og:url',true,'https://aipodcast.jasonlin.tech/'+(location.hash||''));
 }
 function observeReveals(){
-  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.08});
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:0,rootMargin:'0px 0px -5% 0px'});
   document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
 }
 const MCP_URL='https://aipodcast-mcp.992978142.workers.dev/mcp';
