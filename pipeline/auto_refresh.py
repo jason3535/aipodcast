@@ -222,6 +222,7 @@ def main():
 
     log("重生成 观点演变 / 议题 / MCP 索引 / 分享页 …")
     for cmd in [["python3", "pipeline/gen_views.py"], ["python3", "pipeline/gen_topics.py"],
+                ["python3", "pipeline/gen_brief.py"],
                 ["node", "pipeline/build_mcp_data.js"], ["node", "pipeline/build_share_pages.js"]]:
         rc, outp = run_cmd(cmd)
         log(f"  {'✓' if rc == 0 else '✗'} {cmd[1].split('/')[-1]} {('' if rc==0 else outp[-120:])}")
