@@ -2,6 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://aipodcast.jasonlin.tech/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/#/topics</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/dario-bloomber-2026/</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/jensen-associat-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/jensen-training/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/lecun-computer-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/suleyman-decoder/</loc></url>
@@ -19,6 +21,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/e/altman-nothingb-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/karpathy-training/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/catwu-lennyspo/</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/brockman-theknowl-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/jensen-dwarkesh/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/jeffdean-nvidia-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/demis-hugeiftr/</loc></url>
