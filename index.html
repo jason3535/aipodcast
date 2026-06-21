@@ -371,6 +371,31 @@
   body[data-lang="en"] .brief .iz{display:none}
   body[data-lang="zh"] .brief .ie{display:none}
   .brief .br-meta{margin-top:18px;font-family:var(--ui);font-size:12px;color:var(--text-3)}
+  /* 问这期 grounded 问答 */
+  .chat{border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin:6px 0 24px;background:var(--surface)}
+  .chat-h{font-size:12.5px;font-weight:700;letter-spacing:.04em;color:var(--accent);margin-bottom:12px}
+  .chat-thread{display:flex;flex-direction:column;gap:12px;max-height:48vh;overflow-y:auto}
+  .chat-thread:empty{display:none}
+  .cmsg{font-size:calc(14px*var(--read-scale));line-height:1.6;max-width:92%}
+  .cmsg.cu{align-self:flex-end;background:var(--accent);color:#fff;border-radius:14px 14px 4px 14px;padding:8px 13px;font-family:var(--ui)}
+  .cmsg.ca{align-self:flex-start;background:var(--surface-2);border-radius:14px 14px 14px 4px;padding:10px 14px;font-family:var(--han);color:var(--text)}
+  .cdots{color:var(--text-3)}
+  .cite{display:inline-flex;align-items:center;justify-content:center;min-width:17px;height:17px;padding:0 4px;margin:0 2px;
+    font-family:var(--ui);font-size:11px;font-weight:700;color:var(--accent);background:rgba(0,113,227,.13);
+    border:none;border-radius:5px;cursor:pointer;vertical-align:1px}
+  .cite:hover{background:rgba(0,113,227,.24)}
+  [data-theme="dark"] .cite{background:rgba(94,160,255,.18);color:#5ea0ff}
+  .chat-sugg-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .chat-sugg{font-family:var(--ui);font-size:12.5px;color:var(--text-2);background:var(--surface-2);border:1px solid var(--line);
+    border-radius:980px;padding:6px 12px;cursor:pointer;text-align:left;max-width:100%}
+  .chat-sugg:hover{color:var(--text);border-color:var(--text-3)}
+  .chat-inp{display:flex;gap:8px;margin-top:13px}
+  .chat-inp input{flex:1;min-width:0;font-family:var(--ui);font-size:14px;padding:9px 14px;border:1px solid var(--line);
+    border-radius:980px;background:var(--surface-2);color:var(--text)}
+  .chat-inp input:focus{outline:none;border-color:var(--accent)}
+  .chat-inp button{font-family:var(--ui);font-size:13.5px;font-weight:600;color:#fff;background:var(--accent);
+    border:none;border-radius:980px;padding:0 18px;cursor:pointer}
+  .chat-note{font-family:var(--ui);font-size:11px;color:var(--text-3);margin-top:9px}
 
   /* ---------- TABLE OF CONTENTS (目录) ---------- */
   .read-wrap{display:flex;gap:60px;max-width:1340px;margin:0 auto;padding:0 24px;align-items:flex-start}
@@ -1113,6 +1138,13 @@ function vEpisode(id){
        </div>`
     : loading ? ''
     : `<div class="note"><b>真实转录</b> · 来自 ${e.pod.en}（${fmtDate(e.date)}）,字幕轨提取 + 带术语表的 AI 双语校对,左侧目录可跳转章节。完整音视频见 <a href="${e.src}" target="_blank" style="color:var(--accent)">原节目</a>。版权归原播客所有。译文为 AI 生成,个别词偶有瑕疵。</div>`;
+  const chat=e.stub?'':`<div class="chat reveal in">
+      <div class="chat-h">问这期 · Ask this episode</div>
+      <div class="chat-thread" id="chatThread">${renderThread(id)}</div>
+      ${(e.brief&&e.brief.qs||[]).length?`<div class="chat-sugg-row">${e.brief.qs.map(x=>`<button class="chat-sugg" onclick="askEp('${id}',this.textContent)">${x.zh||x.en}</button>`).join('')}</div>`:''}
+      <div class="chat-inp"><input id="chatInput" placeholder="问关于本期的任何问题…" onkeydown="if(event.key==='Enter')askEp('${id}')"><button onclick="askEp('${id}')">问</button></div>
+      <div class="chat-note">仅依据本期转录回答 · AI 生成,可能有误,出处可点击核对</div>
+    </div>`;
   const reader=`
   <div class="reader">
     <div class="ep-head reveal in">
@@ -1127,6 +1159,7 @@ function vEpisode(id){
     </div>
     ${brief}
     ${insights}
+    ${chat}
     ${body}
     ${note}
   </div>`;
@@ -1335,6 +1368,37 @@ function syncCross(){
   crossOrig.push({el:cp,html:cp.innerHTML});
   cp.innerHTML=cpSents.map((s,i)=>i===ci?`<span class="xseg">${escHtml(s)}</span>`:escHtml(s)).join('');
   if(getComputedStyle(cp).display==='none')turn.classList.add('peek');   // 单语:就地展开
+}
+/* ====== 问这期:grounded 问答(经 Cloudflare Worker 取本期转录喂 DeepSeek,严格只据转录答) ====== */
+const CHAT_PROXY='https://aipodcast-chat.992978142.workers.dev';
+const CHAT={};   // id -> [{role,content}](内存态,导航后重置)
+const escH=s=>(''+s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+function citeHtml(id,text){
+  return escH(text).replace(/\[#(\d+)\]/g,(_,n)=>{const i=+n,ts=TS_CACHE[id]||[];
+    const title=ts[i]?(''+ts[i].sec).replace(/"/g,''):'第'+(i+1)+'节';
+    return `<button class="cite" onclick="jumpSec(${i})" title="${title}">${i+1}</button>`;
+  }).replace(/\n+/g,'<br>');
+}
+function renderThread(id){
+  return (CHAT[id]||[]).map(m=>m.role==='user'
+    ? `<div class="cmsg cu">${escH(m.content)}</div>`
+    : `<div class="cmsg ca">${m.content==='…'?'<span class="cdots">思考中…</span>':citeHtml(id,m.content)}</div>`).join('');
+}
+async function askEp(id,preset){
+  const inp=$('#chatInput');const q=(preset||(inp?inp.value:'')||'').trim();if(!q)return;
+  CHAT[id]=CHAT[id]||[];
+  const hist=CHAT[id].filter(m=>m.content&&m.content!=='…').slice(-4).map(m=>({role:m.role,content:m.content}));
+  CHAT[id].push({role:'user',content:q},{role:'assistant',content:'…'});
+  if(inp)inp.value='';
+  const refresh=()=>{const t=$('#chatThread');if(t){t.innerHTML=renderThread(id);t.scrollTop=t.scrollHeight;}};
+  refresh();
+  try{
+    const r=await fetch(CHAT_PROXY,{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({id,question:q.slice(0,500),history:hist})});
+    const d=await r.json();
+    CHAT[id][CHAT[id].length-1]={role:'assistant',content:(r.ok&&d.answer)?d.answer:('（出错:'+(d.error||r.status)+'）')};
+  }catch(e){CHAT[id][CHAT[id].length-1]={role:'assistant',content:'（网络错误,请重试）'};}
+  refresh();
 }
 function ttsInit(){
   const h=()=>setTimeout(()=>{ttsCheckSel();syncCross();},10);
