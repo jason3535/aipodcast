@@ -396,6 +396,10 @@
   .chat-inp button{font-family:var(--ui);font-size:13.5px;font-weight:600;color:#fff;background:var(--accent);
     border:none;border-radius:980px;padding:0 18px;cursor:pointer}
   .chat-note{font-family:var(--ui);font-size:11px;color:var(--text-3);margin-top:9px}
+  .chat-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+  .chat-top .chat-h{margin-bottom:0}
+  .chat-seg button{font-size:12px;padding:5px 11px}
+  .cite.cite-ep{min-width:0;padding:0 7px;height:18px;border-radius:7px;font-weight:600}
 
   /* ---------- TABLE OF CONTENTS (目录) ---------- */
   .read-wrap{display:flex;gap:60px;max-width:1340px;margin:0 auto;padding:0 24px;align-items:flex-start}
@@ -1138,12 +1142,17 @@ function vEpisode(id){
        </div>`
     : loading ? ''
     : `<div class="note"><b>真实转录</b> · 来自 ${e.pod.en}（${fmtDate(e.date)}）,字幕轨提取 + 带术语表的 AI 双语校对,左侧目录可跳转章节。完整音视频见 <a href="${e.src}" target="_blank" style="color:var(--accent)">原节目</a>。版权归原播客所有。译文为 AI 生成,个别词偶有瑕疵。</div>`;
+  if(chatEpId!==id){chatEpId=id;chatMode='episode';}
+  const ckey=chatMode==='all'?'__all__':id;
   const chat=e.stub?'':`<div class="chat reveal in">
-      <div class="chat-h">问这期 · Ask this episode</div>
-      <div class="chat-thread" id="chatThread">${renderThread(id)}</div>
-      ${(e.brief&&e.brief.qs||[]).length?`<div class="chat-sugg-row">${e.brief.qs.map(x=>`<button class="chat-sugg" onclick="askEp('${id}',this.textContent)">${x.zh||x.en}</button>`).join('')}</div>`:''}
-      <div class="chat-inp"><input id="chatInput" placeholder="问关于本期的任何问题…" onkeydown="if(event.key==='Enter')askEp('${id}')"><button onclick="askEp('${id}')">问</button></div>
-      <div class="chat-note">仅依据本期转录回答 · AI 生成,可能有误,出处可点击核对</div>
+      <div class="chat-top"><div class="chat-h">问答 · Ask</div>
+        <div class="seg chat-seg" id="chatModeSeg">
+          <button data-m="episode" class="${chatMode==='episode'?'on':''}" onclick="setChatMode('episode')">问这期</button>
+          <button data-m="all" class="${chatMode==='all'?'on':''}" onclick="setChatMode('all')">问全站</button></div></div>
+      <div class="chat-thread" id="chatThread">${renderThread(ckey)}</div>
+      <div class="chat-sugg-row" id="chatSugg">${chatSuggHtml(e)}</div>
+      <div class="chat-inp"><input id="chatInput" placeholder="${chatMode==='all'?'问关于全站任何 AI 人物/议题…':'问关于本期的任何问题…'}" onkeydown="if(event.key==='Enter')askEp()"><button onclick="askEp()">问</button></div>
+      <div class="chat-note" id="chatNote">${chatMode==='all'?'综合全站核心观点回答':'仅依据本期转录回答'} · AI 生成可能有误,出处可点核对</div>
     </div>`;
   const reader=`
   <div class="reader">
@@ -1369,36 +1378,56 @@ function syncCross(){
   cp.innerHTML=cpSents.map((s,i)=>i===ci?`<span class="xseg">${escHtml(s)}</span>`:escHtml(s)).join('');
   if(getComputedStyle(cp).display==='none')turn.classList.add('peek');   // 单语:就地展开
 }
-/* ====== 问这期:grounded 问答(经 Cloudflare Worker 取本期转录喂 DeepSeek,严格只据转录答) ====== */
+/* ====== 问答:问这期(grounded 单期)/ 问全站(RAG-lite 跨期),流式输出 ====== */
 const CHAT_PROXY='https://aipodcast-chat.992978142.workers.dev';
-const CHAT={};   // id -> [{role,content}](内存态,导航后重置)
+const CHAT={};   // key('__all__' 或 epId)-> [{role,content}](内存态,导航后重置)
+let chatMode='episode', chatEpId=null;
+const ALL_SUGG=['不同的人怎么看 AGI 的时间表?','开源还是闭源,大家怎么站队?','关于 AI 安全/对齐有哪些不同观点?','规模化(scaling)还能走多远?'];
 const escH=s=>(''+s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
-function citeHtml(id,text){
-  return escH(text).replace(/\[#(\d+)\]/g,(_,n)=>{const i=+n,ts=TS_CACHE[id]||[];
-    const title=ts[i]?(''+ts[i].sec).replace(/"/g,''):'第'+(i+1)+'节';
-    return `<button class="cite" onclick="jumpSec(${i})" title="${title}">${i+1}</button>`;
-  }).replace(/\n+/g,'<br>');
+const chatKey=()=>chatMode==='all'?'__all__':chatEpId;
+function chatSuggHtml(e){
+  const qs=chatMode==='all'?ALL_SUGG:((e&&e.brief&&e.brief.qs||[]).map(x=>x.zh||x.en));
+  return qs.map(q=>`<button class="chat-sugg" onclick="askEp(this.textContent)">${q}</button>`).join('');
 }
-function renderThread(id){
-  return (CHAT[id]||[]).map(m=>m.role==='user'
+function citeHtml(text){
+  return escH(text)
+    .replace(/\[#(\d+)\]/g,(_,n)=>{const i=+n,ts=TS_CACHE[chatEpId]||[];const title=ts[i]?(''+ts[i].sec).replace(/"/g,''):'第'+(i+1)+'节';
+      return `<button class="cite" onclick="jumpSec(${i})" title="${title}">${i+1}</button>`;})
+    .replace(/\[@([a-z0-9-]+)\]/gi,(_,id)=>{const e=EPISODES.find(x=>x.id===id);if(!e)return '';const p=PEOPLE[e.pid];
+      return `<button class="cite cite-ep" onclick="go('#/episode/${id}')" title="${(e.tZh||e.tEn).replace(/"/g,'')}">${p?p.zh:id}</button>`;})
+    .replace(/\n+/g,'<br>');
+}
+function renderThread(key){
+  return (CHAT[key]||[]).map(m=>m.role==='user'
     ? `<div class="cmsg cu">${escH(m.content)}</div>`
-    : `<div class="cmsg ca">${m.content==='…'?'<span class="cdots">思考中…</span>':citeHtml(id,m.content)}</div>`).join('');
+    : `<div class="cmsg ca">${(!m.content||m.content==='…')?'<span class="cdots">思考中…</span>':citeHtml(m.content)}</div>`).join('');
 }
-async function askEp(id,preset){
+function setChatMode(m){
+  chatMode=m;
+  document.querySelectorAll('#chatModeSeg button').forEach(b=>b.classList.toggle('on',b.dataset.m===m));
+  const t=$('#chatThread');if(t)t.innerHTML=renderThread(chatKey());
+  const s=$('#chatSugg');if(s)s.innerHTML=chatSuggHtml(EPISODES.find(x=>x.id===chatEpId));
+  const inp=$('#chatInput');if(inp)inp.placeholder=m==='all'?'问关于全站任何 AI 人物/议题…':'问关于本期的任何问题…';
+  const nt=$('#chatNote');if(nt)nt.textContent=(m==='all'?'综合全站核心观点回答':'仅依据本期转录回答')+' · AI 生成可能有误,出处可点核对';
+}
+async function askEp(preset){
   const inp=$('#chatInput');const q=(preset||(inp?inp.value:'')||'').trim();if(!q)return;
-  CHAT[id]=CHAT[id]||[];
-  const hist=CHAT[id].filter(m=>m.content&&m.content!=='…').slice(-4).map(m=>({role:m.role,content:m.content}));
-  CHAT[id].push({role:'user',content:q},{role:'assistant',content:'…'});
+  const key=chatKey();if(!key)return;CHAT[key]=CHAT[key]||[];
+  const hist=CHAT[key].filter(m=>m.content&&m.content!=='…').slice(-4).map(m=>({role:m.role,content:m.content}));
+  CHAT[key].push({role:'user',content:q},{role:'assistant',content:'…'});
   if(inp)inp.value='';
-  const refresh=()=>{const t=$('#chatThread');if(t){t.innerHTML=renderThread(id);t.scrollTop=t.scrollHeight;}};
+  const ai=CHAT[key].length-1;
+  const refresh=()=>{const t=$('#chatThread');if(t){t.innerHTML=renderThread(key);t.scrollTop=t.scrollHeight;}};
   refresh();
   try{
-    const r=await fetch(CHAT_PROXY,{method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({id,question:q.slice(0,500),history:hist})});
-    const d=await r.json();
-    CHAT[id][CHAT[id].length-1]={role:'assistant',content:(r.ok&&d.answer)?d.answer:('（出错:'+(d.error||r.status)+'）')};
-  }catch(e){CHAT[id][CHAT[id].length-1]={role:'assistant',content:'（网络错误,请重试）'};}
-  refresh();
+    const payload={mode:chatMode,question:q.slice(0,500),history:hist};
+    if(chatMode==='episode')payload.id=chatEpId;
+    const r=await fetch(CHAT_PROXY,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+    if(!r.ok||!r.body){let msg=r.status;try{msg=(await r.json()).error||msg}catch(_){}CHAT[key][ai]={role:'assistant',content:'（出错:'+msg+'）'};refresh();return;}
+    const reader=r.body.getReader(),dec=new TextDecoder();let acc='';CHAT[key][ai].content='';
+    for(;;){const {done,value}=await reader.read();if(done)break;acc+=dec.decode(value,{stream:true});CHAT[key][ai].content=acc;refresh();}
+    if(!acc){CHAT[key][ai].content='（没有返回内容）';refresh();}
+  }catch(e){CHAT[key][ai]={role:'assistant',content:'（网络错误,请重试）'};refresh();}
 }
 function ttsInit(){
   const h=()=>setTimeout(()=>{ttsCheckSel();syncCross();},10);
