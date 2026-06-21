@@ -1228,7 +1228,7 @@ function ensureTs(id){
    若你的 workers.dev subdomain 不同,改这里为 wrangler deploy 输出的实际地址。 */
 const TTS_PROXY='https://aipodcast-tts.992978142.workers.dev';
 let ttsAudio=null;
-function inReader(node){const el=node&&node.nodeType===3?node.parentElement:node;return !!(el&&el.closest&&el.closest('.reader'));}
+function inReader(node){const el=node&&node.nodeType===3?node.parentElement:node;return !!(el&&el.closest&&el.closest('.reader')&&!el.closest('.chat'));}
 function ttsCheckSel(){
   const btn=$('#ttsBtn');if(!btn)return;
   const sel=window.getSelection();const text=(sel?sel.toString():'').trim();
