@@ -346,8 +346,8 @@
   .ins-col li::before{content:"";position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%}
   .ins-col.consensus li::before{background:var(--f-vision)}
   .ins-col.contrarian li::before{background:var(--f-rl)}
-  .ins-col .ie{display:block;font-size:13.5px;color:var(--text);font-family:var(--ui);letter-spacing:-.01em}
-  .ins-col .iz{display:block;font-size:13px;color:var(--text-2);font-family:var(--han);margin-top:2px}
+  .ins-col .ie{display:block;font-size:calc(13.5px*var(--read-scale));color:var(--text);font-family:var(--ui);letter-spacing:-.01em}
+  .ins-col .iz{display:block;font-size:calc(13px*var(--read-scale));color:var(--text-2);font-family:var(--han);margin-top:2px}
   body[data-lang="en"] .ins-col .iz{display:none}
   body[data-lang="zh"] .ins-col .ie{display:none}
   @media(max-width:760px){.insights{grid-template-columns:1fr;gap:12px}}
@@ -365,9 +365,9 @@
   .brief .br-tldr li{position:relative;padding-left:15px}
   .brief .br-tldr li::before{content:"";position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--accent)}
   .brief .br-qs li{position:relative;padding-left:15px;border-left:2px solid var(--line)}
-  .brief .ie{display:block;font-family:var(--serif);font-size:15px;line-height:1.5;color:var(--text)}
-  .brief .iz{display:block;font-family:var(--han);font-size:13.5px;line-height:1.6;color:var(--text-2);margin-top:2px}
-  .brief .br-qs .ie{font-family:var(--ui);font-size:14px;color:var(--text-2)}
+  .brief .ie{display:block;font-family:var(--serif);font-size:calc(15px*var(--read-scale));line-height:1.5;color:var(--text)}
+  .brief .iz{display:block;font-family:var(--han);font-size:calc(13.5px*var(--read-scale));line-height:1.6;color:var(--text-2);margin-top:2px}
+  .brief .br-qs .ie{font-family:var(--ui);font-size:calc(14px*var(--read-scale));color:var(--text-2)}
   body[data-lang="en"] .brief .iz{display:none}
   body[data-lang="zh"] .brief .ie{display:none}
   .brief .br-meta{margin-top:18px;font-family:var(--ui);font-size:12px;color:var(--text-3)}
