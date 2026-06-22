@@ -404,6 +404,15 @@
   .chat-top .chat-h{margin-bottom:0}
   .chat-seg button{font-size:12px;padding:5px 11px}
   .cite.cite-ep{min-width:0;padding:0 7px;height:18px;border-radius:7px;font-weight:600}
+  /* 首页问全站入口(搜索条样式) */
+  .ask-bar{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--line);
+    border-radius:14px;padding:14px 16px;cursor:pointer;transition:box-shadow .15s,border-color .15s}
+  .ask-bar:hover{box-shadow:var(--shadow);border-color:var(--text-3)}
+  .ask-bar-ph{flex:1;min-width:0;color:var(--text-3);font-family:var(--ui);font-size:14.5px;
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .ask-bar-btn{flex:none;font-family:var(--ui);font-size:13px;font-weight:600;color:#fff;background:var(--accent);border-radius:980px;padding:7px 16px}
+  .chat.askpage .chat-thread{max-height:58vh}
+  @media(max-width:600px){.ask-bar-ph{font-size:13px}}
 
   /* ---------- TABLE OF CONTENTS (目录) ---------- */
   .read-wrap{display:flex;gap:60px;max-width:1340px;margin:0 auto;padding:0 24px;align-items:flex-start}
@@ -441,7 +450,7 @@
   }
 
   .footer{border-top:1px solid var(--line);padding:40px 0 60px;color:var(--text-3);font-size:13px;line-height:1.7}
-  body[data-route="person"] .footer,body[data-route="pod"] .footer,body[data-route="topics"] .footer,body[data-route="topic"] .footer{border-top:none}
+  body[data-route="person"] .footer,body[data-route="pod"] .footer,body[data-route="topics"] .footer,body[data-route="topic"] .footer,body[data-route="ask"] .footer{border-top:none}
   .footer a{color:var(--text-2);text-decoration:underline;text-underline-offset:2px}
   .mcp-note{border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:22px;background:var(--surface-2)}
   .mcp-url{font-family:var(--mono,ui-monospace,SFMono-Regular,Menlo,monospace);font-size:12.5px;
@@ -943,6 +952,13 @@ function vHome(){
     </div>
   </div>
 
+  <section class="wrap reveal" style="padding:18px 0 0">
+    <div class="ask-bar" onclick="go('#/ask')" title="问全站">
+      <span class="ask-bar-ph">问关于 AI 的任何问题 —— 综合 ${Object.keys(PEOPLE).length} 位大佬、${EPISODES.length} 期播客的观点回答</span>
+      <span class="ask-bar-btn">问全站</span>
+    </div>
+  </section>
+
   <section class="wrap reveal">
     <div class="eyebrow">Latest · 最新单集</div>
     <h2 class="title">最新播客</h2>
@@ -986,6 +1002,21 @@ function vPeople(){
     </section></div>${footer()}`;
 }
 function setPpl(f){pplFilter=f;render();}
+
+function vAsk(){
+  chatMode='all';
+  return `<div class="wrap"><section class="reveal" style="padding-bottom:0">
+    <div class="eyebrow">Ask · 问全站</div>
+    <h2 class="title">向 ${Object.keys(PEOPLE).length} 位 AI 人物提问</h2>
+    <div class="sub">基于全站 ${EPISODES.length} 期播客的核心观点综合回答,对比不同人的看法;出处可点击直达原期。</div>
+    <div class="chat askpage" style="margin-top:24px">
+      <div class="chat-thread" id="chatThread">${renderThread('__all__')}</div>
+      <div class="chat-sugg-row" id="chatSugg">${chatSuggHtml(null)}</div>
+      <div class="chat-inp"><input id="chatInput" placeholder="问关于全站任何 AI 人物 / 议题…" onkeydown="if(event.key==='Enter')askEp()"><button onclick="askEp()">问</button></div>
+      <div class="chat-note" id="chatNote">综合全站核心观点回答 · AI 生成可能有误,出处可点核对</div>
+    </div>
+  </section></div>${footer()}`;
+}
 
 function vTopics(){
   return `<div class="wrap"><section class="reveal" style="padding-bottom:0">
@@ -1525,6 +1556,7 @@ function render(){
   if(query){const qp=new URLSearchParams(query);if(qp.get('field')){bf={person:'',year:'',pod:'',field:qp.get('field')};}}
   if(!parts.length)html=vHome();
   else if(parts[0]==='people')html=vPeople();
+  else if(parts[0]==='ask')html=vAsk();
   else if(parts[0]==='topics')html=vTopics();
   else if(parts[0]==='topic')html=vTopic(parts[1]);
   else if(parts[0]==='fields')html=vFields();
@@ -1554,6 +1586,7 @@ function updateMeta(parts){
     title=`${e.tZh} · ${p.zh} — AI Podcast`;desc=`${p.zh}（${e.pod.zh}）双语全文 + 核心观点。${e.sZh||''}`;}}
   else if(parts[0]==='person'){const p=PEOPLE[parts[1]];if(p){title=`${p.zh} · ${p.en} — AI Podcast`;desc=`${p.zh}（${p.tiZh}）的播客,双语全文阅读。`;}}
   else if(parts[0]==='pod'){const k=POD_SLUG[parts[1]],i=POD_INFO[k];if(i){title=`${k} · ${i.zh} — AI Podcast`;desc=i.cn;}}
+  else if(parts[0]==='ask'){title='问全站 · 向 AI 人物的观点提问 — AI Podcast';desc='基于全站播客的核心观点综合回答,对比不同 AI 人物的看法,出处可溯。';}
   else if(parts[0]==='topics'){title='议题 · 同一议题不同声音 — AI Podcast';desc='把不同 AI 人物对 AGI 时间表、规模化、对齐安全、开源闭源等议题的观点聚到一起横向对照。';}
   else if(parts[0]==='topic'){const d=(typeof TOPICS!=='undefined')&&TOPICS.defs.find(x=>x.slug===parts[1]);if(d){title=`${d.zh} · ${d.en} — AI Podcast 议题`;desc=`不同 AI 人物对「${d.zh}」的观点对照。`;}}
   document.title=title;
