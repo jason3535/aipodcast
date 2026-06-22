@@ -1284,6 +1284,7 @@ function ttsCheckSel(){
   bar.style.left=(window.scrollX+r.left+r.width/2)+'px';
   bar.style.top=(window.scrollY+r.top-46)+'px';
   btn.dataset.text=text;
+  btn.dataset.sec=selSecIndex();   // 选中时即记下所在章节(手机点按钮时选区已没了,不能临时算)
 }
 function selSecIndex(){
   const node=window.getSelection().anchorNode;if(!node)return -1;
@@ -1294,16 +1295,17 @@ function selSecIndex(){
   return -1;
 }
 async function shareSel(){
-  const text=(($('#ttsBtn').dataset.text)||'').trim();if(!text)return;
+  const btn=$('#ttsBtn');const text=((btn&&btn.dataset.text)||'').trim();if(!text)return;
   const m=(location.hash||'').match(/#\/episode\/([^?]+)/);
   const id=m?m[1]:'';const e=id&&EPISODES.find(x=>x.id===id);
   const quote=text.length>80?text.slice(0,80)+'…':text;            // 截断 80 字 + 省略号
   const who=e?`— ${PEOPLE[e.pid].zh}《${e.tZh||e.tEn}》`:'— AI Podcast';
   let url=id?('https://aipodcast.jasonlin.tech/e/'+id+'/'):'https://aipodcast.jasonlin.tech';
-  const si=selSecIndex();
+  const si=parseInt((btn&&btn.dataset.sec),10);
   if(id&&si>=0)url+='?at='+si+'&hl='+encodeURIComponent(text.slice(0,40));   // 携带定位:章节+文本片段
   const body=`「${quote}」\n${who}\n${url}`;
-  if(navigator.share){try{await navigator.share({title:'AI Podcast',text:`「${quote}」 ${who}`,url});return;}catch(_){}}
+  // 全部放进 text(很多 App 同时给 text+url 时只取 url、丢正文)
+  if(navigator.share){try{await navigator.share({title:'AI Podcast',text:body});return;}catch(_){}}
   const sb=$('#shareSelBtn');
   try{await navigator.clipboard.writeText(body);if(sb){sb.textContent='已复制';setTimeout(()=>sb.textContent='分享',1600);}}
   catch(_){if(sb){sb.textContent='复制失败';setTimeout(()=>sb.textContent='分享',1600);}}
@@ -1627,7 +1629,7 @@ function applyLocate(){
   if(!document.querySelector('.reader .sec-h'))return;   // 逐字稿还没加载,等下次 render
   pendingLocate=null;
   let target=null;
-  if(hl){const snip=decodeURIComponent(hl).replace(/\s/g,'').slice(0,30);
+  if(hl){const snip=(hl||'').replace(/\s/g,'').slice(0,30);
     if(snip){const els=[...document.querySelectorAll('.reader .turn .en,.reader .turn .zh')];
       const hit=els.find(el=>el.textContent.replace(/\s/g,'').includes(snip));
       if(hit)target=hit.closest('.turn');}}
