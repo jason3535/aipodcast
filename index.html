@@ -328,6 +328,8 @@
   .ts-spin{width:16px;height:16px;border:2px solid var(--line);border-top-color:var(--accent);
     border-radius:50%;animation:ttsspin .7s linear infinite}
   .turn{display:flex;flex-direction:column;gap:9px;margin-bottom:22px}
+  .locate-flash{animation:locflash 2.6s ease;border-radius:8px}
+  @keyframes locflash{0%,18%{background:rgba(255,193,7,.26);box-shadow:0 0 0 8px rgba(255,193,7,.26)}100%{background:transparent;box-shadow:0 0 0 8px transparent}}
   .turn .spk{order:0;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--text-3)}
   .turn .en{order:1;font-family:var(--serif);font-size:calc(20px*var(--read-scale));line-height:1.62;color:var(--text)}
   .turn .zh{order:2;font-family:var(--han);font-size:calc(16.5px*var(--read-scale));line-height:1.85;color:var(--text-2)}
@@ -1283,14 +1285,25 @@ function ttsCheckSel(){
   bar.style.top=(window.scrollY+r.top-46)+'px';
   btn.dataset.text=text;
 }
+function selSecIndex(){
+  const node=window.getSelection().anchorNode;if(!node)return -1;
+  let el=node.nodeType===3?node.parentElement:node;
+  const turn=el&&el.closest?el.closest('.turn'):null;if(!turn)return -1;
+  let p=turn.previousElementSibling;
+  while(p){if(p.classList&&p.classList.contains('sec-h')){const mm=(p.id||'').match(/sec-(\d+)/);return mm?+mm[1]:-1;}p=p.previousElementSibling;}
+  return -1;
+}
 async function shareSel(){
   const text=(($('#ttsBtn').dataset.text)||'').trim();if(!text)return;
   const m=(location.hash||'').match(/#\/episode\/([^?]+)/);
   const id=m?m[1]:'';const e=id&&EPISODES.find(x=>x.id===id);
-  const url=id?('https://aipodcast.jasonlin.tech/e/'+id+'/'):'https://aipodcast.jasonlin.tech';
+  const quote=text.length>80?text.slice(0,80)+'…':text;            // 截断 80 字 + 省略号
   const who=e?`— ${PEOPLE[e.pid].zh}《${e.tZh||e.tEn}》`:'— AI Podcast';
-  const body=`「${text}」\n${who}\n${url}`;
-  if(navigator.share){try{await navigator.share({title:'AI Podcast',text:`「${text}」 ${who}`,url});return;}catch(_){}}
+  let url=id?('https://aipodcast.jasonlin.tech/e/'+id+'/'):'https://aipodcast.jasonlin.tech';
+  const si=selSecIndex();
+  if(id&&si>=0)url+='?at='+si+'&hl='+encodeURIComponent(text.slice(0,40));   // 携带定位:章节+文本片段
+  const body=`「${quote}」\n${who}\n${url}`;
+  if(navigator.share){try{await navigator.share({title:'AI Podcast',text:`「${quote}」 ${who}`,url});return;}catch(_){}}
   const sb=$('#shareSelBtn');
   try{await navigator.clipboard.writeText(body);if(sb){sb.textContent='已复制';setTimeout(()=>sb.textContent='分享',1600);}}
   catch(_){if(sb){sb.textContent='复制失败';setTimeout(()=>sb.textContent='分享',1600);}}
@@ -1581,7 +1594,9 @@ function render(){
   const[path,query]=h.slice(2).split('?');
   const parts=path.split('/').filter(Boolean);
   let html;
-  if(query){const qp=new URLSearchParams(query);if(qp.get('field')){bf={person:'',year:'',pod:'',field:qp.get('field')};}}
+  if(query){const qp=new URLSearchParams(query);
+    if(qp.get('field')){bf={person:'',year:'',pod:'',field:qp.get('field')};}
+    if(parts[0]==='episode'&&(qp.get('at')!=null||qp.get('hl')))pendingLocate={id:parts[1],at:qp.get('at'),hl:qp.get('hl')};}
   if(!parts.length)html=vHome();
   else if(parts[0]==='people')html=vPeople();
   else if(parts[0]==='ask')html=vAsk();
@@ -1602,6 +1617,23 @@ function render(){
   syncSeg();
   observeReveals();
   initTOC();
+  applyLocate();
+}
+let pendingLocate=null;
+function applyLocate(){
+  if(!pendingLocate)return;
+  const {id,at,hl}=pendingLocate;
+  if((location.hash||'').indexOf('/episode/'+id)<0){pendingLocate=null;return;}  // 已离开该期
+  if(!document.querySelector('.reader .sec-h'))return;   // 逐字稿还没加载,等下次 render
+  pendingLocate=null;
+  let target=null;
+  if(hl){const snip=decodeURIComponent(hl).replace(/\s/g,'').slice(0,30);
+    if(snip){const els=[...document.querySelectorAll('.reader .turn .en,.reader .turn .zh')];
+      const hit=els.find(el=>el.textContent.replace(/\s/g,'').includes(snip));
+      if(hit)target=hit.closest('.turn');}}
+  if(!target&&at!=null&&at!==''){target=document.getElementById('sec-'+at);}
+  if(target){target.scrollIntoView({behavior:'smooth',block:'center'});
+    target.classList.add('locate-flash');setTimeout(()=>target.classList.remove('locate-flash'),2600);}
 }
 /* 按路由更新标题/描述/OG —— 微信在内置浏览器分享当前页时会读实时标题 */
 function metaSet(key,isProp,val){const sel=isProp?`meta[property="${key}"]`:`meta[name="${key}"]`;
