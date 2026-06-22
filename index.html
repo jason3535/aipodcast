@@ -1630,12 +1630,15 @@ function applyLocate(){
   pendingLocate=null;
   let target=null;
   if(hl){const snip=(hl||'').replace(/\s/g,'').slice(0,30);
-    if(snip){const els=[...document.querySelectorAll('.reader .turn .en,.reader .turn .zh')];
-      const hit=els.find(el=>el.textContent.replace(/\s/g,'').includes(snip));
-      if(hit)target=hit.closest('.turn');}}
+    if(snip){const els=[...document.querySelectorAll('.reader .turn .en,.reader .turn .zh')]
+      .filter(el=>el.offsetParent!==null);   // 只在当前语言可见的行里找
+      target=els.find(el=>el.textContent.replace(/\s/g,'').includes(snip))||null;}}
   if(!target&&at!=null&&at!==''){target=document.getElementById('sec-'+at);}
-  if(target){target.scrollIntoView({behavior:'smooth',block:'center'});
-    target.classList.add('locate-flash');setTimeout(()=>target.classList.remove('locate-flash'),2600);}
+  if(!target)return;
+  const go=()=>{const top=target.getBoundingClientRect().top+window.scrollY-92;   // 顶对齐到阅读栏下方
+    window.scrollTo({top:Math.max(0,top),behavior:'smooth'});};
+  requestAnimationFrame(go); setTimeout(go,420);   // rAF 等首帧 + 二次校正字体/布局回流
+  target.classList.add('locate-flash');setTimeout(()=>target.classList.remove('locate-flash'),2800);
 }
 /* 按路由更新标题/描述/OG —— 微信在内置浏览器分享当前页时会读实时标题 */
 function metaSet(key,isProp,val){const sel=isProp?`meta[property="${key}"]`:`meta[name="${key}"]`;
