@@ -31,7 +31,7 @@ EPISODES.forEach(e=>{
 <meta name="twitter:image" content="${SITE}/assets/og.png">
 <link rel="canonical" href="${hash}">
 <meta http-equiv="refresh" content="0;url=${hash}">
-<script>location.replace(${JSON.stringify(hash)});</script>
+<script>location.replace(${JSON.stringify(hash)}+(location.search||''));</script>
 <style>body{font-family:-apple-system,system-ui,"PingFang SC",sans-serif;background:#fff;color:#1d1d1f;display:grid;place-items:center;height:100vh;margin:0}a{color:#0071e3}</style>
 </head><body><p>正在前往《${esc(e.tZh||e.tEn)}》…&nbsp;<a href="${hash}">未跳转?点此进入</a></p></body></html>`;
   fs.mkdirSync(path.join(EDIR,e.id),{recursive:true});
