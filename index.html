@@ -339,10 +339,10 @@
   .term{border-bottom:1px dashed var(--text-3);cursor:help}
 
   /* ---------- 共识 / 反共识 速览 ---------- */
-  .insights{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:6px 0 30px;
+  .insights{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 18px;
     padding-bottom:32px;border-bottom:1px solid var(--line)}
   .ins-col{border-radius:16px;padding:18px 20px;background:var(--surface-2);border:1px solid var(--line)}
-  .ins-h{font-size:12.5px;font-weight:700;letter-spacing:.04em;margin-bottom:13px}
+  .ins-h{font-size:12.5px;font-weight:700;letter-spacing:.04em;margin-bottom:12px}
   .ins-col.consensus .ins-h{color:var(--f-vision)}
   .ins-col.contrarian .ins-h{color:var(--f-rl)}
   .ins-col ul{list-style:none;display:flex;flex-direction:column;gap:11px}
@@ -362,7 +362,7 @@
   .ins-col li.jmp:hover::after{opacity:.7}
   .ins-col li.jmp{padding-right:14px}
   /* B 速览卡 */
-  .brief{background:var(--surface-2);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin:6px 0 22px}
+  .brief{background:var(--surface-2);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:0 0 18px}
   .brief .br-h{font-size:12.5px;font-weight:700;letter-spacing:.04em;color:var(--accent);margin-bottom:12px}
   .brief .br-h2{margin-top:18px}
   .brief ul{list-style:none;display:flex;flex-direction:column;gap:10px}
@@ -376,7 +376,7 @@
   body[data-lang="zh"] .brief .ie{display:none}
   .brief .br-meta{margin-top:18px;font-family:var(--ui);font-size:12px;color:var(--text-3)}
   /* 问这期 grounded 问答 */
-  .chat{border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin:6px 0 24px;background:var(--surface)}
+  .chat{border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:0 0 18px;background:var(--surface)}
   .chat-h{font-size:12.5px;font-weight:700;letter-spacing:.04em;color:var(--accent);margin-bottom:12px}
   .chat-thread{display:flex;flex-direction:column;gap:12px;max-height:48vh;overflow-y:auto}
   .chat-thread:empty{display:none}
@@ -406,7 +406,7 @@
   .cite.cite-ep{min-width:0;padding:0 7px;height:18px;border-radius:7px;font-weight:600}
   /* 首页问全站入口(搜索条样式) */
   .ask-bar{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--line);
-    border-radius:14px;padding:14px 16px;cursor:pointer;transition:box-shadow .15s,border-color .15s}
+    border-radius:16px;padding:14px 16px;cursor:pointer;transition:box-shadow .15s,border-color .15s}
   .ask-bar:hover{box-shadow:var(--shadow);border-color:var(--text-3)}
   .ask-bar-ph{flex:1;min-width:0;color:var(--text-3);font-family:var(--ui);font-size:14.5px;
     overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -459,8 +459,8 @@
   .mcp-copy{font-family:var(--ui);font-size:12px;border:1px solid var(--line);background:var(--surface);
     color:var(--text-2);border-radius:7px;padding:3px 11px;cursor:pointer}
   .mcp-tools{color:var(--text-3);font-size:12px}
-  .note{background:var(--surface-2);border-radius:14px;padding:14px 18px;font-size:13px;color:var(--text-2);line-height:1.6;margin-top:18px}
-  .stub-cta{background:var(--surface-2);border:1px solid var(--line);border-radius:18px;padding:40px 28px;text-align:center;margin-top:20px}
+  .note{background:var(--surface-2);border-radius:16px;padding:16px 18px;font-size:13px;color:var(--text-2);line-height:1.6;margin-top:18px}
+  .stub-cta{background:var(--surface-2);border:1px solid var(--line);border-radius:16px;padding:40px 28px;text-align:center;margin-top:20px}
   .stub-cta .t{font-size:18px;font-weight:600;letter-spacing:-.01em;color:var(--text)}
   .stub-cta .s{font-size:14px;color:var(--text-2);line-height:1.7;max-width:440px;margin:10px auto 20px}
   .stub-cta .btn{font-size:14px}
