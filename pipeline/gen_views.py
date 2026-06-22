@@ -47,7 +47,7 @@ def brief(e):
 eps=load_eps()
 bypid={}
 for e in eps:
-    if e.get("ts"): bypid.setdefault(e["pid"],[]).append(e)
+    if e.get("insights"): bypid.setdefault(e["pid"],[]).append(e)   # ts 已外置(懒加载),用 insights 判断有内容
 targets={pid:sorted(v,key=lambda e:e.get('date','')) for pid,v in bypid.items() if len(v)>=MIN_EPS}
 print(f"≥{MIN_EPS} 期的人物: {len(targets)} 位 → {list(targets)}",file=sys.stderr)
 
