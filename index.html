@@ -135,7 +135,7 @@
     box-shadow:var(--shadow);overflow:hidden;cursor:pointer;transition:transform .25s,box-shadow .25s;border:1px solid transparent}
   .ep-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
   [data-theme="dark"] .ep-card{border-color:var(--line)}
-  .ep-cover{height:152px;position:relative;overflow:hidden;background:color-mix(in srgb,var(--c,#0071e3) 42%,#1d1d1f)}
+  .ep-cover{height:152px;position:relative;overflow:hidden}
   .ep-cover .pod{position:absolute;top:16px;left:18px;right:18px;font-size:12px;color:#fff;opacity:.95;font-weight:500;
     display:flex;align-items:center;gap:7px;text-shadow:0 1px 2px rgba(0,0,0,.18)}
   .ep-cover .pod>span,.ep-cover .pod{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -932,7 +932,8 @@ function av(pid,cls=''){const p=PEOPLE[pid];const cs=p.fields.map(f=>FIELDS[f].c
   const img=PHOTOS.has(pid)?`<img src="assets/people/${pid}.jpg" alt="${p.en}" loading="lazy" onerror="this.remove()">`:'';
   return `<div class="av ${cls}" style="background:${bg}">${p.init}${img}</div>`;}
 function epCover(e){const p=PEOPLE[e.pid];const cs=p.fields.map(f=>FIELDS[f].c);
-  return `<div class="ep-cover" style="--c:${cs[0]}">
+  const bg=`linear-gradient(135deg,${cs[0]},${cs[1]||cs[0]})`;
+  return `<div class="ep-cover" style="background:${bg}">
     <div class="pod" onclick="goPod('${e.pod.en}')" style="cursor:pointer">${podLogo(e)}${e.pod.en}</div>${av(e.pid)}
     <div class="ct"><b>${p.en}</b><span>${fmtDate(e.date)} · ${fmtDur(e.min)}</span></div></div>`;}
 function epCard(e){return `<div class="ep-card" onclick="go('#/episode/${e.id}')">
