@@ -453,6 +453,9 @@
   body[data-route="person"] .footer,body[data-route="pod"] .footer,body[data-route="topics"] .footer,body[data-route="topic"] .footer,body[data-route="ask"] .footer{border-top:none}
   .footer a{color:var(--text-2);text-decoration:underline;text-underline-offset:2px}
   .mcp-note{border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:22px;background:var(--surface-2)}
+  .legal-note{border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;
+    padding:13px 16px;margin-bottom:22px;background:var(--surface-2);line-height:1.7}
+  .legal-note a{color:var(--accent)}
   .mcp-url{font-family:var(--mono,ui-monospace,SFMono-Regular,Menlo,monospace);font-size:12.5px;
     background:var(--surface);border:1px solid var(--line);border-radius:7px;padding:3px 8px;color:var(--text);
     word-break:break-all;display:inline-block;margin:4px 6px 4px 0}
@@ -1616,6 +1619,10 @@ function footer(){return `<footer class="footer"><div class="wrap">
     在 AI 助手里添加远程 MCP(Streamable HTTP),地址:
     <code class="mcp-url">${MCP_URL}</code><button id="mcpCopy" class="mcp-copy" onclick="copyMcp()">复制</button><br>
     <span class="mcp-tools">工具:list_people · get_person(含观点演变) · search_episodes · get_episode(双语全文)。只读、免费、无需 key。</span>
+  </div>
+  <div class="legal-note">
+    <b style="color:var(--text-2)">版权与使用</b> — 本站仅供<b>学习与评论用途,非商业</b>。所有播客内容<b>版权归原节目及播客方所有</b>;双语全文为 AI 转录翻译,仅作阅读参考,请以原节目为准。
+    若您是权利人、希望将相关内容下架,请联系 <a href="mailto:linzheng3535@gmail.com?subject=AI%20Podcast%20Takedown%20Request">linzheng3535@gmail.com</a>,<b>收到后将立即处理</b>。
   </div>
   <b style="color:var(--text-2)">AI Podcast · AI 播客</b> — 知名 AI 人物的播客,双语阅读。<br>
   人物与领域分类法复用自 <a href="https://ai.jasonlin.tech" target="_blank">AI 人物图谱</a>。节目均为真实播客;双语全文由 AI 转录翻译,个别词偶有瑕疵。<br>
