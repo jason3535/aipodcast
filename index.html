@@ -181,10 +181,11 @@
     background:linear-gradient(135deg,var(--f-nlp),var(--f-dl))}
 
   /* ---------- TTS 选中朗读 ---------- */
-  .tts-btn{position:absolute;display:none;align-items:center;gap:6px;z-index:130;transform:translateX(-50%);
-    background:var(--text);color:var(--bg);border:none;border-radius:980px;padding:8px 14px;font-size:13px;
-    font-weight:500;cursor:pointer;box-shadow:var(--shadow-lg);font-family:var(--ui);white-space:nowrap;
-    transition:opacity .15s}
+  .sel-bar{position:absolute;display:none;align-items:center;gap:7px;z-index:130;transform:translateX(-50%)}
+  .sel-btn{display:inline-flex;align-items:center;gap:6px;background:var(--text);color:var(--bg);border:none;
+    border-radius:980px;padding:8px 14px;font-size:13px;font-weight:500;cursor:pointer;box-shadow:var(--shadow-lg);
+    font-family:var(--ui);white-space:nowrap}
+  .sel-btn.share-sel-btn{background:var(--surface);color:var(--text);border:1px solid var(--line)}
   .tts-btn.loading{cursor:default;pointer-events:none}
   .tts-btn.loading .lbl::before{content:"";display:inline-block;width:11px;height:11px;margin-right:8px;
     border:2px solid currentColor;border-right-color:transparent;border-radius:50%;vertical-align:-1px;
@@ -517,8 +518,10 @@
     <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="9" r="6"/><path d="M9 3a6 6 0 000 12z" fill="currentColor" stroke="none"/></svg></button>
 </nav>
 
-<button id="ttsBtn" class="tts-btn" onmousedown="event.preventDefault()" onclick="ttsPlay()">
-  <span class="lbl">朗读所选</span></button>
+<div id="selBar" class="sel-bar" onmousedown="event.preventDefault()">
+  <button id="ttsBtn" class="sel-btn tts-btn" onclick="ttsPlay()"><span class="lbl">朗读所选</span></button>
+  <button id="shareSelBtn" class="sel-btn share-sel-btn" onclick="shareSel()">分享</button>
+</div>
 
 <div id="ttsBar">
   <div class="tb-h"><span class="tb-eq"><i></i><i></i><i></i></span><span class="tb-title">朗读中</span>
@@ -1268,16 +1271,29 @@ const TTS_PROXY='https://aipodcast-tts.992978142.workers.dev';
 let ttsAudio=null;
 function inReader(node){const el=node&&node.nodeType===3?node.parentElement:node;return !!(el&&el.closest&&el.closest('.reader')&&!el.closest('.chat'));}
 function ttsCheckSel(){
-  const btn=$('#ttsBtn');if(!btn)return;
+  const bar=$('#selBar'),btn=$('#ttsBtn');if(!bar||!btn)return;
   const sel=window.getSelection();const text=(sel?sel.toString():'').trim();
-  if(text.length<2||!sel.anchorNode||!inReader(sel.anchorNode)){btn.style.display='none';return;}
+  if(text.length<2||!sel.anchorNode||!inReader(sel.anchorNode)){bar.style.display='none';return;}
+  if(btn.classList.contains('loading'))return;  // 朗读处理中不因新选区重置
   const r=sel.getRangeAt(0).getBoundingClientRect();
-  if(btn.classList.contains('loading'))return;  // 处理中不因新选区重置
-  btn.style.display='flex';btn.classList.remove('playing');
+  bar.style.display='flex';btn.classList.remove('playing');
   btn.querySelector('.lbl').textContent='朗读所选';
-  btn.style.left=(window.scrollX+r.left+r.width/2)+'px';
-  btn.style.top=(window.scrollY+r.top-46)+'px';
+  const sb=$('#shareSelBtn');if(sb)sb.textContent='分享';
+  bar.style.left=(window.scrollX+r.left+r.width/2)+'px';
+  bar.style.top=(window.scrollY+r.top-46)+'px';
   btn.dataset.text=text;
+}
+async function shareSel(){
+  const text=(($('#ttsBtn').dataset.text)||'').trim();if(!text)return;
+  const m=(location.hash||'').match(/#\/episode\/([^?]+)/);
+  const id=m?m[1]:'';const e=id&&EPISODES.find(x=>x.id===id);
+  const url=id?('https://aipodcast.jasonlin.tech/e/'+id+'/'):'https://aipodcast.jasonlin.tech';
+  const who=e?`— ${PEOPLE[e.pid].zh}《${e.tZh||e.tEn}》`:'— AI Podcast';
+  const body=`「${text}」\n${who}\n${url}`;
+  if(navigator.share){try{await navigator.share({title:'AI Podcast',text:`「${text}」 ${who}`,url});return;}catch(_){}}
+  const sb=$('#shareSelBtn');
+  try{await navigator.clipboard.writeText(body);if(sb){sb.textContent='已复制';setTimeout(()=>sb.textContent='分享',1600);}}
+  catch(_){if(sb){sb.textContent='复制失败';setTimeout(()=>sb.textContent='分享',1600);}}
 }
 let ttsBarChars=null,ttsBlobUrl=null;
 const escHtml=s=>s.replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]));
@@ -1287,7 +1303,8 @@ function ttsStop(hide){
   const bar=$('#ttsBar');if(bar)bar.classList.remove('on');
   ttsBarChars=null;
   const btn=$('#ttsBtn');if(btn){btn.classList.remove('playing','loading');
-    btn.querySelector('.lbl').textContent='朗读所选';if(hide)btn.style.display='none';}
+    btn.querySelector('.lbl').textContent='朗读所选';}
+  if(hide){const sb=$('#selBar');if(sb)sb.style.display='none';}
 }
 function ttsBarToggle(){
   const bar=$('#ttsBar');if(!bar)return;
