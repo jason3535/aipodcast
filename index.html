@@ -1629,10 +1629,11 @@ function applyLocate(){
   if(!document.querySelector('.reader .sec-h'))return;   // 逐字稿还没加载,等下次 render
   pendingLocate=null;
   let target=null;
-  if(hl){const snip=(hl||'').replace(/\s/g,'').slice(0,30);
-    if(snip){const els=[...document.querySelectorAll('.reader .turn .en,.reader .turn .zh')]
-      .filter(el=>el.offsetParent!==null);   // 只在当前语言可见的行里找
-      target=els.find(el=>el.textContent.replace(/\s/g,'').includes(snip))||null;}}
+  if(hl){const base=(hl||'').replace(/\s/g,'');   // 去空格/换行(选区可能跨发言、含说话人标签)
+    if(base.length>=6){const els=[...document.querySelectorAll('.reader .turn .en,.reader .turn .zh')];
+      for(const L of [40,30,22,16,10]){const snip=base.slice(0,Math.min(L,base.length));if(snip.length<6)continue;
+        const hit=els.find(el=>el.textContent.replace(/\s/g,'').includes(snip));   // 逐步缩短前缀,命中选区开头那条
+        if(hit){target=hit.offsetParent?hit:hit.closest('.turn');break;}}}}   // 命中隐藏行(跨语言)→定位其发言块
   if(!target&&at!=null&&at!==''){target=document.getElementById('sec-'+at);}
   if(!target)return;
   const go=()=>{const top=target.getBoundingClientRect().top+window.scrollY-92;   // 顶对齐到阅读栏下方
