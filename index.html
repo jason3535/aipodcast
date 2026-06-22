@@ -110,9 +110,9 @@
   .hero{padding:18px 0 8px}
   .hero-card{position:relative;border-radius:28px;overflow:hidden;background:var(--surface);
     box-shadow:var(--shadow-lg);display:grid;grid-template-columns:1.05fr 1fr;min-height:420px}
-  .hero-art{position:relative;display:grid;place-items:center;overflow:hidden}
-  .hero-art .av{width:230px;height:230px;font-size:84px}
-  .hero-art::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 120% at 30% 20%,transparent 40%,rgba(0,0,0,.04))}
+  .hero-art{position:relative;display:grid;place-items:center;overflow:hidden;
+    background:linear-gradient(158deg,color-mix(in srgb,var(--c,#0071e3) 15%,var(--surface-2)),var(--surface-2))}
+  .hero-art .av{width:228px;height:228px;font-size:84px;box-shadow:0 8px 30px rgba(0,0,0,.12)}
   .hero-body{padding:54px 48px;display:flex;flex-direction:column;justify-content:center}
   .hero-body .eyebrow{color:var(--accent)}
   .hero-body h1{font-size:42px;line-height:1.08;font-weight:600;letter-spacing:-.03em;margin:6px 0 4px}
@@ -135,7 +135,7 @@
     box-shadow:var(--shadow);overflow:hidden;cursor:pointer;transition:transform .25s,box-shadow .25s;border:1px solid transparent}
   .ep-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
   [data-theme="dark"] .ep-card{border-color:var(--line)}
-  .ep-cover{height:152px;position:relative;overflow:hidden}
+  .ep-cover{height:152px;position:relative;overflow:hidden;background:color-mix(in srgb,var(--c,#0071e3) 42%,#1d1d1f)}
   .ep-cover .pod{position:absolute;top:16px;left:18px;right:18px;font-size:12px;color:#fff;opacity:.95;font-weight:500;
     display:flex;align-items:center;gap:7px;text-shadow:0 1px 2px rgba(0,0,0,.18)}
   .ep-cover .pod>span,.ep-cover .pod{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -932,8 +932,7 @@ function av(pid,cls=''){const p=PEOPLE[pid];const cs=p.fields.map(f=>FIELDS[f].c
   const img=PHOTOS.has(pid)?`<img src="assets/people/${pid}.jpg" alt="${p.en}" loading="lazy" onerror="this.remove()">`:'';
   return `<div class="av ${cls}" style="background:${bg}">${p.init}${img}</div>`;}
 function epCover(e){const p=PEOPLE[e.pid];const cs=p.fields.map(f=>FIELDS[f].c);
-  const bg=`linear-gradient(135deg,${cs[0]},${cs[1]||cs[0]})`;
-  return `<div class="ep-cover" style="background:${bg}">
+  return `<div class="ep-cover" style="--c:${cs[0]}">
     <div class="pod" onclick="goPod('${e.pod.en}')" style="cursor:pointer">${podLogo(e)}${e.pod.en}</div>${av(e.pid)}
     <div class="ct"><b>${p.en}</b><span>${fmtDate(e.date)} · ${fmtDur(e.min)}</span></div></div>`;}
 function epCard(e){return `<div class="ep-card" onclick="go('#/episode/${e.id}')">
@@ -948,7 +947,7 @@ function vHome(){
   return `
   <div class="wrap hero">
     <div class="hero-card reveal">
-      <div class="hero-art" style="background:linear-gradient(150deg,${fp.fields.map(f=>FIELDS[f].c).join(',')})">${av(feat.pid)}</div>
+      <div class="hero-art" style="--c:${FIELDS[fp.fields[0]].c}">${av(feat.pid)}</div>
       <div class="hero-body">
         <div class="eyebrow">本周精选 · Featured</div>
         <h1>${feat.tEn}</h1>
