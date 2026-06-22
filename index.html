@@ -952,7 +952,7 @@ function vHome(){
     </div>
   </div>
 
-  <section class="wrap reveal" style="padding:18px 0 0">
+  <section class="wrap reveal" style="padding:20px 0 28px">
     <div class="ask-bar" onclick="go('#/ask')" title="问全站">
       <span class="ask-bar-ph">问关于 AI 的任何问题 —— 综合 ${Object.keys(PEOPLE).length} 位大佬、${EPISODES.length} 期播客的观点回答</span>
       <span class="ask-bar-btn">问全站</span>
@@ -1540,7 +1540,15 @@ function go(h){location.hash=h;}
 const CJK='\\u4e00-\\u9fff\\u3040-\\u30ff\\u3400-\\u4dbf';
 const RE1=new RegExp('(['+CJK+'])([A-Za-z0-9%])','g');
 const RE2=new RegExp('([A-Za-z0-9%\\)\\]])(['+CJK+'])','g');
-function pangu(t){return t.replace(RE1,'$1 $2').replace(RE2,'$1 $2');}
+/* 中文标点规范:CJK 相邻的半角标点转全角(并吸收多余空格);仅对含 CJK 的文本节点生效 */
+const FW={',':'，',';':'；','!':'！','?':'？',':':'：'};
+const RE_PUNC=new RegExp('(['+CJK+'])[ \\t]*([,;!?:])[ \\t]*','g');
+const RE_OP=new RegExp('\\([ \\t]*(['+CJK+'])','g');
+const RE_CP=new RegExp('(['+CJK+'])[ \\t]*\\)','g');
+function pangu(t){
+  t=t.replace(RE_PUNC,(_,c,p)=>c+FW[p]).replace(RE_OP,'（$1').replace(RE_CP,'$1）');
+  return t.replace(RE1,'$1 $2').replace(RE2,'$1 $2');
+}
 function pangufy(root){
   const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),nodes=[];let n;
   while(n=w.nextNode())nodes.push(n);
