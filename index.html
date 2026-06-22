@@ -1296,6 +1296,7 @@ function selSecIndex(){
 }
 async function shareSel(){
   const btn=$('#ttsBtn');const text=((btn&&btn.dataset.text)||'').trim();if(!text)return;
+  track('share');
   const m=(location.hash||'').match(/#\/episode\/([^?]+)/);
   const id=m?m[1]:'';const e=id&&EPISODES.find(x=>x.id===id);
   const quote=text.length>80?text.slice(0,80)+'…':text;            // 截断 80 字 + 省略号
@@ -1391,7 +1392,7 @@ async function ttsPlay(){
     ttsBuildBar(align,text);
     if(align)ttsAudio.ontimeupdate=ttsTick;
     ttsAudio.onended=()=>ttsStop(true);
-    ttsAudio.play();
+    ttsAudio.play();track('tts');
     btn.classList.remove('loading');btn.classList.add('playing');btn.querySelector('.lbl').textContent='停止朗读';
   }catch(err){
     ttsStop(false);
@@ -1482,7 +1483,7 @@ function setChatMode(m){
 }
 async function askEp(preset){
   const inp=$('#chatInput');const q=(preset||(inp?inp.value:'')||'').trim();if(!q)return;
-  const key=chatKey();if(!key)return;CHAT[key]=CHAT[key]||[];
+  const key=chatKey();if(!key)return;track(chatMode==='all'?'ask_all':'ask');CHAT[key]=CHAT[key]||[];
   const hist=CHAT[key].filter(m=>m.content&&m.content!=='…').slice(-4).map(m=>({role:m.role,content:m.content}));
   CHAT[key].push({role:'user',content:q},{role:'assistant',content:'…'});
   if(inp)inp.value='';
@@ -1590,6 +1591,18 @@ function pangufy(root){
   const cjk=/[一-鿿]/;
   nodes.forEach(nd=>{const v=nd.nodeValue;if(v&&cjk.test(v)){const nv=pangu(v);if(nv!==v)nd.nodeValue=nv;}});
 }
+/* ====== 匿名访问统计(无 Cookie / 不收集个人信息;数据进自有 D1,可在 Claude Code 直接查) ====== */
+const STATS_URL='https://aipodcast-stats.992978142.workers.dev';
+const _dev=/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)?'mobile':'desktop';
+const _ref=(()=>{try{return document.referrer?new URL(document.referrer).host:'';}catch(_){return '';}})();
+let _lastView=null;
+function track(type,path){
+  try{const p=path||(location.hash.replace(/^#/,'').split('?')[0]||'/');
+    const body=JSON.stringify({type,path:p,ua:_dev,ref:_ref});
+    if(navigator.sendBeacon)navigator.sendBeacon(STATS_URL,new Blob([body],{type:'application/json'}));
+    else fetch(STATS_URL,{method:'POST',headers:{'Content-Type':'application/json'},body,keepalive:true});
+  }catch(_){}}
+function trackView(){const p=location.hash.replace(/^#/,'').split('?')[0]||'/';if(p===_lastView)return;_lastView=p;track('view',p);}
 function render(){
   if(typeof ttsStop==='function')ttsStop(true);   // 切页时停朗读、收起跟读条
   const h=location.hash||'#/';
@@ -1620,6 +1633,7 @@ function render(){
   observeReveals();
   initTOC();
   applyLocate();
+  trackView();
 }
 let pendingLocate=null;
 function applyLocate(){
@@ -1681,7 +1695,8 @@ function footer(){return `<footer class="footer"><div class="wrap">
   </div>
   <b style="color:var(--text-2)">AI Podcast · AI 播客</b> — 知名 AI 人物的播客,双语阅读。<br>
   人物与领域分类法复用自 <a href="https://ai.jasonlin.tech" target="_blank">AI 人物图谱</a>。节目均为真实播客;双语全文由 AI 转录翻译,个别词偶有瑕疵。<br>
-  人物照片来自 <a href="https://commons.wikimedia.org" target="_blank">Wikimedia Commons</a>(CC 协议)及本人公开主页头像,版权归各自作者,仅作识别之用;播客封面来自 Apple Podcasts,商标归各节目所有,仅作识别之用。
+  人物照片来自 <a href="https://commons.wikimedia.org" target="_blank">Wikimedia Commons</a>(CC 协议)及本人公开主页头像,版权归各自作者,仅作识别之用;播客封面来自 Apple Podcasts,商标归各节目所有,仅作识别之用。<br>
+  本站使用匿名访问统计(无 Cookie、不收集任何个人信息)。
 </div></footer>`;}
 
 /* init */
