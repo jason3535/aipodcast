@@ -318,6 +318,10 @@
 
   .sec-h{font-family:var(--ui);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
     color:var(--text-3);margin:40px 0 22px}
+  /* 目录/章节标题:中文模式显示中文标题(secZh) */
+  .sec-h .sz,.toc-i .sz{display:none}
+  body[data-lang="zh"] .sec-h .se,body[data-lang="zh"] .toc-i .se{display:none}
+  body[data-lang="zh"] .sec-h .sz,body[data-lang="zh"] .toc-i .sz{display:inline;font-family:var(--han);text-transform:none}
   .ts-loading{display:flex;align-items:center;gap:10px;color:var(--text-3);font-family:var(--ui);
     font-size:14px;padding:48px 0}
   .ts-spin{width:16px;height:16px;border:2px solid var(--line);border-top-color:var(--accent);
@@ -1117,10 +1121,10 @@ function vEpisode(id){
   const body=loading
     ? `<div class="ts-loading"><span class="ts-spin"></span>正在加载双语全文…</div>`
     : ts.map((s,i)=>`
-    <div class="sec-h" id="sec-${i}">${s.sec}</div>
+    <div class="sec-h" id="sec-${i}"><span class="se">${s.sec}</span><span class="sz">${s.secZh||s.sec}</span></div>
     ${(s.turns||[]).map(t=>{const g=t.spk===p.en.split(' ')[0]||t.spk===e.pid||t.spk===p.en;return `<div class="turn"><div class="spk" style="color:${g?FIELDS[e.fields[0]].c:'var(--text-3)'};font-weight:${g?700:600}">${t.spk||''}</div>
       <div class="en">${t.en||''}</div><div class="zh">${t.zh||''}</div></div>`}).join('')}`).join('');
-  const tocItems=ts.map((s,i)=>`<a class="toc-i" data-sec="${i}" onclick="jumpSec(${i})">${s.sec}</a>`).join('');
+  const tocItems=ts.map((s,i)=>`<a class="toc-i" data-sec="${i}" onclick="jumpSec(${i})"><span class="se">${s.sec}</span><span class="sz">${s.secZh||s.sec}</span></a>`).join('');
   const hasToc=ts.length>=3;
   const insRow=(arr)=>arr.map(x=>{const j=(typeof x.sec==='number'&&x.sec>=0);return `<li${j?` class="jmp" onclick="jumpSec(${x.sec})" title="跳到原文出处"`:''}><span class="ie">${x.en}</span><span class="iz">${x.zh}</span></li>`}).join('');
   const brief=e.brief?`<div class="brief reveal in">
