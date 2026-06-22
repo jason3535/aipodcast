@@ -1599,8 +1599,8 @@ let _lastView=null;
 function track(type,path){
   try{const p=path||(location.hash.replace(/^#/,'').split('?')[0]||'/');
     const body=JSON.stringify({type,path:p,ua:_dev,ref:_ref});
-    if(navigator.sendBeacon)navigator.sendBeacon(STATS_URL,new Blob([body],{type:'application/json'}));
-    else fetch(STATS_URL,{method:'POST',headers:{'Content-Type':'application/json'},body,keepalive:true});
+    if(navigator.sendBeacon)navigator.sendBeacon(STATS_URL,new Blob([body],{type:'text/plain'}));  // text/plain 才能免预检跨域发出
+    else fetch(STATS_URL,{method:'POST',headers:{'Content-Type':'text/plain'},body,keepalive:true});
   }catch(_){}}
 function trackView(){const p=location.hash.replace(/^#/,'').split('?')[0]||'/';if(p===_lastView)return;_lastView=p;track('view',p);}
 function render(){
