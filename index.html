@@ -1036,11 +1036,13 @@ function vHome(){
   <section class="wrap reveal" style="padding-top:8px">
     <div class="eyebrow">People · 人物</div>
     <h2 class="title">${Object.keys(PEOPLE).length} 位 AI 人物</h2>
-    <div class="ppl-grid" style="margin-top:22px">${Object.keys(PEOPLE).map(pplCard).join('')}</div>
+    <div class="ppl-grid" style="margin-top:22px">${pplOrder().map(pplCard).join('')}</div>
   </section>
   ${footer()}`;
 }
 
+// 人物按播客覆盖量排序,让覆盖充分的大佬靠前(避免知名人物被新加入的人埋没),同量保持原有顺序
+function pplOrder(){const k=Object.keys(PEOPLE);return k.slice().sort((a,b)=>epsOf(b).length-epsOf(a).length||k.indexOf(a)-k.indexOf(b));}
 function pplCard(pid){const p=PEOPLE[pid];const n=epsOf(pid).length;
   return `<div class="ppl-card" onclick="go('#/person/${pid}')">
     ${av(pid)}<div class="n">${p.en}</div><div class="nz">${p.zh}</div>
@@ -1048,7 +1050,7 @@ function pplCard(pid){const p=PEOPLE[pid];const n=epsOf(pid).length;
 
 let pplFilter=null;
 function vPeople(){
-  const ids=Object.keys(PEOPLE).filter(id=>!pplFilter||PEOPLE[id].fields.includes(pplFilter));
+  const ids=pplOrder().filter(id=>!pplFilter||PEOPLE[id].fields.includes(pplFilter));
   return `<div class="wrap"><section class="reveal" style="padding-bottom:0">
     <div class="eyebrow">People · 人物</div><h2 class="title">AI 人物</h2>
     <div class="sub">按研究领域筛选,点击进入个人主页与全部播客。</div>
