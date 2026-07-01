@@ -286,7 +286,10 @@
   .viewlist .vz{display:block;font-family:var(--han);font-size:14px;line-height:1.75;color:var(--text-2);margin-top:4px}
   body[data-lang="en"] .viewlist .vz{display:none}
   body[data-lang="zh"] .viewlist .ve{display:none}
-  .xlink{display:inline-flex;align-items:center;gap:6px;font-size:14px;color:var(--accent);margin-top:16px;cursor:pointer}
+  .xlinks{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+.xlink{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--text);padding:8px 14px;border:1px solid var(--line);border-radius:999px;cursor:pointer;text-decoration:none;transition:border-color .15s,background .15s}
+.xlink:hover{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 8%,transparent)}
+.xlink svg{width:15px;height:15px;color:var(--accent);flex:none}
   @media(max-width:640px){.pp-head{flex-direction:column;text-align:center;gap:18px}.pp-head .av{width:110px;height:110px}}
 
   /* ---------- READING VIEW ---------- */
@@ -1240,8 +1243,7 @@ function vPerson(pid){
     </div>
     <div class="pp-bio reveal">
       <div class="en">${p.bioEn}</div><div class="zh">${p.bioZh}</div>
-      ${gid?`<div class="xlink" onclick="window.open('https://ai.jasonlin.tech/?node=${gid}','_blank')">在关系图谱中查看 ${p.zh}</div>`:''}
-      ${POD2PAPER[pid]?`<div class="xlink" onclick="window.open('https://aipaper.jasonlin.tech/#/person/${POD2PAPER[pid]}','_blank')">📄 阅读 ${p.zh} 的代表论文</div>`:''}
+      <div class="xlinks">${gid?`<a class="xlink" href="https://ai.jasonlin.tech/?node=${gid}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6.5" r="2.1"/><circle cx="18" cy="8" r="2.1"/><circle cx="10.5" cy="18" r="2.1"/><path d="M8 7l7.9 1M8.1 8l1.8 8"/></svg>在关系图谱中查看</a>`:''}${POD2PAPER[pid]?`<a class="xlink" href="https://aipaper.jasonlin.tech/#/person/${POD2PAPER[pid]}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v4h4"/><path d="M9 13h6M9 17h4"/></svg>在 AI Paper 中读论文</a>`:''}</div>
     </div>
     ${VIEWS[pid]&&VIEWS[pid].length?`<section class="reveal" style="padding-bottom:0">
       <div class="sec-h" style="margin-top:40px">观点演变 · How the views evolved<span class="evhint">由早及近</span></div>
@@ -1269,7 +1271,7 @@ function vPod(slug){
     </div>
     <div class="pp-bio reveal">
       <div class="en">${info.en}</div><div class="zh">${info.cn}</div>
-      ${info.url?`<div class="xlink" onclick="window.open('${info.url}','_blank')">访问 ${key} 官网</div>`:''}
+      ${info.url?`<div class="xlinks"><a class="xlink" href="${info.url}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18"/></svg>访问官网</a></div>`:''}
     </div>
     <section class="reveal" style="padding-bottom:0">
       <div class="sec-h" style="margin-top:44px">本站收录 · ${eps.length} 期</div>
