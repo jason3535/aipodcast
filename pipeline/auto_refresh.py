@@ -232,7 +232,14 @@ def main():
     chk = subprocess.run(["node", "-e",
         "const fs=require('fs');const h=fs.readFileSync('index.html','utf8');"
         "const b=[...h.matchAll(/<script>([\\s\\S]*?)<\\/script>/g)].map(x=>x[1]).filter(s=>s.includes('EPISODES'))[0];"
-        "new Function(b);console.log('ok')"], capture_output=True, text=True, cwd=str(ROOT))
+        "new Function(b);"
+        # 数据校验:领域 key 必须已登记(2026-07-02 曾因 efficiency 白屏)、id 不重复
+        "const eps=JSON.parse(h.match(/const EPISODES = (\\[[\\s\\S]*?\\]);/)[1]);"
+        "const fk=new Set([...h.match(/const FIELDS = \\{([\\s\\S]*?)\\n\\};/)[1].matchAll(/'([a-z-]+)':\\{en:/g)].map(m=>m[1]));"
+        "const badf=eps.filter(e=>(e.fields||[]).some(f=>!fk.has(f)));"
+        "if(badf.length)throw new Error('未登记领域:'+badf.map(e=>e.id).join(','));"
+        "const ids=eps.map(e=>e.id);if(new Set(ids).size!==ids.length)throw new Error('重复 id');"
+        "console.log('ok')"], capture_output=True, text=True, cwd=str(ROOT))
     if "ok" not in chk.stdout:
         log("⚠️ JS 校验失败,放弃提交(保留改动供人工检查):" + chk.stderr[:150]); return
 

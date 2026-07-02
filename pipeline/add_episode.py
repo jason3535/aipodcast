@@ -170,6 +170,11 @@ def main():
     edate = a.date or (f"{ydate[:4]}-{ydate[4:6]}-{ydate[6:]}" if ydate else "")
     pod = {"en": a.pod_en, "zh": a.pod_zh}
     fields = [f.strip() for f in a.fields.split(",") if f.strip()]
+    # 领域必须是站内已登记的 key,否则前端 fdot 渲染会挂(2026-07-02 曾因 efficiency 白屏)
+    valid_fields = set(re.findall(r"'([a-z-]+)':\{en:", re.search(r"const FIELDS = \{(.*?)\n\};", open(BASE.parent / "index.html", encoding="utf-8").read(), re.S).group(1)))
+    bad = [f for f in fields if f not in valid_fields]
+    if bad:
+        sys.exit(f"--fields 含未登记领域 {bad},可用: {sorted(valid_fields)}")
     src = f"https://youtu.be/{vid}"
 
     # 逐字稿权威源:写 mcp-data/ep/<id>.json(网页懒加载 + MCP 都用它);内联只存元数据,首屏才不臃肿
