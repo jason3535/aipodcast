@@ -1,0 +1,11 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>页面不存在 · AI Podcast</title>
+<meta name="robots" content="noindex">
+<script>
+// 尽量把走丢的链接送回正确的地方:/e/<id>/ → #/episode/<id>,其余回首页
+var m=location.pathname.match(/^\/e\/([^\/]+)/);
+location.replace(m?'/#/episode/'+m[1]:'/');
+</script>
+<style>body{font-family:-apple-system,system-ui,"PingFang SC",sans-serif;display:grid;place-items:center;height:100vh;margin:0;color:#1d1d1f}a{color:#0071e3}</style>
+</head><body><p>页面不存在，正在回到首页… <a href="/">点此进入</a></p></body></html>
