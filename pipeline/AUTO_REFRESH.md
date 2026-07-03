@@ -3,19 +3,23 @@
 让 AI Podcast 的内容「总是最新」——定时自动发现各人物的新播客、AI 选题、抓取双语全文、重生成全部派生数据、提交推送上线。**无人值守。**
 
 ## 流程
-`pipeline/auto_refresh.py` 一条龙:
-1. **发现**:对在站全部人物,yt-dlp 搜最近的新播客(近 120 天、比在站最新更新、≥30min、有英文字幕、未收录)。
+`pipeline/auto_refresh.py` 一条龙,**双维度发现**:
+1a. **人物维度**:对在站全部人物,yt-dlp 搜最近的新播客(近 120 天、比在站最新更新、≥30min、有英文字幕、未收录)。
+1b. **频道维度(2026-07-03 新增)**:盯 12 个重点播客频道(Lex/Dwarkesh/No Priors/MLST/YC/Lenny/Training Data/20VC/DeepMind/a16z/Unsupervised Learning/TWIML,handle 均已核验)的最近 10 条上传,主嘉宾必须是**站内已有人物**才收(新人物交给人工);每频道 ≤2 期。两维度按视频去重、每人合计 ≤2 期。
 2. **选题闸门**(替代人工筛):每个候选过 DeepSeek 判断——必须是该人物作为**主嘉宾**的**英文****实质 AI 访谈**(自动剔除新闻短片/圆桌/非英语/本人非主角)。
 3. **收录**:每人最多 1 期最新、全局每轮 ≤6 期;调 `add_episode.py` 抓双语全文+核心观点;新播客台自动登记(DeepSeek 双语简介 + iTunes logo)。
 4. **重生成**:`gen_views` 观点演变 / `gen_topics` 议题 / `build_mcp_data` MCP 索引 / `build_share_pages` 分享页。
 5. **上线**:JS 校验通过后 `git commit && push`,GitHub Pages 自动部署。**没有新内容就不提交。**
+
+## ⚠️ 仓库位置(TCC 坑,2026-07-03)
+仓库曾在 `~/Downloads/`——macOS TCC 保护 Downloads,launchd 后台进程一律 "Operation not permitted",定时任务静默失败了近两周。已搬到 **`~/CascadeProjects/aipodcast`**(不受 TCC 限制),旧路径留了软链。**不要把带定时任务的仓库放 Downloads/Desktop/Documents。**
 
 ## 为什么跑在本机(不是云)
 **yt-dlp 必须用住宅 IP**——YouTube 封数据中心 IP,GitHub Actions/云会被"确认非机器人"挡。所以调度跑在 Jason 的 Mac 上(住宅 IP + 已有 key)。DeepSeek 用 `ProxyHandler({})` 直连绕开 Clash 系统代理。
 
 ## 调度(macOS launchd)
 - 计划任务:`~/Library/LaunchAgents/com.aipodcast.autorefresh.plist`(模板在 `pipeline/`)。
-- 频率:**每周一、周四 09:17**(本地时间)。开机自启、与 Claude 无关、重启不丢。
+- 频率:**每天 09:17**(本地时间,2026-07-03 起)。开机自启、与 Claude 无关、重启不丢。
 - 入口:`pipeline/run_auto_refresh.sh`(补全 launchd 精简 PATH、加载 `.env` 密钥、跑 python、记日志)。
 - 密钥:`pipeline/.env`(已 gitignore)放 `DEEPSEEK_API_KEY=...`,轮换时改这里即可。
 
