@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://aipodcast.jasonlin.tech/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/#/topics</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/ajambrosino-lennyspo-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/noambrown-nopriors-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/demis-semafort-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/jumper-machinel-2026/</loc></url>
@@ -21,6 +22,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/e/mensch-cnbc-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/demis-stanford-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/boris-acquired-2026/</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/naval-naval-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/boris-caseynew-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/oriol-unsuperv-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/noambrown-arcprize-2026/</loc></url>
@@ -63,6 +65,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/e/boris-lennyspo/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/bengio-centerfo-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/awang-aninewsi-2026/</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/ajambrosino-aii-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/boris-ycombina-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/dario-dwarkesh/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/dario-interest/</loc></url>
@@ -146,8 +149,10 @@
   <url><loc>https://aipodcast.jasonlin.tech/e/shanahan-googlede-2025/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/altman-ted-2025/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/lecun-aiinside-2025/</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/naval-modernwi-2025/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/shazeer-unsuperv-2025/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/elon-thejoero-2025/</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/naval-allinpod-2025/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/shazeer-dwarkesh-2025/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/jensen-cleoabra-2025/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/schmidhuber-machinel-2025/</loc></url>
@@ -197,10 +202,13 @@
   <url><loc>https://aipodcast.jasonlin.tech/e/bengio-machinel/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/lecun-lexfridm-2022/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/pathak-cmurobot-2020/</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/naval-thetimfe-2020/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/ilya-lexfridm-2020/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/andrewng-lexfridm-2020/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/awang-thisweek-2019/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/lecun-lexfridm-2019/</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/naval-theknowl-2019/</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/naval-thejoero-2019/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/brockman-lexfridm-2019/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/abbeel-lexfridm-2018/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/altman-ycombina-2018/</loc></url>
