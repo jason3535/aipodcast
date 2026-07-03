@@ -134,6 +134,66 @@ def register_pod(pod_en):
     log(f"  + 登记新台 {pod_en}（{zh}）logo={'有' if logo else '无'}")
     return zh, True
 
+# ---- 频道维度发现:盯重点播客频道的最新上传(与人物维度互补) ----
+# handle 已逐一用 yt-dlp 核验(2026-07-03)。左=站内 pod.en 登记名,右=频道 /videos 页。
+CHANNELS = [
+    ("Lex Fridman Podcast", "https://www.youtube.com/@lexfridman/videos"),
+    ("Dwarkesh Podcast", "https://www.youtube.com/@DwarkeshPatel/videos"),
+    ("No Priors", "https://www.youtube.com/@NoPriorsPodcast/videos"),
+    ("Machine Learning Street Talk", "https://www.youtube.com/@MachineLearningStreetTalk/videos"),
+    ("Y Combinator", "https://www.youtube.com/@ycombinator/videos"),
+    ("Lenny\u2019s Podcast", "https://www.youtube.com/@LennysPodcast/videos"),
+    ("Training Data", "https://www.youtube.com/@sequoiacapital/videos"),
+    ("20VC", "https://www.youtube.com/@20VC/videos"),
+    ("Google DeepMind", "https://www.youtube.com/@GoogleDeepMind/videos"),
+    ("The a16z Podcast", "https://www.youtube.com/@a16z/videos"),
+    ("Unsupervised Learning", "https://www.youtube.com/@RedpointAI/videos"),
+    ("The TWIML AI Podcast", "https://www.youtube.com/@twimlai/videos"),
+]
+CH_GATE_SYS = ("你是 AI Podcast 选题编辑。给定一个播客视频与站内人物名单,判断:"
+    "① 视频的**主要嘉宾**是否为名单中的某个人(必须是主嘉宾/主讲,不是多人圆桌一员、不是被提及);"
+    "② 英文、实质性 AI/技术访谈(不是新闻短片、预告、混剪、发布会口播)。"
+    '只输出 JSON:{"keep":true/false,"pid":"名单中匹配的 pid,无则空串","guest":"嘉宾英文名","reason":"简短中文理由"}')
+
+def discover_channels(people, vids, days, per_channel_cap=2):
+    """每频道拉最近 10 条上传,主嘉宾必须是站内已有人物才收(新人物交给人物维度/人工)。"""
+    from datetime import timedelta
+    exist = set(vids)
+    floor = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y%m%d")
+    roster = "\n".join(f"{p['pid']}: {p['en']}" for p in people)
+    pid_map = {p["pid"]: p for p in people}
+    plan = []
+    for pod_en, url in CHANNELS:
+        try:
+            d = json.loads(subprocess.run(["yt-dlp", "--skip-download", "--no-warnings", "--flat-playlist",
+                "--playlist-end", "10", "--dump-single-json", url],
+                capture_output=True, text=True, timeout=110).stdout) or {}
+            entries = [e for e in (d.get("entries") or []) if e]
+        except Exception as e:
+            log(f"  [频道] {pod_en} 拉取失败:{str(e)[:40]}"); continue
+        kept = 0
+        for e in entries:
+            vid = e.get("id"); dur = e.get("duration") or 0
+            if not vid or vid in exist or (dur and dur < 1500): continue
+            m = meta(vid)
+            if not m or not m["cap"] or m["date"] < floor: continue
+            if not m["t"].isascii(): continue
+            try:
+                r = ds(CH_GATE_SYS, f"频道:{pod_en}\n标题:{m['t']}\n时长:{round(m['dur']/60)}分钟\n日期:{m['date']}\n\n站内人物名单(pid: 姓名):\n{roster}", mx=300)
+            except Exception as ex:
+                log(f"  [频道] {pod_en} gate 失败:{str(ex)[:40]}"); continue
+            pid = (r.get("pid") or "").strip()
+            ok = bool(r.get("keep")) and pid in pid_map
+            log(f"  [频道] {pod_en[:20]:20} {m['date']} [{round(m['dur']/60)}m] {m['t'][:44]} → {'收:'+pid if ok else '弃'}({str(r.get('reason',''))[:26]})")
+            if ok:
+                p = pid_map[pid]
+                plan.append({"pid": pid, "vid": m["vid"], "date": f"{m['date'][:4]}-{m['date'][4:6]}-{m['date'][6:]}",
+                             "podEn": pod_en, "min": round(m["dur"] / 60),
+                             "fields": ",".join(p["fields"]), "guest": p["en"].split()[0]})
+                exist.add(vid); kept += 1
+                if kept >= per_channel_cap: break
+    return plan
+
 # ---- 主流程 ----
 def discover(people, vids, days, per_person_cap=1):
     """每人发现 ≤per_person_cap 期:近 days 天、比在站最新更新、英文长访谈、过选题闸门。"""
@@ -193,9 +253,15 @@ def main():
     st = load_state()
     log(f"在站:{len(st['people'])} 人 / {len(st['vids'])} 期")
     plan = discover(st["people"], st["vids"], a.days)
-    # 全局限量(优先最新)
-    plan.sort(key=lambda x: x["date"], reverse=True)
-    plan = plan[:a.max]
+    log(f"人物维度:{len(plan)} 期;开始频道维度…")
+    plan += discover_channels(st["people"], st["vids"], a.days)
+    # 双维度去重(同视频) + 每人最多 2 期 + 全局限量(优先最新)
+    from collections import Counter
+    seen, cnt, uniq = set(), Counter(), []
+    for x in sorted(plan, key=lambda x: x["date"], reverse=True):
+        if x["vid"] in seen or cnt[x["pid"]] >= 2: continue
+        seen.add(x["vid"]); cnt[x["pid"]] += 1; uniq.append(x)
+    plan = uniq[:a.max]
     log(f"选题闸门通过、计划收录 {len(plan)} 期:" + ", ".join(f"{x['pid']}({x['date']})" for x in plan))
 
     if a.dry_run:
