@@ -1122,7 +1122,15 @@ function epCard(e){return `<div class="ep-card" onclick="go('#/episode/${e.id}')
 /* ============================ VIEWS ============================ */
 /* 继续阅读(最近打开的单集) */
 function recentGet(){try{const r=JSON.parse(localStorage.recentEpisodes||'[]');return Array.isArray(r)?r:[]}catch(e){return[]}}
-function recentAdd(id){let r=recentGet().filter(x=>x!==id);r.unshift(id);localStorage.recentEpisodes=JSON.stringify(r.slice(0,6));}
+let _recentSnap=localStorage.recentEpisodes||'';
+addEventListener('visibilitychange',()=>{
+  if(document.visibilityState!=='visible')return;
+  const cur=localStorage.recentEpisodes||'';
+  const onHome=!(location.hash||'#/').slice(2).split('?')[0].split('/').filter(Boolean).length;
+  if(onHome&&cur!==_recentSnap){const sy=scrollY;render();scrollTo(0,sy);}
+  _recentSnap=cur;
+});
+function recentAdd(id){let r=recentGet().filter(x=>x!==id);r.unshift(id);localStorage.recentEpisodes=JSON.stringify(r.slice(0,6));_recentSnap=localStorage.recentEpisodes;}
 function vHome(){
   const feat=EPISODES.find(e=>!e.stub)||EPISODES[0],fp=PEOPLE[feat.pid];
   const featTurn=(feat.quotes&&feat.quotes[0])||(feat.insights&&feat.insights.consensus&&feat.insights.consensus[0])||{en:feat.sEn,zh:feat.sZh};
@@ -1148,7 +1156,7 @@ function vHome(){
     </div>
   </section>
 
-  ${(()=>{const rec=recentGet().filter(id=>id!==feat.id).map(id=>EPISODES.find(e=>e.id===id)).filter(Boolean).slice(0,4);
+  ${(()=>{const rec=recentGet().map(id=>EPISODES.find(e=>e.id===id)).filter(Boolean).slice(0,4);
    return rec.length?`<section class="wrap reveal" style="padding:8px 0 0">
     <div class="eyebrow">Continue · 继续阅读</div>
     <h2 class="title">上次看到</h2>
