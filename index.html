@@ -317,6 +317,8 @@
   .reader .ep-head h1{font-size:34px;font-weight:600;letter-spacing:-.03em;line-height:1.12;margin:12px 0 6px;font-family:var(--serif)}
   .reader .ep-head .hz{font-size:18px;color:var(--text-2);font-family:var(--han);line-height:1.5;margin-bottom:16px}
   .reader .ep-head .info{display:flex;gap:14px;align-items:center;flex-wrap:wrap;color:var(--text-3);font-size:13px}
+  .info .srclink{display:inline-flex;align-items:center;gap:5px;color:var(--text-2);border:1px solid var(--line);border-radius:999px;padding:3px 11px;transition:color .15s,border-color .15s}
+  .info .srclink:hover{color:var(--accent);border-color:var(--accent)}
   .reader .ep-head .info .who{display:flex;align-items:center;gap:8px;color:var(--text);cursor:pointer}
   .reader .ep-head .info .who .av{width:30px;height:30px;font-size:12px}
 
@@ -1101,7 +1103,7 @@ const epsOf=pid=>EPISODES.filter(e=>e.pid===pid);
 const fcolor=f=>(FIELDS[f]||{}).c||'#9aa4b2';
 const fdot=f=>FIELDS[f]?`<span class="fdot" style="background:${FIELDS[f].c}"></span>`:'';
 const tag=f=>FIELDS[f]?`<span class="tag">${fdot(f)}${FIELDS[f].zh}</span>`:'';
-const fmtDate=d=>{const[y,m]=d.split('-');return `${y}.${m}`};
+const fmtDate=d=>{const[y,m,dd]=(d||'').split('-');return dd?`${y}.${m}.${dd}`:`${y}.${m}`};
 const fmtDur=m=>m>=60?`${Math.floor(m/60)}h${String(m%60).padStart(2,'0')}m`:`${m}m`;
 function av(pid,cls=''){const p=PEOPLE[pid];const cs=(p.fields.length?p.fields:['deep-learning']).map(fcolor);
   const bg=cs.length>1?`linear-gradient(135deg,${cs[0]},${cs[1]})`:`linear-gradient(135deg,${cs[0]},${cs[0]})`;
@@ -1397,6 +1399,7 @@ function vEpisode(id){
         <span>·</span><span>${fmtDate(e.date)}</span><span>·</span><span>${fmtDur(e.min)}</span>
         <span>·</span>${e.fields.map(tag).join('')}
         ${hasToc?`<span>·</span><span>${ts.length} 章</span>`:''}
+        <span>·</span><a class="srclink" href="${e.src}" target="_blank" rel="noopener"><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-3"/><path d="M12 3h5v5"/><path d="M17 3l-8 8"/></svg>原节目</a>
       </div>
     </div>
     ${brief}
