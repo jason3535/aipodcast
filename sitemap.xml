@@ -20,6 +20,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/awang/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/murati/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/hinton/</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/alexwei/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/mensch/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/oriol/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/mjordan/</loc></url>
@@ -45,6 +46,8 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/yejin/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/springenberg/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/shanelegg/</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/davidsp/</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/askell/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/delangue/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/kaiser/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/ilya/</loc></url>
@@ -102,6 +105,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/e/awang-bloomber-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/murati-bloomber/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/hinton-alexkant-2026/</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/alexwei-theopena-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/mensch-cnbc-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/demis-stanford-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/boris-acquired-2026/</loc></url>
@@ -179,7 +183,9 @@
   <url><loc>https://aipodcast.jasonlin.tech/e/suleyman-bloomber/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/shanelegg-googlede-2025/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/yejin-laudeins-2025/</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/davidsp-anthropi-2025/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/feifei-thetimfe-2025/</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/askell-anthropi-2025/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/delangue-relentle-2025/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/jumper-googlede-2025/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/kaiser-themadpo/</loc></url>

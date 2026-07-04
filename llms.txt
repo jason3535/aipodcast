@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文,提炼核心观点与反共识,并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 78 位人物 / 227 期访谈
+规模: 81 位人物 / 230 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -41,6 +41,7 @@
 - [Oriol Vinyals / 奥里奥尔·维尼亚尔斯](https://aipodcast.jasonlin.tech/pp/oriol/): VP of Research & Gemini Co-lead · Google DeepMind — 2 期
 - [Mark Chen / 马克·陈](https://aipodcast.jasonlin.tech/pp/markchen/): Chief Research Officer, OpenAI — 2 期
 - [Nando de Freitas / 南多·德弗雷塔斯](https://aipodcast.jasonlin.tech/pp/nando/): VP & Distinguished Scientist, Microsoft AI (prev. DeepMind) — 2 期
+- [Alexander Wei / 亚历山大·魏](https://aipodcast.jasonlin.tech/pp/alexwei/): Research, OpenAI — 1 期
 - [Michael I. Jordan / 迈克尔·乔丹](https://aipodcast.jasonlin.tech/pp/mjordan/): Professor, UC Berkeley; foundations of machine learning — 1 期
 - [Caitlin Kalinowski / 凯特琳·卡利诺夫斯基](https://aipodcast.jasonlin.tech/pp/caitlin/): Head of Robotics & Hardware, OpenAI — 1 期
 - [Cat Wu / 凯特·吴](https://aipodcast.jasonlin.tech/pp/catwu/): Product, Claude Code · Anthropic — 1 期
@@ -53,6 +54,8 @@
 - [Peter Steinberger / 彼得·施泰因贝格尔](https://aipodcast.jasonlin.tech/pp/steinberger/): Creator of OpenClaw; founder of PSPDFKit — 1 期
 - [Tobi Springenberg / 托比·施普林根贝格](https://aipodcast.jasonlin.tech/pp/springenberg/): Research Scientist, Physical Intelligence (prev. DeepMind) — 1 期
 - [Shane Legg / 谢恩·莱格](https://aipodcast.jasonlin.tech/pp/shanelegg/): Co-founder & Chief AGI Scientist, DeepMind — 1 期
+- [David Soria Parra / 大卫·索里亚·帕拉](https://aipodcast.jasonlin.tech/pp/davidsp/): Co-creator of MCP, Anthropic — 1 期
+- [Amanda Askell / 阿曼达·阿斯克尔](https://aipodcast.jasonlin.tech/pp/askell/): Philosopher, Anthropic — 1 期
 - [Clément Delangue / 克莱芒·德隆格](https://aipodcast.jasonlin.tech/pp/delangue/): Co-founder & CEO, Hugging Face — 1 期
 - [Łukasz Kaiser / 武卡什·凯泽](https://aipodcast.jasonlin.tech/pp/kaiser/): Researcher, OpenAI — 1 期
 - [Llion Jones / 利昂·琼斯](https://aipodcast.jasonlin.tech/pp/llion/): Co-founder & CTO, Sakana AI; Transformer co-author — 1 期
@@ -109,6 +112,7 @@
 - [Meta's AI Journey: From Llama 4 to Muse Spark and Beyond](https://aipodcast.jasonlin.tech/e/awang-bloomber-2026/) — Alexandr Wang, Bloomberg Live, 2026-06-05
 - [Thinking Machines on AI’s next chapter](https://aipodcast.jasonlin.tech/e/murati-bloomber/) — Mira Murati, Bloomberg, 2026-06-04
 - [AI Godfather Jeff Hinton on AI's Trajectory, Risks, and Superintelligence](https://aipodcast.jasonlin.tech/e/hinton-alexkant-2026/) — Geoffrey Hinton, Alex Kantrowitz, 2026-06-04
+- [OpenAI's Math Breakthrough: The Story Behind the Discovery](https://aipodcast.jasonlin.tech/e/alexwei-theopena-2026/) — Alexander Wei, The OpenAI Podcast, 2026-06-04
 - [Mistral CEO on Building European AI Infrastructure](https://aipodcast.jasonlin.tech/e/mensch-cnbc-2026/) — Arthur Mensch, CNBC, 2026-06-03
 - [Dennis Hassabis on AI, Creativity, and Human Flourishing at Stanford](https://aipodcast.jasonlin.tech/e/demis-stanford-2026/) — Demis Hassabis, Stanford Graduate School of Business, 2026-06-02
 - [The Origin of Claude Code: From Accident to Agent](https://aipodcast.jasonlin.tech/e/boris-acquired-2026/) — Boris Cherny, Acquired Unplugged (presented by WorkOS), 2026-06-02
@@ -126,7 +130,6 @@
 - [AI Godfather Yoshua Bengio: Why I Changed My Mind About AI](https://aipodcast.jasonlin.tech/e/bengio-jonherna-2026/) — Yoshua Bengio, Jon Hernandez AI (Inteligencia Artificial con Jon Hernandez), 2026-05-08
 - [How to make safe superintelligent AI](https://aipodcast.jasonlin.tech/e/bengio-80000hou/) — Yoshua Bengio, 80,000 Hours, 2026-05-07
 - [AI Safety Oversight at OpenAI: A Conversation with Ziko Culture](https://aipodcast.jasonlin.tech/e/kolter-themadpo/) — Zico Kolter, The MAD Podcast, 2026-05-07
-- [Sam Altman on ChatGPT's Personality and the Path to Superintelligence](https://aipodcast.jasonlin.tech/e/altman-nothingb-2026/) — Sam Altman, NothingButTech, 2026-05-01
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
