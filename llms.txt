@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文,提炼核心观点与反共识,并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 75 位人物 / 223 期访谈
+规模: 78 位人物 / 227 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -11,9 +11,9 @@
 - [Yoshua Bengio / 约书亚·本吉奥](https://aipodcast.jasonlin.tech/pp/bengio/): Professor, Mila — 9 期
 - [Yann LeCun / 杨立昆](https://aipodcast.jasonlin.tech/pp/lecun/): Chief AI Scientist, Meta — 9 期
 - [Sam Altman / 萨姆·奥尔特曼](https://aipodcast.jasonlin.tech/pp/altman/): CEO, OpenAI — 9 期
+- [Boris Cherny / 鲍里斯·切尔尼](https://aipodcast.jasonlin.tech/pp/boris/): Creator of Claude Code, Anthropic — 8 期
 - [Demis Hassabis / 杰米斯·哈萨比斯](https://aipodcast.jasonlin.tech/pp/demis/): CEO, Google DeepMind — 8 期
 - [Naval Ravikant / 纳瓦尔·拉维坎特](https://aipodcast.jasonlin.tech/pp/naval/): Co-founder, AngelList; angel investor & philosopher — 7 期
-- [Boris Cherny / 鲍里斯·切尔尼](https://aipodcast.jasonlin.tech/pp/boris/): Creator of Claude Code, Anthropic — 7 期
 - [Fei-Fei Li / 李飞飞](https://aipodcast.jasonlin.tech/pp/feifei/): Co-founder, World Labs — 7 期
 - [Mustafa Suleyman / 穆斯塔法·苏莱曼](https://aipodcast.jasonlin.tech/pp/suleyman/): CEO, Microsoft AI — 7 期
 - [Alexandr Wang / 亚历山大·王](https://aipodcast.jasonlin.tech/pp/awang/): Founder, Scale AI · Meta Superintelligence — 7 期
@@ -42,6 +42,7 @@
 - [Mark Chen / 马克·陈](https://aipodcast.jasonlin.tech/pp/markchen/): Chief Research Officer, OpenAI — 2 期
 - [Nando de Freitas / 南多·德弗雷塔斯](https://aipodcast.jasonlin.tech/pp/nando/): VP & Distinguished Scientist, Microsoft AI (prev. DeepMind) — 2 期
 - [Michael I. Jordan / 迈克尔·乔丹](https://aipodcast.jasonlin.tech/pp/mjordan/): Professor, UC Berkeley; foundations of machine learning — 1 期
+- [Caitlin Kalinowski / 凯特琳·卡利诺夫斯基](https://aipodcast.jasonlin.tech/pp/caitlin/): Head of Robotics & Hardware, OpenAI — 1 期
 - [Cat Wu / 凯特·吴](https://aipodcast.jasonlin.tech/pp/catwu/): Product, Claude Code · Anthropic — 1 期
 - [Aidan Gomez / 艾丹·戈麦斯](https://aipodcast.jasonlin.tech/pp/gomez/): Co-founder & CEO, Cohere — 1 期
 - [Jeff Dean / 杰夫·迪恩](https://aipodcast.jasonlin.tech/pp/jeffdean/): Chief Scientist, Google — 1 期
@@ -63,12 +64,14 @@
 - [Jakub Pachocki / 雅库布·帕霍茨基](https://aipodcast.jasonlin.tech/pp/pachocki/): Chief Scientist, OpenAI — 1 期
 - [Jared Kaplan / 贾里德·卡普兰](https://aipodcast.jasonlin.tech/pp/kaplan/): Co-founder, Anthropic — 1 期
 - [Chelsea Finn / 切尔西·芬恩](https://aipodcast.jasonlin.tech/pp/finn/): Assistant Professor, Stanford; co-founder, Physical Intelligence — 1 期
+- [Ben Mann / 本·曼恩](https://aipodcast.jasonlin.tech/pp/benmann/): Co-founder, Anthropic — 1 期
 - [Misha Laskin / 米沙·拉斯金](https://aipodcast.jasonlin.tech/pp/laskin/): Co-founder & CEO, Reflection AI (prev. DeepMind) — 1 期
 - [Guillaume Lample / 纪尧姆·朗普勒](https://aipodcast.jasonlin.tech/pp/lample/): Co-founder & Chief Scientist, Mistral AI — 1 期
 - [Varun Mohan / 瓦伦·莫汉](https://aipodcast.jasonlin.tech/pp/varun/): Co-founder & CEO, Windsurf — 1 期
 - [Thomas Wolf / 托马斯·沃尔夫](https://aipodcast.jasonlin.tech/pp/thomaswolf/): Co-founder & Chief Science Officer, Hugging Face — 1 期
 - [Max Jaderberg / 马克斯·亚德伯格](https://aipodcast.jasonlin.tech/pp/jaderberg/): Chief AI Officer · Isomorphic Labs — 1 期
 - [Murray Shanahan / 默里·沙纳汉](https://aipodcast.jasonlin.tech/pp/shanahan/): Principal Scientist · Google DeepMind; Professor, Imperial College — 1 期
+- [Karina Nguyen / 卡丽娜·阮](https://aipodcast.jasonlin.tech/pp/karina/): Research, OpenAI — 1 期
 - [Jürgen Schmidhuber / 于尔根·施密德胡伯](https://aipodcast.jasonlin.tech/pp/schmidhuber/): Director, KAUST AI — 1 期
 - [Paul Christiano / 保罗·克里斯蒂亚诺](https://aipodcast.jasonlin.tech/pp/christiano/): Head of AI Safety, US AI Safety Institute — 1 期
 - [Michael Truell / 迈克尔·特鲁埃尔](https://aipodcast.jasonlin.tech/pp/truell/): Co-founder & CEO, Cursor — 1 期
@@ -85,6 +88,7 @@
 
 ## 最新访谈 Latest episodes
 - [AI Scaling Laws and the Future of Intelligence](https://aipodcast.jasonlin.tech/e/naval-naval-2026b/) — Naval Ravikant, Naval, 2026-07-03
+- [Claude Tag: Proactive AI That Remembers and Acts Autonomously](https://aipodcast.jasonlin.tech/e/boris-claude-2026/) — Boris Cherny, Claude, 2026-07-02
 - [Ancient Hindu Weapons: The Brahmastra and Autonomous Arms in the Mahabharata](https://aipodcast.jasonlin.tech/e/aravind-powerful-2026/) — Aravind Srinivas, PowerfulJRE, 2026-07-01
 - [AI Is Inverting Product Teams: Andrew Ambrosino on Codex](https://aipodcast.jasonlin.tech/e/ajambrosino-lennyspo-2026/) — Andrew Ambrosino, Lenny’s Podcast, 2026-06-28
 - [Large-Scale Test Time Compute and Model Evaluation](https://aipodcast.jasonlin.tech/e/noambrown-nopriors-2026/) — Noam Brown, No Priors, 2026-06-26
@@ -116,14 +120,13 @@
 - [Claude Code's Explosive Growth and the Future of AI Agents](https://aipodcast.jasonlin.tech/e/boris-bigtechn-2026/) — Boris Cherny, Big Technology Podcast (Alex Kantrowitz), 2026-05-20
 - [Inside China's AI Labs: Nathan Lambert on Open Models, Compute Constraints, and US-China Divergence](https://aipodcast.jasonlin.tech/e/lambert-aiproem-2026/) — Nathan Lambert, AI Proem, 2026-05-19
 - [Codex's Inflection Point: Why Coding AI Suddenly Got Good](https://aipodcast.jasonlin.tech/e/altman-stripese-2026/) — Sam Altman, Stripe Sessions (with Patrick Collison), 2026-05-19
+- [From VR to Robotics: The Next Frontier in Physical AI](https://aipodcast.jasonlin.tech/e/caitlin-lennyspo-2026/) — Caitlin Kalinowski, Lenny’s Podcast, 2026-05-17
 - [What comes after LLMs](https://aipodcast.jasonlin.tech/e/lecun-unsuperv/) — Yann LeCun, Unsupervised Learning, 2026-05-15
 - [Alex Wang on Meta's AI Strategy and New Model Release](https://aipodcast.jasonlin.tech/e/awang-corememo/) — Alexandr Wang, Core Memory, 2026-05-13
 - [AI Godfather Yoshua Bengio: Why I Changed My Mind About AI](https://aipodcast.jasonlin.tech/e/bengio-jonherna-2026/) — Yoshua Bengio, Jon Hernandez AI (Inteligencia Artificial con Jon Hernandez), 2026-05-08
 - [How to make safe superintelligent AI](https://aipodcast.jasonlin.tech/e/bengio-80000hou/) — Yoshua Bengio, 80,000 Hours, 2026-05-07
 - [AI Safety Oversight at OpenAI: A Conversation with Ziko Culture](https://aipodcast.jasonlin.tech/e/kolter-themadpo/) — Zico Kolter, The MAD Podcast, 2026-05-07
 - [Sam Altman on ChatGPT's Personality and the Path to Superintelligence](https://aipodcast.jasonlin.tech/e/altman-nothingb-2026/) — Sam Altman, NothingButTech, 2026-05-01
-- [OpenAI's Compute Strategy and Scaling Laws](https://aipodcast.jasonlin.tech/e/brockman-sequoiac-2026/) — Greg Brockman, Sequoia Capital (AI Ascent 2026), 2026-04-30
-- [From vibe coding to agentic engineering](https://aipodcast.jasonlin.tech/e/karpathy-training/) — Andrej Karpathy, Training Data, 2026-04-29
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
