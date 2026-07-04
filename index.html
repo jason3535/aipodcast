@@ -1269,7 +1269,7 @@ function vAsk(){
       <div class="chat-thread" id="chatThread">${renderThread('__all__')}</div>
       <div class="chat-sugg-row" id="chatSugg">${chatSuggHtml(null)}</div>
       <div class="chat-inp"><input id="chatInput" placeholder="问关于全站任何 AI 人物 / 议题…" onkeydown="if(event.key==='Enter')askEp()"><button onclick="askEp()">问</button></div>
-      <div class="chat-note" id="chatNote">综合全站核心观点回答 · AI 生成可能有误,出处可点核对</div>
+      <div class="chat-note" id="chatNote">综合全站要点,必要时自动联网 · AI 生成可能有误,出处可点核对</div>
     </div>
   </section></div>${footer()}`;
 }
@@ -1445,7 +1445,7 @@ function vEpisode(id){
       <div class="chat-thread" id="chatThread">${renderThread(ckey)}</div>
       <div class="chat-sugg-row" id="chatSugg">${chatSuggHtml(e)}</div>
       <div class="chat-inp"><input id="chatInput" placeholder="${chatMode==='all'?'问关于全站任何 AI 人物/议题…':'问关于本期的任何问题…'}" onkeydown="if(event.key==='Enter')askEp()"><button onclick="askEp()">问</button></div>
-      <div class="chat-note" id="chatNote">${chatMode==='all'?'综合全站核心观点回答':'仅依据本期转录回答'} · AI 生成可能有误,出处可点核对</div>
+      <div class="chat-note" id="chatNote">${chatMode==='all'?'综合全站要点,必要时自动联网':'优先本期内容,必要时自动联网'} · AI 生成可能有误,出处可点核对</div>
     </div>`;
   const reader=`
   <div class="reader">
@@ -1755,7 +1755,7 @@ function setChatMode(m){
   const t=$('#chatThread');if(t)t.innerHTML=renderThread(chatKey());
   const s=$('#chatSugg');if(s)s.innerHTML=chatSuggHtml(EPISODES.find(x=>x.id===chatEpId));
   const inp=$('#chatInput');if(inp)inp.placeholder=m==='all'?'问关于全站任何 AI 人物/议题…':'问关于本期的任何问题…';
-  const nt=$('#chatNote');if(nt)nt.textContent=(m==='all'?'综合全站核心观点回答':'仅依据本期转录回答')+' · AI 生成可能有误,出处可点核对';
+  const nt=$('#chatNote');if(nt)nt.textContent=(m==='all'?'综合全站要点,必要时自动联网':'优先本期内容,必要时自动联网')+' · AI 生成可能有误,出处可点核对';
 }
 async function askEp(preset){
   const inp=$('#chatInput');const q=(preset||(inp?inp.value:'')||'').trim();if(!q)return;
