@@ -181,7 +181,7 @@
     background:linear-gradient(135deg,var(--f-nlp),var(--f-dl))}
 
   /* ---------- TTS 选中朗读 ---------- */
-  .sel-bar{position:absolute;display:none;align-items:center;gap:7px;z-index:130;transform:translateX(-50%)}
+  .sel-bar{position:absolute;display:none;align-items:center;gap:7px;z-index:90;transform:translateX(-50%)}
   .sel-btn{display:inline-flex;align-items:center;gap:6px;background:var(--text);color:var(--bg);border:none;
     border-radius:980px;padding:8px 14px;font-size:13px;font-weight:500;cursor:pointer;box-shadow:var(--shadow-lg);
     font-family:var(--ui);white-space:nowrap}
@@ -1477,6 +1477,7 @@ function ensureTs(id){
 /* ============================ TTS 选中朗读 ============================ */
 /* 朗读经 Cloudflare Worker 代理(密钥存于 Worker,不在前端/仓库)。部署见 tts-worker/README.md。
    若你的 workers.dev subdomain 不同,改这里为 wrangler deploy 输出的实际地址。 */
+addEventListener('scroll',()=>{const b=document.getElementById('selBar');if(!b||b.style.display==='none')return;const t=document.getElementById('ttsBtn');if(t&&t.classList.contains('loading'))return;b.style.display='none';},{passive:true});
 const TTS_PROXY='https://aipodcast-tts.992978142.workers.dev';
 let ttsAudio=null;
 function inReader(node){const el=node&&node.nodeType===3?node.parentElement:node;return !!(el&&el.closest&&el.closest('.reader')&&!el.closest('.chat'));}
