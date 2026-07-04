@@ -1,5 +1,7 @@
-# 自定义 Pages 部署:默认 pages-build-deployment 的 deploy 步骤 10 分钟超时,
-# 本站部署激活偶发极慢(2026-07 起),放宽到 30 分钟避免超时→取消→僵尸部署循环。
+# 自定义 Pages 部署。两类偶发故障(2026-07 起)已在此处处理:
+#  1) 激活极慢 → deploy 超时(默认 10min)放宽,避免超时→取消→僵尸部署循环;
+#  2) 激活硬失败("Deployment failed, try again later",与超时无关,秒级返回)
+#     → 自动重试 2 次(间隔 30s / 90s),免去手动空提交换 SHA。
 name: Deploy Pages
 on:
   push:
@@ -20,14 +22,33 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment2.outputs.page_url || steps.deployment3.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
+      # 尝试 1
       - id: deployment
         uses: actions/deploy-pages@v4
         with:
-          timeout: 1800000
+          timeout: 600000
+        continue-on-error: true
+      # 尝试 2(等 30s)
+      - if: steps.deployment.outcome == 'failure'
+        run: 'echo "激活失败,30s 后重试…"; sleep 30'
+      - id: deployment2
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: 600000
+        continue-on-error: true
+      # 尝试 3(再等 90s;此次失败则整体失败)
+      - if: steps.deployment.outcome == 'failure' && steps.deployment2.outcome == 'failure'
+        run: 'echo "再次失败,90s 后最后重试…"; sleep 90'
+      - id: deployment3
+        if: steps.deployment.outcome == 'failure' && steps.deployment2.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: 600000
