@@ -425,8 +425,13 @@
   @media(max-width:600px){.ask-bar-ph{font-size:13px}}
 
   /* ---------- TABLE OF CONTENTS (目录) ---------- */
-  .read-wrap{display:flex;gap:60px;max-width:1340px;margin:0 auto;padding:0 24px;align-items:flex-start}
-  .read-wrap .reader{flex:1;min-width:0;max-width:980px;margin:0;padding:46px 0 120px}
+  .read-wrap{display:flex;gap:48px;max-width:1500px;margin:0 auto;padding:0 24px;align-items:flex-start}
+  .read-wrap .reader{flex:1;min-width:0;max-width:820px;margin:0;padding:46px 0 120px}
+  .read-wrap-notoc{justify-content:center}
+  .askside{position:sticky;top:108px;flex:0 0 350px;width:350px;align-self:flex-start;max-height:calc(100vh - 128px);overflow-y:auto;padding:44px 0 20px;scrollbar-width:none}
+  .askside::-webkit-scrollbar{display:none}
+  .askside .chat{margin:0}
+  .ask-fab{display:none}
   .toc{position:sticky;top:108px;width:260px;flex:0 0 260px;align-self:flex-start;
     max-height:calc(100vh - 130px);overflow-y:auto;padding:44px 0 20px;scrollbar-width:none}
   .toc::-webkit-scrollbar{display:none}
@@ -452,11 +457,22 @@
     color:var(--text-3);padding:14px 14px 8px}
   .toc-sheet .toc-i{border-left:none;font-size:15px;padding:11px 14px;border-radius:10px}
   .toc-sheet .toc-i.on{background:var(--surface-2);border-left:none}
+  /* 窄于 1160px：Ask 面板改为底部浮层 + 悬浮「问」按钮(避免三栏挤窄正文) */
+  @media(max-width:1159px){
+    .ask-fab{display:flex;position:fixed;right:18px;bottom:22px;z-index:121;align-items:center;gap:6px;
+      background:var(--accent);color:#fff;border:none;border-radius:980px;padding:11px 20px;
+      font-family:var(--ui);font-size:14px;font-weight:600;cursor:pointer;box-shadow:var(--shadow-lg)}
+    .askside{position:fixed;left:0;right:0;bottom:0;top:auto;z-index:122;flex:none;width:auto;
+      max-height:78vh;overflow-y:auto;background:var(--surface);border-radius:20px 20px 0 0;
+      box-shadow:var(--shadow-lg);padding:8px 14px 22px;transform:translateY(103%);transition:transform .24s}
+    .askside.on{transform:none}
+    .askside .chat{border:none;background:transparent;padding:10px 4px 4px}
+  }
   @media(max-width:900px){
     .read-wrap{display:block;padding:0}
     .read-wrap .reader{max-width:700px;margin:0 auto;padding:30px 20px 110px}
     .toc{display:none}
-    .toc-fab{display:flex}
+    .toc-fab{display:flex;bottom:76px}
   }
 
   .footer{border-top:1px solid var(--line);padding:40px 0 60px;color:var(--text-3);font-size:13px;line-height:1.7}
@@ -529,6 +545,7 @@
 <div id="selBar" class="sel-bar" onmousedown="event.preventDefault()">
   <button id="ttsBtn" class="sel-btn tts-btn" onclick="ttsPlay()"><span class="lbl">朗读所选</span></button>
   <button id="shareSelBtn" class="sel-btn share-sel-btn" onclick="shareSel()">分享</button>
+  <button id="askSelBtn" class="sel-btn" onclick="askSel()">问问</button>
 </div>
 
 <div id="ttsBar">
@@ -1424,10 +1441,11 @@ function vEpisode(id){
     </div>
     ${brief}
     ${insights}
-    ${chat}
     ${body}
     ${note}
   </div>`;
+  const aside=chat?`<aside class="askside" id="askSide">${chat}</aside>`:'';
+  const askFab=chat?`<button class="ask-fab" onclick="toggleAskSheet()">问</button>`:'';
   return `
   <div class="read-bar">
     <div class="back" onclick="history.back()">‹ <b>${p.zh} · ${e.pod.zh}</b></div>
@@ -1443,11 +1461,13 @@ function vEpisode(id){
   ${hasToc ? `<div class="read-wrap">
     <nav class="toc"><div class="toc-h">目录 · Contents</div>${tocItems}</nav>
     ${reader}
+    ${aside}
   </div>
+  ${askFab}
   <button class="toc-fab" onclick="toggleTocSheet()">目录</button>
   <div class="toc-sheet" id="tocSheet" onclick="if(event.target===this)toggleTocSheet()">
     <div class="panel"><div class="sh-h">目录 · Contents</div>${tocItems}</div>
-  </div>` : reader}`;
+  </div>` : (aside?`<div class="read-wrap read-wrap-notoc">${reader}${aside}</div>${askFab}`:reader)}`;
 }
 
 /* ============================ TOC 目录 ============================ */
@@ -1713,6 +1733,17 @@ async function askEp(preset){
     for(;;){const {done,value}=await reader.read();if(done)break;acc+=dec.decode(value,{stream:true});CHAT[key][ai].content=acc;refresh();}
     if(!acc){CHAT[key][ai].content='（没有返回内容）';refresh();}
   }catch(e){CHAT[key][ai]={role:'assistant',content:'（网络错误,请重试）'};refresh();}
+}
+function toggleAskSheet(){const s=$('#askSide');if(s)s.classList.toggle('on');}
+function askSel(){
+  const btn=$('#ttsBtn');const t=((btn&&btn.dataset.text)||'').trim();if(!t)return;
+  const bar=$('#selBar');if(bar)bar.style.display='none';
+  try{const sel=window.getSelection();sel&&sel.removeAllRanges&&sel.removeAllRanges();}catch(_){}
+  if(chatMode!=='episode')setChatMode('episode');
+  const side=$('#askSide');if(side)side.classList.add('on');
+  const q='请解释这段话：“'+(t.length>140?t.slice(0,140)+'…':t)+'”';
+  const inp=$('#chatInput');if(inp)inp.scrollIntoView&&inp.scrollIntoView({block:'nearest'});
+  askEp(q);
 }
 function ttsInit(){
   const h=()=>setTimeout(()=>{ttsCheckSel();syncCross();},10);
