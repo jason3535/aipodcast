@@ -447,7 +447,7 @@
   @media(max-width:600px){.ask-bar-ph{font-size:13px}}
 
   /* ---------- TABLE OF CONTENTS (目录) ---------- */
-  .read-wrap{display:flex;gap:44px;max-width:1580px;margin:0 auto;padding:0 24px;align-items:flex-start}
+  .read-wrap{display:flex;gap:clamp(32px,3vw,56px);max-width:1760px;margin:0 auto;padding:0 24px;align-items:flex-start}
   .read-wrap .reader{flex:1;min-width:0;max-width:900px;margin:0;padding:46px 0 120px}
   .read-wrap-notoc{justify-content:center}
   #askInline:empty{display:none}
@@ -455,9 +455,12 @@
   .askside{display:none}
   .askside::-webkit-scrollbar{display:none}
   @media(min-width:1400px){
-    .askside:not(:empty){display:block;position:sticky;top:108px;flex:0 0 328px;width:328px;
+    .askside:not(:empty){display:block;position:sticky;top:108px;
+      flex:0 0 clamp(340px,24vw,468px);width:clamp(340px,24vw,468px);
       align-self:flex-start;max-height:calc(100vh - 128px);overflow-y:auto;padding:44px 0 20px;scrollbar-width:none}
-    .askside .chat{margin:0}
+    .askside .chat{margin:0;padding:20px 22px;border-radius:18px}
+    /* 侧栏内线程占满纵向空间;输入/建议常驻底部,仅线程内滚动 */
+    .askside .chat-thread{max-height:calc(100vh - 372px);min-height:150px}
   }
   .toc{position:sticky;top:108px;width:236px;flex:0 0 236px;align-self:flex-start;
     max-height:calc(100vh - 130px);overflow-y:auto;padding:44px 0 20px;scrollbar-width:none}
