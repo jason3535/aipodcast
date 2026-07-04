@@ -393,6 +393,28 @@
   .cmsg{font-size:calc(14px*var(--read-scale));line-height:1.6;max-width:92%}
   .cmsg.cu{align-self:flex-end;background:var(--accent);color:#fff;border-radius:14px 14px 4px 14px;padding:8px 13px;font-family:var(--ui)}
   .cmsg.ca{align-self:flex-start;background:var(--surface-2);border-radius:14px 14px 14px 4px;padding:10px 14px;font-family:var(--han);color:var(--text)}
+  /* Markdown 渲染(仅助手气泡内) */
+  .cmsg.ca .cmp{margin:0 0 8px}
+  .cmsg.ca .cmp:last-child,.cmsg.ca>:last-child{margin-bottom:0}
+  .cmsg.ca .cmh{font-weight:700;line-height:1.35;margin:12px 0 6px}
+  .cmsg.ca .cmh:first-child{margin-top:0}
+  .cmsg.ca .cmh1{font-size:1.18em}
+  .cmsg.ca .cmh2{font-size:1.1em}
+  .cmsg.ca .cmh3{font-size:1.03em}
+  .cmsg.ca .cmh4{font-size:1em;color:var(--text-2)}
+  .cmsg.ca .cml{margin:4px 0 8px;padding-left:1.35em}
+  .cmsg.ca .cml li{margin:3px 0}
+  .cmsg.ca .cml li::marker{color:var(--text-3)}
+  .cmsg.ca .cmq{margin:6px 0;padding:2px 0 2px 12px;border-left:3px solid var(--line);color:var(--text-2)}
+  .cmsg.ca .cmhr{border:none;border-top:1px solid var(--line);margin:12px 0}
+  .cmsg.ca .cpre{margin:8px 0;padding:10px 12px;background:var(--surface);border:1px solid var(--line);
+    border-radius:9px;overflow-x:auto}
+  .cmsg.ca .cpre code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86em;line-height:1.5;white-space:pre;color:var(--text)}
+  .cmsg.ca .cinl{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86em;
+    background:var(--surface);border:1px solid var(--line);border-radius:5px;padding:.5px 5px}
+  .cmsg.ca strong{font-weight:700}
+  .cmsg.ca em{font-style:italic}
+  .cmsg.ca a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
   .cdots{color:var(--text-3)}
   .cite{display:inline-flex;align-items:center;justify-content:center;min-width:17px;height:17px;padding:0 4px;margin:0 2px;
     font-family:var(--ui);font-size:11px;font-weight:700;color:var(--accent);background:rgba(0,113,227,.13);
@@ -1690,13 +1712,35 @@ function chatSuggHtml(e){
   const qs=chatMode==='all'?ALL_SUGG:((e&&e.brief&&e.brief.qs||[]).map(x=>x.zh||x.en));
   return qs.map(q=>`<button class="chat-sugg" onclick="askEp(this.textContent)">${q}</button>`).join('');
 }
+// 轻量 Markdown → HTML(无依赖):代码块/行内码/标题/列表/引用/分割线/加粗斜体/链接。
+// 先转义 HTML,再结构化;引用记号 [#n]/[@id] 不是 [text](url) 链接,原样保留给 citeHtml 处理。
+function mdHtml(src){
+  const blocks=[];let s=escH(src||'');
+  s=s.replace(/```[a-zA-Z]*\n?([\s\S]*?)```/g,(_,c)=>{blocks.push('<pre class="cpre"><code>'+c.replace(/\n$/,'')+'</code></pre>');return '\u0000'+(blocks.length-1)+'\u0000';});
+  s=s.replace(/`([^`\n]+)`/g,(_,c)=>{blocks.push('<code class="cinl">'+c+'</code>');return '\u0000'+(blocks.length-1)+'\u0000';});
+  const lines=s.split('\n'),out=[];let list=null;
+  const closeL=()=>{if(list){out.push('</'+list+'>');list=null;}};
+  for(const line of lines){let m;
+    if(/^\u0000\d+\u0000$/.test(line)){closeL();out.push(line);continue;}
+    if(/^\s*$/.test(line)){closeL();continue;}
+    if(m=line.match(/^\s{0,3}(#{1,4})\s+(.*)$/)){closeL();out.push('<div class="cmh cmh'+m[1].length+'">'+m[2]+'</div>');continue;}
+    if(/^\s{0,3}([-*_])\1{2,}\s*$/.test(line)){closeL();out.push('<hr class="cmhr">');continue;}
+    if(m=line.match(/^\s{0,3}&gt;\s?(.*)$/)){closeL();out.push('<blockquote class="cmq">'+m[1]+'</blockquote>');continue;}
+    if(m=line.match(/^\s*[-*+]\s+(.*)$/)){if(list!=='ul'){closeL();out.push('<ul class="cml">');list='ul';}out.push('<li>'+m[1]+'</li>');continue;}
+    if(m=line.match(/^\s*\d+[.)]\s+(.*)$/)){if(list!=='ol'){closeL();out.push('<ol class="cml">');list='ol';}out.push('<li>'+m[1]+'</li>');continue;}
+    closeL();out.push('<p class="cmp">'+line+'</p>');}
+  closeL();s=out.join('');
+  s=s.replace(/\*\*([^\n]+?)\*\*/g,'<strong>$1</strong>')
+     .replace(/(^|[^*\w])\*([^*\n]+?)\*(?!\w)/g,'$1<em>$2</em>')
+     .replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g,'<a href="$2" target="_blank" rel="nofollow noopener">$1</a>');
+  return s.replace(/\u0000(\d+)\u0000/g,(_,i)=>blocks[+i]);
+}
 function citeHtml(text){
-  return escH(text)
+  return mdHtml(text)
     .replace(/\[#(\d+)\]/g,(_,n)=>{const i=+n,ts=TS_CACHE[chatEpId]||[];const title=ts[i]?(''+ts[i].sec).replace(/"/g,''):'第'+(i+1)+'节';
       return `<button class="cite" onclick="jumpSec(${i})" title="${title}">${i+1}</button>`;})
     .replace(/\[@([a-z0-9-]+)\]/gi,(_,id)=>{const e=EPISODES.find(x=>x.id===id);if(!e)return '';const p=PEOPLE[e.pid];
-      return `<button class="cite cite-ep" onclick="go('#/episode/${id}')" title="${(e.tZh||e.tEn).replace(/"/g,'')}">${p?p.zh:id}</button>`;})
-    .replace(/\n+/g,'<br>');
+      return `<button class="cite cite-ep" onclick="go('#/episode/${id}')" title="${(e.tZh||e.tEn).replace(/"/g,'')}">${p?p.zh:id}</button>`;});
 }
 function renderThread(key){
   return (CHAT[key]||[]).map(m=>m.role==='user'
