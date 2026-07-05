@@ -54,7 +54,10 @@ ${tldr.length?`<h2>要点 · TL;DR</h2><ul>${li(tldr,x=>x)}</ul>`:''}
 ${cons.length?`<h2>核心观点 · Key points</h2><ul>${li(cons,x=>x)}</ul>`:''}
 ${cont.length?`<h2>反共识 · Contrarian takes</h2><ul>${li(cont,x=>x)}</ul>`:''}
 ${chs.length?`<h2>本期章节 · Chapters（共 ${chs.length}）</h2><ul>${chs.map(c=>`<li><span class="zh">${esc(c.zh)}</span> <span class="en">${esc(c.en)}</span></li>`).join('')}</ul>`:''}
-<p style="margin-top:26px"><a class="cta" href="${hash}">阅读全文双语转录 →</a></p>`;
+<p style="margin-top:26px"><a class="cta" href="${hash}">阅读全文双语转录 →</a></p>
+<script>(function(){var q=location.search.replace(/^\\?/,'');if(!q)return;var h=${JSON.stringify(hash)}+'?'+q;
+document.querySelectorAll('a.cta').forEach(function(a){a.href=h});
+if(/(^|&)(at|hl)=/.test(q))location.replace(h);})()</script>`;
   const ld=[{"@context":"https://schema.org","@type":"PodcastEpisode",name:e.tEn,alternateName:e.tZh,url,datePublished:e.date,timeRequired:e.min?`PT${e.min}M`:undefined,inLanguage:["en","zh"],description:e.sEn||e.sZh,abstract:cons.map(c=>c.en).filter(Boolean).slice(0,5).join(' '),partOfSeries:{"@type":"PodcastSeries",name:(e.pod&&e.pod.en)||''},isPartOf:{"@type":"WebSite",name:"AI Podcast",url:SITE},actor:{"@type":"Person",name:p.en,jobTitle:p.tiEn,url:person},...(vid(e.src)?{associatedMedia:{"@type":"VideoObject",name:e.tEn,embedUrl:`https://www.youtube.com/embed/${vid(e.src)}`,uploadDate:e.date}}:{})},
     {"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"AI Podcast",item:SITE+"/"},{"@type":"ListItem",position:2,name:p.zh||p.en||'',item:person},{"@type":"ListItem",position:3,name:e.tZh||e.tEn,item:url}]}];
   fs.mkdirSync(path.join(EDIR,e.id),{recursive:true});
