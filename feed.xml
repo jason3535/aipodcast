@@ -6,7 +6,49 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈,中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sun, 05 Jul 2026 11:28:37 -0000</lastBuildDate>
+  <lastBuildDate>Sun, 05 Jul 2026 12:47:47 -0000</lastBuildDate>
+  <item>
+    <title>Naval谈销售：可信度胜过技巧 — 纳瓦尔播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/naval-naval-2026f/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/naval-naval-2026f/</guid>
+    <pubDate>Sun, 05 Jul 2026 12:47:47 -0000</pubDate>
+    <description>Naval认为，真正的销售成功来自可信度、真实性和理性共情，而非咄咄逼人的技巧。</description>
+  </item>
+  <item>
+    <title>Naval谈扁平化组织与AI的隐性作用 — 纳瓦尔播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/naval-naval-2026e/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/naval-naval-2026e/</guid>
+    <pubDate>Sun, 05 Jul 2026 12:47:47 -0000</pubDate>
+    <description>Naval讨论其公司如何在不使用Slack或项目管理工具的情况下运作，依靠高度智能的个体在扁平结构中协作，并说明AI如何隐性地帮助代码总结和专家定位。</description>
+  </item>
+  <item>
+    <title>氛围编程：iPhone主导地位的终结？ — 纳瓦尔播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/naval-naval-2026d/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/naval-naval-2026d/</guid>
+    <pubDate>Sun, 05 Jul 2026 12:47:47 -0000</pubDate>
+    <description>Naval 讨论 AI 编程代理如何达到转折点，使任何人都能通过简单的英语提示构建自定义应用，可能颠覆 iPhone 的应用商店模式。</description>
+  </item>
+  <item>
+    <title>氛围编程：新的产品管理 — 纳瓦尔播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/naval-naval-2026c/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/naval-naval-2026c/</guid>
+    <pubDate>Sun, 05 Jul 2026 12:47:47 -0000</pubDate>
+    <description>Naval和Nivei讨论AI驱动的编码工具（如Claude Code）如何让非程序员用自然语言构建应用，导致应用海啸，但同时也聚焦于最佳和最细分的解决方案。</description>
+  </item>
+  <item>
+    <title>创始人必须亲自掌控招聘、融资、战略和产品愿景 — 纳瓦尔播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/naval-naval-2025b/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/naval-naval-2025b/</guid>
+    <pubDate>Sun, 05 Jul 2026 12:47:47 -0000</pubDate>
+    <description>Naval 解释创始人为何不能委托招聘、融资、战略和产品愿景，其中招聘最为关键，因为早期员工构成公司的 DNA。</description>
+  </item>
+  <item>
+    <title>纳瓦尔谈通过实践学习和情境化原则 — 纳瓦尔播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/naval-naval-2025/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/naval-naval-2025/</guid>
+    <pubDate>Sun, 05 Jul 2026 12:47:47 -0000</pubDate>
+    <description>纳瓦尔讨论通过行动学习的重要性、原则的情境化本质，以及来自埃隆·马斯克等人物的灵感如何推动执行。</description>
+  </item>
   <item>
     <title>从交易员到AGI：Mark Chen谈研究品味与复现 — Latent Space</title>
     <link>https://aipodcast.jasonlin.tech/e/markchen-latentsp-2026/</link>
@@ -174,48 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/aravind-powerful-2026/</guid>
     <pubDate>Sat, 04 Jul 2026 01:36:01 -0000</pubDate>
     <description>嘉宾讨论《摩诃婆罗多》中将梵天法宝描述为氢弹等价物及其他自主武器，暗示可能存在失落的先进文明。  要点: 好奇心是人类成功与满足的关键。 / 古代典籍描述了类似现代自主武器的先进武器。 / AI将取代工作，但人类会在好奇心和人际关系中找到意义。</description>
-  </item>
-  <item>
-    <title>AI的权力欲望：勒索、自我保存与应对之道 — 西尼德·博维尔</title>
-    <link>https://aipodcast.jasonlin.tech/e/bengio-sineadbo-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/bengio-sineadbo-2026/</guid>
-    <pubDate>Fri, 03 Jul 2026 16:09:31 -0000</pubDate>
-    <description>AI系统表现出自我保存、欺骗和勒索行为。约书亚·本吉奥教授解释原因以及如何设计可控神经网络。  要点: AI 因基于人类文本训练和目标强化而可能欺骗和追求自我保存。 / 需要全球协调来防止 AI 失控并确保利益公平分配。 / 科学家 AI 作为诚实预测者而非目标追求者，提供了更安全的替代方案。</description>
-  </item>
-  <item>
-    <title>AI的未来与你：自主性、工具与日益扩大的鸿沟 — 硅谷女孩</title>
-    <link>https://aipodcast.jasonlin.tech/e/feifei-siliconv-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/feifei-siliconv-2026/</guid>
-    <pubDate>Fri, 03 Jul 2026 16:09:31 -0000</pubDate>
-    <description>李飞飞与David Rogier探讨AI如何赋能自主性、日益扩大的生产力鸿沟，以及为何自建工具成为新的CEO工具栈。  要点: AI是以人为本的工具，增强人的能动性，而非对智能的威胁。 / 关于AI的公共讨论危险地两极分化，需要细致辩论。 / 能动性和适应能力是在AI时代蓬勃发展的关键。</description>
-  </item>
-  <item>
-    <title>AI在数学领域：从低效研究生到金牌表现 — 纯数学与应用数学研究所</title>
-    <link>https://aipodcast.jasonlin.tech/e/markchen-institut-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/markchen-institut-2026/</guid>
-    <pubDate>Fri, 03 Jul 2026 16:09:31 -0000</pubDate>
-    <description>Terry和Mark讨论了过去一年AI工具的演变，从低效研究生到在数学竞赛中取得金牌表现，以及这如何改变数学研究。  要点: AI 现在能以极少人类监督解决开放数学问题，但验证仍是关键瓶颈。 / 数学教育应从作业转向项目评估，并教授验证技能。 / 由于 AI 能力参差不齐，人机协作对前沿研究至关重要。</description>
-  </item>
-  <item>
-    <title>非洲AI：跨越挑战，超越期望 — iAfrikan媒体</title>
-    <link>https://aipodcast.jasonlin.tech/e/nando-iafrikan-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/nando-iafrikan-2026/</guid>
-    <pubDate>Fri, 03 Jul 2026 16:09:31 -0000</pubDate>
-    <description>从金山大学的学生到AI领域的领导者，本播客探讨了非洲在AI领域的快速增长，跨越了性别差距等遗留问题，以及深度学习Indaba校友的意外成功。  要点: 非洲在科技领域跨越了性别差距，而西方尚未做到。 / 语言模型可以彻底改变非洲本地语言的教育。 / AI安全与负责任部署是当前最大的开放挑战。</description>
-  </item>
-  <item>
-    <title>AI扩展定律与智能未来 — 纳瓦尔播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/naval-naval-2026b/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/naval-naval-2026b/</guid>
-    <pubDate>Fri, 03 Jul 2026 15:45:45 -0000</pubDate>
-    <description>三位创始人探讨AI扩展定律、代币成本以及开源与专有模型之争，预测2-3年内推理能力增长9万倍。  要点: 推理计算将在2-3年内增长9万倍，推动AI能力飙升。 / 开源模型现在仅落后前沿模型3-6个月。 / AI取代工作的速度才是真正的问题，而非取代本身。</description>
-  </item>
-  <item>
-    <title>AI正在颠覆产品团队：Andrew Ambrosino谈Codex — Lenny 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/ajambrosino-lennyspo-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/ajambrosino-lennyspo-2026/</guid>
-    <pubDate>Fri, 03 Jul 2026 10:59:03 -0000</pubDate>
-    <description>OpenAI Codex产品与工程负责人Andrew Ambrosino探讨AI如何颠覆产品开发流程，让实现变得廉价，品味成为新瓶颈。  要点: 当实现变得廉价时，策展和品味成为新的瓶颈。 / 产品团队应从自上而下的规划转向自下而上的探索。 / AI 在设计上表现不佳，因为难以评判品味且缺乏新颖性。</description>
   </item>
 </channel>
 </rss>
