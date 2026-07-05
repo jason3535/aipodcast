@@ -1477,12 +1477,12 @@ function vPod(slug){
 }
 
 /* ----- BROWSE w/ filters: person / time / podcast / field ----- */
-let bf={person:'',year:'',pod:'',field:''};
+let bf={person:'',year:'',pod:'',field:'',read:''};
 function vBrowse(){
   const people=[...new Set(EPISODES.map(e=>e.pid))];
   const years=[...new Set(EPISODES.map(e=>e.date.slice(0,4)))].sort().reverse();
   const pods=[...new Set(EPISODES.map(e=>e.pod.en))];
-  let list=EPISODES.filter(e=>(!bf.person||e.pid===bf.person)&&(!bf.year||e.date.startsWith(bf.year))&&(!bf.pod||e.pod.en===bf.pod)&&(!bf.field||e.fields.includes(bf.field)));
+  let list=EPISODES.filter(e=>(!bf.person||e.pid===bf.person)&&(!bf.year||e.date.startsWith(bf.year))&&(!bf.pod||e.pod.en===bf.pod)&&(!bf.field||e.fields.includes(bf.field))&&(!bf.read||(bf.read==='read'?readHas(e.id):!readHas(e.id))));
   return `<div class="wrap"><section class="reveal" style="padding-bottom:0">
     <div class="eyebrow">Browse · 全部播客</div><h2 class="title">筛选与浏览</h2>
     <div class="filterbar">
@@ -1492,6 +1492,10 @@ function vBrowse(){
         <option value="">全部时间</option>${years.map(y=>`<option value="${y}" ${bf.year===y?'selected':''}>${y} 年</option>`).join('')}</select>
       <select class="sel" onchange="bf.pod=this.value;render()">
         <option value="">全部播客</option>${pods.map(p=>`<option value="${p}" ${bf.pod===p?'selected':''}>${p}</option>`).join('')}</select>
+      <select class="sel" onchange="bf.read=this.value;render()">
+        <option value="">全部(读/未读)</option>
+        <option value="read" ${bf.read==='read'?'selected':''}>只看已读</option>
+        <option value="unread" ${bf.read==='unread'?'selected':''}>只看未读</option></select>
       <span style="width:1px;height:22px;background:var(--line)"></span>
       <span class="chip ${!bf.field?'on':''}" onclick="bf.field='';render()">全部领域</span>
       ${Object.keys(FIELDS).map(f=>`<span class="chip ${bf.field===f?'on':''}" onclick="bf.field='${f}';render()">${fdot(f)}${FIELDS[f].zh}</span>`).join('')}
@@ -2009,7 +2013,7 @@ function render(){
   const parts=path.split('/').filter(Boolean);
   let html;
   if(query){const qp=new URLSearchParams(query);
-    if(qp.get('field')){bf={person:'',year:'',pod:'',field:qp.get('field')};}
+    if(qp.get('field')){bf={person:'',year:'',pod:'',field:qp.get('field'),read:''};}
     if(parts[0]==='episode'&&(qp.get('at')!=null||qp.get('hl')))pendingLocate={id:parts[1],at:qp.get('at'),hl:qp.get('hl')};}
   if(!parts.length)html=vHome();
   else if(parts[0]==='people')html=vPeople();
