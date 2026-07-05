@@ -1,6 +1,8 @@
 /**
  * AI Podcast — 匿名访问统计 (Cloudflare Worker + D1)
  * 埋点: POST / {type,path,ref,ua} → 写 D1(无 Cookie / 不存 IP / 无个人信息)。
+ *   UV: 服务端算「每日匿名 hash」vid = SHA256(盐 + 当天日期 + IP + UA) 前 80bit,只存 hash、永不存 IP;
+ *       hash 含日期→次日自动失效、跨天不可关联(隐私友好,规避 Cookie)。UV = count(distinct vid)。
  * 查数: GET /q?token=SECRET&mode=overview|top|ref|sql&days=N[&q=SELECT...] → JSON(供 Claude Code 直接 curl)。
  */
 const ALLOW=new Set(['https://aipodcast.jasonlin.tech','http://localhost:8000','http://127.0.0.1:8000','null']);
@@ -8,6 +10,14 @@ const cors=o=>({'Access-Control-Allow-Origin':ALLOW.has(o)?o:'https://aipodcast.
   'Access-Control-Allow-Methods':'POST, GET, OPTIONS','Access-Control-Allow-Headers':'Content-Type','Vary':'Origin'});
 const J=(o,s,co)=>new Response(JSON.stringify(o),{status:s,headers:{...co,'Content-Type':'application/json'}});
 const DAY=864e5;
+// 每日匿名访客 hash:含当天日期→次日失效、跨天不可关联;只返回 hash,IP/UA 不落库。
+async function vidOf(env,req){
+  const ip=req.headers.get('CF-Connecting-IP')||'';
+  const ua=req.headers.get('User-Agent')||'';
+  const day=new Date().toISOString().slice(0,10);
+  const buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode((env.STATS_TOKEN||'salt')+'|'+day+'|'+ip+'|'+ua));
+  return [...new Uint8Array(buf)].slice(0,10).map(x=>x.toString(16).padStart(2,'0')).join('');
+}
 export default {
   async fetch(req,env){
     const origin=req.headers.get('Origin')||'',co=cors(origin),url=new URL(req.url);
@@ -25,7 +35,9 @@ export default {
             totalViews:(await one("SELECT count(*) c FROM events WHERE type='view'")).c,
             viewsToday:(await one("SELECT count(*) c FROM events WHERE type='view' AND day=date('now')")).c,
             views_range:(await one("SELECT count(*) c FROM events WHERE type='view' AND ts>=?",since)).c,
-            days, byDay:await all("SELECT day,count(*) c FROM events WHERE type='view' AND ts>=? GROUP BY day ORDER BY day",since),
+            uvToday:(await one("SELECT count(distinct vid) c FROM events WHERE type='view' AND day=date('now') AND vid<>''")).c,
+            uv_rangeVisitorDays:(await one("SELECT count(distinct vid) c FROM events WHERE type='view' AND ts>=? AND vid<>''",since)).c,
+            days, byDay:await all("SELECT day,count(*) c,count(distinct vid) uv FROM events WHERE type='view' AND ts>=? GROUP BY day ORDER BY day",since),
             byEvent:await all("SELECT type,count(*) c FROM events WHERE ts>=? GROUP BY type ORDER BY c DESC",since),
             byDevice:await all("SELECT ua,count(*) c FROM events WHERE type='view' AND ts>=? GROUP BY ua",since)
           },200,co);
@@ -45,7 +57,8 @@ export default {
       let b;try{b=await req.json();}catch{return new Response('bad json',{status:400,headers:co});}
       const type=(''+(b.type||'view')).slice(0,16),path=(''+(b.path||'/')).slice(0,200),
             ref=(''+(b.ref||'')).slice(0,120),ua=(''+(b.ua||'')).slice(0,12);
-      try{await env.DB.prepare("INSERT INTO events(ts,day,type,path,ref,ua) VALUES(?,date('now'),?,?,?,?)").bind(Date.now(),type,path,ref,ua).run();}catch(_){}
+      let vid='';try{vid=await vidOf(env,req);}catch(_){}
+      try{await env.DB.prepare("INSERT INTO events(ts,day,type,path,ref,ua,vid) VALUES(?,date('now'),?,?,?,?,?)").bind(Date.now(),type,path,ref,ua,vid).run();}catch(_){}
       return new Response(null,{status:204,headers:co});
     }
     return new Response('AI Podcast stats worker',{headers:co});
