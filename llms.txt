@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文,提炼核心观点与反共识,并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 91 位人物 / 240 期访谈
+规模: 95 位人物 / 244 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -41,6 +41,7 @@
 - [Oriol Vinyals / 奥里奥尔·维尼亚尔斯](https://aipodcast.jasonlin.tech/pp/oriol/): VP of Research & Gemini Co-lead · Google DeepMind — 2 期
 - [Mark Chen / 马克·陈](https://aipodcast.jasonlin.tech/pp/markchen/): Chief Research Officer, OpenAI — 2 期
 - [Nando de Freitas / 南多·德弗雷塔斯](https://aipodcast.jasonlin.tech/pp/nando/): VP & Distinguished Scientist, Microsoft AI (prev. DeepMind) — 2 期
+- [Tejal Patwardhan / 泰贾尔·帕特瓦尔丹](https://aipodcast.jasonlin.tech/pp/tejal/): Frontier Evals Lead, OpenAI — 1 期
 - [Alexander Wei / 亚历山大·魏](https://aipodcast.jasonlin.tech/pp/alexwei/): Research, OpenAI — 1 期
 - [Rohin Shah / 罗欣·沙阿](https://aipodcast.jasonlin.tech/pp/rohinshah/): Head of AGI Safety & Alignment, Google DeepMind — 1 期
 - [Michael I. Jordan / 迈克尔·乔丹](https://aipodcast.jasonlin.tech/pp/mjordan/): Professor, UC Berkeley; foundations of machine learning — 1 期
@@ -60,6 +61,7 @@
 - [Amanda Askell / 阿曼达·阿斯克尔](https://aipodcast.jasonlin.tech/pp/askell/): Philosopher, Anthropic — 1 期
 - [Clément Delangue / 克莱芒·德隆格](https://aipodcast.jasonlin.tech/pp/delangue/): Co-founder & CEO, Hugging Face — 1 期
 - [Łukasz Kaiser / 武卡什·凯泽](https://aipodcast.jasonlin.tech/pp/kaiser/): Researcher, OpenAI — 1 期
+- [Justin Johnson / 贾斯汀·约翰逊](https://aipodcast.jasonlin.tech/pp/justinjohnson/): Co-founder, World Labs — 1 期
 - [Llion Jones / 利昂·琼斯](https://aipodcast.jasonlin.tech/pp/llion/): Co-founder & CTO, Sakana AI; Transformer co-author — 1 期
 - [Alex Kendall / 亚历克斯·肯德尔](https://aipodcast.jasonlin.tech/pp/kendall/): Co-founder & CEO, Wayve — 1 期
 - [David Silver / 大卫·西尔弗](https://aipodcast.jasonlin.tech/pp/dsilver/): Principal Research Scientist, DeepMind — 1 期
@@ -76,8 +78,10 @@
 - [Ben Mann / 本·曼恩](https://aipodcast.jasonlin.tech/pp/benmann/): Co-founder, Anthropic — 1 期
 - [Misha Laskin / 米沙·拉斯金](https://aipodcast.jasonlin.tech/pp/laskin/): Co-founder & CEO, Reflection AI (prev. DeepMind) — 1 期
 - [Guillaume Lample / 纪尧姆·朗普勒](https://aipodcast.jasonlin.tech/pp/lample/): Co-founder & Chief Scientist, Mistral AI — 1 期
+- [Josh Batson / 乔什·巴特森](https://aipodcast.jasonlin.tech/pp/batson/): Interpretability Researcher, Anthropic — 1 期
 - [Varun Mohan / 瓦伦·莫汉](https://aipodcast.jasonlin.tech/pp/varun/): Co-founder & CEO, Windsurf — 1 期
 - [Trenton Bricken / 特伦顿·布里肯](https://aipodcast.jasonlin.tech/pp/bricken/): Interpretability Researcher, Anthropic — 1 期
+- [Carolina Parada / 卡罗琳娜·帕拉达](https://aipodcast.jasonlin.tech/pp/parada/): Head of Robotics, Google DeepMind — 1 期
 - [Thomas Wolf / 托马斯·沃尔夫](https://aipodcast.jasonlin.tech/pp/thomaswolf/): Co-founder & Chief Science Officer, Hugging Face — 1 期
 - [Max Jaderberg / 马克斯·亚德伯格](https://aipodcast.jasonlin.tech/pp/jaderberg/): Chief AI Officer · Isomorphic Labs — 1 期
 - [Murray Shanahan / 默里·沙纳汉](https://aipodcast.jasonlin.tech/pp/shanahan/): Principal Scientist · Google DeepMind; Professor, Imperial College — 1 期
@@ -114,6 +118,7 @@
 - [Inside the AI Revolution: Sleep, Stress, and Scaling](https://aipodcast.jasonlin.tech/e/dario-bloomber-2026/) — Dario Amodei, Bloomberg Originals, 2026-06-17
 - [AI Coding Agents and the Product Management Bottleneck](https://aipodcast.jasonlin.tech/e/andrewng-langchai-2026/) — Andrew Ng, LangChain Interrupt, 2026-06-17
 - [AI Factory Groundbreaking: Smarter, Safer, and Reindustrializing the US](https://aipodcast.jasonlin.tech/e/jensen-associat-2026/) — Jensen Huang, Associated Press, 2026-06-16
+- [Building Crunchier Evals: Tejal Patwardhan on Measuring AI Progress](https://aipodcast.jasonlin.tech/e/tejal-theopena-2026/) — Tejal Patwardhan, The OpenAI Podcast, 2026-06-16
 - [Perplexity CEO: Attack, Attack, Attack](https://aipodcast.jasonlin.tech/e/aravind-20vcwith-2026/) — Aravind Srinivas, 20VC with Harry Stebbings, 2026-06-15
 - [Building the dynamo of the intelligence revolution](https://aipodcast.jasonlin.tech/e/jensen-training/) — Jensen Huang, Training Data, 2026-06-10
 - [Anthropic: The AI Siblings Building Responsible Superintelligence](https://aipodcast.jasonlin.tech/e/dario-thecircu-2026/) — Dario Amodei, The Circuit (Bloomberg), 2026-06-10
@@ -139,7 +144,6 @@
 - [What comes after LLMs](https://aipodcast.jasonlin.tech/e/lecun-unsuperv/) — Yann LeCun, Unsupervised Learning, 2026-05-15
 - [Alex Wang on Meta's AI Strategy and New Model Release](https://aipodcast.jasonlin.tech/e/awang-corememo/) — Alexandr Wang, Core Memory, 2026-05-13
 - [AI Godfather Yoshua Bengio: Why I Changed My Mind About AI](https://aipodcast.jasonlin.tech/e/bengio-jonherna-2026/) — Yoshua Bengio, Jon Hernandez AI (Inteligencia Artificial con Jon Hernandez), 2026-05-08
-- [How to make safe superintelligent AI](https://aipodcast.jasonlin.tech/e/bengio-80000hou/) — Yoshua Bengio, 80,000 Hours, 2026-05-07
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
