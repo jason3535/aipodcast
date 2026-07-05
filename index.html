@@ -11,6 +11,7 @@
 <meta property="og:description" content="知名 AI 人物的播客 · 双语全文阅读,原文与翻译对照,核心观点速览。">
 <meta property="og:url" content="https://aipodcast.jasonlin.tech/">
 <link rel="canonical" href="https://aipodcast.jasonlin.tech/">
+<link rel="alternate" type="application/rss+xml" title="AI Podcast · 双语播客全文" href="https://aipodcast.jasonlin.tech/feed.xml">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://aipodcast.jasonlin.tech/#website","name":"AI Podcast · AI 播客","alternateName":"AI 播客双语全文阅读站","url":"https://aipodcast.jasonlin.tech/","inLanguage":["zh-CN","en"],"description":"知名 AI 人物的播客双语全文阅读站——研究者与实验室建设者的英文长访谈整理成中英对照全文,提炼核心观点与反共识,可针对内容问答。","publisher":{"@id":"https://aipodcast.jasonlin.tech/#org"}},{"@type":"Organization","@id":"https://aipodcast.jasonlin.tech/#org","name":"AI Podcast","url":"https://aipodcast.jasonlin.tech/","logo":"https://aipodcast.jasonlin.tech/assets/og.png"}]}</script>
 <meta property="og:image" content="https://aipodcast.jasonlin.tech/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -117,7 +118,9 @@
   .hero-art::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 120% at 30% 20%,transparent 40%,rgba(0,0,0,.04))}
   .hero-body{padding:54px 48px;display:flex;flex-direction:column;justify-content:center}
   .hero-body .eyebrow{color:var(--accent)}
-  .hero-body h1{font-size:42px;line-height:1.08;font-weight:600;letter-spacing:-.03em;margin:6px 0 4px}
+  .hero-body h1{font-size:38px;line-height:1.14;font-weight:600;letter-spacing:-.02em;margin:6px 0 4px;font-family:var(--han)}
+  .hero-ten{color:var(--text-2);font-size:15px;line-height:1.4;margin:2px 0 6px;letter-spacing:-.01em}
+  .hero-ten:empty{display:none}
   .hero-body .who{color:var(--text-2);font-size:17px;margin-bottom:18px}
   .hero-body .quote{font-family:var(--serif);font-size:22px;line-height:1.5;color:var(--text);margin-bottom:8px}
   .hero-body .quote-zh{font-family:var(--han);font-size:17px;color:var(--text-2);margin-bottom:26px;line-height:1.7}
@@ -158,12 +161,27 @@
     background:rgba(20,140,90,.94);border-radius:980px;padding:3px 9px;box-shadow:0 2px 8px rgba(0,0,0,.25)}
   .ep-card.read .read-badge{display:inline-flex}
   .ep-card.read .ep-cover{filter:saturate(.9) brightness(.97)}
+  .prog-badge{position:absolute;top:12px;right:12px;z-index:3;display:inline-flex;align-items:center;
+    font-family:var(--ui);font-size:10.5px;font-weight:700;letter-spacing:.02em;color:#fff;
+    background:rgba(0,113,227,.92);border-radius:980px;padding:3px 9px;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+  /* 阅读栏底部进度线 */
+  .read-prog{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--accent);transition:width .15s linear;pointer-events:none}
   .readbtn.on{background:rgba(20,140,90,.14);color:#0a7d4a;border-color:rgba(20,140,90,.4)}
   [data-theme="dark"] .readbtn.on{background:rgba(46,190,120,.18);color:#3ec77f}
 
   /* grid of episodes */
   .ep-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
   .ep-grid .ep-card{flex:auto;width:auto}
+  /* 小节标题行 + 「查看全部」 */
+  .row-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px}
+  .see-all{flex:none;font-family:var(--ui);font-size:14px;font-weight:500;color:var(--accent);cursor:pointer;white-space:nowrap;padding-bottom:4px}
+  .see-all:hover{text-decoration:underline;text-underline-offset:3px}
+  /* rail 末尾引流卡 */
+  .more-card{display:grid;place-items:center;background:var(--surface-2);box-shadow:none;border:1px dashed var(--line)}
+  .more-card:hover{border-color:var(--accent);transform:translateY(-4px)}
+  .more-inner{text-align:center;color:var(--text-2);font-family:var(--ui)}
+  .more-inner b{display:block;font-size:26px;letter-spacing:-.02em;color:var(--text);margin-bottom:6px}
+  .more-inner span{font-size:13.5px}
 
   /* ---------- CHIPS / TAGS ---------- */
   .chips{display:flex;gap:9px;flex-wrap:wrap}
@@ -601,7 +619,18 @@
   </div>
 </div>
 
-<div id="app"></div>
+<div id="app">
+<!-- 静态骨架:主脚本下载完成前先呈现站点定位(render() 会整体覆盖) -->
+<div class="wrap" style="padding:72px 24px 40px;text-align:center">
+  <div style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#0071e3;margin-bottom:14px">AI Podcast · 双语全文</div>
+  <h1 style="font-size:clamp(26px,4.5vw,40px);letter-spacing:-.02em;line-height:1.2;margin:0 0 14px">海外一线 AI 人物访谈<br>中英对照全文阅读</h1>
+  <p style="color:#6e6e73;font-size:15.5px;line-height:1.7;max-width:560px;margin:0 auto 34px">Karpathy、Dario、Demis、Hinton…… 把英文长播客变成可精读的双语全文:章节速览 · 核心观点 · 划词朗读 · AI 问答</p>
+  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+    <span class="sk-card"></span><span class="sk-card"></span><span class="sk-card"></span>
+  </div>
+  <style>.sk-card{width:220px;height:140px;border-radius:16px;background:linear-gradient(100deg,#ececf0 40%,#f7f7fa 50%,#ececf0 60%);background-size:200% 100%;animation:skp 1.2s infinite linear}@keyframes skp{to{background-position:-200% 0}}@media(max-width:640px){.sk-card:nth-child(3){display:none}}</style>
+</div>
+</div>
 
 <script>
 /* ============================ DATA ============================ */
@@ -1254,8 +1283,11 @@ function epCover(e){const p=PEOPLE[e.pid];const cs=(p.fields.length?p.fields:['d
   return `<div class="ep-cover" style="background:${bg}">
     <div class="pod" onclick="goPod('${e.pod.en}')" style="cursor:pointer">${podLogo(e)}${e.pod.en}</div>${av(e.pid)}
     <div class="ct"><b>${p.en}</b><span>${fmtDate(e.date)} · ${fmtDur(e.min)}</span></div></div>`;}
-function epCard(e){return `<div class="ep-card${readHas(e.id)?' read':''}" data-id="${e.id}" onclick="go('#/episode/${e.id}')">
-  ${epCover(e)}<span class="read-badge">✓ 已读</span>
+function epCard(e){
+  const rp=!readHas(e.id)&&readPosGet()[e.id];
+  const prog=(rp&&rp.s>0&&rp.n)?`<span class="prog-badge">读到 ${Math.min(rp.s+1,rp.n)}/${rp.n} 章</span>`:'';
+  return `<div class="ep-card${readHas(e.id)?' read':''}" data-id="${e.id}" onclick="go('#/episode/${e.id}')">
+  ${epCover(e)}<span class="read-badge">✓ 已读</span>${prog}
   <div class="ep-meta"><div class="t">${e.tEn}</div><div class="tz">${e.tZh}</div>
   <div class="row">${e.fields.map(tag).join('')}</div></div></div>`;}
 
@@ -1280,21 +1312,54 @@ function toggleRead(id){readMark(id,!readHas(id));}
 function syncReadUI(id){const on=readHas(id);
   const b=document.getElementById('readBtn');if(b){b.classList.toggle('on',on);const l=b.querySelector('.rl');if(l)l.textContent=on?'已读 ✓':'标记已读';}
   document.querySelectorAll('.ep-card[data-id="'+id+'"]').forEach(c=>c.classList.toggle('read',on));}
+/* 阅读位置记忆:readPos={epId:{s:章节号,n:总章数,t:时间}},由目录观察器实时写入;
+   打开单集时若有记录且无显式 ?at/?hl,则经 pendingLocate 通道自动回到上次位置 */
+function readPosGet(){try{const r=JSON.parse(localStorage.readPos||'{}');return r&&typeof r==='object'?r:{}}catch(e){return{}}}
+function readPosSave(id,s,n){
+  const r=readPosGet();r[id]={s,n,t:Date.now()};
+  const ks=Object.keys(r);if(ks.length>60){ks.sort((a,b)=>(r[a].t||0)-(r[b].t||0));ks.slice(0,ks.length-60).forEach(k=>delete r[k]);}
+  try{localStorage.readPos=JSON.stringify(r)}catch(e){}
+}
+/* 阅读栏底部进度线(滚动百分比) */
+let _progTick=false;
+addEventListener('scroll',()=>{
+  if(_progTick)return;_progTick=true;
+  requestAnimationFrame(()=>{_progTick=false;
+    const bar=document.getElementById('readProg');if(!bar)return;
+    const max=document.documentElement.scrollHeight-innerHeight;
+    bar.style.width=(max>0?Math.min(100,scrollY/max*100):0)+'%';
+  });
+},{passive:true});
+/* 切字号/语言/顺序时锚定视口顶部内容,避免 reflow 后位置漂移 */
+function keepAnchor(fn){
+  const els=document.querySelectorAll('.reader .turn,.reader .sec-h');
+  let anchor=null,off=0;
+  for(const el of els){const r=el.getBoundingClientRect();if(r.bottom>96){anchor=el;off=r.top;break;}}
+  fn();
+  if(anchor)requestAnimationFrame(()=>{const top=anchor.getBoundingClientRect().top+scrollY-off;scrollTo(0,Math.max(0,top));});
+}
 function initReadMark(id){const end=document.getElementById('readEnd');if(!end||!('IntersectionObserver'in window))return;
   if(document.querySelector('.ts-loading'))return;                     // 全文加载中,等加载完 render 再设
   if(document.documentElement.scrollHeight<=innerHeight+400)return;     // 不足以滚动的短页,交给手动标记
   const io=new IntersectionObserver(es=>{es.forEach(x=>{if(x.isIntersecting){readMark(id,true);io.disconnect();}})},{rootMargin:'0px 0px -8% 0px'});
   io.observe(end);}
+// 新手入门 5 期(手工精选,约一季度手调一次)
+const STARTERS=['karpathy-training','hinton-alexkant-2026','demis-hugeiftr','dario-dwarkesh','jensen-dwarkesh'];
 function vHome(){
   const feat=EPISODES.find(e=>!e.stub)||EPISODES[0],fp=PEOPLE[feat.pid];
   const featTurn=(feat.quotes&&feat.quotes[0])||(feat.insights&&feat.insights.consensus&&feat.insights.consensus[0])||{en:feat.sEn,zh:feat.sZh};
   return `
+  <div class="wrap" style="padding:34px 24px 4px;text-align:center">
+    <h1 style="font-size:clamp(24px,3.6vw,34px);letter-spacing:-.02em;line-height:1.25;margin:0 0 10px">海外一线 AI 人物访谈,中英对照全文阅读</h1>
+    <div class="sub" style="margin:0 auto;max-width:620px">${EPISODES.length} 期真实播客 · ${Object.keys(PEOPLE).length} 位 AI 人物 —— 章节速览 · 核心观点 / 反共识 · 划词朗读 · AI 问答</div>
+  </div>
   <div class="wrap hero">
     <div class="hero-card reveal">
       <div class="hero-art" style="background:linear-gradient(150deg,${fp.fields.map(fcolor).join(',')})">${av(feat.pid)}</div>
       <div class="hero-body">
-        <div class="eyebrow">本周精选 · Featured</div>
-        <h1>${feat.tEn}</h1>
+        <div class="eyebrow">最新上线 · Latest</div>
+        <h1>${feat.tZh||feat.tEn}</h1>
+        <div class="hero-ten">${feat.tZh?feat.tEn:''}</div>
         <div class="who">${fp.en} · ${fp.zh} &nbsp;|&nbsp; ${feat.pod.zh}</div>
         <div class="quote">“${featTurn.en}”</div>
         <div class="quote-zh">“${featTurn.zh}”</div>
@@ -1311,17 +1376,41 @@ function vHome(){
   </section>
 
   ${(()=>{const rec=recentGet().map(id=>EPISODES.find(e=>e.id===id)).filter(Boolean).slice(0,4);
-   return rec.length?`<section class="wrap reveal" style="padding:8px 0 0">
+   if(rec.length)return `<section class="wrap reveal" style="padding:8px 0 0">
     <div class="eyebrow">Continue · 继续阅读</div>
     <h2 class="title">上次看到</h2>
     <div class="rail" style="margin-top:22px">${rec.map(epCard).join('')}</div>
+  </section>`;
+   const st=STARTERS.map(id=>EPISODES.find(e=>e.id===id)).filter(Boolean);
+   return st.length?`<section class="wrap reveal" style="padding:8px 0 0">
+    <div class="eyebrow">Start here · 新手入门</div>
+    <h2 class="title">第一次来?从这 ${st.length} 期开始</h2>
+    <div class="sub">名人名场面,每期都值得完整读一遍。</div>
+    <div class="rail" style="margin-top:22px">${st.map(epCard).join('')}</div>
   </section>`:'';})()}
 
   <section class="wrap reveal">
-    <div class="eyebrow">Latest · 最新单集</div>
-    <h2 class="title">最新播客</h2>
-    <div class="sub">知名 AI 人物的播客,中英双语对照全文。</div>
-    <div class="rail" style="margin-top:22px">${EPISODES.map(epCard).join('')}</div>
+    <div class="row-head"><div>
+      <div class="eyebrow">Latest · 最新单集</div>
+      <h2 class="title">最新播客</h2>
+      <div class="sub">知名 AI 人物的播客,中英双语对照全文。</div></div>
+      <a class="see-all" onclick="go('#/browse')">查看全部 ${EPISODES.length} 期 →</a></div>
+    <div class="rail" style="margin-top:22px">${EPISODES.slice(0,12).map(epCard).join('')}
+      <div class="ep-card more-card" onclick="go('#/browse')"><div class="more-inner"><b>+${EPISODES.length-12}</b><span>查看全部单集</span></div></div>
+    </div>
+  </section>
+
+  <section class="wrap reveal" style="padding-top:8px">
+    <div class="row-head"><div>
+      <div class="eyebrow">Topics · 议题</div>
+      <h2 class="title">同一议题,不同声音</h2></div>
+      <a class="see-all" onclick="go('#/topics')">全部议题 →</a></div>
+    <div class="topic-grid" style="margin-top:22px">
+    ${TOPICS.defs.slice(0,8).map(d=>{const items=TOPICS.items[d.slug]||[];const ppl=new Set(items.map(i=>i.pid)).size;
+      return `<div class="topic-card" onclick="go('#/topic/${d.slug}')">
+        <div class="tc-zh">${d.zh}</div><div class="tc-en">${d.en}</div>
+        <div class="tc-meta">${ppl} 位 · ${items.length} 条观点</div></div>`;}).join('')}
+    </div>
   </section>
 
   <section class="wrap reveal" style="padding-top:8px">
@@ -1395,6 +1484,10 @@ function vTopic(slug){
   const byPid={};items.forEach(it=>{(byPid[it.pid]=byPid[it.pid]||[]).push(it)});
   const pids=Object.keys(byPid).sort((a,b)=>byPid[a][0].date<byPid[b][0].date?1:-1);
   const epTitle=ep=>{const e=EPISODES.find(x=>x.id===ep);return e?(e.tZh||e.tEn):'';};
+  // 引用反查出处章节(与该期 insights 精确匹配),命中则深链 ?at= 直达原文
+  const secOf=q=>{const e=EPISODES.find(x=>x.id===q.ep);if(!e||!e.insights)return null;
+    const hit=[...(e.insights.consensus||[]),...(e.insights.contrarian||[])].find(x=>x.en===q.en);
+    return (hit&&typeof hit.sec==='number'&&hit.sec>=0)?hit.sec:null;};
   return `<div class="wrap"><section class="reveal" style="padding-bottom:0">
     <div class="back" onclick="go('#/topics')" style="margin-bottom:16px">‹ 全部议题</div>
     <div class="eyebrow">Topic · 议题</div><h2 class="title">${d.zh}</h2>
@@ -1403,9 +1496,9 @@ function vTopic(slug){
     ${pids.map(pid=>{const p=PEOPLE[pid]||{};const qs=byPid[pid];
       return `<div class="tp-person">
         <div class="tp-head" onclick="go('#/person/${pid}')">${av(pid)}<span class="tp-name">${p.en||pid}<i>${p.zh||''}</i></span></div>
-        <div class="tp-quotes">${qs.map(q=>`<div class="tp-q" onclick="go('#/episode/${q.ep}')">
+        <div class="tp-quotes">${qs.map(q=>{const s=secOf(q);return `<div class="tp-q" onclick="go('#/episode/${q.ep}${s!=null?`?at=${s}`:''}')">
           <div class="tq-zh">${q.zh}</div><div class="tq-en">${q.en}</div>
-          <div class="tq-src">${epTitle(q.ep)} · ${fmtDate(q.date)}</div></div>`).join('')}</div>
+          <div class="tq-src">${epTitle(q.ep)} · ${fmtDate(q.date)}${s!=null?' · 直达出处 ↦':''}</div></div>`;}).join('')}</div>
       </div>`;}).join('')}
     </div></section></div>${footer()}`;
 }
@@ -1506,6 +1599,26 @@ function vBrowse(){
     </section></div>${footer()}`;
 }
 
+/* 文末「接着读」:同人物 → 同议题他人 → 同领域,未读优先,最多 4 期 */
+function nextReads(e){
+  const out=[],seen=new Set([e.id]);
+  const push=x=>{if(x&&!seen.has(x.id)){seen.add(x.id);out.push(x);}};
+  const unread=id=>!readHas(id);
+  const same=epsOf(e.pid).filter(x=>x.id!==e.id);
+  push(same.find(x=>unread(x.id))||same[0]);
+  for(const slug in TOPICS.items){
+    if((TOPICS.items[slug]||[]).some(it=>it.ep===e.id)){
+      const other=(TOPICS.items[slug]||[]).find(it=>it.pid!==e.pid&&!seen.has(it.ep)&&unread(it.ep));
+      if(other)push(EPISODES.find(x=>x.id===other.ep));
+      break;
+    }
+  }
+  const f=e.fields[0];
+  for(const x of EPISODES){if(out.length>=4)break;
+    if(x.id!==e.id&&x.pid!==e.pid&&x.fields.includes(f)&&unread(x.id))push(x);}
+  return out.slice(0,4);
+}
+
 /* ----- READING VIEW (the core) ----- */
 function vEpisode(id){
   const e=EPISODES.find(x=>x.id===id);if(!e)return vHome();
@@ -1572,12 +1685,16 @@ function vEpisode(id){
     ${insights}
     <div id="askInline">${chat}</div>
     ${body}
+    ${(!e.stub&&!loading)?(()=>{const ns=nextReads(e);return ns.length?`
+    <div class="eyebrow" style="margin-top:56px">Up next · 接着读</div>
+    <div class="ep-grid" style="margin-top:16px">${ns.map(epCard).join('')}</div>`:'';})():''}
     ${note}
     <div id="readEnd" aria-hidden="true"></div>
   </div>`;
   const aside=chat?`<aside class="askside" id="askDesk"></aside>`:'';
   return `
   <div class="read-bar">
+    <div class="read-prog" id="readProg"></div>
     <div class="back" onclick="history.back()">‹ <b>${p.zh} · ${e.pod.zh}</b></div>
     <div class="tools">
       <div class="seg" id="sizeSeg">
@@ -1604,16 +1721,23 @@ function vEpisode(id){
 let tocObserver=null;
 function jumpSec(i){const el=document.getElementById('sec-'+i);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
   const sh=$('#tocSheet');if(sh)sh.classList.remove('on');}
-function toggleTocSheet(){const sh=$('#tocSheet');if(sh)sh.classList.toggle('on');}
-function setTocActive(i){document.querySelectorAll('.toc-i').forEach(a=>a.classList.toggle('on',+a.dataset.sec===i));}
+function toggleTocSheet(){const sh=$('#tocSheet');if(!sh)return;sh.classList.toggle('on');
+  if(sh.classList.contains('on')){const on=sh.querySelector('.toc-i.on');if(on&&on.scrollIntoView)on.scrollIntoView({block:'center'});}}
+function setTocActive(i,total){
+  document.querySelectorAll('.toc-i').forEach(a=>a.classList.toggle('on',+a.dataset.sec===i));
+  const n=total||document.querySelectorAll('.reader .sec-h').length;
+  const fab=document.querySelector('.toc-fab');if(fab&&n)fab.textContent=`目录 · ${i+1}/${n}`;
+}
 function initTOC(){
   if(tocObserver){tocObserver.disconnect();tocObserver=null;}
   const heads=[...document.querySelectorAll('.reader .sec-h')];
   if(!heads.length)return;
-  setTocActive(0);
+  setTocActive(0,heads.length);
+  const epid=(location.hash||'').split('/episode/')[1]?(location.hash.split('/episode/')[1].split('?')[0]):'';
   tocObserver=new IntersectionObserver(es=>{
     const vis=es.filter(e=>e.isIntersecting).map(e=>heads.indexOf(e.target));
-    if(vis.length)setTocActive(Math.min(...vis));
+    if(vis.length){const i=Math.min(...vis);setTocActive(i,heads.length);
+      if(epid&&!pendingLocate)readPosSave(epid,i,heads.length);}   // 定位还没完成时不覆盖旧进度
   },{rootMargin:'-115px 0px -72% 0px',threshold:0});
   heads.forEach(h=>tocObserver.observe(h));
 }
@@ -1910,9 +2034,9 @@ function ttsInit(){
 }
 
 /* ============================ CONTROLS ============================ */
-function setSize(s){document.body.dataset.size=s;syncSeg();localStorage.size=s;}
-function setLang(l){document.body.dataset.lang=l;syncSeg();localStorage.lang=l;}
-function toggleOrder(){const o=document.body.dataset.order==='zh'?'en':'zh';document.body.dataset.order=o;localStorage.order=o;syncSeg();}
+function setSize(s){keepAnchor(()=>{document.body.dataset.size=s;});syncSeg();localStorage.size=s;}
+function setLang(l){keepAnchor(()=>{document.body.dataset.lang=l;});syncSeg();localStorage.lang=l;}
+function toggleOrder(){keepAnchor(()=>{const o=document.body.dataset.order==='zh'?'en':'zh';document.body.dataset.order=o;localStorage.order=o;});syncSeg();}
 function syncSeg(){
   const sz=document.body.dataset.size,lg=document.body.dataset.lang;
   const m={s:0,m:1,l:2};
@@ -2037,6 +2161,8 @@ function render(){
   initTOC();
   placeAsk();
   if(parts[0]==='episode')initReadMark(parts[1]);
+  // 无显式 ?at/?hl 时,自动回到上次读到的章节(阅读位置永不丢)
+  if(parts[0]==='episode'&&!pendingLocate){const rp=readPosGet()[parts[1]];if(rp&&rp.s>0&&!readHas(parts[1]))pendingLocate={id:parts[1],at:rp.s,hl:''};}
   applyLocate();
   trackView();
 }
@@ -2098,7 +2224,7 @@ function footer(){return `<footer class="footer"><div class="wrap">
     <b style="color:var(--text-2)">版权与使用</b> — 本站仅供<b>学习与评论用途,非商业</b>。所有播客内容<b>版权归原节目及播客方所有</b>;双语全文为 AI 转录翻译,仅作阅读参考,请以原节目为准。
     若您是权利人、希望将相关内容下架,请联系 <a href="mailto:linzheng3535@gmail.com?subject=AI%20Podcast%20Takedown%20Request">linzheng3535@gmail.com</a>,<b>收到后将立即处理</b>。
   </div>
-  <b style="color:var(--text-2)">AI Podcast · AI 播客</b> — 知名 AI 人物的播客,双语阅读。<br>
+  <b style="color:var(--text-2)">AI Podcast · AI 播客</b> — 知名 AI 人物的播客,双语阅读。<a href="/feed.xml" style="color:var(--accent)">📡 RSS 订阅</a>(上新自动推送)<br>
   人物与领域分类法复用自 <a href="https://ai.jasonlin.tech" target="_blank">AI 人物图谱</a>。节目均为真实播客;双语全文由 AI 转录翻译,个别词偶有瑕疵。<br>
   人物照片来自 <a href="https://commons.wikimedia.org" target="_blank">Wikimedia Commons</a>(CC 协议)及本人公开主页头像,版权归各自作者,仅作识别之用;播客封面来自 Apple Podcasts,商标归各节目所有,仅作识别之用。<br>
   本站使用匿名访问统计(无 Cookie、不收集任何个人信息)。
