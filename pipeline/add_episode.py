@@ -167,6 +167,16 @@ def main():
     json.dump({"ts": ts, "insights": ins}, open(TRANS / f"ep_{vid}.json", "w"), ensure_ascii=False)
 
     eid = f"{a.pid}-{re.sub(r'[^a-z0-9]+','',a.pod_en.lower())[:8]}-{(a.date or (ydate[:4] if ydate else ''))[:4]}"
+    # 同人同播客同年会撞 id;撞了自动加后缀 b/c/d…,绝不静默替换旧集(2026-07 naval 曾因此丢过一期)
+    _existing = HTML.read_text(encoding="utf-8")
+    if f'"id": "{eid}"' in _existing:
+        for suf in "bcdefgh":
+            if f'"id": "{eid}{suf}"' not in _existing:
+                eid += suf
+                print(f"  id 撞车,改用:{eid}", file=sys.stderr)
+                break
+        else:
+            sys.exit(f"id {eid} 后缀 b-h 全被占用,请手工指定")
     edate = a.date or (f"{ydate[:4]}-{ydate[4:6]}-{ydate[6:]}" if ydate else "")
     pod = {"en": a.pod_en, "zh": a.pod_zh}
     fields = [f.strip() for f in a.fields.split(",") if f.strip()]
