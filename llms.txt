@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文,提炼核心观点与反共识,并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 95 位人物 / 244 期访谈
+规模: 95 位人物 / 246 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -28,9 +28,10 @@
 - [Noam Brown / 诺姆·布朗](https://aipodcast.jasonlin.tech/pp/noambrown/): Research Scientist, OpenAI — 5 期
 - [Richard Sutton / 理查德·萨顿](https://aipodcast.jasonlin.tech/pp/sutton/): Professor, U of Alberta — 5 期
 - [Sholto Douglas / 肖尔托·道格拉斯](https://aipodcast.jasonlin.tech/pp/sholto/): Researcher, Anthropic — 5 期
+- [Zico Kolter / 齐科·科尔特](https://aipodcast.jasonlin.tech/pp/kolter/): Professor, CMU · OpenAI board — 4 期
 - [Aravind Srinivas / 阿拉文德·斯里尼瓦斯](https://aipodcast.jasonlin.tech/pp/aravind/): Co-founder & CEO, Perplexity — 3 期
+- [Mark Chen / 马克·陈](https://aipodcast.jasonlin.tech/pp/markchen/): Chief Research Officer, OpenAI — 3 期
 - [John Jumper / 约翰·江珀](https://aipodcast.jasonlin.tech/pp/jumper/): Director, Google DeepMind; Nobel Laureate in Chemistry — 3 期
-- [Zico Kolter / 齐科·科尔特](https://aipodcast.jasonlin.tech/pp/kolter/): Professor, CMU · OpenAI board — 3 期
 - [Yejin Choi / 崔艺珍](https://aipodcast.jasonlin.tech/pp/yejin/): Professor, Stanford (prev. NVIDIA, AI2); commonsense reasoning — 3 期
 - [Ilya Sutskever / 伊利亚·苏茨克维尔](https://aipodcast.jasonlin.tech/pp/ilya/): Co-founder, Safe Superintelligence — 3 期
 - [Noam Shazeer / 诺姆·沙泽尔](https://aipodcast.jasonlin.tech/pp/shazeer/): Co-lead, Google Gemini — 3 期
@@ -39,7 +40,6 @@
 - [Fiona Fung / 菲奥娜·冯](https://aipodcast.jasonlin.tech/pp/fiona/): Claude Code & Cowork Lead · Anthropic — 2 期
 - [Mira Murati / 米拉·穆拉蒂](https://aipodcast.jasonlin.tech/pp/murati/): Founder & CEO, Thinking Machines Lab — 2 期
 - [Oriol Vinyals / 奥里奥尔·维尼亚尔斯](https://aipodcast.jasonlin.tech/pp/oriol/): VP of Research & Gemini Co-lead · Google DeepMind — 2 期
-- [Mark Chen / 马克·陈](https://aipodcast.jasonlin.tech/pp/markchen/): Chief Research Officer, OpenAI — 2 期
 - [Nando de Freitas / 南多·德弗雷塔斯](https://aipodcast.jasonlin.tech/pp/nando/): VP & Distinguished Scientist, Microsoft AI (prev. DeepMind) — 2 期
 - [Tejal Patwardhan / 泰贾尔·帕特瓦尔丹](https://aipodcast.jasonlin.tech/pp/tejal/): Frontier Evals Lead, OpenAI — 1 期
 - [Alexander Wei / 亚历山大·魏](https://aipodcast.jasonlin.tech/pp/alexwei/): Research, OpenAI — 1 期
@@ -110,8 +110,10 @@
 - [AI Is Inverting Product Teams: Andrew Ambrosino on Codex](https://aipodcast.jasonlin.tech/e/ajambrosino-lennyspo-2026/) — Andrew Ambrosino, Lenny’s Podcast, 2026-06-28
 - [Large-Scale Test Time Compute and Model Evaluation](https://aipodcast.jasonlin.tech/e/noambrown-nopriors-2026/) — Noam Brown, No Priors, 2026-06-26
 - [AI's Power Thirst: Blackmail, Self-Preservation, and What We Can Do](https://aipodcast.jasonlin.tech/e/bengio-sineadbo-2026/) — Yoshua Bengio, Sinead Bovell, 2026-06-25
+- [From Trading to AGI: Mark Chen on Research Taste and Replication](https://aipodcast.jasonlin.tech/e/markchen-latentsp-2026/) — Mark Chen, Latent Space, 2026-06-25
 - [Demis Hassabis on AGI, AI Risks, and DeepMind's Competitive Edge](https://aipodcast.jasonlin.tech/e/demis-semafort-2026/) — Demis Hassabis, Semafor Tech, 2026-06-24
 - [AlphaFold: AI's Nobel-Winning Leap in Protein Folding](https://aipodcast.jasonlin.tech/e/jumper-machinel-2026/) — John Jumper, Machine Learning Street Talk, 2026-06-22
+- [AI Red Teaming Outperforms Humans](https://aipodcast.jasonlin.tech/e/kolter-latentsp-2026/) — Zico Kolter, Latent Space, 2026-06-22
 - [Fiona Fung on AI's Impact on Software Engineering](https://aipodcast.jasonlin.tech/e/fiona-lennyspo-2026/) — Fiona Fung, Lenny’s Podcast, 2026-06-21
 - [AI Coding on Phone: Boris on 8B Tokens & ROI](https://aipodcast.jasonlin.tech/e/boris-scale-2026/) — Boris Cherny, @Scale, 2026-06-19
 - [AI's Future and Yours: Agency, Tools, and the Widening Gap](https://aipodcast.jasonlin.tech/e/feifei-siliconv-2026/) — Fei-Fei Li, Silicon Valley Girl, 2026-06-19
@@ -142,8 +144,6 @@
 - [Codex's Inflection Point: Why Coding AI Suddenly Got Good](https://aipodcast.jasonlin.tech/e/altman-stripese-2026/) — Sam Altman, Stripe Sessions (with Patrick Collison), 2026-05-19
 - [From VR to Robotics: The Next Frontier in Physical AI](https://aipodcast.jasonlin.tech/e/caitlin-lennyspo-2026/) — Caitlin Kalinowski, Lenny’s Podcast, 2026-05-17
 - [What comes after LLMs](https://aipodcast.jasonlin.tech/e/lecun-unsuperv/) — Yann LeCun, Unsupervised Learning, 2026-05-15
-- [Alex Wang on Meta's AI Strategy and New Model Release](https://aipodcast.jasonlin.tech/e/awang-corememo/) — Alexandr Wang, Core Memory, 2026-05-13
-- [AI Godfather Yoshua Bengio: Why I Changed My Mind About AI](https://aipodcast.jasonlin.tech/e/bengio-jonherna-2026/) — Yoshua Bengio, Jon Hernandez AI (Inteligencia Artificial con Jon Hernandez), 2026-05-08
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
