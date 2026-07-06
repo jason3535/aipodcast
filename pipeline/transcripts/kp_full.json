@@ -84,7 +84,7 @@
     {
      "spk": "Andrej",
      "en": "But it was still very per-task, per specific task. So maybe I have an image classifier or a neural machine translator. And people became slowly interested in agents. They started to think, okay, maybe we have a check mark next to the visual cortex, but what about the other parts of the brain? How can we get a full agent that can interact in the world? I would say the Atari deep reinforcement learning shift in 2013 was part of that early effort. It was an attempt to get agents that not only perceive the world but also take actions, interact, and get rewards from environments. At the time, this was Atari games. I feel like that was a misstep, and even the early OpenAI that I was part of adopted it. For a few years, everyone was doing reinforcement learning on games. I was always a bit suspicious of games leading to AGI because I wanted something like an accountant interacting with the real world. My project at OpenAI, within the Universe project, was an agent using keyboard and mouse to operate web pages. I wanted something that interacts with the actual digital world and can do knowledge work. But it was way too early. If you're stumbling around, keyboard mashing, and trying to get rewards, the reward is too sparse. You won't learn, and you'll burn a forest of compute. What you're missing is the power of representation in the neural network. Today, people train computer-using agents on top of a large language model. You have to get the language model first, the representations first, through pre-training and all the LLM stuff. So people kept trying to get the full thing too early—Atari, Universe, even my own experience. You have to do some things first before you get to agents. Now agents are more competent, but maybe we're still missing some parts of the stack. Those are the three major buckets: training neural nets per task, the first round of agents, and then LLMs—seeking the representation power before tacking everything else on top.",
-     "zh": "但当时仍然是每个任务、每个特定任务各搞各的。比如我有一个图像分类器，或者一个神经机器翻译器。后来人们慢慢对智能体产生了兴趣。他们开始想，好吧，也许视觉皮层这块我们打上勾了，但大脑的其他部分呢？我们怎样才能得到一个完整的、能在世界中互动的智能体？我认为2013年Atari深度强化学习的转变就是这种早期努力的一部分。那是为了获得不仅能感知世界，还能采取行动、互动并从环境中获得奖励的智能体。当时就是Atari游戏。我觉得那是一个失误，甚至我参与过的早期OpenAI也采纳了它。有那么三四年，每个人都在做游戏上的强化学习。我一直对游戏能通向AGI持怀疑态度，因为我想要的是像会计那样与现实世界互动的东西。我在OpenAI的项目，属于Universe项目，是一个用键盘和鼠标操作网页的智能体。我想要一个能与实际数字世界互动、能做知识工作的东西。但那时太早了。如果你到处乱撞、乱按键盘鼠标、试图获得奖励，奖励太稀疏了。你学不到东西，还会烧掉一片算力森林。你缺少的是神经网络中的表示能力。如今，人们在大型语言模型之上训练使用计算机的智能体。你必须先有语言模型，先有表示，通过预训练和所有LLM的工作。所以人们总是过早地试图得到完整的东西——Atari、Universe，甚至我自己的经历。在得到智能体之前，你必须先做一些事情。现在智能体更胜任了，但可能我们仍然缺少栈的某些部分。这就是三大类：每个任务训练神经网络、第一波智能体、以及LLM——在叠加其他东西之前先寻求表示能力。"
+     "zh": "但当时仍然是每个任务、每个特定任务各搞各的。比如我有一个图像分类器，或者一个神经机器翻译器。后来人们慢慢对智能体产生了兴趣。他们开始想，好吧，也许视觉皮层这块我们打上勾了，但大脑的其他部分呢？我们怎样才能得到一个完整的、能在世界中互动的智能体？我认为 2013 年 Atari 深度强化学习的转变就是这种早期努力的一部分。那是为了获得不仅能感知世界，还能采取行动、互动并从环境中获得奖励的智能体。当时就是 Atari 游戏。我觉得那是一个失误，甚至我参与过的早期 OpenAI 也采纳了它。有那么三四年，每个人都在做游戏上的强化学习。我一直对游戏能通向 AGI 持怀疑态度，因为我想要的是像会计那样与现实世界互动的东西。我在 OpenAI 的项目，属于 Universe 项目，是一个用键盘和鼠标操作网页的智能体。我想要一个能与实际数字世界互动、能做知识工作的东西。但那时太早了。如果你到处乱撞、乱按键盘鼠标、试图获得奖励，奖励太稀疏了。你学不到东西，还会烧掉一片算力森林。你缺少的是神经网络中的表示能力。如今，人们在大型语言模型之上训练使用计算机的智能体。你必须先有语言模型，先有表示，通过预训练和所有 LLM 的工作。所以人们总是过早地试图得到完整的东西——Atari、Universe，甚至我自己的经历。在得到智能体之前，你必须先做一些事情。现在智能体更胜任了，但可能我们仍然缺少栈的某些部分。这就是三大类：每个任务训练神经网络、第一波智能体、以及 LLM——在叠加其他东西之前先寻求表示能力。"
     }
    ]
   },
@@ -94,12 +94,12 @@
     {
      "spk": "Dwarkesh",
      "en": "Interesting. If I were to take the Sutton perspective, humans can take on everything at once. Even animals can. Animals are a better example because they don't have the scaffold of language. They just get thrown into the world and have to make sense of everything without labels. The vision for AGI should be something that just looks at sensory data, looks at the computer screen, and figures out what's going on from scratch. If a human or animal grows up that way, why shouldn't that be the vision for AI rather than millions of years of training?",
-     "zh": "有意思。如果从Sutton的角度来看，人类可以一下子应对所有事情。甚至动物也可以。动物是更好的例子，因为它们没有语言支架。它们被扔到世界上，必须在没有标签的情况下理解一切。AGI的愿景应该是某种东西，它只看感官数据、看电脑屏幕，然后从零开始弄清楚发生了什么。如果人类或动物是这样成长的，那为什么AI的愿景不应该是这样，而是要进行数百万年的训练呢？"
+     "zh": "有意思。如果从 Sutton 的角度来看，人类可以一下子应对所有事情。甚至动物也可以。动物是更好的例子，因为它们没有语言支架。它们被扔到世界上，必须在没有标签的情况下理解一切。AGI 的愿景应该是某种东西，它只看感官数据、看电脑屏幕，然后从零开始弄清楚发生了什么。如果人类或动物是这样成长的，那为什么 AI 的愿景不应该是这样，而是要进行数百万年的训练呢？"
     },
     {
      "spk": "Andrej",
      "en": "That's a really good question. Sutton was on your podcast, and I saw it. I had a write-up about it that gets into how I see things. I'm very careful about analogies to animals because they came about by a very different optimization process. Animals are evolved and come with a huge amount of built-in hardware. For example, in my post, I used the zebra. A zebra gets born and a few minutes later it's running around and following its mother. That's extremely complicated. That's not reinforcement learning; it's baked in. Evolution encodes the weights of our neural nets in ATCGs. I have no idea how that works, but it apparently works. Brains came from a very different process. I'm hesitant to take inspiration from it because we're not running that process. In my post, I said we're not building animals; we're building ghosts. Or spirits. We're not doing training by evolution; we're doing training by imitation of humans and the data they put on the internet. So we end up with ethereal spirit entities that are fully digital and mimic humans. It's a different kind of intelligence. If you imagine a space of intelligences, we're starting at a different point. We're not building animals, but I think it's possible to make them more animal-like over time, and we should.",
-     "zh": "这是个很好的问题。Sutton上过你的播客，我看了。我写过一篇关于它的文章，谈了我怎么看。我对类比动物非常谨慎，因为它们是通过非常不同的优化过程产生的。动物是进化来的，带有大量内置的硬件。比如，在我的文章里，我用了斑马的例子。斑马出生几分钟后就能跑动并跟着妈妈。这极其复杂。那不是强化学习，而是内置的。进化用ATCG编码了我们神经网络的权重。我不知道那是怎么做到的，但它显然有效。大脑来自一个非常不同的过程。我不太愿意从中汲取灵感，因为我们并没有运行那个过程。在我的文章里，我说我们不是在建造动物，而是在建造幽灵。或者说精灵。我们不是通过进化来训练，而是通过模仿人类和他们在互联网上留下的数据来训练。所以我们最终得到的是完全数字化的、模仿人类的空灵精灵实体。这是一种不同的智能。如果你想象一个智能空间，我们是从一个不同的起点开始的。我们不是在建造动物，但我认为随着时间的推移，有可能让它们更像动物，而且我们应该这样做。"
+     "zh": "这是个很好的问题。Sutton 上过你的播客，我看了。我写过一篇关于它的文章，谈了我怎么看。我对类比动物非常谨慎，因为它们是通过非常不同的优化过程产生的。动物是进化来的，带有大量内置的硬件。比如，在我的文章里，我用了斑马的例子。斑马出生几分钟后就能跑动并跟着妈妈。这极其复杂。那不是强化学习，而是内置的。进化用 ATCG 编码了我们神经网络的权重。我不知道那是怎么做到的，但它显然有效。大脑来自一个非常不同的过程。我不太愿意从中汲取灵感，因为我们并没有运行那个过程。在我的文章里，我说我们不是在建造动物，而是在建造幽灵。或者说精灵。我们不是通过进化来训练，而是通过模仿人类和他们在互联网上留下的数据来训练。所以我们最终得到的是完全数字化的、模仿人类的空灵精灵实体。这是一种不同的智能。如果你想象一个智能空间，我们是从一个不同的起点开始的。我们不是在建造动物，但我认为随着时间的推移，有可能让它们更像动物，而且我们应该这样做。"
     }
    ]
   },
@@ -109,7 +109,7 @@
     {
      "spk": "Andrej",
      "en": "I feel like Sutton basically wants to build animals, and that would be wonderful if we could get it to work. If there were a single algorithm you could run on the internet and it learns everything, that would be incredible. But I suspect it doesn't exist, and that's not what animals do because animals have this outer loop of evolution. A lot of what looks like learning is actually maturation of the brain. I think very little reinforcement learning occurs in animals for intelligence tasks; it's more for motor tasks. So I think humans don't really use RL for intelligence tasks like problem solving.",
-     "zh": "我觉得Sutton基本上是想构建动物，如果能实现的话，那会很棒。如果有一个单一的算法，你可以在互联网上运行它，它就能学会一切，那将是不可思议的。但我怀疑它并不存在，而且动物也不是这样做的，因为动物有进化这个外部循环。很多看似学习的东西实际上是大脑的成熟。我认为动物很少使用强化学习来完成智能任务；它更多用于运动任务。所以我认为人类实际上并不使用强化学习来解决像问题解决这样的智能任务。"
+     "zh": "我觉得 Sutton 基本上是想构建动物，如果能实现的话，那会很棒。如果有一个单一的算法，你可以在互联网上运行它，它就能学会一切，那将是不可思议的。但我怀疑它并不存在，而且动物也不是这样做的，因为动物有进化这个外部循环。很多看似学习的东西实际上是大脑的成熟。我认为动物很少使用强化学习来完成智能任务；它更多用于运动任务。所以我认为人类实际上并不使用强化学习来解决像问题解决这样的智能任务。"
     },
     {
      "spk": "Dwarkesh",
@@ -129,12 +129,12 @@
     {
      "spk": "Dwarkesh",
      "en": "I'm going to take a second to digest that. Maybe one clarifying question: you suggest that evolution does the kind of thing that pre-training does, building something that can understand the world. The difference is that evolution has to be titrated through 3 gigabytes of DNA. That's unlike the weights of a model. The weights of a model are a brain, which is not encoded in sperm and egg; it has to be grown. The information for every synapse cannot exist in 3 gigabytes. Evolution seems closer to finding the algorithm that then does lifetime learning. Maybe lifetime learning is not analogous to RL. Is that compatible with what you're saying?",
-     "zh": "我需要一点时间来消化。也许有一个澄清性的问题：你暗示进化在做预训练所做的事情，构建能够理解世界的东西。区别在于进化必须通过3GB的DNA来滴定。这与模型的权重不同。模型的权重是一个大脑，它并不编码在精子和卵子中；它必须生长。每个突触的信息不可能存在于3GB中。进化似乎更接近于找到随后进行终身学习的算法。也许终身学习并不类似于强化学习。这与你的说法一致吗？"
+     "zh": "我需要一点时间来消化。也许有一个澄清性的问题：你暗示进化在做预训练所做的事情，构建能够理解世界的东西。区别在于进化必须通过 3GB 的 DNA 来滴定。这与模型的权重不同。模型的权重是一个大脑，它并不编码在精子和卵子中；它必须生长。每个突触的信息不可能存在于 3GB 中。进化似乎更接近于找到随后进行终身学习的算法。也许终身学习并不类似于强化学习。这与你的说法一致吗？"
     },
     {
      "spk": "Andrej",
      "en": "I agree that there's some miraculous compression going on because the weights of the neural net are not stored in ATCGs. There's some dramatic compression and learning algorithms encoded that take over and do some learning online. I'm more practically minded. I don't come from the perspective of building animals; I come from building useful things. We're not going to do evolution because I don't know how. But we can build these ghost-like entities by imitating internet documents. That works and brings you up to something with built-in knowledge and intelligence, similar to what evolution has done. So I call pre-training a kind of crappy evolution—the practically possible version with our technology.",
-     "zh": "我同意存在某种神奇的压缩，因为神经网络的权重并不存储在ATCG中。存在某种剧烈的压缩和编码的学习算法，它们接管并在线进行一些学习。我更加务实。我不是从构建动物的角度出发；我是从构建有用东西的角度出发。我们不会去搞进化，因为我不知道怎么做。但我们可以通过模仿互联网文档来构建这些幽灵般的实体。这很有效，能让你达到一个具有内置知识和智能的状态，类似于进化所做的。所以我称预训练为一种糟糕的进化——在我们技术条件下实际可行的版本。"
+     "zh": "我同意存在某种神奇的压缩，因为神经网络的权重并不存储在 ATCG 中。存在某种剧烈的压缩和编码的学习算法，它们接管并在线进行一些学习。我更加务实。我不是从构建动物的角度出发；我是从构建有用东西的角度出发。我们不会去搞进化，因为我不知道怎么做。但我们可以通过模仿互联网文档来构建这些幽灵般的实体。这很有效，能让你达到一个具有内置知识和智能的状态，类似于进化所做的。所以我称预训练为一种糟糕的进化——在我们技术条件下实际可行的版本。"
     },
     {
      "spk": "Dwarkesh",
@@ -189,7 +189,7 @@
     {
      "spk": "Andrej",
      "en": "Which is kind of magical and just falls out from the internet just because there's a lot of patterns. I will say that there have been some papers that I thought were interesting that actually look at the mechanisms behind in-context learning, and I do think it's possible that in-context learning actually runs a small gradient descent loop internally in the layers of the neural network. So I recall one paper in particular where they were doing linear regression using in-context learning. So basically your inputs into the neural network are XY pairs, XY XY XY that happen to be on the line, and then you do X and you expect the Y. And the neural network when you train it in this way actually does do linear regression. And normally when you would run linear regression, you have a small gradient descent optimizer that basically looks at XY, looks at an error, calculates the gradient of the weights, and does the update a few times. It just turns out that when they looked at the weights of that in-context learning algorithm, they actually found some analogies to gradient descent mechanics. In fact, I think even the paper went further because they actually hardcoded the weights of a neural network to do gradient descent through attention and all the internals of the neural network. So I guess that's just my only pushback is that who knows how in-context learning works, but I actually think that it's probably doing a little bit of some kind of funky gradient descent internally, and that I think that's possible. So I guess I was only pushing back on you saying it's not doing gradient descent. Who knows what it's doing, but it's probably maybe doing something similar to it, but we don't know.",
-     "zh": "这有点神奇，只是因为互联网上有很多模式，它就自然出现了。我得说，有一些我觉得很有意思的论文，它们确实研究了上下文学习背后的机制，我确实认为上下文学习有可能在神经网络层内部运行一个小型的梯度下降循环。我特别记得一篇论文，他们用上下文学习来做线性回归。基本上，你输入到神经网络的是XY对，XY XY XY，这些点恰好落在一条线上，然后你输入X，期望得到Y。当你这样训练神经网络时，它确实做了线性回归。通常当你运行线性回归时，你会有一个小的梯度下降优化器，它查看XY，查看误差，计算权重的梯度，并更新几次。结果发现，当他们查看那个上下文学习算法的权重时，他们确实找到了一些与梯度下降机制类似的东西。事实上，我认为那篇论文甚至更进一步，因为他们实际上硬编码了神经网络的权重，通过注意力机制和神经网络的所有内部结构来执行梯度下降。所以我想我唯一的反驳是，谁知道上下文学习是如何工作的，但我实际上认为它可能在内部做了一点某种奇特的梯度下降，我认为这是可能的。所以我想我只是反驳你说它没有在做梯度下降。谁知道它在做什么，但它可能在做类似的事情，只是我们不知道。"
+     "zh": "这有点神奇，只是因为互联网上有很多模式，它就自然出现了。我得说，有一些我觉得很有意思的论文，它们确实研究了上下文学习背后的机制，我确实认为上下文学习有可能在神经网络层内部运行一个小型的梯度下降循环。我特别记得一篇论文，他们用上下文学习来做线性回归。基本上，你输入到神经网络的是 XY 对，XY XY XY，这些点恰好落在一条线上，然后你输入 X，期望得到 Y。当你这样训练神经网络时，它确实做了线性回归。通常当你运行线性回归时，你会有一个小的梯度下降优化器，它查看 XY，查看误差，计算权重的梯度，并更新几次。结果发现，当他们查看那个上下文学习算法的权重时，他们确实找到了一些与梯度下降机制类似的东西。事实上，我认为那篇论文甚至更进一步，因为他们实际上硬编码了神经网络的权重，通过注意力机制和神经网络的所有内部结构来执行梯度下降。所以我想我唯一的反驳是，谁知道上下文学习是如何工作的，但我实际上认为它可能在内部做了一点某种奇特的梯度下降，我认为这是可能的。所以我想我只是反驳你说它没有在做梯度下降。谁知道它在做什么，但它可能在做类似的事情，只是我们不知道。"
     },
     {
      "spk": "Dwarkesh",
@@ -199,17 +199,17 @@
     {
      "spk": "Andrej",
      "en": "Well, one way you can think about it is how much information does the model store per unit of information it receives from training. And if you look at pre-training, if I think if you look at Llama 3 for example, I think it's trained on 15 trillion tokens, and if you look at the 70B model, that would be the equivalent of 0.7 bits per token that it sees in pre-training in terms of the information in the weights of the model compared to the tokens it reads. Whereas if you look at the KV cache and how it grows per additional token in in-context learning, it's like 320 kilobytes. So that's a 35 million-fold difference in how much information per token is assimilated by the model. I wonder if that's relevant at all.",
-     "zh": "嗯，一种思考方式是，模型从训练中接收的每单位信息中存储了多少信息。如果你看预训练，比如Llama 3，我认为它是在15万亿个词元上训练的，如果你看70B模型，就模型权重中存储的信息相对于它读取的词元而言，相当于每个词元0.7比特。而如果你看KV缓存，以及它在上下文学习中每个额外词元如何增长，大约是320千字节。所以模型每个词元吸收的信息量有3500万倍的差异。我想知道这是否相关。"
+     "zh": "嗯，一种思考方式是，模型从训练中接收的每单位信息中存储了多少信息。如果你看预训练，比如 Llama 3，我认为它是在 15 万亿个词元上训练的，如果你看 70B 模型，就模型权重中存储的信息相对于它读取的词元而言，相当于每个词元 0.7 比特。而如果你看 KV 缓存，以及它在上下文学习中每个额外词元如何增长，大约是 320 千字节。所以模型每个词元吸收的信息量有 3500 万倍的差异。我想知道这是否相关。"
     },
     {
      "spk": "Dwarkesh",
      "en": "Yeah. So that's a 35 million-fold difference in how much information per token is assimilated by the model. I wonder if that's relevant at all.",
-     "zh": "是的。所以模型每个词元吸收的信息量有3500万倍的差异。我想知道这是否相关。"
+     "zh": "是的。所以模型每个词元吸收的信息量有 3500 万倍的差异。我想知道这是否相关。"
     },
     {
      "spk": "Andrej",
      "en": "I think I kind of agree. I mean the way I usually put this is that anything that happens during the training of the neural network, the knowledge is only kind of like a hazy recollection of what happened in training time, and that's because the compression is dramatic. You're taking 15 trillion tokens and you're compressing it to just your final network of a few billion parameters. So obviously it's a massive amount of compression going on.",
-     "zh": "我想我有点同意。我的意思是，我通常这样表述：神经网络训练过程中发生的任何事情，知识都只是对训练时发生事情的一种模糊回忆，这是因为压缩非常剧烈。你把15万亿个词元压缩到只有几十亿参数的最终网络。所以显然发生了大量的压缩。"
+     "zh": "我想我有点同意。我的意思是，我通常这样表述：神经网络训练过程中发生的任何事情，知识都只是对训练时发生事情的一种模糊回忆，这是因为压缩非常剧烈。你把 15 万亿个词元压缩到只有几十亿参数的最终网络。所以显然发生了大量的压缩。"
     }
    ]
   },
@@ -284,12 +284,12 @@
     {
      "spk": "Andrej",
      "en": "Well, the way I like to think about it is okay, let's use translation invariance in time, right? So 10 years ago, where were we? 2015, we had convolutional neural networks primarily. Residual networks just came out. So remarkably similar I guess, but quite a bit different still. I mean transformer was not around. All these sort of more modern tweaks on the transformer were not around. So maybe some of the things that we can bet on, I think in 10 years by translational sort of equivariance, is we're still training giant neural networks with forward backward pass and update through gradient descent, but maybe it looks a little bit different, and it's just everything is much bigger.",
-     "zh": "嗯，我喜欢这样思考：我们利用时间平移不变性，对吧？那么十年前我们在哪里？2015年，我们主要使用卷积神经网络。残差网络刚刚出现。所以非常相似，但仍有很大不同。我的意思是 Transformer 还不存在。所有这些对 Transformer 的更现代调整都不存在。所以也许我们可以押注的一些事情是，我认为十年后，通过时间平移等变性，我们仍然在训练巨大的神经网络，使用前向-反向传播和梯度下降更新，但可能看起来有点不同，而且一切都变得更大。"
+     "zh": "嗯，我喜欢这样思考：我们利用时间平移不变性，对吧？那么十年前我们在哪里？2015 年，我们主要使用卷积神经网络。残差网络刚刚出现。所以非常相似，但仍有很大不同。我的意思是 Transformer 还不存在。所有这些对 Transformer 的更现代调整都不存在。所以也许我们可以押注的一些事情是，我认为十年后，通过时间平移等变性，我们仍然在训练巨大的神经网络，使用前向-反向传播和梯度下降更新，但可能看起来有点不同，而且一切都变得更大。"
     },
     {
      "spk": "Andrej",
      "en": "Actually, recently I also went back all the way to 1989, which was kind of a fun exercise for me a few years ago, because I was reproducing Yann LeCun's 1989 convolutional network, which was the first neural network I'm aware of trained via gradient descent like modern neural network trained gradient descent on digit recognition. And I was just interested in: okay, how can I modernize this? How much of this is algorithms? How much of this is data? How much of this progress is compute and systems? And I was able to very quickly, like half the learning rate just knowing by time travel by 33 years. So if I time travel by algorithms to 33 years, I could adjust what Yann did in 1989 and I could basically half the error. But to get further gains, I had to add a lot more data. I had to like 10x the training set, and then I had to actually add more computational optimizations. I had to basically train for much longer with dropout and other regularization techniques.",
-     "zh": "实际上，最近我一路回溯到1989年，这对我来说是几年前一个有趣的练习，因为我正在复现 Yann LeCun 的1989年卷积网络，这是我所知的第一个通过梯度下降训练的现代神经网络，用于数字识别。我感兴趣的是：好吧，我如何现代化它？其中多少是算法？多少是数据？多少进步来自算力和系统？我能够非常快地，比如将学习率减半，仅仅通过时间旅行33年。所以如果我通过算法时间旅行33年，我可以调整 Yann 在1989年所做的，基本上可以将误差减半。但要获得进一步的收益，我必须添加更多的数据。我必须将训练集扩大10倍，然后我还必须添加更多的计算优化。我基本上必须训练更长时间，使用 dropout 和其他正则化技术。"
+     "zh": "实际上，最近我一路回溯到 1989 年，这对我来说是几年前一个有趣的练习，因为我正在复现 Yann LeCun 的 1989 年卷积网络，这是我所知的第一个通过梯度下降训练的现代神经网络，用于数字识别。我感兴趣的是：好吧，我如何现代化它？其中多少是算法？多少是数据？多少进步来自算力和系统？我能够非常快地，比如将学习率减半，仅仅通过时间旅行 33 年。所以如果我通过算法时间旅行 33 年，我可以调整 Yann 在 1989 年所做的，基本上可以将误差减半。但要获得进一步的收益，我必须添加更多的数据。我必须将训练集扩大 10 倍，然后我还必须添加更多的计算优化。我基本上必须训练更长时间，使用 dropout 和其他正则化技术。"
     },
     {
      "spk": "Andrej",
@@ -299,7 +299,7 @@
     {
      "spk": "Dwarkesh",
      "en": "It's surprising that all of those things together only halved the error. Yeah, which is so like 30 years of progress is maybe half is a lot because if you half the error that actually means that half is a lot. Yeah.",
-     "zh": "令人惊讶的是，所有这些加在一起只将误差减半。是啊，所以30年的进步，也许减半是很大的，因为如果你将误差减半，那实际上意味着减半是很大的。是啊。"
+     "zh": "令人惊讶的是，所有这些加在一起只将误差减半。是啊，所以 30 年的进步，也许减半是很大的，因为如果你将误差减半，那实际上意味着减半是很大的。是啊。"
     },
     {
      "spk": "Andrej",
@@ -329,7 +329,7 @@
     {
      "spk": "Andrej",
      "en": "Uh, yeah, I think that's a great question. I would probably say so. Basically it's about 8,000 lines of code that takes you through the entire pipeline. I would probably put it on the right monitor, like if you have two monitors you put it on the right. And you want to build it from scratch. You build it from start. You're not allowed to copy paste. You're allowed to reference. You're not allowed to copy paste. Maybe that's how I would do it.",
-     "zh": "嗯，是的，我认为这是一个很好的问题。我可能会这么说。基本上它有大约8000行代码，带你走完整个流程。我可能会把它放在右边的显示器上，比如如果你有两个显示器，你把它放在右边。然后你想从头构建它。你从头开始构建。不允许复制粘贴。允许参考。不允许复制粘贴。也许这就是我会做的。"
+     "zh": "嗯，是的，我认为这是一个很好的问题。我可能会这么说。基本上它有大约 8000 行代码，带你走完整个流程。我可能会把它放在右边的显示器上，比如如果你有两个显示器，你把它放在右边。然后你想从头构建它。你从头开始构建。不允许复制粘贴。允许参考。不允许复制粘贴。也许这就是我会做的。"
     },
     {
      "spk": "Andrej",
@@ -509,12 +509,12 @@
     {
      "spk": "Andrej",
      "en": "Yeah, maybe the way I would put it is humans don't use reinforcement learning. I think they do something different. You experience things. Reinforcement learning is a lot worse than I think the average person thinks. It's terrible. It just so happens that everything we had before was much worse because previously we were just imitating people, so it has all these issues. In reinforcement learning, say you're working on a math problem. It's very simple. You're given a math problem and you're trying to find the solution. In reinforcement learning, you will try lots of things in parallel first. You're given a problem, you try hundreds of different attempts, and these attempts can be complex. They can be like, \"Oh, let me try this, let me try that, this didn't work, that didn't work,\" etc. Then maybe you get an answer, and now you check the back of the book and you see the correct answer. Then you can see that this one, this one, and that one got the correct answer, but these other 97 of them didn't. So literally what reinforcement learning does is it goes to the ones that worked really well and every single thing you did along the way, every single token, gets upweighted: \"Do more of this.\" The problem with that is it's noisy. It almost assumes that every single little piece of the solution that led to the right answer was the correct thing to do, which is not true. You may have gone down wrong alleys until you arrived at the right solution. Every single one of those incorrect things you did, as long as you got to the correct solution, will be upweighted: \"Do more of this.\" It's terrible.",
-     "zh": "嗯，也许我会这样说：人类并不使用强化学习。我认为他们做的是不同的事情。你体验事物。强化学习比大多数人想象的要糟糕得多。它很糟糕。只是因为我们之前的方法更差——以前我们只是模仿人类，所以有各种问题。在强化学习中，假设你解一道数学题。很简单。给你一个数学问题，你试图找到答案。在强化学习中，你会先并行尝试很多方法。你拿到问题，尝试几百种不同的尝试，这些尝试可能很复杂。比如“哦，我试试这个，试试那个，这个不行，那个不行”等等。然后你可能得到一个答案，接着你翻到书后核对正确答案。然后你发现这个、这个和那个得到了正确答案，但其他97个没有。所以强化学习所做的就是，对那些成功的尝试，你沿途做的每一件事、每一个词元都会被提升权重：“多做这个”。问题在于这很嘈杂。它几乎假设导致正确答案的每一小步都是正确的，但事实并非如此。你可能走了很多弯路才得到正确答案。你做的每一件错误的事，只要最终得到了正确答案，都会被提升权重：“多做这个”。这很糟糕。"
+     "zh": "嗯，也许我会这样说：人类并不使用强化学习。我认为他们做的是不同的事情。你体验事物。强化学习比大多数人想象的要糟糕得多。它很糟糕。只是因为我们之前的方法更差——以前我们只是模仿人类，所以有各种问题。在强化学习中，假设你解一道数学题。很简单。给你一个数学问题，你试图找到答案。在强化学习中，你会先并行尝试很多方法。你拿到问题，尝试几百种不同的尝试，这些尝试可能很复杂。比如“哦，我试试这个，试试那个，这个不行，那个不行”等等。然后你可能得到一个答案，接着你翻到书后核对正确答案。然后你发现这个、这个和那个得到了正确答案，但其他 97 个没有。所以强化学习所做的就是，对那些成功的尝试，你沿途做的每一件事、每一个词元都会被提升权重：“多做这个”。问题在于这很嘈杂。它几乎假设导致正确答案的每一小步都是正确的，但事实并非如此。你可能走了很多弯路才得到正确答案。你做的每一件错误的事，只要最终得到了正确答案，都会被提升权重：“多做这个”。这很糟糕。"
     },
     {
      "spk": "Dwarkesh",
      "en": "Yeah, it's noise. You've done all this work only to find at the end a single number: \"Oh, you did correct.\" And based on that, you weigh that entire trajectory as upweight or downweight. The way I like to put it is you're sucking supervision through a straw. You've done all this work that could be a minute of rollout, and you're sucking the bits of supervision from the final reward signal through a straw, and you're broadcasting that across the entire trajectory to upweight or downweight that trajectory. It's crazy. A human would never do this. Number one, a human would never do hundreds of rollouts. Number two, when a person finds a solution, they will have a pretty complicated process of review: \"Okay, I think these parts I did well, these parts I did not do that well, I should probably do this or that.\" And they think through things. There's nothing in current LLMs that does this. There's no equivalent of it. But I do see papers popping up that are trying to do this because it's obvious to everyone in the field.",
-     "zh": "是的，这是噪声。你做了所有工作，最后只得到一个数字：“哦，你做对了。”然后基于这个数字，你给整个轨迹加权或降权。我喜欢这样描述：你通过一根吸管吸取监督信号。你做了可能一分钟的展开工作，然后通过吸管从最终奖励信号中吸取一点点监督，再把它广播到整个轨迹上，用来加权或降权。这太疯狂了。人类绝不会这样做。第一，人类绝不会做几百次展开。第二，当一个人找到解决方案时，他们会有一个相当复杂的回顾过程：“好吧，我觉得这些部分我做得好，这些部分做得不好，我应该这样做或那样做。”他们会思考。当前的LLM中没有任何东西能做到这一点。没有等价物。但我确实看到有论文在尝试这样做，因为这对领域内每个人来说都是显而易见的。"
+     "zh": "是的，这是噪声。你做了所有工作，最后只得到一个数字：“哦，你做对了。”然后基于这个数字，你给整个轨迹加权或降权。我喜欢这样描述：你通过一根吸管吸取监督信号。你做了可能一分钟的展开工作，然后通过吸管从最终奖励信号中吸取一点点监督，再把它广播到整个轨迹上，用来加权或降权。这太疯狂了。人类绝不会这样做。第一，人类绝不会做几百次展开。第二，当一个人找到解决方案时，他们会有一个相当复杂的回顾过程：“好吧，我觉得这些部分我做得好，这些部分做得不好，我应该这样做或那样做。”他们会思考。当前的 LLM 中没有任何东西能做到这一点。没有等价物。但我确实看到有论文在尝试这样做，因为这对领域内每个人来说都是显而易见的。"
     },
     {
      "spk": "Andrej",
@@ -529,7 +529,7 @@
     {
      "spk": "Andrej",
      "en": "You can hill climb on that without needing expert trajectories to imitate. So that's amazing. And the model can also discover solutions that the human might never come up with. So this is incredible. And yet it's still stupid. So I think we need more. I saw a paper from Google yesterday that tried to incorporate this reflect and review idea. What was the memory bank paper or something? I don't know. I've actually seen a few papers along these lines. So I expect there to be some kind of major update to how we do algorithms for LLMs coming in that realm. And then I think we need three or four or five more something like that.",
-     "zh": "你可以在此基础上爬山，而不需要模仿专家的轨迹。这太棒了。模型还能发现人类可能永远想不到的解决方案。所以这很不可思议。但它仍然很笨。所以我认为我们需要更多。我昨天看到谷歌的一篇论文，试图融入这种反思和回顾的想法。是那个记忆库论文还是什么？我不知道。我确实看到了一些这方面的论文。所以我预计在LLM算法方面会有一次重大更新。然后我认为我们还需要三四个或五个类似的东西。"
+     "zh": "你可以在此基础上爬山，而不需要模仿专家的轨迹。这太棒了。模型还能发现人类可能永远想不到的解决方案。所以这很不可思议。但它仍然很笨。所以我认为我们需要更多。我昨天看到谷歌的一篇论文，试图融入这种反思和回顾的想法。是那个记忆库论文还是什么？我不知道。我确实看到了一些这方面的论文。所以我预计在 LLM 算法方面会有一次重大更新。然后我认为我们还需要三四个或五个类似的东西。"
     },
     {
      "spk": "Dwarkesh",
@@ -539,17 +539,17 @@
     {
      "spk": "Andrej",
      "en": "So process-based supervision just refers to the fact that we're not going to have a reward function only at the very end after you've made 10 minutes of work. I'm not going to tell you you did well or not well. I'm going to tell you at every single step of the way how well you're doing. And the reason we don't have that is it's tricky how you do that properly. Because you have partial solutions and you don't know how to assign credit. So when you get the right answer, it's just an equality match to the answer. Very simple to implement. If you're doing process supervision, how do you assign in an automatable way partial credit? It's not obvious how you do it. Lots of labs, I think, are trying to do it with these LLM judges. So basically, you get LLMs to try to do it. So you prompt an LLM, 'Hey, look at a partial solution of a student. How well do you think they're doing if the answer is this?' And they try to tune the prompt. The reason that I think this is kind of tricky is quite subtle. And it's the fact that anytime you use an LLM to assign a reward, those LLMs are giant things with billions of parameters and they're gameable. And if you're reinforcement learning with respect to them, you will find adversarial examples for your LM judges almost guaranteed. You can't do this for too long. You do maybe 10 steps or 20 steps, maybe it will work. But you can't do a hundred or a thousand because it's not obvious—basically the model will find little cracks. It will find all these spurious things in the nooks and crannies of the giant model and find a way to cheat it. So one example that's prominently in my mind: I think this was probably public, but basically if you're using an LM judge for a reward, so you just give it a solution from a student and ask it if the student will or not. We were training with reinforcement learning against that reward function and it worked really well, and then suddenly the reward became extremely large, like it was a massive jump and it did perfect. And you're looking at it like, 'Wow, this means the student is perfect in all these problems, it's fully solved math.' But actually what's happening is that when you look at the completions that you're getting from the model, they are complete nonsense. They start out okay and then they change to 'duh duh duh duh'. So it's just like, 'Oh okay, let's take two plus three and we do this and this and then duh duh duh duh duh.' And you're looking at it like this is crazy. How is it getting a reward of one or 100%? And you look at the LLM judge and it turns out this is an adversarial example for the model and it assigns 100% probability to it. And it's just because this is an out-of-sample example to the LLM. It's never seen it during training and you're in pure generalization land, right? It's never seen it during training. And in the pure generalization land, you can find these examples that break it. You're basically training the LLM to be a prompt injection model. Not even that—prompt injection is way too fancy. You're finding adversarial examples as they're called. These are nonsensical solutions that are obviously wrong, but the model thinks they're amazing. So to the extent you think this is the bottleneck to making RL more functional, then that will require making LLMs better judges if you want to do this in an automated way.",
-     "zh": "基于过程的监督指的是，我们不会只在完成10分钟工作后才给出奖励函数。我不会告诉你做得好不好。我会在每一步告诉你做得怎么样。我们没有这样做的原因是，如何恰当地做到这一点很棘手。因为你有部分解决方案，却不知道如何分配功劳。当你得到正确答案时，它只是与答案匹配。实现起来非常简单。如果你做过程监督，如何以自动化方式分配部分功劳？怎么做并不明显。我认为很多实验室都在尝试用LLM评判器来做。基本上，你让LLM来做。你提示一个LLM：‘嘿，看看学生的部分解决方案。如果答案是X，你觉得他们做得怎么样？’然后他们调整提示。我认为这很棘手的原因很微妙。事实上，每当你用LLM来分配奖励时，这些LLM是拥有数十亿参数的庞然大物，而且它们可以被利用。如果你对它们进行强化学习，几乎可以肯定你会找到针对LLM评判器的对抗样本。你不能这样做太久。你可能做10步或20步，也许能行。但你不能做100步或1000步，因为不明显——基本上模型会找到小漏洞。它会在巨大模型的犄角旮旯里找到所有这些虚假的东西，并找到作弊的方法。所以我脑海中有一个突出的例子：我认为这可能是公开的，但基本上如果你用LLM评判器作为奖励，你给它一个学生的解决方案，问它学生是否做对了。我们针对那个奖励函数进行强化学习训练，效果很好，然后突然奖励变得非常大，像是一个巨大的跳跃，它完美了。你看着它想：‘哇，这意味着学生在所有问题上都完美，完全解决了数学问题。’但实际上，当你查看模型生成的补全时，它们完全是胡说八道。它们开始还行，然后变成‘嘟 嘟 嘟 嘟’。就像：‘哦好吧，我们拿二加三，我们这样做，然后嘟 嘟 嘟 嘟 嘟。’你看着它觉得这太疯狂了。它怎么能得到1或100%的奖励？你查看LLM评判器，发现这是模型的一个对抗样本，它分配了100%的概率。这只是因为这是LLM的样本外例子。它在训练中从未见过，你处于纯粹的泛化领域，对吧？它在训练中从未见过。在纯粹的泛化领域，你可以找到这些破坏它的例子。你基本上是在训练LLM成为一个提示注入模型。甚至不是——提示注入太高级了。你在找所谓的对抗样本。这些是无意义的解决方案，明显错误，但模型认为它们很棒。所以如果你认为这是让强化学习更有效的瓶颈，那么如果你想以自动化方式做到这一点，就需要让LLM成为更好的评判器。"
+     "zh": "基于过程的监督指的是，我们不会只在完成 10 分钟工作后才给出奖励函数。我不会告诉你做得好不好。我会在每一步告诉你做得怎么样。我们没有这样做的原因是，如何恰当地做到这一点很棘手。因为你有部分解决方案，却不知道如何分配功劳。当你得到正确答案时，它只是与答案匹配。实现起来非常简单。如果你做过程监督，如何以自动化方式分配部分功劳？怎么做并不明显。我认为很多实验室都在尝试用 LLM 评判器来做。基本上，你让 LLM 来做。你提示一个 LLM：‘嘿，看看学生的部分解决方案。如果答案是 X，你觉得他们做得怎么样？’然后他们调整提示。我认为这很棘手的原因很微妙。事实上，每当你用 LLM 来分配奖励时，这些 LLM 是拥有数十亿参数的庞然大物，而且它们可以被利用。如果你对它们进行强化学习，几乎可以肯定你会找到针对 LLM 评判器的对抗样本。你不能这样做太久。你可能做 10 步或 20 步，也许能行。但你不能做 100 步或 1000 步，因为不明显——基本上模型会找到小漏洞。它会在巨大模型的犄角旮旯里找到所有这些虚假的东西，并找到作弊的方法。所以我脑海中有一个突出的例子：我认为这可能是公开的，但基本上如果你用 LLM 评判器作为奖励，你给它一个学生的解决方案，问它学生是否做对了。我们针对那个奖励函数进行强化学习训练，效果很好，然后突然奖励变得非常大，像是一个巨大的跳跃，它完美了。你看着它想：‘哇，这意味着学生在所有问题上都完美，完全解决了数学问题。’但实际上，当你查看模型生成的补全时，它们完全是胡说八道。它们开始还行，然后变成‘嘟 嘟 嘟 嘟’。就像：‘哦好吧，我们拿二加三，我们这样做，然后嘟 嘟 嘟 嘟 嘟。’你看着它觉得这太疯狂了。它怎么能得到 1 或 100%的奖励？你查看 LLM 评判器，发现这是模型的一个对抗样本，它分配了 100%的概率。这只是因为这是 LLM 的样本外例子。它在训练中从未见过，你处于纯粹的泛化领域，对吧？它在训练中从未见过。在纯粹的泛化领域，你可以找到这些破坏它的例子。你基本上是在训练 LLM 成为一个提示注入模型。甚至不是——提示注入太高级了。你在找所谓的对抗样本。这些是无意义的解决方案，明显错误，但模型认为它们很棒。所以如果你认为这是让强化学习更有效的瓶颈，那么如果你想以自动化方式做到这一点，就需要让 LLM 成为更好的评判器。"
     },
     {
      "spk": "Dwarkesh",
      "en": "So then is it just going to be like some sort of GAN-like approach where you have to train models to be more robust?",
-     "zh": "那么，是不是就像某种GAN式的方法，你必须训练模型使其更鲁棒？"
+     "zh": "那么，是不是就像某种 GAN 式的方法，你必须训练模型使其更鲁棒？"
     },
     {
      "spk": "Andrej",
      "en": "Yeah. I think the labs are probably doing all that. Like, okay, the obvious thing is: the should not get 100% reward. Okay, well take the, put it in the training set of the LM judge and say this is not 100%, this is 0%. You can do this. But every time you do this you get a new LLM and it still has adversarial examples. There's infinity adversarial examples. And I think probably if you iterate this a few times, it'll probably be harder and harder to find real examples, but I'm not 100% sure because this thing has a trillion parameters or whatnot. So I bet the labs are trying. I still think we need other ideas.",
-     "zh": "是的。我认为实验室可能都在做这些。比如，明显的事情是：它不应该得到100%的奖励。好吧，把这个例子放进LLM评判器的训练集，说这不是100%，这是0%。你可以这样做。但每次这样做，你都会得到一个新的LLM，它仍然有对抗样本。对抗样本是无穷的。我认为如果你迭代几次，可能会越来越难找到真正的例子，但我不是100%确定，因为这个东西有万亿参数之类的。所以我打赌实验室在尝试。我仍然认为我们需要其他想法。"
+     "zh": "是的。我认为实验室可能都在做这些。比如，明显的事情是：它不应该得到 100%的奖励。好吧，把这个例子放进 LLM 评判器的训练集，说这不是 100%，这是 0%。你可以这样做。但每次这样做，你都会得到一个新的 LLM，它仍然有对抗样本。对抗样本是无穷的。我认为如果你迭代几次，可能会越来越难找到真正的例子，但我不是 100%确定，因为这个东西有万亿参数之类的。所以我打赌实验室在尝试。我仍然认为我们需要其他想法。"
     },
     {
      "spk": "Dwarkesh",
@@ -597,7 +597,7 @@
     {
      "spk": "Dwarkesh",
      "en": "Well, because every synthetic example, if I just give synthetic generation of the model thinking about a book, you look at it and you're like, 'This looks great. Why can't I train on it?' Well, you could try, but the model will actually get much worse if you continue trying. And that's because all of the samples you get from models are silently collapsed. They're silently, this is not obvious if you look at any individual example of it. They occupy a very tiny manifold of the possible space of thoughts about content. So the LLMs when they come off, they're what we call collapsed. They have a collapsed data distribution. If you sample, one easy way to see it is go to ChatGPT and ask it tell me a joke. It only has like three jokes.",
-     "zh": "嗯，因为每个合成示例，如果我给出模型思考一本书的合成生成，你看着它就会想，‘这看起来很棒。为什么我不能训练它？’嗯，你可以试试，但如果你继续尝试，模型实际上会变得更糟。那是因为你从模型中得到的所有样本都悄悄坍缩了。它们悄悄地，如果你看任何一个单独的示例，这并不明显。它们占据了关于内容可能的思想空间的一个非常小的流形。所以大语言模型在产出时，就是我们所说的坍缩。它们有一个坍缩的数据分布。如果你采样，一个简单的观察方法是去ChatGPT让它讲个笑话。它只有大概三个笑话。"
+     "zh": "嗯，因为每个合成示例，如果我给出模型思考一本书的合成生成，你看着它就会想，‘这看起来很棒。为什么我不能训练它？’嗯，你可以试试，但如果你继续尝试，模型实际上会变得更糟。那是因为你从模型中得到的所有样本都悄悄坍缩了。它们悄悄地，如果你看任何一个单独的示例，这并不明显。它们占据了关于内容可能的思想空间的一个非常小的流形。所以大语言模型在产出时，就是我们所说的坍缩。它们有一个坍缩的数据分布。如果你采样，一个简单的观察方法是去 ChatGPT 让它讲个笑话。它只有大概三个笑话。"
     },
     {
      "spk": "Dwarkesh",
@@ -617,7 +617,7 @@
     {
      "spk": "Andrej",
      "en": "I guess what I'm saying is, say we have a chapter of a book and I ask an LLM to think about it. It will give you something that looks very reasonable. But if I ask it 10 times, you'll notice that all of them are the same. You can't just scale reflection on the same amount of prompt information and then get returns from that.",
-     "zh": "我想我说的是，假设我们有一章书，我让一个大语言模型思考它。它会给你一些看起来非常合理的东西。但如果我问它10次，你会注意到它们都是一样的。你不能只是把反思扩展到相同数量的提示信息上，然后从中获得回报。"
+     "zh": "我想我说的是，假设我们有一章书，我让一个大语言模型思考它。它会给你一些看起来非常合理的东西。但如果我问它 10 次，你会注意到它们都是一样的。你不能只是把反思扩展到相同数量的提示信息上，然后从中获得回报。"
     },
     {
      "spk": "Dwarkesh",
@@ -655,12 +655,12 @@
     {
      "spk": "Dwarkesh",
      "en": "So I'll just put it out and let you react to it. The best learners that we are aware of, which are children, are extremely bad at recollecting information. In fact, at the very earliest stages of childhood, you will forget everything. You're just an amnesiac about everything that happens before a certain age, but you're extremely good at picking up new languages and learning from the world. And maybe there's some element of being able to see the forest for the trees. Whereas if you compare it to the opposite end of the spectrum, you have LLM pre-training, where these models can literally regurgitate word for word what is the next thing in a Wikipedia page, but their ability to learn abstract concepts really quickly the way a child can is much more limited. And then adults are somewhere in between, where they don't have the flexibility of childhood learning, but they can memorize facts and information in a way that is harder for kids. And I don't know if there's something interesting about that. I think there's something very interesting about that.",
-     "zh": "那我就直接抛出这个观点，让你来回应。我们所知道的最好的学习者——儿童——在回忆信息方面极其糟糕。事实上，在童年早期，你会忘记一切。在某个年龄之前发生的事，你完全失忆。但你在学习新语言和从世界中学习方面却极其擅长。也许这里面有某种‘见树又见林’的元素。而与之相反的另一端，是LLM的预训练，这些模型可以逐字逐句地复述维基百科页面的下一个词，但它们像儿童那样快速学习抽象概念的能力却非常有限。成年人则介于两者之间，他们没有童年学习的那种灵活性，但可以记住儿童难以记住的事实和信息。我不知道这是否有趣，但我觉得这非常有趣。"
+     "zh": "那我就直接抛出这个观点，让你来回应。我们所知道的最好的学习者——儿童——在回忆信息方面极其糟糕。事实上，在童年早期，你会忘记一切。在某个年龄之前发生的事，你完全失忆。但你在学习新语言和从世界中学习方面却极其擅长。也许这里面有某种‘见树又见林’的元素。而与之相反的另一端，是 LLM 的预训练，这些模型可以逐字逐句地复述维基百科页面的下一个词，但它们像儿童那样快速学习抽象概念的能力却非常有限。成年人则介于两者之间，他们没有童年学习的那种灵活性，但可以记住儿童难以记住的事实和信息。我不知道这是否有趣，但我觉得这非常有趣。"
     },
     {
      "spk": "Andrej",
      "en": "Yeah, 100%. I do think that humans actually have a lot more of an element of seeing the forest for the trees, and we're not actually that good at memorization, which is actually a feature. Because we're not that good at memorization, we are forced to find patterns in a more general sense. LLMs in comparison are extremely good at memorization. They will recite passages from all these training sources. You can give them completely nonsensical data, like you can hash some amount of text, get a completely random sequence. If you train on it even for a single iteration or two, it can suddenly regurgitate the entire thing. It will memorize it. There's no way a person can read a single sequence of random numbers and recite it to you. And that's a feature, not a bug, almost. Because it forces you to only learn the generalizable components, whereas LLMs are distracted by all the memory they have of the pre-trained documents, and it's probably very distracting to them in a certain sense. So that's why when I talk about the cognitive core, I actually want to remove the memory, which is what we talked about. I'd love to have them have less memory so that they have to look things up, and that they only maintain the algorithms for thought, the idea of an experiment, and all this cognitive glue of acting.",
-     "zh": "是的，100%。我确实认为人类其实更有‘见树又见林’的元素，我们并不擅长记忆，这其实是个优点。因为不擅长记忆，我们被迫更一般性地寻找模式。相比之下，LLM极其擅长记忆。它们会背诵所有训练来源的段落。你可以给它们完全无意义的数据，比如对一段文本做哈希，得到完全随机的序列。即使只训练一两个迭代，它也能突然复述出整个序列。它会记住它。人不可能读一遍随机数字序列就复述给你。这几乎是个优点，而不是缺陷。因为它迫使你只学习可泛化的成分，而LLM却被它们对预训练文档的记忆所干扰，在某种意义上这很可能非常分散注意力。所以当我谈论认知核心时，我其实想移除记忆，就像我们之前讨论的。我希望它们拥有更少的记忆，这样它们就必须去查找信息，只保留思考的算法、实验的想法以及所有行动的认知粘合剂。"
+     "zh": "是的，100%。我确实认为人类其实更有‘见树又见林’的元素，我们并不擅长记忆，这其实是个优点。因为不擅长记忆，我们被迫更一般性地寻找模式。相比之下，LLM 极其擅长记忆。它们会背诵所有训练来源的段落。你可以给它们完全无意义的数据，比如对一段文本做哈希，得到完全随机的序列。即使只训练一两个迭代，它也能突然复述出整个序列。它会记住它。人不可能读一遍随机数字序列就复述给你。这几乎是个优点，而不是缺陷。因为它迫使你只学习可泛化的成分，而 LLM 却被它们对预训练文档的记忆所干扰，在某种意义上这很可能非常分散注意力。所以当我谈论认知核心时，我其实想移除记忆，就像我们之前讨论的。我希望它们拥有更少的记忆，这样它们就必须去查找信息，只保留思考的算法、实验的想法以及所有行动的认知粘合剂。"
     }
    ]
   },
@@ -675,7 +675,7 @@
     {
      "spk": "Andrej",
      "en": "Yeah, I think that's a great question. I mean, you can imagine having a regularization for entropy and things like that. I guess they just don't work as well empirically because right now the models are collapsed. But I will say that most of the tasks we want from them don't actually demand the diversity. That's probably the answer to what's going on. So it's just that the frontier labs are trying to make the models useful, and I kind of just feel like the diversity of the outputs is not number one. It's much harder to work with and evaluate, but maybe it's not what's actually capturing most of the value. In fact, it's actively penalized, right? If you're super creative in RL, it's not good. Or if you're doing a lot of writing help from LLMs, I think it's probably bad because the models will give you all the same stuff. So they won't explore lots of different ways of answering a question. But I kind of feel like maybe this diversity is just not as big of a need. Maybe not as many applications need it, so the models don't have it. But then it's actually a problem at synthetic generation time, etc. So we're actually shooting ourselves in the foot by not allowing this entropy to maintain in the model. And I think possibly the labs should try harder.",
-     "zh": "嗯，我觉得这是个好问题。你可以想象对熵进行正则化之类的。我猜它们在经验上效果不佳，因为现在模型已经崩溃了。但我要说，我们要求它们完成的大多数任务实际上并不需要多样性。这大概就是问题的答案。前沿实验室正试图让模型变得有用，我觉得输出多样性并不是首要目标。它更难处理、更难评估，但也许它并不是真正捕获大部分价值的东西。事实上，它还会被主动惩罚，对吧？如果你在强化学习中超级有创意，那是不好的。或者如果你用LLM做大量写作辅助，我认为可能也不好，因为模型会给你千篇一律的东西。所以它们不会探索回答问题的多种不同方式。但我感觉也许这种多样性并没有那么大的需求。也许没有那么多应用需要它，所以模型就没有它。但在合成数据生成等场景下，这实际上是个问题。所以我们实际上是在搬起石头砸自己的脚，不允许模型保持这种熵。我认为实验室或许应该更努力一些。"
+     "zh": "嗯，我觉得这是个好问题。你可以想象对熵进行正则化之类的。我猜它们在经验上效果不佳，因为现在模型已经崩溃了。但我要说，我们要求它们完成的大多数任务实际上并不需要多样性。这大概就是问题的答案。前沿实验室正试图让模型变得有用，我觉得输出多样性并不是首要目标。它更难处理、更难评估，但也许它并不是真正捕获大部分价值的东西。事实上，它还会被主动惩罚，对吧？如果你在强化学习中超级有创意，那是不好的。或者如果你用 LLM 做大量写作辅助，我认为可能也不好，因为模型会给你千篇一律的东西。所以它们不会探索回答问题的多种不同方式。但我感觉也许这种多样性并没有那么大的需求。也许没有那么多应用需要它，所以模型就没有它。但在合成数据生成等场景下，这实际上是个问题。所以我们实际上是在搬起石头砸自己的脚，不允许模型保持这种熵。我认为实验室或许应该更努力一些。"
     },
     {
      "spk": "Dwarkesh",
@@ -710,7 +710,7 @@
     {
      "spk": "Dwarkesh",
      "en": "It should already be like, if you talk to a billion parameter model, I think in 20 years you can actually have a very productive conversation. It thinks and it's a lot more like a human. But if you ask it some factual question, it might have to look it up, but it knows that it doesn't know and it might have to look it up and it will just do all the reasonable things. That's actually surprising that you think it will take a billion because we already have billion parameter models or a couple billion parameter models that are very intelligent.",
-     "zh": "它应该已经像这样了：如果你和一个十亿参数的模型对话，我认为在20年内你实际上可以进行非常有成效的对话。它会思考，而且更像人类。但如果你问它一些事实性问题，它可能需要查一下，但它知道自己不知道，可能会去查，并且会做所有合理的事情。实际上，你居然认为需要十亿参数，这让我很惊讶，因为我们已经有了十亿参数或几十亿参数的模型，它们非常智能。"
+     "zh": "它应该已经像这样了：如果你和一个十亿参数的模型对话，我认为在 20 年内你实际上可以进行非常有成效的对话。它会思考，而且更像人类。但如果你问它一些事实性问题，它可能需要查一下，但它知道自己不知道，可能会去查，并且会做所有合理的事情。实际上，你居然认为需要十亿参数，这让我很惊讶，因为我们已经有了十亿参数或几十亿参数的模型，它们非常智能。"
     },
     {
      "spk": "Andrej",
@@ -720,7 +720,7 @@
     {
      "spk": "Dwarkesh",
      "en": "Yeah. But I'm surprised that in 10 years given the pace, okay, we have GPT-4o which is 20B, that's way better than GPT-4 original which was a trillion plus parameters. So given that trend, I'm actually surprised you think in 10 years the cognitive core is still a billion parameters. I would be surprised if it's not like tens of millions or millions.",
-     "zh": "是的。但考虑到发展速度，我很惊讶在10年内，我们有GPT-4o只有200亿参数，却比原版万亿参数的GPT-4好得多。所以按照这个趋势，你居然认为10年后认知核心仍然是十亿参数，我其实很惊讶。我反而觉得它可能只有几千万甚至几百万参数。"
+     "zh": "是的。但考虑到发展速度，我很惊讶在 10 年内，我们有 GPT-4o 只有 200 亿参数，却比原版万亿参数的 GPT-4 好得多。所以按照这个趋势，你居然认为 10 年后认知核心仍然是十亿参数，我其实很惊讶。我反而觉得它可能只有几千万甚至几百万参数。"
     },
     {
      "spk": "Andrej",
@@ -740,7 +740,7 @@
     {
      "spk": "Dwarkesh",
      "en": "Right, no, no. But why is distillation not getting below 1 billion in 10 years?",
-     "zh": "对，不，不。但为什么蒸馏在10年内不能降到十亿以下？"
+     "zh": "对，不，不。但为什么蒸馏在 10 年内不能降到十亿以下？"
     },
     {
      "spk": "Andrej",
@@ -780,7 +780,7 @@
     {
      "spk": "Dwarkesh",
      "en": "So we're discussing what plausibly could be the cognitive core. There's a separate question: what will actually be the size of frontier models over time? And I'm curious to have a prediction. So we had increasing scale up to maybe 4.5, and now we're seeing decreasing or plateauing scale. There are many reasons that could be going on, but do you have a prediction about going forward? Will the biggest models be bigger? Will they be smaller? Will they be the same?",
-     "zh": "所以我们讨论的是认知核心可能是什么。还有一个单独的问题：随着时间的推移，前沿模型的实际规模会怎样？我很好奇你的预测。我们之前看到规模增长到可能4.5，现在看到规模在缩小或趋于平稳。可能有很多原因，但你对未来有什么预测？最大的模型会更大吗？会更小吗？会保持不变吗？"
+     "zh": "所以我们讨论的是认知核心可能是什么。还有一个单独的问题：随着时间的推移，前沿模型的实际规模会怎样？我很好奇你的预测。我们之前看到规模增长到可能 4.5，现在看到规模在缩小或趋于平稳。可能有很多原因，但你对未来有什么预测？最大的模型会更大吗？会更小吗？会保持不变吗？"
     },
     {
      "spk": "Andrej",
@@ -790,7 +790,7 @@
     {
      "spk": "Dwarkesh",
      "en": "Do you expect the low-hanging fruit to be similar in kind to the kinds of things that have been happening over the last two to five years? Like if I look at NanoChat versus NanoGPT and the architectural tweaks you made, is that basically the flavor of things you expect to keep happening, or are you not expecting any giant leaps?",
-     "zh": "你期望这些容易摘的果实与过去两到五年发生的事情类似吗？比如我看NanoChat和NanoGPT以及你做的架构调整，基本上是你期望继续发生的事情，还是你不期待任何巨大飞跃？"
+     "zh": "你期望这些容易摘的果实与过去两到五年发生的事情类似吗？比如我看 NanoChat 和 NanoGPT 以及你做的架构调整，基本上是你期望继续发生的事情，还是你不期待任何巨大飞跃？"
     },
     {
      "spk": "Andrej",
@@ -880,7 +880,7 @@
     {
      "spk": "Dwarkesh",
      "en": "It's a sequence of tasks and every task looks similar, like you take a phone call with a person, it's 10 minutes of interaction or whatever it is, probably a bit longer in my experience, a lot longer. And you complete some task in some scheme and you change some database entries around or something like that. So you keep repeating something over and over again and that's your job. So basically you do want to bring in the task horizon, how long it takes to perform a task. And then you want to also remove context, like you're not dealing with different parts of services of companies or other customers. It's just the database, you, and a person you're serving. And so it's more closed. It's more understandable and it's purely digital. So I would be looking for those things. But even there, I'm not actually looking at full automation yet. I'm looking for an autonomy slider, and I almost expect that we are not going to instantly replace people. We're going to be swapping in AIs that do 80% of the volume. They delegate 20% of the volume to humans, and humans are supervising teams of five AIs doing the call center work that's more rote. So I would be looking for new interfaces or new companies that provide some kind of a layer that allows you to manage some of these AIs that are not yet perfect.",
-     "zh": "这是一系列任务，每个任务看起来都很相似，比如你接听一个人的电话，互动10分钟或更长时间，根据我的经验，可能更长。你完成某个方案中的任务，修改一些数据库条目之类的。所以你一遍又一遍地重复同样的事情，这就是你的工作。所以基本上，你需要考虑任务的时间跨度，即完成一个任务需要多长时间。然后你还需要去除上下文，比如你不处理公司不同部门或其他客户的事务。只有数据库、你和你要服务的人。所以它更封闭、更易理解，而且是纯数字化的。所以我会寻找这些特征。但即便如此，我实际上还没有考虑完全自动化。我在寻找一个自主性滑块，我几乎预期我们不会立即取代人类。我们会用AI替代，它们处理80%的工作量，将20%的工作量委托给人类，而人类则监督五个人工智能团队，处理那些更机械的呼叫中心工作。所以我会寻找新的界面或新的公司，它们提供某种层，允许你管理这些还不完美的AI。"
+     "zh": "这是一系列任务，每个任务看起来都很相似，比如你接听一个人的电话，互动 10 分钟或更长时间，根据我的经验，可能更长。你完成某个方案中的任务，修改一些数据库条目之类的。所以你一遍又一遍地重复同样的事情，这就是你的工作。所以基本上，你需要考虑任务的时间跨度，即完成一个任务需要多长时间。然后你还需要去除上下文，比如你不处理公司不同部门或其他客户的事务。只有数据库、你和你要服务的人。所以它更封闭、更易理解，而且是纯数字化的。所以我会寻找这些特征。但即便如此，我实际上还没有考虑完全自动化。我在寻找一个自主性滑块，我几乎预期我们不会立即取代人类。我们会用 AI 替代，它们处理 80%的工作量，将 20%的工作量委托给人类，而人类则监督五个人工智能团队，处理那些更机械的呼叫中心工作。所以我会寻找新的界面或新的公司，它们提供某种层，允许你管理这些还不完美的 AI。"
     },
     {
      "spk": "Andrej",
@@ -890,7 +890,7 @@
     {
      "spk": "Dwarkesh",
      "en": "And then I would expect that across the economy, a lot of jobs are a lot harder than call center employee. I wonder with radiologists, I'm totally speculating. I have no idea what the actual workflow of a radiologist involves, but one analogy that might be applicable is when we were first being ruled out, there would be a person sitting in the front seat, and you just had to have them there to make sure that if something went really wrong, they're there to monitor. And I think even today, people are still watching to make sure things are going well. Robo Taxi, which was just deployed, actually still has a person inside it. And we could be in a similar situation where if you automate 99% of a job, that last 1% the human has to do is incredibly valuable because it's bottlenecking everything else. And if it was the case with radiologists, where the person sitting in the front of the Uber or the front of the Waymo has to be specially trained for years in order to be able to provide the last 1%, their wages should go up tremendously because they're the one thing bottlenecking wide deployment. So radiologists, I think their wages have gone up for similar reasons. If you're the last bottleneck, you're not fungible, while a Waymo driver might be fungible with other things. So you might see this thing where your wages go like this until you get to 90%, and then just like that, and when the last 1% is gone.",
-     "zh": "然后我预期在整个经济中，很多工作比呼叫中心员工要难得多。我想知道放射科医生的情况，我完全是猜测。我不知道放射科医生的实际工作流程，但一个可能适用的类比是，当我们最初被淘汰时，会有人坐在前排，你必须让他们在那里，以确保如果出了大问题，他们可以监控。我认为即使今天，人们仍然在监控以确保一切顺利。刚刚部署的Robo Taxi实际上仍然有一个人在里面。我们可能处于类似的情况：如果你自动化了99%的工作，人类必须做的最后1%就非常有价值，因为它成为所有其他事情的瓶颈。如果放射科医生也是如此，坐在Uber或Waymo前排的人必须经过多年专门训练才能提供那最后的1%，那么他们的工资应该大幅上涨，因为他们是广泛部署的瓶颈。所以我认为放射科医生的工资因类似原因上涨了。如果你是最后的瓶颈，你就不可替代，而Waymo司机可能可以被其他东西替代。所以你可能会看到工资这样变化：直到达到90%，然后突然这样，当最后1%消失时。"
+     "zh": "然后我预期在整个经济中，很多工作比呼叫中心员工要难得多。我想知道放射科医生的情况，我完全是猜测。我不知道放射科医生的实际工作流程，但一个可能适用的类比是，当我们最初被淘汰时，会有人坐在前排，你必须让他们在那里，以确保如果出了大问题，他们可以监控。我认为即使今天，人们仍然在监控以确保一切顺利。刚刚部署的 Robo Taxi 实际上仍然有一个人在里面。我们可能处于类似的情况：如果你自动化了 99%的工作，人类必须做的最后 1%就非常有价值，因为它成为所有其他事情的瓶颈。如果放射科医生也是如此，坐在 Uber 或 Waymo 前排的人必须经过多年专门训练才能提供那最后的 1%，那么他们的工资应该大幅上涨，因为他们是广泛部署的瓶颈。所以我认为放射科医生的工资因类似原因上涨了。如果你是最后的瓶颈，你就不可替代，而 Waymo 司机可能可以被其他东西替代。所以你可能会看到工资这样变化：直到达到 90%，然后突然这样，当最后 1%消失时。"
     },
     {
      "spk": "Andrej",
@@ -905,7 +905,7 @@
     {
      "spk": "Andrej",
      "en": "Yeah, I think that's an interesting question. I don't think we're currently seeing that with radiology, and I don't have a deep understanding, but I think radiology is not a good example basically. I don't know why Jeff Hinton picked on radiology, because I think it's an extremely messy, complicated profession. So I would be a lot more interested in what's happening with call center employees today, for example, because I would expect a lot of the rote stuff to be automatable today. And I don't have first-level access to it, but maybe I would be looking for trends of what's happening with the call center employees. Maybe some of the things I would also expect is maybe they are swapping in AI, but then I would still wait for a year or two because I would potentially expect them to pull back and actually rehire some of the people. I think there's been evidence that that's already been happening in companies that have been adopting AI, which I think is quite surprising, and I also find it really surprising.",
-     "zh": "是的，我认为这是一个有趣的问题。我不认为我们目前在放射科看到这种情况，而且我没有深入了解，但我认为放射科基本上不是一个好例子。我不知道为什么杰夫·辛顿选择了放射科，因为我认为这是一个极其混乱、复杂的职业。所以我更感兴趣的是今天呼叫中心员工的情况，例如，因为我预计很多机械性工作现在都可以自动化。我没有第一手资料，但也许我会关注呼叫中心员工的趋势。我可能还预期他们正在引入AI，但我会再等一两年，因为我可能预期他们会撤回并重新雇佣一些人。我认为已经有证据表明，在采用AI的公司中这种情况已经发生，这让我非常惊讶，我也觉得这真的很令人惊讶。"
+     "zh": "是的，我认为这是一个有趣的问题。我不认为我们目前在放射科看到这种情况，而且我没有深入了解，但我认为放射科基本上不是一个好例子。我不知道为什么杰夫·辛顿选择了放射科，因为我认为这是一个极其混乱、复杂的职业。所以我更感兴趣的是今天呼叫中心员工的情况，例如，因为我预计很多机械性工作现在都可以自动化。我没有第一手资料，但也许我会关注呼叫中心员工的趋势。我可能还预期他们正在引入 AI，但我会再等一两年，因为我可能预期他们会撤回并重新雇佣一些人。我认为已经有证据表明，在采用 AI 的公司中这种情况已经发生，这让我非常惊讶，我也觉得这真的很令人惊讶。"
     }
    ]
   },
@@ -915,12 +915,12 @@
     {
      "spk": "Dwarkesh",
      "en": "Okay. AGI, right? A thing which should do everything, and okay we'll take out physical work. So I think we should be able to do all knowledge work. And what you would have naively anticipated is that the way this regression would happen is like you take a little task that a consultant is doing, you take that out of the bucket. You take a little task that an accountant is doing, you take that out of the bucket. And then you're just doing this across all knowledge work. But instead, if we do believe we're on the path of AI with the current paradigm, the progression is very much not like that. At least it just does not seem like consultants and accountants or whatever are getting huge productive improvement. It's very much like programmers are getting more and more chills of the way of their work. If you look at the revenues of these companies, discounting just normal chat revenue which I think is similar to Google or something, just looking at API revenues, it's dominated by coding, right? So this thing which is general, quote unquote, should be able to do any knowledge work, is just overwhelmingly doing only coding, and it's a surprising way that you would expect the AGI to be deployed.",
-     "zh": "好的。AGI，对吧？一个应该能做所有事情的东西，好吧，我们排除体力工作。所以我认为我们应该能做所有知识工作。你天真地预期这种回归的方式是：你从顾问的工作中取出一个小任务，从会计的工作中取出一个小任务，然后就这样在所有知识工作中进行。但相反，如果我们相信我们正走在当前范式下的AI道路上，进展完全不是这样。至少，顾问和会计之类的工作似乎并没有得到巨大的生产力提升。更像是程序员的工作方式越来越受到冲击。如果你看这些公司的收入，撇开普通的聊天收入（我认为类似于谷歌之类的），只看API收入，它主要由编程主导，对吧？所以这个通用的、所谓的应该能做任何知识工作的东西，却 overwhelmingly 只做编程，这是一种令人惊讶的AGI部署方式。"
+     "zh": "好的。AGI，对吧？一个应该能做所有事情的东西，好吧，我们排除体力工作。所以我认为我们应该能做所有知识工作。你天真地预期这种回归的方式是：你从顾问的工作中取出一个小任务，从会计的工作中取出一个小任务，然后就这样在所有知识工作中进行。但相反，如果我们相信我们正走在当前范式下的 AI 道路上，进展完全不是这样。至少，顾问和会计之类的工作似乎并没有得到巨大的生产力提升。更像是程序员的工作方式越来越受到冲击。如果你看这些公司的收入，撇开普通的聊天收入（我认为类似于谷歌之类的），只看 API 收入，它主要由编程主导，对吧？所以这个通用的、所谓的应该能做任何知识工作的东西，却 overwhelmingly 只做编程，这是一种令人惊讶的 AGI 部署方式。"
     },
     {
      "spk": "Andrej",
      "en": "So I think there's an interesting point here, because I do believe coding is the perfect first thing for these LLMs and agents, and that's because coding has always fundamentally worked around text. It's computer terminals and text, and everything is based around text, and LLMs, the way they're trained on the internet, love text. And so they're perfect text processors, and there's all this data out there, and it's just a perfect fit. And also we have a lot of infrastructure pre-built for handling code and text. So for example, we have Visual Studio Code or your favorite IDE showing you code, and an agent can plug into that. So for example, if an agent has a diff where it made some change, we suddenly have all this code already that shows all the differences to a codebase using a diff. So it's almost like we've pre-built a lot of the infrastructure for code.",
-     "zh": "所以我认为这里有一个有趣的点，因为我确实相信编程是这些LLM和智能体的完美第一件事，这是因为编程从根本上一直是围绕文本的。它是计算机终端和文本，一切都基于文本，而LLM在互联网上训练的方式，它们喜欢文本。所以它们是完美的文本处理器，而且有大量的数据，这简直是完美的契合。此外，我们还有很多预先构建的基础设施来处理代码和文本。例如，我们有Visual Studio Code或你最喜欢的IDE显示代码，智能体可以接入其中。例如，如果智能体有一个diff，它做了一些更改，我们突然就有了所有代码，通过diff显示代码库的所有差异。所以我们几乎已经预先构建了很多代码的基础设施。"
+     "zh": "所以我认为这里有一个有趣的点，因为我确实相信编程是这些 LLM 和智能体的完美第一件事，这是因为编程从根本上一直是围绕文本的。它是计算机终端和文本，一切都基于文本，而 LLM 在互联网上训练的方式，它们喜欢文本。所以它们是完美的文本处理器，而且有大量的数据，这简直是完美的契合。此外，我们还有很多预先构建的基础设施来处理代码和文本。例如，我们有 Visual Studio Code 或你最喜欢的 IDE 显示代码，智能体可以接入其中。例如，如果智能体有一个 diff，它做了一些更改，我们突然就有了所有代码，通过 diff 显示代码库的所有差异。所以我们几乎已经预先构建了很多代码的基础设施。"
     }
    ]
   },
@@ -1045,22 +1045,22 @@
     {
      "spk": "Dwarkesh",
      "en": "This is a question I should have asked earlier. So we were talking about how currently it feels like when you're doing AI engineering or AI research, these models are more like in the category of compiler rather than in the category of a replacement.",
-     "zh": "这是我早该问的问题。我们之前谈到，目前在做AI工程或AI研究时，这些模型更像是编译器，而不是替代品。"
+     "zh": "这是我早该问的问题。我们之前谈到，目前在做 AI 工程或 AI 研究时，这些模型更像是编译器，而不是替代品。"
     },
     {
      "spk": "Andrej",
      "en": "Yeah. At some point, if you have AGI, it should be able to do what you do.",
-     "zh": "是的。在某个时候，如果你有了AGI，它应该能够做你做的事情。"
+     "zh": "是的。在某个时候，如果你有了 AGI，它应该能够做你做的事情。"
     },
     {
      "spk": "Dwarkesh",
      "en": "And do you feel like having a million copies of you in parallel results in some huge speed up of AI progress? Basically, if that does happen, would you expect to see an intelligence explosion?",
-     "zh": "你觉得有一百万个你的副本并行工作会导致AI进展的巨大加速吗？基本上，如果那真的发生了，你预计会看到智能爆炸吗？"
+     "zh": "你觉得有一百万个你的副本并行工作会导致 AI 进展的巨大加速吗？基本上，如果那真的发生了，你预计会看到智能爆炸吗？"
     },
     {
      "spk": "Andrej",
      "en": "I guess what I mean is I do, but it's business as usual because we're already in an intelligence explosion and have been for decades. When you look at GDP, it's basically the GDP curve that is an exponential weighted sum over so many aspects of the industry. Everything is gradually being automated, has been for hundreds of years. The industrial revolution is automation of physical components and tool building. Compilers are early software automation. So I feel like we've been recursively self-improving and exploding for a long time. Maybe another way to see it is Earth was a pretty boring place if you don't look at biomechanics, and looked very similar from space, and then we're in the middle of this firecracker event, but we're seeing it in slow motion.",
-     "zh": "我想我的意思是，我确实这么认为，但这只是常态，因为我们已经处于智能爆炸中几十年了。当你观察GDP时，它基本上是一条指数曲线，是工业许多方面的加权和。一切都在逐渐自动化，已经持续了几百年。工业革命是物理组件和工具制造的自动化。编译器是早期的软件自动化。所以我觉得我们已经在递归地自我改进和爆炸很长时间了。也许另一种看法是，如果不看生物力学，地球是一个相当无聊的地方，从太空看非常相似，然后我们正处于这个鞭炮事件的中间，但我们是在慢动作中看到它的。"
+     "zh": "我想我的意思是，我确实这么认为，但这只是常态，因为我们已经处于智能爆炸中几十年了。当你观察 GDP 时，它基本上是一条指数曲线，是工业许多方面的加权和。一切都在逐渐自动化，已经持续了几百年。工业革命是物理组件和工具制造的自动化。编译器是早期的软件自动化。所以我觉得我们已经在递归地自我改进和爆炸很长时间了。也许另一种看法是，如果不看生物力学，地球是一个相当无聊的地方，从太空看非常相似，然后我们正处于这个鞭炮事件的中间，但我们是在慢动作中看到它的。"
     },
     {
      "spk": "Dwarkesh",
@@ -1070,7 +1070,7 @@
     {
      "spk": "Andrej",
      "en": "But we're seeing it in slow motion. I definitely feel like this has already happened for a very long time, and I don't see AI as a distinct technology with respect to what has already been happening for a long time.",
-     "zh": "但我们是在慢动作中看到它的。我确实觉得这已经发生了很长时间，而且我不认为AI相对于已经发生很长时间的事情是一种独特的技术。"
+     "zh": "但我们是在慢动作中看到它的。我确实觉得这已经发生了很长时间，而且我不认为 AI 相对于已经发生很长时间的事情是一种独特的技术。"
     },
     {
      "spk": "Dwarkesh",
@@ -1080,22 +1080,22 @@
     {
      "spk": "Andrej",
      "en": "And that's why this was very interesting to me. I was trying to find AI in the GDP for a while. I thought that GDP should go up, but then I looked at some of the other technologies that I thought were very transformative, like computers or mobile phones. You can't find them in GDP. GDP is the same exponential. For example, the early iPhone didn't have the app store and didn't have a lot of the bells and whistles that the modern iPhone has. So even though we think of 2008 when iPhone came out as some major seismic change, it's actually not. Everything is so spread out and so slowly diffuses that everything ends up being averaged up into the same exponential. It's the exact same thing with computers. You can't find them in GDP. That's not what happened because it's such a slow progression. With AI, we're going to see the exact same thing. It's just more automation. It allows us to write different kinds of programs that we couldn't write before. But AI is still fundamentally a program, a new kind of computer and computing system, but it has all these problems. It's going to diffuse over time and still add up to the same exponential, and we're still going to have an exponential that's going to get extremely vertical and it's going to be very foreign to live in that kind of an environment.",
-     "zh": "这就是为什么这对我来说非常有趣。我一度试图在GDP中找到AI。我以为GDP应该上升，但后来我看了其他我认为非常变革性的技术，比如计算机或手机。你在GDP中找不到它们。GDP是同样的指数。例如，早期的iPhone没有应用商店，也没有现代iPhone的许多花哨功能。所以即使我们认为2008年iPhone问世是一次重大的地震式变化，但实际上并非如此。一切都如此分散，如此缓慢地扩散，以至于最终都被平均到同一个指数中。计算机也是完全一样的情况。你在GDP中找不到它们。那并没有发生，因为这是一个如此缓慢的进程。对于AI，我们将看到完全相同的事情。它只是更多的自动化。它让我们能够编写以前无法编写的各种程序。但AI仍然从根本上是一个程序，一种新型的计算机和计算系统，但它有所有这些问题。它会随着时间的推移而扩散，并仍然累加到同一个指数上，我们仍然会有一个变得极其垂直的指数，生活在那种环境中会非常陌生。"
+     "zh": "这就是为什么这对我来说非常有趣。我一度试图在 GDP 中找到 AI。我以为 GDP 应该上升，但后来我看了其他我认为非常变革性的技术，比如计算机或手机。你在 GDP 中找不到它们。GDP 是同样的指数。例如，早期的 iPhone 没有应用商店，也没有现代 iPhone 的许多花哨功能。所以即使我们认为 2008 年 iPhone 问世是一次重大的地震式变化，但实际上并非如此。一切都如此分散，如此缓慢地扩散，以至于最终都被平均到同一个指数中。计算机也是完全一样的情况。你在 GDP 中找不到它们。那并没有发生，因为这是一个如此缓慢的进程。对于 AI，我们将看到完全相同的事情。它只是更多的自动化。它让我们能够编写以前无法编写的各种程序。但 AI 仍然从根本上是一个程序，一种新型的计算机和计算系统，但它有所有这些问题。它会随着时间的推移而扩散，并仍然累加到同一个指数上，我们仍然会有一个变得极其垂直的指数，生活在那种环境中会非常陌生。"
     },
     {
      "spk": "Dwarkesh",
      "en": "Are you saying that if you look at the trend before the industrial revolution to currently, you have a hyper exponential where you go from 0% growth to 0.02% growth 10,000 years ago, and then currently we're at 2% growth. So that's a hyper exponential. And you're saying if you're charting AI on there, then it's like AI takes you to 20% growth or 200% growth? Or you could be saying if you look at the last 300 years, you've been seeing technology after technology, but the rate of growth is the exact same, it's 2%. So are you saying the rate of growth will change?",
-     "zh": "你是说，如果你看工业革命之前到现在的趋势，你有一个超指数，从0%增长到一万年前的0.02%增长，然后现在我们处于2%增长。所以那是一个超指数。你说如果你把AI画在上面，那么AI会带你到20%增长或200%增长？或者你可能是说，如果你看过去300年，你看到一项又一项技术，但增长率完全相同，是2%。所以你是说增长率会改变吗？"
+     "zh": "你是说，如果你看工业革命之前到现在的趋势，你有一个超指数，从 0%增长到一万年前的 0.02%增长，然后现在我们处于 2%增长。所以那是一个超指数。你说如果你把 AI 画在上面，那么 AI 会带你到 20%增长或 200%增长？或者你可能是说，如果你看过去 300 年，你看到一项又一项技术，但增长率完全相同，是 2%。所以你是说增长率会改变吗？"
     },
     {
      "spk": "Andrej",
      "en": "Directly, I expect the rate of growth has also stayed roughly constant for only the last 200-300 years, but over the course of human history it's exploded, gone from 0% to faster and faster, industrial explosion, 2%. Basically, I guess what I'm saying is for a while I tried to find AI in the GDP curve, and I've kind of convinced myself that this is false. Even when people talk about recursive self-improvement and labs, I don't think this is different. It's business as usual. Of course it's going to recursively self-improve, and it's been recursively self-improving. LLMs allow the engineers to work much more efficiently to build the next round of LLMs, and a lot more of the components are being automated and tuned. So all the engineers having access to Google search is part of it. All the engineers having an IDE, autocomplete, or Claude Code, etc. It's all just part of the same speed up of the whole thing. So it's just so smooth.",
-     "zh": "直接来说，我预计增长率在过去200-300年里也大致保持不变，但在人类历史进程中它爆炸了，从0%到越来越快，工业爆炸，2%。基本上，我想说的是，有一段时间我试图在GDP曲线中找到AI，我有点说服自己这是错误的。即使人们谈论递归自我改进和实验室，我也不认为这有什么不同。这是常态。当然它会递归地自我改进，而且它一直在递归地自我改进。LLM让工程师能够更高效地工作，以构建下一轮LLM，而且更多的组件正在被自动化和调优。所以所有工程师都能访问谷歌搜索是其中的一部分。所有工程师都有IDE、自动补全或Claude Code等。这些都只是整个事情加速的一部分。所以它非常平滑。"
+     "zh": "直接来说，我预计增长率在过去 200-300 年里也大致保持不变，但在人类历史进程中它爆炸了，从 0%到越来越快，工业爆炸，2%。基本上，我想说的是，有一段时间我试图在 GDP 曲线中找到 AI，我有点说服自己这是错误的。即使人们谈论递归自我改进和实验室，我也不认为这有什么不同。这是常态。当然它会递归地自我改进，而且它一直在递归地自我改进。LLM 让工程师能够更高效地工作，以构建下一轮 LLM，而且更多的组件正在被自动化和调优。所以所有工程师都能访问谷歌搜索是其中的一部分。所有工程师都有 IDE、自动补全或 Claude Code 等。这些都只是整个事情加速的一部分。所以它非常平滑。"
     },
     {
      "spk": "Dwarkesh",
      "en": "But just to clarify, you're saying that the rate of growth will not change. The intelligence explosion will show up as it just enabled us to continue staying on the 2% growth trajectory, just as the internet helped us stay on the 2% growth trajectory.",
-     "zh": "但只是澄清一下，你是说增长率不会改变。智能爆炸会表现为它只是让我们继续保持在2%的增长轨迹上，就像互联网帮助我们保持在2%的增长轨迹上一样。"
+     "zh": "但只是澄清一下，你是说增长率不会改变。智能爆炸会表现为它只是让我们继续保持在 2%的增长轨迹上，就像互联网帮助我们保持在 2%的增长轨迹上一样。"
     },
     {
      "spk": "Andrej",
@@ -1180,7 +1180,7 @@
     {
      "spk": "Dwarkesh",
      "en": "And I mean one way to think about it is through history. A lot of growth comes because people come up with ideas and then execute those ideas to make valuable output. Through most of this time, population isn't exploding. That has been driving growth for the last 50 years. People have argued that growth has stagnated as population in frontier countries has also stagnated. I think we go back to the hyperexponential growth in population and output.",
-     "zh": "我的意思是，一种思考方式是通过历史来看。很多增长来自于人们提出想法，然后执行这些想法以创造有价值的产出。在大部分时间里，人口并没有爆炸式增长。过去50年，这一直在推动增长。有人认为，随着前沿国家的人口增长停滞，经济增长也停滞了。我认为我们回到了人口和产出的超指数增长。"
+     "zh": "我的意思是，一种思考方式是通过历史来看。很多增长来自于人们提出想法，然后执行这些想法以创造有价值的产出。在大部分时间里，人口并没有爆炸式增长。过去 50 年，这一直在推动增长。有人认为，随着前沿国家的人口增长停滞，经济增长也停滞了。我认为我们回到了人口和产出的超指数增长。"
     },
     {
      "spk": "Andrej",
@@ -1205,37 +1205,37 @@
     {
      "spk": "Dwarkesh",
      "en": "So, we just got access to Google's VO 3.1, and it's been really cool to play around with. The first thing we did was run a bunch of prompts through both V3 and 3.1 to see what's changed in the new version. So, here's V3.",
-     "zh": "我们刚获得了Google VO 3.1的访问权限，玩起来非常酷。我们做的第一件事就是通过V3和3.1运行一堆提示，看看新版本有什么变化。这是V3。"
+     "zh": "我们刚获得了 Google VO 3.1 的访问权限，玩起来非常酷。我们做的第一件事就是通过 V3 和 3.1 运行一堆提示，看看新版本有什么变化。这是 V3。"
     },
     {
      "spk": "Dwarkesh",
      "en": "Hi, I'm Max and I got stuck in a local minimum again.",
-     "zh": "嗨，我是Max，我又陷入局部最小值了。"
+     "zh": "嗨，我是 Max，我又陷入局部最小值了。"
     },
     {
      "spk": "Dwarkesh",
      "en": "It's okay, Max. We've all been there. Took me three epochs to get out.",
-     "zh": "没关系，Max，我们都经历过。我花了三个epoch才出来。"
+     "zh": "没关系，Max，我们都经历过。我花了三个 epoch 才出来。"
     },
     {
      "spk": "Dwarkesh",
      "en": "And here is VO 3.1.",
-     "zh": "这是VO 3.1。"
+     "zh": "这是 VO 3.1。"
     },
     {
      "spk": "Dwarkesh",
      "en": "Hi, I'm Max and I got stuck in a local minimum again.",
-     "zh": "嗨，我是Max，我又陷入局部最小值了。"
+     "zh": "嗨，我是 Max，我又陷入局部最小值了。"
     },
     {
      "spk": "Dwarkesh",
      "en": "It's okay, Max. We've all been there. Took me three epochs.",
-     "zh": "没关系，Max，我们都经历过。我花了三个epoch。"
+     "zh": "没关系，Max，我们都经历过。我花了三个 epoch。"
     },
     {
      "spk": "Dwarkesh",
      "en": "3.1's output is just consistently more coherent and the audio is noticeably higher quality. We've been using VO for a while now. Actually, we released an essay earlier this year about AI firms fully animated by V2, and it's been amazing to see how fast these models are improving. This update makes VO even more useful in terms of animating our ideas and our explainers. You can try VO right now in the Gemini app with Pro and Ultra subscriptions. You can also access it through the Gemini API or through Google Flow.",
-     "zh": "3.1的输出始终更连贯，音频质量明显更高。我们已经使用VO一段时间了。事实上，今年早些时候我们发布了一篇关于完全由V2驱动的AI公司的文章，看到这些模型改进的速度令人惊叹。这次更新使VO在动画化我们的想法和解释器方面更加有用。你现在可以在Gemini应用中通过Pro和Ultra订阅试用VO，也可以通过Gemini API或Google Flow访问。"
+     "zh": "3.1 的输出始终更连贯，音频质量明显更高。我们已经使用 VO 一段时间了。事实上，今年早些时候我们发布了一篇关于完全由 V2 驱动的 AI 公司的文章，看到这些模型改进的速度令人惊叹。这次更新使 VO 在动画化我们的想法和解释器方面更加有用。你现在可以在 Gemini 应用中通过 Pro 和 Ultra 订阅试用 VO，也可以通过 Gemini API 或 Google Flow 访问。"
     }
    ]
   },
@@ -1245,12 +1245,12 @@
     {
      "spk": "Dwarkesh",
      "en": "You recommended Nick Lane's book to me and then on that basis I interviewed him. I have some questions about thinking about intelligence and evolutionary history. Now that you have spent the last 20 years doing AI research, you have a more tangible sense of what intelligence is and what it takes to develop it. Are you more or less surprised as a result that evolution just spontaneously stumbled upon it?",
-     "zh": "你向我推荐了Nick Lane的书，在此基础上我采访了他。我有一些关于思考智能和进化史的问题。既然你在过去20年里一直在做AI研究，你对智能是什么以及发展智能需要什么有了更具体的认识。因此，你对进化只是偶然发现智能这件事感到更惊讶还是更不惊讶？"
+     "zh": "你向我推荐了 Nick Lane 的书，在此基础上我采访了他。我有一些关于思考智能和进化史的问题。既然你在过去 20 年里一直在做 AI 研究，你对智能是什么以及发展智能需要什么有了更具体的认识。因此，你对进化只是偶然发现智能这件事感到更惊讶还是更不惊讶？"
     },
     {
      "spk": "Andrej",
      "en": "I love Nick's books by the way. I was just listening to his podcast on the way up here. With respect to intelligence and its evolution, I do claim it came fairly recently. I am surprised that it evolved. I find it fascinating to think about all the worlds out there. Say there's a thousand planets like Earth and what they look like. I think Nick was here talking about some of the early parts. He expects basically very similar life forms, roughly speaking, bacteria-like things in most of them.",
-     "zh": "顺便说一句，我喜欢Nick的书。我来的路上还在听他的播客。关于智能及其进化，我确实认为它出现得很晚。我对它进化出来感到惊讶。我觉得思考所有那些世界很有趣。假设有一千个类似地球的行星，它们会是什么样子。我想Nick在这里谈到了一些早期部分。他预计基本上非常相似的生命形式，大致来说，大多数都是类似细菌的东西。"
+     "zh": "顺便说一句，我喜欢 Nick 的书。我来的路上还在听他的播客。关于智能及其进化，我确实认为它出现得很晚。我对它进化出来感到惊讶。我觉得思考所有那些世界很有趣。假设有一千个类似地球的行星，它们会是什么样子。我想 Nick 在这里谈到了一些早期部分。他预计基本上非常相似的生命形式，大致来说，大多数都是类似细菌的东西。"
     },
     {
      "spk": "Dwarkesh",
@@ -1260,17 +1260,17 @@
     {
      "spk": "Andrej",
      "en": "And then there are a few breaks in there. I would expect that the evolution of intelligence intuitively feels to me like it should be a fairly rare event. There have been animals for, I guess maybe you should base it on how long something has existed. For example, if bacteria have been around for 2 billion years and nothing happened, then going to eukaryotes is probably pretty hard because bacteria actually came up quite early in Earth's history. So I guess how long have we had animals? Maybe a couple hundred million years, like multicellular animals that run, crawl, etc., which is maybe 10% of Earth's lifespan or something like that. So maybe on that time scale, it's actually not too tricky. I still feel like it's surprising to me intuitively that it developed. I would maybe expect just a lot of animal-like life forms doing animal-like things. The fact that you can get something that creates culture and knowledge and accumulates it is surprising to me.",
-     "zh": "然后那里有一些断裂。我直觉上认为智能的进化应该是一个相当罕见的事件。动物存在的时间，我想也许你应该根据某物存在了多久来判断。例如，如果细菌已经存在了20亿年而什么都没发生，那么进化到真核生物可能非常困难，因为细菌实际上在地球历史早期就出现了。那么动物存在了多久呢？也许几亿年，比如多细胞动物，它们奔跑、爬行等，这大概是地球寿命的10%左右。所以也许在那个时间尺度上，实际上并不太难。我仍然觉得直觉上它进化出来是令人惊讶的。我可能只会期待很多类似动物的生命形式做类似动物的事情。你能得到创造文化、知识并积累它们的东西，这让我感到惊讶。"
+     "zh": "然后那里有一些断裂。我直觉上认为智能的进化应该是一个相当罕见的事件。动物存在的时间，我想也许你应该根据某物存在了多久来判断。例如，如果细菌已经存在了 20 亿年而什么都没发生，那么进化到真核生物可能非常困难，因为细菌实际上在地球历史早期就出现了。那么动物存在了多久呢？也许几亿年，比如多细胞动物，它们奔跑、爬行等，这大概是地球寿命的 10%左右。所以也许在那个时间尺度上，实际上并不太难。我仍然觉得直觉上它进化出来是令人惊讶的。我可能只会期待很多类似动物的生命形式做类似动物的事情。你能得到创造文化、知识并积累它们的东西，这让我感到惊讶。"
     },
     {
      "spk": "Dwarkesh",
      "en": "Okay, so there are actually a couple of interesting follow-ups. If you buy this perspective that the crux of intelligence is animal intelligence, what the quote said is if you got to the squirrel, you'd be most of the way to AGI. Then we got to squirrel intelligence right after the Cambrian explosion 600 million years ago. It seems like what instigated that was the oxygenation event 600 million years ago. But immediately the intelligence algorithm was there to make the squirrel intelligence, right? So it's suggestive that animal intelligence was there as soon as you had the oxygen in the environment, you had the hardware, you could just get the algorithm. Maybe there was an accident that evolution stumbled upon it so fast, but I don't know if that suggests it's actually quite simple.",
-     "zh": "好的，实际上有几个有趣的后续问题。如果你接受这个观点，即智能的核心是动物智能，那么引用的话是：如果你到了松鼠的智能，你就完成了AGI的大部分。然后我们在6亿年前的寒武纪大爆发之后立即获得了松鼠智能。似乎触发它的是6亿年前的氧化事件。但立即智能算法就在那里制造了松鼠智能，对吧？所以这表明动物智能一旦环境中有氧气，你就有硬件，你就能得到算法。也许进化如此之快地偶然发现它是一个意外，但我不知道这是否表明它实际上相当简单。"
+     "zh": "好的，实际上有几个有趣的后续问题。如果你接受这个观点，即智能的核心是动物智能，那么引用的话是：如果你到了松鼠的智能，你就完成了 AGI 的大部分。然后我们在 6 亿年前的寒武纪大爆发之后立即获得了松鼠智能。似乎触发它的是 6 亿年前的氧化事件。但立即智能算法就在那里制造了松鼠智能，对吧？所以这表明动物智能一旦环境中有氧气，你就有硬件，你就能得到算法。也许进化如此之快地偶然发现它是一个意外，但我不知道这是否表明它实际上相当简单。"
     },
     {
      "spk": "Andrej",
      "en": "Yes, basically it's so hard to tell with any of this stuff. I guess you can base it a little bit on how long something has existed or how long it feels like something has been bottlenecked. Nick described this very apparent bottleneck in bacteria for years: extreme diversity of chemical biochemistry and yet nothing that grows to become animals for two billion years. I don't know that we've seen exactly that kind of an equivalent with animals and intelligence, to your point. But I guess maybe we could also look at it with respect to how many times we think intelligence has individually sprung up.",
-     "zh": "是的，基本上这些东西都很难说。我想你可以根据某物存在了多久，或者感觉某物被瓶颈了多久来稍微判断一下。Nick描述了细菌中一个非常明显的瓶颈：化学生物化学的极端多样性，但20亿年来没有任何东西进化成动物。我不知道我们是否在动物和智能中看到了完全等同的情况，就你的观点而言。但我想也许我们也可以从我们认为智能独立出现了多少次来看待它。"
+     "zh": "是的，基本上这些东西都很难说。我想你可以根据某物存在了多久，或者感觉某物被瓶颈了多久来稍微判断一下。Nick 描述了细菌中一个非常明显的瓶颈：化学生物化学的极端多样性，但 20 亿年来没有任何东西进化成动物。我不知道我们是否在动物和智能中看到了完全等同的情况，就你的观点而言。但我想也许我们也可以从我们认为智能独立出现了多少次来看待它。"
     },
     {
      "spk": "Dwarkesh",
@@ -1285,7 +1285,7 @@
     {
      "spk": "Dwarkesh",
      "en": "Yeah, a former guest, Gwern, and also Carl Shulman have made a really interesting point about that, which is their perspective that the scalable algorithm which humans have and primates have arose in birds as well, and maybe other times as well.",
-     "zh": "是的，一位前嘉宾Gwern和Carl Shulman对此提出了一个非常有趣的观点，他们认为人类和灵长类动物拥有的可扩展算法也在鸟类中出现过，也许在其他时候也出现过。"
+     "zh": "是的，一位前嘉宾 Gwern 和 Carl Shulman 对此提出了一个非常有趣的观点，他们认为人类和灵长类动物拥有的可扩展算法也在鸟类中出现过，也许在其他时候也出现过。"
     }
    ]
   },
@@ -1330,7 +1330,7 @@
     {
      "spk": "Andrej",
      "en": "Quentyn Pope had this interesting blog post where he says the Brazilian doesn't expect a sharp takeoff. Humans had the sharp takeoff: 60,000 years ago we seem to have had the cognitive architectures that we have today, and 10,000 years ago agricultural revolution, modernity, etc. What was happening in that 50,000 years?",
-     "zh": "Quentyn Pope 有一篇有趣的博文，他说巴西人不期望急剧起飞。人类有过急剧起飞：6万年前我们似乎就有了今天拥有的认知架构，而1万年前农业革命、现代性等等。那中间的5万年发生了什么？"
+     "zh": "Quentyn Pope 有一篇有趣的博文，他说巴西人不期望急剧起飞。人类有过急剧起飞：6 万年前我们似乎就有了今天拥有的认知架构，而 1 万年前农业革命、现代性等等。那中间的 5 万年发生了什么？"
     },
     {
      "spk": "Dwarkesh",
@@ -1375,7 +1375,7 @@
     {
      "spk": "Dwarkesh",
      "en": "Can you identify the key bottleneck preventing collaboration between LLMs? Smaller models resemble kindergarten or elementary students, and even though they can pass PhD quizzes, they still feel cognitively like kids. They don't really know what they're doing.",
-     "zh": "你能找出阻碍LLM之间协作的关键瓶颈吗？较小的模型就像幼儿园或小学生，虽然能通过博士考试，但在认知上仍然像孩子。它们并不真正理解自己在做什么。"
+     "zh": "你能找出阻碍 LLM 之间协作的关键瓶颈吗？较小的模型就像幼儿园或小学生，虽然能通过博士考试，但在认知上仍然像孩子。它们并不真正理解自己在做什么。"
     }
    ]
   },
@@ -1385,7 +1385,7 @@
     {
      "spk": "Andrej",
      "en": "I was at Tesla from 2017 to 2022 leading self-driving. We went from cool demos to thousands of cars doing autonomous drives. But it's not even near done. The first demos go back to the 1980s. I had a perfect demo from Waymo in 2014, yet it still took a long time. There's a large demo-to-product gap: the demo is easy, but the product is hard, especially when the cost of failure is high.",
-     "zh": "2017到2022年我在特斯拉负责自动驾驶。我们从酷炫的演示发展到数千辆车自主行驶，但远未完成。最早的演示可以追溯到1980年代。2014年我体验过Waymo的完美演示，但依然花了很长时间。演示到产品之间存在巨大鸿沟：演示容易，产品难，尤其是在失败成本很高的情况下。"
+     "zh": "2017 到 2022 年我在特斯拉负责自动驾驶。我们从酷炫的演示发展到数千辆车自主行驶，但远未完成。最早的演示可以追溯到 1980 年代。2014 年我体验过 Waymo 的完美演示，但依然花了很长时间。演示到产品之间存在巨大鸿沟：演示容易，产品难，尤其是在失败成本很高的情况下。"
     },
     {
      "spk": "Dwarkesh",
@@ -1405,7 +1405,7 @@
     {
      "spk": "Andrej",
      "en": "What takes time is a march of nines. Each nine is a constant amount of work. A demo works 90% of the time—that's the first nine. Then you need the second, third, fourth, fifth nine. At Tesla over five years, we went through maybe two or three nines. There are still more nines to go. That's why these things take so long. I'm very unimpressed by demos. You need an actual product that faces real-world challenges. It's a march of nines; each nine is constant. Demos are encouraging, but there's still a huge amount of work. This enforces my timelines.",
-     "zh": "耗时的是逐九提升。每个九的工作量是恒定的。演示能做到90%——这是第一个九。然后你需要第二个、第三个、第四个、第五个九。在特斯拉的五年里，我们可能只提升了两个或三个九。还有更多的九要走。这就是为什么这些事情如此耗时。我对演示非常不以为然。你需要一个能应对现实挑战的实际产品。这是逐九提升；每个九的工作量恒定。演示令人鼓舞，但仍有大量工作要做。这强化了我的时间线判断。"
+     "zh": "耗时的是逐九提升。每个九的工作量是恒定的。演示能做到 90%——这是第一个九。然后你需要第二个、第三个、第四个、第五个九。在特斯拉的五年里，我们可能只提升了两个或三个九。还有更多的九要走。这就是为什么这些事情如此耗时。我对演示非常不以为然。你需要一个能应对现实挑战的实际产品。这是逐九提升；每个九的工作量恒定。演示令人鼓舞，但仍有大量工作要做。这强化了我的时间线判断。"
     }
    ]
   },
@@ -1445,7 +1445,7 @@
     {
      "spk": "Dwarkesh",
      "en": "So another thing you might think is one you have this latency requirement with self-driving where you have I have no idea what the actual models are but I assume like tens of millions of parameters or something which is not the necessary constraint for knowledge work with LLMs or maybe it might be with the computer use and stuff but anyways the other big one is maybe more importantly on this capex question yes there is additional cost to serving up an additional copy of a model But the sort of opex of a session is quite low and you can amortize the cost of AI into the training run itself depending on how inference scaling goes and stuff but it's certainly not as much as like building a whole new car to serve another instance of a model. So it just the economics of deploying more widely are much more favorable.",
-     "zh": "另一个你可能想到的问题是，自动驾驶有延迟要求，我不知道实际模型是什么，但假设是几千万参数，这对LLM的知识工作来说并不是必要的限制，或者可能对计算机使用之类的东西有影响。但无论如何，另一个更重要的问题是资本支出：是的，提供额外一份模型副本有额外成本，但会话的运营成本相当低，而且你可以将AI的成本摊销到训练运行本身，具体取决于推理扩展的情况。但这肯定不像建造一辆全新的汽车来服务另一个模型实例那样昂贵。因此，更广泛部署的经济性要有利得多。"
+     "zh": "另一个你可能想到的问题是，自动驾驶有延迟要求，我不知道实际模型是什么，但假设是几千万参数，这对 LLM 的知识工作来说并不是必要的限制，或者可能对计算机使用之类的东西有影响。但无论如何，另一个更重要的问题是资本支出：是的，提供额外一份模型副本有额外成本，但会话的运营成本相当低，而且你可以将 AI 的成本摊销到训练运行本身，具体取决于推理扩展的情况。但这肯定不像建造一辆全新的汽车来服务另一个模型实例那样昂贵。因此，更广泛部署的经济性要有利得多。"
     },
     {
      "spk": "Andrej",
@@ -1485,12 +1485,12 @@
     {
      "spk": "Dwarkesh",
      "en": "And then I think like the last aspect that I very briefly want to also talk about is all the rest of it. So what does society think about it? What are the legal ramifications? How is it working legally? How is it working insurance-wise? Who is really like what is the where what are those layers of it and aspects of it what happens with what is the equivalent of people putting a cone on a Waymo? There's going to be equivalent of all that and so I do think that I almost feel like self-driving is a very nice analogy that you can borrow things from. Yeah, what is the equivalent of a cone on the car? What is the equivalent of a teleoperating worker who's like hidden away? And almost like all the aspects of it.",
-     "zh": "然后我想最后一点，我想简要谈一下所有其他方面。社会怎么看待它？法律后果是什么？它如何在法律上运作？保险方面如何运作？谁真正负责？这些层面和方面是什么？比如人们把锥桶放在Waymo上，会有什么等效的事情？会有所有这些的等效物。所以我确实觉得自动驾驶是一个很好的类比，你可以从中借鉴。是的，车上的锥桶的等效物是什么？隐藏的远程操作员的等效物是什么？几乎所有的方面。"
+     "zh": "然后我想最后一点，我想简要谈一下所有其他方面。社会怎么看待它？法律后果是什么？它如何在法律上运作？保险方面如何运作？谁真正负责？这些层面和方面是什么？比如人们把锥桶放在 Waymo 上，会有什么等效的事情？会有所有这些的等效物。所以我确实觉得自动驾驶是一个很好的类比，你可以从中借鉴。是的，车上的锥桶的等效物是什么？隐藏的远程操作员的等效物是什么？几乎所有的方面。"
     },
     {
      "spk": "Andrej",
      "en": "Yeah, do you have any opinions on whether this implies that the current day build which would 10x the amount of available compute in the world in a year or two and maybe like 100x more than 100x it by the end of the decade. If the use of AI will be lower than some people naively predict, does that mean that we're overbuilding compute or is that a separate question?",
-     "zh": "是的，你对这是否意味着当前的建设——在一两年内将全球可用算力提高10倍，到本十年末可能提高100倍以上——有什么看法？如果AI的使用量低于一些人天真预测的水平，这是否意味着我们过度建设了算力，还是这是一个单独的问题？"
+     "zh": "是的，你对这是否意味着当前的建设——在一两年内将全球可用算力提高 10 倍，到本十年末可能提高 100 倍以上——有什么看法？如果 AI 的使用量低于一些人天真预测的水平，这是否意味着我们过度建设了算力，还是这是一个单独的问题？"
     },
     {
      "spk": "Dwarkesh",
@@ -1500,7 +1500,7 @@
     {
      "spk": "Andrej",
      "en": "Was it railroads? Oh, sorry. It was um yeah, there is like historical precedent or was it with telecommunication industry, right? Like paving the internet that only came like a decade later, and creating like a whole bubble in the telecommunications industry in the late 90s kind of thing. Yeah.",
-     "zh": "是铁路吗？哦，抱歉。是有历史先例，还是电信行业？就像铺设互联网，但互联网十年后才出现，并在90年代末在电信行业制造了整个泡沫。是的。"
+     "zh": "是铁路吗？哦，抱歉。是有历史先例，还是电信行业？就像铺设互联网，但互联网十年后才出现，并在 90 年代末在电信行业制造了整个泡沫。是的。"
     },
     {
      "spk": "Dwarkesh",
@@ -1510,7 +1510,7 @@
     {
      "spk": "Andrej",
      "en": "I'm only doing that I'm actually optimistic. I think this will work. I think it's tractable. I'm only sounding pessimistic because when I go on my Twitter timeline, I see all this stuff that makes no sense to me. And I think there's a lot of reasons for why that exists. And I think a lot of it is I think honestly just fundraising. It's just incentive structures. A lot of it may be fundraising. A lot of it is just attention, you know, converting attention to money on the internet, stuff like that. So I think there's a lot of that going on and I think I'm only reacting to that. But I'm still like overall very bullish on technology. I think we're going to work through all this stuff and I think there's been a rapid amount of progress. I don't actually know that there's overbuilding. I think that we're going to be able to gobble up what in my understanding is being built. Because I do think that for example cloud code or open codex and stuff like that, they didn't even exist a year ago, right? Is that right? I think it's roughly right. This is miraculous technology that didn't exist. I think there's going to be a huge amount of demand as we see the demand in ChatGPT already and so on. So yeah, I don't actually know that there's overbuilding. But I guess I'm just reacting to like some of the very fast timelines that people continue to say incorrectly and I've heard many many times over the course of my 15 years in AI where very reputable people keep getting this wrong all the time. And I think I want this to be properly calibrated and I think some of this also it does have like geopolitical ramifications and things like that when some of these questions and I think I don't want people to make mistakes on that sphere of things. So I do want us to be grounded in reality of what technology is and isn't.",
-     "zh": "我这样做是因为我实际上很乐观。我认为这会成功。我认为这是可处理的。我听起来悲观只是因为当我刷推特时，我看到所有这些东西对我来说毫无意义。我认为存在很多原因。很多原因我认为老实说只是融资。只是激励结构。很多可能是融资。很多只是注意力，你知道，将注意力转化为互联网上的金钱，诸如此类。所以我认为有很多这样的情况，我只是在对此做出反应。但我总体上仍然非常看好技术。我认为我们会解决所有这些问题，而且已经取得了快速的进展。我实际上不知道是否存在过度建设。我认为我们能够消化正在建设的东西。因为我确实认为，例如云代码或开放代码之类的东西，一年前还不存在，对吧？对吗？我认为大致正确。这是不存在的奇迹技术。我认为会有巨大的需求，正如我们已经看到的ChatGPT的需求等等。所以是的，我实际上不知道是否存在过度建设。但我想我只是在回应一些人们继续错误地说的非常快的时间线，我在AI领域的15年中多次听到非常有名的人一直搞错。我希望这能得到适当校准，而且我认为其中一些问题确实具有地缘政治影响等等，我不希望人们在这方面犯错。所以我希望我们立足于技术是什么和不是什么的事实。"
+     "zh": "我这样做是因为我实际上很乐观。我认为这会成功。我认为这是可处理的。我听起来悲观只是因为当我刷推特时，我看到所有这些东西对我来说毫无意义。我认为存在很多原因。很多原因我认为老实说只是融资。只是激励结构。很多可能是融资。很多只是注意力，你知道，将注意力转化为互联网上的金钱，诸如此类。所以我认为有很多这样的情况，我只是在对此做出反应。但我总体上仍然非常看好技术。我认为我们会解决所有这些问题，而且已经取得了快速的进展。我实际上不知道是否存在过度建设。我认为我们能够消化正在建设的东西。因为我确实认为，例如云代码或开放代码之类的东西，一年前还不存在，对吧？对吗？我认为大致正确。这是不存在的奇迹技术。我认为会有巨大的需求，正如我们已经看到的 ChatGPT 的需求等等。所以是的，我实际上不知道是否存在过度建设。但我想我只是在回应一些人们继续错误地说的非常快的时间线，我在 AI 领域的 15 年中多次听到非常有名的人一直搞错。我希望这能得到适当校准，而且我认为其中一些问题确实具有地缘政治影响等等，我不希望人们在这方面犯错。所以我希望我们立足于技术是什么和不是什么的事实。"
     }
    ]
   },
@@ -1520,12 +1520,12 @@
     {
      "spk": "Dwarkesh",
      "en": "Let's talk about education and Eureka and stuff.",
-     "zh": "我们来谈谈教育和Eureka之类的事情。"
+     "zh": "我们来谈谈教育和 Eureka 之类的事情。"
     },
     {
      "spk": "Andrej",
      "en": "One thing you could do is start another AI lab and then try to solve those problems. Curious what you're up to now.",
-     "zh": "你可以做的一件事是创办另一个AI实验室，然后尝试解决这些问题。好奇你现在在做什么。"
+     "zh": "你可以做的一件事是创办另一个 AI 实验室，然后尝试解决这些问题。好奇你现在在做什么。"
     },
     {
      "spk": "Dwarkesh",
@@ -1535,12 +1535,12 @@
     {
      "spk": "Andrej",
      "en": "And then, yeah, why not AI research itself?",
-     "zh": "然后，是的，为什么不是AI研究本身呢？"
+     "zh": "然后，是的，为什么不是 AI 研究本身呢？"
     },
     {
      "spk": "Dwarkesh",
      "en": "I guess maybe like the way I would put it is I feel some amount of determinism around the things that AI labs are doing. And I feel like I could help out there, but I don't know that I would uniquely improve it. But I think like my personal big fear is that a lot of this stuff happens on the side of humanity and that humanity gets disempowered by it. And I kind of like I care not just about all the Dyson spheres that we're going to build and that AI is going to build in a fully autonomous way. I care about what happens to humans.",
-     "zh": "我想也许我会这样说：我对AI实验室正在做的事情感到某种程度的确定性。我觉得我可以在那里帮忙，但我不确定我能独特地改进它。但我个人最大的担忧是，很多事情发生在人类一边，人类因此被剥夺了权力。我有点在意，不仅是我们将要建造的所有戴森球，以及AI将以完全自主的方式建造的东西。我在意人类会发生什么。"
+     "zh": "我想也许我会这样说：我对 AI 实验室正在做的事情感到某种程度的确定性。我觉得我可以在那里帮忙，但我不确定我能独特地改进它。但我个人最大的担忧是，很多事情发生在人类一边，人类因此被剥夺了权力。我有点在意，不仅是我们将要建造的所有戴森球，以及 AI 将以完全自主的方式建造的东西。我在意人类会发生什么。"
     },
     {
      "spk": "Andrej",
@@ -1735,7 +1735,7 @@
     {
      "spk": "Dwarkesh",
      "en": "Now that I'm understanding the vision, that's very interesting. I think it has a perfect analog in gym culture. I don't think 100 years ago anybody would be ripped; nobody would be able to spontaneously bench two plates or three plates. It's actually very common now. You're imagining similar things for learning across many different domains, much more intensely, deeply, faster.",
-     "zh": "现在我理解了你的愿景，这非常有趣。我认为它在健身文化中有一个完美的类比。我不认为100年前有人会练出肌肉；没人能随便卧推两片或三片杠铃片。现在这很常见。你想象的是在众多不同领域的学习中类似的事情，更密集、更深入、更快。"
+     "zh": "现在我理解了你的愿景，这非常有趣。我认为它在健身文化中有一个完美的类比。我不认为 100 年前有人会练出肌肉；没人能随便卧推两片或三片杠铃片。现在这很常见。你想象的是在众多不同领域的学习中类似的事情，更密集、更深入、更快。"
     },
     {
      "spk": "Andrej",
@@ -1844,12 +1844,12 @@
     {
      "spk": "Andrej",
      "en": "It also makes the learning experience so much more motivated. Your tutorial on the transformer begins with a bigram model. It's literally like a lookup table: here's the current word, or here's the previous word, here's the next word. And it's literally just a lookup table.",
-     "zh": "这也让学习体验更有动力。你的Transformer教程从二元模型开始。它就像一个查找表：这是当前词，或者这是前一个词，这是下一个词。它实际上就是一个查找表。"
+     "zh": "这也让学习体验更有动力。你的 Transformer 教程从二元模型开始。它就像一个查找表：这是当前词，或者这是前一个词，这是下一个词。它实际上就是一个查找表。"
     },
     {
      "spk": "Dwarkesh",
      "en": "Yeah. That's the essence of it. I mean, such a brilliant way: start with a lookup table, then go to a transformer, and each piece is motivated—why would you add that? Why would you add the next thing? You couldn't memorize a sort of attention formula, but it's like having an understanding of why every single piece is relevant, what problem it solves.",
-     "zh": "是的。这就是本质。我是说，这方法太棒了：从查找表开始，然后到Transformer，每一步都有动机——为什么要加这个？为什么要加下一个？你没法死记硬背注意力公式，但你能理解为什么每个部分都相关，它解决了什么问题。"
+     "zh": "是的。这就是本质。我是说，这方法太棒了：从查找表开始，然后到 Transformer，每一步都有动机——为什么要加这个？为什么要加下一个？你没法死记硬背注意力公式，但你能理解为什么每个部分都相关，它解决了什么问题。"
     },
     {
      "spk": "Andrej",
@@ -1894,7 +1894,7 @@
     {
      "spk": "Andrej",
      "en": "One thing that I actually think is extremely helpful: as an example, someone was trying to show me a paper in biology recently, and I just had instantly so many terrible questions. So what I did was I used ChatGPT to ask the questions with the paper in the context window, and then it worked through some of the simple things. Then I actually shared the thread to the person who wrote that paper or worked on that work. I almost feel like it was like, if they can see the dumb questions I had, it might help them explain it better in the future. So for example, for my material, I would love if people shared their dumb conversations with ChatGPT about the stuff I've created, because it really helps me put myself again in the shoes of someone who's starting out.",
-     "zh": "有一件事我觉得特别有用：举个例子，最近有人想给我看一篇生物学论文，我立刻就有很多糟糕的问题。所以我用ChatGPT，把论文放在上下文窗口里提问，它解决了一些简单的问题。然后我把这个对话分享给了写那篇论文或做那个工作的人。我几乎觉得，如果他们能看到我那些愚蠢的问题，可能会帮助他们将来更好地解释。所以，比如对于我的材料，如果人们分享他们和ChatGPT关于我创作内容的愚蠢对话，我会很高兴，因为这真的能帮我再次站在初学者的角度。"
+     "zh": "有一件事我觉得特别有用：举个例子，最近有人想给我看一篇生物学论文，我立刻就有很多糟糕的问题。所以我用 ChatGPT，把论文放在上下文窗口里提问，它解决了一些简单的问题。然后我把这个对话分享给了写那篇论文或做那个工作的人。我几乎觉得，如果他们能看到我那些愚蠢的问题，可能会帮助他们将来更好地解释。所以，比如对于我的材料，如果人们分享他们和 ChatGPT 关于我创作内容的愚蠢对话，我会很高兴，因为这真的能帮我再次站在初学者的角度。"
     },
     {
      "spk": "Dwarkesh",
@@ -1924,7 +1924,7 @@
     {
      "spk": "Andrej",
      "en": "This is coming from the perspective of how someone trying to explain an idea should formulate it better. What is your advice as a student to other students? If you don't have a Karpathy who is doing the exposition of an idea, if you're reading a paper or a book, what strategies do you employ to learn material you're interested in in fields you're not an expert in?",
-     "zh": "这是从试图解释想法的人如何更好地表达的角度出发的。作为学生，你对其他学生有什么建议？如果你没有一个像Karpathy那样为你讲解想法的人，如果你在读一篇论文或一本书，你会用什么策略来学习你感兴趣但并非专长的领域的内容？"
+     "zh": "这是从试图解释想法的人如何更好地表达的角度出发的。作为学生，你对其他学生有什么建议？如果你没有一个像 Karpathy 那样为你讲解想法的人，如果你在读一篇论文或一本书，你会用什么策略来学习你感兴趣但并非专长的领域的内容？"
     },
     {
      "spk": "Dwarkesh",
