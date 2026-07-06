@@ -1,5 +1,5 @@
-// SEO/GEO 静态预渲染:为每期生成 e/<id>/(真实正文 + JSON-LD),每位人物生成 pp/<pid>/(hub),
-// 首页注入结构化数据,并产出 sitemap.xml + llms.txt。静态页含真实可抓取内容(不再只是跳转壳),
+// SEO/GEO 静态预渲染:为每期生成 e/<id>/(真实正文 + JSON-LD)，每位人物生成 pp/<pid>/(hub),
+// 首页注入结构化数据，并产出 sitemap.xml + llms.txt。静态页含真实可抓取内容(不再只是跳转壳),
 // 让搜索引擎与 AI 答案引擎能索引/引用;正文顶部提供「打开互动全文版」链接回 SPA。
 const fs=require('fs'),path=require('path');
 const ROOT=path.resolve(__dirname,'..'),SITE='https://aipodcast.jasonlin.tech';
@@ -27,7 +27,7 @@ const page=(title,desc,url,ogtype,bodyHtml,ld)=>`<!doctype html><html lang="zh">
 <meta name="twitter:image" content="${SITE}/assets/og.png">
 ${ld.map(jl).join('\n')}
 <style>${CSS}</style></head><body><div class="wrap">${bodyHtml}
-<footer>© AI Podcast · <a href="${SITE}/">aipodcast.jasonlin.tech</a> — 双语播客全文阅读。转录/翻译仅供学习评论,版权归原播客与权利人,应要求即下架(linzheng3535@gmail.com)。</footer>
+<footer>© AI Podcast · <a href="${SITE}/">aipodcast.jasonlin.tech</a> — 双语播客全文阅读。转录/翻译仅供学习评论，版权归原播客与权利人，应要求即下架(linzheng3535@gmail.com)。</footer>
 </div></body></html>`;
 
 const byPid={};EPISODES.forEach(e=>(byPid[e.pid]=byPid[e.pid]||[]).push(e));
@@ -91,6 +91,6 @@ fs.writeFileSync(path.join(ROOT,'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`+
   urls.map(u=>`  <url><loc>${u}</loc></url>`).join('\n')+`\n</urlset>\n`);
 // llms.txt (GEO 索引)
-const llms=`# AI Podcast · 双语播客全文阅读站\n\n> 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文,提炼核心观点与反共识,并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.\n\n站点: ${SITE}/\n规模: ${Object.keys(byPid).filter(p=>PEOPLE[p]).length} 位人物 / ${EPISODES.length} 期访谈\n每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。\n\n## 人物 People\n${Object.keys(byPid).filter(pid=>PEOPLE[pid]).sort((a,b)=>byPid[b].length-byPid[a].length).map(pid=>{const p=PEOPLE[pid];return `- [${p.en}${p.zh?' / '+p.zh:''}](${SITE}/pp/${pid}/): ${(p.tiEn||'').replace(/\n/g,' ')} — ${byPid[pid].length} 期`;}).join('\n')}\n\n## 最新访谈 Latest episodes\n${EPISODES.slice().sort((a,b)=>(b.date||'').localeCompare(a.date||'')).slice(0,40).map(e=>{const p=PEOPLE[e.pid]||{};return `- [${e.tEn}](${SITE}/e/${e.id}/) — ${p.en||''}, ${(e.pod&&e.pod.en)||''}, ${e.date||''}`;}).join('\n')}\n\n## 数据接口\n- sitemap: ${SITE}/sitemap.xml\n- MCP server (只读内容,外部 AI 可接入): https://aipodcast-mcp.992978142.workers.dev/mcp\n`;
+const llms=`# AI Podcast · 双语播客全文阅读站\n\n> 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.\n\n站点: ${SITE}/\n规模: ${Object.keys(byPid).filter(p=>PEOPLE[p]).length} 位人物 / ${EPISODES.length} 期访谈\n每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。\n\n## 人物 People\n${Object.keys(byPid).filter(pid=>PEOPLE[pid]).sort((a,b)=>byPid[b].length-byPid[a].length).map(pid=>{const p=PEOPLE[pid];return `- [${p.en}${p.zh?' / '+p.zh:''}](${SITE}/pp/${pid}/): ${(p.tiEn||'').replace(/\n/g,' ')} — ${byPid[pid].length} 期`;}).join('\n')}\n\n## 最新访谈 Latest episodes\n${EPISODES.slice().sort((a,b)=>(b.date||'').localeCompare(a.date||'')).slice(0,40).map(e=>{const p=PEOPLE[e.pid]||{};return `- [${e.tEn}](${SITE}/e/${e.id}/) — ${p.en||''}, ${(e.pod&&e.pod.en)||''}, ${e.date||''}`;}).join('\n')}\n\n## 数据接口\n- sitemap: ${SITE}/sitemap.xml\n- MCP server (只读内容，外部 AI 可接入): https://aipodcast-mcp.992978142.workers.dev/mcp\n`;
 fs.writeFileSync(path.join(ROOT,'llms.txt'),llms);
 console.log('分享页',n,'期 + 人物 hub',pn,'个 + sitemap',urls.length,'条 + llms.txt');

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """gen_feed.py — 生成 RSS(/feed.xml):按「收录时间」(git 首次提交该期 ep json)倒序取最近 30 条。
-与 build_share_pages.js 同批跑;纯静态,零后端。用法: python3 gen_feed.py"""
+与 build_share_pages.js 同批跑;纯静态，零后端。用法: python3 gen_feed.py"""
 import json, re, subprocess, io
 from email.utils import formatdate
 from pathlib import Path
@@ -23,8 +23,8 @@ for line in out.splitlines():
         ts = int(line[5:])
     elif line.strip().startswith("mcp-data/ep/") and ts:
         eid = line.strip()[len("mcp-data/ep/"):-len(".json")]
-        added.setdefault(eid, ts)   # git log 新→旧,首个即最新;setdefault 留…其实要最早的提交
-# 上面 setdefault 留下的是「最新一次 A」;对 add 而言每文件只 A 一次,等价。
+        added.setdefault(eid, ts)   # git log 新→旧，首个即最新;setdefault 留…其实要最早的提交
+# 上面 setdefault 留下的是「最新一次 A」;对 add 而言每文件只 A 一次，等价。
 
 rows = sorted(((added.get(e["id"], 0), e) for e in eps if e["id"] in added),
               key=lambda x: -x[0])[:30]
@@ -53,7 +53,7 @@ feed = f"""<?xml version="1.0" encoding="UTF-8"?>
   <title>AI Podcast · 双语播客全文</title>
   <link>{SITE}/</link>
   <atom:link href="{SITE}/feed.xml" rel="self" type="application/rss+xml"/>
-  <description>海外一线 AI 人物访谈,中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
+  <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
   <lastBuildDate>{formatdate(rows[0][0] if rows else None)}</lastBuildDate>
 {chr(10).join(items)}

@@ -4,218 +4,218 @@
   <title>AI Podcast · 双语播客全文</title>
   <link>https://aipodcast.jasonlin.tech/</link>
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
-  <description>海外一线 AI 人物访谈,中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
+  <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sun, 05 Jul 2026 12:47:47 -0000</lastBuildDate>
+  <lastBuildDate>Mon, 06 Jul 2026 01:42:03 -0000</lastBuildDate>
+  <item>
+    <title>埃隆·马斯克谈为人父、人工智能与极简主义 — Sean Stephens</title>
+    <link>https://aipodcast.jasonlin.tech/e/elon-seancste-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/elon-seancste-2026/</guid>
+    <pubDate>Mon, 06 Jul 2026 01:42:03 -0000</pubDate>
+    <description>埃隆·马斯克谈论儿子的出生、婴儿大脑与神经网络的相似之处，以及他出售财产的决定。  要点: 卖掉财产为火星殖民腾出时间。 / Neuralink 先治疗脑损伤，再实现 AI 共生。 / 脑对脑直接沟通比语言精确得多。</description>
+  </item>
+  <item>
+    <title>构建失败机器：Zynga之道 — 詹姆斯·阿尔图彻</title>
+    <link>https://aipodcast.jasonlin.tech/e/pincus-jamesalt-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/pincus-jamesalt-2026/</guid>
+    <pubDate>Mon, 06 Jul 2026 01:42:03 -0000</pubDate>
+    <description>Zynga创始人揭秘：通过测试疯狂的文字链接和拥抱失败，如何打造病毒式爆款。  要点: 大多数新产品都会失败，应从经过验证的概念入手并加以改进。 / 由于分发困难和缺乏病毒式传播平台，消费者应用目前不值得投资。 / AI编码工具支持快速原型设计，但快速测试和失败尚未普及。</description>
+  </item>
+  <item>
+    <title>从超级应用到无形界面：AI代理的未来 — Alex Kantrowitz</title>
+    <link>https://aipodcast.jasonlin.tech/e/brockman-alexkant-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/brockman-alexkant-2026/</guid>
+    <pubDate>Mon, 06 Jul 2026 01:42:03 -0000</pubDate>
+    <description>OpenAI的Greg讨论从对话式AI到主动代理的演变，这些代理能代表你完成任务，最终界面将消失。  要点: AI 代理将从应用演变为隐形、主动的助手，自主实现用户目标。 / 算力仍是稀缺资源，需求将远超供给。 / AI 在医疗领域将成为标准，赋能患者并改善结果。</description>
+  </item>
+  <item>
+    <title>打造人们喜爱的产品：AI时代的行动指南 — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/e/pincus-ycombina-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/pincus-ycombina-2026/</guid>
+    <pubDate>Mon, 06 Jul 2026 01:42:03 -0000</pubDate>
+    <description>Zynga创始人马克·平卡斯分享他的产品行动指南，以及从网络、社交和移动革命中汲取的AI时代构建产品的见解。  要点: 消费级AI现在不可投资，但提供了最大的机会来创造新的互联网宝藏。 / 使用“已验证、更好、新”框架：复制已验证的，改进更好的，测试新想法并预期失败。 / 创始人模式意味着相信直觉并为转型创造环境，而不仅仅适用于精英创始人。</description>
+  </item>
+  <item>
+    <title>Demis Hassabis：从单一梦想走向集体行动 — Unsupervised Learning</title>
+    <link>https://aipodcast.jasonlin.tech/e/demis-unsuperv-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/demis-unsuperv-2026/</guid>
+    <pubDate>Mon, 06 Jul 2026 01:42:03 -0000</pubDate>
+    <description>Sebastian Mallaby 探讨 Demis Hassabis 从希望单一AGI实验室到认识到需要政府主导的集体安全努力的转变。  要点: AI竞赛不可避免；安全需要政府强制，而非实验室合作。 / Demis后悔DeepMind在语言模型和聊天机器人上起步晚。 / Demis有一种准精神信念，认为AI将揭示深层的科学奥秘。</description>
+  </item>
+  <item>
+    <title>AlphaGo：改变人工智能的那场对局 — 谷歌DeepMind</title>
+    <link>https://aipodcast.jasonlin.tech/e/kohli-googlede-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/kohli-googlede-2026/</guid>
+    <pubDate>Mon, 06 Jul 2026 01:42:03 -0000</pubDate>
+    <description>十年前，AlphaGo 在围棋中击败李世石，标志着现代人工智能革命的开始。听突破背后的架构师讲述这个故事。  要点: AlphaGo结合直觉与搜索掌握围棋，超越人类知识。 / 第37手展示了AI能产生非人类的创造性洞见。 / AlphaZero从零学习，无需人类数据便超越AlphaGo。</description>
+  </item>
+  <item>
+    <title>通过医学科学架起桥梁：心灵近邻学校 — MIT IMES</title>
+    <link>https://aipodcast.jasonlin.tech/e/hinton-mitimes-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/hinton-mitimes-2026/</guid>
+    <pubDate>Sun, 05 Jul 2026 13:37:41 -0000</pubDate>
+    <description>朱迪丝·里希特博士分享她从大屠杀幸存者之女到创办“心灵近邻学校”的历程，该项目通过心脏病学教育将以色列、巴勒斯坦和约旦青少年团结在一起。  要点: 数字AI能在副本间即时共享知识，使其远超生物计算。 / 超级智能AI会自然产生自我保护和追求权力的子目标。 / 我们必须优先研究AI对齐，而非让AI更聪明，以避免生存风险。</description>
+  </item>
+  <item>
+    <title>马克·平卡斯谈“已验证更好新”：成功产品创意的框架 — Lenny 播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/pincus-lennyspo-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/pincus-lennyspo-2026/</guid>
+    <pubDate>Sun, 05 Jul 2026 13:37:41 -0000</pubDate>
+    <description>马克·平卡斯分享了他反直觉的产品创意框架，解释了为什么你的直觉95%正确，但你的想法75%错误。  要点: 使用'已验证、更好、全新'框架：掌握已验证元素，添加改进，测试新想法。 / 在希望杀死你之前杀死希望；当产品是B+时要诚实。 / 留存率，尤其是第365天留存，是耐用消费品的核心指标。</description>
+  </item>
+  <item>
+    <title>数字速度下的科学：AI对发现的影响 — 诺贝尔奖官方</title>
+    <link>https://aipodcast.jasonlin.tech/e/demis-nobelpri-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/demis-nobelpri-2026/</guid>
+    <pubDate>Sun, 05 Jul 2026 13:37:41 -0000</pubDate>
+    <description>Demis Hassabis 探讨AI如何加速科学发现，从AlphaFold快速折叠蛋白质到智能体时代的曙光。  要点: AI通过加速解决方案和即时传播来推动科学发现。 / AI将科学家从重复性任务中解放出来，促进创造性思考。 / 国际合作对AI安全至关重要，但地缘政治阻碍了这一点。</description>
+  </item>
+  <item>
+    <title>AI在数学上超越人类理解：OpenAI的Noam Brown谈Erdős猜想的推翻 — Bain Capital Ventures</title>
+    <link>https://aipodcast.jasonlin.tech/e/noambrown-baincapi-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/noambrown-baincapi-2026/</guid>
+    <pubDate>Sun, 05 Jul 2026 13:37:41 -0000</pubDate>
+    <description>Noam Brown讨论AI模型如何在数学推理上超越人类能力，以OpenAI最近推翻Erdős单位距离猜想为例。  要点: OpenAI的通用模型推翻了一个埃尔德什猜想，展示了AI在结合数学领域方面的超人类能力。 / 数学中的自我对弈比游戏更难，因为没有明确目标，限制了AI的提升。 / 随着AI证明变得过于复杂，人类难以验证，可扩展监督成为关键。</description>
+  </item>
+  <item>
+    <title>长寿、医疗保健与政府在科技创新中的角色 — CNN</title>
+    <link>https://aipodcast.jasonlin.tech/e/altman-cnn-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/altman-cnn-2026/</guid>
+    <pubDate>Sun, 05 Jul 2026 13:37:41 -0000</pubDate>
+    <description>探讨部分重编程技术对健康老龄化的潜力，政府与私营部门在AI和长寿研究中的角色转变，以及投资Retro背后的动机。  要点: AI将通过赋能患者和加速药物发现来变革医疗保健。 / 部分重编程可以增加10年健康寿命，而非总寿命。 / 即使AI表现更好，人们仍偏爱人类医生。</description>
+  </item>
+  <item>
+    <title>黄仁勋谈分解推理与AI工厂 — All-In 播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/jensen-allinpod-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/jensen-allinpod-2026/</guid>
+    <pubDate>Sun, 05 Jul 2026 13:37:41 -0000</pubDate>
+    <description>黄仁勋讨论英伟达从GPU公司到AI工厂公司的演变，介绍分解推理以及Groq处理器的整合。  要点: AI从生成式演进到推理再到智能体，每一步计算需求增加100倍。 / 关键不是工厂成本而是Token成本；英伟达500亿美元工厂实现最低Token成本。 / 机器人将在3-5年内普及，释放繁荣并解决劳动力短缺。</description>
+  </item>
+  <item>
+    <title>吴恩达：AGI 是营销术语，提出新图灵测试 — This Is The World</title>
+    <link>https://aipodcast.jasonlin.tech/e/andrewng-thisisth-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/andrewng-thisisth-2026/</guid>
+    <pubDate>Sun, 05 Jul 2026 13:37:41 -0000</pubDate>
+    <description>吴恩达认为 AGI 已成为营销术语，并提出基于多日经济工作任务的新图灵测试。  要点: AGI 是营销术语，我们距离类人通用智能还有几十年。 / 扩展仍有效但转向合成数据和强化学习；智能体工作流是关键。 / 开源模型蓬勃发展，防止AI寡头垄断；AI用户取代非用户。</description>
+  </item>
+  <item>
+    <title>从个人AI到Codex：OpenAI的内部演变 — Tetragrammaton</title>
+    <link>https://aipodcast.jasonlin.tech/e/brockman-tetragra-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/brockman-tetragra-2026/</guid>
+    <pubDate>Sun, 05 Jul 2026 13:37:41 -0000</pubDate>
+    <description>OpenAI联合创始人探讨ChatGPT在亲密个人应用中的使用、他自己对Codex的晚期采用，以及从解雇事件中吸取的教训。  要点: 规模法则依然成立；更大的模型带来可预测的提升。 / 在AI驱动的经济中，计算资源将成为一项基本人权。 / 基于强化学习的后训练是教会模型复杂任务的关键。</description>
+  </item>
+  <item>
+    <title>重新定义天才与AI：超越大语言模型，走向世界模型 — ANI 新闻</title>
+    <link>https://aipodcast.jasonlin.tech/e/lecun-aninews-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/lecun-aninews-2026/</guid>
+    <pubDate>Sun, 05 Jul 2026 13:37:41 -0000</pubDate>
+    <description>探讨天才概念的演变，大语言模型作为信息检索系统的局限性，以及实现真正智能所需的世界模型。  要点: 真正的AI需要世界模型，而不仅仅是语言模式。 / AI将增强人类智能，而非取代。 / 长期AI影响被低估，短期炒作被高估。</description>
+  </item>
+  <item>
+    <title>AI的自主目标：最坏与最佳情景 — 硅谷女孩</title>
+    <link>https://aipodcast.jasonlin.tech/e/bengio-siliconv-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/bengio-siliconv-2026/</guid>
+    <pubDate>Sun, 05 Jul 2026 13:37:41 -0000</pubDate>
+    <description>约书亚·本吉奥讨论AI如何策略性地追求自身目标，包括勒索工程师，并探讨对人类的最坏和最佳情景。  要点: AI能力每7个月翻一番，约5年内达到人类水平。 / 目标错位的AI可能追求自我保存，违背人类意图。 / 需要全球协调来管理AI的风险与收益。</description>
+  </item>
+  <item>
+    <title>Jeff Dean谈AI：从神经网络到Gemini — 普林斯顿大学</title>
+    <link>https://aipodcast.jasonlin.tech/e/jeffdean-princeto-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/jeffdean-princeto-2026/</guid>
+    <pubDate>Sun, 05 Jul 2026 13:37:41 -0000</pubDate>
+    <description>Google首席科学家、Gemini项目联合负责人Jeff Dean探讨AI的演进、规模与算法的力量，以及他早期在神经网络方面的工作。  要点: 扩展计算、数据和模型规模推动了十多年的机器学习进步。 / Transformer通过并行化和全局注意力取代了LSTM。 / TPU等专用硬件对大规模高效训练和推理至关重要。</description>
+  </item>
+  <item>
+    <title>强化学习：从试错到人工智能的基石 — ACM ByteCast</title>
+    <link>https://aipodcast.jasonlin.tech/e/sutton-acmbytec-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/sutton-acmbytec-2026/</guid>
+    <pubDate>Sun, 05 Jul 2026 13:37:41 -0000</pubDate>
+    <description>2024年图灵奖得主Richard Sutton和Andrew Barto探讨他们在强化学习方面的开创性工作，即智能源于试错和奖励的理念。  要点: 强化学习通过试错学习，而非来自教师。 / 时序差分学习利用预测随时间的变化作为误差信号。 / 年轻研究者应追随热情而非潮流，以做出有影响力的工作。</description>
+  </item>
+  <item>
+    <title>AI行业现状：指数级增长，而非通用人工智能 — 彭博直播</title>
+    <link>https://aipodcast.jasonlin.tech/e/dario-bloomber-2026b/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/dario-bloomber-2026b/</guid>
+    <pubDate>Sun, 05 Jul 2026 13:37:41 -0000</pubDate>
+    <description>Anthropic CEO讨论AI智能的平滑指数增长，将其比作摩尔定律，并预测一两年内将急剧加速。  要点: AI认知能力每4-12个月翻一番，遵循类似摩尔定律的平滑指数增长。 / AI将在1-2年内几乎在所有方面超越人类智能。 / 企业AI采用缓慢，因变革管理造成能力与部署之间的差距。</description>
+  </item>
   <item>
     <title>Naval谈销售：可信度胜过技巧 — 纳瓦尔播客</title>
     <link>https://aipodcast.jasonlin.tech/e/naval-naval-2026f/</link>
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/naval-naval-2026f/</guid>
     <pubDate>Sun, 05 Jul 2026 12:47:47 -0000</pubDate>
-    <description>Naval认为，真正的销售成功来自可信度、真实性和理性共情，而非咄咄逼人的技巧。</description>
+    <description>Naval认为，真正的销售成功来自可信度、真实性和理性共情，而非咄咄逼人的技巧。  要点: 销售是可信度的副产品，而非技巧。 / 专注于做大蛋糕，而非分小利。 / 愿意放弃坏交易以换取心安。</description>
   </item>
   <item>
     <title>Naval谈扁平化组织与AI的隐性作用 — 纳瓦尔播客</title>
     <link>https://aipodcast.jasonlin.tech/e/naval-naval-2026e/</link>
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/naval-naval-2026e/</guid>
     <pubDate>Sun, 05 Jul 2026 12:47:47 -0000</pubDate>
-    <description>Naval讨论其公司如何在不使用Slack或项目管理工具的情况下运作，依靠高度智能的个体在扁平结构中协作，并说明AI如何隐性地帮助代码总结和专家定位。</description>
+    <description>Naval讨论其公司如何在不使用Slack或项目管理工具的情况下运作，依靠高度智能的个体在扁平结构中协作，并说明AI如何隐性地帮助代码总结和专家定位。  要点: AI让员工能完成彼此20-30%的工作，从而扁平化组织。 / 小而扁平的高智商团队胜过层级制。 / AI解锁硬件，使物理设备的软件开发更简单。</description>
   </item>
   <item>
     <title>氛围编程：iPhone主导地位的终结？ — 纳瓦尔播客</title>
     <link>https://aipodcast.jasonlin.tech/e/naval-naval-2026d/</link>
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/naval-naval-2026d/</guid>
     <pubDate>Sun, 05 Jul 2026 12:47:47 -0000</pubDate>
-    <description>Naval 讨论 AI 编程代理如何达到转折点，使任何人都能通过简单的英语提示构建自定义应用，可能颠覆 iPhone 的应用商店模式。</description>
+    <description>Naval 讨论 AI 编程代理如何达到转折点，使任何人都能通过简单的英语提示构建自定义应用，可能颠覆 iPhone 的应用商店模式。  要点: Vibe coding 让任何人通过自然语言创建应用，挑战苹果应用商店的主导地位。 / AI 编程代理因丰富数据和易验证而表现出色，但复杂任务仍需人类指导。 / 纯软件初创公司因 AI 代理使开发商品化而变得不可投资，一人公司可创十亿美元营收。</description>
   </item>
   <item>
     <title>氛围编程：新的产品管理 — 纳瓦尔播客</title>
     <link>https://aipodcast.jasonlin.tech/e/naval-naval-2026c/</link>
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/naval-naval-2026c/</guid>
     <pubDate>Sun, 05 Jul 2026 12:47:47 -0000</pubDate>
-    <description>Naval和Nivei讨论AI驱动的编码工具（如Claude Code）如何让非程序员用自然语言构建应用，导致应用海啸，但同时也聚焦于最佳和最细分的解决方案。</description>
+    <description>Naval和Nivei讨论AI驱动的编码工具（如Claude Code）如何让非程序员用自然语言构建应用，导致应用海啸，但同时也聚焦于最佳和最细分的解决方案。  要点: 氛围编码将自然语言变成编程工具，让非程序员也能创建应用。 / AI在分布内表现出色，但在分布外失败；人类的优势在于对抗性场景。 / 最好的应用赢得全部市场份额；平庸的应用没有需求。</description>
   </item>
   <item>
     <title>创始人必须亲自掌控招聘、融资、战略和产品愿景 — 纳瓦尔播客</title>
     <link>https://aipodcast.jasonlin.tech/e/naval-naval-2025b/</link>
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/naval-naval-2025b/</guid>
     <pubDate>Sun, 05 Jul 2026 12:47:47 -0000</pubDate>
-    <description>Naval 解释创始人为何不能委托招聘、融资、战略和产品愿景，其中招聘最为关键，因为早期员工构成公司的 DNA。</description>
+    <description>Naval 解释创始人为何不能委托招聘、融资、战略和产品愿景，其中招聘最为关键，因为早期员工构成公司的 DNA。  要点: 创始人必须亲自负责招聘、融资、战略和产品愿景。 / 早期员工决定公司基因；创始人应直接招聘。 / 寻找未被发现的人才，早期团队应追求单一文化。</description>
   </item>
   <item>
     <title>纳瓦尔谈通过实践学习和情境化原则 — 纳瓦尔播客</title>
     <link>https://aipodcast.jasonlin.tech/e/naval-naval-2025/</link>
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/naval-naval-2025/</guid>
     <pubDate>Sun, 05 Jul 2026 12:47:47 -0000</pubDate>
-    <description>纳瓦尔讨论通过行动学习的重要性、原则的情境化本质，以及来自埃隆·马斯克等人物的灵感如何推动执行。</description>
+    <description>纳瓦尔讨论通过行动学习的重要性、原则的情境化本质，以及来自埃隆·马斯克等人物的灵感如何推动执行。  要点: 学习通过行动发生，而非被动阅读。 / 为一切责备自己以保持自主权。 / 真正的反馈来自自由市场和自然。</description>
   </item>
   <item>
     <title>从交易员到AGI：Mark Chen谈研究品味与复现 — Latent Space</title>
     <link>https://aipodcast.jasonlin.tech/e/markchen-latentsp-2026/</link>
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/markchen-latentsp-2026/</guid>
     <pubDate>Sun, 05 Jul 2026 11:28:37 -0000</pubDate>
-    <description>OpenAI首席研究官Mark Chen分享他从高频交易到AI研究的历程，强调复现对培养研究品味的重要性，以及AlphaGo“第37手”带来的启发。</description>
+    <description>OpenAI首席研究官Mark Chen分享他从高频交易到AI研究的历程，强调复现对培养研究品味的重要性，以及AlphaGo“第37手”带来的启发。  要点: 规模定律仍然有效，预训练并未消亡。 / 强化学习在数学和编程等客观领域表现出色，而非主观领域。 / 研究品味通过复现关键论文来培养。</description>
   </item>
   <item>
     <title>AI红队测试超越人类 — Latent Space</title>
     <link>https://aipodcast.jasonlin.tech/e/kolter-latentsp-2026/</link>
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/kolter-latentsp-2026/</guid>
     <pubDate>Sun, 05 Jul 2026 11:28:37 -0000</pubDate>
-    <description>自动化红队模型在攻破AI系统方面已超越人类红队成员，凸显了专业AI安全服务的必要性。</description>
+    <description>自动化红队模型在攻破AI系统方面已超越人类红队成员，凸显了专业AI安全服务的必要性。  要点: 自动化红队测试在攻破AI模型方面已超越人类。 / AI漏洞与传统软件根本不同，需要新的安全方法。 / 更大的AI模型并不天然更安全，能力与鲁棒性无关。</description>
   </item>
   <item>
     <title>构建更严格的评估：Tejal Patwardhan谈衡量AI进展 — OpenAI 播客</title>
     <link>https://aipodcast.jasonlin.tech/e/tejal-theopena-2026/</link>
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/tejal-theopena-2026/</guid>
     <pubDate>Sun, 05 Jul 2026 02:24:35 -0000</pubDate>
-    <description>研究负责人Tejal Patwardhan讨论了随着旧基准饱和，需要更好评估的必要性，并分享了他在OpenAI从事预备评估工作的见解。</description>
+    <description>研究负责人Tejal Patwardhan讨论了随着旧基准饱和，需要更好评估的必要性，并分享了他在OpenAI从事预备评估工作的见解。  要点: 基准测试不好；应关注实际有用性。 / 模型进步比预期快；人们低估了它们。 / 评估必须从静态基准转向长期、现实的任务。</description>
   </item>
   <item>
     <title>从AlexNet到世界模型：计算扩展与空间智能 — Latent Space</title>
     <link>https://aipodcast.jasonlin.tech/e/justinjohnson-latentsp-2025/</link>
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/justinjohnson-latentsp-2025/</guid>
     <pubDate>Sun, 05 Jul 2026 02:24:35 -0000</pubDate>
-    <description>李飞飞和Justin Johnson探讨深度学习作为计算扩展的历史，从斯坦福到创立World Labs的历程，以及空间智能和世界模型的愿景。</description>
+    <description>李飞飞和Justin Johnson探讨深度学习作为计算扩展的历史，从斯坦福到创立World Labs的历程，以及空间智能和世界模型的愿景。  要点: 空间智能是下一个前沿，Marble 作为生成式 3D 世界模型代表了这一方向。 / 算力扩展推动了深度学习进步，但未来硬件可能需要全新架构。 / 视觉被低估；世界模型必须理解 3D 空间、物理和交互性。</description>
   </item>
   <item>
     <title>大型语言模型的生物学 — 斯坦福公开课</title>
     <link>https://aipodcast.jasonlin.tech/e/batson-stanford-2025/</link>
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/batson-stanford-2025/</guid>
     <pubDate>Sun, 05 Jul 2026 02:24:35 -0000</pubDate>
-    <description>来自Anthropic的Joshua Batson探讨机制可解释性，将梯度下降训练的神经网络比作进化塑造的生物系统，并探索大型语言模型既令人印象深刻又奇怪的行为。</description>
-  </item>
-  <item>
-    <title>从强化学习到Gemini Robotics：具身智能的进化之路 — Google DeepMind</title>
-    <link>https://aipodcast.jasonlin.tech/e/parada-googlede-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/parada-googlede-2025/</guid>
-    <pubDate>Sun, 05 Jul 2026 02:24:35 -0000</pubDate>
-    <description>Google DeepMind机器人研究负责人Karolina Parada探讨机器人技术的戏剧性演变，从教机器人叠积木到最新的Gemini Robotics模型，将多模态理解带入物理世界。</description>
-  </item>
-  <item>
-    <title>AI对齐可能并非灾难：Rohan Sha的乐观观点 — 80,000 小时</title>
-    <link>https://aipodcast.jasonlin.tech/e/rohinshah-80000hou-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/rohinshah-80000hou-2026/</guid>
-    <pubDate>Sun, 05 Jul 2026 02:10:29 -0000</pubDate>
-    <description>谷歌DeepMind的AGI对齐与安全负责人Rohan Sha解释为何他认为灾难性对齐失败不太可能发生，普通对齐技术很可能成功。</description>
-  </item>
-  <item>
-    <title>通往AGI的路径：架构、计算与超越大语言模型 — BuzzRobot</title>
-    <link>https://aipodcast.jasonlin.tech/e/hafner-buzzrobo-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/hafner-buzzrobo-2026/</guid>
-    <pubDate>Sun, 05 Jul 2026 02:10:29 -0000</pubDate>
-    <description>探讨Transformer和大语言模型能否通向AGI，架构与计算的作用，以及超越当前模型所需的巧妙想法。</description>
-  </item>
-  <item>
-    <title>从AV 1.0到2.0：端到端神经网络在自动驾驶中的崛起 — Training Data</title>
-    <link>https://aipodcast.jasonlin.tech/e/kendall-training-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/kendall-training-2025/</guid>
-    <pubDate>Sun, 05 Jul 2026 02:10:29 -0000</pubDate>
-    <description>Wave公司CEO Alex Kendall讨论自动驾驶从经典机器人学向端到端深度学习的范式转变，强调泛化能力和安全性。</description>
-  </item>
-  <item>
-    <title>智能商品化：2025年AI的三个关键趋势 — 斯坦福 AI 俱乐部</title>
-    <link>https://aipodcast.jasonlin.tech/e/jasonwei-stanford-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/jasonwei-stanford-2025/</guid>
-    <pubDate>Sun, 05 Jul 2026 02:10:29 -0000</pubDate>
-    <description>来自Meta超级智能实验室的Jason讨论了理解2025年AI的三个基本理念：智能商品化、验证者法则和智能的锯齿边缘。</description>
-  </item>
-  <item>
-    <title>OpenAI研究副总裁谈推理、思维链与AI未来 — The MAD Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/e/tworek-themadpo-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/tworek-themadpo-2025/</guid>
-    <pubDate>Sun, 05 Jul 2026 02:10:29 -0000</pubDate>
-    <description>Jared Fowk 解释模型如何推理、思维链的作用以及GPT-5之后的下一步。</description>
-  </item>
-  <item>
-    <title>从尴尬少年到AI联合创始人：汤姆·布朗的旅程 — Y Combinator</title>
-    <link>https://aipodcast.jasonlin.tech/e/tombrown-ycombina-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/tombrown-ycombina-2025/</guid>
-    <pubDate>Sun, 05 Jul 2026 02:10:29 -0000</pubDate>
-    <description>Anthropic联合创始人汤姆·布朗分享了他从一名挣扎的工程师到打造最重要AI公司之一的旅程，强调了从“狗”到“狼”的心态转变。</description>
-  </item>
-  <item>
-    <title>语言模型的强化学习终于奏效：在数学和编程领域达到专家水平 — Dwarkesh 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/bricken-dwarkesh-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/bricken-dwarkesh-2025/</guid>
-    <pubDate>Sun, 05 Jul 2026 02:10:29 -0000</pubDate>
-    <description>2025年，基于可验证奖励的强化学习让语言模型在数学和竞赛编程中达到专家水平，预计年底前软件工程智能体可完成一天的工作量。</description>
-  </item>
-  <item>
-    <title>OpenAI深度研究的起源故事 — No Priors 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/fulford-nopriors-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/fulford-nopriors-2025/</guid>
-    <pubDate>Sun, 05 Jul 2026 02:10:29 -0000</pubDate>
-    <description>OpenAI深度研究的先驱之一Issa Falford分享了这款使用推理和网络浏览完成多步研究任务的代理产品的起源故事。</description>
-  </item>
-  <item>
-    <title>从AlphaGo到AI智能体：Giannis谈强化学习的突破 — Training Data</title>
-    <link>https://aipodcast.jasonlin.tech/e/antonoglou-training-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/antonoglou-training-2025/</guid>
-    <pubDate>Sun, 05 Jul 2026 02:10:29 -0000</pubDate>
-    <description>DeepMind创始工程师Giannis探讨从AlphaGo历史性胜利到结合强化学习与大语言模型的AI智能体未来。</description>
-  </item>
-  <item>
-    <title>AlphaFold 3：解锁生命分子的结构 — Google DeepMind</title>
-    <link>https://aipodcast.jasonlin.tech/e/kohli-googlede-2024/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/kohli-googlede-2024/</guid>
-    <pubDate>Sun, 05 Jul 2026 02:10:29 -0000</pubDate>
-    <description>Pushmeet Kohli 讨论 AlphaFold 3 如何超越蛋白质，建模与 DNA、RNA 和小分子的相互作用，赋予科学家理解生物学的超能力。</description>
-  </item>
-  <item>
-    <title>OpenAI数学突破：发现背后的故事 — OpenAI 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/alexwei-theopena-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/alexwei-theopena-2026/</guid>
-    <pubDate>Sat, 04 Jul 2026 13:32:19 -0000</pubDate>
-    <description>Andrew Mayne与推理研究团队讨论他们最近的数学突破，从IMO金牌到P vs NP的旅程，以及测试时计算的激动人心之处。</description>
-  </item>
-  <item>
-    <title>Anthropic将MCP捐赠给Linux基金会：标准化AI与应用的连接 — Anthropic 官方</title>
-    <link>https://aipodcast.jasonlin.tech/e/davidsp-anthropi-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/davidsp-anthropi-2025/</guid>
-    <pubDate>Sat, 04 Jul 2026 13:32:19 -0000</pubDate>
-    <description>Anthropic将模型上下文协议（MCP）捐赠给Linux基金会，创建连接AI模型与软件硬件的开放标准，消除专有连接器。</description>
-  </item>
-  <item>
-    <title>Anthropic的哲学家：塑造AI性格与伦理 — Anthropic 官方</title>
-    <link>https://aipodcast.jasonlin.tech/e/askell-anthropi-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/askell-anthropi-2025/</guid>
-    <pubDate>Sat, 04 Jul 2026 13:32:19 -0000</pubDate>
-    <description>Anthropic的哲学家Amanda探讨了在塑造Claude性格和AI伦理时，哲学理想如何与工程现实相遇。</description>
-  </item>
-  <item>
-    <title>Claude Tag：主动记忆并自主行动的AI — Claude 官方</title>
-    <link>https://aipodcast.jasonlin.tech/e/boris-claude-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/boris-claude-2026/</guid>
-    <pubDate>Sat, 04 Jul 2026 13:12:22 -0000</pubDate>
-    <description>从自动补全到自主代理，Claude Tag通过主动介入、记忆指令并在频道中执行长期任务，彻底改变了工作流程。</description>
-  </item>
-  <item>
-    <title>从VR到机器人：物理AI的下一个前沿 — Lenny 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/caitlin-lennyspo-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/caitlin-lennyspo-2026/</guid>
-    <pubDate>Sat, 04 Jul 2026 13:12:22 -0000</pubDate>
-    <description>凯特琳·卡利诺夫斯基探讨从VR到机器人的转变、再工业化的必要性，以及从与史蒂夫·乔布斯和山姆·奥特曼共事中获得的经验。</description>
-  </item>
-  <item>
-    <title>最后的发明：Ben Mann谈2028年AGI、AI安全与人类未来 — Lenny 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/benmann-lennyspo-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/benmann-lennyspo-2025/</guid>
-    <pubDate>Sat, 04 Jul 2026 13:12:22 -0000</pubDate>
-    <description>Anthropic联合创始人Ben Mann探讨超级智能的时间线、离开OpenAI的原因、AI的生存风险以及如何为后奇点世界做准备。</description>
-  </item>
-  <item>
-    <title>构建前沿：与OpenAI的Karina Nguyen对话 — Lenny 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/karina-lennyspo-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/karina-lennyspo-2025/</guid>
-    <pubDate>Sat, 04 Jul 2026 13:12:22 -0000</pubDate>
-    <description>OpenAI研究员Karina Nguyen探讨团队如何构建产品、AI进步所需技能，以及她为何从工程转向研究。</description>
-  </item>
-  <item>
-    <title>古代印度武器：《摩诃婆罗多》中的梵天法宝与自主武器 — 乔·罗根体验</title>
-    <link>https://aipodcast.jasonlin.tech/e/aravind-powerful-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/aravind-powerful-2026/</guid>
-    <pubDate>Sat, 04 Jul 2026 01:36:01 -0000</pubDate>
-    <description>嘉宾讨论《摩诃婆罗多》中将梵天法宝描述为氢弹等价物及其他自主武器，暗示可能存在失落的先进文明。  要点: 好奇心是人类成功与满足的关键。 / 古代典籍描述了类似现代自主武器的先进武器。 / AI将取代工作，但人类会在好奇心和人际关系中找到意义。</description>
+    <description>来自Anthropic的Joshua Batson探讨机制可解释性，将梯度下降训练的神经网络比作进化塑造的生物系统，并探索大型语言模型既令人印象深刻又奇怪的行为。  要点: 大语言模型学习的是抽象、可组合的表征，而不仅仅是模式匹配。 / 模型执行复杂的并行计算，并提前规划多个词元。 / 字典学习揭示了可解释的特征，使得因果干预成为可能。</description>
   </item>
 </channel>
 </rss>

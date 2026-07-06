@@ -1,6 +1,6 @@
 # AI Podcast · 双语播客全文阅读站
 
-> 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文,提炼核心观点与反共识,并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
+> 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
 规模: 96 位人物 / 271 期访谈
@@ -107,7 +107,7 @@
 ## 最新访谈 Latest episodes
 - [AI Scaling Laws and the Future of Intelligence](https://aipodcast.jasonlin.tech/e/naval-naval-2026b/) — Naval Ravikant, Naval, 2026-07-03
 - [Claude Tag: Proactive AI That Remembers and Acts Autonomously](https://aipodcast.jasonlin.tech/e/boris-claude-2026/) — Boris Cherny, Claude, 2026-07-02
-- [Elon Musk on Fatherhood, AI, and Minimalism](https://aipodcast.jasonlin.tech/e/elon-seancste-2026/) — Elon Musk, seancstephens, 2026-07-02
+- [Elon Musk on Fatherhood, AI, and Minimalism](https://aipodcast.jasonlin.tech/e/elon-seancste-2026/) — Elon Musk, Sean C. Stephens, 2026-07-02
 - [Ancient Hindu Weapons: The Brahmastra and Autonomous Arms in the Mahabharata](https://aipodcast.jasonlin.tech/e/aravind-powerful-2026/) — Aravind Srinivas, PowerfulJRE, 2026-07-01
 - [Building Failure Machines: The Zynga Way](https://aipodcast.jasonlin.tech/e/pincus-jamesalt-2026/) — Mark Pincus, James Altucher, 2026-07-01
 - [From Super App to Invisible Interface: The Future of AI Agents](https://aipodcast.jasonlin.tech/e/brockman-alexkant-2026/) — Greg Brockman, Alex Kantrowitz, 2026-07-01
@@ -148,4 +148,4 @@
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
-- MCP server (只读内容,外部 AI 可接入): https://aipodcast-mcp.992978142.workers.dev/mcp
+- MCP server (只读内容，外部 AI 可接入): https://aipodcast-mcp.992978142.workers.dev/mcp
