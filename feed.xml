@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Mon, 06 Jul 2026 01:42:03 -0000</lastBuildDate>
+  <lastBuildDate>Tue, 07 Jul 2026 02:11:36 -0000</lastBuildDate>
+  <item>
+    <title>Linux 基金会 AI CTO 谈开源 AI、中国崛起与智能体 AI — Finoverse</title>
+    <link>https://aipodcast.jasonlin.tech/e/mattwhite-finovers-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/mattwhite-finovers-2026/</guid>
+    <pubDate>Tue, 07 Jul 2026 02:11:36 -0000</pubDate>
+    <description>Ibrahim Haddad 讨论了在关键任务中确定性代码比 LLM 更重要、中国 AI 实验室令人惊讶的开放性，以及 Linux 基金会在 AI 民主化中的作用。</description>
+  </item>
   <item>
     <title>埃隆·马斯克谈为人父、人工智能与极简主义 — Sean Stephens</title>
     <link>https://aipodcast.jasonlin.tech/e/elon-seancste-2026/</link>
@@ -209,13 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/justinjohnson-latentsp-2025/</guid>
     <pubDate>Sun, 05 Jul 2026 02:24:35 -0000</pubDate>
     <description>李飞飞和 Justin Johnson 探讨深度学习作为计算扩展的历史，从斯坦福到创立 World Labs 的历程，以及空间智能和世界模型的愿景。  要点: 空间智能是下一个前沿，Marble 作为生成式 3D 世界模型代表了这一方向。 / 算力扩展推动了深度学习进步，但未来硬件可能需要全新架构。 / 视觉被低估；世界模型必须理解 3D 空间、物理和交互性。</description>
-  </item>
-  <item>
-    <title>大型语言模型的生物学 — 斯坦福公开课</title>
-    <link>https://aipodcast.jasonlin.tech/e/batson-stanford-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/batson-stanford-2025/</guid>
-    <pubDate>Sun, 05 Jul 2026 02:24:35 -0000</pubDate>
-    <description>来自 Anthropic 的 Joshua Batson 探讨机制可解释性，将梯度下降训练的神经网络比作进化塑造的生物系统，并探索大型语言模型既令人印象深刻又奇怪的行为。  要点: 大语言模型学习的是抽象、可组合的表征，而不仅仅是模式匹配。 / 模型执行复杂的并行计算，并提前规划多个词元。 / 字典学习揭示了可解释的特征，使得因果干预成为可能。</description>
   </item>
 </channel>
 </rss>
