@@ -1620,7 +1620,11 @@ function vHome(){
   </section>
 
   ${(()=>{const seen=new Set(EPISODES.slice(0,12).map(e=>e.id));
-   const fresh=EPISODES.slice().sort((a,b)=>(b.addedAt||'').localeCompare(a.addedAt||'')||(b.date||'').localeCompare(a.date||'')).filter(e=>!seen.has(e.id)).slice(0,8);
+   const ranked=EPISODES.slice().sort((a,b)=>(b.addedAt||'').localeCompare(a.addedAt||'')||(b.date||'').localeCompare(a.date||'')).filter(e=>!seen.has(e.id));
+   // 至少 8 期;若最近一次是「批量收录」,把同一天 addedAt 的整批都显示（上限 20）,避免大批新收被截断
+   const topDay=ranked[0]&&ranked[0].addedAt;
+   const batch=topDay?ranked.filter(e=>e.addedAt===topDay).length:0;
+   const fresh=ranked.slice(0,Math.min(20,Math.max(8,batch)));
    return fresh.length?`<section class="wrap reveal" style="padding-top:8px">
     <div class="eyebrow">Recently added · 最近上新</div>
     <h2 class="title">最近收录</h2>
