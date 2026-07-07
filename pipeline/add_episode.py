@@ -198,7 +198,7 @@ def main():
     # 内联 EPISODES 只存元数据 + insights(不含 ts),保持 index.html 轻量
     ep = {"id": eid, "pid": a.pid, "pod": pod, "date": edate, "min": a.min or ymin,
           "fields": fields, "src": src, "tEn": tEn, "tZh": tZh, "sEn": sEn, "sZh": sZh, "insights": ins,
-          "addedAt": time.strftime("%Y-%m-%d")}   # 收录日(上新徽标/最近上新/RSS 用)
+          "addedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}   # 收录时间戳(UTC,精确到秒;最近上新按此精确排序)
 
     print(f"[4/5] 写入 index.html(元数据)+ mcp-data/ep(全文)", file=sys.stderr)
     html = HTML.read_text(encoding="utf-8")
