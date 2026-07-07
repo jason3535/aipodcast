@@ -221,6 +221,21 @@
 
   /* ---------- TTS 选中朗读 ---------- */
   .sel-bar{position:absolute;display:none;align-items:center;gap:7px;z-index:90;transform:translateX(-50%)}
+  .hl{border-bottom:2px solid var(--accent);cursor:pointer;background:linear-gradient(transparent 62%,color-mix(in srgb,var(--accent) 15%,transparent) 0);border-radius:1px}
+  [data-theme="dark"] .hl{background:linear-gradient(transparent 62%,color-mix(in srgb,var(--accent) 28%,transparent) 0)}
+  .hl.flash{animation:hlflash 1.3s ease}
+  @keyframes hlflash{0%,100%{background-color:transparent}35%{background-color:color-mix(in srgb,var(--accent) 42%,transparent)}}
+  .hl-toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%) translateY(8px);z-index:120;background:var(--text);color:var(--bg);font-family:var(--ui);font-size:13px;padding:9px 16px;border-radius:20px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;box-shadow:var(--shadow-lg)}
+  .hl-toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+  .marks-list{display:flex;flex-direction:column;gap:26px;max-width:760px}
+  .mk-ep .mk-eph{display:flex;align-items:baseline;justify-content:space-between;gap:12px;cursor:pointer;padding-bottom:9px;border-bottom:1px solid var(--line);margin-bottom:12px}
+  .mk-ep .mk-eph b{font-family:var(--han);font-size:16px;font-weight:600;color:var(--text)}
+  .mk-ep .mk-eph span{font-family:var(--ui);font-size:12px;color:var(--text-3);white-space:nowrap}
+  .mk-item{display:flex;gap:10px;align-items:flex-start;padding:7px 0}
+  .mk-item .mk-q{flex:1;font-family:var(--serif);font-size:15px;line-height:1.6;color:var(--text-2);cursor:pointer;border-left:2px solid var(--accent);padding-left:11px}
+  .mk-item .mk-q:hover{color:var(--text)}
+  .mk-item .mk-del{border:none;background:none;color:var(--text-3);font-size:18px;line-height:1;cursor:pointer;padding:0 4px;flex-shrink:0}
+  .mk-item .mk-del:hover{color:var(--text)}
   /* 手机：底部固定工具条（选区常驻，不与系统文本菜单抢位、滚动不消失） */
   .sel-bar.dock{position:fixed;left:50%;top:auto;bottom:84px;z-index:96;
     max-width:calc(100vw - 20px);flex-wrap:wrap;justify-content:center;
@@ -629,6 +644,7 @@
     <a onclick="go('#/people')" data-route="people">人物</a>
     <a onclick="go('#/topics')" data-route="topics">议题</a>
     <a onclick="go('#/browse')" data-route="browse">播客</a>
+    <a onclick="go('#/marks')" data-route="marks" id="navMarks" style="display:none">标记</a>
   </div>
   <div class="spacer"></div>
   <button class="icon" title="搜索 (/)" aria-label="搜索" onclick="toggleSearch()">
@@ -640,6 +656,7 @@
 <div id="selBar" class="sel-bar" onmousedown="event.preventDefault()">
   <button id="ttsBtn" class="sel-btn tts-btn" onclick="ttsPlay()"><span class="lbl">朗读所选</span></button>
   <button id="shareSelBtn" class="sel-btn share-sel-btn" onclick="shareSel()">分享</button>
+  <button id="markSelBtn" class="sel-btn" onclick="markSel()">标记</button>
   <button id="askSelBtn" class="sel-btn" onclick="askSel()">问问</button>
   <button id="peekSelBtn" class="sel-btn" onclick="peekSel()">看译文</button>
 </div>
@@ -1865,7 +1882,7 @@ function vEpisode(id){
     ? `<div class="ts-loading"><span class="ts-spin"></span>正在加载双语全文…</div>`
     : ts.map((s,i)=>`
     <div class="sec-h" id="sec-${i}"><span class="se">${s.sec}</span><span class="sz">${s.secZh||s.sec}</span></div>
-    ${(s.turns||[]).map(t=>{const g=t.spk===p.en.split(' ')[0]||t.spk===e.pid||t.spk===p.en;return `<div class="turn"><div class="spk" style="color:${g?FIELDS[e.fields[0]].c:'var(--text-3)'};font-weight:${g?700:600}">${t.spk||''}</div>
+    ${(s.turns||[]).map((t,ti)=>{const g=t.spk===p.en.split(' ')[0]||t.spk===e.pid||t.spk===p.en;return `<div class="turn" data-sec="${i}" data-ti="${ti}"><div class="spk" style="color:${g?FIELDS[e.fields[0]].c:'var(--text-3)'};font-weight:${g?700:600}">${t.spk||''}</div>
       <div class="en">${t.en||''}</div><div class="zh">${t.zh||''}</div></div>`}).join('')}`).join('');
   const tocItems=ts.map((s,i)=>`<a class="toc-i" data-sec="${i}" onclick="jumpSec(${i})"><span class="se">${s.sec}</span><span class="sz">${s.secZh||s.sec}</span></a>`).join('');
   const hasToc=ts.length>=3;
@@ -1999,7 +2016,7 @@ addEventListener('scroll',()=>{const b=document.getElementById('selBar');if(!b||
 const TTS_PROXY='https://aipodcast-tts.992978142.workers.dev';
 let ttsAudio=null;
 function inReader(node){const el=node&&node.nodeType===3?node.parentElement:node;return !!(el&&el.closest&&el.closest('.reader')&&!el.closest('.chat'));}
-let _selPeek=null,_peekHold=false;
+let _selPeek=null,_peekHold=false,_selMark=null;
 function ttsCheckSel(){
   const bar=$('#selBar'),btn=$('#ttsBtn');if(!bar||!btn)return;
   const sel=window.getSelection();const text=(sel?sel.toString():'').trim();
@@ -2018,7 +2035,7 @@ function ttsCheckSel(){
   btn.dataset.text=text;
   btn.dataset.sec=selSecIndex();   // 选中时即记下所在章节（手机点按钮时选区已没了，不能临时算）
   // 存「看译文」所需的选区落点（单语模式点按钮时选区已丢，须此刻记下）
-  _selPeek=null;
+  _selPeek=null;_selMark=null;
   try{
     const nd=sel.anchorNode.nodeType===3?sel.anchorNode.parentElement:sel.anchorNode;
     const turn=nd&&nd.closest?nd.closest('.turn'):null;
@@ -2028,7 +2045,8 @@ function ttsCheckSel(){
         const rg=sel.getRangeAt(0);
         let a=offsetInEl(src,rg.startContainer,rg.startOffset),b2=offsetInEl(src,rg.endContainer,rg.endOffset);
         if(b2<a)[a,b2]=[b2,a];
-        _selPeek={turn,srcIsEn,mid:Math.min((src.textContent.length||1)-1,Math.max(0,(a+b2)/2))};}}
+        _selPeek={turn,srcIsEn,mid:Math.min((src.textContent.length||1)-1,Math.max(0,(a+b2)/2))};
+        if(turn.dataset.sec!=null&&b2>a)_selMark={id:hlEpId(),sec:+turn.dataset.sec,ti:+turn.dataset.ti,lang:srcIsEn?'en':'zh',text:src.textContent.slice(a,b2),s:a,e:b2};}}
   }catch(_){}
   const pk=$('#peekSelBtn');if(pk)pk.textContent=document.body.dataset.lang==='zh'?'看原文':'看译文';
 }
@@ -2039,6 +2057,22 @@ function peekSel(){
   crossMark(_selPeek.turn,_selPeek.srcIsEn,_selPeek.mid);
   _peekHold=true;   // 防止紧随的 touchend→syncCross 立刻清掉
 }
+/* ====== 划线标记(选中→标记→下划线;「我的标记」汇总;随同步码同步) ====== */
+function hlGet(){try{const x=JSON.parse(localStorage.highlights||'{}');return x&&typeof x==='object'?x:{}}catch(e){return{}}}
+function hlSave(x){try{localStorage.highlights=JSON.stringify(x)}catch(_){}}
+function hlEpId(){const p=(location.hash||'').slice(2).split('?')[0].split('/');return p[0]==='episode'?p[1]:'';}
+function hlCount(){return Object.values(hlGet()).reduce((n,a)=>n+(a?a.length:0),0);}
+function hlNodeAt(el,off){const w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);let n,acc=0;while(n=w.nextNode()){const len=n.nodeValue.length;if(off<=acc+len)return[n,off-acc];acc+=len;}return[null,0];}
+function hlWrap(el,s,e,idx){const[sn,so]=hlNodeAt(el,s),[en,eo]=hlNodeAt(el,e);if(!sn||!en)return false;try{const r=document.createRange();r.setStart(sn,so);r.setEnd(en,eo);const sp=document.createElement('span');sp.className='hl';sp.dataset.hi=idx;sp.title='点击移除标记';sp.addEventListener('click',hlClick);r.surroundContents(sp);return true;}catch(_){return false;}}
+function applyHls(){const id=hlEpId();if(!id)return;const arr=hlGet()[id]||[];const byT={};arr.forEach((hh,idx)=>{const k=hh.sec+'|'+hh.ti+'|'+hh.lang;(byT[k]=byT[k]||[]).push(Object.assign({idx},hh));});for(const key in byT){const kp=key.split('|'),sec=kp[0],ti=kp[1],lang=kp[2];const turn=document.querySelector('.reader .turn[data-sec="'+sec+'"][data-ti="'+ti+'"]');if(!turn)continue;const el=turn.querySelector('.'+lang);if(!el)continue;byT[key].sort((a,b)=>b.s-a.s).forEach(hh=>hlWrap(el,hh.s,hh.e,hh.idx));}}
+function markSel(){if(!_selMark||!_selMark.text||!_selMark.id){hlHideSel();return;}const id=_selMark.id,st=hlGet(),arr=st[id]||(st[id]=[]);if(arr.some(hh=>hh.sec===_selMark.sec&&hh.ti===_selMark.ti&&hh.lang===_selMark.lang&&!(_selMark.e<=hh.s||_selMark.s>=hh.e))){hlToast('这段已标记');hlHideSel();return;}arr.push({sec:_selMark.sec,ti:_selMark.ti,lang:_selMark.lang,text:_selMark.text,s:_selMark.s,e:_selMark.e,ts:Date.now()});hlSave(st);if(typeof syncTouch==='function')syncTouch();const turn=document.querySelector('.reader .turn[data-sec="'+_selMark.sec+'"][data-ti="'+_selMark.ti+'"]');if(turn){const el=turn.querySelector('.'+_selMark.lang);if(el)hlWrap(el,_selMark.s,_selMark.e,arr.length-1);}hlToast('已标记 · 在「标记」查看');hlUpdNav();hlHideSel();}
+function hlClick(ev){ev.stopPropagation();const idx=+ev.currentTarget.dataset.hi;const id=hlEpId();if(confirm('移除这条标记？'))hlRemove(id,idx);}
+function hlRemove(id,idx){const st=hlGet(),arr=st[id]||[];if(arr[idx]){arr.splice(idx,1);if(!arr.length)delete st[id];hlSave(st);if(typeof syncTouch==='function')syncTouch();render();}}
+function hlHideSel(){const b=$('#selBar');if(b){b.style.display='none';b.classList.remove('dock');}try{const s=window.getSelection();s&&s.removeAllRanges&&s.removeAllRanges();}catch(_){}}
+let _hlTT=null;function hlToast(m){let t=$('#hlToast');if(!t){t=document.createElement('div');t.id='hlToast';t.className='hl-toast';document.body.appendChild(t);}t.textContent=m;t.classList.add('on');clearTimeout(_hlTT);_hlTT=setTimeout(()=>t.classList.remove('on'),1800);}
+function hlUpdNav(){const a=$('#navMarks');if(a){const c=hlCount();a.textContent=c?('标记 '+c):'标记';a.style.display=c?'':'none';}}
+function hlJump(id,sec,idx){const it=(hlGet()[id]||[])[idx];pendingLocate={id,at:sec,hl:it?it.text:''};go('#/episode/'+id);}
+function vMarks(){const hm=hlGet();const eps=Object.keys(hm).filter(id=>hm[id]&&hm[id].length).map(id=>({id,e:EPISODES.find(x=>x.id===id),items:hm[id]})).filter(x=>x.e);eps.forEach(x=>x.last=Math.max.apply(null,x.items.map(i=>i.ts||0)));eps.sort((a,b)=>b.last-a.last);const total=eps.reduce((n,x)=>n+x.items.length,0);if(!total)return `<div class="wrap"><section class="reveal" style="min-height:50vh"><div class="eyebrow">My highlights · 划线收藏</div><h2 class="title">我的标记</h2><div class="empty" style="margin-top:20px">还没有标记。阅读单集时选中文字，点弹出的「标记」即可划上下划线收藏，这里会汇总。</div></section></div>`;const body=eps.map(x=>`<div class="mk-ep"><div class="mk-eph" onclick="go('#/episode/${x.id}')"><b>${x.e.tZh}</b><span>${PEOPLE[x.e.pid]?PEOPLE[x.e.pid].zh:''} · ${x.items.length} 条</span></div>${x.items.map((it,idx)=>`<div class="mk-item"><span class="mk-q" onclick="hlJump('${x.id}',${it.sec},${idx})">${(it.text||'').replace(/</g,'&lt;')}</span><button class="mk-del" title="删除这条标记" onclick="hlRemove('${x.id}',${idx})">×</button></div>`).join('')}</div>`).join('');return `<div class="wrap"><section class="reveal"><div class="eyebrow">My highlights · 划线收藏</div><h2 class="title">我的标记 · ${total}</h2><div class="sub">阅读时选中文字点「标记」划线；这里汇总全部标记，点文字跳回原文。随同步码在设备间同步。</div><div class="marks-list" style="margin-top:22px">${body}</div></section></div>`;}
 function selSecIndex(){
   const node=window.getSelection().anchorNode;if(!node)return -1;
   let el=node.nodeType===3?node.parentElement:node;
@@ -2429,7 +2463,7 @@ async function syncSid(){
 syncSid();
 function syncGen(){const a='ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';const b=new Uint8Array(20);crypto.getRandomValues(b);return[...b].map(x=>a[x%32]).join('');}
 function syncCollect(){return{
-  read:[...readGet()],later:laterGet(),pos:readPosGet(),recent:recentGet(),recentT:recentTGet(),
+  read:[...readGet()],later:laterGet(),pos:readPosGet(),recent:recentGet(),recentT:recentTGet(),hl:hlGet(),
   prefs:{size:localStorage.size||'',lang:localStorage.lang||'',order:localStorage.order||'',theme:localStorage.theme||'',t:+localStorage.prefsT||0},
   t:Date.now()};}
 function syncMerge(r){
@@ -2464,6 +2498,12 @@ function syncMerge(r){
       try{localStorage.recentT=JSON.stringify(nt)}catch(_){}
     }
   }
+  const rh=r.hl;
+  if(rh&&typeof rh==='object'){const lh=hlGet();let hc=false;
+    for(const id in rh){const la=lh[id]||[];const seen=new Set(la.map(x=>x.sec+'|'+x.ti+'|'+x.lang+'|'+x.s+'|'+x.e));
+      (rh[id]||[]).forEach(x=>{const k=x.sec+'|'+x.ti+'|'+x.lang+'|'+x.s+'|'+x.e;if(!seen.has(k)){la.push(x);seen.add(k);hc=true;}});
+      if(la.length)lh[id]=la;}
+    if(hc){hlSave(lh);changed=true;}}
   return changed;
 }
 let _syncTimer=null,_syncBusy=false,_syncLastPull=0;
@@ -2558,9 +2598,11 @@ function render(){
   else if(parts[0]==='person')html=vPerson(parts[1]);
   else if(parts[0]==='pod')html=vPod(parts[1]);
   else if(parts[0]==='episode')html=vEpisode(parts[1]);
+  else if(parts[0]==='marks')html=vMarks();
   else html=vHome();
   $('#app').innerHTML=html;
   pangufy($('#app'));
+  applyHls();hlUpdNav();
   document.body.dataset.route=parts[0]||'home';
   document.querySelectorAll('.nav .links a').forEach(a=>a.classList.toggle('on',a.dataset.route===parts[0]));
   updateMeta(parts);
