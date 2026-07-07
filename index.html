@@ -672,7 +672,7 @@
 <!-- 静态骨架：主脚本下载完成前先呈现站点定位(render() 会整体覆盖) -->
 <div class="wrap" style="padding:72px 24px 40px;text-align:center">
   <div style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#0071e3;margin-bottom:14px">AI Podcast · 双语全文</div>
-  <h1 style="font-size:clamp(26px,4.5vw,40px);letter-spacing:-.02em;line-height:1.2;margin:0 0 14px">海外一线 AI 人物访谈<br>中英对照全文阅读</h1>
+  <h1 style="font-size:clamp(26px,4.5vw,40px);letter-spacing:-.02em;line-height:1.2;margin:0 0 14px">海外一线最新 AI 人物播客<br>中英对照全文阅读</h1>
   <p style="color:#6e6e73;font-size:15.5px;line-height:1.7;max-width:560px;margin:0 auto 34px">Karpathy、Dario、Demis、Hinton…… 把英文长播客变成可精读的双语全文：章节速览 · 核心观点 · 划词朗读 · AI 问答</p>
   <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
     <span class="sk-card"></span><span class="sk-card"></span><span class="sk-card"></span>
@@ -1535,7 +1535,7 @@ function vHome(){
   const feat=EPISODES.find(e=>!e.stub)||EPISODES[0],fp=PEOPLE[feat.pid];
   const featTurn=(feat.quotes&&feat.quotes[0])||(feat.insights&&feat.insights.consensus&&feat.insights.consensus[0])||{en:feat.sEn,zh:feat.sZh};
   return `
-  <div class="site-tag">海外一线 AI 人物访谈 · 中英对照全文<span class="st-n">${EPISODES.length} 期 · ${Object.keys(PEOPLE).length} 位</span></div>
+  <div class="site-tag">海外一线最新 AI 人物播客 · 中英对照全文<span class="st-n">${EPISODES.length} 期 · ${Object.keys(PEOPLE).length} 位</span></div>
   <div class="wrap hero">
     <div class="hero-card reveal">
       <div class="hero-art" style="background:linear-gradient(150deg,${fp.fields.map(fcolor).join(',')})">${av(feat.pid)}</div>
