@@ -2384,6 +2384,16 @@ function pangufy(root){
 /* ====== 多设备同步（无账号：同步码即身份；匿名随机码，零 PII） ====== */
 const SYNC_URL='https://aipodcast-sync.992978142.workers.dev';
 const syncCode=()=>localStorage.syncCode||'';
+// 统计去重用:同步码的哈希(前 8 字节)。发给统计的是哈希、绝非原始码(原始码=读写凭证)。缓存于 localStorage 供埋点同步取用。
+let _sid=(localStorage.syncSidFor&&localStorage.syncSidFor===localStorage.syncCode?localStorage.syncSid:'')||'';
+async function syncSid(){
+  const c=syncCode();if(!c){_sid='';return;}
+  if(localStorage.syncSidFor===c&&localStorage.syncSid){_sid=localStorage.syncSid;return;}
+  try{const buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode('uv|'+c));
+    _sid=[...new Uint8Array(buf)].slice(0,8).map(x=>x.toString(16).padStart(2,'0')).join('');
+    localStorage.syncSid=_sid;localStorage.syncSidFor=c;}catch(_){_sid='';}
+}
+syncSid();
 function syncGen(){const a='ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';const b=new Uint8Array(20);crypto.getRandomValues(b);return[...b].map(x=>a[x%32]).join('');}
 function syncCollect(){return{
   read:[...readGet()],later:laterGet(),pos:readPosGet(),recent:recentGet(),recentT:recentTGet(),
@@ -2441,14 +2451,14 @@ async function syncPull(){
       await syncPush();   // 合并结果回写,双向收敛
     }}catch(_){}
 }
-function syncStart(){localStorage.syncCode=syncGen();localStorage.prefsT=localStorage.prefsT||Date.now();syncPush();syncPanelRefresh();track('sync');}
+function syncStart(){localStorage.syncCode=syncGen();localStorage.prefsT=localStorage.prefsT||Date.now();syncSid();syncPush();syncPanelRefresh();track('sync');}
 async function syncJoin(code){
   code=(code||'').toUpperCase().replace(/[^A-Z2-7]/g,'');
   if(!/^[A-Z2-7]{20}$/.test(code)){alert('同步码应为 20 位字母数字（不含 0/1/8/9）');return false;}
-  localStorage.syncCode=code;await syncPull();syncPanelRefresh();return true;
+  localStorage.syncCode=code;await syncSid();await syncPull();syncPanelRefresh();return true;
 }
 function syncJoinInput(){const el=document.getElementById('syncIn');if(el)syncJoin(el.value);}
-function syncOff(){localStorage.removeItem('syncCode');localStorage.removeItem('syncT');syncPanelRefresh();}
+function syncOff(){localStorage.removeItem('syncCode');localStorage.removeItem('syncT');localStorage.removeItem('syncSid');localStorage.removeItem('syncSidFor');_sid='';syncPanelRefresh();}
 function syncCopy(what){
   const c=syncCode();if(!c)return;
   const v=what==='link'?('https://aipodcast.jasonlin.tech/#sync='+c):c.replace(/(.{4})(?=.)/g,'$1-');
@@ -2485,7 +2495,7 @@ const _ref=(()=>{try{return document.referrer?new URL(document.referrer).host:''
 let _lastView=null;
 function track(type,path){
   try{const p=path||(location.hash.replace(/^#/,'').split('?')[0]||'/');
-    const body=JSON.stringify({type,path:p,ua:_dev,ref:_ref});
+    const body=JSON.stringify({type,path:p,ua:_dev,ref:_ref,sid:_sid||''});
     if(navigator.sendBeacon)navigator.sendBeacon(STATS_URL,new Blob([body],{type:'text/plain'}));  // text/plain 才能免预检跨域发出
     else fetch(STATS_URL,{method:'POST',headers:{'Content-Type':'text/plain'},body,keepalive:true});
   }catch(_){}}

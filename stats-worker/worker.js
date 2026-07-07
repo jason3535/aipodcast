@@ -1,8 +1,11 @@
 /**
  * AI Podcast — 匿名访问统计 (Cloudflare Worker + D1)
- * 埋点: POST / {type,path,ref,ua} → 写 D1(无 Cookie / 不存 IP / 无个人信息)。
+ * 埋点: POST / {type,path,ref,ua,sid} → 写 D1(无 Cookie / 不存 IP / 无个人信息)。
  *   UV: 服务端算「每日匿名 hash」vid = SHA256(盐 + 当天日期 + IP + UA) 前 80bit,只存 hash、永不存 IP;
- *       hash 含日期→次日自动失效、跨天不可关联(隐私友好,规避 Cookie)。UV = count(distinct vid)。
+ *       hash 含日期→次日自动失效、跨天不可关联(隐私友好,规避 Cookie)。
+ *   sid: 客户端可选传「同步码的哈希」(仅开启多设备同步者才有);同一人多设备 sid 相同 →
+ *        UV 按 coalesce(sid,vid) 去重,多设备算 1 人。存的是哈希而非原始同步码(后者是读写凭证)。
+ *   UV = count(distinct coalesce(nullif(sid,''), vid))。
  * 查数: GET /q?token=SECRET&mode=overview|top|ref|sql&days=N[&q=SELECT...] → JSON(供 Claude Code 直接 curl)。
  */
 const ALLOW=new Set(['https://aipodcast.jasonlin.tech','http://localhost:8000','http://127.0.0.1:8000','null']);
@@ -35,9 +38,9 @@ export default {
             totalViews:(await one("SELECT count(*) c FROM events WHERE type='view'")).c,
             viewsToday:(await one("SELECT count(*) c FROM events WHERE type='view' AND day=date('now')")).c,
             views_range:(await one("SELECT count(*) c FROM events WHERE type='view' AND ts>=?",since)).c,
-            uvToday:(await one("SELECT count(distinct vid) c FROM events WHERE type='view' AND day=date('now') AND vid<>''")).c,
-            uv_rangeVisitorDays:(await one("SELECT count(distinct vid) c FROM events WHERE type='view' AND ts>=? AND vid<>''",since)).c,
-            days, byDay:await all("SELECT day,count(*) c,count(distinct vid) uv FROM events WHERE type='view' AND ts>=? GROUP BY day ORDER BY day",since),
+            uvToday:(await one("SELECT count(distinct coalesce(nullif(sid,''),vid)) c FROM events WHERE type='view' AND day=date('now') AND (vid<>'' OR sid<>'')")).c,
+            uv_rangeVisitorDays:(await one("SELECT count(distinct coalesce(nullif(sid,''),vid)) c FROM events WHERE type='view' AND ts>=? AND (vid<>'' OR sid<>'')",since)).c,
+            days, byDay:await all("SELECT day,count(*) c,count(distinct coalesce(nullif(sid,''),vid)) uv FROM events WHERE type='view' AND ts>=? GROUP BY day ORDER BY day",since),
             byEvent:await all("SELECT type,count(*) c FROM events WHERE ts>=? GROUP BY type ORDER BY c DESC",since),
             byDevice:await all("SELECT ua,count(*) c FROM events WHERE type='view' AND ts>=? GROUP BY ua",since)
           },200,co);
@@ -56,9 +59,10 @@ export default {
       if(origin&&!ALLOW.has(origin))return new Response('forbidden',{status:403,headers:co});
       let b;try{b=await req.json();}catch{return new Response('bad json',{status:400,headers:co});}
       const type=(''+(b.type||'view')).slice(0,16),path=(''+(b.path||'/')).slice(0,200),
-            ref=(''+(b.ref||'')).slice(0,120),ua=(''+(b.ua||'')).slice(0,12);
+            ref=(''+(b.ref||'')).slice(0,120),ua=(''+(b.ua||'')).slice(0,12),
+            sid=/^[0-9a-f]{1,16}$/.test(''+(b.sid||''))?b.sid:'';   // 只接受同步码哈希(hex),防注入
       let vid='';try{vid=await vidOf(env,req);}catch(_){}
-      try{await env.DB.prepare("INSERT INTO events(ts,day,type,path,ref,ua,vid) VALUES(?,date('now'),?,?,?,?,?)").bind(Date.now(),type,path,ref,ua,vid).run();}catch(_){}
+      try{await env.DB.prepare("INSERT INTO events(ts,day,type,path,ref,ua,vid,sid) VALUES(?,date('now'),?,?,?,?,?,?)").bind(Date.now(),type,path,ref,ua,vid,sid).run();}catch(_){}
       return new Response(null,{status:204,headers:co});
     }
     return new Response('AI Podcast stats worker',{headers:co});
