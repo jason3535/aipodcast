@@ -1578,7 +1578,7 @@ function initReadMark(id){const end=document.getElementById('readEnd');if(!end||
 // 新手入门 5 期（手工精选，约一季度手调一次）
 const STARTERS=['karpathy-training','hinton-alexkant-2026','demis-hugeiftr','dario-dwarkesh','jensen-dwarkesh'];
 function vHome(){
-  const feat=EPISODES.find(e=>!e.stub)||EPISODES[0],fp=PEOPLE[feat.pid];
+  const feat=EPISODES.filter(e=>!e.stub).sort((a,b)=>(b.addedAt||'').localeCompare(a.addedAt||'')||(b.date||'').localeCompare(a.date||''))[0]||EPISODES[0],fp=PEOPLE[feat.pid];
   const featTurn=(feat.quotes&&feat.quotes[0])||(feat.insights&&feat.insights.consensus&&feat.insights.consensus[0])||{en:feat.sEn,zh:feat.sZh};
   return `
   <div class="site-tag">海外一线最新 AI 人物播客 · 中英对照全文<span class="st-n">${EPISODES.length} 期 · ${Object.keys(PEOPLE).length} 位</span></div>
@@ -2070,7 +2070,7 @@ function hlClick(ev){ev.stopPropagation();const idx=+ev.currentTarget.dataset.hi
 function hlRemove(id,idx){const st=hlGet(),arr=st[id]||[];if(arr[idx]){arr.splice(idx,1);if(!arr.length)delete st[id];hlSave(st);if(typeof syncTouch==='function')syncTouch();render();}}
 function hlHideSel(){const b=$('#selBar');if(b){b.style.display='none';b.classList.remove('dock');}try{const s=window.getSelection();s&&s.removeAllRanges&&s.removeAllRanges();}catch(_){}}
 let _hlTT=null;function hlToast(m){let t=$('#hlToast');if(!t){t=document.createElement('div');t.id='hlToast';t.className='hl-toast';document.body.appendChild(t);}t.textContent=m;t.classList.add('on');clearTimeout(_hlTT);_hlTT=setTimeout(()=>t.classList.remove('on'),1800);}
-function hlUpdNav(){const a=$('#navMarks');if(a){const c=hlCount();a.textContent=c?('标记 '+c):'标记';a.style.display=c?'':'none';}}
+function hlUpdNav(){const a=$('#navMarks');if(a){a.textContent='标记';a.style.display=hlCount()?'':'none';}}
 function hlJump(id,sec,idx){const it=(hlGet()[id]||[])[idx];pendingLocate={id,at:sec,hl:it?it.text:''};go('#/episode/'+id);}
 function vMarks(){const hm=hlGet();const eps=Object.keys(hm).filter(id=>hm[id]&&hm[id].length).map(id=>({id,e:EPISODES.find(x=>x.id===id),items:hm[id]})).filter(x=>x.e);eps.forEach(x=>x.last=Math.max.apply(null,x.items.map(i=>i.ts||0)));eps.sort((a,b)=>b.last-a.last);const total=eps.reduce((n,x)=>n+x.items.length,0);if(!total)return `<div class="wrap"><section class="reveal" style="min-height:50vh"><div class="eyebrow">My highlights · 划线收藏</div><h2 class="title">我的标记</h2><div class="empty" style="margin-top:20px">还没有标记。阅读单集时选中文字，点弹出的「标记」即可划上下划线收藏，这里会汇总。</div></section></div>`;const body=eps.map(x=>`<div class="mk-ep"><div class="mk-eph" onclick="go('#/episode/${x.id}')"><b>${x.e.tZh}</b><span>${PEOPLE[x.e.pid]?PEOPLE[x.e.pid].zh:''} · ${x.items.length} 条</span></div>${x.items.map((it,idx)=>`<div class="mk-item"><span class="mk-q" onclick="hlJump('${x.id}',${it.sec},${idx})">${(it.text||'').replace(/</g,'&lt;')}</span><button class="mk-del" title="删除这条标记" onclick="hlRemove('${x.id}',${idx})">×</button></div>`).join('')}</div>`).join('');return `<div class="wrap"><section class="reveal"><div class="eyebrow">My highlights · 划线收藏</div><h2 class="title">我的标记 · ${total}</h2><div class="sub">阅读时选中文字点「标记」划线；这里汇总全部标记，点文字跳回原文。随同步码在设备间同步。</div><div class="marks-list" style="margin-top:22px">${body}</div></section></div>`;}
 function selSecIndex(){
@@ -2393,6 +2393,11 @@ function srTopic(d){return `<div class="sr-row" data-go="#/topic/${d.slug}" oncl
   <div class="sr-ic" style="background:var(--accent)"></div>
   <div class="sr-meta"><div class="sr-t">${d.zh} · ${d.en}</div>
   <div class="sr-s">议题 · ${(TOPICS.items[d.slug]||[]).length} 条跨人物观点</div></div></div>`;}
+function srMark(m){return `<div class="sr-row" data-mk="${m.id}|${m.it.sec}|${m.idx}" onclick="srPickMark('${m.id}',${m.it.sec},${m.idx})">
+  <div class="sr-ic" style="background:var(--accent)"></div>
+  <div class="sr-meta"><div class="sr-t">${(m.it.text||'').replace(/</g,'&lt;')}</div>
+  <div class="sr-s">我的标记 · ${PEOPLE[m.e.pid]?PEOPLE[m.e.pid].zh:''} · ${m.e.tZh}</div></div></div>`;}
+function srPickMark(id,sec,idx){closeSearch();hlJump(id,sec,idx);}
 function srPick(h){closeSearch();go(h);}
 function searchInput(q){
   const k=q.trim().toLowerCase(),res=$('#searchResults');
@@ -2410,7 +2415,12 @@ function searchInput(q){
     const hit=pts.find(x=>((x.en||'')+(x.zh||'')).toLowerCase().includes(k));
     return hit?{e,snip:'“'+(hit.zh||hit.en)+'”'}:null;
   }).filter(Boolean);
+  const marks=[];const hm=hlGet();
+  for(const id in hm){const e=EPISODES.find(x=>x.id===id);if(!e)continue;
+    (hm[id]||[]).forEach((it,idx)=>{if((it.text||'').toLowerCase().includes(k))marks.push({id,idx,it,e});});}
+  marks.sort((a,b)=>(b.it.ts||0)-(a.it.ts||0));
   let html='';
+  if(marks.length)html+=`<div class="sr-group">我的标记 · ${marks.length}</div>`+marks.map(srMark).join('');
   if(tps.length)html+=`<div class="sr-group">议题 · ${tps.length}</div>`+tps.map(srTopic).join('');
   if(ppl.length)html+=`<div class="sr-group">人物 · ${ppl.length}</div>`+ppl.map(srPerson).join('');
   if(eps.length)html+=`<div class="sr-group">播客 · ${eps.length}（含核心观点匹配）</div>`+eps.map(x=>srEp(x.e,x.snip)).join('');
@@ -2424,7 +2434,7 @@ function searchKey(e){
   if(e.key==='Escape'){closeSearch();}
   else if(e.key==='ArrowDown'){e.preventDefault();srSel(Math.min(rows.length-1,i+1));rows[Math.min(rows.length-1,i+1)]?.scrollIntoView({block:'nearest'});}
   else if(e.key==='ArrowUp'){e.preventDefault();srSel(Math.max(0,i-1));rows[Math.max(0,i-1)]?.scrollIntoView({block:'nearest'});}
-  else if(e.key==='Enter'){const r=rows[i<0?0:i];if(r)srPick(r.dataset.go);}
+  else if(e.key==='Enter'){const r=rows[i<0?0:i];if(r){if(r.dataset.mk){const m=r.dataset.mk.split('|');srPickMark(m[0],+m[1],+m[2]);}else srPick(r.dataset.go);}}
 }
 
 /* ============================ ROUTER ============================ */
