@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 96 位人物 / 271 期访谈
+规模: 97 位人物 / 272 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -45,6 +45,7 @@
 - [Pushmeet Kohli / 普什米特·科利](https://aipodcast.jasonlin.tech/pp/kohli/): VP of Research (AI for Science), Google DeepMind — 2 期
 - [Nando de Freitas / 南多·德弗雷塔斯](https://aipodcast.jasonlin.tech/pp/nando/): VP & Distinguished Scientist, Microsoft AI (prev. DeepMind) — 2 期
 - [Tejal Patwardhan / 泰贾尔·帕特瓦尔丹](https://aipodcast.jasonlin.tech/pp/tejal/): Frontier Evals Lead, OpenAI — 1 期
+- [Matt White / 马特·怀特](https://aipodcast.jasonlin.tech/pp/mattwhite/): AI CTO, Linux Foundation; ED, PyTorch Foundation — 1 期
 - [Alexander Wei / 亚历山大·魏](https://aipodcast.jasonlin.tech/pp/alexwei/): Research, OpenAI — 1 期
 - [Rohin Shah / 罗欣·沙阿](https://aipodcast.jasonlin.tech/pp/rohinshah/): Head of AGI Safety & Alignment, Google DeepMind — 1 期
 - [Michael I. Jordan / 迈克尔·乔丹](https://aipodcast.jasonlin.tech/pp/mjordan/): Professor, UC Berkeley; foundations of machine learning — 1 期
@@ -128,6 +129,7 @@
 - [AI Factory Groundbreaking: Smarter, Safer, and Reindustrializing the US](https://aipodcast.jasonlin.tech/e/jensen-associat-2026/) — Jensen Huang, Associated Press, 2026-06-16
 - [Building Crunchier Evals: Tejal Patwardhan on Measuring AI Progress](https://aipodcast.jasonlin.tech/e/tejal-theopena-2026/) — Tejal Patwardhan, The OpenAI Podcast, 2026-06-16
 - [Perplexity CEO: Attack, Attack, Attack](https://aipodcast.jasonlin.tech/e/aravind-20vcwith-2026/) — Aravind Srinivas, 20VC with Harry Stebbings, 2026-06-15
+- [AI CTO at Linux Foundation on Open Source AI, China's Rise, and Agentic AI](https://aipodcast.jasonlin.tech/e/mattwhite-finovers-2026/) — Matt White, Finoverse, 2026-06-15
 - [Mark Pincus on Proven Better New: A Framework for Successful Product Ideas](https://aipodcast.jasonlin.tech/e/pincus-lennyspo-2026/) — Mark Pincus, Lenny’s Podcast, 2026-06-14
 - [Building the dynamo of the intelligence revolution](https://aipodcast.jasonlin.tech/e/jensen-training/) — Jensen Huang, Training Data, 2026-06-10
 - [Anthropic: The AI Siblings Building Responsible Superintelligence](https://aipodcast.jasonlin.tech/e/dario-thecircu-2026/) — Dario Amodei, The Circuit (Bloomberg), 2026-06-10
@@ -144,7 +146,6 @@
 - [The Origin of Claude Code: From Accident to Agent](https://aipodcast.jasonlin.tech/e/boris-acquired-2026/) — Boris Cherny, Acquired Unplugged (presented by WorkOS), 2026-06-02
 - [Why AI Alignment Might Not Be Catastrophic: Rohan Sha's Optimistic Take](https://aipodcast.jasonlin.tech/e/rohinshah-80000hou-2026/) — Rohin Shah, 80,000 Hours, 2026-06-02
 - [Naval Podcast: Building Factories for AI, Supersonic Jets, and Brain Interfaces](https://aipodcast.jasonlin.tech/e/naval-naval-2026/) — Naval Ravikant, Naval, 2026-06-01
-- [Demis Hassabis: From Singleton Dream to Collective Action](https://aipodcast.jasonlin.tech/e/demis-unsuperv-2026/) — Demis Hassabis, Unsupervised Learning, 2026-06-01
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
