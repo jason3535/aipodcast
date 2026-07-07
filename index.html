@@ -357,6 +357,20 @@
   .ordbtn:hover{color:var(--text);border-color:var(--text-3)}
   body:not([data-lang="both"]) #orderBtn{display:none}
   @media(max-width:560px){.ordbtn .ol{display:none}.ordbtn{padding:6px 9px}}
+  /* 移动端:标题栏只留 返回+语言+⋯,其余收进下拉面板 */
+  .rb-more{display:none;border:none;background:var(--surface-2);color:var(--text);font-size:17px;line-height:1;
+    padding:7px 12px;border-radius:9px;cursor:pointer;font-family:var(--ui)}
+  .rb-drop{display:contents}
+  @media(max-width:600px){
+    .read-bar .rb-drop{display:none}
+    .read-bar.rb-open .rb-drop{display:flex;position:absolute;top:calc(100% + 8px);right:10px;z-index:95;
+      flex-wrap:wrap;gap:9px;max-width:calc(100vw - 20px);justify-content:flex-end;
+      background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:11px;box-shadow:var(--shadow-lg)}
+    .rb-more{display:inline-flex}
+    .read-bar.rb-open .rb-more{background:var(--text);color:var(--bg)}
+    .read-bar.rb-open .rb-drop .ordbtn .ol{display:inline}
+    .read-bar.rb-open .rb-drop .ordbtn{padding:6px 12px}
+  }
 
   .reader{max-width:780px;margin:0 auto;padding:46px 24px 120px}
   .reader .ep-head{margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid var(--line)}
@@ -1437,7 +1451,12 @@ addEventListener('visibilitychange',()=>{
   if(onHome&&cur!==_recentSnap){const sy=scrollY;render();scrollTo(0,sy);}
   _recentSnap=cur;
 });
-function recentAdd(id){let r=recentGet().filter(x=>x!==id);r.unshift(id);localStorage.recentEpisodes=JSON.stringify(r.slice(0,6));_recentSnap=localStorage.recentEpisodes;}
+function recentAdd(id){let r=recentGet().filter(x=>x!==id);r.unshift(id);localStorage.recentEpisodes=JSON.stringify(r.slice(0,6));_recentSnap=localStorage.recentEpisodes;
+  try{const t=JSON.parse(localStorage.recentT||'{}');t[id]=Date.now();
+    const ks=Object.keys(t);if(ks.length>30){ks.sort((a,b)=>t[a]-t[b]);ks.slice(0,ks.length-30).forEach(k=>delete t[k]);}
+    localStorage.recentT=JSON.stringify(t);}catch(_){}
+  syncTouch();}
+function recentTGet(){try{const r=JSON.parse(localStorage.recentT||'{}');return r&&typeof r==='object'?r:{}}catch(e){return{}}}
 /* 已读标记（localStorage）:列表卡片显示徽标，详情页可手动切换，或滚到底自动标记 */
 function readGet(){try{const r=JSON.parse(localStorage.readEpisodes||'[]');return new Set(Array.isArray(r)?r:[])}catch(e){return new Set()}}
 function readHas(id){return readGet().has(id);}
@@ -1865,14 +1884,17 @@ function vEpisode(id){
     <div class="read-prog" id="readProg"></div>
     <div class="back" onclick="history.back()">‹ <b>${p.zh} · ${e.pod.zh}</b></div>
     <div class="tools">
-      <div class="seg" id="sizeSeg">
-        <button onclick="setSize('s')">小</button><button onclick="setSize('m')">中</button><button onclick="setSize('l')">大</button></div>
       <div class="seg" id="langSeg">
         <button onclick="setLang('en')">EN</button><button onclick="setLang('zh')">中</button><button onclick="setLang('both')">双语</button></div>
+      <div class="rb-drop" id="rbDrop">
+      <div class="seg" id="sizeSeg">
+        <button onclick="setSize('s')">小</button><button onclick="setSize('m')">中</button><button onclick="setSize('l')">大</button></div>
       <button id="orderBtn" class="ordbtn" onclick="toggleOrder()" title="切换原文/译文在前"><span class="ol">原文在前</span></button>
       <button id="shareBtn" class="ordbtn" onclick="copyShare('${e.id}')" title="复制本期分享链接（预览显示该期标题）">分享</button>
       <button id="readBtn" class="ordbtn readbtn${readHas(e.id)?' on':''}" onclick="toggleRead('${e.id}')" title="标记本期为已读/未读"><span class="rl">${readHas(e.id)?'已读 ✓':'标记已读'}</span></button>
       <button id="laterBtn" class="ordbtn laterbtn${laterHas(e.id)?' on':''}" onclick="toggleLater('${e.id}')" title="加入/移出稍后读清单"><span class="ll">${laterHas(e.id)?'已加待读 ★':'稍后读 ☆'}</span></button>
+      </div>
+      <button class="rb-more" onclick="rbToggle(event)" aria-label="更多操作">⋯</button>
     </div>
   </div>
   ${hasToc ? `<div class="read-wrap">
@@ -1890,6 +1912,8 @@ function vEpisode(id){
 let tocObserver=null;
 function jumpSec(i){const el=document.getElementById('sec-'+i);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
   const sh=$('#tocSheet');if(sh)sh.classList.remove('on');}
+function rbToggle(ev){if(ev)ev.stopPropagation();const b=document.querySelector('.read-bar');if(b)b.classList.toggle('rb-open');}
+addEventListener('click',e=>{const b=document.querySelector('.read-bar.rb-open');if(b&&!b.contains(e.target))b.classList.remove('rb-open');});
 function toggleTocSheet(){const sh=$('#tocSheet');if(!sh)return;sh.classList.toggle('on');
   if(sh.classList.contains('on')){const on=sh.querySelector('.toc-i.on');if(on&&on.scrollIntoView)on.scrollIntoView({block:'center'});}}
 function setTocActive(i,total){
@@ -2349,7 +2373,7 @@ const SYNC_URL='https://aipodcast-sync.992978142.workers.dev';
 const syncCode=()=>localStorage.syncCode||'';
 function syncGen(){const a='ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';const b=new Uint8Array(20);crypto.getRandomValues(b);return[...b].map(x=>a[x%32]).join('');}
 function syncCollect(){return{
-  read:[...readGet()],later:laterGet(),pos:readPosGet(),
+  read:[...readGet()],later:laterGet(),pos:readPosGet(),recent:recentGet(),recentT:recentTGet(),
   prefs:{size:localStorage.size||'',lang:localStorage.lang||'',order:localStorage.order||'',theme:localStorage.theme||'',t:+localStorage.prefsT||0},
   t:Date.now()};}
 function syncMerge(r){
@@ -2371,10 +2395,18 @@ function syncMerge(r){
     if(pf.theme)document.documentElement.dataset.theme=pf.theme;
     ['size','lang','order'].forEach(k=>{if(pf[k])document.body.dataset[k]=pf[k];});
   }
-  // 新设备「继续阅读」为空时,用阅读位置最近 6 期补齐
-  if(posChanged&&!recentGet().length){
-    const ids=Object.keys(lp).sort((a,b)=>(lp[b].t||0)-(lp[a].t||0)).slice(0,6);
-    if(ids.length){localStorage.recentEpisodes=JSON.stringify(ids);changed=true;}
+  // 「上次看到」合并:两端 recent ∪ 时间戳(缺失回退阅读位置 t),按新→旧取 6
+  {
+    const lt=recentTGet(),rt=r.recentT||{};
+    const tOf=id=>Math.max(lt[id]||0,rt[id]||0,(lp[id]&&lp[id].t)||0);
+    const ids=[...new Set([...(recentGet()),...(r.recent||[])])];
+    if(ids.length){
+      const merged=ids.sort((a,b)=>tOf(b)-tOf(a)).slice(0,6);
+      if(JSON.stringify(merged)!==JSON.stringify(recentGet())){
+        localStorage.recentEpisodes=JSON.stringify(merged);_recentSnap=localStorage.recentEpisodes;changed=true;}
+      const nt={};ids.forEach(id=>{const t=tOf(id);if(t)nt[id]=t;});
+      try{localStorage.recentT=JSON.stringify(nt)}catch(_){}
+    }
   }
   return changed;
 }
