@@ -209,6 +209,10 @@ def main():
     eps.sort(key=lambda e: e.get("date", ""), reverse=True)
     html = html[:ai] + "const EPISODES = " + json.dumps(eps, ensure_ascii=False) + ";\n\n" + html[bi:]
     HTML.write_text(html, encoding="utf-8")
+    try:  # 保持首页轻量:把 insights/brief 抽到 data/ep-extra.json(首屏后前端非阻塞回填)
+        subprocess.run(["python3", str(Path(__file__).parent / "split_extra.py")], check=False)
+    except Exception as _e:
+        print(f"  ⚠️ split_extra 未跑:{_e}", file=sys.stderr)
     print(f"[5/5] 完成:{eid} | {len(ts)} 章 + 共识{len(ins.get('consensus',[]))}/反{len(ins.get('contrarian',[]))}", file=sys.stderr)
     print(f"  提示:跑 `node pipeline/build_mcp_data.js` 刷新 MCP 检索索引,然后 git add mcp-data && push")
 
