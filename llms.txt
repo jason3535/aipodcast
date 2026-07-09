@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 104 位人物 / 287 期访谈
+规模: 109 位人物 / 292 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -49,8 +49,13 @@
 - [Pushmeet Kohli / 普什米特·科利](https://aipodcast.jasonlin.tech/pp/kohli/): VP of Research (AI for Science), Google DeepMind — 2 期
 - [Nando de Freitas / 南多·德弗雷塔斯](https://aipodcast.jasonlin.tech/pp/nando/): VP & Distinguished Scientist, Microsoft AI (prev. DeepMind) — 2 期
 - [Jerry Tworek / 杰里·特沃雷克](https://aipodcast.jasonlin.tech/pp/tworek/): VP of Research, OpenAI — 2 期
+- [Ramin Hasani / 拉明·哈萨尼](https://aipodcast.jasonlin.tech/pp/hasani/): Co-founder & CEO, Liquid AI; liquid neural networks (ex-MIT) — 1 期
+- [Grant Sanderson / 格兰特·桑德森](https://aipodcast.jasonlin.tech/pp/grantsanderson/): Creator of 3Blue1Brown; math educator — 1 期
+- [Dan Biderman / 丹·比德曼](https://aipodcast.jasonlin.tech/pp/danbiderman/): Co-founder, Engram; memory & continual learning — 1 期
 - [Tejal Patwardhan / 泰贾尔·帕特瓦尔丹](https://aipodcast.jasonlin.tech/pp/tejal/): Frontier Evals Lead, OpenAI — 1 期
+- [Joon Sung Park / 朴俊成](https://aipodcast.jasonlin.tech/pp/joonpark/): Co-founder, Simile; creator of Generative Agents (Stanford) — 1 期
 - [Matt White / 马特·怀特](https://aipodcast.jasonlin.tech/pp/mattwhite/): AI CTO, Linux Foundation; ED, PyTorch Foundation — 1 期
+- [Logan Kilpatrick / 洛根·基尔帕特里克](https://aipodcast.jasonlin.tech/pp/logankilpatrick/): Lead, Google AI Studio & Gemini API; ex-OpenAI — 1 期
 - [Alexander Wei / 亚历山大·魏](https://aipodcast.jasonlin.tech/pp/alexwei/): Research, OpenAI — 1 期
 - [Ali Behrouz / 阿里·贝赫鲁兹](https://aipodcast.jasonlin.tech/pp/alibehrouz/): Researcher, Google; PhD student, Cornell (continual learning) — 1 期
 - [Rohin Shah / 罗欣·沙阿](https://aipodcast.jasonlin.tech/pp/rohinshah/): Head of AGI Safety & Alignment, Google DeepMind — 1 期
@@ -113,6 +118,7 @@
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 1 期
 
 ## 最新访谈 Latest episodes
+- [Liquid AI: Squeezing Maximum Intelligence from Limited Compute](https://aipodcast.jasonlin.tech/e/hasani-thecogni-2026/) — Ramin Hasani, The Cognitive Revolution, 2026-07-04
 - [AI Scaling Laws and the Future of Intelligence](https://aipodcast.jasonlin.tech/e/naval-naval-2026b/) — Naval Ravikant, Naval, 2026-07-03
 - [Claude Tag: Proactive AI That Remembers and Acts Autonomously](https://aipodcast.jasonlin.tech/e/boris-claude-2026/) — Boris Cherny, Claude, 2026-07-02
 - [Elon Musk on Fatherhood, AI, and Minimalism](https://aipodcast.jasonlin.tech/e/elon-seancste-2026/) — Elon Musk, Sean C. Stephens, 2026-07-02
@@ -121,12 +127,14 @@
 - [From Super App to Invisible Interface: The Future of AI Agents](https://aipodcast.jasonlin.tech/e/brockman-alexkant-2026/) — Greg Brockman, Alex Kantrowitz, 2026-07-01
 - [Building Bridges Through Medical Science: The Near School of the Heart](https://aipodcast.jasonlin.tech/e/hinton-mitimes-2026/) — Geoffrey Hinton, MIT IMES, 2026-06-30
 - [From Motel to Semi Analysis: Dylan Patel's Journey](https://aipodcast.jasonlin.tech/e/dylanpatel-sequoiac-2026/) — Dylan Patel, Sequoia Capital, 2026-06-30
+- [AI in Math: From IMO to Millennium Problems](https://aipodcast.jasonlin.tech/e/grantsanderson-dwarkesh-2026/) — Grant Sanderson, Dwarkesh Podcast, 2026-06-30
 - [AI Is Inverting Product Teams: Andrew Ambrosino on Codex](https://aipodcast.jasonlin.tech/e/ajambrosino-lennyspo-2026/) — Andrew Ambrosino, Lenny’s Podcast, 2026-06-28
 - [Large-Scale Test Time Compute and Model Evaluation](https://aipodcast.jasonlin.tech/e/noambrown-nopriors-2026/) — Noam Brown, No Priors, 2026-06-26
 - [AI's Power Thirst: Blackmail, Self-Preservation, and What We Can Do](https://aipodcast.jasonlin.tech/e/bengio-sineadbo-2026/) — Yoshua Bengio, Sinead Bovell, 2026-06-25
 - [From Trading to AGI: Mark Chen on Research Taste and Replication](https://aipodcast.jasonlin.tech/e/markchen-latentsp-2026/) — Mark Chen, Latent Space, 2026-06-25
 - [Building Products People Love: A Playbook for the AI Era](https://aipodcast.jasonlin.tech/e/pincus-ycombina-2026/) — Mark Pincus, Y Combinator, 2026-06-25
 - [Demis Hassabis on AGI, AI Risks, and DeepMind's Competitive Edge](https://aipodcast.jasonlin.tech/e/demis-semafort-2026/) — Demis Hassabis, Semafor Tech, 2026-06-24
+- [Memory and Continual Learning: The Next Frontier in AI](https://aipodcast.jasonlin.tech/e/danbiderman-training-2026/) — Dan Biderman, Training Data, 2026-06-24
 - [AlphaFold: AI's Nobel-Winning Leap in Protein Folding](https://aipodcast.jasonlin.tech/e/jumper-machinel-2026/) — John Jumper, Machine Learning Street Talk, 2026-06-22
 - [AI Red Teaming Outperforms Humans](https://aipodcast.jasonlin.tech/e/kolter-latentsp-2026/) — Zico Kolter, Latent Space, 2026-06-22
 - [Fiona Fung on AI's Impact on Software Engineering](https://aipodcast.jasonlin.tech/e/fiona-lennyspo-2026/) — Fiona Fung, Lenny’s Podcast, 2026-06-21
@@ -137,9 +145,11 @@
 - [AI Factory Groundbreaking: Smarter, Safer, and Reindustrializing the US](https://aipodcast.jasonlin.tech/e/jensen-associat-2026/) — Jensen Huang, Associated Press, 2026-06-16
 - [Building Crunchier Evals: Tejal Patwardhan on Measuring AI Progress](https://aipodcast.jasonlin.tech/e/tejal-theopena-2026/) — Tejal Patwardhan, The OpenAI Podcast, 2026-06-16
 - [How to Stand Out in an AI-Driven Job Market](https://aipodcast.jasonlin.tech/e/ethanhe-simonsin-2026/) — Ethan He, Simon Sinek, 2026-06-16
+- [Simulating Human Societies with AI: From Smallville to Real-World Applications](https://aipodcast.jasonlin.tech/e/joonpark-training-2026/) — Joon Sung Park, Training Data, 2026-06-16
 - [Perplexity CEO: Attack, Attack, Attack](https://aipodcast.jasonlin.tech/e/aravind-20vcwith-2026/) — Aravind Srinivas, 20VC with Harry Stebbings, 2026-06-15
 - [AI CTO at Linux Foundation on Open Source AI, China's Rise, and Agentic AI](https://aipodcast.jasonlin.tech/e/mattwhite-finovers-2026/) — Matt White, Finoverse, 2026-06-15
 - [Mark Pincus on Proven Better New: A Framework for Successful Product Ideas](https://aipodcast.jasonlin.tech/e/pincus-lennyspo-2026/) — Mark Pincus, Lenny’s Podcast, 2026-06-14
+- [Agentic AI Era: Google's Anti-Gravity Harness Powers Next-Gen Products](https://aipodcast.jasonlin.tech/e/logankilpatrick-training-2026/) — Logan Kilpatrick, Training Data, 2026-06-11
 - [Building the dynamo of the intelligence revolution](https://aipodcast.jasonlin.tech/e/jensen-training/) — Jensen Huang, Training Data, 2026-06-10
 - [Anthropic: The AI Siblings Building Responsible Superintelligence](https://aipodcast.jasonlin.tech/e/dario-thecircu-2026/) — Dario Amodei, The Circuit (Bloomberg), 2026-06-10
 - [World Models: Enabler for the Next AR Revolution](https://aipodcast.jasonlin.tech/e/lecun-computer-2026/) — Yann LeCun, Computer Vision and Geometry Group, ETH Zurich, 2026-06-09
@@ -148,11 +158,6 @@
 - [Meta's AI Journey: From Llama 4 to Muse Spark and Beyond](https://aipodcast.jasonlin.tech/e/awang-bloomber-2026/) — Alexandr Wang, Bloomberg Live, 2026-06-05
 - [Thinking Machines on AI’s next chapter](https://aipodcast.jasonlin.tech/e/murati-bloomber/) — Mira Murati, Bloomberg, 2026-06-04
 - [AI Godfather Jeff Hinton on AI's Trajectory, Risks, and Superintelligence](https://aipodcast.jasonlin.tech/e/hinton-alexkant-2026/) — Geoffrey Hinton, Alex Kantrowitz, 2026-06-04
-- [OpenAI's Math Breakthrough: The Story Behind the Discovery](https://aipodcast.jasonlin.tech/e/alexwei-theopena-2026/) — Alexander Wei, The OpenAI Podcast, 2026-06-04
-- [AI Surpasses Human Understanding in Math: OpenAI's Noam Brown on the Erdős Conjecture Disproof](https://aipodcast.jasonlin.tech/e/noambrown-baincapi-2026/) — Noam Brown, Bain Capital Ventures, 2026-06-04
-- [Mistral CEO on Building European AI Infrastructure](https://aipodcast.jasonlin.tech/e/mensch-cnbc-2026/) — Arthur Mensch, CNBC, 2026-06-03
-- [Is Reasoning Enough for Generalization?](https://aipodcast.jasonlin.tech/e/kaiser-unsuperv-2026/) — Łukasz Kaiser, Unsupervised Learning, 2026-06-03
-- [Nested Learning & AI Sleep: Towards Continual Learning with Ali Behrouz](https://aipodcast.jasonlin.tech/e/alibehrouz-thecogni-2026/) — Ali Behrouz, The Cognitive Revolution, 2026-06-03
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
