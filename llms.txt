@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 109 位人物 / 292 期访谈
+规模: 109 位人物 / 293 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -39,6 +39,7 @@
 - [Jan Leike / 扬·莱克](https://aipodcast.jasonlin.tech/pp/leike/): Alignment Lead, Anthropic — 3 期
 - [Dylan Patel / 迪伦·帕特尔](https://aipodcast.jasonlin.tech/pp/dylanpatel/): Founder & Chief Analyst, SemiAnalysis — 2 期
 - [Andrew Ambrosino / 安德鲁·安布罗西诺](https://aipodcast.jasonlin.tech/pp/ajambrosino/): Codex App Lead, OpenAI — 2 期
+- [Joon Sung Park / 朴俊成](https://aipodcast.jasonlin.tech/pp/joonpark/): Co-founder, Simile; creator of Generative Agents (Stanford) — 2 期
 - [Fiona Fung / 菲奥娜·冯](https://aipodcast.jasonlin.tech/pp/fiona/): Claude Code & Cowork Lead · Anthropic — 2 期
 - [Ethan He / 伊森·何](https://aipodcast.jasonlin.tech/pp/ethanhe/): Member of Technical Staff, xAI (Grok Imagine); ex-NVIDIA (Cosmos) — 2 期
 - [Mira Murati / 米拉·穆拉蒂](https://aipodcast.jasonlin.tech/pp/murati/): Founder & CEO, Thinking Machines Lab — 2 期
@@ -53,7 +54,6 @@
 - [Grant Sanderson / 格兰特·桑德森](https://aipodcast.jasonlin.tech/pp/grantsanderson/): Creator of 3Blue1Brown; math educator — 1 期
 - [Dan Biderman / 丹·比德曼](https://aipodcast.jasonlin.tech/pp/danbiderman/): Co-founder, Engram; memory & continual learning — 1 期
 - [Tejal Patwardhan / 泰贾尔·帕特瓦尔丹](https://aipodcast.jasonlin.tech/pp/tejal/): Frontier Evals Lead, OpenAI — 1 期
-- [Joon Sung Park / 朴俊成](https://aipodcast.jasonlin.tech/pp/joonpark/): Co-founder, Simile; creator of Generative Agents (Stanford) — 1 期
 - [Matt White / 马特·怀特](https://aipodcast.jasonlin.tech/pp/mattwhite/): AI CTO, Linux Foundation; ED, PyTorch Foundation — 1 期
 - [Logan Kilpatrick / 洛根·基尔帕特里克](https://aipodcast.jasonlin.tech/pp/logankilpatrick/): Lead, Google AI Studio & Gemini API; ex-OpenAI — 1 期
 - [Alexander Wei / 亚历山大·魏](https://aipodcast.jasonlin.tech/pp/alexwei/): Research, OpenAI — 1 期
@@ -135,6 +135,7 @@
 - [Building Products People Love: A Playbook for the AI Era](https://aipodcast.jasonlin.tech/e/pincus-ycombina-2026/) — Mark Pincus, Y Combinator, 2026-06-25
 - [Demis Hassabis on AGI, AI Risks, and DeepMind's Competitive Edge](https://aipodcast.jasonlin.tech/e/demis-semafort-2026/) — Demis Hassabis, Semafor Tech, 2026-06-24
 - [Memory and Continual Learning: The Next Frontier in AI](https://aipodcast.jasonlin.tech/e/danbiderman-training-2026/) — Dan Biderman, Training Data, 2026-06-24
+- [AI Agents: The Next Frontier Beyond LLMs](https://aipodcast.jasonlin.tech/e/joonpark-googlede-2026/) — Joon Sung Park, Google DeepMind, 2026-06-23
 - [AlphaFold: AI's Nobel-Winning Leap in Protein Folding](https://aipodcast.jasonlin.tech/e/jumper-machinel-2026/) — John Jumper, Machine Learning Street Talk, 2026-06-22
 - [AI Red Teaming Outperforms Humans](https://aipodcast.jasonlin.tech/e/kolter-latentsp-2026/) — Zico Kolter, Latent Space, 2026-06-22
 - [Fiona Fung on AI's Impact on Software Engineering](https://aipodcast.jasonlin.tech/e/fiona-lennyspo-2026/) — Fiona Fung, Lenny’s Podcast, 2026-06-21
@@ -157,7 +158,6 @@
 - [Science at Digital Speed: AI's Impact on Discovery](https://aipodcast.jasonlin.tech/e/demis-nobelpri-2026/) — Demis Hassabis, Nobel Prize, 2026-06-07
 - [Meta's AI Journey: From Llama 4 to Muse Spark and Beyond](https://aipodcast.jasonlin.tech/e/awang-bloomber-2026/) — Alexandr Wang, Bloomberg Live, 2026-06-05
 - [Thinking Machines on AI’s next chapter](https://aipodcast.jasonlin.tech/e/murati-bloomber/) — Mira Murati, Bloomberg, 2026-06-04
-- [AI Godfather Jeff Hinton on AI's Trajectory, Risks, and Superintelligence](https://aipodcast.jasonlin.tech/e/hinton-alexkant-2026/) — Geoffrey Hinton, Alex Kantrowitz, 2026-06-04
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
