@@ -1607,7 +1607,7 @@ function vHome(){
   <div class="site-tag">海外一线最新 AI 人物播客 · 中英对照全文<span class="st-n">${EPISODES.length} 期 · ${Object.keys(PEOPLE).length} 位</span></div>
   <div class="wrap hero">
     <div class="hero-card reveal">
-      <div class="hero-art" style="background:linear-gradient(150deg,${fp.fields.map(fcolor).join(',')})">${av(feat.pid)}</div>
+      <div class="hero-art" style="background:${(()=>{const cs=fp.fields.map(fcolor);return cs.length>1?`linear-gradient(150deg,${cs.join(',')})`:(cs[0]||'var(--accent)');})()}">${av(feat.pid)}</div>
       <div class="hero-body">
         <div class="eyebrow">最新上线 · Latest</div>
         <h1>${feat.tZh||feat.tEn}</h1>
@@ -1896,12 +1896,15 @@ function nextReads(e){
 function vEpisode(id){
   const e=EPISODES.find(x=>x.id===id);if(!e)return vHome();
   recentAdd(id);
+  if(typeof chatMode!=='undefined'&&window._lastChatEp!==id){chatMode='episode';window._lastChatEp=id;}
   const p=PEOPLE[e.pid];
   const loaded=(e.ts&&e.ts.length)||(id in TS_CACHE);   // 逐字稿是否已就位
   const ts=(e.ts&&e.ts.length)?e.ts:(TS_CACHE[id]||[]);
   const loading=!e.stub&&!loaded;                        // 按需加载逐字稿中
   if(loading)ensureTs(id);
-  const body=loading
+  const body=(loading&&TS_ERR[id])
+    ? `<div class="ts-loading">双语全文加载失败（网络波动）。<a style="color:var(--accent);cursor:pointer;margin-left:6px" onclick="tsRetry('${id}')">点此重试</a></div>`
+    :loading
     ? `<div class="ts-loading"><span class="ts-spin"></span>正在加载双语全文…</div>`
     : ts.map((s,i)=>`
     <div class="sec-h" id="sec-${i}"><span class="se">${s.sec}</span><span class="sz">${s.secZh||s.sec}</span></div>
@@ -1968,7 +1971,7 @@ function vEpisode(id){
   return `
   <div class="read-bar">
     <div class="read-prog" id="readProg"></div>
-    <div class="back" onclick="history.back()">‹ <b>${p.zh} · ${e.pod.zh}</b></div>
+    <div class="back" onclick="goBack('${e.pid}')">‹ <b>${p.zh} · ${e.pod.zh}</b></div>
     <div class="tools">
       <div class="seg" id="langSeg">
         <button onclick="setLang('en')">EN</button><button onclick="setLang('zh')">中</button><button onclick="setLang('both')">双语</button></div>
@@ -2023,14 +2026,17 @@ function initTOC(){
 
 /* ====== 逐字稿按需加载（首屏只装元数据，打开单集再拉全文，显著提速） ====== */
 const TS_CACHE={};let _tsLoading=null;
+const TS_ERR={};
 function ensureTs(id){
   if((id in TS_CACHE)||_tsLoading===id)return;
-  _tsLoading=id;
+  _tsLoading=id;delete TS_ERR[id];
   fetch('mcp-data/ep/'+id+'.json').then(r=>r.ok?r.json():Promise.reject(r.status))
     .then(j=>{TS_CACHE[id]=j.transcript||[];})
-    .catch(()=>{TS_CACHE[id]=[];})
-    .finally(()=>{_tsLoading=null;if((location.hash||'').indexOf('/episode/'+id)>=0)render();});
+    .catch(()=>{TS_ERR[id]=1;})   // 不缓存失败:留重试机会
+    .finally(()=>{_tsLoading=null;
+      if((location.hash||'').indexOf('/episode/'+id)>=0){const y=scrollY;render();scrollTo(0,y);}});
 }
+function tsRetry(id){delete TS_ERR[id];ensureTs(id);render();}
 
 /* ============================ TTS 选中朗读 ============================ */
 /* 朗读经 Cloudflare Worker 代理（密钥存于 Worker，不在前端/仓库）。部署见 tts-worker/README.md。
@@ -2427,15 +2433,18 @@ function searchInput(q){
   if(!k){res.innerHTML=`<div class="sr-group">全部人物 · ${Object.keys(PEOPLE).length}</div>`+
     Object.keys(PEOPLE).map(srPerson).join('');srSel(0);return;}
   const fstr=fs=>fs.map(f=>FIELDS[f]?FIELDS[f].en+FIELDS[f].zh:'').join('');
-  const tps=(typeof TOPICS!=='undefined'?TOPICS.defs:[]).filter(d=>(d.zh+d.en+d.slug).toLowerCase().includes(k));
+  const toks=k.split(/\s+/).filter(Boolean);
+  const hasAll=hay=>toks.every(t=>hay.includes(t));
+  const tps=(typeof TOPICS!=='undefined'?TOPICS.defs:[]).filter(d=>hasAll((d.zh+d.en+d.slug).toLowerCase()));
   const ppl=Object.keys(PEOPLE).filter(id=>{const p=PEOPLE[id];
-    return (p.en+p.zh+p.tiEn+p.tiZh+fstr(p.fields)).toLowerCase().includes(k);});
-  // 单集：先匹配标题/导语/媒体/领域；否则深入匹配核心观点/反共识，命中则把那条作为摘要展示
+    return hasAll((p.en+p.zh+p.tiEn+p.tiZh+fstr(p.fields)).toLowerCase());});
+  // 单集：标题/导语/媒体/领域/人物名（多词 AND）；否则深入核心观点/反共识,命中作摘要
   const eps=EPISODES.map(e=>{
-    const meta=(e.tEn+e.tZh+e.sEn+e.sZh+e.pod.en+e.pod.zh+fstr(e.fields)).toLowerCase();
-    if(meta.includes(k))return{e,snip:''};
+    const pe=PEOPLE[e.pid]||{};
+    const meta=(e.tEn+e.tZh+e.sEn+e.sZh+e.pod.en+e.pod.zh+(pe.en||'')+(pe.zh||'')+fstr(e.fields)).toLowerCase();
     const ins=e.insights||{};const pts=[...(ins.consensus||[]),...(ins.contrarian||[])];
-    const hit=pts.find(x=>((x.en||'')+(x.zh||'')).toLowerCase().includes(k));
+    if(hasAll(meta))return{e,snip:''};
+    const hit=pts.find(x=>hasAll(meta+((x.en||'')+(x.zh||'')).toLowerCase()));
     return hit?{e,snip:'“'+(hit.zh||hit.en)+'”'}:null;
   }).filter(Boolean);
   const marks=[];const hm=hlGet();
@@ -2461,7 +2470,9 @@ function searchKey(e){
 }
 
 /* ============================ ROUTER ============================ */
-function go(h){location.hash=h;}
+let _nav=0;
+function go(h){_nav++;location.hash=h;}
+function goBack(pid){if(_nav>0)history.back();else go(pid?'#/person/'+pid:'#/');}
 /* 盘古之白：中文与英文/数字之间自动补空格（渲染时处理文本节点，纯英文节点不受影响） */
 const CJK='\\u4e00-\\u9fff\\u3040-\\u30ff\\u3400-\\u4dbf';
 const RE1=new RegExp('(['+CJK+'])([A-Za-z0-9%])','g');
@@ -2619,7 +2630,8 @@ function render(){
   const parts=path.split('/').filter(Boolean);
   let html;
   if(query){const qp=new URLSearchParams(query);
-    if(qp.get('field')){bf={person:'',year:'',pod:'',field:qp.get('field'),read:''};}
+    if(qp.get('field')){bf={person:'',year:'',pod:'',field:qp.get('field'),read:''};
+      if(parts[0]==='browse')history.replaceState(null,'','#/browse');}   // 应用一次即剥离,避免每次 render 重置筛选
     if(parts[0]==='episode'&&(qp.get('at')!=null||qp.get('hl')))pendingLocate={id:parts[1],at:qp.get('at'),hl:qp.get('hl')};}
   if(!parts.length)html=vHome();
   else if(parts[0]==='people')html=vPeople();
@@ -2727,7 +2739,8 @@ if(syncCode())syncPull();   // 开启同步的设备:启动即拉取合并
   var by={};EPISODES.forEach(function(e){by[e.id]=e;});
   for(var id in x){var e=by[id];if(e){e.insights=x[id].insights;e.brief=x[id].brief;}}
   window._extraReady=true;
-  var y=window.scrollY;render();window.scrollTo(0,y);   // 回填后刷新当前页并复位滚动
+  var onEp=(location.hash||'').indexOf('/episode/')>=0;
+  if(onEp){var y=window.scrollY;render();window.scrollTo(0,y);}   // 单集页补上核心观点/速览;首页不重渲染避免闪烁
 }).catch(function(){});})();
 </script>
 </body>

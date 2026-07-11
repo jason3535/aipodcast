@@ -6,7 +6,49 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Wed, 08 Jul 2026 01:39:56 -0000</lastBuildDate>
+  <lastBuildDate>Fri, 10 Jul 2026 01:30:53 -0000</lastBuildDate>
+  <item>
+    <title>AI智能体：超越大语言模型的下一个前沿 — 谷歌 DeepMind</title>
+    <link>https://aipodcast.jasonlin.tech/e/joonpark-googlede-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/joonpark-googlede-2026/</guid>
+    <pubDate>Fri, 10 Jul 2026 01:30:53 -0000</pubDate>
+    <description>Google DeepMind的Nana Tomashev解释了AI智能体如何通过自主执行多步骤任务区别于语言模型，并探讨了它们创造新经济和通往AGI路径的潜力。</description>
+  </item>
+  <item>
+    <title>Liquid AI：从有限算力中榨取最大智能 — The Cognitive Revolution</title>
+    <link>https://aipodcast.jasonlin.tech/e/hasani-thecogni-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/hasani-thecogni-2026/</guid>
+    <pubDate>Thu, 09 Jul 2026 07:05:16 -0000</pubDate>
+    <description>CEO Ramine Hassani 解释 Liquid AI 如何通过生物启发式神经网络和架构搜索优化边缘设备 AI，例如可在 iPhone 上运行的 10 亿参数模型。</description>
+  </item>
+  <item>
+    <title>AI 在数学中的进展：从国际数学奥林匹克到千禧年难题 — Dwarkesh 播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/grantsanderson-dwarkesh-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/grantsanderson-dwarkesh-2026/</guid>
+    <pubDate>Thu, 09 Jul 2026 07:05:16 -0000</pubDate>
+    <description>Grant Sanderson 讨论为何 AI 在数学上的成功并不自动意味着通用人工智能，以及解决黎曼猜想是否意味着白领工作的自动化。</description>
+  </item>
+  <item>
+    <title>记忆与持续学习：AI 的下一个前沿 — Training Data</title>
+    <link>https://aipodcast.jasonlin.tech/e/danbiderman-training-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/danbiderman-training-2026/</guid>
+    <pubDate>Thu, 09 Jul 2026 07:05:16 -0000</pubDate>
+    <description>Engram 联合创始人探讨模型如何从不断变化的上下文中持续学习，超越预训练和后训练，将新知识深度整合到模型权重中。</description>
+  </item>
+  <item>
+    <title>用 AI 模拟人类社会：从小镇实验到现实应用 — Training Data</title>
+    <link>https://aipodcast.jasonlin.tech/e/joonpark-training-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/joonpark-training-2026/</guid>
+    <pubDate>Thu, 09 Jul 2026 07:05:16 -0000</pubDate>
+    <description>Simile 创始人 June 探讨了生成式智能体在小镇实验中模拟涌现社会行为的过程，以及利用模拟指导社会的愿景。</description>
+  </item>
+  <item>
+    <title>智能体 AI 时代：谷歌反重力引擎驱动下一代产品 — Training Data</title>
+    <link>https://aipodcast.jasonlin.tech/e/logankilpatrick-training-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/logankilpatrick-training-2026/</guid>
+    <pubDate>Thu, 09 Jul 2026 07:05:16 -0000</pubDate>
+    <description>谷歌 AI 工作室的 Logan 探讨反重力智能体引擎如何统一谷歌产品，赋能智能体编程和消费级智能体。</description>
+  </item>
   <item>
     <title>从汽车旅馆到半导体分析：Dylan Patel 的创业之路 — 红杉资本</title>
     <link>https://aipodcast.jasonlin.tech/e/dylanpatel-sequoiac-2026/</link>
@@ -174,48 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/pincus-lennyspo-2026/</guid>
     <pubDate>Sun, 05 Jul 2026 13:37:41 -0000</pubDate>
     <description>马克·平卡斯分享了他反直觉的产品创意框架，解释了为什么你的直觉 95%正确，但你的想法 75%错误。</description>
-  </item>
-  <item>
-    <title>数字速度下的科学：AI 对发现的影响 — 诺贝尔奖官方</title>
-    <link>https://aipodcast.jasonlin.tech/e/demis-nobelpri-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/demis-nobelpri-2026/</guid>
-    <pubDate>Sun, 05 Jul 2026 13:37:41 -0000</pubDate>
-    <description>Demis Hassabis 探讨 AI 如何加速科学发现，从 AlphaFold 快速折叠蛋白质到智能体时代的曙光。</description>
-  </item>
-  <item>
-    <title>AI 在数学上超越人类理解：OpenAI 的 Noam Brown 谈 Erdős 猜想的推翻 — Bain Capital Ventures</title>
-    <link>https://aipodcast.jasonlin.tech/e/noambrown-baincapi-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/noambrown-baincapi-2026/</guid>
-    <pubDate>Sun, 05 Jul 2026 13:37:41 -0000</pubDate>
-    <description>Noam Brown 讨论 AI 模型如何在数学推理上超越人类能力，以 OpenAI 最近推翻 Erdős 单位距离猜想为例。</description>
-  </item>
-  <item>
-    <title>长寿、医疗保健与政府在科技创新中的角色 — CNN</title>
-    <link>https://aipodcast.jasonlin.tech/e/altman-cnn-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/altman-cnn-2026/</guid>
-    <pubDate>Sun, 05 Jul 2026 13:37:41 -0000</pubDate>
-    <description>探讨部分重编程技术对健康老龄化的潜力，政府与私营部门在 AI 和长寿研究中的角色转变，以及投资 Retro 背后的动机。</description>
-  </item>
-  <item>
-    <title>黄仁勋谈分解推理与 AI 工厂 — All-In 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/jensen-allinpod-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/jensen-allinpod-2026/</guid>
-    <pubDate>Sun, 05 Jul 2026 13:37:41 -0000</pubDate>
-    <description>黄仁勋讨论英伟达从 GPU 公司到 AI 工厂公司的演变，介绍分解推理以及 Groq 处理器的整合。</description>
-  </item>
-  <item>
-    <title>吴恩达：AGI 是营销术语，提出新图灵测试 — This Is The World</title>
-    <link>https://aipodcast.jasonlin.tech/e/andrewng-thisisth-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/andrewng-thisisth-2026/</guid>
-    <pubDate>Sun, 05 Jul 2026 13:37:41 -0000</pubDate>
-    <description>吴恩达认为 AGI 已成为营销术语，并提出基于多日经济工作任务的新图灵测试。</description>
-  </item>
-  <item>
-    <title>从个人 AI 到 Codex：OpenAI 的内部演变 — Tetragrammaton</title>
-    <link>https://aipodcast.jasonlin.tech/e/brockman-tetragra-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/brockman-tetragra-2026/</guid>
-    <pubDate>Sun, 05 Jul 2026 13:37:41 -0000</pubDate>
-    <description>OpenAI 联合创始人探讨 ChatGPT 在亲密个人应用中的使用、他自己对 Codex 的晚期采用，以及从解雇事件中吸取的教训。</description>
   </item>
 </channel>
 </rss>
