@@ -2,6 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://aipodcast.jasonlin.tech/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/#/topics</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/neelnanda/</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/schmidhuber/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/hasani/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/naval/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/boris/</loc></url>
@@ -97,7 +99,6 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/shazeer/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/karina/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/antonoglou/</loc></url>
-  <url><loc>https://aipodcast.jasonlin.tech/pp/schmidhuber/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/christiano/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/truell/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/tridao/</loc></url>
@@ -111,6 +112,8 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/albertgu/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/pathak/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/abbeel/</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/neelnanda-googlede-2026/</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/schmidhuber-unsuperv-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/hasani-thecogni-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/naval-naval-2026b/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/boris-claude-2026/</loc></url>
