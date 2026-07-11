@@ -69,7 +69,12 @@ def do(e):
 def main():
     h = HTML.read_text(encoding="utf-8")
     eps, ai, bi = load_eps(h)
-    todo = [e for e in eps if not e.get("brief")]
+    extra_p = ROOT / "data" / "ep-extra.json"
+    extra = json.loads(extra_p.read_text(encoding="utf-8")) if extra_p.exists() else {}
+    for e in eps:   # split_extra 把 insights 移去了 ep-extra,这里合回内存供生成;收尾 split 会再移出
+        x = extra.get(e.get("id")) or {}
+        if not e.get("insights") and x.get("insights"): e["insights"] = x["insights"]
+    todo = [e for e in eps if not e.get("brief") and not (extra.get(e.get("id"), {}) or {}).get("brief")]
     print(f"待生成速览:{len(todo)} / {len(eps)} 期", file=sys.stderr)
     if not todo: print("全部已有 brief,跳过。", file=sys.stderr); return
     res = {}
@@ -91,6 +96,8 @@ def main():
     h = h[:ai] + "const EPISODES = " + json.dumps(eps, ensure_ascii=False) + ";\n\n" + h[bi:]
     HTML.write_text(h, encoding="utf-8")
     print(f"注入 brief: {len(res)} 期", file=sys.stderr)
+    import subprocess as _sp
+    _sp.run([sys.executable, str(BASE / "split_extra.py")], check=False)   # 新 brief 移入 ep-extra,保持首页轻量
 
 if __name__ == "__main__":
     main()

@@ -6,6 +6,10 @@ const fs=require('fs'),path=require('path');
 const ROOT=path.resolve(__dirname,'..');
 const h=fs.readFileSync(path.join(ROOT,'index.html'),'utf8');
 const EPISODES=JSON.parse(h.match(/const EPISODES = (\[[\s\S]*?\]);\n\n\/\* ====== REAL/)[1]);
+// 合并 data/ep-extra.json(split_extra 把 insights/brief 移了出去,这里补回作 MCP/Ask 材料)
+try{const extra=JSON.parse(fs.readFileSync(path.join(ROOT,'data','ep-extra.json'),'utf8'));
+  EPISODES.forEach(e=>{const x=extra[e.id];if(x){if(!e.insights&&x.insights)e.insights=x.insights;if(!e.brief&&x.brief)e.brief=x.brief;}});
+}catch(err){console.error('ep-extra 合并失败:',err.message);}
 const PEOPLE=eval('('+h.match(/const PEOPLE = (\{[\s\S]*?\n\});/)[1]+')');
 const VIEWS=JSON.parse(h.match(/VIEWS_START\*\/const VIEWS=(\{[\s\S]*?\});\/\*VIEWS_END/)[1]);
 const OUT=path.join(ROOT,'mcp-data'),EP=path.join(OUT,'ep');
