@@ -6,7 +6,21 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Fri, 10 Jul 2026 01:30:53 -0000</lastBuildDate>
+  <lastBuildDate>Sat, 11 Jul 2026 14:29:05 -0000</lastBuildDate>
+  <item>
+    <title>窥探 AI 的黑箱内部 — Google DeepMind</title>
+    <link>https://aipodcast.jasonlin.tech/e/neelnanda-googlede-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/neelnanda-googlede-2026/</guid>
+    <pubDate>Sat, 11 Jul 2026 14:29:05 -0000</pubDate>
+    <description>Hannah Fry 与 Neil Nander 探讨可解释性领域，该领域旨在通过将意义映射到神经网络内部数字来理解其工作原理，并探讨其安全与科学动机。</description>
+  </item>
+  <item>
+    <title>AGI 与物理 AI：与 AI 先驱尤尔根·施密德胡伯的对话 — Unsupervised Learning</title>
+    <link>https://aipodcast.jasonlin.tech/e/schmidhuber-unsuperv-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/schmidhuber-unsuperv-2026/</guid>
+    <pubDate>Sat, 11 Jul 2026 14:29:05 -0000</pubDate>
+    <description>AI 先驱尤尔根·施密德胡伯探讨了通往 AGI 的道路、当前硬件的局限性，以及为何他对 AI 技术持乐观态度，但对模型公司持悲观态度。</description>
+  </item>
   <item>
     <title>AI 智能体：超越大语言模型的下一个前沿 — 谷歌 DeepMind</title>
     <link>https://aipodcast.jasonlin.tech/e/joonpark-googlede-2026/</link>
@@ -202,20 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/kohli-googlede-2026/</guid>
     <pubDate>Mon, 06 Jul 2026 01:42:03 -0000</pubDate>
     <description>十年前，AlphaGo 在围棋中击败李世石，标志着现代人工智能革命的开始。听突破背后的架构师讲述这个故事。</description>
-  </item>
-  <item>
-    <title>通过医学科学架起桥梁：心灵近邻学校 — MIT IMES</title>
-    <link>https://aipodcast.jasonlin.tech/e/hinton-mitimes-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/hinton-mitimes-2026/</guid>
-    <pubDate>Sun, 05 Jul 2026 13:37:41 -0000</pubDate>
-    <description>朱迪丝·里希特博士分享她从大屠杀幸存者之女到创办“心灵近邻学校”的历程，该项目通过心脏病学教育将以色列、巴勒斯坦和约旦青少年团结在一起。</description>
-  </item>
-  <item>
-    <title>马克·平卡斯谈“已验证更好新”：成功产品创意的框架 — Lenny 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/pincus-lennyspo-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/pincus-lennyspo-2026/</guid>
-    <pubDate>Sun, 05 Jul 2026 13:37:41 -0000</pubDate>
-    <description>马克·平卡斯分享了他反直觉的产品创意框架，解释了为什么你的直觉 95%正确，但你的想法 75%错误。</description>
   </item>
 </channel>
 </rss>
