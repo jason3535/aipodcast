@@ -1642,13 +1642,13 @@ function vHome(){
   </section>
 
   ${(()=>{const rec=recentGet().map(id=>EPISODES.find(e=>e.id===id)).filter(Boolean).slice(0,4);
-   if(rec.length)return `<section class="wrap reveal" style="padding:8px 0 0">
+   if(rec.length)return `<section class="wrap reveal" style="padding-top:8px;padding-bottom:0">
     <div class="eyebrow">Continue · 继续阅读</div>
     <h2 class="title">上次看到</h2>
     <div class="rail" style="margin-top:22px">${rec.map(epCard).join('')}</div>
   </section>`;
    const st=STARTERS.map(id=>EPISODES.find(e=>e.id===id)).filter(Boolean);
-   return st.length?`<section class="wrap reveal" style="padding:8px 0 0">
+   return st.length?`<section class="wrap reveal" style="padding-top:8px;padding-bottom:0">
     <div class="eyebrow">Start here · 新手入门</div>
     <h2 class="title">第一次来？从这 ${st.length} 期开始</h2>
     <div class="sub">名人名场面，每期都值得完整读一遍。</div>
@@ -1656,7 +1656,7 @@ function vHome(){
   </section>`:'';})()}
 
   ${(()=>{const lt=laterGet().map(id=>EPISODES.find(e=>e.id===id)).filter(Boolean).filter(e=>!readHas(e.id)).reverse().slice(0,8);
-   return lt.length?`<section class="wrap reveal" style="padding:8px 0 0">
+   return lt.length?`<section class="wrap reveal" style="padding-top:8px;padding-bottom:0">
     <div class="eyebrow">Read later · 稍后读</div>
     <h2 class="title">我的待读 · ${lt.length}</h2>
     <div class="rail" style="margin-top:22px">${lt.map(epCard).join('')}</div>
