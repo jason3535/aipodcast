@@ -6,7 +6,42 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sun, 12 Jul 2026 03:59:16 -0000</lastBuildDate>
+  <lastBuildDate>Sun, 12 Jul 2026 07:27:35 -0000</lastBuildDate>
+  <item>
+    <title>赋予计算机嗅觉 — The TWIML AI Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/e/wiltschko-thetwiml-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/wiltschko-thetwiml-2026/</guid>
+    <pubDate>Sun, 12 Jul 2026 07:27:35 -0000</pubDate>
+    <description>Osmo 创始人、前谷歌 DeepMind 研究员 Alex Wiltschko 探讨 AI 如何建模、预测和设计气味，将嗅觉带入数字世界。</description>
+  </item>
+  <item>
+    <title>Claude Code：意外引发的软件开发革命 — Training Data</title>
+    <link>https://aipodcast.jasonlin.tech/e/boris-training-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/boris-training-2026/</guid>
+    <pubDate>Sun, 12 Jul 2026 07:27:35 -0000</pubDate>
+    <description>Claude Code 的创造者 Boris Cherny 分享了其意外起源故事，以及它如何从产品市场契合前的实验演变为指数级增长的产品，用 AI 代理重新定义了编码。</description>
+  </item>
+  <item>
+    <title>纳瓦尔论财富：从资产到知识 — Eric Jorgenson</title>
+    <link>https://aipodcast.jasonlin.tech/e/naval-ericjorg-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/naval-ericjorg-2026/</guid>
+    <pubDate>Sun, 12 Jul 2026 07:27:35 -0000</pubDate>
+    <description>纳瓦尔·拉维坎特重新定义财富，超越睡后收入资产，采纳大卫·多伊奇的观点：财富是你能影响的物理变换集合，由知识驱动。</description>
+  </item>
+  <item>
+    <title>Boris Chney：从 Meta 到 Claude Code，用通才思维打造产品 — Ryan Peterman</title>
+    <link>https://aipodcast.jasonlin.tech/e/boris-ryanpete-2025/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/boris-ryanpete-2025/</guid>
+    <pubDate>Sun, 12 Jul 2026 07:27:35 -0000</pubDate>
+    <description>Claude Code 的创造者、前 Meta 首席工程师 Boris Chney 分享他从在 Facebook 群组中构建聊天功能到领导 AI 驱动开发的历程，强调通才技能和潜在需求。</description>
+  </item>
+  <item>
+    <title>Joe Rogan 与黄仁勋畅谈特朗普、SpaceX 与常识 — The Joe Rogan Experience</title>
+    <link>https://aipodcast.jasonlin.tech/e/jensen-thejoero-2025/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/jensen-thejoero-2025/</guid>
+    <pubDate>Sun, 12 Jul 2026 07:27:35 -0000</pubDate>
+    <description>黄仁勋分享他与特朗普总统和埃隆·马斯克的惊人经历，揭示了媒体中罕见的特朗普一面。</description>
+  </item>
   <item>
     <title>从 GAN 到扩散：AI 在蛋白质建模中的演变 — Latent Space</title>
     <link>https://aipodcast.jasonlin.tech/e/edunov-latentsp-2026/</link>
@@ -181,41 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/dylanpatel-dwarkesh-2026/</guid>
     <pubDate>Tue, 07 Jul 2026 13:56:10 -0000</pubDate>
     <description>Semi Analysis 的 Dylan 解析 6000 亿美元超大规模资本支出、20GW 部署时间线，以及 Anthropic 和 OpenAI 为何需要大规模算力增长。</description>
-  </item>
-  <item>
-    <title>AI 规模扩展：预训练与强化学习 — Unsupervised Learning</title>
-    <link>https://aipodcast.jasonlin.tech/e/tworek-unsuperv-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/tworek-unsuperv-2026/</guid>
-    <pubDate>Tue, 07 Jul 2026 13:56:10 -0000</pubDate>
-    <description>Jerry Torque 探讨了 AI 中预训练和强化学习规模扩展的极限与未来。</description>
-  </item>
-  <item>
-    <title>Linux 基金会 AI CTO 谈开源 AI、中国崛起与智能体 AI — Finoverse</title>
-    <link>https://aipodcast.jasonlin.tech/e/mattwhite-finovers-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/mattwhite-finovers-2026/</guid>
-    <pubDate>Tue, 07 Jul 2026 02:11:36 -0000</pubDate>
-    <description>Ibrahim Haddad 讨论了在关键任务中确定性代码比 LLM 更重要、中国 AI 实验室令人惊讶的开放性，以及 Linux 基金会在 AI 民主化中的作用。</description>
-  </item>
-  <item>
-    <title>埃隆·马斯克谈为人父、人工智能与极简主义 — Sean Stephens</title>
-    <link>https://aipodcast.jasonlin.tech/e/elon-seancste-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/elon-seancste-2026/</guid>
-    <pubDate>Mon, 06 Jul 2026 01:42:03 -0000</pubDate>
-    <description>埃隆·马斯克谈论儿子的出生、婴儿大脑与神经网络的相似之处，以及他出售财产的决定。</description>
-  </item>
-  <item>
-    <title>构建失败机器：Zynga 之道 — 詹姆斯·阿尔图彻</title>
-    <link>https://aipodcast.jasonlin.tech/e/pincus-jamesalt-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/pincus-jamesalt-2026/</guid>
-    <pubDate>Mon, 06 Jul 2026 01:42:03 -0000</pubDate>
-    <description>Zynga 创始人揭秘：通过测试疯狂的文字链接和拥抱失败，如何打造病毒式爆款。</description>
-  </item>
-  <item>
-    <title>从超级应用到无形界面：AI 代理的未来 — Alex Kantrowitz</title>
-    <link>https://aipodcast.jasonlin.tech/e/brockman-alexkant-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/brockman-alexkant-2026/</guid>
-    <pubDate>Mon, 06 Jul 2026 01:42:03 -0000</pubDate>
-    <description>OpenAI 的 Greg 讨论从对话式 AI 到主动代理的演变，这些代理能代表你完成任务，最终界面将消失。</description>
   </item>
 </channel>
 </rss>
