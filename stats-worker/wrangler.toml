@@ -1,7 +1,12 @@
 name = "aipodcast-stats"
 main = "worker.js"
 compatibility_date = "2025-06-01"
+routes = [
+  { pattern = "stats.jasonlin.tech", custom_domain = true }
+]
+
 [[d1_databases]]
 binding = "DB"
 database_name = "aipodcast-stats"
 database_id = "100dcc28-c90c-40e7-ab0b-e49484031a4c"
+
