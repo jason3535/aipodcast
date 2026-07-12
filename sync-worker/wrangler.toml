@@ -1,7 +1,12 @@
 name = "aipodcast-sync"
 main = "worker.js"
 compatibility_date = "2025-06-01"
+routes = [
+  { pattern = "sync.jasonlin.tech", custom_domain = true }
+]
+
 
 [[kv_namespaces]]
 binding = "SYNC"
 id = "0de8a955e6074656b547f267bffb8820"
+

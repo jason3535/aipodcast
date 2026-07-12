@@ -2052,7 +2052,7 @@ function tsRetry(id){delete TS_ERR[id];ensureTs(id);render();}
 /* 朗读经 Cloudflare Worker 代理（密钥存于 Worker，不在前端/仓库）。部署见 tts-worker/README.md。
    若你的 workers.dev subdomain 不同，改这里为 wrangler deploy 输出的实际地址。 */
 addEventListener('scroll',()=>{const b=document.getElementById('selBar');if(!b||b.style.display==='none')return;if(b.classList.contains('dock'))return;const t=document.getElementById('ttsBtn');if(t&&t.classList.contains('loading'))return;b.style.display='none';},{passive:true});
-const TTS_PROXY='https://aipodcast-tts.992978142.workers.dev';
+const TTS_PROXY='https://tts.jasonlin.tech';
 let ttsAudio=null;
 function inReader(node){const el=node&&node.nodeType===3?node.parentElement:node;return !!(el&&el.closest&&el.closest('.reader')&&!el.closest('.chat'));}
 let _selPeek=null,_peekHold=false,_selMark=null;
@@ -2307,7 +2307,7 @@ function syncCross(){
   crossMark(turn,srcIsEn,mid);
 }
 /* ====== 问答：问这期（grounded 单期）/ 问全站（RAG-lite 跨期），流式输出 ====== */
-const CHAT_PROXY='https://aipodcast-chat.992978142.workers.dev';
+const CHAT_PROXY='https://ask.jasonlin.tech';
 const CHAT={};   // key('__all__' 或 epId)-> [{role,content}](内存态，导航后重置)
 let chatMode='episode', chatEpId=null;
 const ALL_SUGG=['不同的人怎么看 AGI 的时间表？','开源还是闭源，大家怎么站队？','关于 AI 安全/对齐有哪些不同观点？','规模化（scaling）还能走多远？'];
@@ -2503,7 +2503,10 @@ function pangufy(root){
   nodes.forEach(nd=>{const v=nd.nodeValue;if(v&&cjk.test(v)){const nv=pangu(v);if(nv!==v)nd.nodeValue=nv;}});
 }
 /* ====== 多设备同步（无账号：同步码即身份；匿名随机码，零 PII） ====== */
-const SYNC_URL='https://aipodcast-sync.992978142.workers.dev';
+const SYNC_URLS=['https://sync.jasonlin.tech','https://aipodcast-sync.992978142.workers.dev'];
+async function syncFetch(path,opts){let last;
+  for(const u of SYNC_URLS){try{const r=await fetch(u+path,opts);if(r.status<500)return r;last=r;}catch(e){last=e;}}
+  throw last instanceof Error?last:new Error('sync unreachable');}
 const syncCode=()=>localStorage.syncCode||'';
 // 统计去重用:同步码的哈希(前 8 字节)。发给统计的是哈希、绝非原始码(原始码=读写凭证)。缓存于 localStorage 供埋点同步取用。
 let _sid=(localStorage.syncSidFor&&localStorage.syncSidFor===localStorage.syncCode?localStorage.syncSid:'')||'';
@@ -2565,7 +2568,7 @@ function syncTouch(){if(!syncCode())return;clearTimeout(_syncTimer);_syncTimer=s
 let _syncErr='';
 async function syncPush(){
   const c=syncCode();if(!c||_syncBusy)return;_syncBusy=true;
-  try{const r=await fetch(SYNC_URL+'/s/'+c,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(syncCollect())});
+  try{const r=await syncFetch('/s/'+c,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(syncCollect())});
     if(!r.ok)throw new Error('HTTP '+r.status);
     localStorage.syncT=Date.now();_syncErr='';}
   catch(e){_syncErr='连不上同步服务器（部分网络屏蔽 workers.dev）';}
@@ -2573,7 +2576,7 @@ async function syncPush(){
 }
 async function syncPull(){
   const c=syncCode();if(!c)return;_syncLastPull=Date.now();
-  try{const r=await fetch(SYNC_URL+'/s/'+c,{cache:'no-store'});
+  try{const r=await syncFetch('/s/'+c,{cache:'no-store'});
     if(r.status===404){await syncPush();return;}
     if(r.ok){const changed=syncMerge(await r.json());localStorage.syncT=Date.now();_syncErr='';
       const onHome=!(location.hash||'#/').slice(2).split('?')[0].split('/').filter(Boolean).length;
@@ -2621,7 +2624,7 @@ addEventListener('visibilitychange',()=>{
 });
 
 /* ====== 匿名访问统计（无 Cookie / 不收集个人信息；数据进自有 D1，可在 Claude Code 直接查） ====== */
-const STATS_URL='https://aipodcast-stats.992978142.workers.dev';
+const STATS_URL='https://stats.jasonlin.tech';
 const _dev=/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)?'mobile':'desktop';
 const _ref=(()=>{try{return document.referrer?new URL(document.referrer).host:'';}catch(_){return '';}})();
 let _lastView=null;
@@ -2721,7 +2724,7 @@ function observeReveals(){
   const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:0,rootMargin:'0px 0px -5% 0px'});
   document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
 }
-const MCP_URL='https://aipodcast-mcp.992978142.workers.dev/mcp';
+const MCP_URL='https://mcp.jasonlin.tech/mcp';
 function copyMcp(){navigator.clipboard&&navigator.clipboard.writeText(MCP_URL);const b=$('#mcpCopy');if(b){b.textContent='已复制';setTimeout(()=>b.textContent='复制',1500);}}
 function copyShare(id){const u='https://aipodcast.jasonlin.tech/e/'+id+'/';if(navigator.clipboard)navigator.clipboard.writeText(u);const b=$('#shareBtn');if(b){b.textContent='已复制链接';setTimeout(()=>b.textContent='分享',1600);}}
 function footer(){return `<footer class="footer"><div class="wrap">

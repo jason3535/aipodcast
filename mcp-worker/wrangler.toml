@@ -1,3 +1,7 @@
 name = "aipodcast-mcp"
 main = "worker.js"
 compatibility_date = "2025-06-01"
+
+routes = [
+  { pattern = "mcp.jasonlin.tech", custom_domain = true }
+]
