@@ -1048,6 +1048,7 @@ const EPISODES = [{"id": "neelnanda-googlede-2026", "pid": "neelnanda", "pod": {
 /* ====== REAL ASSETS: 人物照片（Wikimedia Commons） + 媒体封面（Apple Podcasts） ====== */
 const PHOTOS=new Set(['naval','ajambrosino','ilya','demis','dario','karpathy','feifei','bengio','hinton','lecun','suleyman','jensen','altman','murati','andrewng','sutton','brockman','mensch','elon','kolter','sholto','awang','leike','kaiser','lambert','boris','truell','steinberger','schulman','noambrown','schmidhuber','jeffdean','abbeel','catwu','shazeer','scottwu','kaplan','aravind','delangue','finn','pachocki','gomez','jimfan','varun','fedus','shanelegg','jumper','hendrycks','jhoward','kohli','alexwei','antonoglou','askell','batson','benmann','bricken','bubeck','caitlin','christiano','davidsp','dsilver','fulford','hafner','hausman','jackph','jaderberg','jasonwei','justinjohnson','kendall','lample','laskin','llion','malik','markchen','mjordan','nanda','olah','oriol','parada','pathak','percyliang','rohinshah','slevine','springenberg','thomaswolf','tridao','tworek','yejin','pincus','tombrown','karina','mattwhite','shanahan','alibehrouz','robertlange','hasani','logankilpatrick','neelnanda',]);
 const POD_LOGO={
+   'AI News & Podcast':'ainewspodcast',
    'Simon Sinek':'simonsinek',
    'Sequoia Capital':'sequoiacapital',
    'James Altucher':'jamesaltucher',
@@ -1152,6 +1153,9 @@ const podLogo=(e,cls='')=>POD_LOGO[e.pod.en]
 
 /* 播客媒体简介（详情页用） */
 const POD_INFO={
+ 'AI News & Podcast':{zh:'AI新闻与播客',host:'AI News & Podcast',
+   en:'Daily AI news and interviews with experts, covering breakthroughs, ethics, and industry trends.',
+   cn:'每日AI新闻与专家访谈，涵盖突破、伦理和行业趋势。'},
  'Simon Sinek':{zh:'西蒙·斯涅克',host:'Simon Sinek',
    en:'Leadership expert and author of \'Start With Why\', inspiring purpose-driven action.',
    cn:'领导力专家、《从为什么开始》作者，激励人们以目标为导向行动。'},
@@ -2558,21 +2562,25 @@ function syncMerge(r){
 }
 let _syncTimer=null,_syncBusy=false,_syncLastPull=0;
 function syncTouch(){if(!syncCode())return;clearTimeout(_syncTimer);_syncTimer=setTimeout(syncPush,5000);}
+let _syncErr='';
 async function syncPush(){
   const c=syncCode();if(!c||_syncBusy)return;_syncBusy=true;
-  try{await fetch(SYNC_URL+'/s/'+c,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(syncCollect())});
-    localStorage.syncT=Date.now();}catch(_){}
+  try{const r=await fetch(SYNC_URL+'/s/'+c,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(syncCollect())});
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    localStorage.syncT=Date.now();_syncErr='';}
+  catch(e){_syncErr='连不上同步服务器（部分网络屏蔽 workers.dev）';}
   _syncBusy=false;syncPanelRefresh();
 }
 async function syncPull(){
   const c=syncCode();if(!c)return;_syncLastPull=Date.now();
   try{const r=await fetch(SYNC_URL+'/s/'+c,{cache:'no-store'});
     if(r.status===404){await syncPush();return;}
-    if(r.ok){const changed=syncMerge(await r.json());localStorage.syncT=Date.now();
+    if(r.ok){const changed=syncMerge(await r.json());localStorage.syncT=Date.now();_syncErr='';
       const onHome=!(location.hash||'#/').slice(2).split('?')[0].split('/').filter(Boolean).length;
       if(changed&&onHome)render();else syncPanelRefresh();
       await syncPush();   // 合并结果回写,双向收敛
-    }}catch(_){}
+    }else throw new Error('HTTP '+r.status);
+  }catch(e){_syncErr='连不上同步服务器（部分网络屏蔽 workers.dev）';syncPanelRefresh();}
 }
 function syncStart(){localStorage.syncCode=syncGen();localStorage.prefsT=localStorage.prefsT||Date.now();syncSid();syncPush();syncPanelRefresh();track('sync');}
 async function syncJoin(code){
@@ -2589,6 +2597,7 @@ function syncCopy(what){
   const b=document.getElementById(what==='link'?'syncCpL':'syncCpC');
   if(b){const t=b.textContent;b.textContent='已复制 ✓';setTimeout(()=>b.textContent=t,1500);}
 }
+async function syncNow(b){b.textContent='同步中…';await syncPull();b.textContent=_syncErr?'重试':'已同步 ✓';setTimeout(()=>{const x=document.getElementById('syncNowBtn');if(x)x.textContent='立即同步';},2000);}
 function syncAgo(){const t=+localStorage.syncT||0;if(!t)return '尚未同步';
   const m=Math.round((Date.now()-t)/60000);return m<1?'刚刚已同步':m<60?`${m} 分钟前同步`:`${Math.round(m/60)} 小时前同步`;}
 function syncPanelHtml(){
@@ -2598,11 +2607,11 @@ function syncPanelHtml(){
     <span style="margin:0 6px;color:var(--text-3)">或</span>
     <input id="syncIn" placeholder="输入同步码" style="font-family:var(--ui);font-size:12px;padding:5px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--text);width:220px" onkeydown="if(event.key==='Enter')syncJoinInput()">
     <button class="mcp-copy" onclick="syncJoinInput()">加入</button>`;
-  return `<b style="color:var(--text-2)">多设备同步 · 已开启</b> — <span style="color:var(--text-3)">${syncAgo()}</span><br>
+  return `<b style="color:var(--text-2)">多设备同步 · 已开启</b> — <span style="color:${_syncErr?'#c0392b':'var(--text-3)'}">${_syncErr||syncAgo()}</span><br>
     同步码 <code class="mcp-url">${c.replace(/(.{4})(?=.)/g,'$1-')}</code>
     <button id="syncCpC" class="mcp-copy" onclick="syncCopy('code')">复制码</button>
     <button id="syncCpL" class="mcp-copy" onclick="syncCopy('link')">复制配对链接</button>
-    <button class="mcp-copy" onclick="syncPull()">立即同步</button>
+    <button id="syncNowBtn" class="mcp-copy" onclick="syncNow(this)">立即同步</button>
     <button class="mcp-copy" onclick="syncOff()" title="仅本机停用，云端数据保留">关闭</button><br>
     <span class="mcp-tools">另一台设备打开配对链接即完成；码即身份，勿公开分享。</span>`;
 }
