@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 110 位人物 / 295 期访谈
+规模: 113 位人物 / 298 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -54,6 +54,7 @@
 - [Neel Nanda / 尼尔·南达](https://aipodcast.jasonlin.tech/pp/neelnanda/): Mechanistic Interpretability Lead, Google DeepMind — 1 期
 - [Ramin Hasani / 拉明·哈萨尼](https://aipodcast.jasonlin.tech/pp/hasani/): Co-founder & CEO, Liquid AI; liquid neural networks (ex-MIT) — 1 期
 - [Grant Sanderson / 格兰特·桑德森](https://aipodcast.jasonlin.tech/pp/grantsanderson/): Creator of 3Blue1Brown; math educator — 1 期
+- [Sergey Edunov / 谢尔盖·叶杜诺夫](https://aipodcast.jasonlin.tech/pp/edunov/): CTO, Genesis Molecular AI; led Llama 2/3 pretraining at Meta — 1 期
 - [Dan Biderman / 丹·比德曼](https://aipodcast.jasonlin.tech/pp/danbiderman/): Co-founder, Engram; memory & continual learning — 1 期
 - [Tejal Patwardhan / 泰贾尔·帕特瓦尔丹](https://aipodcast.jasonlin.tech/pp/tejal/): Frontier Evals Lead, OpenAI — 1 期
 - [Matt White / 马特·怀特](https://aipodcast.jasonlin.tech/pp/mattwhite/): AI CTO, Linux Foundation; ED, PyTorch Foundation — 1 期
@@ -61,6 +62,7 @@
 - [Alexander Wei / 亚历山大·魏](https://aipodcast.jasonlin.tech/pp/alexwei/): Research, OpenAI — 1 期
 - [Ali Behrouz / 阿里·贝赫鲁兹](https://aipodcast.jasonlin.tech/pp/alibehrouz/): Researcher, Google; PhD student, Cornell (continual learning) — 1 期
 - [Rohin Shah / 罗欣·沙阿](https://aipodcast.jasonlin.tech/pp/rohinshah/): Head of AGI Safety & Alignment, Google DeepMind — 1 期
+- [Walden Yan / 沃尔登·严](https://aipodcast.jasonlin.tech/pp/waldenyan/): Co-founder & CPO, Cognition (Devin); coined 'context engineering' — 1 期
 - [Alex Rives / 亚历克斯·里夫斯](https://aipodcast.jasonlin.tech/pp/alexrives/): Co-founder & Chief Scientist, EvolutionaryScale; creator of ESM — 1 期
 - [Michael I. Jordan / 迈克尔·乔丹](https://aipodcast.jasonlin.tech/pp/mjordan/): Professor, UC Berkeley; foundations of machine learning — 1 期
 - [Caitlin Kalinowski / 凯特琳·卡利诺夫斯基](https://aipodcast.jasonlin.tech/pp/caitlin/): Head of Robotics & Hardware, OpenAI — 1 期
@@ -76,6 +78,7 @@
 - [Peter Steinberger / 彼得·施泰因贝格尔](https://aipodcast.jasonlin.tech/pp/steinberger/): Creator of OpenClaw; founder of PSPDFKit — 1 期
 - [Danijar Hafner / 达尼亚尔·哈夫纳](https://aipodcast.jasonlin.tech/pp/hafner/): Research Scientist, Google DeepMind — 1 期
 - [Tobi Springenberg / 托比·施普林根贝格](https://aipodcast.jasonlin.tech/pp/springenberg/): Research Scientist, Physical Intelligence (prev. DeepMind) — 1 期
+- [Edwin Chen / 陈埃德温](https://aipodcast.jasonlin.tech/pp/edwinchen/): Founder & CEO, Surge AI — 1 期
 - [Shane Legg / 谢恩·莱格](https://aipodcast.jasonlin.tech/pp/shanelegg/): Co-founder & Chief AGI Scientist, DeepMind — 1 期
 - [David Soria Parra / 大卫·索里亚·帕拉](https://aipodcast.jasonlin.tech/pp/davidsp/): Co-creator of MCP, Anthropic — 1 期
 - [Amanda Askell / 阿曼达·阿斯克尔](https://aipodcast.jasonlin.tech/pp/askell/): Philosopher, Anthropic — 1 期
@@ -131,6 +134,7 @@
 - [Building Bridges Through Medical Science: The Near School of the Heart](https://aipodcast.jasonlin.tech/e/hinton-mitimes-2026/) — Geoffrey Hinton, MIT IMES, 2026-06-30
 - [From Motel to Semi Analysis: Dylan Patel's Journey](https://aipodcast.jasonlin.tech/e/dylanpatel-sequoiac-2026/) — Dylan Patel, Sequoia Capital, 2026-06-30
 - [AI in Math: From IMO to Millennium Problems](https://aipodcast.jasonlin.tech/e/grantsanderson-dwarkesh-2026/) — Grant Sanderson, Dwarkesh Podcast, 2026-06-30
+- [From GANs to Diffusion: AI's Evolution in Protein Modeling](https://aipodcast.jasonlin.tech/e/edunov-latentsp-2026/) — Sergey Edunov, Latent Space, 2026-06-30
 - [AI Is Inverting Product Teams: Andrew Ambrosino on Codex](https://aipodcast.jasonlin.tech/e/ajambrosino-lennyspo-2026/) — Andrew Ambrosino, Lenny’s Podcast, 2026-06-28
 - [Large-Scale Test Time Compute and Model Evaluation](https://aipodcast.jasonlin.tech/e/noambrown-nopriors-2026/) — Noam Brown, No Priors, 2026-06-26
 - [AI's Power Thirst: Blackmail, Self-Preservation, and What We Can Do](https://aipodcast.jasonlin.tech/e/bengio-sineadbo-2026/) — Yoshua Bengio, Sinead Bovell, 2026-06-25
@@ -158,8 +162,7 @@
 - [Anthropic: The AI Siblings Building Responsible Superintelligence](https://aipodcast.jasonlin.tech/e/dario-thecircu-2026/) — Dario Amodei, The Circuit (Bloomberg), 2026-06-10
 - [World Models: Enabler for the Next AR Revolution](https://aipodcast.jasonlin.tech/e/lecun-computer-2026/) — Yann LeCun, Computer Vision and Geometry Group, ETH Zurich, 2026-06-09
 - [Superintelligence is near — but make it humanist](https://aipodcast.jasonlin.tech/e/suleyman-decoder/) — Mustafa Suleyman, Decoder, 2026-06-08
-- [Science at Digital Speed: AI's Impact on Discovery](https://aipodcast.jasonlin.tech/e/demis-nobelpri-2026/) — Demis Hassabis, Nobel Prize, 2026-06-07
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
-- MCP server (只读内容，外部 AI 可接入): https://aipodcast-mcp.992978142.workers.dev/mcp
+- MCP server (只读内容，外部 AI 可接入): https://mcp.jasonlin.tech/mcp
