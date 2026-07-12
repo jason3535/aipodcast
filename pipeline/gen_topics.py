@@ -37,6 +37,13 @@ def call(system,user):
     raise RuntimeError(str(last)[:80])
 h=HTML.read_text(encoding="utf-8")
 eps=json.loads(h.match if False else re.search(r"const EPISODES = (\[.*?\]);\n\n/\* ====== REAL",h,re.S).group(1))
+# split_extra 已把 insights 移到 data/ep-extra.json,合回内存(2026-07:曾因缺此步把 TOPICS 清空)
+_xp=HTML.parent/"data"/"ep-extra.json"
+if _xp.exists():
+    _extra=json.loads(_xp.read_text(encoding="utf-8"))
+    for _e in eps:
+        _x=_extra.get(_e.get("id")) or {}
+        if not _e.get("insights") and _x.get("insights"): _e["insights"]=_x["insights"]
 PEOPLE=dict(re.findall(r"'([a-z]+)':\{en:'([^']+)'",h))  # pid->en(粗取,仅用于名字)
 def do(e):
     ins=e.get("insights") or {}
