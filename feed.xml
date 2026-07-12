@@ -6,7 +6,28 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sat, 11 Jul 2026 14:29:05 -0000</lastBuildDate>
+  <lastBuildDate>Sun, 12 Jul 2026 03:59:16 -0000</lastBuildDate>
+  <item>
+    <title>从 GAN 到扩散：AI 在蛋白质建模中的演变 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/e/edunov-latentsp-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/edunov-latentsp-2026/</guid>
+    <pubDate>Sun, 12 Jul 2026 03:59:16 -0000</pubDate>
+    <description>Evan Fineberg 和 Sergey Udov 讨论从 GAN 到扩散模型在蛋白质结构预测中的转变，他们的物理学背景，以及 Genesis Molecular AI 改进 AI 用于药物发现的方法。</description>
+  </item>
+  <item>
+    <title>AI 测试：超越计算机使用，迈向自主代理 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/e/waldenyan-latentsp-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/waldenyan-latentsp-2026/</guid>
+    <pubDate>Sun, 12 Jul 2026 03:59:16 -0000</pubDate>
+    <description>Walden Yen 和 Cole Murray 讨论从手把手指导 AI 模型到自主代理的转变、2025 年底能力的快速飞跃，以及 Open Inspect 的灵感来源。</description>
+  </item>
+  <item>
+    <title>AI 模型不良基准的陷阱 — Unsupervised Learning</title>
+    <link>https://aipodcast.jasonlin.tech/e/edwinchen-unsuperv-2025/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/edwinchen-unsuperv-2025/</guid>
+    <pubDate>Sun, 12 Jul 2026 03:59:16 -0000</pubDate>
+    <description>Serge 首席执行官 Edwin Shan 讨论了优化有缺陷基准（如 El Marina）的后果，用户倾向于选择花哨、冗长的回答而非准确的回答。</description>
+  </item>
   <item>
     <title>窥探 AI 的黑箱内部 — Google DeepMind</title>
     <link>https://aipodcast.jasonlin.tech/e/neelnanda-googlede-2026/</link>
@@ -195,27 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/brockman-alexkant-2026/</guid>
     <pubDate>Mon, 06 Jul 2026 01:42:03 -0000</pubDate>
     <description>OpenAI 的 Greg 讨论从对话式 AI 到主动代理的演变，这些代理能代表你完成任务，最终界面将消失。</description>
-  </item>
-  <item>
-    <title>打造人们喜爱的产品：AI 时代的行动指南 — Y Combinator</title>
-    <link>https://aipodcast.jasonlin.tech/e/pincus-ycombina-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/pincus-ycombina-2026/</guid>
-    <pubDate>Mon, 06 Jul 2026 01:42:03 -0000</pubDate>
-    <description>Zynga 创始人马克·平卡斯分享他的产品行动指南，以及从网络、社交和移动革命中汲取的 AI 时代构建产品的见解。</description>
-  </item>
-  <item>
-    <title>Demis Hassabis：从单一梦想走向集体行动 — Unsupervised Learning</title>
-    <link>https://aipodcast.jasonlin.tech/e/demis-unsuperv-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/demis-unsuperv-2026/</guid>
-    <pubDate>Mon, 06 Jul 2026 01:42:03 -0000</pubDate>
-    <description>Sebastian Mallaby 探讨 Demis Hassabis 从希望单一 AGI 实验室到认识到需要政府主导的集体安全努力的转变。</description>
-  </item>
-  <item>
-    <title>AlphaGo：改变人工智能的那场对局 — 谷歌 DeepMind</title>
-    <link>https://aipodcast.jasonlin.tech/e/kohli-googlede-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/kohli-googlede-2026/</guid>
-    <pubDate>Mon, 06 Jul 2026 01:42:03 -0000</pubDate>
-    <description>十年前，AlphaGo 在围棋中击败李世石，标志着现代人工智能革命的开始。听突破背后的架构师讲述这个故事。</description>
   </item>
 </channel>
 </rss>
