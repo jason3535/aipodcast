@@ -85,6 +85,9 @@ if "/*TOPICS_START*/" in h:
 else:
     # 首次:插到 VIEWS 块之后
     h=h.replace("/*VIEWS_END*/","/*VIEWS_END*/\n"+block,1)
-HTML.write_text(h,encoding="utf-8")
 tot=sum(len(v) for v in TOPICS["items"].values())
+if tot < 100:   # 空输入护栏:insights 缺失时拒绝用空数据覆盖(2026-07 曾整块清空)
+    sys.exit(f"✗ 拒绝写入:仅 {tot} 条观点(<100),疑似 insights 未加载,保留现有 TOPICS")
+HTML.write_text(h,encoding="utf-8")
+
 print(f"注入 TOPICS: {len(TOPICS_DEF)} 议题, 共 {tot} 条",file=sys.stderr)

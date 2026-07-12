@@ -72,5 +72,8 @@ with ThreadPoolExecutor(max_workers=6) as ex:
 h=HTML.read_text(encoding="utf-8")
 newblock="/*VIEWS_START*/const VIEWS="+json.dumps(VIEWS,ensure_ascii=False)+";/*VIEWS_END*/"
 h=re.sub(r"/\*VIEWS_START\*/.*?/\*VIEWS_END\*/",lambda m:newblock,h,count=1,flags=re.S)
+
+if len(VIEWS) < 5:   # 空输入护栏(2026-07 曾整块清空)
+    sys.exit(f"✗ 拒绝写入:仅 {len(VIEWS)} 人(<5),疑似 insights 未加载,保留现有 VIEWS")
 HTML.write_text(h,encoding="utf-8")
 print(f"注入 VIEWS: {len(VIEWS)} 位",file=sys.stderr)
