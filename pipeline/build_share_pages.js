@@ -5,6 +5,10 @@ const fs=require('fs'),path=require('path');
 const ROOT=path.resolve(__dirname,'..'),SITE='https://aipodcast.jasonlin.tech';
 const h=fs.readFileSync(path.join(ROOT,'index.html'),'utf8');
 const EPISODES=JSON.parse(h.match(/const EPISODES = (\[[\s\S]*?\]);\n\n\/\* ====== REAL/)[1]);
+// 合回 split_extra 移走的 insights/brief(静态页核心观点区块依赖;2026-07 曾因缺此步而空渲染)
+try{const extra=JSON.parse(fs.readFileSync(path.join(ROOT,'data','ep-extra.json'),'utf8'));
+  EPISODES.forEach(e=>{const x=extra[e.id];if(x){if(!e.insights&&x.insights)e.insights=x.insights;if(!e.brief&&x.brief)e.brief=x.brief;}});
+}catch(err){console.error('ep-extra 合并失败:',err.message);}
 const PEOPLE=eval('('+h.match(/const PEOPLE = (\{[\s\S]*?\n\});/)[1]+')');
 const esc=s=>(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 const jl=o=>`<script type="application/ld+json">${JSON.stringify(o).replace(/</g,'\\u003c')}</script>`;
