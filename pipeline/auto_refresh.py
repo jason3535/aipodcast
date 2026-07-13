@@ -314,6 +314,8 @@ def main():
     rc, outp = run_cmd(["git", "commit", "-q", "-m", msg,
         "-m", "由 pipeline/auto_refresh.py 自动收录\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"])
     rc2, outp2 = run_cmd(["git", "push", "-q", "origin", "master"])
+    rc_ix, _ = run_cmd(["python3", "pipeline/indexnow.py"])   # 新收录 URL 即时推给 Bing 系(失败不影响主流程)
+    log(f"  {'✓' if rc_ix == 0 else '✗'} indexnow")
     log(f"提交推送:{'✓ 已上线 +' + str(added) + ' 期' if rc2 == 0 else '✗ push 失败:' + outp2[-120:]}")
     log("=== 完成 ===")
 
