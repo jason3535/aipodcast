@@ -404,6 +404,11 @@
   .sec-h .sz,.toc-i .sz{display:none}
   body[data-lang="zh"] .sec-h .se,body[data-lang="zh"] .toc-i .se{display:none}
   body[data-lang="zh"] .sec-h .sz,body[data-lang="zh"] .toc-i .sz{display:inline;font-family:var(--han);text-transform:none}
+  .sk{border-radius:7px;background:linear-gradient(90deg,var(--surface-2) 25%,var(--line) 40%,var(--surface-2) 60%);background-size:400% 100%;animation:skm 1.3s ease infinite}
+  @keyframes skm{0%{background-position:100% 0}100%{background-position:0 0}}
+  .sk-turn{margin-bottom:26px}
+  .sk-turn .sk{height:15px;margin-bottom:9px}
+  .sk-card{border:1px solid var(--line);border-radius:var(--radius);padding:20px;margin:0 0 18px;background:var(--surface)}
   .ts-loading{display:flex;align-items:center;gap:10px;color:var(--text-3);font-family:var(--ui);
     font-size:14px;padding:48px 0}
   .ts-spin{width:16px;height:16px;border:2px solid var(--line);border-top-color:var(--accent);
@@ -1579,7 +1584,12 @@ function epCard(e){
   const rp=!readHas(e.id)&&readPosGet()[e.id];
   const prog=(rp&&rp.s>0&&rp.n)?`<span class="prog-badge">读到 ${Math.min(rp.s+1,rp.n)}/${rp.n} 章</span>`:'';
   return `<div class="ep-card${readHas(e.id)?' read':''}" data-id="${e.id}" onclick="go('#/episode/${e.id}')">
-  ${epCover(e)}<span class="cover-badges">${isNew(e)?'<span class="new-badge">NEW</span>':''}<span class="later-badge" style="display:${laterHas(e.id)?'inline-flex':'none'}">★ 待读</span>${prog}<span class="read-badge">✓ 已读</span></span>
+  ${epCover(e)}<span class="cover-badges">${(()=>{   // 单徽标:已读 > 读到N章 > 待读 > NEW,不叠加
+    if(readHas(e.id))return '<span class="read-badge" style="display:inline-flex">✓ 已读</span>';
+    if(prog)return prog;
+    if(laterHas(e.id))return '<span class="later-badge" style="display:inline-flex">★ 待读</span>';
+    if(isNew(e))return '<span class="new-badge">NEW</span>';
+    return '';})()}</span>
   <div class="ep-meta"><div class="t">${e.tEn}</div><div class="tz">${e.tZh}</div>
   <div class="row">${e.fields.map(tag).join('')}</div></div></div>`;}
 
@@ -1972,7 +1982,12 @@ function vEpisode(id){
   const body=(loading&&TS_ERR[id])
     ? `<div class="ts-loading">双语全文加载失败（网络波动）。<a style="color:var(--accent);cursor:pointer;margin-left:6px" onclick="tsRetry('${id}')">点此重试</a></div>`
     :loading
-    ? `<div class="ts-loading"><span class="ts-spin"></span>正在加载双语全文…</div>`
+    ? `<div class="ts-loading" style="margin-bottom:18px"><span class="ts-spin"></span>正在加载双语全文…</div>`+
+      Array.from({length:8},(_,k)=>`<div class="sk-turn">
+        <div class="sk" style="width:88px;height:13px"></div>
+        <div class="sk" style="width:${96-k%3*4}%"></div><div class="sk" style="width:${90-k%4*6}%"></div>
+        <div class="sk" style="width:${84-k%3*8}%;opacity:.7"></div><div class="sk" style="width:${70-k%4*5}%;opacity:.7"></div>
+      </div>`).join('')
     : ts.map((s,i)=>`
     <div class="sec-h" id="sec-${i}"><span class="se">${s.sec}</span><span class="sz">${s.secZh||s.sec}</span></div>
     ${(s.turns||[]).map((t,ti)=>{const g=t.spk===p.en.split(' ')[0]||t.spk===e.pid||t.spk===p.en;return `<div class="turn" data-sec="${i}" data-ti="${ti}"><div class="spk" style="color:${g?FIELDS[e.fields[0]].c:'var(--text-3)'};font-weight:${g?700:600}">${t.spk||''}</div>
@@ -1986,11 +2001,18 @@ function vEpisode(id){
       <div class="br-h br-h2">本期回答 · Answers</div>
       <ul class="br-qs">${(e.brief.qs||[]).map(x=>`<li><span class="ie">${x.en}</span><span class="iz">${x.zh}</span></li>`).join('')}</ul>
       <div class="br-meta">原音频 ${fmtDur(e.min)}${e.brief.words?` · 全文约 ${Math.max(1,Math.round(e.brief.words/220))} 分钟阅读`:''}</div>
-    </div>`:'';
+    </div>`:(!window._extraReady?`<div class="sk-card reveal in">
+      <div class="sk" style="width:110px;height:13px;margin-bottom:14px"></div>
+      <div class="sk" style="width:92%;height:15px;margin-bottom:9px"></div><div class="sk" style="width:85%;height:15px;margin-bottom:9px"></div><div class="sk" style="width:88%;height:15px"></div>
+    </div>`:'');
   const insights=e.insights?`<div class="insights reveal in">
       <div class="ins-col consensus"><div class="ins-h">核心观点 · Key points</div><ul>${insRow(e.insights.consensus||[])}</ul></div>
       <div class="ins-col contrarian"><div class="ins-h">反共识 · Contrarian</div><ul>${insRow(e.insights.contrarian||[])}</ul></div>
-    </div>`:'';
+    </div>`:(!window._extraReady?`<div class="sk-card reveal in" style="min-height:180px">
+      <div class="sk" style="width:150px;height:13px;margin-bottom:14px"></div>
+      <div class="sk" style="width:90%;height:14px;margin-bottom:8px"></div><div class="sk" style="width:86%;height:14px;margin-bottom:8px"></div>
+      <div class="sk" style="width:82%;height:14px;margin-bottom:8px"></div><div class="sk" style="width:88%;height:14px"></div>
+    </div>`:'');
   const note=e.stub
     ? `<div class="stub-cta">
          <div class="t">本期已收录，双语全文待生成</div>
