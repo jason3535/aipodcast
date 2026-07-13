@@ -25,6 +25,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/joonpark/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/jumper/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/kolter/</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/steinberger/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/fiona/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/feifei/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/dario/</loc></url>
@@ -58,6 +59,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/jeffdean/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/pachocki/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/fedus/</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/edwinchen/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/slevine/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/hausman/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/sutton/</loc></url>
@@ -65,13 +67,11 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/kohli/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/nando/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/jhoward/</loc></url>
-  <url><loc>https://aipodcast.jasonlin.tech/pp/steinberger/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/sholto/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/yejin/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/tworek/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/hafner/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/springenberg/</loc></url>
-  <url><loc>https://aipodcast.jasonlin.tech/pp/edwinchen/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/shanelegg/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/davidsp/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/askell/</loc></url>
@@ -140,6 +140,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/e/joonpark-googlede-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/jumper-machinel-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/kolter-latentsp-2026/</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/steinberger-ainewspo-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/fiona-lennyspo-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/boris-scale-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/feifei-siliconv-2026/</loc></url>
@@ -213,6 +214,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/e/demis-hugeiftr/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/fedus-nopriors-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/brockman-bigtechn/</loc></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/edwinchen-stanford-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/slevine-aiagentf-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/bengio-radiodav-2026/</loc></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/hinton-theamber-2026/</loc></url>
