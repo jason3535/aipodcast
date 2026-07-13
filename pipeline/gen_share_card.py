@@ -191,7 +191,9 @@ def gen_copy(e, p):
                                  headers={"Content-Type": "application/json", "Authorization": f"Bearer {key}"})
     try:
         r = json.loads(json.load(op.open(req, timeout=120))["choices"][0]["message"]["content"])
-        return {"jike": r.get("jike", fallback), "x": r.get("x", fallback[:200])}
+        clean = lambda s: "\n".join(ln for ln in (s or "").split("\n")
+                                     if "http" not in ln and "链接" not in ln and "example.com" not in ln).strip()
+        return {"jike": clean(r.get("jike")) or fallback, "x": clean(r.get("x")) or fallback[:200]}
     except Exception as ex:
         print("  文案生成失败,用模板:", str(ex)[:60], file=sys.stderr)
         return {"jike": fallback, "x": fallback[:200]}
