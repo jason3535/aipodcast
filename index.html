@@ -398,7 +398,7 @@
   .reader .ep-head .info .who{display:flex;align-items:center;gap:8px;color:var(--text);cursor:pointer}
   .reader .ep-head .info .who .av{width:30px;height:30px;font-size:12px}
 
-  .sec-h{font-family:var(--ui);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  .sec-h{scroll-margin-top:104px;font-family:var(--ui);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
     color:var(--text-3);margin:40px 0 22px}
   /* 目录/章节标题：中文模式显示中文标题（secZh） */
   .sec-h .sz,.toc-i .sz{display:none}
@@ -408,7 +408,7 @@
     font-size:14px;padding:48px 0}
   .ts-spin{width:16px;height:16px;border:2px solid var(--line);border-top-color:var(--accent);
     border-radius:50%;animation:ttsspin .7s linear infinite}
-  .turn{display:flex;flex-direction:column;gap:9px;margin-bottom:22px;content-visibility:auto;contain-intrinsic-size:auto 180px}
+  .turn{display:flex;flex-direction:column;gap:9px;margin-bottom:22px;content-visibility:auto;contain-intrinsic-size:auto 180px;scroll-margin-top:104px}
   .locate-flash{animation:locflash 2.6s ease;border-radius:8px}
   @keyframes locflash{0%,18%{background:rgba(255,193,7,.26);box-shadow:0 0 0 8px rgba(255,193,7,.26)}100%{background:transparent;box-shadow:0 0 0 8px transparent}}
   .turn .spk{order:0;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--text-3)}
@@ -2758,9 +2758,10 @@ function applyLocate(){
         if(hit){target=hit.offsetParent?hit:hit.closest('.turn');break;}}}}   // 命中隐藏行（跨语言）→定位其发言块
   if(!target&&at!=null&&at!==''){target=document.getElementById('sec-'+at);}
   if(!target)return;
-  const go=()=>{const top=target.getBoundingClientRect().top+window.scrollY-92;   // 顶对齐到阅读栏下方
-    window.scrollTo({top:Math.max(0,top),behavior:'smooth'});};
-  requestAnimationFrame(go); setTimeout(go,420);   // rAF 等首帧 + 二次校正字体/布局回流
+  // scrollIntoView 会把 content-visibility:auto 的目标强制变为已渲染,坐标准确;
+  // 多次校正:CV 段落在滚动路径上陆续渲染会挤动布局,600/1400ms 再对齐一次
+  const go=()=>{try{target.scrollIntoView({block:'start'});}catch(_){}};
+  requestAnimationFrame(go); setTimeout(go,600); setTimeout(go,1400);
   target.classList.add('locate-flash');setTimeout(()=>target.classList.remove('locate-flash'),2800);
 }
 /* 按路由更新标题/描述/OG —— 微信在内置浏览器分享当前页时会读实时标题 */
