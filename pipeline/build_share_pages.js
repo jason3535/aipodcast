@@ -90,10 +90,14 @@ ${p.bioZh?`<p class="zh">${esc(p.bioZh)}</p><p class="en">${esc(p.bioEn||'')}</p
   pn++;
 });
 // sitemap: 首页 + 议题 + 人物 hub + 各期
-const urls=[`${SITE}/`,`${SITE}/#/topics`,...Object.keys(byPid).filter(pid=>PEOPLE[pid]).map(pid=>`${SITE}/pp/${pid}/`),...EPISODES.map(e=>`${SITE}/e/${e.id}/`)];
+const today=new Date().toISOString().slice(0,10);
+const lastmodOf=e=>((e.addedAt||e.date||today)+'').slice(0,10);
+const urls=[[`${SITE}/`,today],
+  ...Object.keys(byPid).filter(pid=>PEOPLE[pid]).map(pid=>{const ds=byPid[pid].map(lastmodOf).sort().reverse();return [`${SITE}/pp/${pid}/`,ds[0]||today];}),
+  ...EPISODES.map(e=>[`${SITE}/e/${e.id}/`,lastmodOf(e)])];
 fs.writeFileSync(path.join(ROOT,'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`+
-  urls.map(u=>`  <url><loc>${u}</loc></url>`).join('\n')+`\n</urlset>\n`);
+  urls.map(([u,d])=>`  <url><loc>${u}</loc><lastmod>${d}</lastmod></url>`).join('\n')+`\n</urlset>\n`);
 // llms.txt (GEO 索引)
 const llms=`# AI Podcast · 双语播客全文阅读站\n\n> 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.\n\n站点: ${SITE}/\n规模: ${Object.keys(byPid).filter(p=>PEOPLE[p]).length} 位人物 / ${EPISODES.length} 期访谈\n每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。\n\n## 人物 People\n${Object.keys(byPid).filter(pid=>PEOPLE[pid]).sort((a,b)=>byPid[b].length-byPid[a].length).map(pid=>{const p=PEOPLE[pid];return `- [${p.en}${p.zh?' / '+p.zh:''}](${SITE}/pp/${pid}/): ${(p.tiEn||'').replace(/\n/g,' ')} — ${byPid[pid].length} 期`;}).join('\n')}\n\n## 最新访谈 Latest episodes\n${EPISODES.slice().sort((a,b)=>(b.date||'').localeCompare(a.date||'')).slice(0,40).map(e=>{const p=PEOPLE[e.pid]||{};return `- [${e.tEn}](${SITE}/e/${e.id}/) — ${p.en||''}, ${(e.pod&&e.pod.en)||''}, ${e.date||''}`;}).join('\n')}\n\n## 数据接口\n- sitemap: ${SITE}/sitemap.xml\n- MCP server (只读内容，外部 AI 可接入): https://mcp.jasonlin.tech/mcp\n`;
 fs.writeFileSync(path.join(ROOT,'llms.txt'),llms);
