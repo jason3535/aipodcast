@@ -7,3 +7,4 @@ config.js
 pipeline/.env
 pipeline/auto_refresh.log
 pipeline/launchd.log
+share_cards/
