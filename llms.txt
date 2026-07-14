@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 118 位人物 / 322 期访谈
+规模: 121 位人物 / 325 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -54,6 +54,8 @@
 - [Pushmeet Kohli / 普什米特·科利](https://aipodcast.jasonlin.tech/pp/kohli/): VP of Research (AI for Science), Google DeepMind — 2 期
 - [Nando de Freitas / 南多·德弗雷塔斯](https://aipodcast.jasonlin.tech/pp/nando/): VP & Distinguished Scientist, Microsoft AI (prev. DeepMind) — 2 期
 - [Jerry Tworek / 杰里·特沃雷克](https://aipodcast.jasonlin.tech/pp/tworek/): VP of Research, OpenAI — 2 期
+- [David "davidad" Dalrymple / 大卫·"davidad"·达尔林普尔](https://aipodcast.jasonlin.tech/pp/davidad/): Technical Advisor, Safeguarded AI, ARIA — 1 期
+- [Arvind Jain / 阿尔温德·贾恩](https://aipodcast.jasonlin.tech/pp/arvindjain/): Founder & CEO, Glean — 1 期
 - [Neel Nanda / 尼尔·南达](https://aipodcast.jasonlin.tech/pp/neelnanda/): Mechanistic Interpretability Lead, Google DeepMind — 1 期
 - [Alex Wiltschko / 亚历克斯·维尔奇科](https://aipodcast.jasonlin.tech/pp/wiltschko/): Founder & CEO, Osmo; ex-Google Brain (digital olfaction) — 1 期
 - [Derya Unutmaz / 德里亚·乌纳特马兹](https://aipodcast.jasonlin.tech/pp/derya/): Professor, The Jackson Laboratory; AI × immunology — 1 期
@@ -61,6 +63,7 @@
 - [Grant Sanderson / 格兰特·桑德森](https://aipodcast.jasonlin.tech/pp/grantsanderson/): Creator of 3Blue1Brown; math educator — 1 期
 - [Sergey Edunov / 谢尔盖·叶杜诺夫](https://aipodcast.jasonlin.tech/pp/edunov/): CTO, Genesis Molecular AI; led Llama 2/3 pretraining at Meta — 1 期
 - [Dan Biderman / 丹·比德曼](https://aipodcast.jasonlin.tech/pp/danbiderman/): Co-founder, Engram; memory & continual learning — 1 期
+- [Matei Zaharia / 马泰·扎哈里亚](https://aipodcast.jasonlin.tech/pp/matei/): Co-founder & CTO, Databricks; Associate Professor, UC Berkeley — 1 期
 - [Tejal Patwardhan / 泰贾尔·帕特瓦尔丹](https://aipodcast.jasonlin.tech/pp/tejal/): Frontier Evals Lead, OpenAI — 1 期
 - [Matt White / 马特·怀特](https://aipodcast.jasonlin.tech/pp/mattwhite/): AI CTO, Linux Foundation; ED, PyTorch Foundation — 1 期
 - [Logan Kilpatrick / 洛根·基尔帕特里克](https://aipodcast.jasonlin.tech/pp/logankilpatrick/): Lead, Google AI Studio & Gemini API; ex-OpenAI — 1 期
@@ -127,6 +130,8 @@
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 1 期
 
 ## 最新访谈 Latest episodes
+- [The Cognitive Revolution: Davidad on Provably Safe AI and the Future of Alignment](https://aipodcast.jasonlin.tech/e/davidad-thecogni-2026/) — David "davidad" Dalrymple, The Cognitive Revolution, 2026-07-12
+- [Glean CEO: Enterprises Fear Frontier AI Models Eating Their Lunch](https://aipodcast.jasonlin.tech/e/arvindjain-20vcwith-2026/) — Arvind Jain, 20VC with Harry Stebbings, 2026-07-11
 - [Peering Inside the Black Box of AI](https://aipodcast.jasonlin.tech/e/neelnanda-googlede-2026/) — Neel Nanda, Google DeepMind, 2026-07-10
 - [AGI and Physical AI: A Conversation with AI Pioneer Jurgen Schmidhuber](https://aipodcast.jasonlin.tech/e/schmidhuber-unsuperv-2026/) — Jürgen Schmidhuber, Unsupervised Learning, 2026-07-09
 - [From Forum Poster to AI Infrastructure Analyst: The Story of Semi Analysis](https://aipodcast.jasonlin.tech/e/dylanpatel-wisdomtr-2026/) — Dylan Patel, WisdomTree in Europe, 2026-07-09
@@ -150,6 +155,7 @@
 - [Building Products People Love: A Playbook for the AI Era](https://aipodcast.jasonlin.tech/e/pincus-ycombina-2026/) — Mark Pincus, Y Combinator, 2026-06-25
 - [Demis Hassabis on AGI, AI Risks, and DeepMind's Competitive Edge](https://aipodcast.jasonlin.tech/e/demis-semafort-2026/) — Demis Hassabis, Semafor Tech, 2026-06-24
 - [Memory and Continual Learning: The Next Frontier in AI](https://aipodcast.jasonlin.tech/e/danbiderman-training-2026/) — Dan Biderman, Training Data, 2026-06-24
+- [Omnigents: The Meta Harness for AI Agents](https://aipodcast.jasonlin.tech/e/matei-latentsp-2026/) — Matei Zaharia, Latent Space, 2026-06-24
 - [AI Agents: The Next Frontier Beyond LLMs](https://aipodcast.jasonlin.tech/e/joonpark-googlede-2026/) — Joon Sung Park, Google DeepMind, 2026-06-23
 - [AlphaFold: AI's Nobel-Winning Leap in Protein Folding](https://aipodcast.jasonlin.tech/e/jumper-machinel-2026/) — John Jumper, Machine Learning Street Talk, 2026-06-22
 - [AI Red Teaming Outperforms Humans](https://aipodcast.jasonlin.tech/e/kolter-latentsp-2026/) — Zico Kolter, Latent Space, 2026-06-22
@@ -164,9 +170,6 @@
 - [How to Stand Out in an AI-Driven Job Market](https://aipodcast.jasonlin.tech/e/ethanhe-simonsin-2026/) — Ethan He, Simon Sinek, 2026-06-16
 - [Simulating Human Societies with AI: From Smallville to Real-World Applications](https://aipodcast.jasonlin.tech/e/joonpark-training-2026/) — Joon Sung Park, Training Data, 2026-06-16
 - [Perplexity CEO: Attack, Attack, Attack](https://aipodcast.jasonlin.tech/e/aravind-20vcwith-2026/) — Aravind Srinivas, 20VC with Harry Stebbings, 2026-06-15
-- [AI CTO at Linux Foundation on Open Source AI, China's Rise, and Agentic AI](https://aipodcast.jasonlin.tech/e/mattwhite-finovers-2026/) — Matt White, Finoverse, 2026-06-15
-- [Mark Pincus on Proven Better New: A Framework for Successful Product Ideas](https://aipodcast.jasonlin.tech/e/pincus-lennyspo-2026/) — Mark Pincus, Lenny’s Podcast, 2026-06-14
-- [Agentic AI Era: Google's Anti-Gravity Harness Powers Next-Gen Products](https://aipodcast.jasonlin.tech/e/logankilpatrick-training-2026/) — Logan Kilpatrick, Training Data, 2026-06-11
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
