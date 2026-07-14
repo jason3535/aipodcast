@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 134 位人物 / 338 期访谈
+规模: 147 位人物 / 352 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -48,6 +48,7 @@
 - [Łukasz Kaiser / 武卡什·凯泽](https://aipodcast.jasonlin.tech/pp/kaiser/): Researcher, OpenAI — 2 期
 - [Oriol Vinyals / 奥里奥尔·维尼亚尔斯](https://aipodcast.jasonlin.tech/pp/oriol/): VP of Research & Gemini Co-lead · Google DeepMind — 2 期
 - [Reiner Pope / 赖纳·波普](https://aipodcast.jasonlin.tech/pp/reinerpope/): Co-founder & CEO, MatX; ex-Google (LLM serving) — 2 期
+- [Alex Kendall / 亚历克斯·肯德尔](https://aipodcast.jasonlin.tech/pp/kendall/): Co-founder & CEO, Wayve — 2 期
 - [Jeff Dean / 杰夫·迪恩](https://aipodcast.jasonlin.tech/pp/jeffdean/): Chief Scientist, Google — 2 期
 - [Jakub Pachocki / 雅库布·帕霍茨基](https://aipodcast.jasonlin.tech/pp/pachocki/): Chief Scientist, OpenAI — 2 期
 - [Edwin Chen / 陈埃德温](https://aipodcast.jasonlin.tech/pp/edwinchen/): Founder & CEO, Surge AI — 2 期
@@ -67,6 +68,7 @@
 - [Matei Zaharia / 马泰·扎哈里亚](https://aipodcast.jasonlin.tech/pp/matei/): Co-founder & CTO, Databricks; Associate Professor, UC Berkeley — 1 期
 - [Dean Ball / 迪恩·鲍尔](https://aipodcast.jasonlin.tech/pp/deanball/): Head of Strategic Futures, OpenAI — 1 期
 - [Tejal Patwardhan / 泰贾尔·帕特瓦尔丹](https://aipodcast.jasonlin.tech/pp/tejal/): Frontier Evals Lead, OpenAI — 1 期
+- [Dan Klein / 丹·克莱因](https://aipodcast.jasonlin.tech/pp/danklein/): Professor of Computer Science, UC Berkeley; Co-founder & CTO, Scaled Cognition — 1 期
 - [Matt White / 马特·怀特](https://aipodcast.jasonlin.tech/pp/mattwhite/): AI CTO, Linux Foundation; ED, PyTorch Foundation — 1 期
 - [Logan Kilpatrick / 洛根·基尔帕特里克](https://aipodcast.jasonlin.tech/pp/logankilpatrick/): Lead, Google AI Studio & Gemini API; ex-OpenAI — 1 期
 - [Mark Zuckerberg / 马克·扎克伯格](https://aipodcast.jasonlin.tech/pp/zuckerberg/): Founder, Chairman & CEO, Meta Platforms — 1 期
@@ -78,8 +80,10 @@
 - [Benedict Evans / 本尼迪克特·埃文斯](https://aipodcast.jasonlin.tech/pp/benedictevans/): Independent technology analyst; former partner at Andreessen Horowitz (a16z) — 1 期
 - [Walden Yan / 沃尔登·严](https://aipodcast.jasonlin.tech/pp/waldenyan/): Co-founder & CPO, Cognition (Devin); coined 'context engineering' — 1 期
 - [Alex Rives / 亚历克斯·里夫斯](https://aipodcast.jasonlin.tech/pp/alexrives/): Co-founder & Chief Scientist, EvolutionaryScale; creator of ESM — 1 期
+- [Samuel (Sam) Rodriques / 塞缪尔·罗德里格斯](https://aipodcast.jasonlin.tech/pp/rodriques/): Co-founder & CEO, Edison Scientific (and FutureHouse) — 1 期
 - [Dan Shipper / 丹·希珀](https://aipodcast.jasonlin.tech/pp/danshipper/): Co-founder & CEO, Every — 1 期
 - [Andrew Feldman / 安德鲁·费尔德曼](https://aipodcast.jasonlin.tech/pp/feldman/): Co-founder & CEO, Cerebras Systems — 1 期
+- [Jure Leskovec / 尤雷·莱斯科韦茨](https://aipodcast.jasonlin.tech/pp/jureleskovec/): Professor of Computer Science at Stanford University; Co-founder & Chief Scientist at Kumo.ai — 1 期
 - [Michael I. Jordan / 迈克尔·乔丹](https://aipodcast.jasonlin.tech/pp/mjordan/): Professor, UC Berkeley; foundations of machine learning — 1 期
 - [Caitlin Kalinowski / 凯特琳·卡利诺夫斯基](https://aipodcast.jasonlin.tech/pp/caitlin/): Head of Robotics & Hardware, OpenAI — 1 期
 - [Eric Jang / 埃里克·张](https://aipodcast.jasonlin.tech/pp/ericjang/): VP of AI, 1X; ex-Google Brain (robotics, RL) — 1 期
@@ -91,25 +95,34 @@
 - [Simon Willison / 西蒙·威利森](https://aipodcast.jasonlin.tech/pp/simonwillison/): Independent software developer and AI blogger (simonwillison.net); creator of Datasette and the LLM CLI — 1 期
 - [Sergey Levine / 谢尔盖·莱文](https://aipodcast.jasonlin.tech/pp/slevine/): Professor, UC Berkeley; co-founder, Physical Intelligence — 1 期
 - [Claire Vo / 克莱尔·沃](https://aipodcast.jasonlin.tech/pp/clairevo/): Founder & CEO of ChatPRD; host of the "How I AI" podcast — 1 期
+- [Stefano Ermon / 斯特凡诺·埃尔蒙](https://aipodcast.jasonlin.tech/pp/ermon/): Associate Professor of Computer Science, Stanford University; Co-founder & CEO of Inception Labs — 1 期
 - [Karol Hausman / 卡罗尔·豪斯曼](https://aipodcast.jasonlin.tech/pp/hausman/): Co-founder & CEO, Physical Intelligence — 1 期
 - [Nick Turley / 尼克·特利](https://aipodcast.jasonlin.tech/pp/turley/): Head of ChatGPT (VP of Product), OpenAI — 1 期
 - [Robert Lange / 罗伯特·兰格](https://aipodcast.jasonlin.tech/pp/robertlange/): Founding Researcher, Sakana AI — 1 期
 - [Qasar Younis / 卡萨尔·尤尼斯](https://aipodcast.jasonlin.tech/pp/qasaryounis/): Co-founder & CEO, Applied Intuition — 1 期
 - [Jeremy Howard / 杰里米·霍华德](https://aipodcast.jasonlin.tech/pp/jhoward/): Co-founder, fast.ai & Answer.AI — 1 期
+- [Sebastian Raschka / 塞巴斯蒂安·拉施卡](https://aipodcast.jasonlin.tech/pp/raschka/): LLM Research Engineer, author and educator — 1 期
 - [Sherwin Wu / 吴谢文](https://aipodcast.jasonlin.tech/pp/sherwinwu/): Head of Engineering, OpenAI API Platform — 1 期
+- [Carina Hong / 洪乐潼](https://aipodcast.jasonlin.tech/pp/carinahong/): Founder & CEO, Axiom (AI for formal mathematical reasoning) — 1 期
 - [Marc Andreessen / 马克·安德森](https://aipodcast.jasonlin.tech/pp/andreessen/): Co-founder & General Partner, Andreessen Horowitz (a16z) — 1 期
 - [Danijar Hafner / 达尼亚尔·哈夫纳](https://aipodcast.jasonlin.tech/pp/hafner/): Research Scientist, Google DeepMind — 1 期
+- [Nikita Rudin / 尼基塔·鲁丁](https://aipodcast.jasonlin.tech/pp/rudin/): Co-founder & CEO of Flexion Robotics — 1 期
 - [Tobi Springenberg / 托比·施普林根贝格](https://aipodcast.jasonlin.tech/pp/springenberg/): Research Scientist, Physical Intelligence (prev. DeepMind) — 1 期
+- [Aakanksha Chowdhery / 阿坎莎·乔杜里](https://aipodcast.jasonlin.tech/pp/chowdhery/): Member of Technical Staff, Reflection AI — 1 期
 - [Shane Legg / 谢恩·莱格](https://aipodcast.jasonlin.tech/pp/shanelegg/): Co-founder & Chief AGI Scientist, DeepMind — 1 期
 - [David Soria Parra / 大卫·索里亚·帕拉](https://aipodcast.jasonlin.tech/pp/davidsp/): Co-creator of MCP, Anthropic — 1 期
+- [Olivier Godement / 奥利维耶·戈德芒](https://aipodcast.jasonlin.tech/pp/godement/): Head of Product, Platform (API) at OpenAI — 1 期
 - [Amanda Askell / 阿曼达·阿斯克尔](https://aipodcast.jasonlin.tech/pp/askell/): Philosopher, Anthropic — 1 期
+- [Dianne Na Penn / 黛安·娜·潘恩](https://aipodcast.jasonlin.tech/pp/diannepenn/): Head of Research Product Management, Anthropic — 1 期
 - [Clément Delangue / 克莱芒·德隆格](https://aipodcast.jasonlin.tech/pp/delangue/): Co-founder & CEO, Hugging Face — 1 期
 - [Justin Johnson / 贾斯汀·约翰逊](https://aipodcast.jasonlin.tech/pp/justinjohnson/): Co-founder, World Labs — 1 期
 - [Llion Jones / 利昂·琼斯](https://aipodcast.jasonlin.tech/pp/llion/): Co-founder & CTO, Sakana AI; Transformer co-author — 1 期
-- [Alex Kendall / 亚历克斯·肯德尔](https://aipodcast.jasonlin.tech/pp/kendall/): Co-founder & CEO, Wayve — 1 期
+- [Devi Parikh / 黛维·帕里克](https://aipodcast.jasonlin.tech/pp/deviparikh/): Co-founder & Co-CEO, Yutori — 1 期
 - [David Silver / 大卫·西尔弗](https://aipodcast.jasonlin.tech/pp/dsilver/): Principal Research Scientist, DeepMind — 1 期
+- [Bill Peebles / 比尔·皮布尔斯](https://aipodcast.jasonlin.tech/pp/billpeebles/): AI researcher; former head of OpenAI's Sora, co-inventor of Diffusion Transformers (DiT) — 1 期
 - [Jason Wei / 杰森·魏](https://aipodcast.jasonlin.tech/pp/jasonwei/): AI Researcher (ex-OpenAI) — 1 期
 - [Neel Nanda / 尼尔·南达](https://aipodcast.jasonlin.tech/pp/nanda/): Mechanistic Interpretability Lead, Google DeepMind — 1 期
+- [Bret Taylor / 布雷特·泰勒](https://aipodcast.jasonlin.tech/pp/brettaylor/): Co-founder & CEO of Sierra; Chairman of the Board, OpenAI — 1 期
 - [Scott Wu / 吴一](https://aipodcast.jasonlin.tech/pp/scottwu/): Co-founder & CEO, Cognition — 1 期
 - [Jack Parker-Holder / 杰克·帕克-霍尔德](https://aipodcast.jasonlin.tech/pp/jackph/): Research Scientist · Google DeepMind — 1 期
 - [Tom Brown / 汤姆·布朗](https://aipodcast.jasonlin.tech/pp/tombrown/): Co-founder, Anthropic — 1 期
