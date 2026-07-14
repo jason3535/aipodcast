@@ -51,29 +51,47 @@ def vid_of(url):
 
 
 def yt_meta(url):
-    d = json.loads(subprocess.run(["yt-dlp", "--skip-download", "--no-warnings", "-J", url],
-                   capture_output=True, text=True, timeout=90).stdout)
-    return d.get("title", ""), round((d.get("duration") or 0) / 60), (d.get("upload_date") or "")
+    # YouTube 会对密集请求限流,-J 返回空/`null` 会让旧代码 d.get 崩溃。重试 + 兜底(非致命)。
+    for a in range(3):
+        try:
+            out = subprocess.run(["yt-dlp", "--skip-download", "--no-warnings", "-J", url],
+                                 capture_output=True, text=True, timeout=90).stdout
+            d = json.loads(out) if out.strip() else None
+            if isinstance(d, dict):
+                return d.get("title", ""), round((d.get("duration") or 0) / 60), (d.get("upload_date") or "")
+        except Exception:
+            pass
+        if a < 2:
+            time.sleep(15 + a * 20)
+    print("  ⚠️ yt_meta 抓取失败(限流?),标题/时长改由 CLI 参数或 DeepSeek 兜底", file=sys.stderr)
+    return "", 0, ""
 
 
 def get_subs(url):
-    with tempfile.TemporaryDirectory() as td:
-        subprocess.run(["yt-dlp", "--skip-download", "--write-auto-subs", "--sub-lang", "en",
-            "--sub-format", "vtt", "-o", f"{td}/s.%(ext)s", url], capture_output=True, timeout=150)
-        v = list(Path(td).glob("*.vtt"))
-        if not v:
-            return ""
-        out, prev = [], None
-        for ln in v[0].read_text(encoding="utf-8").splitlines():
-            ln = ln.strip()
-            if not ln or ln == "WEBVTT" or ln.isdigit() or "-->" in ln or re.match(r"^\d{2}:\d{2}", ln):
-                continue
-            if ln.startswith(("Kind:", "Language:")):
-                continue
-            ln = re.sub(r"<[^>]+>", "", ln); ln = re.sub(r"\[[^\]]*\]", "", ln).strip()
-            if ln and ln != prev:
-                out.append(ln); prev = ln
-        return re.sub(r"\s+", " ", " ".join(out)).strip()
+    # 字幕端点同样会被限流返回空;重试 + 退避 + --sleep-subtitles,尽量拿到自动字幕。
+    for attempt in range(3):
+        with tempfile.TemporaryDirectory() as td:
+            subprocess.run(["yt-dlp", "--skip-download", "--write-auto-subs", "--sub-lang", "en",
+                "--sub-format", "vtt", "--sleep-subtitles", "2", "-o", f"{td}/s.%(ext)s", url],
+                capture_output=True, timeout=180)
+            v = list(Path(td).glob("*.vtt"))
+            if v:
+                out, prev = [], None
+                for ln in v[0].read_text(encoding="utf-8").splitlines():
+                    ln = ln.strip()
+                    if not ln or ln == "WEBVTT" or ln.isdigit() or "-->" in ln or re.match(r"^\d{2}:\d{2}", ln):
+                        continue
+                    if ln.startswith(("Kind:", "Language:")):
+                        continue
+                    ln = re.sub(r"<[^>]+>", "", ln); ln = re.sub(r"\[[^\]]*\]", "", ln).strip()
+                    if ln and ln != prev:
+                        out.append(ln); prev = ln
+                text = re.sub(r"\s+", " ", " ".join(out)).strip()
+                if len(text) >= 2000:
+                    return text
+        if attempt < 2:
+            time.sleep(20 + attempt * 25)
+    return ""
 
 
 def chunks(t, size=7000):

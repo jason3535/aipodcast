@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 115 位人物 / 316 期访谈
+规模: 118 位人物 / 322 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -14,9 +14,9 @@
 - [Demis Hassabis / 杰米斯·哈萨比斯](https://aipodcast.jasonlin.tech/pp/demis/): CEO, Google DeepMind — 11 期
 - [Boris Cherny / 鲍里斯·切尔尼](https://aipodcast.jasonlin.tech/pp/boris/): Creator of Claude Code, Anthropic — 10 期
 - [Yoshua Bengio / 约书亚·本吉奥](https://aipodcast.jasonlin.tech/pp/bengio/): Professor, Mila — 10 期
+- [Jensen Huang / 黄仁勋](https://aipodcast.jasonlin.tech/pp/jensen/): Founder & CEO, NVIDIA — 10 期
 - [Yann LeCun / 杨立昆](https://aipodcast.jasonlin.tech/pp/lecun/): Chief AI Scientist, Meta — 10 期
 - [Greg Brockman / 格雷格·布罗克曼](https://aipodcast.jasonlin.tech/pp/brockman/): President & Co-founder, OpenAI — 9 期
-- [Jensen Huang / 黄仁勋](https://aipodcast.jasonlin.tech/pp/jensen/): Founder & CEO, NVIDIA — 9 期
 - [Geoffrey Hinton / 杰弗里·辛顿](https://aipodcast.jasonlin.tech/pp/hinton/): Professor Emeritus, U of Toronto — 7 期
 - [Fei-Fei Li / 李飞飞](https://aipodcast.jasonlin.tech/pp/feifei/): Co-founder, World Labs — 7 期
 - [Andrew Ng / 吴恩达](https://aipodcast.jasonlin.tech/pp/andrewng/): Founder, DeepLearning.AI — 7 期
@@ -30,6 +30,7 @@
 - [Sholto Douglas / 肖尔托·道格拉斯](https://aipodcast.jasonlin.tech/pp/sholto/): Researcher, Anthropic — 5 期
 - [Aravind Srinivas / 阿拉文德·斯里尼瓦斯](https://aipodcast.jasonlin.tech/pp/aravind/): Co-founder & CEO, Perplexity — 4 期
 - [Zico Kolter / 齐科·科尔特](https://aipodcast.jasonlin.tech/pp/kolter/): Professor, CMU · OpenAI board — 4 期
+- [Dylan Patel / 迪伦·帕特尔](https://aipodcast.jasonlin.tech/pp/dylanpatel/): Founder & Chief Analyst, SemiAnalysis — 3 期
 - [Mark Pincus / 马克·平卡斯](https://aipodcast.jasonlin.tech/pp/pincus/): Founder, Zynga — 3 期
 - [Mark Chen / 马克·陈](https://aipodcast.jasonlin.tech/pp/markchen/): Chief Research Officer, OpenAI — 3 期
 - [John Jumper / 约翰·江珀](https://aipodcast.jasonlin.tech/pp/jumper/): Director, Google DeepMind; Nobel Laureate in Chemistry — 3 期
@@ -38,7 +39,6 @@
 - [Noam Shazeer / 诺姆·沙泽尔](https://aipodcast.jasonlin.tech/pp/shazeer/): Co-lead, Google Gemini — 3 期
 - [Jan Leike / 扬·莱克](https://aipodcast.jasonlin.tech/pp/leike/): Alignment Lead, Anthropic — 3 期
 - [Jürgen Schmidhuber / 于尔根·施密德胡伯](https://aipodcast.jasonlin.tech/pp/schmidhuber/): Director, KAUST AI — 2 期
-- [Dylan Patel / 迪伦·帕特尔](https://aipodcast.jasonlin.tech/pp/dylanpatel/): Founder & Chief Analyst, SemiAnalysis — 2 期
 - [Andrew Ambrosino / 安德鲁·安布罗西诺](https://aipodcast.jasonlin.tech/pp/ajambrosino/): Codex App Lead, OpenAI — 2 期
 - [Joon Sung Park / 朴俊成](https://aipodcast.jasonlin.tech/pp/joonpark/): Co-founder, Simile; creator of Generative Agents (Stanford) — 2 期
 - [Peter Steinberger / 彼得·施泰因贝格尔](https://aipodcast.jasonlin.tech/pp/steinberger/): Creator of OpenClaw; founder of PSPDFKit — 2 期
@@ -47,6 +47,7 @@
 - [Mira Murati / 米拉·穆拉蒂](https://aipodcast.jasonlin.tech/pp/murati/): Founder & CEO, Thinking Machines Lab — 2 期
 - [Łukasz Kaiser / 武卡什·凯泽](https://aipodcast.jasonlin.tech/pp/kaiser/): Researcher, OpenAI — 2 期
 - [Oriol Vinyals / 奥里奥尔·维尼亚尔斯](https://aipodcast.jasonlin.tech/pp/oriol/): VP of Research & Gemini Co-lead · Google DeepMind — 2 期
+- [Reiner Pope / 赖纳·波普](https://aipodcast.jasonlin.tech/pp/reinerpope/): Co-founder & CEO, MatX; ex-Google (LLM serving) — 2 期
 - [Jeff Dean / 杰夫·迪恩](https://aipodcast.jasonlin.tech/pp/jeffdean/): Chief Scientist, Google — 2 期
 - [Jakub Pachocki / 雅库布·帕霍茨基](https://aipodcast.jasonlin.tech/pp/pachocki/): Chief Scientist, OpenAI — 2 期
 - [Edwin Chen / 陈埃德温](https://aipodcast.jasonlin.tech/pp/edwinchen/): Founder & CEO, Surge AI — 2 期
@@ -63,15 +64,17 @@
 - [Tejal Patwardhan / 泰贾尔·帕特瓦尔丹](https://aipodcast.jasonlin.tech/pp/tejal/): Frontier Evals Lead, OpenAI — 1 期
 - [Matt White / 马特·怀特](https://aipodcast.jasonlin.tech/pp/mattwhite/): AI CTO, Linux Foundation; ED, PyTorch Foundation — 1 期
 - [Logan Kilpatrick / 洛根·基尔帕特里克](https://aipodcast.jasonlin.tech/pp/logankilpatrick/): Lead, Google AI Studio & Gemini API; ex-OpenAI — 1 期
+- [Mark Zuckerberg / 马克·扎克伯格](https://aipodcast.jasonlin.tech/pp/zuckerberg/): Founder, Chairman & CEO, Meta Platforms — 1 期
 - [Alexander Wei / 亚历山大·魏](https://aipodcast.jasonlin.tech/pp/alexwei/): Research, OpenAI — 1 期
+- [Satya Nadella / 萨提亚·纳德拉](https://aipodcast.jasonlin.tech/pp/satya/): Chairman & CEO, Microsoft — 1 期
 - [Ali Behrouz / 阿里·贝赫鲁兹](https://aipodcast.jasonlin.tech/pp/alibehrouz/): Researcher, Google; PhD student, Cornell (continual learning) — 1 期
 - [Rohin Shah / 罗欣·沙阿](https://aipodcast.jasonlin.tech/pp/rohinshah/): Head of AGI Safety & Alignment, Google DeepMind — 1 期
 - [Walden Yan / 沃尔登·严](https://aipodcast.jasonlin.tech/pp/waldenyan/): Co-founder & CPO, Cognition (Devin); coined 'context engineering' — 1 期
 - [Alex Rives / 亚历克斯·里夫斯](https://aipodcast.jasonlin.tech/pp/alexrives/): Co-founder & Chief Scientist, EvolutionaryScale; creator of ESM — 1 期
+- [Andrew Feldman / 安德鲁·费尔德曼](https://aipodcast.jasonlin.tech/pp/feldman/): Co-founder & CEO, Cerebras Systems — 1 期
 - [Michael I. Jordan / 迈克尔·乔丹](https://aipodcast.jasonlin.tech/pp/mjordan/): Professor, UC Berkeley; foundations of machine learning — 1 期
 - [Caitlin Kalinowski / 凯特琳·卡利诺夫斯基](https://aipodcast.jasonlin.tech/pp/caitlin/): Head of Robotics & Hardware, OpenAI — 1 期
 - [Eric Jang / 埃里克·张](https://aipodcast.jasonlin.tech/pp/ericjang/): VP of AI, 1X; ex-Google Brain (robotics, RL) — 1 期
-- [Reiner Pope / 赖纳·波普](https://aipodcast.jasonlin.tech/pp/reinerpope/): Co-founder & CEO, MatX; ex-Google (LLM serving) — 1 期
 - [Cat Wu / 凯特·吴](https://aipodcast.jasonlin.tech/pp/catwu/): Product, Claude Code · Anthropic — 1 期
 - [Aidan Gomez / 艾丹·戈麦斯](https://aipodcast.jasonlin.tech/pp/gomez/): Co-founder & CEO, Cohere — 1 期
 - [Liam Fedus / 利亚姆·费杜斯](https://aipodcast.jasonlin.tech/pp/fedus/): Co-founder, Periodic Labs (ex-OpenAI) — 1 期
@@ -126,6 +129,7 @@
 ## 最新访谈 Latest episodes
 - [Peering Inside the Black Box of AI](https://aipodcast.jasonlin.tech/e/neelnanda-googlede-2026/) — Neel Nanda, Google DeepMind, 2026-07-10
 - [AGI and Physical AI: A Conversation with AI Pioneer Jurgen Schmidhuber](https://aipodcast.jasonlin.tech/e/schmidhuber-unsuperv-2026/) — Jürgen Schmidhuber, Unsupervised Learning, 2026-07-09
+- [From Forum Poster to AI Infrastructure Analyst: The Story of Semi Analysis](https://aipodcast.jasonlin.tech/e/dylanpatel-wisdomtr-2026/) — Dylan Patel, WisdomTree in Europe, 2026-07-09
 - [Giving Computers a Sense of Smell](https://aipodcast.jasonlin.tech/e/wiltschko-thetwiml-2026/) — Alex Wiltschko, The TWIML AI Podcast, 2026-07-08
 - [From Medical School to AI: A Biologist's Journey](https://aipodcast.jasonlin.tech/e/derya-theopena-2026/) — Derya Unutmaz, The OpenAI Podcast, 2026-07-06
 - [Liquid AI: Squeezing Maximum Intelligence from Limited Compute](https://aipodcast.jasonlin.tech/e/hasani-thecogni-2026/) — Ramin Hasani, The Cognitive Revolution, 2026-07-04
@@ -163,7 +167,6 @@
 - [AI CTO at Linux Foundation on Open Source AI, China's Rise, and Agentic AI](https://aipodcast.jasonlin.tech/e/mattwhite-finovers-2026/) — Matt White, Finoverse, 2026-06-15
 - [Mark Pincus on Proven Better New: A Framework for Successful Product Ideas](https://aipodcast.jasonlin.tech/e/pincus-lennyspo-2026/) — Mark Pincus, Lenny’s Podcast, 2026-06-14
 - [Agentic AI Era: Google's Anti-Gravity Harness Powers Next-Gen Products](https://aipodcast.jasonlin.tech/e/logankilpatrick-training-2026/) — Logan Kilpatrick, Training Data, 2026-06-11
-- [Building the dynamo of the intelligence revolution](https://aipodcast.jasonlin.tech/e/jensen-training/) — Jensen Huang, Training Data, 2026-06-10
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
