@@ -8,3 +8,6 @@ pipeline/.env
 pipeline/auto_refresh.log
 pipeline/launchd.log
 share_cards/
+
+# 待收录暂存(DeepSeek 充值后用)
+pipeline/_pending_*
