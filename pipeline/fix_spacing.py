@@ -54,7 +54,17 @@ def main():
             st, en, obj = r
             html = html[:st] + json.dumps(deep_fix(obj), ensure_ascii=False) + html[en:]
     (ROOT / 'index.html').write_text(html, encoding='utf-8')
-    # 3) ep-extra brief
+    # 3) mcp-data/ep/*.json 标题(分享页/SEO 从这里生成)
+    epdir = ROOT / 'mcp-data' / 'ep'
+    if epdir.exists():
+        for f in epdir.glob('*.json'):
+            d = json.loads(f.read_text(encoding='utf-8'))
+            ch = False
+            for k in ('tZh', 'sZh'):
+                nv = space_fix(d.get(k, ''))
+                if nv != d.get(k, ''): d[k] = nv; ch = True
+            if ch: f.write_text(json.dumps(d, ensure_ascii=False), encoding='utf-8')
+    # 4) ep-extra brief
     exf = ROOT / 'data' / 'ep-extra.json'
     if exf.exists():
         ex = json.loads(exf.read_text(encoding='utf-8'))
