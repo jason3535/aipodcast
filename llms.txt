@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 148 位人物 / 359 期访谈
+规模: 160 位人物 / 371 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -64,6 +64,7 @@
 - [Arvind Jain / 阿尔温德·贾恩](https://aipodcast.jasonlin.tech/pp/arvindjain/): Founder & CEO, Glean — 1 期
 - [Neel Nanda / 尼尔·南达](https://aipodcast.jasonlin.tech/pp/neelnanda/): Mechanistic Interpretability Lead, Google DeepMind — 1 期
 - [Alex Wiltschko / 亚历克斯·维尔奇科](https://aipodcast.jasonlin.tech/pp/wiltschko/): Founder & CEO, Osmo; ex-Google Brain (digital olfaction) — 1 期
+- [Meaghan Choi / 梅根·崔](https://aipodcast.jasonlin.tech/pp/meaghanchoi/): Head of Design, Claude Code & Cowork at Anthropic — 1 期
 - [Derya Unutmaz / 德里亚·乌纳特马兹](https://aipodcast.jasonlin.tech/pp/derya/): Professor, The Jackson Laboratory; AI × immunology — 1 期
 - [Ramin Hasani / 拉明·哈萨尼](https://aipodcast.jasonlin.tech/pp/hasani/): Co-founder & CEO, Liquid AI; liquid neural networks (ex-MIT) — 1 期
 - [Grant Sanderson / 格兰特·桑德森](https://aipodcast.jasonlin.tech/pp/grantsanderson/): Creator of 3Blue1Brown; math educator — 1 期
@@ -92,6 +93,7 @@
 - [Beth Barnes / 贝丝·巴恩斯](https://aipodcast.jasonlin.tech/pp/bethbarnes/): Founder & CEO, METR — 1 期
 - [Cat Wu / 凯特·吴](https://aipodcast.jasonlin.tech/pp/catwu/): Product, Claude Code · Anthropic — 1 期
 - [Aidan Gomez / 艾丹·戈麦斯](https://aipodcast.jasonlin.tech/pp/gomez/): Co-founder & CEO, Cohere — 1 期
+- [Ian Silber / 伊恩·西尔伯](https://aipodcast.jasonlin.tech/pp/iansilber/): Head of Product Design, OpenAI — 1 期
 - [Amol Avasare / 阿莫尔·阿瓦萨雷](https://aipodcast.jasonlin.tech/pp/amolavasare/): Head of Growth at Anthropic — 1 期
 - [Liam Fedus / 利亚姆·费杜斯](https://aipodcast.jasonlin.tech/pp/fedus/): Co-founder, Periodic Labs (ex-OpenAI) — 1 期
 - [Simon Willison / 西蒙·威利森](https://aipodcast.jasonlin.tech/pp/simonwillison/): Independent software developer and AI blogger (simonwillison.net); creator of Datasette and the LLM CLI — 1 期
@@ -122,6 +124,7 @@
 - [David Silver / 大卫·西尔弗](https://aipodcast.jasonlin.tech/pp/dsilver/): Principal Research Scientist, DeepMind — 1 期
 - [Bill Peebles / 比尔·皮布尔斯](https://aipodcast.jasonlin.tech/pp/billpeebles/): AI researcher; former head of OpenAI's Sora, co-inventor of Diffusion Transformers (DiT) — 1 期
 - [Jason Wei / 杰森·魏](https://aipodcast.jasonlin.tech/pp/jasonwei/): AI Researcher (ex-OpenAI) — 1 期
+- [Escha Vera / 埃莎·维拉](https://aipodcast.jasonlin.tech/pp/eschavera/): Product Designer at Perplexity — 1 期
 - [Neel Nanda / 尼尔·南达](https://aipodcast.jasonlin.tech/pp/nanda/): Mechanistic Interpretability Lead, Google DeepMind — 1 期
 - [Bret Taylor / 布雷特·泰勒](https://aipodcast.jasonlin.tech/pp/brettaylor/): Co-founder & CEO of Sierra; Chairman of the Board, OpenAI — 1 期
 - [Scott Wu / 吴一](https://aipodcast.jasonlin.tech/pp/scottwu/): Co-founder & CEO, Cognition — 1 期
@@ -131,6 +134,8 @@
 - [Jared Kaplan / 贾里德·卡普兰](https://aipodcast.jasonlin.tech/pp/kaplan/): Co-founder, Anthropic — 1 期
 - [Chelsea Finn / 切尔西·芬恩](https://aipodcast.jasonlin.tech/pp/finn/): Assistant Professor, Stanford; co-founder, Physical Intelligence — 1 期
 - [Ben Mann / 本·曼恩](https://aipodcast.jasonlin.tech/pp/benmann/): Co-founder, Anthropic — 1 期
+- [Gunnar Gray / 冈纳·格雷](https://aipodcast.jasonlin.tech/pp/gunnargray/): Product Design Lead at Perplexity — 1 期
+- [Ryo Lu / 陆瑞（Ryo Lu）](https://aipodcast.jasonlin.tech/pp/ryolu/): Head of Design at Cursor (Anysphere) — 1 期
 - [Misha Laskin / 米沙·拉斯金](https://aipodcast.jasonlin.tech/pp/laskin/): Co-founder & CEO, Reflection AI (prev. DeepMind) — 1 期
 - [Guillaume Lample / 纪尧姆·朗普勒](https://aipodcast.jasonlin.tech/pp/lample/): Co-founder & Chief Scientist, Mistral AI — 1 期
 - [Josh Batson / 乔什·巴特森](https://aipodcast.jasonlin.tech/pp/batson/): Interpretability Researcher, Anthropic — 1 期
@@ -141,11 +146,18 @@
 - [Max Jaderberg / 马克斯·亚德伯格](https://aipodcast.jasonlin.tech/pp/jaderberg/): Chief AI Officer · Isomorphic Labs — 1 期
 - [Murray Shanahan / 默里·沙纳汉](https://aipodcast.jasonlin.tech/pp/shanahan/): Principal Scientist · Google DeepMind; Professor, Imperial College — 1 期
 - [Isa Fulford / 伊莎·富尔福德](https://aipodcast.jasonlin.tech/pp/fulford/): Research Scientist, OpenAI — 1 期
+- [Tuhin Kumar / 图欣·库马尔](https://aipodcast.jasonlin.tech/pp/tuhinkumar/): Product Designer; former Head of Design at Luma AI — 1 期
+- [Nad Chishtie / 纳德·奇什蒂](https://aipodcast.jasonlin.tech/pp/nadchishtie/): Founding Designer & Head of Design, Lovable — 1 期
+- [Sam Stephenson / 萨姆·斯蒂芬森](https://aipodcast.jasonlin.tech/pp/samstephenson/): Co-founder and Designer, Granola — 1 期
+- [Alejandro Matamala Ortiz / 亚历杭德罗·马塔马拉·奥尔蒂斯](https://aipodcast.jasonlin.tech/pp/alejandromatamala/): Co-founder & Chief Design Officer, Runway — 1 期
+- [Ammaar Reshi / 阿玛尔·雷希](https://aipodcast.jasonlin.tech/pp/ammaarreshi/): Product & Design Lead, Google AI Studio — 1 期
 - [Karina Nguyen / 卡丽娜·阮](https://aipodcast.jasonlin.tech/pp/karina/): Research, OpenAI — 1 期
 - [Ioannis Antonoglou / 扬尼斯·安东诺格鲁](https://aipodcast.jasonlin.tech/pp/antonoglou/): Co-founder & CTO, Reflection AI — 1 期
 - [Paul Christiano / 保罗·克里斯蒂亚诺](https://aipodcast.jasonlin.tech/pp/christiano/): Head of AI Safety, US AI Safety Institute — 1 期
+- [Joel Lewenstein / 乔尔·卢文斯坦](https://aipodcast.jasonlin.tech/pp/joellewenstein/): Head of Product Design at Anthropic — 1 期
 - [Michael Truell / 迈克尔·特鲁埃尔](https://aipodcast.jasonlin.tech/pp/truell/): Co-founder & CEO, Cursor — 1 期
 - [Tri Dao / 特里·道](https://aipodcast.jasonlin.tech/pp/tridao/): Chief Scientist, Together AI; Professor, Princeton — 1 期
+- [Henry Modisett / 亨利·莫迪塞特](https://aipodcast.jasonlin.tech/pp/henrymodisett/): VP of Design, Perplexity — 1 期
 - [Percy Liang / 珀西·梁](https://aipodcast.jasonlin.tech/pp/percyliang/): Associate Professor, Stanford; Director, CRFM — 1 期
 - [Chris Olah / 克里斯·奥拉](https://aipodcast.jasonlin.tech/pp/olah/): Co-founder, Anthropic; interpretability pioneer — 1 期
 - [Jim Fan / 范麟熙](https://aipodcast.jasonlin.tech/pp/jimfan/): Senior Research Scientist, NVIDIA — 1 期
@@ -164,6 +176,7 @@
 - [AGI and Physical AI: A Conversation with AI Pioneer Jurgen Schmidhuber](https://aipodcast.jasonlin.tech/e/schmidhuber-unsuperv-2026/) — Jürgen Schmidhuber, Unsupervised Learning, 2026-07-09
 - [From Forum Poster to AI Infrastructure Analyst: The Story of Semi Analysis](https://aipodcast.jasonlin.tech/e/dylanpatel-wisdomtr-2026/) — Dylan Patel, WisdomTree in Europe, 2026-07-09
 - [Giving Computers a Sense of Smell](https://aipodcast.jasonlin.tech/e/wiltschko-thetwiml-2026/) — Alex Wiltschko, The TWIML AI Podcast, 2026-07-08
+- [Designing Claude Code: A Designer's Journey at Anthropic](https://aipodcast.jasonlin.tech/e/meaghanchoi-diveclub-2026/) — Meaghan Choi, Dive Club, 2026-07-08
 - [From Medical School to AI: A Biologist's Journey](https://aipodcast.jasonlin.tech/e/derya-theopena-2026/) — Derya Unutmaz, The OpenAI Podcast, 2026-07-06
 - [Liquid AI: Squeezing Maximum Intelligence from Limited Compute](https://aipodcast.jasonlin.tech/e/hasani-thecogni-2026/) — Ramin Hasani, The Cognitive Revolution, 2026-07-04
 - [AI Scaling Laws and the Future of Intelligence](https://aipodcast.jasonlin.tech/e/naval-naval-2026b/) — Naval Ravikant, Naval, 2026-07-03
@@ -196,7 +209,6 @@
 - [Dean Ball on Joining OpenAI, AI Policy, and Recursive Self-Improvement](https://aipodcast.jasonlin.tech/e/deanball-thecogni-2026/) — Dean Ball, The Cognitive Revolution, 2026-06-20
 - [AI Coding on Phone: Boris on 8B Tokens & ROI](https://aipodcast.jasonlin.tech/e/boris-scale-2026/) — Boris Cherny, @Scale, 2026-06-19
 - [AI's Future and Yours: Agency, Tools, and the Widening Gap](https://aipodcast.jasonlin.tech/e/feifei-siliconv-2026/) — Fei-Fei Li, Silicon Valley Girl, 2026-06-19
-- [New Media vs Old Media: Authenticity and the Death of Media Training](https://aipodcast.jasonlin.tech/e/andreessen-thea16zp-2026/) — Marc Andreessen, The a16z Podcast, 2026-06-19
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
