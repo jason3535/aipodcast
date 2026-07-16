@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 160 位人物 / 375 期访谈
+规模: 163 位人物 / 378 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -63,6 +63,7 @@
 - [Pushmeet Kohli / 普什米特·科利](https://aipodcast.jasonlin.tech/pp/kohli/): VP of Research (AI for Science), Google DeepMind — 2 期
 - [Nando de Freitas / 南多·德弗雷塔斯](https://aipodcast.jasonlin.tech/pp/nando/): VP & Distinguished Scientist, Microsoft AI (prev. DeepMind) — 2 期
 - [Jerry Tworek / 杰里·特沃雷克](https://aipodcast.jasonlin.tech/pp/tworek/): VP of Research, OpenAI — 2 期
+- [Jason Yuan / Jason Yuan](https://aipodcast.jasonlin.tech/pp/jasonyuan/): Founder & CEO, Hivemind; ex-New Computer, ex-Apple — 1 期
 - [Alistair Pullen / 阿利斯泰尔·普伦](https://aipodcast.jasonlin.tech/pp/pullen/): Co-founder & CEO, Cosine (Genie) — 1 期
 - [David "davidad" Dalrymple / 大卫·"davidad"·达尔林普尔](https://aipodcast.jasonlin.tech/pp/davidad/): Technical Advisor, Safeguarded AI, ARIA — 1 期
 - [Arvind Jain / 阿尔温德·贾恩](https://aipodcast.jasonlin.tech/pp/arvindjain/): Founder & CEO, Glean — 1 期
@@ -112,12 +113,14 @@
 - [Nikita Rudin / 尼基塔·鲁丁](https://aipodcast.jasonlin.tech/pp/rudin/): Co-founder & CEO of Flexion Robotics — 1 期
 - [Tobi Springenberg / 托比·施普林根贝格](https://aipodcast.jasonlin.tech/pp/springenberg/): Research Scientist, Physical Intelligence (prev. DeepMind) — 1 期
 - [Aakanksha Chowdhery / 阿坎莎·乔杜里](https://aipodcast.jasonlin.tech/pp/chowdhery/): Member of Technical Staff, Reflection AI — 1 期
+- [Roman Tesliuk / 罗曼·特斯柳克](https://aipodcast.jasonlin.tech/pp/romantesliuk/): Web/Product Designer, ElevenLabs — 1 期
 - [Shane Legg / 谢恩·莱格](https://aipodcast.jasonlin.tech/pp/shanelegg/): Co-founder & Chief AGI Scientist, DeepMind — 1 期
 - [David Soria Parra / 大卫·索里亚·帕拉](https://aipodcast.jasonlin.tech/pp/davidsp/): Co-creator of MCP, Anthropic — 1 期
 - [Olivier Godement / 奥利维耶·戈德芒](https://aipodcast.jasonlin.tech/pp/godement/): Head of Product, Platform (API) at OpenAI — 1 期
 - [Amanda Askell / 阿曼达·阿斯克尔](https://aipodcast.jasonlin.tech/pp/askell/): Philosopher, Anthropic — 1 期
 - [Dianne Na Penn / 黛安·娜·潘恩](https://aipodcast.jasonlin.tech/pp/diannepenn/): Head of Research Product Management, Anthropic — 1 期
 - [Clément Delangue / 克莱芒·德隆格](https://aipodcast.jasonlin.tech/pp/delangue/): Co-founder & CEO, Hugging Face — 1 期
+- [Steve Ruiz / 史蒂夫·鲁伊斯](https://aipodcast.jasonlin.tech/pp/steveruiz/): Founder & CEO, tldraw — 1 期
 - [Justin Johnson / 贾斯汀·约翰逊](https://aipodcast.jasonlin.tech/pp/justinjohnson/): Co-founder, World Labs — 1 期
 - [Llion Jones / 利昂·琼斯](https://aipodcast.jasonlin.tech/pp/llion/): Co-founder & CTO, Sakana AI; Transformer co-author — 1 期
 - [Devi Parikh / 黛维·帕里克](https://aipodcast.jasonlin.tech/pp/deviparikh/): Co-founder & Co-CEO, Yutori — 1 期
@@ -169,6 +172,7 @@
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 1 期
 
 ## 最新访谈 Latest episodes
+- [From Dot to Hivemind: A Creative Journey in AI Design](https://aipodcast.jasonlin.tech/e/jasonyuan-diveclub-2026/) — Jason Yuan, Dive Club, 2026-07-15
 - [Sovereign AI: Building the UK's First LLM on a Startup Budget](https://aipodcast.jasonlin.tech/e/pullen-machinel-2026/) — Alistair Pullen, Machine Learning Street Talk, 2026-07-13
 - [The Cognitive Revolution: Davidad on Provably Safe AI and the Future of Alignment](https://aipodcast.jasonlin.tech/e/davidad-thecogni-2026/) — David "davidad" Dalrymple, The Cognitive Revolution, 2026-07-12
 - [Glean CEO: Enterprises Fear Frontier AI Models Eating Their Lunch](https://aipodcast.jasonlin.tech/e/arvindjain-20vcwith-2026/) — Arvind Jain, 20VC with Harry Stebbings, 2026-07-11
@@ -208,7 +212,6 @@
 - [Autonomous Vehicles: From Tesla to Waymo and Beyond](https://aipodcast.jasonlin.tech/e/qasaryounis-lemonade-2026/) — Qasar Younis, Lemonade Stand Clips, 2026-06-21
 - [Dean Ball on Joining OpenAI, AI Policy, and Recursive Self-Improvement](https://aipodcast.jasonlin.tech/e/deanball-thecogni-2026/) — Dean Ball, The Cognitive Revolution, 2026-06-20
 - [AI Coding on Phone: Boris on 8B Tokens & ROI](https://aipodcast.jasonlin.tech/e/boris-scale-2026/) — Boris Cherny, @Scale, 2026-06-19
-- [AI's Future and Yours: Agency, Tools, and the Widening Gap](https://aipodcast.jasonlin.tech/e/feifei-siliconv-2026/) — Fei-Fei Li, Silicon Valley Girl, 2026-06-19
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
