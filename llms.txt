@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 163 位人物 / 378 期访谈
+规模: 164 位人物 / 379 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -76,6 +76,7 @@
 - [Sergey Edunov / 谢尔盖·叶杜诺夫](https://aipodcast.jasonlin.tech/pp/edunov/): CTO, Genesis Molecular AI; led Llama 2/3 pretraining at Meta — 1 期
 - [Dan Biderman / 丹·比德曼](https://aipodcast.jasonlin.tech/pp/danbiderman/): Co-founder, Engram; memory & continual learning — 1 期
 - [Matei Zaharia / 马泰·扎哈里亚](https://aipodcast.jasonlin.tech/pp/matei/): Co-founder & CTO, Databricks; Associate Professor, UC Berkeley — 1 期
+- [Loredana Crisan / 洛雷达娜·克里桑](https://aipodcast.jasonlin.tech/pp/loredanacrisan/): Chief Design Officer, Figma — 1 期
 - [Dean Ball / 迪恩·鲍尔](https://aipodcast.jasonlin.tech/pp/deanball/): Head of Strategic Futures, OpenAI — 1 期
 - [Tejal Patwardhan / 泰贾尔·帕特瓦尔丹](https://aipodcast.jasonlin.tech/pp/tejal/): Frontier Evals Lead, OpenAI — 1 期
 - [Dan Klein / 丹·克莱因](https://aipodcast.jasonlin.tech/pp/danklein/): Professor of Computer Science, UC Berkeley; Co-founder & CTO, Scaled Cognition — 1 期
@@ -204,6 +205,7 @@
 - [Memory and Continual Learning: The Next Frontier in AI](https://aipodcast.jasonlin.tech/e/danbiderman-training-2026/) — Dan Biderman, Training Data, 2026-06-24
 - [Omnigents: The Meta Harness for AI Agents](https://aipodcast.jasonlin.tech/e/matei-latentsp-2026/) — Matei Zaharia, Latent Space, 2026-06-24
 - [AI Models Commoditization and Public Market Test](https://aipodcast.jasonlin.tech/e/benedictevans-analysep-2026/) — Benedict Evans, Analyse Podcast, 2026-06-24
+- [Putting Soul into AI Design: Figma's CDO on Music, Intuition, and the Future](https://aipodcast.jasonlin.tech/e/loredanacrisan-diveclub-2026/) — Loredana Crisan, Dive Club, 2026-06-24
 - [AI Agents: The Next Frontier Beyond LLMs](https://aipodcast.jasonlin.tech/e/joonpark-googlede-2026/) — Joon Sung Park, Google DeepMind, 2026-06-23
 - [AlphaFold: AI's Nobel-Winning Leap in Protein Folding](https://aipodcast.jasonlin.tech/e/jumper-machinel-2026/) — John Jumper, Machine Learning Street Talk, 2026-06-22
 - [AI Red Teaming Outperforms Humans](https://aipodcast.jasonlin.tech/e/kolter-latentsp-2026/) — Zico Kolter, Latent Space, 2026-06-22
@@ -211,7 +213,6 @@
 - [Fiona Fung on AI's Impact on Software Engineering](https://aipodcast.jasonlin.tech/e/fiona-lennyspo-2026/) — Fiona Fung, Lenny’s Podcast, 2026-06-21
 - [Autonomous Vehicles: From Tesla to Waymo and Beyond](https://aipodcast.jasonlin.tech/e/qasaryounis-lemonade-2026/) — Qasar Younis, Lemonade Stand Clips, 2026-06-21
 - [Dean Ball on Joining OpenAI, AI Policy, and Recursive Self-Improvement](https://aipodcast.jasonlin.tech/e/deanball-thecogni-2026/) — Dean Ball, The Cognitive Revolution, 2026-06-20
-- [AI Coding on Phone: Boris on 8B Tokens & ROI](https://aipodcast.jasonlin.tech/e/boris-scale-2026/) — Boris Cherny, @Scale, 2026-06-19
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
