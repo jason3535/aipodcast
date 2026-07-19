@@ -3218,7 +3218,7 @@ function syncAgo(){const t=+localStorage.syncT||0;if(!t)return '尚未同步';
   const m=Math.round((Date.now()-t)/60000);return m<1?'刚刚已同步':m<60?`${m} 分钟前同步`:`${Math.round(m/60)} 小时前同步`;}
 function syncPanelHtml(){
   const c=syncCode();
-  if(!c)return `<b style="color:var(--text-2)">多设备同步</b> — 一个匿名同步码，跨设备同步已读、稍后读与阅读进度。无账号、无 Cookie。<br>
+  if(!c)return `<b style="color:var(--text-2)">多设备同步</b> — 一个匿名同步码，跨设备同步已读、稍后读与阅读进度。无账号、无 Cookie。同一个码也可在姊妹站 AI Paper 使用。<br>
     <button class="mcp-copy" onclick="syncStart()">开启同步</button>
     <span style="margin:0 6px;color:var(--text-3)">或</span>
     <input id="syncIn" placeholder="输入同步码" style="font-family:var(--ui);font-size:16px;padding:5px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--text);width:220px" onkeydown="if(event.key==='Enter')syncJoinInput()">
