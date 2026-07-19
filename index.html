@@ -659,6 +659,32 @@
 .rsi-actions{display:flex;gap:10px;margin-top:6px}
 .rsi-actions button,.rsi-actions a{padding:9px 18px;border-radius:999px;border:none;font-size:14px;cursor:pointer;text-decoration:none;background:#fff;color:#111}
 .rsi-actions .rsi-close{background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff}
+
+/* 阅读统计 */
+.st-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:18px 0 26px}
+.st-tile{background:var(--surface-2);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.st-tile .n{font-size:30px;font-weight:700;color:var(--accent);line-height:1.1}
+.st-tile .l{font-size:12px;color:var(--text-2);margin-top:6px}
+.st-tile .s{font-size:11px;color:var(--text-3);opacity:.75}
+.st-h3{font-size:15px;font-weight:600;margin:26px 0 12px}
+.hm-wrap{overflow-x:auto;padding-bottom:6px}
+.hm{display:grid;grid-auto-flow:column;grid-template-rows:repeat(7,12px);gap:3px;width:max-content}
+.hm i{width:12px;height:12px;border-radius:3px;background:var(--surface-2);border:1px solid var(--line);box-sizing:border-box;display:block}
+.hm i[data-l="1"]{background:rgba(41,151,255,.25)}
+.hm i[data-l="2"]{background:rgba(41,151,255,.45)}
+.hm i[data-l="3"]{background:rgba(41,151,255,.7)}
+.hm i[data-l="4"]{background:var(--accent)}
+.hm i[data-l="1"],.hm i[data-l="2"],.hm i[data-l="3"],.hm i[data-l="4"]{border:none}
+.hm-legend{display:flex;align-items:center;gap:4px;font-size:11px;color:var(--text-3);margin-top:8px}
+.hm-legend i{width:10px;height:10px;border-radius:2px;display:inline-block}
+.rk{display:flex;flex-direction:column;gap:10px;max-width:560px}
+.rk-row{display:flex;align-items:center;gap:10px}
+.rk-logo{width:26px;height:26px;border-radius:6px;object-fit:cover;flex:none;background:var(--surface-2)}
+.rk-ini{width:26px;height:26px;border-radius:6px;flex:none;background:var(--surface-2);color:var(--text-3);font-size:10px;display:flex;align-items:center;justify-content:center;font-weight:600}
+.rk-name{font-size:13px;width:150px;flex:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rk-bar{height:8px;border-radius:4px;background:var(--accent);min-width:8px}
+.rk-n{font-size:12px;color:var(--text-2);flex:none}
+.st-empty{color:var(--text-2);font-size:14px;margin-top:14px}
 </style>
 </head>
 <body>
@@ -1864,7 +1890,11 @@ async function readShareImage(){
   x.fillStyle='#2997ff';x.font='700 40px '+F;
   const stat='我读完了 '+eps.length+' 期';x.fillText(stat,pad,164);
   x.fillStyle='rgba(255,255,255,.85)';x.font='400 17px '+F;
-  x.fillText('累计约 '+hrs+' 小时 · 覆盖 '+ppl+' 位 AI 人物',pad,196);
+  const _stk=(typeof rlogStreak==='function')?rlogStreak():{cur:0};
+  x.fillText('累计约 '+hrs+' 小时 · 覆盖 '+ppl+' 位 AI 人物'+(_stk.cur>1?' · 连续 '+_stk.cur+' 天':''),pad,196);
+  {const _pc={};eps.forEach(e=>{const k=(e.pod&&e.pod.zh)||'';if(k)_pc[k]=(_pc[k]||0)+1;});
+   const _tp=Object.entries(_pc).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([k,n])=>k+' ×'+n).join(' · ');
+   if(_tp){x.fillStyle='rgba(255,255,255,.45)';x.font='400 14px '+F;x.fillText('常听:'+_tp,pad,220);}}
   x.strokeStyle='rgba(255,255,255,.12)';x.beginPath();x.moveTo(pad,headH-24);x.lineTo(W-pad,headH-24);x.stroke();
   const ell=(t,mw,f)=>{x.font=f;if(x.measureText(t).width<=mw)return t;while(t.length&&x.measureText(t+'…').width>mw)t=t.slice(0,-1);return t+'…';};
   shown.forEach((e,i)=>{
@@ -1909,10 +1939,66 @@ async function rsiShare(btn){
   }catch(e){}
 }
 
+
+/* 每日阅读日志:localStorage.readLog = {"YYYY-MM-DD": 分钟数}(标记已读时累加,取消时扣回) */
+function rlogGet(){try{const r=JSON.parse(localStorage.readLog||'{}');return r&&typeof r==='object'?r:{}}catch(e){return{}}}
+function rlogAdd(min){if(!min)return;const d=new Date(),k=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  const g=rlogGet();g[k]=Math.max(0,(g[k]||0)+min);if(g[k]===0)delete g[k];localStorage.readLog=JSON.stringify(g);}
+function rlogStreak(){const g=rlogGet();let cur=0,max=0;const day=86400000;const today=new Date();today.setHours(0,0,0,0);
+  const has=t=>{const d=new Date(t);const k=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');return g[k]>0;};
+  let t=today.getTime();if(!has(t))t-=day;   // 今天还没读,从昨天起算
+  while(has(t)){cur++;t-=day;}
+  const ks=Object.keys(g).filter(k=>g[k]>0).sort();let run=0,prev=null;
+  ks.forEach(k=>{const t2=new Date(k+'T00:00:00').getTime();run=(prev!==null&&t2-prev===day)?run+1:1;prev=t2;if(run>max)max=run;});
+  return {cur,max};}
+function readStats(){
+  let ids=[];try{const r=JSON.parse(localStorage.readEpisodes||'[]');if(Array.isArray(r))ids=r;}catch(e){}
+  const eps=ids.map(id=>EPISODES.find(e=>e.id===id)).filter(Boolean);
+  const totalMin=eps.reduce((s,e)=>s+(e.min||0),0);
+  const pods={};eps.forEach(e=>{const k=(e.pod&&e.pod.zh)||(e.pod&&e.pod.en)||'?';pods[k]=pods[k]||{n:0,en:(e.pod&&e.pod.en)||''};pods[k].n++;});
+  return {eps,totalMin,ppl:new Set(eps.map(e=>e.pid)).size,pods,streak:rlogStreak()};
+}
+function vStats(){
+  const st=readStats();
+  if(!st.eps.length)return `<div class="wrap"><section class="reveal" style="min-height:50vh"><div class="eyebrow">My stats · 阅读统计</div><h2 class="title">我的阅读统计</h2><div class="st-empty">还没有已读的播客——打开一期读到底会自动标记已读,统计从此开始累计。</div></section></div>`;
+  const hrs=Math.round(st.totalMin/6)/10;
+  const g=rlogGet();
+  // 26 周热力图:列=周,行=周日..周六,最右列=本周
+  const day=86400000;const today=new Date();today.setHours(0,0,0,0);
+  const end=today.getTime()+(6-today.getDay())*day;   // 本周六
+  let cells='';
+  for(let w=25;w>=0;w--){for(let r=0;r<7;r++){
+    const t=end-(w*7+(6-r))*day;if(t>today.getTime()){cells+='<i style="visibility:hidden"></i>';continue;}
+    const d=new Date(t);const k=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+    const m=g[k]||0;const l=m<=0?0:m<20?1:m<45?2:m<90?3:4;
+    cells+=`<i data-l="${l}" title="${k} · ${m} 分钟"></i>`;}}
+  const top=Object.entries(st.pods).sort((a,b)=>b[1].n-a[1].n).slice(0,6);
+  const mx=top.length?top[0][1].n:1;
+  const rows=top.map(([name,v])=>{
+    const slug=POD_LOGO[v.en]||POD_LOGO[name];
+    const ic=slug?`<img class="rk-logo" src="assets/pods/${slug}.jpg" alt="">`:`<span class="rk-ini">${name.slice(0,2)}</span>`;
+    return `<div class="rk-row">${ic}<span class="rk-name">${name}</span><span class="rk-bar" style="width:${Math.round(v.n/mx*220)}px"></span><span class="rk-n">${v.n} 期</span></div>`;}).join('');
+  return `<div class="wrap"><section class="reveal">
+    <div class="eyebrow">My stats · 阅读统计</div><h2 class="title">我的阅读统计<button class="rsi-btn" onclick="readShareImage()">生成已读长图</button></h2>
+    <div class="st-tiles">
+      <div class="st-tile"><div class="n">${st.eps.length}</div><div class="l">已读期数</div></div>
+      <div class="st-tile"><div class="n">${hrs}</div><div class="l">累计小时</div></div>
+      <div class="st-tile"><div class="n">${st.streak.cur}</div><div class="l">连续天数</div><div class="s">最长 ${st.streak.max} 天</div></div>
+      <div class="st-tile"><div class="n">${st.ppl}</div><div class="l">覆盖人物</div></div>
+    </div>
+    <div class="st-h3">近半年阅读热力图</div>
+    <div class="hm-wrap"><div class="hm">${cells}</div></div>
+    <div class="hm-legend">少 <i style="background:var(--surface-2);border:1px solid var(--line)"></i><i style="background:rgba(41,151,255,.25)"></i><i style="background:rgba(41,151,255,.45)"></i><i style="background:rgba(41,151,255,.7)"></i><i style="background:var(--accent)"></i> 多 · 每日阅读分钟数(从功能上线起记录)</div>
+    <div class="st-h3">节目排行 · 我读得最多的频道</div>
+    <div class="rk">${rows||'<div class="st-empty">暂无</div>'}</div>
+  </section></div>`;
+}
+
 function readGet(){try{const r=JSON.parse(localStorage.readEpisodes||'[]');return new Set(Array.isArray(r)?r:[])}catch(e){return new Set()}}
 function readHas(id){return readGet().has(id);}
 function readMark(id,on){const s=readGet();const had=s.has(id);if(on===false)s.delete(id);else s.add(id);
-  if(s.has(id)!==had){localStorage.readEpisodes=JSON.stringify([...s]);syncReadUI(id);syncTouch();}
+  if(s.has(id)!==had){localStorage.readEpisodes=JSON.stringify([...s]);syncReadUI(id);syncTouch();
+    const _e=EPISODES.find(x=>x.id===id);if(_e&&_e.min)rlogAdd(s.has(id)?_e.min:-_e.min);}
   if(on!==false)laterRemove(id);}   // 读完自动移出「稍后读」
 function toggleRead(id){readMark(id,!readHas(id));}
 function syncReadUI(id){const on=readHas(id);
@@ -2220,7 +2306,7 @@ function vBrowse(){
   const pods=[...new Set(EPISODES.map(e=>e.pod.en))];
   let list=EPISODES.filter(e=>(!bf.person||e.pid===bf.person)&&(!bf.year||e.date.startsWith(bf.year))&&(!bf.pod||e.pod.en===bf.pod)&&(!bf.field||e.fields.includes(bf.field))&&(!bf.read||(bf.read==='read'?readHas(e.id):bf.read==='later'?laterHas(e.id):!readHas(e.id))));
   return `<div class="wrap"><section class="reveal" style="padding-bottom:0">
-    <div class="eyebrow">Browse · 全部播客</div><h2 class="title">筛选与浏览<button class="rsi-btn" onclick="readShareImage()">生成已读长图</button></h2>
+    <div class="eyebrow">Browse · 全部播客</div><h2 class="title">筛选与浏览<button class="rsi-btn" onclick="readShareImage()">生成已读长图</button><button class="rsi-btn" onclick="go('#/stats')">我的统计</button></h2>
     <div class="filterbar">
       <select class="sel" onchange="bf.person=this.value;render()">
         <option value="">全部人物</option>${people.map(id=>`<option value="${id}" ${bf.person===id?'selected':''}>${PEOPLE[id].zh}</option>`).join('')}</select>
@@ -3046,6 +3132,7 @@ function render(){
   else if(parts[0]==='pod')html=vPod(parts[1]);
   else if(parts[0]==='episode')html=vEpisode(parts[1]);
   else if(parts[0]==='marks')html=vMarks();
+  else if(parts[0]==='stats')html=vStats();
   else html=vHome();
   $('#app').innerHTML=html;
   pangufy($('#app'));
