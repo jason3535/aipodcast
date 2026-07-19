@@ -694,7 +694,7 @@
     <a onclick="go('#/people')" data-route="people">人物</a>
     <a onclick="go('#/topics')" data-route="topics">议题</a>
     <a onclick="go('#/browse')" data-route="browse">播客</a>
-    <a onclick="go('#/marks')" data-route="marks" id="navMarks" style="display:none">标记</a>
+    <a onclick="go('#/mine')" data-route="mine" id="navMarks">我的</a>
   </div>
   <div class="spacer"></div>
   <button class="icon" title="搜索 (/)" aria-label="搜索" onclick="toggleSearch()">
@@ -1958,9 +1958,46 @@ function readStats(){
   const pods={};eps.forEach(e=>{const k=(e.pod&&e.pod.zh)||(e.pod&&e.pod.en)||'?';pods[k]=pods[k]||{n:0,en:(e.pod&&e.pod.en)||''};pods[k].n++;});
   return {eps,totalMin,ppl:new Set(eps.map(e=>e.pid)).size,pods,streak:rlogStreak()};
 }
+
+/* 「我的」页:划线标记区块(复用 vMarks 逻辑) */
+function mineMarksHtml(){
+  const hm=hlGet();const eps=Object.keys(hm).filter(id=>hm[id]&&hm[id].length).map(id=>({id,e:EPISODES.find(x=>x.id===id),items:hm[id]})).filter(x=>x.e);
+  eps.forEach(x=>x.last=Math.max.apply(null,x.items.map(i=>i.ts||0)));eps.sort((a,b)=>b.last-a.last);
+  const total=eps.reduce((n,x)=>n+x.items.length,0);
+  const body=total?eps.map(x=>`<div class="mk-ep"><div class="mk-eph" onclick="go('#/episode/${x.id}')"><b>${x.e.tZh}</b><span>${PEOPLE[x.e.pid]?PEOPLE[x.e.pid].zh:''} · ${x.items.length} 条</span></div>${x.items.map((it,idx)=>`<div class="mk-item"><span class="mk-q" onclick="hlJump('${x.id}',${it.sec},${idx})">${(it.text||'').replace(/</g,'&lt;')}</span><button class="mk-del" title="删除这条标记" onclick="hlRemove('${x.id}',${idx})">×</button></div>`).join('')}</div>`).join('')
+    :'<div class="st-empty">还没有划线标记。阅读单集时选中文字，点弹出的「标记」即可收藏到这里。</div>';
+  return `<div class="st-h3" style="margin-top:34px">我的标记${total?' · '+total:''}</div>`+body;
+}
+/* 找回历史阅读记录:D1(按同步身份 sid) + 本地 recentT 时间戳,合并进 readLog(按天取较大值,不动已读列表) */
+async function rlogImport(){
+  const btn=document.getElementById('rlImp');if(btn)btn.disabled=true;
+  let addDays=0;
+  try{
+    const g=rlogGet();
+    if(_sid){
+      const r=await fetch(STATS_URL+'/my?sid='+encodeURIComponent(_sid));
+      const days=(await r.json()).days||{};
+      Object.keys(days).forEach(k=>{
+        const mins=days[k].map(id=>{const e=EPISODES.find(x=>x.id===id);return e&&e.min||30;}).reduce((a,b)=>a+b,0);
+        if(mins>(g[k]||0)){g[k]=mins;addDays++;}
+      });
+    }
+    const rt=recentTGet();
+    Object.keys(rt).forEach(id=>{
+      const e=EPISODES.find(x=>x.id===id);if(!e||!e.min)return;
+      const d=new Date(rt[id]);const k=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+      if(!g[k]){g[k]=e.min;addDays++;}
+    });
+    localStorage.readLog=JSON.stringify(g);
+    alert(addDays?('已找回 '+addDays+' 天历史阅读记录 ✓'):(_sid?'没有可补的新记录，已是最全。':'本地只找回了最近打开记录；开启多设备同步(设置里生成同步码)后可从云端找回更完整的历史。'));
+    render();
+  }catch(e){alert('找回失败，稍后再试');}
+  if(btn)btn.disabled=false;
+}
+
 function vStats(){
   const st=readStats();
-  if(!st.eps.length)return `<div class="wrap"><section class="reveal" style="min-height:50vh"><div class="eyebrow">My stats · 阅读统计</div><h2 class="title">我的阅读统计</h2><div class="st-empty">还没有已读的播客——打开一期读到底会自动标记已读,统计从此开始累计。</div></section></div>`;
+  if(!st.eps.length)return `<div class="wrap"><section class="reveal" style="min-height:50vh"><div class="eyebrow">My Space · 我的</div><h2 class="title">我的<button class="rsi-btn" id="rlImp" onclick="rlogImport()">找回历史</button></h2><div class="st-h3">阅读统计</div><div class="st-empty">还没有已读的播客——打开一期读到底会自动标记已读，统计从此开始累计；开过多设备同步可点「找回历史」。</div>${mineMarksHtml()}</section></div>`;
   const hrs=Math.round(st.totalMin/6)/10;
   const g=rlogGet();
   // 26 周热力图:列=周,行=周日..周六,最右列=本周
@@ -1979,7 +2016,7 @@ function vStats(){
     const ic=slug?`<img class="rk-logo" src="assets/pods/${slug}.jpg" alt="">`:`<span class="rk-ini">${name.slice(0,2)}</span>`;
     return `<div class="rk-row">${ic}<span class="rk-name">${name}</span><span class="rk-bar" style="width:${Math.round(v.n/mx*220)}px"></span><span class="rk-n">${v.n} 期</span></div>`;}).join('');
   return `<div class="wrap"><section class="reveal">
-    <div class="eyebrow">My stats · 阅读统计</div><h2 class="title">我的阅读统计<button class="rsi-btn" onclick="readShareImage()">生成已读长图</button></h2>
+    <div class="eyebrow">My Space · 我的</div><h2 class="title">我的<button class="rsi-btn" onclick="readShareImage()">生成已读长图</button><button class="rsi-btn" id="rlImp" onclick="rlogImport()">找回历史</button></h2><div class="st-h3" style="margin-top:4px">阅读统计</div>
     <div class="st-tiles">
       <div class="st-tile"><div class="n">${st.eps.length}</div><div class="l">已读期数</div></div>
       <div class="st-tile"><div class="n">${hrs}</div><div class="l">累计小时</div></div>
@@ -1991,6 +2028,7 @@ function vStats(){
     <div class="hm-legend">少 <i style="background:var(--surface-2);border:1px solid var(--line)"></i><i style="background:rgba(41,151,255,.25)"></i><i style="background:rgba(41,151,255,.45)"></i><i style="background:rgba(41,151,255,.7)"></i><i style="background:var(--accent)"></i> 多 · 每日阅读分钟数(从功能上线起记录)</div>
     <div class="st-h3">节目排行 · 我读得最多的频道</div>
     <div class="rk">${rows||'<div class="st-empty">暂无</div>'}</div>
+    ${mineMarksHtml()}
   </section></div>`;
 }
 
@@ -2306,7 +2344,7 @@ function vBrowse(){
   const pods=[...new Set(EPISODES.map(e=>e.pod.en))];
   let list=EPISODES.filter(e=>(!bf.person||e.pid===bf.person)&&(!bf.year||e.date.startsWith(bf.year))&&(!bf.pod||e.pod.en===bf.pod)&&(!bf.field||e.fields.includes(bf.field))&&(!bf.read||(bf.read==='read'?readHas(e.id):bf.read==='later'?laterHas(e.id):!readHas(e.id))));
   return `<div class="wrap"><section class="reveal" style="padding-bottom:0">
-    <div class="eyebrow">Browse · 全部播客</div><h2 class="title">筛选与浏览<button class="rsi-btn" onclick="readShareImage()">生成已读长图</button><button class="rsi-btn" onclick="go('#/stats')">我的统计</button></h2>
+    <div class="eyebrow">Browse · 全部播客</div><h2 class="title">筛选与浏览<button class="rsi-btn" onclick="readShareImage()">生成已读长图</button><button class="rsi-btn" onclick="go('#/mine')">我的</button></h2>
     <div class="filterbar">
       <select class="sel" onchange="bf.person=this.value;render()">
         <option value="">全部人物</option>${people.map(id=>`<option value="${id}" ${bf.person===id?'selected':''}>${PEOPLE[id].zh}</option>`).join('')}</select>
@@ -2576,7 +2614,7 @@ function hlClick(ev){ev.stopPropagation();const idx=+ev.currentTarget.dataset.hi
 function hlRemove(id,idx){const st=hlGet(),arr=st[id]||[];if(arr[idx]){arr.splice(idx,1);if(!arr.length)delete st[id];hlSave(st);if(typeof syncTouch==='function')syncTouch();const y=scrollY;render();scrollTo(0,y);}}
 function hlHideSel(){const b=$('#selBar');if(b){b.style.display='none';b.classList.remove('dock');}try{const s=window.getSelection();s&&s.removeAllRanges&&s.removeAllRanges();}catch(_){}}
 let _hlTT=null;function hlToast(m){let t=$('#hlToast');if(!t){t=document.createElement('div');t.id='hlToast';t.className='hl-toast';document.body.appendChild(t);}t.textContent=m;t.classList.add('on');clearTimeout(_hlTT);_hlTT=setTimeout(()=>t.classList.remove('on'),1800);}
-function hlUpdNav(){const a=$('#navMarks');if(a){a.textContent='标记';a.style.display=hlCount()?'':'none';}}
+function hlUpdNav(){}
 function hlJump(id,sec,idx){const it=(hlGet()[id]||[])[idx];pendingLocate={id,at:sec,hl:it?it.text:''};go('#/episode/'+id);}
 function vMarks(){const hm=hlGet();const eps=Object.keys(hm).filter(id=>hm[id]&&hm[id].length).map(id=>({id,e:EPISODES.find(x=>x.id===id),items:hm[id]})).filter(x=>x.e);eps.forEach(x=>x.last=Math.max.apply(null,x.items.map(i=>i.ts||0)));eps.sort((a,b)=>b.last-a.last);const total=eps.reduce((n,x)=>n+x.items.length,0);if(!total)return `<div class="wrap"><section class="reveal" style="min-height:50vh"><div class="eyebrow">My highlights · 划线收藏</div><h2 class="title">我的标记</h2><div class="empty" style="margin-top:20px">还没有标记。阅读单集时选中文字，点弹出的「标记」即可划上下划线收藏，这里会汇总。</div></section></div>`;const body=eps.map(x=>`<div class="mk-ep"><div class="mk-eph" onclick="go('#/episode/${x.id}')"><b>${x.e.tZh}</b><span>${PEOPLE[x.e.pid]?PEOPLE[x.e.pid].zh:''} · ${x.items.length} 条</span></div>${x.items.map((it,idx)=>`<div class="mk-item"><span class="mk-q" onclick="hlJump('${x.id}',${it.sec},${idx})">${(it.text||'').replace(/</g,'&lt;')}</span><button class="mk-del" title="删除这条标记" onclick="hlRemove('${x.id}',${idx})">×</button></div>`).join('')}</div>`).join('');return `<div class="wrap"><section class="reveal"><div class="eyebrow">My highlights · 划线收藏</div><h2 class="title">我的标记 · ${total}</h2><div class="sub">阅读时选中文字点「标记」划线；这里汇总全部标记，点文字跳回原文。随同步码在设备间同步。</div><div class="marks-list" style="margin-top:22px">${body}</div></section></div>`;}
 function selSecIndex(){
@@ -3131,8 +3169,7 @@ function render(){
   else if(parts[0]==='person')html=vPerson(parts[1]);
   else if(parts[0]==='pod')html=vPod(parts[1]);
   else if(parts[0]==='episode')html=vEpisode(parts[1]);
-  else if(parts[0]==='marks')html=vMarks();
-  else if(parts[0]==='stats')html=vStats();
+  else if(parts[0]==='marks'||parts[0]==='stats'||parts[0]==='mine'){parts[0]='mine';html=vStats();}
   else html=vHome();
   $('#app').innerHTML=html;
   pangufy($('#app'));
