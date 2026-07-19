@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 163 位人物 / 378 期访谈
+规模: 163 位人物 / 381 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -28,18 +28,20 @@
 - [Andrej Karpathy / 安德烈·卡帕西](https://aipodcast.jasonlin.tech/pp/karpathy/): Founder, Eureka Labs — 6 期
 - [Richard Sutton / 理查德·萨顿](https://aipodcast.jasonlin.tech/pp/sutton/): Professor, U of Alberta — 6 期
 - [Sholto Douglas / 肖尔托·道格拉斯](https://aipodcast.jasonlin.tech/pp/sholto/): Researcher, Anthropic — 5 期
+- [Marc Andreessen / 马克·安德森](https://aipodcast.jasonlin.tech/pp/andreessen/): Co-founder & General Partner, Andreessen Horowitz (a16z) — 4 期
 - [Aravind Srinivas / 阿拉文德·斯里尼瓦斯](https://aipodcast.jasonlin.tech/pp/aravind/): Co-founder & CEO, Perplexity — 4 期
 - [Zico Kolter / 齐科·科尔特](https://aipodcast.jasonlin.tech/pp/kolter/): Professor, CMU · OpenAI board — 4 期
 - [Dylan Patel / 迪伦·帕特尔](https://aipodcast.jasonlin.tech/pp/dylanpatel/): Founder & Chief Analyst, SemiAnalysis — 3 期
-- [Marc Andreessen / 马克·安德森](https://aipodcast.jasonlin.tech/pp/andreessen/): Co-founder & General Partner, Andreessen Horowitz (a16z) — 3 期
 - [Mark Pincus / 马克·平卡斯](https://aipodcast.jasonlin.tech/pp/pincus/): Founder, Zynga — 3 期
 - [Mark Chen / 马克·陈](https://aipodcast.jasonlin.tech/pp/markchen/): Chief Research Officer, OpenAI — 3 期
 - [Benedict Evans / 本尼迪克特·埃文斯](https://aipodcast.jasonlin.tech/pp/benedictevans/): Independent technology analyst; former partner at Andreessen Horowitz (a16z) — 3 期
 - [John Jumper / 约翰·江珀](https://aipodcast.jasonlin.tech/pp/jumper/): Director, Google DeepMind; Nobel Laureate in Chemistry — 3 期
+- [Andrew Feldman / 安德鲁·费尔德曼](https://aipodcast.jasonlin.tech/pp/feldman/): Co-founder & CEO, Cerebras Systems — 3 期
 - [Yejin Choi / 崔艺珍](https://aipodcast.jasonlin.tech/pp/yejin/): Professor, Stanford (prev. NVIDIA, AI2); commonsense reasoning — 3 期
 - [Ilya Sutskever / 伊利亚·苏茨克维尔](https://aipodcast.jasonlin.tech/pp/ilya/): Co-founder, Safe Superintelligence — 3 期
 - [Noam Shazeer / 诺姆·沙泽尔](https://aipodcast.jasonlin.tech/pp/shazeer/): Co-lead, Google Gemini — 3 期
 - [Jan Leike / 扬·莱克](https://aipodcast.jasonlin.tech/pp/leike/): Alignment Lead, Anthropic — 3 期
+- [Dan Klein / 丹·克莱因](https://aipodcast.jasonlin.tech/pp/danklein/): Professor of Computer Science, UC Berkeley; Co-founder & CTO, Scaled Cognition — 2 期
 - [Jürgen Schmidhuber / 于尔根·施密德胡伯](https://aipodcast.jasonlin.tech/pp/schmidhuber/): Director, KAUST AI — 2 期
 - [Andrew Ambrosino / 安德鲁·安布罗西诺](https://aipodcast.jasonlin.tech/pp/ajambrosino/): Codex App Lead, OpenAI — 2 期
 - [Mark Zuckerberg / 马克·扎克伯格](https://aipodcast.jasonlin.tech/pp/zuckerberg/): Founder, Chairman & CEO, Meta Platforms — 2 期
@@ -54,7 +56,6 @@
 - [Carina Hong / 洪乐潼](https://aipodcast.jasonlin.tech/pp/carinahong/): Founder & CEO, Axiom (AI for formal mathematical reasoning) — 2 期
 - [Oriol Vinyals / 奥里奥尔·维尼亚尔斯](https://aipodcast.jasonlin.tech/pp/oriol/): VP of Research & Gemini Co-lead · Google DeepMind — 2 期
 - [Reiner Pope / 赖纳·波普](https://aipodcast.jasonlin.tech/pp/reinerpope/): Co-founder & CEO, MatX; ex-Google (LLM serving) — 2 期
-- [Andrew Feldman / 安德鲁·费尔德曼](https://aipodcast.jasonlin.tech/pp/feldman/): Co-founder & CEO, Cerebras Systems — 2 期
 - [Jenny Wen / 温珍妮](https://aipodcast.jasonlin.tech/pp/jennywen/): Design Lead for Claude (Anthropic); now Head of Design at Cursor — 2 期
 - [Alex Kendall / 亚历克斯·肯德尔](https://aipodcast.jasonlin.tech/pp/kendall/): Co-founder & CEO, Wayve — 2 期
 - [Jeff Dean / 杰夫·迪恩](https://aipodcast.jasonlin.tech/pp/jeffdean/): Chief Scientist, Google — 2 期
@@ -78,7 +79,6 @@
 - [Matei Zaharia / 马泰·扎哈里亚](https://aipodcast.jasonlin.tech/pp/matei/): Co-founder & CTO, Databricks; Associate Professor, UC Berkeley — 1 期
 - [Dean Ball / 迪恩·鲍尔](https://aipodcast.jasonlin.tech/pp/deanball/): Head of Strategic Futures, OpenAI — 1 期
 - [Tejal Patwardhan / 泰贾尔·帕特瓦尔丹](https://aipodcast.jasonlin.tech/pp/tejal/): Frontier Evals Lead, OpenAI — 1 期
-- [Dan Klein / 丹·克莱因](https://aipodcast.jasonlin.tech/pp/danklein/): Professor of Computer Science, UC Berkeley; Co-founder & CTO, Scaled Cognition — 1 期
 - [Matt White / 马特·怀特](https://aipodcast.jasonlin.tech/pp/mattwhite/): AI CTO, Linux Foundation; ED, PyTorch Foundation — 1 期
 - [Logan Kilpatrick / 洛根·基尔帕特里克](https://aipodcast.jasonlin.tech/pp/logankilpatrick/): Lead, Google AI Studio & Gemini API; ex-OpenAI — 1 期
 - [Tony Fadell / 托尼·法德尔](https://aipodcast.jasonlin.tech/pp/fadell/): Principal at Future Shape (Build Collective); creator of the iPod, co-creator of the iPhone, founder of Nest — 1 期
@@ -172,6 +172,7 @@
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 1 期
 
 ## 最新访谈 Latest episodes
+- [Designed to Sound Right, Not to Know What's Right](https://aipodcast.jasonlin.tech/e/danklein-theaiwhy-2026/) — Dan Klein, The AI Why with Liam Lawson, 2026-07-16
 - [From Dot to Hivemind: A Creative Journey in AI Design](https://aipodcast.jasonlin.tech/e/jasonyuan-diveclub-2026/) — Jason Yuan, Dive Club, 2026-07-15
 - [Sovereign AI: Building the UK's First LLM on a Startup Budget](https://aipodcast.jasonlin.tech/e/pullen-machinel-2026/) — Alistair Pullen, Machine Learning Street Talk, 2026-07-13
 - [The Cognitive Revolution: Davidad on Provably Safe AI and the Future of Alignment](https://aipodcast.jasonlin.tech/e/davidad-thecogni-2026/) — David "davidad" Dalrymple, The Cognitive Revolution, 2026-07-12
@@ -184,6 +185,7 @@
 - [From Medical School to AI: A Biologist's Journey](https://aipodcast.jasonlin.tech/e/derya-theopena-2026/) — Derya Unutmaz, The OpenAI Podcast, 2026-07-06
 - [Liquid AI: Squeezing Maximum Intelligence from Limited Compute](https://aipodcast.jasonlin.tech/e/hasani-thecogni-2026/) — Ramin Hasani, The Cognitive Revolution, 2026-07-04
 - [AI Scaling Laws and the Future of Intelligence](https://aipodcast.jasonlin.tech/e/naval-naval-2026b/) — Naval Ravikant, Naval, 2026-07-03
+- [AI as the New Interface: Global Tech Leadership and National Power](https://aipodcast.jasonlin.tech/e/andreessen-thea16zp-2026b/) — Marc Andreessen, The a16z Podcast, 2026-07-03
 - [Claude Tag: Proactive AI That Remembers and Acts Autonomously](https://aipodcast.jasonlin.tech/e/boris-claude-2026/) — Boris Cherny, Claude, 2026-07-02
 - [Elon Musk on Fatherhood, AI, and Minimalism](https://aipodcast.jasonlin.tech/e/elon-seancste-2026/) — Elon Musk, Sean C. Stephens, 2026-07-02
 - [AI Optimism vs Doom: Marc Andreessen on America's Future](https://aipodcast.jasonlin.tech/e/andreessen-newyorkp-2026/) — Marc Andreessen, New York Post, 2026-07-02
@@ -210,8 +212,6 @@
 - [The OpenClaw Moment: AI Agent Revolution with Peter Steinberger](https://aipodcast.jasonlin.tech/e/steinberger-ainewspo-2026/) — Peter Steinberger, AI News & Podcast, 2026-06-22
 - [Fiona Fung on AI's Impact on Software Engineering](https://aipodcast.jasonlin.tech/e/fiona-lennyspo-2026/) — Fiona Fung, Lenny’s Podcast, 2026-06-21
 - [Autonomous Vehicles: From Tesla to Waymo and Beyond](https://aipodcast.jasonlin.tech/e/qasaryounis-lemonade-2026/) — Qasar Younis, Lemonade Stand Clips, 2026-06-21
-- [Dean Ball on Joining OpenAI, AI Policy, and Recursive Self-Improvement](https://aipodcast.jasonlin.tech/e/deanball-thecogni-2026/) — Dean Ball, The Cognitive Revolution, 2026-06-20
-- [AI Coding on Phone: Boris on 8B Tokens & ROI](https://aipodcast.jasonlin.tech/e/boris-scale-2026/) — Boris Cherny, @Scale, 2026-06-19
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
