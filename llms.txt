@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 171 位人物 / 391 期访谈
+规模: 172 位人物 / 392 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -85,6 +85,7 @@
 - [Grant Sanderson / 格兰特·桑德森](https://aipodcast.jasonlin.tech/pp/grantsanderson/): Creator of 3Blue1Brown; math educator — 1 期
 - [Sergey Edunov / 谢尔盖·叶杜诺夫](https://aipodcast.jasonlin.tech/pp/edunov/): CTO, Genesis Molecular AI; led Llama 2/3 pretraining at Meta — 1 期
 - [Matei Zaharia / 马泰·扎哈里亚](https://aipodcast.jasonlin.tech/pp/matei/): Co-founder & CTO, Databricks; Associate Professor, UC Berkeley — 1 期
+- [Loredana Crisan / 洛雷达娜·克里桑](https://aipodcast.jasonlin.tech/pp/loredanacrisan/): Chief Design Officer, Figma — 1 期
 - [Dean Ball / 迪恩·鲍尔](https://aipodcast.jasonlin.tech/pp/deanball/): Head of Strategic Futures, OpenAI — 1 期
 - [Tejal Patwardhan / 泰贾尔·帕特瓦尔丹](https://aipodcast.jasonlin.tech/pp/tejal/): Frontier Evals Lead, OpenAI — 1 期
 - [Matt White / 马特·怀特](https://aipodcast.jasonlin.tech/pp/mattwhite/): AI CTO, Linux Foundation; ED, PyTorch Foundation — 1 期
