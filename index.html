@@ -2053,8 +2053,11 @@ function vStats(){
   // 26 周热力图:列=周,行=周日..周六,最右列=本周
   const day=86400000;const today=new Date();today.setHours(0,0,0,0);
   const end=today.getTime()+(6-today.getDay())*day;   // 本周六
+  const LAUNCH=new Date('2026-06-01T00:00:00');   // 建站月起算
+  const launchSun=LAUNCH.getTime()-LAUNCH.getDay()*day;
+  const cols=Math.max(1,Math.min(26,Math.ceil((end-launchSun+day)/(7*day))));
   let cells='';const colMon=[];
-  for(let w=25;w>=0;w--){
+  for(let w=cols-1;w>=0;w--){
     const t0=end-(w*7+6)*day;colMon.push(new Date(t0).getMonth()+1);
     for(let r=0;r<7;r++){
     const t=end-(w*7+(6-r))*day;if(t>today.getTime()){cells+='<i style="visibility:hidden"></i>';continue;}
@@ -2076,9 +2079,9 @@ function vStats(){
       <div class="st-tile"><div class="n">${st.streak.cur}</div><div class="l">连续天数</div><div class="s">最长 ${st.streak.max} 天</div></div>
       <div class="st-tile"><div class="n">${st.ppl}</div><div class="l">覆盖人物</div></div>
     </div>
-    <div class="st-h3">近半年阅读热力图</div>
+    <div class="st-h3">阅读热力图</div>
     <div class="hm-wrap"><div class="hm">${cells}</div><div class="hm-months">${mons}</div></div>
-    <div class="hm-legend">少 <i style="background:var(--surface-2);border:1px solid var(--line)"></i><i style="background:rgba(41,151,255,.25)"></i><i style="background:rgba(41,151,255,.45)"></i><i style="background:rgba(41,151,255,.7)"></i><i style="background:var(--accent)"></i> 多 · 每日阅读分钟数(从功能上线起记录)</div>
+    <div class="hm-legend">少 <i style="background:var(--surface-2);border:1px solid var(--line)"></i><i style="background:rgba(41,151,255,.25)"></i><i style="background:rgba(41,151,255,.45)"></i><i style="background:rgba(41,151,255,.7)"></i><i style="background:var(--accent)"></i> 多 · 每日阅读分钟数</div>
     <div class="st-h3">节目排行 · 我读得最多的频道</div>
     <div class="rk">${rows||'<div class="st-empty">暂无</div>'}</div>
     ${sharePromoHtml(st,hrs)}
