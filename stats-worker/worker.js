@@ -8,7 +8,7 @@
  *   UV = count(distinct coalesce(nullif(sid,''), vid))。
  * 查数: GET /q?token=SECRET&mode=overview|top|ref|sql&days=N[&q=SELECT...] → JSON(供 Claude Code 直接 curl)。
  */
-const ALLOW=new Set(['https://aipodcast.jasonlin.tech','http://localhost:8000','http://127.0.0.1:8000','null']);
+const ALLOW=new Set(['https://aipodcast.jasonlin.tech','http://localhost:8000','http://127.0.0.1:8000','http://localhost:8931','null']);
 const cors=o=>({'Access-Control-Allow-Origin':ALLOW.has(o)?o:'https://aipodcast.jasonlin.tech',
   'Access-Control-Allow-Methods':'POST, GET, OPTIONS','Access-Control-Allow-Headers':'Content-Type','Vary':'Origin'});
 const J=(o,s,co)=>new Response(JSON.stringify(o),{status:s,headers:{...co,'Content-Type':'application/json'}});
@@ -52,6 +52,16 @@ export default {
           if(!/\blimit\b/i.test(q))q+=' LIMIT 200';
           return J({rows:(await env.DB.prepare(q).all()).results},200,co);}
         return J({error:'unknown mode'},400,co);
+      }catch(e){return J({error:''+(e&&e.message||e)},500,co);}
+    }
+    // ---- 自助找回:按自己的 sid(同步码哈希,不可猜)查自己的单集浏览史;只返回 day+episode id ----
+    if(req.method==='GET'&&url.pathname==='/my'){
+      const sid=(url.searchParams.get('sid')||'').trim();
+      if(!/^[0-9a-f]{12,40}$/.test(sid))return J({error:'bad sid'},400,co);
+      try{
+        const rows=(await env.DB.prepare("SELECT day,path FROM events WHERE sid=? AND type='view' AND path LIKE '/episode/%' GROUP BY day,path ORDER BY day").bind(sid).all()).results;
+        const days={};rows.forEach(r=>{(days[r.day]=days[r.day]||[]).push(r.path.slice(9));});
+        return J({days},200,co);
       }catch(e){return J({error:''+(e&&e.message||e)},500,co);}
     }
     // ---- 埋点 ----
