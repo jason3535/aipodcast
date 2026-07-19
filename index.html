@@ -704,6 +704,35 @@
 .shp-avs img,.shp-avs span{width:40px;height:40px;border-radius:50%;border:2.5px solid #0d0d12;margin-right:-10px;object-fit:cover;background:#26262e;color:rgba(255,255,255,.8);font-size:13px;font-weight:600;display:inline-flex;align-items:center;justify-content:center;flex:none}
 .shp-btn{display:block;width:100%;padding:12px;border:none;border-radius:999px;background:#2997ff;color:#fff;font-size:15px;font-weight:600;cursor:pointer}
 .shp-btn:hover{filter:brightness(1.08)}
+
+/* ===== 移动端针对性优化 ===== */
+@media(max-width:640px){
+  .hero{padding:10px 0 0}
+  .hero-card{border-radius:20px;min-height:0}
+  .hero-art{padding:16px 0 4px}
+  .hero-art .av{width:76px;height:76px;font-size:28px;box-shadow:0 4px 14px rgba(0,0,0,.14)}
+  .hero-body{padding:14px 20px 22px}
+  .hero-body h1{font-size:22px;line-height:1.25;margin:4px 0 2px}
+  .hero-ten{display:none}
+  .hero-body .who{font-size:13px;margin-bottom:10px}
+  .hero-body .quote{display:none}
+  .hero-body .quote-zh{font-size:14.5px;line-height:1.65;margin-bottom:16px}
+  .ep-cover{height:112px}
+  .ep-cover .av{width:52px;height:52px;font-size:19px;right:14px;bottom:12px}
+  .ep-meta{padding:12px 14px 14px}
+  .ep-meta .tz{margin-bottom:9px}
+  section{padding:34px 0}
+  .pp-head{padding:16px 0 6px;gap:12px}
+  .pp-head .av{width:92px;height:92px;font-size:34px}
+  .pp-head h1{font-size:26px}
+  .pp-head .nz{font-size:15px}
+  .pp-head .ti{font-size:14px;margin:6px 0 10px}
+  .filterbar{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .filterbar .sel{width:100%}
+  .ep-head h1{font-size:24px}
+  .ep-head .hz{font-size:15px}
+  .ep-head{margin-bottom:24px;padding-bottom:20px}
+}
 </style>
 </head>
 <body>
