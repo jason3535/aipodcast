@@ -693,6 +693,17 @@
 .rk-bar{height:8px;border-radius:4px;background:var(--accent);min-width:8px}
 .rk-n{font-size:12px;color:var(--text-2);flex:none}
 .st-empty{color:var(--text-2);font-size:14px;margin-top:14px}
+
+.shp-card{position:relative;margin-top:34px;background:#0d0d12;border-radius:18px;padding:24px 22px 22px;max-width:560px;overflow:hidden}
+.shp-dots{position:absolute;top:20px;right:20px;display:flex;gap:7px}
+.shp-dots i{width:7px;height:7px;border-radius:50%}
+.shp-dots i:nth-child(1){background:#2997ff}.shp-dots i:nth-child(2){background:#30d158}.shp-dots i:nth-child(3){background:#ff9f0a}.shp-dots i:nth-child(4){background:#bf5af2}.shp-dots i:nth-child(5){background:#ff375f}
+.shp-t{color:#fff;font-size:20px;font-weight:700}
+.shp-s{color:rgba(255,255,255,.55);font-size:13px;margin-top:6px}
+.shp-avs{display:flex;margin:16px 0 18px}
+.shp-avs img,.shp-avs span{width:40px;height:40px;border-radius:50%;border:2.5px solid #0d0d12;margin-right:-10px;object-fit:cover;background:#26262e;color:rgba(255,255,255,.8);font-size:13px;font-weight:600;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.shp-btn{display:block;width:100%;padding:12px;border:none;border-radius:999px;background:#2997ff;color:#fff;font-size:15px;font-weight:600;cursor:pointer}
+.shp-btn:hover{filter:brightness(1.08)}
 </style>
 </head>
 <body>
@@ -1986,7 +1997,7 @@ function mineMarksHtml(){
   const total=eps.reduce((n,x)=>n+x.items.length,0);
   const body=total?eps.map(x=>`<div class="mk-ep"><div class="mk-eph" onclick="go('#/episode/${x.id}')"><b>${x.e.tZh}</b><span>${PEOPLE[x.e.pid]?PEOPLE[x.e.pid].zh:''} · ${x.items.length} 条</span></div>${x.items.map((it,idx)=>`<div class="mk-item"><span class="mk-q" onclick="hlJump('${x.id}',${it.sec},${idx})">${(it.text||'').replace(/</g,'&lt;')}</span><button class="mk-del" title="删除这条标记" onclick="hlRemove('${x.id}',${idx})">×</button></div>`).join('')}</div>`).join('')
     :'<div class="st-empty">还没有划线标记。阅读单集时选中文字，点弹出的「标记」即可收藏到这里。</div>';
-  return `<div class="st-h3" style="margin-top:34px">我的标记${total?' · '+total:''}</div>`+body;
+  return `<div class="st-h3" style="margin-top:46px;padding-top:28px;border-top:1px solid var(--line)">我的标记${total?' · '+total:''}</div>`+body;
 }
 /* 历史阅读记录自动找回(静默):本地 recentT 同步合并;云端(按同步身份 sid)每天最多拉一次 */
 function rlogLocalMerge(){
@@ -2016,6 +2027,23 @@ async function rlogAutoPull(){
   }catch(e){}
 }
 
+
+/* 分享预览卡:模拟长图头部,提高生成/分享转化 */
+function sharePromoHtml(st,hrs){
+  const ups=[...new Set(st.eps.map(e=>e.pid))];
+  const mx=Math.min(7,ups.length);let avs='';
+  for(let i=0;i<mx;i++){const pid=ups[i];const p=PEOPLE[pid]||{};
+    avs+=(typeof PHOTOS!=='undefined'&&PHOTOS.has(pid))?`<img src="assets/people/${pid}.jpg" alt="" loading="lazy">`:`<span>${p.init||'?'}</span>`;}
+  if(ups.length>mx)avs+=`<span>+${ups.length-mx}</span>`;
+  return `<div class="shp-card">
+    <div class="shp-dots"><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="shp-t">我读完了 ${st.eps.length} 期 AI 播客</div>
+    <div class="shp-s">累计约 ${hrs} 小时 · 覆盖 ${st.ppl} 位 AI 人物${st.streak.cur>1?' · 连续 '+st.streak.cur+' 天':''}</div>
+    <div class="shp-avs">${avs}</div>
+    <button class="shp-btn" onclick="readShareImage()">生成长图并分享</button>
+  </div>`;
+}
+
 function vStats(){
   rlogLocalMerge();setTimeout(rlogAutoPull,60);
   const st=readStats();
@@ -2041,7 +2069,7 @@ function vStats(){
     const ic=slug?`<img class="rk-logo" src="assets/pods/${slug}.jpg" alt="">`:`<span class="rk-ini">${name.slice(0,2)}</span>`;
     return `<div class="rk-row">${ic}<span class="rk-name">${name}</span><span class="rk-bar" style="width:${Math.round(v.n/mx*220)}px"></span><span class="rk-n">${v.n} 期</span></div>`;}).join('');
   return `<div class="wrap"><section class="reveal">
-    <div class="eyebrow">My Space · 我的</div><h2 class="title">我的<button class="rsi-btn" onclick="readShareImage()">生成已读长图</button></h2><div class="st-h3" style="margin-top:4px">阅读统计</div>
+    <div class="eyebrow">My Space · 我的</div><h2 class="title">我的</h2><div class="st-h3" style="margin-top:4px">阅读统计</div>
     <div class="st-tiles">
       <div class="st-tile"><div class="n">${st.eps.length}</div><div class="l">已读期数</div></div>
       <div class="st-tile"><div class="n">${hrs}</div><div class="l">累计小时</div></div>
@@ -2053,6 +2081,7 @@ function vStats(){
     <div class="hm-legend">少 <i style="background:var(--surface-2);border:1px solid var(--line)"></i><i style="background:rgba(41,151,255,.25)"></i><i style="background:rgba(41,151,255,.45)"></i><i style="background:rgba(41,151,255,.7)"></i><i style="background:var(--accent)"></i> 多 · 每日阅读分钟数(从功能上线起记录)</div>
     <div class="st-h3">节目排行 · 我读得最多的频道</div>
     <div class="rk">${rows||'<div class="st-empty">暂无</div>'}</div>
+    ${sharePromoHtml(st,hrs)}
     ${mineMarksHtml()}
   </section></div>`;
 }
