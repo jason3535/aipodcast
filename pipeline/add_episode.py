@@ -113,6 +113,8 @@ def translate(text, guest):
 整理成「按主题分节、按发言人分段」的中英对照阅读稿,输出 JSON。
 - 清理口语、修自动字幕错词、合并碎句;不改原意,不杜撰。
 - 按主题切小节,sec 用简短英文短语。节内 spk:嘉宾发言用 "{guest}",主持人用 "Host"。
+- 【说话人判定铁律】主持人=提问方:向对方发问(「你觉得/你怎么看/请讲讲/我很好奇你…」)、引导话题、念赞助广告、开场结尾致谢;嘉宾=被问的人,用第一人称讲亲身经历与自己公司内部("我在 Apple 时/我们团队")。称呼对方为「你」并向其提问的一定是主持人。
+- 长问题会被自动字幕切碎:提问的延续部分仍属主持人,绝不能把问题后半段并进嘉宾的 turn。若一个 turn 前半是提问、后半是回答,必须拆成两个 turn 分属两人。逐 turn 自检 spk 与内容是否矛盾。
 - 每个 turn 同时给 en(清理后英文)和 zh(地道中文)。严格用术语表。
 - zh 一律使用全角中文标点（，。？！；：、弯引号“”、括号（））,不得混用半角 , ; : ? ! ( ) 或直引号 ";中英文之间、中文与数字之间加一个半角空格（如「营收 17 亿」「用 Claude Code 开发」）。
 - 只输出 JSON:{{"ts":[{{"sec":"...","turns":[{{"spk":"...","en":"...","zh":"..."}}]}}]}}
@@ -231,6 +233,10 @@ def main():
         subprocess.run(["python3", str(Path(__file__).parent / "split_extra.py")], check=False)
     except Exception as _e:
         print(f"  ⚠️ split_extra 未跑:{_e}", file=sys.stderr)
+    try:  # 说话人错标质检(只报告不改;见 diarization-check skill)
+        subprocess.run(["python3", str(Path(__file__).parent / "check_diarization.py"), eid], check=False)
+    except Exception as _e:
+        print(f"  ⚠️ check_diarization 未跑:{_e}", file=sys.stderr)
     print(f"[5/5] 完成:{eid} | {len(ts)} 章 + 共识{len(ins.get('consensus',[]))}/反{len(ins.get('contrarian',[]))}", file=sys.stderr)
     print(f"  提示:跑 `node pipeline/build_mcp_data.js` 刷新 MCP 检索索引,然后 git add mcp-data && push")
 
