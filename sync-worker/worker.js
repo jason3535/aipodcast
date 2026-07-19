@@ -4,7 +4,7 @@
  * code=客户端生成的 20 位 base32(100bit 随机,不可猜);KV 存储,一年滚动 TTL。
  * 隐私:无 Cookie、无 IP、无任何个人信息;存的只是「读过哪些期/读到哪」。
  */
-const ALLOW = new Set(['https://aipodcast.jasonlin.tech', 'http://localhost:8000', 'http://127.0.0.1:8000', 'null']);
+const ALLOW = new Set(['https://aipodcast.jasonlin.tech', 'https://aipaper.jasonlin.tech', 'http://localhost:8000', 'http://127.0.0.1:8000', 'null']);
 const cors = o => ({
   'Access-Control-Allow-Origin': ALLOW.has(o) ? o : 'https://aipodcast.jasonlin.tech',
   'Access-Control-Allow-Methods': 'GET, PUT, DELETE, OPTIONS',
@@ -18,9 +18,12 @@ export default {
     const origin = req.headers.get('Origin') || '', co = cors(origin);
     if (req.method === 'OPTIONS') return new Response(null, { status: 204, headers: co });
     if (origin && !ALLOW.has(origin)) return new Response('forbidden', { status: 403, headers: co });
-    const m = new URL(req.url).pathname.match(/^\/s\/([A-Z2-7]+)$/);
+    const url = new URL(req.url);
+    const m = url.pathname.match(/^\/s\/([A-Z2-7]+)$/);
     if (!m || !ID.test(m[1])) return new Response('bad code', { status: 400, headers: co });
-    const key = 'sync:' + m[1];
+    const ns = url.searchParams.get('ns') || '';   // 站点命名空间:同一同步码,两站数据隔离(aipaper 用 ns=paper)
+    if (ns && !/^[a-z]{1,10}$/.test(ns)) return new Response('bad ns', { status: 400, headers: co });
+    const key = (ns ? 'sync-' + ns + ':' : 'sync:') + m[1];
 
     if (req.method === 'GET') {
       const v = await env.SYNC.get(key);
