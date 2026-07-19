@@ -121,6 +121,7 @@
     box-shadow:var(--shadow-lg);display:grid;grid-template-columns:1.05fr 1fr;min-height:420px}
   .hero-art{position:relative;display:grid;place-items:center;overflow:hidden}
   .hero-art .av{width:230px;height:230px;font-size:84px;box-shadow:0 8px 30px rgba(0,0,0,.16)}
+  .hero-cov{display:none}
   .hero-art::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 120% at 30% 20%,transparent 40%,rgba(0,0,0,.04))}
   .hero-body{padding:54px 48px;display:flex;flex-direction:column;justify-content:center}
   .hero-body .eyebrow{color:var(--accent)}
@@ -708,15 +709,23 @@
 /* ===== 移动端针对性优化 ===== */
 @media(max-width:640px){
   .hero{padding:10px 0 0}
-  .hero-card{border-radius:20px;min-height:0}
-  .hero-art{padding:16px 0 4px}
-  .hero-art .av{width:76px;height:76px;font-size:28px;box-shadow:0 4px 14px rgba(0,0,0,.14)}
-  .hero-body{padding:14px 20px 22px}
-  .hero-body h1{font-size:22px;line-height:1.25;margin:4px 0 2px}
+  .hero-card{border-radius:var(--radius);min-height:0;box-shadow:var(--shadow);border:1px solid var(--line)}
+  .hero-art{display:block;height:150px;padding:0}
+  .hero-art .av{position:absolute;right:16px;bottom:14px;width:62px;height:62px;font-size:23px;box-shadow:0 2px 10px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.25)}
+  .hero-cov{display:block;position:absolute;inset:0;z-index:1}
+  .hc-pod{position:absolute;top:14px;left:18px;right:92px;font-size:12px;color:#fff;font-weight:500;opacity:.95;display:flex;align-items:center;gap:7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-shadow:0 1px 2px rgba(0,0,0,.18)}
+  .hc-pod img{width:20px;height:20px;border-radius:6px;flex:none}
+  .hc-ct{position:absolute;left:18px;bottom:16px;max-width:58%;color:#fff}
+  .hc-ct b{display:block;font-size:15.5px;font-weight:600;line-height:1.2;letter-spacing:-.01em;text-shadow:0 1px 3px rgba(0,0,0,.22)}
+  .hc-ct span{font-size:12px;opacity:.88;text-shadow:0 1px 2px rgba(0,0,0,.2)}
+  .hero-body{padding:16px 18px 18px}
+  .hero-body h1{font-size:18px;line-height:1.32;margin:5px 0 2px;letter-spacing:-.02em;font-family:var(--ui);font-weight:600}
   .hero-ten{display:none}
-  .hero-body .who{font-size:13px;margin-bottom:10px}
+  .hero-body .who{display:none}
   .hero-body .quote{display:none}
-  .hero-body .quote-zh{font-size:14.5px;line-height:1.65;margin-bottom:16px}
+  .hero-body .quote-zh{font-size:13.5px;line-height:1.6;margin:4px 0 14px;color:var(--text-2)}
+  .hero-body .eyebrow{font-size:11px}
+  .hero-body .btn{padding:9px 16px;font-size:13.5px}
   .ep-cover{height:112px}
   .ep-cover .av{width:52px;height:52px;font-size:19px;right:14px;bottom:12px}
   .ep-meta{padding:12px 14px 14px}
@@ -2187,7 +2196,7 @@ function vHome(){
   <div class="site-tag">海外一线最新 AI 人物播客 · 中英对照全文<span class="st-n">${EPISODES.length} 期 · ${Object.keys(PEOPLE).length} 位</span></div>
   <div class="wrap hero">
     <div class="hero-card reveal">
-      <div class="hero-art" style="background:${(()=>{const cs=fp.fields.map(fcolor);return cs.length>1?`linear-gradient(150deg,${cs.join(',')})`:(cs[0]||'var(--accent)');})()}">${av(feat.pid)}</div>
+      <div class="hero-art" style="background:${(()=>{const cs=fp.fields.map(fcolor);return cs.length>1?`linear-gradient(150deg,${cs.join(',')})`:(cs[0]||'var(--accent)');})()}"><div class="hero-cov"><span class="hc-pod">${(()=>{const s=POD_LOGO[feat.pod.en]||POD_LOGO[feat.pod.zh];return s?`<img src="assets/pods/${s}.jpg" alt="">`:'';})()}${feat.pod.zh}</span><span class="hc-ct"><b>${fp.en}</b><span>${(feat.date||'').replace(/-/g,'.')}${feat.min?' · '+feat.min+'m':''}</span></span></div>${av(feat.pid)}</div>
       <div class="hero-body">
         <div class="eyebrow">最新上线 · Latest</div>
         <h1>${feat.tZh||feat.tEn}</h1>
