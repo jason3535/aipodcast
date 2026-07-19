@@ -742,6 +742,13 @@
   .ep-head .hz{font-size:15px}
   .ep-head{margin-bottom:24px;padding-bottom:20px}
 }
+
+.ppl-more{display:none}
+.pm-n{width:68px;height:68px;border-radius:50%;background:var(--surface-2);border:1px dashed var(--line);color:var(--accent);font-size:19px;font-weight:600;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+@media(max-width:640px){
+  .home-ppl .ppl-card:nth-child(n+18){display:none}
+  .home-ppl .ppl-card.ppl-more{display:block}
+}
 </style>
 </head>
 <body>
@@ -2285,7 +2292,7 @@ function vHome(){
   <section class="wrap reveal" style="padding-top:8px">
     <div class="eyebrow">People · 人物</div>
     <h2 class="title">${Object.keys(PEOPLE).length} 位 AI 人物</h2>
-    <div class="ppl-grid" style="margin-top:22px">${pplOrder().map(pplCard).join('')}</div>
+    <div class="ppl-grid home-ppl" style="margin-top:22px">${pplOrder().map(pplCard).join('')}<div class="ppl-card ppl-more" onclick="go('#/people')"><span class="pm-n">+${Math.max(0,Object.keys(PEOPLE).length-17)}</span><div class="n">查看全部人物</div><div class="cnt">共 ${Object.keys(PEOPLE).length} 位 →</div></div></div>
   </section>
   ${footer()}`;
 }
