@@ -5,6 +5,7 @@
  * 数据: GitHub Pages 上的 /mcp-data/(由 pipeline/build_mcp_data.js 生成),Worker 拉取并缓存。只读、双语。
  */
 const DATA = 'https://aipodcast.jasonlin.tech/mcp-data';
+const PDATA = 'https://aipaper.jasonlin.tech/data';
 const PROTO = '2025-06-18';
 const SERVER = { name: 'ai-podcast', version: '1.0.0', title: 'AI Podcast' };
 
@@ -48,6 +49,17 @@ const TOOLS = [
       field: { type: 'string', description: '可选,领域: deep-learning/nlp/vision/rl/safety/robotics' },
       year: { type: 'string', description: '可选,年份如 2026' },
       limit: { type: 'number', description: '返回条数,默认 8' } }, additionalProperties: false } },
+  { name: 'search_papers',
+    description: '检索姊妹站 AI Paper(aipaper.jasonlin.tech) 的论文/重要人物长文(514+ 篇,含双语标题/一句话摘要/核心贡献)。定位后用 get_paper 取全文。',
+    inputSchema: { type: 'object', properties: {
+      query: { type: 'string', description: '关键词(中英皆可),匹配标题/摘要/作者名' },
+      person: { type: 'string', description: '可选,按作者姓名(英文)过滤,如 Kaiming He' },
+      limit: { type: 'number', description: '返回条数,默认 8' } }, additionalProperties: false } },
+  { name: 'get_paper',
+    description: '取某篇论文/文章的逐段双语全文 + 核心贡献/局限。lang 可选 both/en/zh 控制返回大小。',
+    inputSchema: { type: 'object', properties: {
+      id: { type: 'string', description: '论文 id(来自 search_papers)' },
+      lang: { type: 'string', enum: ['both', 'en', 'zh'], description: '默认 both' } }, required: ['id'], additionalProperties: false } },
   { name: 'get_episode',
     description: '取某一期的双语全文逐字稿 + 核心观点/反共识。lang 可选 both/en/zh 控制返回大小。',
     inputSchema: { type: 'object', properties: {
@@ -99,12 +111,47 @@ async function getEpisode(a) {
   }
   return ep;
 }
+async function searchPapers(a) {
+  const { papers } = await (async () => { const url = PDATA + '/index.json';
+    const cache = caches.default; let r = await cache.match(url);
+    if (!r) { r = await fetch(url, { cf: { cacheTtl: 600 } }); if (r.ok) await cache.put(url, r.clone()); }
+    if (!r.ok) throw new Error('AI Paper 目录获取失败 ' + r.status); return await r.json(); })();
+  const q = (a.query || '').toLowerCase().trim(); const terms = q ? q.split(/\s+/) : [];
+  let res = papers.filter(p => !a.person || (p.person || '').toLowerCase().includes((a.person || '').toLowerCase()));
+  const blob = p => [p.person, p.tEn, p.tZh, p.sEn, (p.contrib || []).map(x => (x.en || '') + (x.zh || '')).join(' ')].join(' ').toLowerCase();
+  if (terms.length) {
+    res = res.map(p => { const b = blob(p); let sc = 0;
+      for (const t of terms) { if (b.includes(t)) sc++; if (((p.tEn || '') + (p.tZh || '')).toLowerCase().includes(t)) sc += 2; }
+      return { p, sc }; }).filter(x => x.sc > 0).sort((x, y) => y.sc - x.sc).map(x => x.p);
+  } else { res = res.sort((x, y) => (x.date || '') < (y.date || '') ? 1 : -1); }
+  const lim = Math.min(a.limit || 8, 25);
+  return { total: res.length, results: res.slice(0, lim).map(p => ({
+    id: p.id, person: p.person, title: p.tEn, titleZh: p.tZh, date: p.date,
+    summary: p.sEn, contrib: (p.contrib || []).slice(0, 3),
+    url: 'https://aipaper.jasonlin.tech/#/paper/' + p.id })) };
+}
+async function getPaper(a) {
+  const id = (a.id || '').replace(/[^a-z0-9.-]/gi, '');
+  const url = PDATA + '/' + id + '.json';
+  const cache = caches.default; let r = await cache.match(url);
+  if (!r) { r = await fetch(url, { cf: { cacheTtl: 600 } }); if (r.ok) await cache.put(url, r.clone()); }
+  if (!r.ok) throw new Error(`没有这篇: ${a.id}。用 search_papers 查 id。`);
+  let p = await r.json();
+  const lang = a.lang || 'both';
+  if (lang !== 'both' && Array.isArray(p.full)) {
+    p = { ...p, full: p.full.map(s => ({ sec: s.sec, secZh: s.secZh,
+      items: (s.items || []).map(it => it.t === 'para' ? { t: 'para', text: lang === 'en' ? it.en : it.zh } : it) })) };
+  }
+  return p;
+}
 async function runTool(name, args) {
   args = args || {};
   if (name === 'list_people') return await listPeople();
   if (name === 'get_person') return await getPerson(args);
   if (name === 'search_episodes') return await searchEpisodes(args);
   if (name === 'get_episode') return await getEpisode(args);
+  if (name === 'search_papers') return await searchPapers(args);
+  if (name === 'get_paper') return await getPaper(args);
   throw new Error(`未知工具: ${name}`);
 }
 
@@ -117,7 +164,7 @@ async function handle(msg) {
   if (method === 'initialize') {
     const pv = (params && params.protocolVersion) || PROTO;
     return rpc(id, { protocolVersion: pv, capabilities: { tools: { listChanged: false } },
-      serverInfo: SERVER, instructions: '本站收录知名 AI 人物的播客双语全文(102 期/25 人)。先 list_people 或 search_episodes 定位,再 get_episode 取全文。' });
+      serverInfo: SERVER, instructions: '本服务覆盖两个站:AI Podcast(392+ 期播客双语全文)与 AI Paper(514+ 篇论文/长文双语全文)。播客用 list_people/search_episodes→get_episode;论文用 search_papers→get_paper。' });
   }
   if (method === 'notifications/initialized' || method === 'notifications/cancelled') return null; // 通知无响应
   if (method === 'ping') return rpc(id, {});
