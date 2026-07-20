@@ -3168,7 +3168,7 @@ async function syncSid(){
 syncSid();
 function syncGen(){const a='ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';const b=new Uint8Array(20);crypto.getRandomValues(b);return[...b].map(x=>a[x%32]).join('');}
 function syncCollect(){return{
-  read:[...readGet()],later:laterGet(),pos:readPosGet(),recent:recentGet(),recentT:recentTGet(),hl:hlGet(),
+  read:[...readGet()],later:laterGet(),pos:readPosGet(),recent:recentGet(),recentT:recentTGet(),hl:hlGet(),rlog:rlogGet(),
   prefs:{size:localStorage.size||'',lang:localStorage.lang||'',order:localStorage.order||'',theme:localStorage.theme||'',t:+localStorage.prefsT||0},
   t:Date.now()};}
 function syncMerge(r){
@@ -3183,6 +3183,9 @@ function syncMerge(r){
   for(const id in rp){const a=lp[id],b=rp[id];
     if(b&&typeof b.s==='number'&&(!a||(b.t||0)>(a.t||0))){lp[id]=b;posChanged=true;}}
   if(posChanged){try{localStorage.readPos=JSON.stringify(lp)}catch(_){}changed=true;}
+  {const rl=r.rlog;if(rl&&typeof rl==='object'){const g=rlogGet();let ch=false;
+    Object.keys(rl).forEach(k=>{const v=+rl[k]||0;if(v>(g[k]||0)){g[k]=v;ch=true;}});
+    if(ch){localStorage.readLog=JSON.stringify(g);changed=true;}}}
   const pf=r.prefs||{};
   if((pf.t||0)>(+localStorage.prefsT||0)){
     ['size','lang','order','theme'].forEach(k=>{if(pf[k])localStorage[k]=pf[k];});
