@@ -8,7 +8,7 @@
  *   UV = count(distinct coalesce(nullif(sid,''), vid))。
  * 查数: GET /q?token=SECRET&mode=overview|top|ref|sql&days=N[&q=SELECT...] → JSON(供 Claude Code 直接 curl)。
  */
-const ALLOW=new Set(['https://aipodcast.jasonlin.tech','http://localhost:8000','http://127.0.0.1:8000','http://localhost:8931','null']);
+const ALLOW=new Set(['https://aipodcast.jasonlin.tech','https://aipaper.jasonlin.tech','http://localhost:8000','http://127.0.0.1:8000','http://localhost:8931','http://localhost:8932','null']);
 const cors=o=>({'Access-Control-Allow-Origin':ALLOW.has(o)?o:'https://aipodcast.jasonlin.tech',
   'Access-Control-Allow-Methods':'POST, GET, OPTIONS','Access-Control-Allow-Headers':'Content-Type','Vary':'Origin'});
 const J=(o,s,co)=>new Response(JSON.stringify(o),{status:s,headers:{...co,'Content-Type':'application/json'}});
