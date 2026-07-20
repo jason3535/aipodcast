@@ -1955,7 +1955,7 @@ addEventListener('visibilitychange',()=>{
   if(onHome&&cur!==_recentSnap){const sy=scrollY;render();scrollTo(0,sy);}
   _recentSnap=cur;
 });
-function recentAdd(id){let r=recentGet().filter(x=>x!==id);r.unshift(id);localStorage.recentEpisodes=JSON.stringify(r.slice(0,6));_recentSnap=localStorage.recentEpisodes;
+function recentAdd(id){let r=recentGet().filter(x=>x!==id);r.unshift(id);localStorage.recentEpisodes=JSON.stringify(r.slice(0,12));_recentSnap=localStorage.recentEpisodes;
   try{const t=JSON.parse(localStorage.recentT||'{}');t[id]=Date.now();
     const ks=Object.keys(t);if(ks.length>30){ks.sort((a,b)=>t[a]-t[b]);ks.slice(0,ks.length-30).forEach(k=>delete t[k]);}
     localStorage.recentT=JSON.stringify(t);}catch(_){}
@@ -2261,7 +2261,7 @@ function vHome(){
     </div>
   </section>
 
-  ${(()=>{const rec=recentGet().map(id=>EPISODES.find(e=>e.id===id)).filter(Boolean).slice(0,4);
+  ${(()=>{const rec=recentGet().map(id=>EPISODES.find(e=>e.id===id)).filter(Boolean).slice(0,8);
    if(rec.length)return `<section class="wrap reveal" style="padding-top:8px;padding-bottom:0">
     <div class="eyebrow">Continue · 继续阅读</div>
     <h2 class="title">上次看到</h2>
@@ -3199,7 +3199,7 @@ function syncMerge(r){
     const tOf=id=>Math.max(lt[id]||0,rt[id]||0,(lp[id]&&lp[id].t)||0);
     const ids=[...new Set([...(recentGet()),...(r.recent||[])])];
     if(ids.length){
-      const merged=ids.sort((a,b)=>tOf(b)-tOf(a)).slice(0,6);
+      const merged=ids.sort((a,b)=>tOf(b)-tOf(a)).slice(0,12);
       if(JSON.stringify(merged)!==JSON.stringify(recentGet())){
         localStorage.recentEpisodes=JSON.stringify(merged);_recentSnap=localStorage.recentEpisodes;changed=true;}
       const nt={};ids.forEach(id=>{const t=tOf(id);if(t)nt[id]=t;});
