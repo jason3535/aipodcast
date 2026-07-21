@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 178 位人物 / 416 期访谈
+规模: 178 位人物 / 417 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -31,6 +31,7 @@
 - [Andrej Karpathy / 安德烈·卡帕西](https://aipodcast.jasonlin.tech/pp/karpathy/): Founder, Eureka Labs — 6 期
 - [Richard Sutton / 理查德·萨顿](https://aipodcast.jasonlin.tech/pp/sutton/): Professor, U of Alberta — 6 期
 - [Sholto Douglas / 肖尔托·道格拉斯](https://aipodcast.jasonlin.tech/pp/sholto/): Researcher, Anthropic — 5 期
+- [Andrew Feldman / 安德鲁·费尔德曼](https://aipodcast.jasonlin.tech/pp/feldman/): Co-founder & CEO, Cerebras Systems — 4 期
 - [Marc Andreessen / 马克·安德森](https://aipodcast.jasonlin.tech/pp/andreessen/): Co-founder & General Partner, Andreessen Horowitz (a16z) — 4 期
 - [Aravind Srinivas / 阿拉文德·斯里尼瓦斯](https://aipodcast.jasonlin.tech/pp/aravind/): Co-founder & CEO, Perplexity — 4 期
 - [Zico Kolter / 齐科·科尔特](https://aipodcast.jasonlin.tech/pp/kolter/): Professor, CMU · OpenAI board — 4 期
@@ -40,7 +41,6 @@
 - [Benedict Evans / 本尼迪克特·埃文斯](https://aipodcast.jasonlin.tech/pp/benedictevans/): Independent technology analyst; former partner at Andreessen Horowitz (a16z) — 3 期
 - [John Jumper / 约翰·江珀](https://aipodcast.jasonlin.tech/pp/jumper/): Director, Google DeepMind; Nobel Laureate in Chemistry — 3 期
 - [Lip-Bu Tan / 陈立武](https://aipodcast.jasonlin.tech/pp/lipbutan/): CEO, Intel — 3 期
-- [Andrew Feldman / 安德鲁·费尔德曼](https://aipodcast.jasonlin.tech/pp/feldman/): Co-founder & CEO, Cerebras Systems — 3 期
 - [Yejin Choi / 崔艺珍](https://aipodcast.jasonlin.tech/pp/yejin/): Professor, Stanford (prev. NVIDIA, AI2); commonsense reasoning — 3 期
 - [Ilya Sutskever / 伊利亚·苏茨克维尔](https://aipodcast.jasonlin.tech/pp/ilya/): Co-founder, Safe Superintelligence — 3 期
 - [Noam Shazeer / 诺姆·沙泽尔](https://aipodcast.jasonlin.tech/pp/shazeer/): Co-lead, Google Gemini — 3 期
@@ -194,6 +194,7 @@
 - [Sovereign AI: Building the UK's First LLM on a Startup Budget](https://aipodcast.jasonlin.tech/e/pullen-machinel-2026/) — Alistair Pullen, Machine Learning Street Talk, 2026-07-13
 - [AI's Existential Threat and the Race for Superintelligence](https://aipodcast.jasonlin.tech/e/kokotajlo-thediary-2026/) — Daniel Kokotajlo, The Diary Of A CEO, 2026-07-13
 - [From Special Forces to AI: Dan Biderman's Journey](https://aipodcast.jasonlin.tech/e/danbiderman-latentsp-2026/) — Dan Biderman, Latent Space, 2026-07-13
+- [AI Demand Outpaces Expectations: Andrew Feldman on Chips, Deals, and Post-IPO Life](https://aipodcast.jasonlin.tech/e/feldman-sourcery-2026/) — Andrew Feldman, Sourcery with Molly O'Shea, 2026-07-13
 - [The Cognitive Revolution: Davidad on Provably Safe AI and the Future of Alignment](https://aipodcast.jasonlin.tech/e/davidad-thecogni-2026/) — David "davidad" Dalrymple, The Cognitive Revolution, 2026-07-12
 - [Glean CEO: Enterprises Fear Frontier AI Models Eating Their Lunch](https://aipodcast.jasonlin.tech/e/arvindjain-20vcwith-2026/) — Arvind Jain, 20VC with Harry Stebbings, 2026-07-11
 - [Human-Aligned AI: Collective Intelligence and the Future of Work](https://aipodcast.jasonlin.tech/e/perszyk-latentsp-2026/) — Danielle Perszyk, Latent Space, 2026-07-11
@@ -226,7 +227,6 @@
 - [AI's Power Thirst: Blackmail, Self-Preservation, and What We Can Do](https://aipodcast.jasonlin.tech/e/bengio-sineadbo-2026/) — Yoshua Bengio, Sinead Bovell, 2026-06-25
 - [From Trading to AGI: Mark Chen on Research Taste and Replication](https://aipodcast.jasonlin.tech/e/markchen-latentsp-2026/) — Mark Chen, Latent Space, 2026-06-25
 - [Building Products People Love: A Playbook for the AI Era](https://aipodcast.jasonlin.tech/e/pincus-ycombina-2026/) — Mark Pincus, Y Combinator, 2026-06-25
-- [Demis Hassabis on AGI, AI Risks, and DeepMind's Competitive Edge](https://aipodcast.jasonlin.tech/e/demis-semafort-2026/) — Demis Hassabis, Semafor Tech, 2026-06-24
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
