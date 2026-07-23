@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 202 位人物 / 445 期访谈
+规模: 202 位人物 / 446 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -32,6 +32,7 @@
 - [Richard Sutton / 理查德·萨顿](https://aipodcast.jasonlin.tech/pp/sutton/): Professor, U of Alberta — 6 期
 - [Sholto Douglas / 肖尔托·道格拉斯](https://aipodcast.jasonlin.tech/pp/sholto/): Researcher, Anthropic — 5 期
 - [Andrew Feldman / 安德鲁·费尔德曼](https://aipodcast.jasonlin.tech/pp/feldman/): Co-founder & CEO, Cerebras Systems — 4 期
+- [Ilya Sutskever / 伊利亚·苏茨克维尔](https://aipodcast.jasonlin.tech/pp/ilya/): Co-founder, Safe Superintelligence — 4 期
 - [Marc Andreessen / 马克·安德森](https://aipodcast.jasonlin.tech/pp/andreessen/): Co-founder & General Partner, Andreessen Horowitz (a16z) — 4 期
 - [Aravind Srinivas / 阿拉文德·斯里尼瓦斯](https://aipodcast.jasonlin.tech/pp/aravind/): Co-founder & CEO, Perplexity — 4 期
 - [Zico Kolter / 齐科·科尔特](https://aipodcast.jasonlin.tech/pp/kolter/): Professor, CMU · OpenAI board — 4 期
@@ -42,7 +43,6 @@
 - [John Jumper / 约翰·江珀](https://aipodcast.jasonlin.tech/pp/jumper/): Director, Google DeepMind; Nobel Laureate in Chemistry — 3 期
 - [Lip-Bu Tan / 陈立武](https://aipodcast.jasonlin.tech/pp/lipbutan/): CEO, Intel — 3 期
 - [Yejin Choi / 崔艺珍](https://aipodcast.jasonlin.tech/pp/yejin/): Professor, Stanford (prev. NVIDIA, AI2); commonsense reasoning — 3 期
-- [Ilya Sutskever / 伊利亚·苏茨克维尔](https://aipodcast.jasonlin.tech/pp/ilya/): Co-founder, Safe Superintelligence — 3 期
 - [Noam Shazeer / 诺姆·沙泽尔](https://aipodcast.jasonlin.tech/pp/shazeer/): Co-lead, Google Gemini — 3 期
 - [Jan Leike / 扬·莱克](https://aipodcast.jasonlin.tech/pp/leike/): Alignment Lead, Anthropic — 3 期
 - [Dan Klein / 丹·克莱因](https://aipodcast.jasonlin.tech/pp/danklein/): Professor of Computer Science, UC Berkeley; Co-founder & CTO, Scaled Cognition — 2 期
@@ -237,6 +237,7 @@
 - [From Developer to Agent Experience: The Modal Origin Story](https://aipodcast.jasonlin.tech/e/akshatbubna-latentsp-2026/) — Akshat Bubna, Latent Space, 2026-07-08
 - [Claude Tag: Your Proactive Teammate in Slack](https://aipodcast.jasonlin.tech/e/lamismukta-ainative-2026/) — Lamis Mukta, AI Native Dev, 2026-07-07
 - [From Medical School to AI: A Biologist's Journey](https://aipodcast.jasonlin.tech/e/derya-theopena-2026/) — Derya Unutmaz, The OpenAI Podcast, 2026-07-06
+- [The Architect Who Feared His Creation: Ilya Sutskever's AI Journey](https://aipodcast.jasonlin.tech/e/ilya-visionec-2026/) — Ilya Sutskever, Vision Economy, 2026-07-05
 - [Liquid AI: Squeezing Maximum Intelligence from Limited Compute](https://aipodcast.jasonlin.tech/e/hasani-thecogni-2026/) — Ramin Hasani, The Cognitive Revolution, 2026-07-04
 - [AI Scaling Laws and the Future of Intelligence](https://aipodcast.jasonlin.tech/e/naval-naval-2026b/) — Naval Ravikant, Naval, 2026-07-03
 - [AI as the New Interface: Global Tech Leadership and National Power](https://aipodcast.jasonlin.tech/e/andreessen-thea16zp-2026b/) — Marc Andreessen, The a16z Podcast, 2026-07-03
@@ -250,7 +251,6 @@
 - [Building Bridges Through Medical Science: The Near School of the Heart](https://aipodcast.jasonlin.tech/e/hinton-mitimes-2026/) — Geoffrey Hinton, MIT IMES, 2026-06-30
 - [From Motel to Semi Analysis: Dylan Patel's Journey](https://aipodcast.jasonlin.tech/e/dylanpatel-sequoiac-2026/) — Dylan Patel, Sequoia Capital, 2026-06-30
 - [AI in Math: From IMO to Millennium Problems](https://aipodcast.jasonlin.tech/e/grantsanderson-dwarkesh-2026/) — Grant Sanderson, Dwarkesh Podcast, 2026-06-30
-- [From GANs to Diffusion: AI's Evolution in Protein Modeling](https://aipodcast.jasonlin.tech/e/edunov-latentsp-2026/) — Sergey Edunov, Latent Space, 2026-06-30
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
