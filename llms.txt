@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 203 位人物 / 450 期访谈
+规模: 204 位人物 / 451 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -80,6 +80,7 @@
 - [Elizabeth Stone / 伊丽莎白·斯通](https://aipodcast.jasonlin.tech/pp/elizabethstone/): Chief Product and Technology Officer at Netflix — 1 期
 - [Sachin Katti / 萨钦·卡蒂](https://aipodcast.jasonlin.tech/pp/sachinkatti/): Compute Chief, OpenAI · ex-CTO, Intel — 1 期
 - [Andy Beam / 安迪·比姆](https://aipodcast.jasonlin.tech/pp/andybeam/): CTO of Lila Sciences — 1 期
+- [Thariq Shihipar / 塔里克·希希帕尔](https://aipodcast.jasonlin.tech/pp/thariq/): Engineer, Claude Code at Anthropic — 1 期
 - [Jason Yuan / Jason Yuan](https://aipodcast.jasonlin.tech/pp/jasonyuan/): Founder & CEO, Hivemind; ex-New Computer, ex-Apple — 1 期
 - [Chris Pedregal / 克里斯·佩德雷加尔](https://aipodcast.jasonlin.tech/pp/chrispedregal/): Co-founder & CEO of Granola — 1 期
 - [Katelyn Lesse / 凯特琳·莱西](https://aipodcast.jasonlin.tech/pp/katelynlesse/): Head of Platform Product, Anthropic — 1 期
@@ -223,6 +224,7 @@
 - [Designed to Sound Right, Not to Know What's Right](https://aipodcast.jasonlin.tech/e/danklein-theaiwhy-2026/) — Dan Klein, The AI Why with Liam Lawson, 2026-07-16
 - [The Largest Infrastructure Build in History: Inside OpenAI's Compute Strategy](https://aipodcast.jasonlin.tech/e/sachinkatti-themadpo-2026/) — Sachin Katti, The MAD Podcast with Matt Turck, 2026-07-16
 - [The Next Frontier: Scaling AI with Scientific Data](https://aipodcast.jasonlin.tech/e/andybeam-latentsp-2026/) — Andy Beam, Latent Space, 2026-07-16
+- [AI Models Are Smarter Than We Use: Insights on Claude Code](https://aipodcast.jasonlin.tech/e/thariq-southpar-2026/) — Thariq Shihipar, South Park Commons, 2026-07-16
 - [From Dot to Hivemind: A Creative Journey in AI Design](https://aipodcast.jasonlin.tech/e/jasonyuan-diveclub-2026/) — Jason Yuan, Dive Club, 2026-07-15
 - [The Knife Fight of AI Startups: Grainola CEO on Thriving Amid Chaos](https://aipodcast.jasonlin.tech/e/chrispedregal-aii-2026/) — Chris Pedregal, AI & I, 2026-07-15
 - [Anthropic Platform: From Knowledge to Execution to Coordination](https://aipodcast.jasonlin.tech/e/katelynlesse-sequoiac-2026/) — Katelyn Lesse, Sequoia Capital (Training Data), 2026-07-14
@@ -251,7 +253,6 @@
 - [AI Optimism vs Doom: Marc Andreessen on America's Future](https://aipodcast.jasonlin.tech/e/andreessen-newyorkp-2026/) — Marc Andreessen, New York Post, 2026-07-02
 - [Open Source AI: Efficiency, Innovation, and the External Brain](https://aipodcast.jasonlin.tech/e/catanzaro-themadpo-2026/) — Bryan Catanzaro, The MAD Podcast with Matt Turck, 2026-07-02
 - [Ancient Hindu Weapons: The Brahmastra and Autonomous Arms in the Mahabharata](https://aipodcast.jasonlin.tech/e/aravind-powerful-2026/) — Aravind Srinivas, PowerfulJRE, 2026-07-01
-- [Building Failure Machines: The Zynga Way](https://aipodcast.jasonlin.tech/e/pincus-jamesalt-2026/) — Mark Pincus, James Altucher, 2026-07-01
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml

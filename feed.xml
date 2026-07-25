@@ -6,7 +6,21 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Fri, 24 Jul 2026 07:51:07 -0000</lastBuildDate>
+  <lastBuildDate>Sat, 25 Jul 2026 04:00:06 -0000</lastBuildDate>
+  <item>
+    <title>AI 工厂：AI 革命的核心 — BG2Pod</title>
+    <link>https://aipodcast.jasonlin.tech/e/jensen-bg2podwi-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/jensen-bg2podwi-2026/</guid>
+    <pubDate>Sat, 25 Jul 2026 04:00:06 -0000</pubDate>
+    <description>黄仁勋解析 AI 工厂如何推动人类史上最大规模的基础设施建设，以及为何它们是企业未来十年的最佳投资。</description>
+  </item>
+  <item>
+    <title>马斯克、关税与 Truth Social 交易 — 经济学人</title>
+    <link>https://aipodcast.jasonlin.tech/e/elon-theecono-2026b/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/elon-theecono-2026b/</guid>
+    <pubDate>Sat, 25 Jul 2026 04:00:06 -0000</pubDate>
+    <description>CNBC 的 Squawk Pod 节目涵盖马斯克的广泛专访、Lina Khan 在纽约市的新职位、特朗普的最新关税，以及华尔街竞相获取其 Truth Social 帖子的动态。</description>
+  </item>
   <item>
     <title>Alphabet 2026 年第二季度财报：AI 推动营收增长 24% — Alphabet Q2 2026 财报电话会议</title>
     <link>https://aipodcast.jasonlin.tech/e/sundarpichai-alphabet-2026/</link>
@@ -202,20 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/carlrivera-diveclub-2025/</guid>
     <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
     <description>Shopify 首席设计官 Carl Rivera 探讨了从第一性原理重新构想电商平台的使命，利用 AI 和设计创造真正的原生体验。</description>
-  </item>
-  <item>
-    <title>在品牌设计核心注入意义 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/e/saravienna-diveclub-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/saravienna-diveclub-2025/</guid>
-    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
-    <description>首席设计官 Sarah Vienna 以 Windsurf 为例，探讨设计师如何在 AI 时代创造有意义、有争议的品牌。</description>
-  </item>
-  <item>
-    <title>重新思考 AI 交互：从文本框到更好的设计 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/e/vitalyfriedman-diveclub-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/vitalyfriedman-diveclub-2025/</guid>
-    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
-    <description>Vitali Friedman 挑战当前的 AI 交互范式，认为用户不应学习提示工程，设计师应创建更直观的界面，如按钮和滑块，而非依赖文本框。</description>
   </item>
 </channel>
 </rss>
