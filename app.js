@@ -1370,18 +1370,20 @@ function vStats(){
   if(!st.eps.length)return `<div class="wrap"><section class="reveal" style="min-height:50vh"><div class="eyebrow">My Space · 我的</div><h2 class="title">我的</h2><div class="st-h2">我的数据</div><div class="st-empty">还没有已读的播客——打开一期读到底会自动标记已读，统计从此开始累计。</div>${mineMarksHtml()}</section></div>`;
   const hrs=Math.round(st.totalMin/6)/10;
   const g=rlogGet();
-  // 26 周热力图:列=周,行=周日..周六,最右列=本周
+  // 热力图:固定 6–10 月窗口(含未来 3 个月的空格),列=周,行=周日..周六
   const day=86400000;const today=new Date();today.setHours(0,0,0,0);
-  const end=today.getTime()+(6-today.getDay())*day;   // 本周六
-  const LAUNCH=new Date('2026-06-01T00:00:00');   // 建站月起算
+  const RANGE_END=new Date('2026-10-31T00:00:00');   // 显示到 10 月底
+  const end=RANGE_END.getTime()+(6-RANGE_END.getDay())*day;   // 含 10 月末的那一周的周六
+  const LAUNCH=new Date('2026-06-01T00:00:00');   // 6 月起算
   const launchSun=LAUNCH.getTime()-LAUNCH.getDay()*day;
-  const cols=Math.max(1,Math.min(26,Math.ceil((end-launchSun+day)/(7*day))));
+  const cols=Math.max(1,Math.ceil((end-launchSun+day)/(7*day)));
   let cells='';const colMon=[];
   for(let w=cols-1;w>=0;w--){
-    const t0=end-(w*7+6)*day;colMon.push(new Date(t0).getMonth()+1);
+    const t0=end-(w*7+6)*day;colMon.push(new Date(t0+3*day).getMonth()+1);   // 用每列周三(中点)判定月份,避免跨月首列标成上月
     for(let r=0;r<7;r++){
-    const t=end-(w*7+(6-r))*day;if(t>today.getTime()){cells+='<i style="visibility:hidden"></i>';continue;}
+    const t=end-(w*7+(6-r))*day;
     const d=new Date(t);const k=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+    if(t>today.getTime()){cells+=`<i data-l="0" title="${k} · 未来" style="opacity:.35"></i>`;continue;}   // 未来日期:浅色空格
     const m=g[k]||0;const l=m<=0?0:m<20?1:m<45?2:m<90?3:4;
     cells+=`<i data-l="${l}" title="${k} · ${m} 分钟"></i>`;}}
   let mons='';for(let i=0;i<colMon.length;i++){const show=i===0?(colMon.length<2||colMon[1]===colMon[0]):colMon[i]!==colMon[i-1];mons+=`<span>${show?colMon[i]+'月':''}</span>`;}
@@ -1721,7 +1723,7 @@ function vBrowse(){
   const pods=[...new Set(EPISODES.map(e=>e.pod.en))];
   let list=EPISODES.filter(e=>(!bf.person||e.pid===bf.person)&&(!bf.year||e.date.startsWith(bf.year))&&(!bf.pod||e.pod.en===bf.pod)&&(!bf.field||e.fields.includes(bf.field))&&(!bf.read||(bf.read==='read'?readHas(e.id):bf.read==='later'?laterHas(e.id):!readHas(e.id))));
   return `<div class="wrap"><section class="reveal" style="padding-bottom:0">
-    <div class="eyebrow">Browse · 全部播客</div><h2 class="title">筛选与浏览<button class="rsi-btn" onclick="readShareImage()">生成已读长图</button><button class="rsi-btn" onclick="go('#/mine')">我的</button></h2>
+    <div class="eyebrow">Browse · 全部播客</div><h2 class="title">筛选与浏览</h2>
     <div class="filterbar">
       <select class="sel" onchange="bf.person=this.value;render()">
         <option value="">全部人物</option>${people.map(id=>`<option value="${id}" ${bf.person===id?'selected':''}>${PEOPLE[id].zh}</option>`).join('')}</select>
