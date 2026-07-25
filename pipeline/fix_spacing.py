@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """fix_spacing.py — 收录/重建后统一 CJK-EN 空格(站点标准:中英文与数字之间加半角空格)。
 gen_brief/gen_topics/gen_views/meta 的 DeepSeek 输出常漏这个空格,每轮跑一次即可。幂等。
-覆盖:index.html 内联 EPISODES 标题(tZh/sZh)+ TOPICS/VIEWS zh + data/ep-extra.json 的 brief。
+覆盖:app.js 内联 EPISODES 标题(tZh/sZh)+ TOPICS/VIEWS zh + data/ep-extra.json 的 brief。
 用法:python3 pipeline/fix_spacing.py"""
 import io, json, re
 from pathlib import Path
@@ -40,7 +40,7 @@ def extract_json(html, name):
     return None
 
 def main():
-    html = (ROOT / 'index.html').read_text(encoding='utf-8')
+    html = (ROOT / 'app.js').read_text(encoding='utf-8')
     # 1) 内联 EPISODES 标题
     a = html.index('const EPISODES = '); b = html.index('/* ====== REAL ASSETS')
     arr = json.loads(html[a + len('const EPISODES = '):b].rstrip().rstrip(';').rstrip())
@@ -53,7 +53,7 @@ def main():
         if r:
             st, en, obj = r
             html = html[:st] + json.dumps(deep_fix(obj), ensure_ascii=False) + html[en:]
-    (ROOT / 'index.html').write_text(html, encoding='utf-8')
+    (ROOT / 'app.js').write_text(html, encoding='utf-8')
     # 3) mcp-data/ep/*.json 标题(分享页/SEO 从这里生成)
     epdir = ROOT / 'mcp-data' / 'ep'
     if epdir.exists():
@@ -75,7 +75,7 @@ def main():
     # 复检
     NOSPACE = re.compile(r'[一-鿿][A-Za-z0-9]|[A-Za-z0-9)][一-鿿]')
     left = len(NOSPACE.findall(html))
-    print(f'fix_spacing 完成 | index.html 残留 {left}(含 EN 内正常情形,仅供参考)')
+    print(f'fix_spacing 完成 | app.js 残留 {left}(含 EN 内正常情形,仅供参考)')
 
 if __name__ == '__main__':
     main()

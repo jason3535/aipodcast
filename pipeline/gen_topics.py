@@ -4,7 +4,7 @@
 import json,os,re,sys,time,urllib.request
 from concurrent.futures import ThreadPoolExecutor,as_completed
 from pathlib import Path
-BASE=Path(__file__).resolve().parent;HTML=BASE.parent/"index.html"
+BASE=Path(__file__).resolve().parent;HTML=BASE.parent/"app.js"
 KEY=os.environ.get("DEEPSEEK_API_KEY") or sys.exit("需要 DEEPSEEK_API_KEY")
 URL="https://api.deepseek.com/chat/completions"
 # 8 个核心议题(slug, 中文, 英文)
@@ -25,8 +25,8 @@ SYS=f"""你是 AI Podcast 编辑。给定一位嘉宾在某期播客里的若干
 {THEMELIST}
 只输出 JSON:{{"items":[{{"slug":"...","en":"原英文","zh":"原中文"}}]}}。slug 必须来自清单;en/zh 原样复制不要改写。"""
 def call(system,user):
-    body=json.dumps({"model":"deepseek-chat","messages":[{"role":"system","content":system},{"role":"user","content":user}],
-        "response_format":{"type":"json_object"},"max_tokens":2000,"temperature":0.1}).encode()
+    body=json.dumps({"model":"deepseek-v4-flash","messages":[{"role":"system","content":system},{"role":"user","content":user}],
+        "response_format":{"type":"json_object"},"max_tokens":5000,"temperature":0.1}).encode()
     op=urllib.request.build_opener(urllib.request.ProxyHandler({}))
     last=None
     for a in range(3):

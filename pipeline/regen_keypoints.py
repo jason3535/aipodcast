@@ -13,7 +13,7 @@ SYS=f"""你是 AI Podcast 编辑。读这期 AI 人物访谈转录,提炼【核�
 {GT}"""
 
 def call(text):
-    body=json.dumps({"model":"deepseek-chat","messages":[{"role":"system","content":SYS},
+    body=json.dumps({"model":"deepseek-v4-flash","messages":[{"role":"system","content":SYS},
         {"role":"user","content":"转录:\n"+text[:60000]}],"response_format":{"type":"json_object"},
         "max_tokens":3000,"temperature":0.3}).encode()
     op=urllib.request.build_opener(urllib.request.ProxyHandler({}))

@@ -5,7 +5,7 @@ import re, io, json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-HTML = ROOT / "index.html"
+HTML = ROOT / "app.js"
 EXTRA = ROOT / "data" / "ep-extra.json"
 
 def main():
@@ -26,7 +26,7 @@ def main():
     EXTRA.write_text(json.dumps(extra, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     s = s[:m.start()] + "const EPISODES = " + json.dumps(eps, ensure_ascii=False, separators=(", ", ": ")) + ";" + s[m.end():]
     HTML.write_text(s, encoding="utf-8")
-    print(f"split_extra: 抽出 {moved} 集 → data/ep-extra.json ({EXTRA.stat().st_size//1024}KB) | index.html {HTML.stat().st_size//1024}KB")
+    print(f"split_extra: 抽出 {moved} 集 → data/ep-extra.json ({EXTRA.stat().st_size//1024}KB) | app.js {HTML.stat().st_size//1024}KB")
 
 if __name__ == "__main__":
     main()

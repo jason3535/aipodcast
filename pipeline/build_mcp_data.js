@@ -1,10 +1,10 @@
-// 从 index.html 导出 MCP 数据到 mcp-data/(GitHub Pages 托管,供 MCP Worker + 网页懒加载用)
-// 注意:index.html 的内联 EPISODES 已剥离逐字稿(ts),只剩元数据+insights。
+// 从 app.js 导出 MCP 数据到 mcp-data/(GitHub Pages 托管,供 MCP Worker + 网页懒加载用)
+// 注意:app.js 的内联 EPISODES 已剥离逐字稿(ts),只剩元数据+insights。
 //   逐字稿的权威源 = mcp-data/ep/<id>.json(由 add_episode.py 写入,本脚本不覆盖)。
 //   本脚本只重建 index.json(检索) 与 people.json,章节标题从 ep 文件读取。
 const fs=require('fs'),path=require('path');
 const ROOT=path.resolve(__dirname,'..');
-const h=fs.readFileSync(path.join(ROOT,'index.html'),'utf8');
+const h=fs.readFileSync(path.join(ROOT,'app.js'),'utf8');
 const EPISODES=JSON.parse(h.match(/const EPISODES = (\[[\s\S]*?\]);\n\n\/\* ====== REAL/)[1]);
 // 合并 data/ep-extra.json(split_extra 把 insights/brief 移了出去,这里补回作 MCP/Ask 材料)
 try{const extra=JSON.parse(fs.readFileSync(path.join(ROOT,'data','ep-extra.json'),'utf8'));

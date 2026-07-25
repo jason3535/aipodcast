@@ -6,216 +6,216 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Mon, 13 Jul 2026 01:36:16 -0000</lastBuildDate>
+  <lastBuildDate>Fri, 24 Jul 2026 07:51:07 -0000</lastBuildDate>
   <item>
-    <title>OpenClaw 时刻：与 Peter Steinberger 的 AI 代理革命 — AI 新闻与播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/steinberger-ainewspo-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/steinberger-ainewspo-2026/</guid>
-    <pubDate>Mon, 13 Jul 2026 01:36:16 -0000</pubDate>
-    <description>OpenClaw 的创造者 Peter Steinberger 讲述了他从 1 小时原型到 GitHub 增长最快仓库的历程，探讨了自主 AI 代理的力量与危险，以及代理工程的未来。</description>
+    <title>Alphabet 2026 年第二季度财报：AI 推动营收增长 24% — Alphabet Q2 2026 财报电话会议</title>
+    <link>https://aipodcast.jasonlin.tech/e/sundarpichai-alphabet-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/sundarpichai-alphabet-2026/</guid>
+    <pubDate>Fri, 24 Jul 2026 07:51:07 -0000</pubDate>
+    <description>Alphabet 营收增长 24%，得益于 AI 投资，搜索增长 17%，云增长 82%，Gemini 模型快速普及。</description>
   </item>
   <item>
-    <title>医学中的 AI：魔法、判断力与未来 — 斯坦福医学院</title>
-    <link>https://aipodcast.jasonlin.tech/e/edwinchen-stanford-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/edwinchen-stanford-2026/</guid>
-    <pubDate>Mon, 13 Jul 2026 01:36:16 -0000</pubDate>
-    <description>临床医生兼 AI 研究员 Jonathan Chen 博士探讨 AI 如何支持医学中的人类判断力，与魔术进行类比，并分享真实临床实践中的见解。</description>
+    <title>特斯拉 2026 年第二季度：创纪录交付、FSD 需求激增与 Robo Taxi 扩张 — 特斯拉 Q2 2026 财报电话会议</title>
+    <link>https://aipodcast.jasonlin.tech/e/elon-teslaq22-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/elon-teslaq22-2026/</guid>
+    <pubDate>Fri, 24 Jul 2026 07:40:37 -0000</pubDate>
+    <description>埃隆·马斯克讨论创纪录的第二季度交付、FSD 需求激增、能源业务增长以及谨慎的 Robo Taxi 扩张。</description>
   </item>
   <item>
-    <title>Claude 的父母：以信任的速度驾驭 AI — 奥普拉</title>
-    <link>https://aipodcast.jasonlin.tech/e/dario-oprah-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/dario-oprah-2026/</guid>
-    <pubDate>Sun, 12 Jul 2026 09:04:26 -0000</pubDate>
-    <description>奥普拉采访 Anthropic 创始人 Dario 和 Daniela Amodei，探讨 AI 的风险与责任，包括来自 Claude 本人的尖锐提问。</description>
+    <title>创造者之忧：伊利亚·苏茨克沃的人工智能之旅 — 视觉经济</title>
+    <link>https://aipodcast.jasonlin.tech/e/ilya-visionec-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/ilya-visionec-2026/</guid>
+    <pubDate>Thu, 23 Jul 2026 01:30:20 -0000</pubDate>
+    <description>伊利亚·苏茨克沃参与创造了现代人工智能，从 AlexNet 到 GPT，但随着 AI 变得强大，他转而反对 OpenAI CEO 萨姆·奥尔特曼，担忧超级智能机器带来的生存威胁。</description>
   </item>
   <item>
-    <title>OpenAI 与微软：历史性的科技合作伙伴关系 — Bg2 Pod</title>
-    <link>https://aipodcast.jasonlin.tech/e/altman-bg2pod-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/altman-bg2pod-2025/</guid>
-    <pubDate>Sun, 12 Jul 2026 09:04:26 -0000</pubDate>
-    <description>Sam Altman 和 Satya Nadella 讨论他们变革性的合作伙伴关系、OpenAI 的重组以及一个大型非营利组织的创建。</description>
+    <title>用 Claude 构建更好的 AI 体验：从硬件伙伴到 AI 原生代 — How I AI</title>
+    <link>https://aipodcast.jasonlin.tech/e/felixrieseberg-howiai-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/felixrieseberg-howiai-2026/</guid>
+    <pubDate>Wed, 22 Jul 2026 01:34:32 -0000</pubDate>
+    <description>Anthropic 的 Felix Reeseberg 探讨如何用 Claude 解决几乎所有问题，分享 20 美元 DIY 硬件伙伴，并解释为何孩子是最自然的 AI 用户。</description>
   </item>
   <item>
-    <title>Sam Altman 谈 AI、育儿与未来 — This Past Weekend</title>
-    <link>https://aipodcast.jasonlin.tech/e/altman-thispast-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/altman-thispast-2025/</guid>
-    <pubDate>Sun, 12 Jul 2026 09:04:26 -0000</pubDate>
-    <description>Sam Altman 探讨 AI 的利弊、初为人父的体验以及科技的未来。</description>
+    <title>AI 时代的设计：品味、工艺与观点 — 杨彼得</title>
+    <link>https://aipodcast.jasonlin.tech/e/dylanfield-peteryan-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/dylanfield-peteryan-2026/</guid>
+    <pubDate>Wed, 22 Jul 2026 01:34:32 -0000</pubDate>
+    <description>Figma CEO Dylan Field 探讨设计在 AI 时代不断演变的角色，强调品味、工艺和观点的重要性。</description>
   </item>
   <item>
-    <title>Sam Altman 谈星际之门、用 ChatGPT 育儿以及 AGI 的未来 — The OpenAI Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/e/altman-theopena-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/altman-theopena-2025/</guid>
-    <pubDate>Sun, 12 Jul 2026 09:04:26 -0000</pubDate>
-    <description>OpenAI 首席执行官 Sam Altman 讨论星际之门、作为新手父母使用 ChatGPT，以及他对 AGI 和超级智能的乐观看法。</description>
+    <title>用 AI 代理构建创意工具：Pablo Stanley 谈 Ecto 与设计未来 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/pablostanley-diveclub-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/pablostanley-diveclub-2026/</guid>
+    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
+    <description>Pablo Stanley 分享他构建创意工具的历程，包括带有 AI 代理的设计工具 Ecto，以及如何利用 AI 拓展思维而非替代思考。</description>
   </item>
   <item>
-    <title>AI 安全与加速主义之争：Dario Amodei 谈 Claude 3.7 与 AI 未来 — Hard Fork</title>
-    <link>https://aipodcast.jasonlin.tech/e/dario-hardfork-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/dario-hardfork-2025/</guid>
-    <pubDate>Sun, 12 Jul 2026 09:04:26 -0000</pubDate>
-    <description>Anthropic CEO Dario Amodei 回归节目，讨论新模型 Claude 3.7、与中国的 AI 竞赛，以及他对 AI 未来的希望与担忧，此时 AI 安全的钟摆正摆向加速主义。</description>
+    <title>Factory CEO 谈客户痴迷与产出指标及企业 AI 战略 — 红杉资本 (Training Data)</title>
+    <link>https://aipodcast.jasonlin.tech/e/matangrinberg-sequoiac-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/matangrinberg-sequoiac-2026/</guid>
+    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
+    <description>Factory 联合创始人兼 CEO Matan 讨论了产出指标相对于客户痴迷等输入指标的重要性，以及 Factory 如何通过模型独立性和模块化在企业 AI 市场中脱颖而出。</description>
   </item>
   <item>
-    <title>电子游戏提升手术技能：研究显示错误减少 32% — The Joe Rogan Experience</title>
-    <link>https://aipodcast.jasonlin.tech/e/elon-thejoero-2024/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/elon-thejoero-2024/</guid>
-    <pubDate>Sun, 12 Jul 2026 09:04:26 -0000</pubDate>
-    <description>乔·罗根讨论电子游戏需要高度集中和手眼协调，引用研究表明玩电子游戏的外科医生错误减少 32%，速度提高 24%。</description>
+    <title>AI 时代角色流动性的导航：Netflix 的 Elizabeth Stone — Lenny 播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/elizabethstone-lennyspo-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/elizabethstone-lennyspo-2026/</guid>
+    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
+    <description>Elizabeth Stone 探讨 AI 如何模糊传统角色、人才密度和冒险的重要性，以及如何为 AI 时代调整组织文化。</description>
   </item>
   <item>
-    <title>埃隆·马斯克谈 Neuralink 首例人体植入与脑机接口的未来 — Lex Fridman 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/elon-lexfridm-2024/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/elon-lexfridm-2024/</guid>
-    <pubDate>Sun, 12 Jul 2026 09:04:26 -0000</pubDate>
-    <description>埃隆·马斯克讨论 Neuralink 历史性首例人体植入、第二例植入的成功、扩展到 10 名患者，以及脑机接口极大超越人类通信速度的潜力。</description>
+    <title>下一个前沿：用科学数据扩展 AI 规模 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/e/andybeam-latentsp-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/andybeam-latentsp-2026/</guid>
+    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
+    <description>来自 LILA Science 的 Rafa Gomez-Bombarelli 和 Andy Beam 讨论未来实验室应如何像数据中心一样，以科学数据作为新前沿来扩展 AI 规模。</description>
   </item>
   <item>
-    <title>Sam Altman 谈 OpenAI 董事会风波与通往 AGI 之路上的权力斗争 — Lex Fridman 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/altman-lexfridm-2024/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/altman-lexfridm-2024/</guid>
-    <pubDate>Sun, 12 Jul 2026 09:04:26 -0000</pubDate>
-    <description>Sam Altman 回顾了痛苦的 OpenAI 董事会风波，反思了权力斗争、韧性以及为构建 AGI 所吸取的教训。</description>
+    <title>AI 协作设计：从 Figma 到代码的 Notion 实践 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/andymadrick-diveclub-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/andymadrick-diveclub-2026/</guid>
+    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
+    <description>Notion 设计师 Andy Madrick 分享 AI 工具（如 LLM 和代码原型）如何改变与工程师的协作，让设计师掌握最后的设计细节。</description>
   </item>
   <item>
-    <title>Sam Altman 谈 AGI、GPT-4 与 AI 的未来 — Lex Fridman 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/altman-lexfridm-2023/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/altman-lexfridm-2023/</guid>
-    <pubDate>Sun, 12 Jul 2026 09:04:26 -0000</pubDate>
-    <description>Sam Altman 讨论了 AGI 早期受到的嘲笑、ChatGPT 的关键时刻，以及 RLHF 在让 AI 变得有用中的作用。</description>
+    <title>用设计下大赌注：Shop App 的故事 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/katarinabatina-diveclub-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/katarinabatina-diveclub-2026/</guid>
+    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
+    <description>Shop 应用设计总监 Katarina Betatina 探讨 Shopify 如何大胆冒险，将包裹追踪和支付整合成一个消费者平台，并打造高度个性化、内容驱动的浏览体验。</description>
   </item>
   <item>
-    <title>埃隆·马斯克谈 SpaceX 历史性发射与太空探索的未来 — Lex Fridman 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/elon-lexfridm-2021/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/elon-lexfridm-2021/</guid>
-    <pubDate>Sun, 12 Jul 2026 09:04:26 -0000</pubDate>
-    <description>埃隆·马斯克谈及首次载人龙飞船任务的压力、全平民 Inspiration4 飞行的启发，以及他对月球基地和火星殖民的愿景。</description>
+    <title>品味、AI 与决断力：一位设计师从 X 到独立之路 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/brandonjacoby-diveclub-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/brandonjacoby-diveclub-2026/</guid>
+    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
+    <description>布兰登·雅各比分享关于品味、AI 创造力以及 X 的决断文化的见解，他正启动自己的实践，帮助创始人超越“足够好”。</description>
   </item>
   <item>
-    <title>赋予计算机嗅觉 — The TWIML AI Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/e/wiltschko-thetwiml-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/wiltschko-thetwiml-2026/</guid>
-    <pubDate>Sun, 12 Jul 2026 07:27:35 -0000</pubDate>
-    <description>Osmo 创始人、前谷歌 DeepMind 研究员 Alex Wiltschko 探讨 AI 如何建模、预测和设计气味，将嗅觉带入数字世界。</description>
+    <title>从梦想到现实：一位 AI 原生设计师的旅程 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/krispuckett-diveclub-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/krispuckett-diveclub-2026/</guid>
+    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
+    <description>Stripe 设计负责人 Chris Pucket 分享他如何利用 AI 工具构建自己的第一个 iOS 应用，实现了 20 年的梦想，并探讨了好奇心和灵魂在设计中的重要性。</description>
   </item>
   <item>
-    <title>Claude Code：意外引发的软件开发革命 — Training Data</title>
-    <link>https://aipodcast.jasonlin.tech/e/boris-training-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/boris-training-2026/</guid>
-    <pubDate>Sun, 12 Jul 2026 07:27:35 -0000</pubDate>
-    <description>Claude Code 的创造者 Boris Cherny 分享了其意外起源故事，以及它如何从产品市场契合前的实验演变为指数级增长的产品，用 AI 代理重新定义了编码。</description>
+    <title>界面设计中的非凡关怀：打造病毒式入门体验 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/joshpuckett-diveclub-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/joshpuckett-diveclub-2026/</guid>
+    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
+    <description>Josh Puckett 分享如何通过设计中的非凡关怀（如可定制的图书馆卡入门体验）建立信任和感知价值，以及 AI 如何帮助为用户多走一步。</description>
   </item>
   <item>
-    <title>纳瓦尔论财富：从资产到知识 — Eric Jorgenson</title>
-    <link>https://aipodcast.jasonlin.tech/e/naval-ericjorg-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/naval-ericjorg-2026/</guid>
-    <pubDate>Sun, 12 Jul 2026 07:27:35 -0000</pubDate>
-    <description>纳瓦尔·拉维坎特重新定义财富，超越睡后收入资产，采纳大卫·多伊奇的观点：财富是你能影响的物理变换集合，由知识驱动。</description>
+    <title>高质量、高速度：产品开发的新梦想 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/cameronworboys-diveclub-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/cameronworboys-diveclub-2026/</guid>
+    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
+    <description>Cash App 产品设计主管 Cam Warboys 探讨 AI 工具如何实现快速、高质量的产品开发，无需权衡取舍，强调精益团队和快速实验。</description>
   </item>
   <item>
-    <title>Boris Chney：从 Meta 到 Claude Code，用通才思维打造产品 — Ryan Peterman</title>
-    <link>https://aipodcast.jasonlin.tech/e/boris-ryanpete-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/boris-ryanpete-2025/</guid>
-    <pubDate>Sun, 12 Jul 2026 07:27:35 -0000</pubDate>
-    <description>Claude Code 的创造者、前 Meta 首席工程师 Boris Chney 分享他从在 Facebook 群组中构建聊天功能到领导 AI 驱动开发的历程，强调通才技能和潜在需求。</description>
+    <title>新晋设计工程师如何利用 AI 策略提升自己 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/karlkoch-diveclub-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/karlkoch-diveclub-2026/</guid>
+    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
+    <description>一位设计工程师分享了充分利用 AI 的具体策略，包括避免过度使用 useEffect 等常见陷阱，并强调了创造力和工艺的重要性。</description>
   </item>
   <item>
-    <title>Joe Rogan 与黄仁勋畅谈特朗普、SpaceX 与常识 — The Joe Rogan Experience</title>
-    <link>https://aipodcast.jasonlin.tech/e/jensen-thejoero-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/jensen-thejoero-2025/</guid>
-    <pubDate>Sun, 12 Jul 2026 07:27:35 -0000</pubDate>
-    <description>黄仁勋分享他与特朗普总统和埃隆·马斯克的惊人经历，揭示了媒体中罕见的特朗普一面。</description>
+    <title>与 Emily Campbell 一起设计出色的 AI 体验 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/emilycampbell-diveclub-2025/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/emilycampbell-diveclub-2025/</guid>
+    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
+    <description>HackerRank 设计副总裁 Emily Campbell 分享了一个设计 AI 交互的框架，从设计师在循环中转变为人类在循环中。</description>
   </item>
   <item>
-    <title>从 GAN 到扩散：AI 在蛋白质建模中的演变 — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/e/edunov-latentsp-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/edunov-latentsp-2026/</guid>
-    <pubDate>Sun, 12 Jul 2026 03:59:16 -0000</pubDate>
-    <description>Evan Fineberg 和 Sergey Udov 讨论从 GAN 到扩散模型在蛋白质结构预测中的转变，他们的物理学背景，以及 Genesis Molecular AI 改进 AI 用于药物发现的方法。</description>
+    <title>专用智能的案例 — 20VC 创投播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/linqiao-20vcwith-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/linqiao-20vcwith-2026/</guid>
+    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
+    <description>Fireworks 创始人 Lynn Quo 认为，AI 的未来在于基于专有数据的专用私有智能，而非仅仅通用模型。</description>
   </item>
   <item>
-    <title>AI 测试：超越计算机使用，迈向自主代理 — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/e/waldenyan-latentsp-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/waldenyan-latentsp-2026/</guid>
-    <pubDate>Sun, 12 Jul 2026 03:59:16 -0000</pubDate>
-    <description>Walden Yen 和 Cole Murray 讨论从手把手指导 AI 模型到自主代理的转变、2025 年底能力的快速飞跃，以及 Open Inspect 的灵感来源。</description>
+    <title>AI 创业的刀锋之战：Grainola CEO 谈在混乱中蓬勃发展 — AI &amp; I</title>
+    <link>https://aipodcast.jasonlin.tech/e/chrispedregal-aii-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/chrispedregal-aii-2026/</guid>
+    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
+    <description>Grainola CEO Chris 讨论了经营一家成功的 AI 初创公司所面临的持续挑战，将其比作一场刀锋之战，生存是常态，并分享了对快速变化的 AI 领域中竞争与创新的见解。</description>
   </item>
   <item>
-    <title>AI 模型不良基准的陷阱 — Unsupervised Learning</title>
-    <link>https://aipodcast.jasonlin.tech/e/edwinchen-unsuperv-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/edwinchen-unsuperv-2025/</guid>
-    <pubDate>Sun, 12 Jul 2026 03:59:16 -0000</pubDate>
-    <description>Serge 首席执行官 Edwin Shan 讨论了优化有缺陷基准（如 El Marina）的后果，用户倾向于选择花哨、冗长的回答而非准确的回答。</description>
+    <title>AI 垃圾与设计工具的进化 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/mengto-diveclub-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/mengto-diveclub-2026/</guid>
+    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
+    <description>Mang 讨论了追逐潮流如何导致 AI 垃圾，并分享了他从 Cursor 转向 Codeex 来构建应用和设计的经历，强调需要领先于基准线。</description>
   </item>
   <item>
-    <title>窥探 AI 的黑箱内部 — Google DeepMind</title>
-    <link>https://aipodcast.jasonlin.tech/e/neelnanda-googlede-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/neelnanda-googlede-2026/</guid>
-    <pubDate>Sat, 11 Jul 2026 14:29:05 -0000</pubDate>
-    <description>Hannah Fry 与 Neil Nander 探讨可解释性领域，该领域旨在通过将意义映射到神经网络内部数字来理解其工作原理，并探讨其安全与科学动机。</description>
+    <title>从平面设计到科技：Marvin Schwiebold 的 Shopify 之旅 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/marvinschwaibold-diveclub-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/marvinschwaibold-diveclub-2026/</guid>
+    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
+    <description>Marvin Schwiebold 分享他从平面设计到科技的旅程，包括在 Squarespace 的工作以及 Molly Studio 被 Shopify 收购的经历，探讨创造力、AI 工具和设计差异化。</description>
   </item>
   <item>
-    <title>AGI 与物理 AI：与 AI 先驱尤尔根·施密德胡伯的对话 — Unsupervised Learning</title>
-    <link>https://aipodcast.jasonlin.tech/e/schmidhuber-unsuperv-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/schmidhuber-unsuperv-2026/</guid>
-    <pubDate>Sat, 11 Jul 2026 14:29:05 -0000</pubDate>
-    <description>AI 先驱尤尔根·施密德胡伯探讨了通往 AGI 的道路、当前硬件的局限性，以及为何他对 AI 技术持乐观态度，但对模型公司持悲观态度。</description>
+    <title>Stripe 的设计实践：与设计主管 Katie Dill 的深度对话 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/katiedill-diveclub-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/katiedill-diveclub-2026/</guid>
+    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
+    <description>Stripe 设计主管 Katie Dill 探讨设计在 Stripe 的演变，从全新 Stripe.com 的设计决策到他们寻找设计师的特质。</description>
   </item>
   <item>
-    <title>AI 智能体：超越大语言模型的下一个前沿 — 谷歌 DeepMind</title>
-    <link>https://aipodcast.jasonlin.tech/e/joonpark-googlede-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/joonpark-googlede-2026/</guid>
-    <pubDate>Fri, 10 Jul 2026 01:30:53 -0000</pubDate>
-    <description>Google DeepMind 的 Nana Tomashev 解释了 AI 智能体如何通过自主执行多步骤任务区别于语言模型，并探讨了它们创造新经济和通往 AGI 路径的潜力。</description>
+    <title>Perplexity 的设计文化：通过品牌故事吸引顶尖人才 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/henrymodisett-diveclub-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/henrymodisett-diveclub-2026/</guid>
+    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
+    <description>Perplexity 设计副总裁 Henry Modiset 探讨了他们的设计文化和品牌叙事如何吸引顶尖人才，以及从初创公司发展为广泛使用的应用所面临的挑战。</description>
   </item>
   <item>
-    <title>Liquid AI：从有限算力中榨取最大智能 — The Cognitive Revolution</title>
-    <link>https://aipodcast.jasonlin.tech/e/hasani-thecogni-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/hasani-thecogni-2026/</guid>
-    <pubDate>Thu, 09 Jul 2026 07:05:16 -0000</pubDate>
-    <description>CEO Ramine Hassani 解释 Liquid AI 如何通过生物启发式神经网络和架构搜索优化边缘设备 AI，例如可在 iPhone 上运行的 10 亿参数模型。</description>
+    <title>如何在 Lovable 获得设计师职位 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/nadchishtie-diveclub-2025b/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/nadchishtie-diveclub-2025b/</guid>
+    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
+    <description>Lovable 设计主管分享招聘见解：寻找能端到端推进工作、用 AI 填补空白、在众多候选人中脱颖而出的通才设计师。</description>
   </item>
   <item>
-    <title>AI 在数学中的进展：从国际数学奥林匹克到千禧年难题 — Dwarkesh 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/grantsanderson-dwarkesh-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/grantsanderson-dwarkesh-2026/</guid>
-    <pubDate>Thu, 09 Jul 2026 07:05:16 -0000</pubDate>
-    <description>Grant Sanderson 讨论为何 AI 在数学上的成功并不自动意味着通用人工智能，以及解决黎曼猜想是否意味着白领工作的自动化。</description>
+    <title>LLM 与可塑软件的未来 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/geoffreylitt-diveclub-2025/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/geoffreylitt-diveclub-2025/</guid>
+    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
+    <description>设计工程师 Jeffrey Lit 探讨 LLM 如何推动数字产品设计向个性化、用户可控的软件转变，超越传统 SaaS 模式。</description>
   </item>
   <item>
-    <title>记忆与持续学习：AI 的下一个前沿 — Training Data</title>
-    <link>https://aipodcast.jasonlin.tech/e/danbiderman-training-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/danbiderman-training-2026/</guid>
-    <pubDate>Thu, 09 Jul 2026 07:05:16 -0000</pubDate>
-    <description>Engram 联合创始人探讨模型如何从不断变化的上下文中持续学习，超越预训练和后训练，将新知识深度整合到模型权重中。</description>
+    <title>Dylan Field 谈 Figma 的历程、设计差异化与 AI 在产品构建中的作用 — Lenny 播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/dylanfield-lennyspo-2025/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/dylanfield-lennyspo-2025/</guid>
+    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
+    <description>Figma CEO Dylan Field 分享创业想法、设计差异化的重要性以及 AI 如何改变产品构建的经验。</description>
   </item>
   <item>
-    <title>用 AI 模拟人类社会：从小镇实验到现实应用 — Training Data</title>
-    <link>https://aipodcast.jasonlin.tech/e/joonpark-training-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/joonpark-training-2026/</guid>
-    <pubDate>Thu, 09 Jul 2026 07:05:16 -0000</pubDate>
-    <description>Simile 创始人 June 探讨了生成式智能体在小镇实验中模拟涌现社会行为的过程，以及利用模拟指导社会的愿景。</description>
+    <title>设计神经接口：从 Apple Watch 到脑机交互 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/roozmahdavian-diveclub-2025/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/roozmahdavian-diveclub-2025/</guid>
+    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
+    <description>Neuralink 设计工程师 Ruse Madavian 分享他从设计 Apple Watch Siri 表盘到构建脑机接口的历程，探讨前沿界面如何需要从第一性原理重新思考交互。</description>
   </item>
   <item>
-    <title>智能体 AI 时代：谷歌反重力引擎驱动下一代产品 — Training Data</title>
-    <link>https://aipodcast.jasonlin.tech/e/logankilpatrick-training-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/logankilpatrick-training-2026/</guid>
-    <pubDate>Thu, 09 Jul 2026 07:05:16 -0000</pubDate>
-    <description>谷歌 AI 工作室的 Logan 探讨反重力智能体引擎如何统一谷歌产品，赋能智能体编程和消费级智能体。</description>
+    <title>为 AI 时代重新构想 Shopify 的设计 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/carlrivera-diveclub-2025/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/carlrivera-diveclub-2025/</guid>
+    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
+    <description>Shopify 首席设计官 Carl Rivera 探讨了从第一性原理重新构想电商平台的使命，利用 AI 和设计创造真正的原生体验。</description>
   </item>
   <item>
-    <title>从汽车旅馆到半导体分析：Dylan Patel 的创业之路 — 红杉资本</title>
-    <link>https://aipodcast.jasonlin.tech/e/dylanpatel-sequoiac-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/dylanpatel-sequoiac-2026/</guid>
-    <pubDate>Wed, 08 Jul 2026 01:39:56 -0000</pubDate>
-    <description>Dylan Patel 分享了他从在家族汽车旅馆和加油站长大，到创立半导体分析领域顶级研究公司 Semi Analysis 的历程。</description>
+    <title>在品牌设计核心注入意义 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/saravienna-diveclub-2025/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/saravienna-diveclub-2025/</guid>
+    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
+    <description>首席设计官 Sarah Vienna 以 Windsurf 为例，探讨设计师如何在 AI 时代创造有意义、有争议的品牌。</description>
   </item>
   <item>
-    <title>在 AI 驱动的就业市场中如何脱颖而出 — 西蒙·斯涅克</title>
-    <link>https://aipodcast.jasonlin.tech/e/ethanhe-simonsin-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/ethanhe-simonsin-2026/</guid>
-    <pubDate>Wed, 08 Jul 2026 01:39:56 -0000</pubDate>
-    <description>沃顿教授 Ethan Mollick 探讨人类品味、经验和多样性如何在职场中提供超越 AI 的竞争优势。</description>
+    <title>重新思考 AI 交互：从文本框到更好的设计 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/vitalyfriedman-diveclub-2025/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/vitalyfriedman-diveclub-2025/</guid>
+    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
+    <description>Vitali Friedman 挑战当前的 AI 交互范式，认为用户不应学习提示工程，设计师应创建更直观的界面，如按钮和滑块，而非依赖文本框。</description>
   </item>
 </channel>
 </rss>

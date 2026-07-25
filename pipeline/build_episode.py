@@ -2,12 +2,12 @@
 """
 AI Voices · 转录 + 双语翻译管线
 =================================
-把一期播客（YouTube 链接 / 本地音频 / 已有转录文本）变成 index.html 里 EPISODES[] 用的双语单集对象。
+把一期播客（YouTube 链接 / 本地音频 / 已有转录文本）变成 app.js 里 EPISODES[] 用的双语单集对象。
 
 流程：
   1. 取转录  —  优先官方字幕(youtube-transcript-api) → 退回 yt-dlp 自动字幕 → 退回本地 Whisper
   2. 分段+翻译  —  Claude (claude-opus-4-8, 自适应思考)，带术语表，输出结构化双语 JSON
-  3. 产出  —  可直接粘进 index.html 的 JS 对象（--emit js），或 JSON（--emit json）
+  3. 产出  —  可直接粘进 app.js 的 JS 对象（--emit js），或 JSON（--emit json）
 
 合规（重要，见 README.md）：
   --mode public   仅产出「摘要 + 数段金句 + 原链接」，不含全文转录（公开发布走这个）

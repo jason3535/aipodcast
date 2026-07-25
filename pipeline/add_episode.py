@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-add_episode.py — 一条命令把一期播客做成站内双语全文(含目录、共识/反共识)并写进 index.html。
+add_episode.py — 一条命令把一期播客做成站内双语全文(含目录、共识/反共识)并写进 app.js。
 
 流程:抓字幕(yt-dlp) → DeepSeek 分块翻译(双语 ts) → DeepSeek 共识/反共识 → 取标题/导语
-     → 存 transcripts/ep_<vid>.json → 插入 index.html 的 EPISODES[] 并按日期重排。
+     → 存 transcripts/ep_<vid>.json → 插入 app.js 的 EPISODES[] 并按日期重排。
 
 依赖: yt-dlp;环境变量 DEEPSEEK_API_KEY。
 用法:
@@ -13,14 +13,14 @@ add_episode.py — 一条命令把一期播客做成站内双语全文(含目录
     --pod-en "Dwarkesh Podcast" --pod-zh "Dwarkesh 播客" \
     --fields deep-learning,robotics
   # 标题/导语/时长/日期不填则自动生成(DeepSeek)或取自 YouTube。
-注意:--pid 必须已存在于 index.html 的 PEOPLE 中(新增人物先跑 add_person.py)。
+注意:--pid 必须已存在于 app.js 的 PEOPLE 中(新增人物先跑 add_person.py)。
 """
 import argparse, json, os, re, subprocess, sys, tempfile, time, urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
-HTML = BASE.parent / "index.html"
+HTML = BASE.parent / "app.js"  # 2026-07-25 起:数据/逻辑已从 index.html 拆到独立 app.js
 TRANS = BASE / "transcripts"; TRANS.mkdir(exist_ok=True)
 GLOSS = json.load(open(BASE / "glossary.json", encoding="utf-8"))
 GT = "\n".join(f"  {k} → {v}" for k, v in GLOSS.items() if not k.startswith("_"))
@@ -28,8 +28,8 @@ KEY = os.environ.get("DEEPSEEK_API_KEY") or sys.exit("需要环境变量 DEEPSEE
 URL = "https://api.deepseek.com/chat/completions"
 
 
-def call(system, user, mx=8000, retries=3):
-    body = json.dumps({"model": "deepseek-chat", "messages": [
+def call(system, user, mx=12000, retries=3):
+    body = json.dumps({"model": "deepseek-v4-flash", "messages": [
         {"role": "system", "content": system}, {"role": "user", "content": user}],
         "response_format": {"type": "json_object"}, "max_tokens": mx, "temperature": 0.3}).encode()
     op = urllib.request.build_opener(urllib.request.ProxyHandler({}))  # 绕系统代理直连
@@ -54,7 +54,7 @@ def yt_meta(url):
     # YouTube 会对密集请求限流,-J 返回空/`null` 会让旧代码 d.get 崩溃。重试 + 兜底(非致命)。
     for a in range(3):
         try:
-            out = subprocess.run(["yt-dlp", "--skip-download", "--no-warnings", "-J", url],
+            out = subprocess.run(["yt-dlp", "--proxy", "http://127.0.0.1:7890", "--skip-download", "--no-warnings", "-J", url],
                                  capture_output=True, text=True, timeout=90).stdout
             d = json.loads(out) if out.strip() else None
             if isinstance(d, dict):
@@ -71,7 +71,7 @@ def get_subs(url):
     # 字幕端点同样会被限流返回空;重试 + 退避 + --sleep-subtitles,尽量拿到自动字幕。
     for attempt in range(3):
         with tempfile.TemporaryDirectory() as td:
-            subprocess.run(["yt-dlp", "--skip-download", "--write-auto-subs", "--sub-lang", "en",
+            subprocess.run(["yt-dlp", "--proxy", "http://127.0.0.1:7890", "--skip-download", "--write-auto-subs", "--sub-lang", "en",
                 "--sub-format", "vtt", "--sleep-subtitles", "2", "-o", f"{td}/s.%(ext)s", url],
                 capture_output=True, timeout=180)
             v = list(Path(td).glob("*.vtt"))
@@ -139,7 +139,7 @@ def insights(text):
 每条 en≤22 词 + 地道中文 zh,基于真实内容不杜撰。严格用术语表。只输出 JSON。
 术语表:
 {GT}""")
-    return call(ins_sys, "英文转录:\n" + text[:120000], mx=4000)
+    return call(ins_sys, "英文转录:\n" + text[:120000], mx=7000)
 
 
 def meta(text, guest):
@@ -202,7 +202,7 @@ def main():
     pod = {"en": a.pod_en, "zh": a.pod_zh}
     fields = [f.strip() for f in a.fields.split(",") if f.strip()]
     # 领域必须是站内已登记的 key,否则前端 fdot 渲染会挂(2026-07-02 曾因 efficiency 白屏)
-    valid_fields = set(re.findall(r"'([a-z-]+)':\{en:", re.search(r"const FIELDS = \{(.*?)\n\};", open(BASE.parent / "index.html", encoding="utf-8").read(), re.S).group(1)))
+    valid_fields = set(re.findall(r"'([a-z-]+)':\{en:", re.search(r"const FIELDS = \{(.*?)\n\};", open(BASE.parent / "app.js", encoding="utf-8").read(), re.S).group(1)))
     bad = [f for f in fields if f not in valid_fields]
     if bad:
         sys.exit(f"--fields 含未登记领域 {bad},可用: {sorted(valid_fields)}")
@@ -220,7 +220,7 @@ def main():
           "fields": fields, "src": src, "tEn": tEn, "tZh": tZh, "sEn": sEn, "sZh": sZh, "insights": ins,
           "addedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}   # 收录时间戳(UTC,精确到秒;最近上新按此精确排序)
 
-    print(f"[4/5] 写入 index.html(元数据)+ mcp-data/ep(全文)", file=sys.stderr)
+    print(f"[4/5] 写入 app.js(元数据)+ mcp-data/ep(全文)", file=sys.stderr)
     html = HTML.read_text(encoding="utf-8")
     if a.pid not in html:
         print(f"  ⚠️ 提醒:PEOPLE 里似乎没有 '{a.pid}',请先用 add_person.py 新增人物+照片。", file=sys.stderr)
