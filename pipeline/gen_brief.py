@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 """为每期生成「速览」(TL;DR + 本期回答的问题)并给每条核心观点/反共识标注对应章节(跳原文用)。
-一次 DeepSeek 调用同时产出。幂等:只处理 index.html 内联 EPISODES 里还没有 brief 的期。
+一次 DeepSeek 调用同时产出。幂等:只处理 app.js 内联 EPISODES 里还没有 brief 的期。
 章节标题从 mcp-data/ep/<id>.json 的 transcript 读。需 DEEPSEEK_API_KEY。"""
 import json, os, re, sys, time, urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
-BASE = Path(__file__).resolve().parent; ROOT = BASE.parent; HTML = ROOT / "index.html"
+BASE = Path(__file__).resolve().parent; ROOT = BASE.parent; HTML = ROOT / "app.js"
 EPDIR = ROOT / "mcp-data" / "ep"
 KEY = os.environ.get("DEEPSEEK_API_KEY") or sys.exit("需要 DEEPSEEK_API_KEY")
 URL = "https://api.deepseek.com/chat/completions"
 
-def call(system, user, mx=1200):
-    body = json.dumps({"model": "deepseek-chat", "messages": [
+def call(system, user, mx=5000):
+    body = json.dumps({"model": "deepseek-v4-flash", "messages": [
         {"role": "system", "content": system}, {"role": "user", "content": user}],
         "response_format": {"type": "json_object"}, "max_tokens": mx, "temperature": 0.2}).encode()
     op = urllib.request.build_opener(urllib.request.ProxyHandler({}))

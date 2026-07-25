@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 add_person.py — 新增人物:抓 Wikimedia 头像存到 assets/people/<pid>.jpg,并打印 PEOPLE 条目模板。
-打印的条目手动粘进 index.html 的 PEOPLE{};pid 也要加进同文件的 PHOTOS 集合(若抓到照片)。
+打印的条目手动粘进 app.js 的 PEOPLE{}(2026-07-25 起数据/逻辑已从 index.html 拆到独立 app.js);pid 也要加进同文件的 PHOTOS 集合(若抓到照片)。
 
 用法:
   python add_person.py --pid jensen --wiki "Jensen Huang" \
@@ -49,12 +49,12 @@ def main():
     has = fetch_photo(a.pid, a.wiki)
     fields = "[" + ",".join(f"'{f.strip()}'" for f in a.fields.split(",")) + "]"
     print(f"\n照片: {'✓ assets/people/'+a.pid+'.jpg' if has else '未抓到,头像将回退字母 '+init}")
-    print(f"\n① 把下面这条加进 index.html 的 PEOPLE{{}}：\n")
+    print(f"\n① 把下面这条加进 app.js 的 PEOPLE{{}}：\n")
     print(f"""  '{a.pid}':{{en:'{a.en}',zh:'{a.zh}',init:'{init}',tiEn:'{a.ti_en}',tiZh:'{a.ti_zh}',fields:{fields},
     bioEn:'{a.bio_en}',
     bioZh:'{a.bio_zh}'}},""")
     if has:
-        print(f"\n② 把 '{a.pid}' 加进 index.html 的 PHOTOS 集合：const PHOTOS=new Set([...,'{a.pid}']);")
+        print(f"\n② 把 '{a.pid}' 加进 app.js 的 PHOTOS 集合：const PHOTOS=new Set([...,'{a.pid}']);")
     print(f"\n③ 然后跑 add_episode.py --pid {a.pid} ... 生成他的播客全文。")
 
 

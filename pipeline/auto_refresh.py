@@ -22,7 +22,7 @@ from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
 ROOT = BASE.parent
-HTML = ROOT / "index.html"
+HTML = ROOT / "app.js"  # 2026-07-25 起:数据/逻辑已从 index.html 拆到独立 app.js(首屏瘦身,外链 defer 加载)
 LOG = BASE / "auto_refresh.log"
 KEY = os.environ.get("DEEPSEEK_API_KEY")
 DS_URL = "https://api.deepseek.com/chat/completions"
@@ -34,9 +34,9 @@ def log(msg):
     try: LOG.open("a", encoding="utf-8").write(line + "\n")
     except Exception: pass
 
-def ds(system, user, mx=400):
+def ds(system, user, mx=3000):
     """DeepSeek 直连(绕 Clash 系统代理)。"""
-    body = json.dumps({"model": "deepseek-chat", "messages": [
+    body = json.dumps({"model": "deepseek-v4-flash", "messages": [
         {"role": "system", "content": system}, {"role": "user", "content": user}],
         "response_format": {"type": "json_object"}, "max_tokens": mx, "temperature": 0.1}).encode()
     op = urllib.request.build_opener(urllib.request.ProxyHandler({}))
@@ -63,7 +63,7 @@ def load_state():
     process.stdout.write(JSON.stringify({people,vids,podKeys}));
     '''
     out = subprocess.run(["node", "-e", js, str(HTML)], capture_output=True, text=True)
-    if out.returncode: sys.exit("解析 index.html 失败:" + out.stderr[:200])
+    if out.returncode: sys.exit("解析 app.js 失败:" + out.stderr[:200])
     return json.loads(out.stdout)
 
 # ---- yt-dlp ----
@@ -296,9 +296,8 @@ def main():
     # JS 校验,过了才提交
     rc, _ = run_cmd(["node", "--check", "/dev/stdin"]) if False else (0, "")
     chk = subprocess.run(["node", "-e",
-        "const fs=require('fs');const h=fs.readFileSync('index.html','utf8');"
-        "const b=[...h.matchAll(/<script>([\\s\\S]*?)<\\/script>/g)].map(x=>x[1]).filter(s=>s.includes('EPISODES'))[0];"
-        "new Function(b);"
+        "const fs=require('fs');const h=fs.readFileSync('app.js','utf8');"
+        "new Function(h);"
         # 数据校验:领域 key 必须已登记(2026-07-02 曾因 efficiency 白屏)、id 不重复
         "const eps=JSON.parse(h.match(/const EPISODES = (\\[[\\s\\S]*?\\]);/)[1]);"
         "const fk=new Set([...h.match(/const FIELDS = \\{([\\s\\S]*?)\\n\\};/)[1].matchAll(/'([a-z-]+)':\\{en:/g)].map(m=>m[1]));"

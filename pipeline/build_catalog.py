@@ -4,7 +4,7 @@ import json, re, os
 BASE=os.path.dirname(os.path.abspath(__file__))
 TRANS=os.path.join(BASE,"transcripts")
 
-HTML = os.path.join(BASE, "..", "index.html")
+HTML = os.path.join(BASE, "..", "app.js")
 
 def norm(s):
     return (s.replace("‘","「").replace("’","」").replace("“","「").replace("”","」")

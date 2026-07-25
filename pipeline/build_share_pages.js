@@ -1,9 +1,9 @@
 // SEO/GEO 静态预渲染:为每期生成 e/<id>/(真实正文 + JSON-LD)，每位人物生成 pp/<pid>/(hub),
 // 首页注入结构化数据，并产出 sitemap.xml + llms.txt。静态页含真实可抓取内容(不再只是跳转壳),
 // 让搜索引擎与 AI 答案引擎能索引/引用;正文顶部提供「打开互动全文版」链接回 SPA。
-const fs=require('fs'),path=require('path');
+const fs=require('fs'),path=require('path'),crypto=require('crypto');
 const ROOT=path.resolve(__dirname,'..'),SITE='https://aipodcast.jasonlin.tech';
-const h=fs.readFileSync(path.join(ROOT,'index.html'),'utf8');
+const h=fs.readFileSync(path.join(ROOT,'app.js'),'utf8');
 const EPISODES=JSON.parse(h.match(/const EPISODES = (\[[\s\S]*?\]);\n\n\/\* ====== REAL/)[1]);
 // 合回 split_extra 移走的 insights/brief(静态页核心观点区块依赖;2026-07 曾因缺此步而空渲染)
 try{const extra=JSON.parse(fs.readFileSync(path.join(ROOT,'data','ep-extra.json'),'utf8'));
@@ -102,4 +102,10 @@ fs.writeFileSync(path.join(ROOT,'sitemap.xml'),
 // llms.txt (GEO 索引)
 const llms=`# AI Podcast · 双语播客全文阅读站\n\n> 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.\n\n站点: ${SITE}/\n规模: ${Object.keys(byPid).filter(p=>PEOPLE[p]).length} 位人物 / ${EPISODES.length} 期访谈\n每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。\n\n## 人物 People\n${Object.keys(byPid).filter(pid=>PEOPLE[pid]).sort((a,b)=>byPid[b].length-byPid[a].length).map(pid=>{const p=PEOPLE[pid];return `- [${p.en}${p.zh?' / '+p.zh:''}](${SITE}/pp/${pid}/): ${(p.tiEn||'').replace(/\n/g,' ')} — ${byPid[pid].length} 期`;}).join('\n')}\n\n## 最新访谈 Latest episodes\n${EPISODES.slice().sort((a,b)=>(b.date||'').localeCompare(a.date||'')).slice(0,40).map(e=>{const p=PEOPLE[e.pid]||{};return `- [${e.tEn}](${SITE}/e/${e.id}/) — ${p.en||''}, ${(e.pod&&e.pod.en)||''}, ${e.date||''}`;}).join('\n')}\n\n## 数据接口\n- sitemap: ${SITE}/sitemap.xml\n- MCP server (只读内容，外部 AI 可接入): https://mcp.jasonlin.tech/mcp\n`;
 fs.writeFileSync(path.join(ROOT,'llms.txt'),llms);
-console.log('分享页',n,'期 + 人物 hub',pn,'个 + sitemap',urls.length,'条 + llms.txt');
+// app.js 内容哈希 → 回填根 index.html 的 <script src> 版本号,确保每次内容变化都触发浏览器重新拉取(否则老访客可能吃到缓存的旧 app.js)
+const appHash=crypto.createHash('md5').update(h).digest('hex').slice(0,10);
+const idxPath=path.join(ROOT,'index.html');
+let idx=fs.readFileSync(idxPath,'utf8');
+idx=idx.replace(/<script src="app\.js(\?v=[a-f0-9]+)?" defer><\/script>/,`<script src="app.js?v=${appHash}" defer></script>`);
+fs.writeFileSync(idxPath,idx);
+console.log('分享页',n,'期 + 人物 hub',pn,'个 + sitemap',urls.length,'条 + llms.txt + app.js?v='+appHash);

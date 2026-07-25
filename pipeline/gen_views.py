@@ -4,7 +4,7 @@
 import json, os, re, sys, time, urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
-BASE=Path(__file__).resolve().parent; HTML=BASE.parent/"index.html"
+BASE=Path(__file__).resolve().parent; HTML=BASE.parent/"app.js"
 GLOSS=json.load(open(BASE/"glossary.json",encoding="utf-8"))
 GT="\n".join(f"  {k} → {v}" for k,v in GLOSS.items() if not k.startswith("_"))
 KEY=os.environ.get("DEEPSEEK_API_KEY") or sys.exit("需要 DEEPSEEK_API_KEY")
@@ -12,9 +12,9 @@ URL="https://api.deepseek.com/chat/completions"
 MIN_EPS=2
 
 def call(system,user):
-    body=json.dumps({"model":"deepseek-chat","messages":[{"role":"system","content":system},
+    body=json.dumps({"model":"deepseek-v4-flash","messages":[{"role":"system","content":system},
         {"role":"user","content":user}],"response_format":{"type":"json_object"},
-        "max_tokens":2500,"temperature":0.3}).encode()
+        "max_tokens":5000,"temperature":0.3}).encode()
     op=urllib.request.build_opener(urllib.request.ProxyHandler({}))
     last=None
     for a in range(3):

@@ -9,7 +9,7 @@ BASE = Path(__file__).resolve().parent
 ROOT = BASE.parent
 SITE = "https://aipodcast.jasonlin.tech"
 
-html = io.open(ROOT / "index.html", encoding="utf-8").read()
+html = io.open(ROOT / "app.js", encoding="utf-8").read()
 eps = json.loads(re.search(r"const EPISODES = (\[.*?\]);", html, re.S).group(1))
 by_id = {e["id"]: e for e in eps}
 

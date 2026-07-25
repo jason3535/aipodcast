@@ -11,10 +11,10 @@ URL = "https://api.deepseek.com/chat/completions"
 def call(titles):
     sys_p = ("把下列英文播客章节标题逐条译成简洁地道的中文(每条≤14字,保留专有名词如 GPT/AGI/RLHF 原文)。"
              "只输出 JSON:{\"zh\":[\"...\",...]},顺序与数量与输入完全一致。")
-    body = json.dumps({"model": "deepseek-chat", "messages": [
+    body = json.dumps({"model": "deepseek-v4-flash", "messages": [
         {"role": "system", "content": sys_p},
         {"role": "user", "content": "\n".join(f"{i}. {t}" for i, t in enumerate(titles))}],
-        "response_format": {"type": "json_object"}, "max_tokens": 1500, "temperature": 0.2}).encode()
+        "response_format": {"type": "json_object"}, "max_tokens": 5000, "temperature": 0.2}).encode()
     op = urllib.request.build_opener(urllib.request.ProxyHandler({}))
     last = None
     for a in range(3):

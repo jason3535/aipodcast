@@ -28,7 +28,7 @@ FCOLOR = {"deep-learning": "#5B8DEF", "nlp": "#9B6BF2", "vision": "#2BB8A3",
           "rl": "#E8833A", "safety": "#D95970", "robotics": "#5AA867"}
 
 def load_data():
-    h = (ROOT / "index.html").read_text(encoding="utf-8")
+    h = (ROOT / "app.js").read_text(encoding="utf-8")
     eps = json.loads(re.search(r"const EPISODES = (\[.*?\]);", h, re.S).group(1))
     extra_p = ROOT / "data" / "ep-extra.json"
     extra = json.loads(extra_p.read_text(encoding="utf-8")) if extra_p.exists() else {}
@@ -183,9 +183,9 @@ def gen_copy(e, p):
             f"标题: {e.get('tZh','')} | {e.get('tEn','')}\n"
             f"频道: {(e.get('pod') or {}).get('zh','')} · {e.get('date','')}\n"
             f"要点:\n" + "\n".join(f"- {x}" for x in pts))
-    body = json.dumps({"model": "deepseek-chat", "messages": [
+    body = json.dumps({"model": "deepseek-v4-flash", "messages": [
         {"role": "system", "content": sys_p}, {"role": "user", "content": user}],
-        "response_format": {"type": "json_object"}, "max_tokens": 900, "temperature": 0.7}).encode()
+        "response_format": {"type": "json_object"}, "max_tokens": 4000, "temperature": 0.7}).encode()
     op = urllib.request.build_opener(urllib.request.ProxyHandler({}))
     req = urllib.request.Request("https://api.deepseek.com/chat/completions", data=body,
                                  headers={"Content-Type": "application/json", "Authorization": f"Bearer {key}"})
