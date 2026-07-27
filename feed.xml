@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sat, 25 Jul 2026 04:00:06 -0000</lastBuildDate>
+  <lastBuildDate>Sat, 25 Jul 2026 14:02:39 -0000</lastBuildDate>
+  <item>
+    <title>AI模型比我们使用的更智能：Claude Code的洞见 — South Park Commons</title>
+    <link>https://aipodcast.jasonlin.tech/e/thariq-southpar-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/thariq-southpar-2026/</guid>
+    <pubDate>Sat, 25 Jul 2026 14:02:39 -0000</pubDate>
+    <description>一位Anthropic团队成员讨论AI智能体比当前使用更智能，分享构建Claude Code功能（如询问用户）的经验，并反思模型改进。</description>
+  </item>
   <item>
     <title>AI 工厂：AI 革命的核心 — BG2Pod</title>
     <link>https://aipodcast.jasonlin.tech/e/jensen-bg2podwi-2026/</link>
@@ -209,13 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/roozmahdavian-diveclub-2025/</guid>
     <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
     <description>Neuralink 设计工程师 Ruse Madavian 分享他从设计 Apple Watch Siri 表盘到构建脑机接口的历程，探讨前沿界面如何需要从第一性原理重新思考交互。</description>
-  </item>
-  <item>
-    <title>为 AI 时代重新构想 Shopify 的设计 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/e/carlrivera-diveclub-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/carlrivera-diveclub-2025/</guid>
-    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
-    <description>Shopify 首席设计官 Carl Rivera 探讨了从第一性原理重新构想电商平台的使命，利用 AI 和设计创造真正的原生体验。</description>
   </item>
 </channel>
 </rss>

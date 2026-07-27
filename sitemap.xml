@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-07-25</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-07-27</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/altman/</loc><lastmod>2026-07-27</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/jensen/</loc><lastmod>2026-07-25</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/elon/</loc><lastmod>2026-07-25</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/sundarpichai/</loc><lastmod>2026-07-24</lastmod></url>
@@ -93,7 +94,6 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/jureleskovec/</loc><lastmod>2026-07-14</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/mjordan/</loc><lastmod>2026-06-27</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/lambert/</loc><lastmod>2026-07-02</lastmod></url>
-  <url><loc>https://aipodcast.jasonlin.tech/pp/altman/</loc><lastmod>2026-07-12</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/caitlin/</loc><lastmod>2026-07-04</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/ericjang/</loc><lastmod>2026-07-07</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/jennywen/</loc><lastmod>2026-07-16</lastmod></url>
@@ -205,6 +205,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/albertgu/</loc><lastmod>2026-06-27</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/pathak/</loc><lastmod>2026-06-27</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/abbeel/</loc><lastmod>2026-06-17</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/altman-relentle-2026/</loc><lastmod>2026-07-27</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/jensen-bg2podwi-2026/</loc><lastmod>2026-07-25</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/elon-theecono-2026b/</loc><lastmod>2026-07-25</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/elon-teslaq22-2026/</loc><lastmod>2026-07-24</lastmod></url>
