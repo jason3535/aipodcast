@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 204 位人物 / 452 期访谈
+规模: 204 位人物 / 457 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -11,8 +11,8 @@
 - [Dario Amodei / 达里奥·阿莫迪](https://aipodcast.jasonlin.tech/pp/dario/): CEO, Anthropic — 16 期
 - [Naval Ravikant / 纳瓦尔·拉维坎特](https://aipodcast.jasonlin.tech/pp/naval/): Co-founder, AngelList; angel investor & philosopher — 14 期
 - [Elon Musk / 埃隆·马斯克](https://aipodcast.jasonlin.tech/pp/elon/): Founder, xAI — 13 期
-- [Jensen Huang / 黄仁勋](https://aipodcast.jasonlin.tech/pp/jensen/): Founder & CEO, NVIDIA — 11 期
-- [Demis Hassabis / 杰米斯·哈萨比斯](https://aipodcast.jasonlin.tech/pp/demis/): CEO, Google DeepMind — 11 期
+- [Jensen Huang / 黄仁勋](https://aipodcast.jasonlin.tech/pp/jensen/): Founder & CEO, NVIDIA — 12 期
+- [Demis Hassabis / 杰米斯·哈萨比斯](https://aipodcast.jasonlin.tech/pp/demis/): CEO, Google DeepMind — 12 期
 - [Boris Cherny / 鲍里斯·切尔尼](https://aipodcast.jasonlin.tech/pp/boris/): Creator of Claude Code, Anthropic — 10 期
 - [Yoshua Bengio / 约书亚·本吉奥](https://aipodcast.jasonlin.tech/pp/bengio/): Professor, Mila — 10 期
 - [Yann LeCun / 杨立昆](https://aipodcast.jasonlin.tech/pp/lecun/): Chief AI Scientist, Meta — 10 期
@@ -45,6 +45,9 @@
 - [Yejin Choi / 崔艺珍](https://aipodcast.jasonlin.tech/pp/yejin/): Professor, Stanford (prev. NVIDIA, AI2); commonsense reasoning — 3 期
 - [Noam Shazeer / 诺姆·沙泽尔](https://aipodcast.jasonlin.tech/pp/shazeer/): Co-lead, Google Gemini — 3 期
 - [Jan Leike / 扬·莱克](https://aipodcast.jasonlin.tech/pp/leike/): Alignment Lead, Anthropic — 3 期
+- [Dianne Na Penn / 黛安·娜·潘恩](https://aipodcast.jasonlin.tech/pp/diannepenn/): Head of Research Product Management, Anthropic — 2 期
+- [Thariq Shihipar / 塔里克·希希帕尔](https://aipodcast.jasonlin.tech/pp/thariq/): Engineer, Claude Code at Anthropic — 2 期
+- [Ramin Hasani / 拉明·哈萨尼](https://aipodcast.jasonlin.tech/pp/hasani/): Co-founder & CEO, Liquid AI; liquid neural networks (ex-MIT) — 2 期
 - [Dan Klein / 丹·克莱因](https://aipodcast.jasonlin.tech/pp/danklein/): Professor of Computer Science, UC Berkeley; Co-founder & CTO, Scaled Cognition — 2 期
 - [Dan Biderman / 丹·比德曼](https://aipodcast.jasonlin.tech/pp/danbiderman/): Co-founder, Engram; memory & continual learning — 2 期
 - [Jürgen Schmidhuber / 于尔根·施密德胡伯](https://aipodcast.jasonlin.tech/pp/schmidhuber/): Director, KAUST AI — 2 期
@@ -80,7 +83,6 @@
 - [Elizabeth Stone / 伊丽莎白·斯通](https://aipodcast.jasonlin.tech/pp/elizabethstone/): Chief Product and Technology Officer at Netflix — 1 期
 - [Sachin Katti / 萨钦·卡蒂](https://aipodcast.jasonlin.tech/pp/sachinkatti/): Compute Chief, OpenAI · ex-CTO, Intel — 1 期
 - [Andy Beam / 安迪·比姆](https://aipodcast.jasonlin.tech/pp/andybeam/): CTO of Lila Sciences — 1 期
-- [Thariq Shihipar / 塔里克·希希帕尔](https://aipodcast.jasonlin.tech/pp/thariq/): Engineer, Claude Code at Anthropic — 1 期
 - [Jason Yuan / Jason Yuan](https://aipodcast.jasonlin.tech/pp/jasonyuan/): Founder & CEO, Hivemind; ex-New Computer, ex-Apple — 1 期
 - [Chris Pedregal / 克里斯·佩德雷加尔](https://aipodcast.jasonlin.tech/pp/chrispedregal/): Co-founder & CEO of Granola — 1 期
 - [Katelyn Lesse / 凯特琳·莱西](https://aipodcast.jasonlin.tech/pp/katelynlesse/): Head of Platform Product, Anthropic — 1 期
@@ -96,7 +98,6 @@
 - [Akshat Bubna / 阿克沙特·布布纳](https://aipodcast.jasonlin.tech/pp/akshatbubna/): CTO, Modal — 1 期
 - [Lamis Mukta / 拉米斯·穆克塔](https://aipodcast.jasonlin.tech/pp/lamismukta/): Member of Technical Staff, Anthropic — 1 期
 - [Derya Unutmaz / 德里亚·乌纳特马兹](https://aipodcast.jasonlin.tech/pp/derya/): Professor, The Jackson Laboratory; AI × immunology — 1 期
-- [Ramin Hasani / 拉明·哈萨尼](https://aipodcast.jasonlin.tech/pp/hasani/): Co-founder & CEO, Liquid AI; liquid neural networks (ex-MIT) — 1 期
 - [Bryan Catanzaro / 布莱恩·卡坦扎罗](https://aipodcast.jasonlin.tech/pp/catanzaro/): VP Applied Deep Learning Research, NVIDIA — 1 期
 - [Grant Sanderson / 格兰特·桑德森](https://aipodcast.jasonlin.tech/pp/grantsanderson/): Creator of 3Blue1Brown; math educator — 1 期
 - [Sergey Edunov / 谢尔盖·叶杜诺夫](https://aipodcast.jasonlin.tech/pp/edunov/): CTO, Genesis Molecular AI; led Llama 2/3 pretraining at Meta — 1 期
@@ -153,7 +154,6 @@
 - [David Soria Parra / 大卫·索里亚·帕拉](https://aipodcast.jasonlin.tech/pp/davidsp/): Co-creator of MCP, Anthropic — 1 期
 - [Olivier Godement / 奥利维耶·戈德芒](https://aipodcast.jasonlin.tech/pp/godement/): Head of Product, Platform (API) at OpenAI — 1 期
 - [Amanda Askell / 阿曼达·阿斯克尔](https://aipodcast.jasonlin.tech/pp/askell/): Philosopher, Anthropic — 1 期
-- [Dianne Na Penn / 黛安·娜·潘恩](https://aipodcast.jasonlin.tech/pp/diannepenn/): Head of Research Product Management, Anthropic — 1 期
 - [Clément Delangue / 克莱芒·德隆格](https://aipodcast.jasonlin.tech/pp/delangue/): Co-founder & CEO, Hugging Face — 1 期
 - [Steve Ruiz / 史蒂夫·鲁伊斯](https://aipodcast.jasonlin.tech/pp/steveruiz/): Founder & CEO, tldraw — 1 期
 - [Justin Johnson / 贾斯汀·约翰逊](https://aipodcast.jasonlin.tech/pp/justinjohnson/): Co-founder, World Labs — 1 期
@@ -213,6 +213,8 @@
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 1 期
 
 ## 最新访谈 Latest episodes
+- [Nvidia's Start: Learning from Textbooks](https://aipodcast.jasonlin.tech/e/jensen-ycombina-2026/) — Jensen Huang, Y Combinator, 2026-07-26
+- [From Underdog to Leader: Diane Penn on Anthropic's Rise and Product Strategy](https://aipodcast.jasonlin.tech/e/diannepenn-lennyspo-2026/) — Dianne Na Penn, Lenny’s Podcast, 2026-07-26
 - [Sam Altman on AI Revolutionizing Startups](https://aipodcast.jasonlin.tech/e/altman-relentle-2026/) — Sam Altman, Relentless, 2026-07-25
 - [The AI Factory: The Heart of the AI Revolution](https://aipodcast.jasonlin.tech/e/jensen-bg2podwi-2026/) — Jensen Huang, BG2Pod with Bill Gurley & Brad Gerstner, 2026-07-24
 - [Elon Musk, Tariffs, and the Truth Social Trade](https://aipodcast.jasonlin.tech/e/elon-theecono-2026b/) — Elon Musk, The Economist, 2026-07-23
@@ -222,12 +224,15 @@
 - [Factory CEO on Customer Obsession vs Output Metrics and Enterprise AI Strategy](https://aipodcast.jasonlin.tech/e/matangrinberg-sequoiac-2026/) — Matan Grinberg, Sequoia Capital (Training Data), 2026-07-21
 - [The Case for Specialized Intelligence](https://aipodcast.jasonlin.tech/e/linqiao-20vcwith-2026/) — Lin Qiao, 20VC with Harry Stebbings, 2026-07-20
 - [Navigating Role Fluidity in the Age of AI with Netflix's Elizabeth Stone](https://aipodcast.jasonlin.tech/e/elizabethstone-lennyspo-2026/) — Elizabeth Stone, Lenny’s Podcast, 2026-07-19
+- [Designing Loops and Workflows for AI Agents](https://aipodcast.jasonlin.tech/e/thariq-peteryan-2026/) — Thariq Shihipar, Peter Yang, 2026-07-19
+- [Inkling, Liquid AI, and the Push for AI Regulation](https://aipodcast.jasonlin.tech/e/hasani-moonshot-2026/) — Ramin Hasani, Moonshots with Peter Diamandis, 2026-07-17
 - [Designed to Sound Right, Not to Know What's Right](https://aipodcast.jasonlin.tech/e/danklein-theaiwhy-2026/) — Dan Klein, The AI Why with Liam Lawson, 2026-07-16
 - [The Largest Infrastructure Build in History: Inside OpenAI's Compute Strategy](https://aipodcast.jasonlin.tech/e/sachinkatti-themadpo-2026/) — Sachin Katti, The MAD Podcast with Matt Turck, 2026-07-16
 - [The Next Frontier: Scaling AI with Scientific Data](https://aipodcast.jasonlin.tech/e/andybeam-latentsp-2026/) — Andy Beam, Latent Space, 2026-07-16
 - [AI Models Are Smarter Than We Use: Insights on Claude Code](https://aipodcast.jasonlin.tech/e/thariq-southpar-2026/) — Thariq Shihipar, South Park Commons, 2026-07-16
 - [From Dot to Hivemind: A Creative Journey in AI Design](https://aipodcast.jasonlin.tech/e/jasonyuan-diveclub-2026/) — Jason Yuan, Dive Club, 2026-07-15
 - [The Knife Fight of AI Startups: Grainola CEO on Thriving Amid Chaos](https://aipodcast.jasonlin.tech/e/chrispedregal-aii-2026/) — Chris Pedregal, AI & I, 2026-07-15
+- [AI Strategy and Skills: A Decade After the Review](https://aipodcast.jasonlin.tech/e/demis-wcit-2026/) — Demis Hassabis, WCIT, 2026-07-15
 - [Anthropic Platform: From Knowledge to Execution to Coordination](https://aipodcast.jasonlin.tech/e/katelynlesse-sequoiac-2026/) — Katelyn Lesse, Sequoia Capital (Training Data), 2026-07-14
 - [Sovereign AI: Building the UK's First LLM on a Startup Budget](https://aipodcast.jasonlin.tech/e/pullen-machinel-2026/) — Alistair Pullen, Machine Learning Street Talk, 2026-07-13
 - [AI's Existential Threat and the Race for Superintelligence](https://aipodcast.jasonlin.tech/e/kokotajlo-thediary-2026/) — Daniel Kokotajlo, The Diary Of A CEO, 2026-07-13
@@ -248,11 +253,6 @@
 - [The Architect Who Feared His Creation: Ilya Sutskever's AI Journey](https://aipodcast.jasonlin.tech/e/ilya-visionec-2026/) — Ilya Sutskever, Vision Economy, 2026-07-05
 - [Liquid AI: Squeezing Maximum Intelligence from Limited Compute](https://aipodcast.jasonlin.tech/e/hasani-thecogni-2026/) — Ramin Hasani, The Cognitive Revolution, 2026-07-04
 - [AI Scaling Laws and the Future of Intelligence](https://aipodcast.jasonlin.tech/e/naval-naval-2026b/) — Naval Ravikant, Naval, 2026-07-03
-- [AI as the New Interface: Global Tech Leadership and National Power](https://aipodcast.jasonlin.tech/e/andreessen-thea16zp-2026b/) — Marc Andreessen, The a16z Podcast, 2026-07-03
-- [Claude Tag: Proactive AI That Remembers and Acts Autonomously](https://aipodcast.jasonlin.tech/e/boris-claude-2026/) — Boris Cherny, Claude, 2026-07-02
-- [Elon Musk on Fatherhood, AI, and Minimalism](https://aipodcast.jasonlin.tech/e/elon-seancste-2026/) — Elon Musk, Sean C. Stephens, 2026-07-02
-- [AI Optimism vs Doom: Marc Andreessen on America's Future](https://aipodcast.jasonlin.tech/e/andreessen-newyorkp-2026/) — Marc Andreessen, New York Post, 2026-07-02
-- [Open Source AI: Efficiency, Innovation, and the External Brain](https://aipodcast.jasonlin.tech/e/catanzaro-themadpo-2026/) — Bryan Catanzaro, The MAD Podcast with Matt Turck, 2026-07-02
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
