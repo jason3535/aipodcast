@@ -6,13 +6,20 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sat, 25 Jul 2026 14:02:39 -0000</lastBuildDate>
+  <lastBuildDate>Mon, 27 Jul 2026 08:40:02 -0000</lastBuildDate>
   <item>
-    <title>AI模型比我们使用的更智能：Claude Code的洞见 — South Park Commons</title>
+    <title>Sam Altman 谈 AI 如何革新创业环境 — Relentless</title>
+    <link>https://aipodcast.jasonlin.tech/e/altman-relentle-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/altman-relentle-2026/</guid>
+    <pubDate>Mon, 27 Jul 2026 08:40:02 -0000</pubDate>
+    <description>Sam Altman 讨论了过去十年 AI 和指数增长如何改变创业动态，强调拥抱混乱并为未来能力做规划的重要性。</description>
+  </item>
+  <item>
+    <title>AI 模型比我们使用的更智能：Claude Code 的洞见 — South Park Commons</title>
     <link>https://aipodcast.jasonlin.tech/e/thariq-southpar-2026/</link>
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/thariq-southpar-2026/</guid>
     <pubDate>Sat, 25 Jul 2026 14:02:39 -0000</pubDate>
-    <description>一位Anthropic团队成员讨论AI智能体比当前使用更智能，分享构建Claude Code功能（如询问用户）的经验，并反思模型改进。</description>
+    <description>一位 Anthropic 团队成员讨论 AI 智能体比当前使用更智能，分享构建 Claude Code 功能（如询问用户）的经验，并反思模型改进。</description>
   </item>
   <item>
     <title>AI 工厂：AI 革命的核心 — BG2Pod</title>
@@ -209,13 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/dylanfield-lennyspo-2025/</guid>
     <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
     <description>Figma CEO Dylan Field 分享创业想法、设计差异化的重要性以及 AI 如何改变产品构建的经验。</description>
-  </item>
-  <item>
-    <title>设计神经接口：从 Apple Watch 到脑机交互 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/e/roozmahdavian-diveclub-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/roozmahdavian-diveclub-2025/</guid>
-    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
-    <description>Neuralink 设计工程师 Ruse Madavian 分享他从设计 Apple Watch Siri 表盘到构建脑机接口的历程，探讨前沿界面如何需要从第一性原理重新思考交互。</description>
   </item>
 </channel>
 </rss>
