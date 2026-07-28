@@ -6,7 +6,42 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Mon, 27 Jul 2026 08:40:02 -0000</lastBuildDate>
+  <lastBuildDate>Mon, 27 Jul 2026 16:16:03 -0000</lastBuildDate>
+  <item>
+    <title>英伟达起步：从教科书学习 — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/e/jensen-ycombina-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/jensen-ycombina-2026/</guid>
+    <pubDate>Mon, 27 Jul 2026 16:16:03 -0000</pubDate>
+    <description>黄仁勋分享英伟达如何从错误技术起步，通过教科书学习重新发明 3D 图形。</description>
+  </item>
+  <item>
+    <title>从逆袭到领先：Anthropic 产品主管 Diane Penn 谈崛起与产品战略 — Lenny 播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/diannepenn-lennyspo-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/diannepenn-lennyspo-2026/</guid>
+    <pubDate>Mon, 27 Jul 2026 16:16:03 -0000</pubDate>
+    <description>Anthropic 研究实验室产品主管分享公司早期挣扎、Opus 3 与 Claude Code 的突破，以及 AI 时代产品管理角色的演变。</description>
+  </item>
+  <item>
+    <title>为 AI 代理设计循环和工作流 — Peter Yang</title>
+    <link>https://aipodcast.jasonlin.tech/e/thariq-peteryan-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/thariq-peteryan-2026/</guid>
+    <pubDate>Mon, 27 Jul 2026 16:16:03 -0000</pubDate>
+    <description>来自 cloud code 团队的 Tharic 解释了如何使用 /loop、/goal 和工作流让 Claude 长时间自主运行，并演示了视频编辑。</description>
+  </item>
+  <item>
+    <title>Inkling、Liquid AI 与 AI 监管呼声 — Moonshots</title>
+    <link>https://aipodcast.jasonlin.tech/e/hasani-moonshot-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/hasani-moonshot-2026/</guid>
+    <pubDate>Mon, 27 Jul 2026 16:16:03 -0000</pubDate>
+    <description>米拉·穆拉蒂推出可定制 AI 模型 Inkling，Liquid AI CEO 探讨小语言模型，行业热议监管。</description>
+  </item>
+  <item>
+    <title>AI 战略与技能：十年回顾 — WCIT</title>
+    <link>https://aipodcast.jasonlin.tech/e/demis-wcit-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/demis-wcit-2026/</guid>
+    <pubDate>Mon, 27 Jul 2026 16:16:03 -0000</pubDate>
+    <description>Wendy Hall 和 Demis Hassabis 讨论了英国的 AI 国家战略和技能挑战，指出英国曾是先锋，但已被新加坡等国超越。</description>
+  </item>
   <item>
     <title>Sam Altman 谈 AI 如何革新创业环境 — Relentless</title>
     <link>https://aipodcast.jasonlin.tech/e/altman-relentle-2026/</link>
@@ -27,13 +62,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/jensen-bg2podwi-2026/</guid>
     <pubDate>Sat, 25 Jul 2026 04:00:06 -0000</pubDate>
     <description>黄仁勋解析 AI 工厂如何推动人类史上最大规模的基础设施建设，以及为何它们是企业未来十年的最佳投资。</description>
-  </item>
-  <item>
-    <title>马斯克、关税与 Truth Social 交易 — 经济学人</title>
-    <link>https://aipodcast.jasonlin.tech/e/elon-theecono-2026b/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/elon-theecono-2026b/</guid>
-    <pubDate>Sat, 25 Jul 2026 04:00:06 -0000</pubDate>
-    <description>CNBC 的 Squawk Pod 节目涵盖马斯克的广泛专访、Lina Khan 在纽约市的新职位、特朗普的最新关税，以及华尔街竞相获取其 Truth Social 帖子的动态。</description>
   </item>
   <item>
     <title>Alphabet 2026 年第二季度财报：AI 推动营收增长 24% — Alphabet Q2 2026 财报电话会议</title>
@@ -188,34 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/katiedill-diveclub-2026/</guid>
     <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
     <description>Stripe 设计主管 Katie Dill 探讨设计在 Stripe 的演变，从全新 Stripe.com 的设计决策到他们寻找设计师的特质。</description>
-  </item>
-  <item>
-    <title>Perplexity 的设计文化：通过品牌故事吸引顶尖人才 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/e/henrymodisett-diveclub-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/henrymodisett-diveclub-2026/</guid>
-    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
-    <description>Perplexity 设计副总裁 Henry Modiset 探讨了他们的设计文化和品牌叙事如何吸引顶尖人才，以及从初创公司发展为广泛使用的应用所面临的挑战。</description>
-  </item>
-  <item>
-    <title>如何在 Lovable 获得设计师职位 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/e/nadchishtie-diveclub-2025b/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/nadchishtie-diveclub-2025b/</guid>
-    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
-    <description>Lovable 设计主管分享招聘见解：寻找能端到端推进工作、用 AI 填补空白、在众多候选人中脱颖而出的通才设计师。</description>
-  </item>
-  <item>
-    <title>LLM 与可塑软件的未来 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/e/geoffreylitt-diveclub-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/geoffreylitt-diveclub-2025/</guid>
-    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
-    <description>设计工程师 Jeffrey Lit 探讨 LLM 如何推动数字产品设计向个性化、用户可控的软件转变，超越传统 SaaS 模式。</description>
-  </item>
-  <item>
-    <title>Dylan Field 谈 Figma 的历程、设计差异化与 AI 在产品构建中的作用 — Lenny 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/dylanfield-lennyspo-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/dylanfield-lennyspo-2025/</guid>
-    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
-    <description>Figma CEO Dylan Field 分享创业想法、设计差异化的重要性以及 AI 如何改变产品构建的经验。</description>
   </item>
 </channel>
 </rss>
