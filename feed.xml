@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Mon, 27 Jul 2026 16:16:03 -0000</lastBuildDate>
+  <lastBuildDate>Tue, 28 Jul 2026 14:44:29 -0000</lastBuildDate>
+  <item>
+    <title>埃隆·马斯克预测AI将在2030年代超越人类智能，带来丰裕时代 — 经济学人</title>
+    <link>https://aipodcast.jasonlin.tech/e/elon-theecono-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/elon-theecono-2026/</guid>
+    <pubDate>Tue, 28 Jul 2026 14:44:29 -0000</pubDate>
+    <description>在2026年的采访中，埃隆·马斯克展望2036年：AI远超人类智能、人形机器人，以及由于商品和服务充裕而金钱不再重要的世界。</description>
+  </item>
   <item>
     <title>英伟达起步：从教科书学习 — Y Combinator</title>
     <link>https://aipodcast.jasonlin.tech/e/jensen-ycombina-2026/</link>
@@ -209,13 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/marvinschwaibold-diveclub-2026/</guid>
     <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
     <description>Marvin Schwiebold 分享他从平面设计到科技的旅程，包括在 Squarespace 的工作以及 Molly Studio 被 Shopify 收购的经历，探讨创造力、AI 工具和设计差异化。</description>
-  </item>
-  <item>
-    <title>Stripe 的设计实践：与设计主管 Katie Dill 的深度对话 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/e/katiedill-diveclub-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/katiedill-diveclub-2026/</guid>
-    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
-    <description>Stripe 设计主管 Katie Dill 探讨设计在 Stripe 的演变，从全新 Stripe.com 的设计决策到他们寻找设计师的特质。</description>
   </item>
 </channel>
 </rss>
