@@ -6,13 +6,62 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Tue, 28 Jul 2026 14:44:29 -0000</lastBuildDate>
+  <lastBuildDate>Wed, 29 Jul 2026 15:17:01 -0000</lastBuildDate>
   <item>
-    <title>埃隆·马斯克预测AI将在2030年代超越人类智能，带来丰裕时代 — 经济学人</title>
+    <title>从经验中学习：超越强化学习与 Transformer — Training Data</title>
+    <link>https://aipodcast.jasonlin.tech/e/tworek-training-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/tworek-training-2026/</guid>
+    <pubDate>Wed, 29 Jul 2026 15:17:01 -0000</pubDate>
+    <description>Jerry 和 Rohan 讨论如何从经验中学习不仅限于强化学习，以及当前 Transformer 架构为何可能成为 AI 进展的瓶颈。</description>
+  </item>
+  <item>
+    <title>构建空间智能：World Labs 与 Scenix 合并 — a16z 播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/feifei-thea16zp-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/feifei-thea16zp-2026/</guid>
+    <pubDate>Wed, 29 Jul 2026 15:17:01 -0000</pubDate>
+    <description>李飞飞与 Yinuo 讨论空间智能的愿景以及用于训练机器人的现实到模拟再到现实的管道。</description>
+  </item>
+  <item>
+    <title>Sam Altman 谈 AI 的潜力与专注 — Invest Like The Best</title>
+    <link>https://aipodcast.jasonlin.tech/e/altman-investli-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/altman-investli-2026/</guid>
+    <pubDate>Wed, 29 Jul 2026 15:17:01 -0000</pubDate>
+    <description>Sam Altman 讨论 AI 作为人类历史上最伟大的技术成就，专注的重要性，以及避免权力集中的必要性。</description>
+  </item>
+  <item>
+    <title>山姆·奥特曼谈 YC 早期岁月与创业公司的未来 — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/e/altman-ycombina-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/altman-ycombina-2026/</guid>
+    <pubDate>Wed, 29 Jul 2026 15:17:01 -0000</pubDate>
+    <description>山姆·奥特曼回顾 Y Combinator 的初创时期，并分享了他对 AGI 时代创业公司未来的展望。</description>
+  </item>
+  <item>
+    <title>抓住 AI 机遇：行动胜于确定 — Evan Carmichael</title>
+    <link>https://aipodcast.jasonlin.tech/e/mengto-evancarm-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/mengto-evancarm-2026/</guid>
+    <pubDate>Wed, 29 Jul 2026 15:17:01 -0000</pubDate>
+    <description>大多数人因追求确定性而错失人生最大的机会。在 AI 时代，一个人一台笔记本电脑就能超越整个公司的收入。立即开始，而非等待感觉准备好。</description>
+  </item>
+  <item>
+    <title>Opus 5：持续运转与提示注入免疫的突破 — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/e/boris-ycombina-2026b/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/boris-ycombina-2026b/</guid>
+    <pubDate>Wed, 29 Jul 2026 15:17:01 -0000</pubDate>
+    <description>Opus 5 可连续运行数周且不受提示注入攻击，促使 Claude Code 的系统提示被删减 80%。</description>
+  </item>
+  <item>
+    <title>外包智能但不能外包理解：Logan Kilpatrick 谈 AI 速度与保持理智 — 1st10 Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/e/logankilpatrick-1st10pod-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/logankilpatrick-1st10pod-2026/</guid>
+    <pubDate>Wed, 29 Jul 2026 15:17:01 -0000</pubDate>
+    <description>前 OpenAI 开发者关系负责人 Logan Kilpatrick 分享对 AI 速度的见解、理解的重要性，以及园艺如何让他保持理智。</description>
+  </item>
+  <item>
+    <title>埃隆·马斯克预测 AI 将在 2030 年代超越人类智能，带来丰裕时代 — 经济学人</title>
     <link>https://aipodcast.jasonlin.tech/e/elon-theecono-2026/</link>
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/elon-theecono-2026/</guid>
     <pubDate>Tue, 28 Jul 2026 14:44:29 -0000</pubDate>
-    <description>在2026年的采访中，埃隆·马斯克展望2036年：AI远超人类智能、人形机器人，以及由于商品和服务充裕而金钱不再重要的世界。</description>
+    <description>在 2026 年的采访中，埃隆·马斯克展望 2036 年：AI 远超人类智能、人形机器人，以及由于商品和服务充裕而金钱不再重要的世界。</description>
   </item>
   <item>
     <title>英伟达起步：从教科书学习 — Y Combinator</title>
@@ -167,55 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/joshpuckett-diveclub-2026/</guid>
     <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
     <description>Josh Puckett 分享如何通过设计中的非凡关怀（如可定制的图书馆卡入门体验）建立信任和感知价值，以及 AI 如何帮助为用户多走一步。</description>
-  </item>
-  <item>
-    <title>高质量、高速度：产品开发的新梦想 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/e/cameronworboys-diveclub-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/cameronworboys-diveclub-2026/</guid>
-    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
-    <description>Cash App 产品设计主管 Cam Warboys 探讨 AI 工具如何实现快速、高质量的产品开发，无需权衡取舍，强调精益团队和快速实验。</description>
-  </item>
-  <item>
-    <title>新晋设计工程师如何利用 AI 策略提升自己 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/e/karlkoch-diveclub-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/karlkoch-diveclub-2026/</guid>
-    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
-    <description>一位设计工程师分享了充分利用 AI 的具体策略，包括避免过度使用 useEffect 等常见陷阱，并强调了创造力和工艺的重要性。</description>
-  </item>
-  <item>
-    <title>与 Emily Campbell 一起设计出色的 AI 体验 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/e/emilycampbell-diveclub-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/emilycampbell-diveclub-2025/</guid>
-    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
-    <description>HackerRank 设计副总裁 Emily Campbell 分享了一个设计 AI 交互的框架，从设计师在循环中转变为人类在循环中。</description>
-  </item>
-  <item>
-    <title>专用智能的案例 — 20VC 创投播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/linqiao-20vcwith-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/linqiao-20vcwith-2026/</guid>
-    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
-    <description>Fireworks 创始人 Lynn Quo 认为，AI 的未来在于基于专有数据的专用私有智能，而非仅仅通用模型。</description>
-  </item>
-  <item>
-    <title>AI 创业的刀锋之战：Grainola CEO 谈在混乱中蓬勃发展 — AI &amp; I</title>
-    <link>https://aipodcast.jasonlin.tech/e/chrispedregal-aii-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/chrispedregal-aii-2026/</guid>
-    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
-    <description>Grainola CEO Chris 讨论了经营一家成功的 AI 初创公司所面临的持续挑战，将其比作一场刀锋之战，生存是常态，并分享了对快速变化的 AI 领域中竞争与创新的见解。</description>
-  </item>
-  <item>
-    <title>AI 垃圾与设计工具的进化 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/e/mengto-diveclub-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/mengto-diveclub-2026/</guid>
-    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
-    <description>Mang 讨论了追逐潮流如何导致 AI 垃圾，并分享了他从 Cursor 转向 Codeex 来构建应用和设计的经历，强调需要领先于基准线。</description>
-  </item>
-  <item>
-    <title>从平面设计到科技：Marvin Schwiebold 的 Shopify 之旅 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/e/marvinschwaibold-diveclub-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/marvinschwaibold-diveclub-2026/</guid>
-    <pubDate>Tue, 21 Jul 2026 08:52:52 -0000</pubDate>
-    <description>Marvin Schwiebold 分享他从平面设计到科技的旅程，包括在 Squarespace 的工作以及 Molly Studio 被 Shopify 收购的经历，探讨创造力、AI 工具和设计差异化。</description>
   </item>
 </channel>
 </rss>
