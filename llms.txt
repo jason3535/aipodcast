@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 206 位人物 / 466 期访谈
+规模: 207 位人物 / 467 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -78,6 +78,7 @@
 - [Nando de Freitas / 南多·德弗雷塔斯](https://aipodcast.jasonlin.tech/pp/nando/): VP & Distinguished Scientist, Microsoft AI (prev. DeepMind) — 2 期
 - [Henry Modisett / 亨利·莫迪塞特](https://aipodcast.jasonlin.tech/pp/henrymodisett/): VP of Design, Perplexity — 2 期
 - [Nad Chishtie / 纳德·奇什蒂](https://aipodcast.jasonlin.tech/pp/nadchishtie/): Founding Designer & Head of Design, Lovable — 2 期
+- [Tim Cook / 蒂姆·库克](https://aipodcast.jasonlin.tech/pp/timcook/): CEO, Apple — 1 期
 - [Charlie Deets / 查理·迪茨](https://aipodcast.jasonlin.tech/pp/charliedeets/): Designer — Safari, Arc, Dia browsers — 1 期
 - [Sundar Pichai / 桑达尔·皮查伊](https://aipodcast.jasonlin.tech/pp/sundarpichai/): CEO, Google & Alphabet — 1 期
 - [Pablo Stanley / 巴勃罗·斯坦利](https://aipodcast.jasonlin.tech/pp/pablostanley/): Designer & Founder of Blush and Lummi — 1 期
@@ -215,6 +216,7 @@
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 1 期
 
 ## 最新访谈 Latest episodes
+- [Tim Cook's Final Apple Earnings Call: Record June Quarter Revenue of $109.4B](https://aipodcast.jasonlin.tech/e/timcook-appleq3-2026/) — Tim Cook, Apple Q3 2026 Earnings Call, 2026-07-30
 - [Elon Musk Predicts AI Will Surpass Human Intelligence by 2030s, Leading to an Age of Abundance](https://aipodcast.jasonlin.tech/e/elon-theecono-2026/) — Elon Musk, The Economist, 2026-07-29
 - [Learning from Experience: Beyond Reinforcement Learning and Transformers](https://aipodcast.jasonlin.tech/e/tworek-training-2026/) — Jerry Tworek, Training Data, 2026-07-29
 - [From Invisible to Crafted: Designing Browsers at Apple and The Browser Company](https://aipodcast.jasonlin.tech/e/charliedeets-diveclub-2026/) — Charlie Deets, Dive Club, 2026-07-29
@@ -254,7 +256,6 @@
 - [Human-Aligned AI: Collective Intelligence and the Future of Work](https://aipodcast.jasonlin.tech/e/perszyk-latentsp-2026/) — Danielle Perszyk, Latent Space, 2026-07-11
 - [Peering Inside the Black Box of AI](https://aipodcast.jasonlin.tech/e/neelnanda-googlede-2026/) — Neel Nanda, Google DeepMind, 2026-07-10
 - [AGI and Physical AI: A Conversation with AI Pioneer Jurgen Schmidhuber](https://aipodcast.jasonlin.tech/e/schmidhuber-unsuperv-2026/) — Jürgen Schmidhuber, Unsupervised Learning, 2026-07-09
-- [From Forum Poster to AI Infrastructure Analyst: The Story of Semi Analysis](https://aipodcast.jasonlin.tech/e/dylanpatel-wisdomtr-2026/) — Dylan Patel, WisdomTree in Europe, 2026-07-09
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-07-30</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-07-31</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/timcook/</loc><lastmod>2026-07-31</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/elon/</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/tworek/</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/charliedeets/</loc><lastmod>2026-07-30</lastmod></url>
@@ -207,6 +208,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/albertgu/</loc><lastmod>2026-06-27</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/pathak/</loc><lastmod>2026-06-27</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/abbeel/</loc><lastmod>2026-06-17</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/timcook-appleq3-2026/</loc><lastmod>2026-07-31</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/elon-theecono-2026/</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/tworek-training-2026/</loc><lastmod>2026-07-29</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/charliedeets-diveclub-2026/</loc><lastmod>2026-07-30</lastmod></url>
