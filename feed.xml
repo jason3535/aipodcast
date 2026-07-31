@@ -6,7 +6,21 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Wed, 29 Jul 2026 15:17:01 -0000</lastBuildDate>
+  <lastBuildDate>Thu, 30 Jul 2026 03:13:52 -0000</lastBuildDate>
+  <item>
+    <title>从隐形到匠心：在苹果与浏览器公司设计浏览器的思考 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/charliedeets-diveclub-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/charliedeets-diveclub-2026/</guid>
+    <pubDate>Thu, 30 Jul 2026 03:13:52 -0000</pubDate>
+    <description>前苹果 Safari 设计师 Charlie Deets 揭示设计无处不在的隐形浏览器与打造个性化体验的差异，并分享包括拥抱冲动在内的设计原则。</description>
+  </item>
+  <item>
+    <title>科技从业者心态调查：职业倦怠加剧，AI 引发担忧导致乐观情绪下降 — Lenny 播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/noamsegal-lennyspo-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/noamsegal-lennyspo-2026/</guid>
+    <pubDate>Thu, 30 Jul 2026 03:13:52 -0000</pubDate>
+    <description>Lenny 与 Noam 讨论最大规模科技从业者心态调查结果，揭示职业倦怠加剧、乐观情绪下降，AI 使得员工被期望以同等薪酬完成更多工作。</description>
+  </item>
   <item>
     <title>从经验中学习：超越强化学习与 Transformer — Training Data</title>
     <link>https://aipodcast.jasonlin.tech/e/tworek-training-2026/</link>
@@ -202,20 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/brandonjacoby-diveclub-2026/</guid>
     <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
     <description>布兰登·雅各比分享关于品味、AI 创造力以及 X 的决断文化的见解，他正启动自己的实践，帮助创始人超越“足够好”。</description>
-  </item>
-  <item>
-    <title>从梦想到现实：一位 AI 原生设计师的旅程 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/e/krispuckett-diveclub-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/krispuckett-diveclub-2026/</guid>
-    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
-    <description>Stripe 设计负责人 Chris Pucket 分享他如何利用 AI 工具构建自己的第一个 iOS 应用，实现了 20 年的梦想，并探讨了好奇心和灵魂在设计中的重要性。</description>
-  </item>
-  <item>
-    <title>界面设计中的非凡关怀：打造病毒式入门体验 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/e/joshpuckett-diveclub-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/joshpuckett-diveclub-2026/</guid>
-    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
-    <description>Josh Puckett 分享如何通过设计中的非凡关怀（如可定制的图书馆卡入门体验）建立信任和感知价值，以及 AI 如何帮助为用户多走一步。</description>
   </item>
 </channel>
 </rss>
