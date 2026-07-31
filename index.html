@@ -808,27 +808,17 @@
 
 <div id="app">
 <!-- 静态骨架：主脚本下载完成前先呈现(render() 会整体覆盖)。分两版:命中 #/episode/ 时显示详情页骨架,避免闪现无关的首页文案 -->
-<script>if((location.hash||'').indexOf('/episode/')>=0)document.write(`
-<div class="wrap" style="padding:28px 20px 40px;max-width:760px;margin:0 auto">
+<script>document.write(`
+<div class="wrap" style="padding:${(location.hash||'').indexOf('/episode/')>=0?'28px 20px 40px':'64px 24px 40px'};max-width:760px;margin:0 auto">
   <div class="sk-line" style="width:120px;height:12px;margin-bottom:22px"></div>
-  <div class="sk-line" style="width:88%;height:27px;margin-bottom:10px"></div>
-  <div class="sk-line" style="width:60%;height:27px;margin-bottom:16px"></div>
-  <div class="sk-line" style="width:45%;height:14px;margin-bottom:30px"></div>
+  <div class="sk-line" style="width:82%;height:26px;margin-bottom:10px"></div>
+  <div class="sk-line" style="width:56%;height:26px;margin-bottom:16px"></div>
+  <div class="sk-line" style="width:42%;height:14px;margin-bottom:30px"></div>
   <div class="sk-line" style="width:100%;height:15px;margin-bottom:9px"></div>
   <div class="sk-line" style="width:96%;height:15px;margin-bottom:9px"></div>
   <div class="sk-line" style="width:70%;height:15px;margin-bottom:9px"></div>
 </div>
-<style>.sk-line{border-radius:8px;background:linear-gradient(100deg,#ececf0 40%,#f7f7fa 50%,#ececf0 60%);background-size:200% 100%;animation:skp 1.2s infinite linear}@keyframes skp{to{background-position:-200% 0}}</style>`);
-else document.write(`
-<div class="wrap" style="padding:72px 24px 40px;text-align:center">
-  <div style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#0071e3;margin-bottom:14px">AI Podcast · 双语全文</div>
-  <h1 style="font-size:clamp(26px,4.5vw,40px);letter-spacing:-.02em;line-height:1.2;margin:0 0 14px">海外一线最新 AI 人物播客<br>中英对照全文阅读</h1>
-  <p style="color:#6e6e73;font-size:15.5px;line-height:1.7;max-width:560px;margin:0 auto 34px">Karpathy、Dario、Demis、Hinton…… 把英文长播客变成可精读的双语全文：章节速览 · 核心观点 · 划词朗读 · AI 问答</p>
-  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-    <span class="sk-card"></span><span class="sk-card"></span><span class="sk-card"></span>
-  </div>
-  <style>.sk-card{width:220px;height:140px;border-radius:16px;background:linear-gradient(100deg,#ececf0 40%,#f7f7fa 50%,#ececf0 60%);background-size:200% 100%;animation:skp 1.2s infinite linear}@keyframes skp{to{background-position:-200% 0}}@media(max-width:640px){.sk-card:nth-child(3){display:none}}</style>
-</div>`);</script>
+<style>.sk-line{border-radius:8px;background:linear-gradient(100deg,#ececf0 40%,#f7f7fa 50%,#ececf0 60%);background-size:200% 100%;animation:skp 1.2s infinite linear}@keyframes skp{to{background-position:-200% 0}}</style>`);</script>
 </div>
 
 <script src="app.js?v=f2081a3187" defer></script>
