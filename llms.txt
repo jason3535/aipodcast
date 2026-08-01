@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 207 位人物 / 467 期访谈
+规模: 225 位人物 / 485 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -79,8 +79,14 @@
 - [Henry Modisett / 亨利·莫迪塞特](https://aipodcast.jasonlin.tech/pp/henrymodisett/): VP of Design, Perplexity — 2 期
 - [Nad Chishtie / 纳德·奇什蒂](https://aipodcast.jasonlin.tech/pp/nadchishtie/): Founding Designer & Head of Design, Lovable — 2 期
 - [Tim Cook / 蒂姆·库克](https://aipodcast.jasonlin.tech/pp/timcook/): CEO, Apple — 1 期
+- [Adam Gleave / 亚当·格利夫](https://aipodcast.jasonlin.tech/pp/adamgleave/): Founder & CEO, FAR.AI — 1 期
 - [Charlie Deets / 查理·迪茨](https://aipodcast.jasonlin.tech/pp/charliedeets/): Designer — Safari, Arc, Dia browsers — 1 期
+- [Akshay Nathan / 阿克谢·内森](https://aipodcast.jasonlin.tech/pp/akshaynathan/): OpenAI Product Lead, ChatGPT — 1 期
+- [Kareem Amin / 卡里姆·阿明](https://aipodcast.jasonlin.tech/pp/kareemamin/): Co-founder and CEO of Clay — 1 期
+- [Andy Fang / 安迪·方](https://aipodcast.jasonlin.tech/pp/andyfang/): Co-founder and CTO of DoorDash — 1 期
 - [Sundar Pichai / 桑达尔·皮查伊](https://aipodcast.jasonlin.tech/pp/sundarpichai/): CEO, Google & Alphabet — 1 期
+- [Eiso Kant / 艾索·康德](https://aipodcast.jasonlin.tech/pp/eisokant/): Co-founder and CEO of Poolside AI — 1 期
+- [Travis Kalanick / 特拉维斯·卡兰尼克](https://aipodcast.jasonlin.tech/pp/traviskalanick/): Founder of Uber, CEO of CloudKitchens — 1 期
 - [Pablo Stanley / 巴勃罗·斯坦利](https://aipodcast.jasonlin.tech/pp/pablostanley/): Designer & Founder of Blush and Lummi — 1 期
 - [Matan Grinberg / 马坦·格林伯格](https://aipodcast.jasonlin.tech/pp/matangrinberg/): Co-founder & CEO of Factory — 1 期
 - [Lin Qiao / 乔琳](https://aipodcast.jasonlin.tech/pp/linqiao/): Co-founder & CEO, Fireworks AI — 1 期
@@ -110,7 +116,9 @@
 - [Loredana Crisan / 洛雷达娜·克里桑](https://aipodcast.jasonlin.tech/pp/loredanacrisan/): Chief Design Officer, Figma — 1 期
 - [Dean Ball / 迪恩·鲍尔](https://aipodcast.jasonlin.tech/pp/deanball/): Head of Strategic Futures, OpenAI — 1 期
 - [Tejal Patwardhan / 泰贾尔·帕特瓦尔丹](https://aipodcast.jasonlin.tech/pp/tejal/): Frontier Evals Lead, OpenAI — 1 期
+- [Brett Williams / 布雷特·威廉姆斯](https://aipodcast.jasonlin.tech/pp/brettwilliams/): Visual Designer & Founder — 1 期
 - [Matt White / 马特·怀特](https://aipodcast.jasonlin.tech/pp/mattwhite/): AI CTO, Linux Foundation; ED, PyTorch Foundation — 1 期
+- [Ron Goldin / 罗恩·戈尔丁](https://aipodcast.jasonlin.tech/pp/rongoldin/): VP Design Leader — 1 期
 - [Alexander Wei / 亚历山大·魏](https://aipodcast.jasonlin.tech/pp/alexwei/): Research, OpenAI — 1 期
 - [Ali Behrouz / 阿里·贝赫鲁兹](https://aipodcast.jasonlin.tech/pp/alibehrouz/): Researcher, Google; PhD student, Cornell (continual learning) — 1 期
 - [Rohin Shah / 罗欣·沙阿](https://aipodcast.jasonlin.tech/pp/rohinshah/): Head of AGI Safety & Alignment, Google DeepMind — 1 期
@@ -121,14 +129,18 @@
 - [Dan Shipper / 丹·希珀](https://aipodcast.jasonlin.tech/pp/danshipper/): Co-founder & CEO, Every — 1 期
 - [Jure Leskovec / 尤雷·莱斯科韦茨](https://aipodcast.jasonlin.tech/pp/jureleskovec/): Professor of Computer Science at Stanford University; Co-founder & Chief Scientist at Kumo.ai — 1 期
 - [Michael I. Jordan / 迈克尔·乔丹](https://aipodcast.jasonlin.tech/pp/mjordan/): Professor, UC Berkeley; foundations of machine learning — 1 期
+- [Tommy Geoco / 汤米·吉奥科](https://aipodcast.jasonlin.tech/pp/tommygeoco/): Design Educator & Commentator — 1 期
 - [Caitlin Kalinowski / 凯特琳·卡利诺夫斯基](https://aipodcast.jasonlin.tech/pp/caitlin/): Head of Robotics & Hardware, OpenAI — 1 期
 - [Eric Jang / 埃里克·张](https://aipodcast.jasonlin.tech/pp/ericjang/): VP of AI, 1X; ex-Google Brain (robotics, RL) — 1 期
 - [Katarina Batina / 卡塔琳娜·巴蒂娜](https://aipodcast.jasonlin.tech/pp/katarinabatina/): Design Director, Shopify — 1 期
 - [Angela Jiang / 安杰拉·姜](https://aipodcast.jasonlin.tech/pp/angelajiang/): Head of Product, Claude Platform, Anthropic — 1 期
+- [Rafa Conde / 拉法·孔德](https://aipodcast.jasonlin.tech/pp/rafaconde/): Product Designer & Visual Design Specialist — 1 期
 - [Beth Barnes / 贝丝·巴恩斯](https://aipodcast.jasonlin.tech/pp/bethbarnes/): Founder & CEO, METR — 1 期
+- [Polly D'Arcy / 波莉·达西](https://aipodcast.jasonlin.tech/pp/pollydarcy/): VP of Design, Wealthsimple — 1 期
 - [Cat Wu / 凯特·吴](https://aipodcast.jasonlin.tech/pp/catwu/): Product, Claude Code · Anthropic — 1 期
 - [Brandon Jacoby / 布兰登·雅各比](https://aipodcast.jasonlin.tech/pp/brandonjacoby/): Designer — 1 期
 - [Aidan Gomez / 艾丹·戈麦斯](https://aipodcast.jasonlin.tech/pp/gomez/): Co-founder & CEO, Cohere — 1 期
+- [Brian Lovin / 布莱恩·洛文](https://aipodcast.jasonlin.tech/pp/brianlovin/): Designer & Founder, Campsite — 1 期
 - [Ian Silber / 伊恩·西尔伯](https://aipodcast.jasonlin.tech/pp/iansilber/): Head of Product Design, OpenAI — 1 期
 - [Amol Avasare / 阿莫尔·阿瓦萨雷](https://aipodcast.jasonlin.tech/pp/amolavasare/): Head of Growth at Anthropic — 1 期
 - [Liam Fedus / 利亚姆·费杜斯](https://aipodcast.jasonlin.tech/pp/fedus/): Co-founder, Periodic Labs (ex-OpenAI) — 1 期
@@ -137,17 +149,23 @@
 - [Sergey Levine / 谢尔盖·莱文](https://aipodcast.jasonlin.tech/pp/slevine/): Professor, UC Berkeley; co-founder, Physical Intelligence — 1 期
 - [Claire Vo / 克莱尔·沃](https://aipodcast.jasonlin.tech/pp/clairevo/): Founder & CEO of ChatPRD; host of the "How I AI" podcast — 1 期
 - [Stefano Ermon / 斯特凡诺·埃尔蒙](https://aipodcast.jasonlin.tech/pp/ermon/): Associate Professor of Computer Science, Stanford University; Co-founder & CEO of Inception Labs — 1 期
+- [Flora Guo / 弗洛拉·郭](https://aipodcast.jasonlin.tech/pp/floraguo/): AI-Native Product Designer — 1 期
 - [Kris Puckett / 克里斯·帕克特](https://aipodcast.jasonlin.tech/pp/krispuckett/): Design Manager, Stripe — 1 期
 - [Karol Hausman / 卡罗尔·豪斯曼](https://aipodcast.jasonlin.tech/pp/hausman/): Co-founder & CEO, Physical Intelligence — 1 期
 - [Nick Turley / 尼克·特利](https://aipodcast.jasonlin.tech/pp/turley/): Head of ChatGPT (VP of Product), OpenAI — 1 期
 - [Robert Lange / 罗伯特·兰格](https://aipodcast.jasonlin.tech/pp/robertlange/): Founding Researcher, Sakana AI — 1 期
 - [Josh Puckett / 乔什·帕克特](https://aipodcast.jasonlin.tech/pp/joshpuckett/): Creator of Interface Craft — 1 期
+- [Luis Ouriach / 路易斯·乌里亚克](https://aipodcast.jasonlin.tech/pp/luisouriach/): Design Systems Lead & Advocate — 1 期
 - [Cameron Worboys / 卡梅隆·沃博伊斯](https://aipodcast.jasonlin.tech/pp/cameronworboys/): Head of Product Design, Cash App — 1 期
 - [Jeremy Howard / 杰里米·霍华德](https://aipodcast.jasonlin.tech/pp/jhoward/): Co-founder, fast.ai & Answer.AI — 1 期
 - [Sebastian Raschka / 塞巴斯蒂安·拉施卡](https://aipodcast.jasonlin.tech/pp/raschka/): LLM Research Engineer, author and educator — 1 期
 - [Katie Dill / 凯蒂·迪尔](https://aipodcast.jasonlin.tech/pp/katiedill/): VP of Design at Stripe — 1 期
+- [Julien Martin / 朱利安·马丁](https://aipodcast.jasonlin.tech/pp/julienmartin/): Design Lead at Amo — 1 期
 - [Sherwin Wu / 吴谢文](https://aipodcast.jasonlin.tech/pp/sherwinwu/): Head of Engineering, OpenAI API Platform — 1 期
+- [Ryan Stephen / 瑞安·斯蒂芬](https://aipodcast.jasonlin.tech/pp/ryanstephen/): Product Designer & Prototyper — 1 期
+- [Hannah Hearth / 汉娜·赫斯](https://aipodcast.jasonlin.tech/pp/hannahhearth/): Product Designer — 1 期
 - [Karl Koch / 卡尔·科赫](https://aipodcast.jasonlin.tech/pp/karlkoch/): Design Engineer, DuckDuckGo — 1 期
+- [Matt Sellers / 马特·塞勒斯](https://aipodcast.jasonlin.tech/pp/mattsellers/): Product Designer & Portfolio Mentor — 1 期
 - [Danijar Hafner / 达尼亚尔·哈夫纳](https://aipodcast.jasonlin.tech/pp/hafner/): Research Scientist, Google DeepMind — 1 期
 - [Nikita Rudin / 尼基塔·鲁丁](https://aipodcast.jasonlin.tech/pp/rudin/): Co-founder & CEO of Flexion Robotics — 1 期
 - [Tobi Springenberg / 托比·施普林根贝格](https://aipodcast.jasonlin.tech/pp/springenberg/): Research Scientist, Physical Intelligence (prev. DeepMind) — 1 期
@@ -217,6 +235,7 @@
 
 ## 最新访谈 Latest episodes
 - [Tim Cook's Final Apple Earnings Call: Record June Quarter Revenue of $109.4B](https://aipodcast.jasonlin.tech/e/timcook-appleq3-2026/) — Tim Cook, Apple Q3 2026 Earnings Call, 2026-07-30
+- [AI Security Leaderboard: Evaluating Frontier Models Against Misuse](https://aipodcast.jasonlin.tech/e/adamgleave-thecogni-2026/) — Adam Gleave, The Cognitive Revolution, 2026-07-30
 - [Elon Musk Predicts AI Will Surpass Human Intelligence by 2030s, Leading to an Age of Abundance](https://aipodcast.jasonlin.tech/e/elon-theecono-2026/) — Elon Musk, The Economist, 2026-07-29
 - [Learning from Experience: Beyond Reinforcement Learning and Transformers](https://aipodcast.jasonlin.tech/e/tworek-training-2026/) — Jerry Tworek, Training Data, 2026-07-29
 - [From Invisible to Crafted: Designing Browsers at Apple and The Browser Company](https://aipodcast.jasonlin.tech/e/charliedeets-diveclub-2026/) — Charlie Deets, Dive Club, 2026-07-29
@@ -224,14 +243,19 @@
 - [Sam Altman on AI's Potential and Focus](https://aipodcast.jasonlin.tech/e/altman-investli-2026/) — Sam Altman, Invest Like The Best, 2026-07-28
 - [Sam Altman on YC's Early Days and the Future of Startups](https://aipodcast.jasonlin.tech/e/altman-ycombina-2026/) — Sam Altman, Y Combinator, 2026-07-28
 - [Seize the AI Opportunity: Action Over Certainty](https://aipodcast.jasonlin.tech/e/mengto-evancarm-2026/) — Meng To, Evan Carmichael, 2026-07-28
+- [From No-Code to ChatGPT Work: The Era of Bottoms-Up Ambition](https://aipodcast.jasonlin.tech/e/akshaynathan-latentsp-2026/) — Akshay Nathan, Latent Space, 2026-07-28
 - [Opus 5: Unstoppable Performance and Prompt Injection Immunity](https://aipodcast.jasonlin.tech/e/boris-ycombina-2026b/) — Boris Cherny, Y Combinator, 2026-07-27
 - [Outsource Intelligence but Not Understanding: Logan Kilpatrick on AI Pace and Sanity](https://aipodcast.jasonlin.tech/e/logankilpatrick-1st10pod-2026/) — Logan Kilpatrick, 1st10 Podcast, 2026-07-27
 - [Nvidia's Start: Learning from Textbooks](https://aipodcast.jasonlin.tech/e/jensen-ycombina-2026/) — Jensen Huang, Y Combinator, 2026-07-26
 - [From Underdog to Leader: Diane Penn on Anthropic's Rise and Product Strategy](https://aipodcast.jasonlin.tech/e/diannepenn-lennyspo-2026/) — Dianne Na Penn, Lenny’s Podcast, 2026-07-26
 - [Sam Altman on AI Revolutionizing Startups](https://aipodcast.jasonlin.tech/e/altman-relentle-2026/) — Sam Altman, Relentless, 2026-07-25
 - [The AI Factory: The Heart of the AI Revolution](https://aipodcast.jasonlin.tech/e/jensen-bg2podwi-2026/) — Jensen Huang, BG2Pod with Bill Gurley & Brad Gerstner, 2026-07-24
+- [Building from Wholeness: Clay CEO Kareem on Reinventing Success](https://aipodcast.jasonlin.tech/e/kareemamin-sequoiac-2026/) — Kareem Amin, Sequoia Capital (Training Data), 2026-07-23
+- [DoorDash Co-Founders on Agentic Commerce and the Future of Food Delivery](https://aipodcast.jasonlin.tech/e/andyfang-nopriors-2026/) — Andy Fang, No Priors, 2026-07-23
 - [Tesla Q2 2026: Record Deliveries, FSD Demand Surge, and Robo Taxi Expansion](https://aipodcast.jasonlin.tech/e/elon-teslaq22-2026/) — Elon Musk, Tesla Q2 2026 Earnings Call, 2026-07-22
 - [Alphabet Q2 2026 Earnings: AI Drives 24% Revenue Growth](https://aipodcast.jasonlin.tech/e/sundarpichai-alphabet-2026/) — Sundar Pichai, Alphabet Q2 2026 Earnings Call, 2026-07-22
+- [Why MCP and Tools Are Obsolete: The Future of AI Is Direct Code Interaction](https://aipodcast.jasonlin.tech/e/eisokant-latentsp-2026/) — Eiso Kant, Latent Space, 2026-07-22
+- [Return of the King: Travis Kalanick on Uber's 2017 Crisis and His Unconventional Fundraising](https://aipodcast.jasonlin.tech/e/traviskalanick-thea16zp-2026/) — Travis Kalanick, The a16z Podcast, 2026-07-22
 - [Building Creative Tools with AI Agents: Pablo Stanley on Ecto and the Future of Design](https://aipodcast.jasonlin.tech/e/pablostanley-diveclub-2026/) — Pablo Stanley, Dive Club, 2026-07-21
 - [Factory CEO on Customer Obsession vs Output Metrics and Enterprise AI Strategy](https://aipodcast.jasonlin.tech/e/matangrinberg-sequoiac-2026/) — Matan Grinberg, Sequoia Capital (Training Data), 2026-07-21
 - [The Case for Specialized Intelligence](https://aipodcast.jasonlin.tech/e/linqiao-20vcwith-2026/) — Lin Qiao, 20VC with Harry Stebbings, 2026-07-20
@@ -250,12 +274,6 @@
 - [AI's Existential Threat and the Race for Superintelligence](https://aipodcast.jasonlin.tech/e/kokotajlo-thediary-2026/) — Daniel Kokotajlo, The Diary Of A CEO, 2026-07-13
 - [From Special Forces to AI: Dan Biderman's Journey](https://aipodcast.jasonlin.tech/e/danbiderman-latentsp-2026/) — Dan Biderman, Latent Space, 2026-07-13
 - [AI Demand Outpaces Expectations: Andrew Feldman on Chips, Deals, and Post-IPO Life](https://aipodcast.jasonlin.tech/e/feldman-sourcery-2026/) — Andrew Feldman, Sourcery with Molly O'Shea, 2026-07-13
-- [The Cognitive Revolution: Davidad on Provably Safe AI and the Future of Alignment](https://aipodcast.jasonlin.tech/e/davidad-thecogni-2026/) — David "davidad" Dalrymple, The Cognitive Revolution, 2026-07-12
-- [Tech Worker Sentiment Survey: Burnout Rising, Optimism Declining Amid AI Fears](https://aipodcast.jasonlin.tech/e/noamsegal-lennyspo-2026/) — Noam Segal, Lenny’s Podcast, 2026-07-12
-- [Glean CEO: Enterprises Fear Frontier AI Models Eating Their Lunch](https://aipodcast.jasonlin.tech/e/arvindjain-20vcwith-2026/) — Arvind Jain, 20VC with Harry Stebbings, 2026-07-11
-- [Human-Aligned AI: Collective Intelligence and the Future of Work](https://aipodcast.jasonlin.tech/e/perszyk-latentsp-2026/) — Danielle Perszyk, Latent Space, 2026-07-11
-- [Peering Inside the Black Box of AI](https://aipodcast.jasonlin.tech/e/neelnanda-googlede-2026/) — Neel Nanda, Google DeepMind, 2026-07-10
-- [AGI and Physical AI: A Conversation with AI Pioneer Jurgen Schmidhuber](https://aipodcast.jasonlin.tech/e/schmidhuber-unsuperv-2026/) — Jürgen Schmidhuber, Unsupervised Learning, 2026-07-09
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
