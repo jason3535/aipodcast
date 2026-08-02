@@ -385,14 +385,20 @@ def main():
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--days", type=int, default=120)
     ap.add_argument("--max", type=int, default=6)
+    ap.add_argument("--channels-only", action="store_true",
+                    help="只跑频道维度(跳过慢的人物维度 ytsearch),用于定向补收核心频道")
     a = ap.parse_args()
     if not KEY: sys.exit("需要 DEEPSEEK_API_KEY")
     log(f"=== auto_refresh 启动 (days={a.days} max={a.max} dry={a.dry_run}) ===")
 
     st = load_state()
     log(f"在站:{len(st['people'])} 人 / {len(st['vids'])} 期")
-    plan = discover(st["people"], st["vids"], a.days)
-    log(f"人物维度:{len(plan)} 期;开始频道维度…")
+    if a.channels_only:
+        plan = []
+        log("--channels-only:跳过人物维度")
+    else:
+        plan = discover(st["people"], st["vids"], a.days)
+        log(f"人物维度:{len(plan)} 期;开始频道维度…")
     plan += discover_channels(st["people"], st["vids"], a.days)
     # 双维度去重(同视频) + 每人最多 2 期 + 全局限量(优先最新)
     from collections import Counter
