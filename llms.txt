@@ -252,7 +252,7 @@
 - [From Underdog to Leader: Diane Penn on Anthropic's Rise and Product Strategy](https://aipodcast.jasonlin.tech/e/diannepenn-lennyspo-2026/) — Dianne Na Penn, Lenny’s Podcast, 2026-07-26
 - [Sam Altman on AI Revolutionizing Startups](https://aipodcast.jasonlin.tech/e/altman-relentle-2026/) — Sam Altman, Relentless, 2026-07-25
 - [The AI Factory: The Heart of the AI Revolution](https://aipodcast.jasonlin.tech/e/jensen-bg2podwi-2026/) — Jensen Huang, BG2Pod with Bill Gurley & Brad Gerstner, 2026-07-24
-- [Building from Wholeness: Clay CEO Kareem on Reinventing Success](https://aipodcast.jasonlin.tech/e/kareemamin-sequoiac-2026/) — Kareem Amin, Sequoia Capital (Training Data), 2026-07-23
+- [Building from Wholeness: Clay CEO Kareem on Reinventing Success](https://aipodcast.jasonlin.tech/e/kareemamin-sequoiac-2026/) — Kareem Amin, Training Data, 2026-07-23
 - [DoorDash Co-Founders on Agentic Commerce and the Future of Food Delivery](https://aipodcast.jasonlin.tech/e/andyfang-nopriors-2026/) — Andy Fang, No Priors, 2026-07-23
 - [The Largest Chip Ever and the Speed of AI](https://aipodcast.jasonlin.tech/e/feldman-themadpo-2026/) — Andrew Feldman, The MAD Podcast, 2026-07-23
 - [Tesla Q2 2026: Record Deliveries, FSD Demand Surge, and Robo Taxi Expansion](https://aipodcast.jasonlin.tech/e/elon-teslaq22-2026/) — Elon Musk, Tesla Q2 2026 Earnings Call, 2026-07-22
@@ -260,8 +260,8 @@
 - [Why MCP and Tools Are Obsolete: The Future of AI Is Direct Code Interaction](https://aipodcast.jasonlin.tech/e/eisokant-latentsp-2026/) — Eiso Kant, Latent Space, 2026-07-22
 - [Return of the King: Travis Kalanick on Uber's 2017 Crisis and His Unconventional Fundraising](https://aipodcast.jasonlin.tech/e/traviskalanick-thea16zp-2026/) — Travis Kalanick, The a16z Podcast, 2026-07-22
 - [Building Creative Tools with AI Agents: Pablo Stanley on Ecto and the Future of Design](https://aipodcast.jasonlin.tech/e/pablostanley-diveclub-2026/) — Pablo Stanley, Dive Club, 2026-07-21
-- [Factory CEO on Customer Obsession vs Output Metrics and Enterprise AI Strategy](https://aipodcast.jasonlin.tech/e/matangrinberg-sequoiac-2026/) — Matan Grinberg, Sequoia Capital (Training Data), 2026-07-21
-- [The Case for Specialized Intelligence](https://aipodcast.jasonlin.tech/e/linqiao-20vcwith-2026/) — Lin Qiao, 20VC with Harry Stebbings, 2026-07-20
+- [Factory CEO on Customer Obsession vs Output Metrics and Enterprise AI Strategy](https://aipodcast.jasonlin.tech/e/matangrinberg-sequoiac-2026/) — Matan Grinberg, Training Data, 2026-07-21
+- [The Case for Specialized Intelligence](https://aipodcast.jasonlin.tech/e/linqiao-20vcwith-2026/) — Lin Qiao, 20VC, 2026-07-20
 - [Navigating Role Fluidity in the Age of AI with Netflix's Elizabeth Stone](https://aipodcast.jasonlin.tech/e/elizabethstone-lennyspo-2026/) — Elizabeth Stone, Lenny’s Podcast, 2026-07-19
 - [Designing Loops and Workflows for AI Agents](https://aipodcast.jasonlin.tech/e/thariq-peteryan-2026/) — Thariq Shihipar, Peter Yang, 2026-07-19
 - [Inkling, Liquid AI, and the Push for AI Regulation](https://aipodcast.jasonlin.tech/e/hasani-moonshot-2026/) — Ramin Hasani, Moonshots with Peter Diamandis, 2026-07-17
@@ -272,7 +272,7 @@
 - [From Dot to Hivemind: A Creative Journey in AI Design](https://aipodcast.jasonlin.tech/e/jasonyuan-diveclub-2026/) — Jason Yuan, Dive Club, 2026-07-15
 - [The Knife Fight of AI Startups: Grainola CEO on Thriving Amid Chaos](https://aipodcast.jasonlin.tech/e/chrispedregal-aii-2026/) — Chris Pedregal, AI & I, 2026-07-15
 - [AI Strategy and Skills: A Decade After the Review](https://aipodcast.jasonlin.tech/e/demis-wcit-2026/) — Demis Hassabis, WCIT, 2026-07-15
-- [Anthropic Platform: From Knowledge to Execution to Coordination](https://aipodcast.jasonlin.tech/e/katelynlesse-sequoiac-2026/) — Katelyn Lesse, Sequoia Capital (Training Data), 2026-07-14
+- [Anthropic Platform: From Knowledge to Execution to Coordination](https://aipodcast.jasonlin.tech/e/katelynlesse-sequoiac-2026/) — Katelyn Lesse, Training Data, 2026-07-14
 - [Sovereign AI: Building the UK's First LLM on a Startup Budget](https://aipodcast.jasonlin.tech/e/pullen-machinel-2026/) — Alistair Pullen, Machine Learning Street Talk, 2026-07-13
 
 ## 数据接口
