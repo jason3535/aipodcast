@@ -28,10 +28,18 @@ KEY = os.environ.get("DEEPSEEK_API_KEY") or sys.exit("需要环境变量 DEEPSEE
 URL = "https://api.deepseek.com/chat/completions"
 
 
-# deepseek-v4-flash 是推理模型:reasoning_tokens 也计入 max_tokens,单块常烧 10-12k。
-# mx 给小了会 finish_reason=length → JSON 截断 → 解析失败,2026-08-01 那批 18 期就是这么变成空壳的。
+# 模型:2026-07-25 曾从 deepseek-chat 换成 deepseek-v4-flash,2026-08-02 换回。
+# v4-flash 是推理模型,reasoning_tokens 也计入 max_tokens(实测单块烧 7-12k),原来的
+# max_tokens=12000 只剩约 1.5k 写正文 → finish_reason=length → JSON 截断 → 08-01 那批 18 期变空壳。
+# 同一段 7000 字符转录实测:两者产出结构完全相同(4 节/10 turn),chat 24s、v4-flash 71s + 6768
+# 推理 token。翻译分节是格式转换任务,推理无增量价值;且全站 490 期里 470 期是 chat 翻的,
+# 混用两个模型长期会让译文风格不统一。
+#
+# 下面两道防护与模型选择正交,换回 chat 也保留:
+#   1) mx 默认给到 32000,留足余量(chat 实测接受到 65536)
+#   2) finish_reason=="length" 一律当失败重试 —— 截断必然是坏 JSON,不能让它伪装成"内容就这么少"
 def call(system, user, mx=32000, retries=3):
-    body = json.dumps({"model": "deepseek-v4-flash", "messages": [
+    body = json.dumps({"model": "deepseek-chat", "messages": [
         {"role": "system", "content": system}, {"role": "user", "content": user}],
         "response_format": {"type": "json_object"}, "max_tokens": mx, "temperature": 0.3}).encode()
     op = urllib.request.build_opener(urllib.request.ProxyHandler({}))  # 绕系统代理直连
