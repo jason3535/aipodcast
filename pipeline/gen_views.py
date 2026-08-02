@@ -4,6 +4,16 @@
 import json, os, re, sys, time, urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
+
+def _pick(r):
+    """取 choices[0] 的 JSON 内容。finish_reason=="length" 说明被 max_tokens 截断,
+    此时 content 必然是坏 JSON —— 显式当失败抛出,不能让它伪装成"内容就这么少"
+    (2026-08-01 那批 18 期空壳就是这么静默产生的)。"""
+    ch = r["choices"][0]
+    if ch.get("finish_reason") == "length":
+        raise RuntimeError("输出被 max_tokens 截断")
+    return json.loads(ch["message"]["content"])
+
 BASE=Path(__file__).resolve().parent; HTML=BASE.parent/"app.js"
 GLOSS=json.load(open(BASE/"glossary.json",encoding="utf-8"))
 GT="\n".join(f"  {k} → {v}" for k,v in GLOSS.items() if not k.startswith("_"))
@@ -12,7 +22,7 @@ URL="https://api.deepseek.com/chat/completions"
 MIN_EPS=2
 
 def call(system,user):
-    body=json.dumps({"model":"deepseek-v4-flash","messages":[{"role":"system","content":system},
+    body=json.dumps({"model":"deepseek-chat","messages":[{"role":"system","content":system},
         {"role":"user","content":user}],"response_format":{"type":"json_object"},
         "max_tokens":5000,"temperature":0.3}).encode()
     op=urllib.request.build_opener(urllib.request.ProxyHandler({}))
@@ -20,7 +30,7 @@ def call(system,user):
     for a in range(3):
         try:
             req=urllib.request.Request(URL,data=body,headers={"Content-Type":"application/json","Authorization":f"Bearer {KEY}"})
-            r=json.load(op.open(req,timeout=120));return json.loads(r["choices"][0]["message"]["content"])
+            r=json.load(op.open(req,timeout=120));return _pick(r)
         except Exception as e: last=e;time.sleep(2+a*3)
     raise RuntimeError(str(last)[:80])
 

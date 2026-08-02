@@ -2,6 +2,16 @@
 """把所有已生成单集的 insights.consensus 重生成为「核心观点」(从已存 ts 重建原文,不再抓字幕);保留 contrarian。"""
 import json, os, sys, time, urllib.request, glob
 from concurrent.futures import ThreadPoolExecutor, as_completed
+
+def _pick(r):
+    """取 choices[0] 的 JSON 内容。finish_reason=="length" 说明被 max_tokens 截断,
+    此时 content 必然是坏 JSON —— 显式当失败抛出,不能让它伪装成"内容就这么少"
+    (2026-08-01 那批 18 期空壳就是这么静默产生的)。"""
+    ch = r["choices"][0]
+    if ch.get("finish_reason") == "length":
+        raise RuntimeError("输出被 max_tokens 截断")
+    return json.loads(ch["message"]["content"])
+
 BASE=os.path.dirname(os.path.abspath(__file__)); TRANS=os.path.join(BASE,"transcripts")
 GLOSS=json.load(open(os.path.join(BASE,"glossary.json"),encoding="utf-8"))
 GT="\n".join(f"  {k} → {v}" for k,v in GLOSS.items() if not k.startswith("_"))
@@ -13,7 +23,7 @@ SYS=f"""你是 AI Podcast 编辑。读这期 AI 人物访谈转录,提炼【核�
 {GT}"""
 
 def call(text):
-    body=json.dumps({"model":"deepseek-v4-flash","messages":[{"role":"system","content":SYS},
+    body=json.dumps({"model":"deepseek-chat","messages":[{"role":"system","content":SYS},
         {"role":"user","content":"转录:\n"+text[:60000]}],"response_format":{"type":"json_object"},
         "max_tokens":3000,"temperature":0.3}).encode()
     op=urllib.request.build_opener(urllib.request.ProxyHandler({}))
@@ -21,7 +31,7 @@ def call(text):
         try:
             req=urllib.request.Request(URL,data=body,headers={"Content-Type":"application/json","Authorization":f"Bearer {KEY}"})
             r=json.load(op.open(req,timeout=180))
-            return json.loads(r["choices"][0]["message"]["content"])
+            return _pick(r)
         except Exception as e:
             last=e;time.sleep(2+a*3)
     raise RuntimeError(str(last)[:80])

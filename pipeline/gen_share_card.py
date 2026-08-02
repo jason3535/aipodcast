@@ -11,6 +11,16 @@ import argparse, json, os, re, sys, urllib.request
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
+def _pick(r):
+    """取 choices[0] 的 JSON 内容。finish_reason=="length" 说明被 max_tokens 截断,
+    此时 content 必然是坏 JSON —— 显式当失败抛出,不能让它伪装成"内容就这么少"
+    (2026-08-01 那批 18 期空壳就是这么静默产生的)。"""
+    ch = r["choices"][0]
+    if ch.get("finish_reason") == "length":
+        raise RuntimeError("输出被 max_tokens 截断")
+    return json.loads(ch["message"]["content"])
+
+
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://aipodcast.jasonlin.tech"
 OUT = ROOT / "share_cards"
@@ -183,14 +193,14 @@ def gen_copy(e, p):
             f"标题: {e.get('tZh','')} | {e.get('tEn','')}\n"
             f"频道: {(e.get('pod') or {}).get('zh','')} · {e.get('date','')}\n"
             f"要点:\n" + "\n".join(f"- {x}" for x in pts))
-    body = json.dumps({"model": "deepseek-v4-flash", "messages": [
+    body = json.dumps({"model": "deepseek-chat", "messages": [
         {"role": "system", "content": sys_p}, {"role": "user", "content": user}],
         "response_format": {"type": "json_object"}, "max_tokens": 4000, "temperature": 0.7}).encode()
     op = urllib.request.build_opener(urllib.request.ProxyHandler({}))
     req = urllib.request.Request("https://api.deepseek.com/chat/completions", data=body,
                                  headers={"Content-Type": "application/json", "Authorization": f"Bearer {key}"})
     try:
-        r = json.loads(json.load(op.open(req, timeout=120))["choices"][0]["message"]["content"])
+        r = _pick(json.load(op.open(req, timeout=120)))
         clean = lambda s: "\n".join(ln for ln in (s or "").split("\n")
                                      if "http" not in ln and "链接" not in ln and "example.com" not in ln).strip()
         return {"jike": clean(r.get("jike")) or fallback, "x": clean(r.get("x")) or fallback[:200]}
