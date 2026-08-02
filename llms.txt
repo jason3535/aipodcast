@@ -239,7 +239,7 @@
 ## 最新访谈 Latest episodes
 - [Why We Regret Product Management Exists](https://aipodcast.jasonlin.tech/e/tomverrilli-lennyspo-2026/) — Tom Verrilli, Lenny’s Podcast, 2026-08-02
 - [Simulating Human Behavior: The Future of AI Prediction](https://aipodcast.jasonlin.tech/e/joonpark-20vc-2026/) — Joon Sung Park, 20VC, 2026-08-01
-- [From DeepMind to River AI: Igor Babushkin on Personal AI and the Future of Agents](https://aipodcast.jasonlin.tech/e/igorbabuschkin-unsuperv-2026/) — Igor Babuschkin, Unsupervised Learning, 2026-07-31
+- [From DeepMind to River AI: Igor Babuschkin on Personal AI and the Future of Agents](https://aipodcast.jasonlin.tech/e/igorbabuschkin-unsuperv-2026/) — Igor Babuschkin, Unsupervised Learning, 2026-07-31
 - [Tim Cook's Final Apple Earnings Call: Record June Quarter Revenue of $109.4B](https://aipodcast.jasonlin.tech/e/timcook-appleq3-2026/) — Tim Cook, Apple Q3 2026 Earnings Call, 2026-07-30
 - [AI Security Leaderboard: Evaluating Frontier Models Against Misuse](https://aipodcast.jasonlin.tech/e/adamgleave-thecogni-2026/) — Adam Gleave, The Cognitive Revolution, 2026-07-30
 - [AI at Junior Engineer Level: Jeff Dean's Bold Prediction and the Future of Agentic Systems](https://aipodcast.jasonlin.tech/e/jeffdean-ycombina-2026/) — Jeff Dean, Y Combinator, 2026-07-30
@@ -267,7 +267,7 @@
 - [Return of the King: Travis Kalanick on Uber's 2017 Crisis and His Unconventional Fundraising](https://aipodcast.jasonlin.tech/e/traviskalanick-thea16zp-2026/) — Travis Kalanick, The a16z Podcast, 2026-07-22
 - [Building Creative Tools with AI Agents: Pablo Stanley on Ecto and the Future of Design](https://aipodcast.jasonlin.tech/e/pablostanley-diveclub-2026/) — Pablo Stanley, Dive Club, 2026-07-21
 - [Factory CEO on Customer Obsession vs Output Metrics and Enterprise AI Strategy](https://aipodcast.jasonlin.tech/e/matangrinberg-sequoiac-2026/) — Matan Grinberg, Training Data, 2026-07-21
-- [Zera Therapeutics: AI-Native Drug Discovery with Virtual Cell Models](https://aipodcast.jasonlin.tech/e/bowang-latentsp-2026/) — Bo Wang, Latent Space, 2026-07-21
+- [Xaira Therapeutics: AI-Native Drug Discovery with Virtual Cell Models](https://aipodcast.jasonlin.tech/e/bowang-latentsp-2026/) — Bo Wang, Latent Space, 2026-07-21
 - [The Case for Specialized Intelligence](https://aipodcast.jasonlin.tech/e/linqiao-20vcwith-2026/) — Lin Qiao, 20VC, 2026-07-20
 - [Navigating Role Fluidity in the Age of AI with Netflix's Elizabeth Stone](https://aipodcast.jasonlin.tech/e/elizabethstone-lennyspo-2026/) — Elizabeth Stone, Lenny’s Podcast, 2026-07-19
 - [Designing Loops and Workflows for AI Agents](https://aipodcast.jasonlin.tech/e/thariq-peteryan-2026/) — Thariq Shihipar, Peter Yang, 2026-07-19
