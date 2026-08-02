@@ -47,6 +47,12 @@
   a{color:inherit;text-decoration:none}
   img{display:block;max-width:100%}
   ::selection{background:rgba(0,102,204,.18)}
+  /* 深色底是纯黑,浅色那条 18% 深蓝合成后约等于 rgb(0,18,37),与底色对比仅 1.12:1,几乎看不出选中。
+     划词标记要先选中文本,选区必须看得清。改用深色主题的 accent(#2997ff):
+     α=.70 时选区对底色 3.75:1(黑底)/3.41:1(卡片底),过 WCAG 非文本 3:1。
+     必须同时定 color:选区上不强制白字的话,--text-2/--text-3(中译与副标题)只有 2.2:1,选中反而更难读;
+     强制白字后 5.60:1 / 4.99:1,过正文 4.5:1。*/
+  [data-theme="dark"] ::selection{background:rgba(41,151,255,.70);color:#fff}
 
   /* ---------- NAV ---------- */
   .nav{position:sticky;top:0;z-index:100;height:52px;display:flex;align-items:center;
