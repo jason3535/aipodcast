@@ -90,8 +90,21 @@ def meta(vid):
             f"https://youtu.be/{vid}"], capture_output=True, text=True, timeout=50).stdout)
         return {"vid": vid, "date": d.get("upload_date") or "", "ch": d.get("channel") or "",
                 "dur": d.get("duration") or 0, "t": d.get("title") or "",
+                "desc": (d.get("description") or "")[:700],
                 "cap": "en" in (d.get("automatic_captions") or {})}
     except Exception: return None
+
+
+# 标题语言判定。**不能用 str.isascii()** —— 排版破折号(–)、弯引号(’)、重音字母(é)都是非 ASCII,
+# 而 Dwarkesh 等频道的标准标题格式就是「嘉宾名 – 标题」。2026-08-02 之前用 isascii() 导致这些
+# 频道绝大多数单集在进闸门前就被静默跳过(Adam Brown / Imas&Trammell 等都是这么丢的)。
+# 正确做法:只在出现 CJK/西里尔/阿拉伯/希伯来/泰/天城文等非拉丁文字时判定为非英文。
+NON_LATIN = re.compile(r"[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af\u0400-\u04ff"
+                       r"\u0590-\u05ff\u0600-\u06ff\u0e00-\u0e7f\u0900-\u097f]")
+
+def latin_title(t):
+    """标题看起来是英文(不含非拉丁文字)。"""
+    return not NON_LATIN.search(t or "")
 
 # ---- 选题闸门(DeepSeek 替代人工筛) ----
 GATE_SYS = ("你是 AI Podcast 选题编辑。判断给定 YouTube 视频是否值得收录到一个「知名 AI 人物的英文播客双语全文阅读站」。"
@@ -101,7 +114,8 @@ GATE_SYS = ("你是 AI Podcast 选题编辑。判断给定 YouTube 视频是否�
 
 def gate(person, m):
     try:
-        r = ds(GATE_SYS, f"人物:{person}\n标题:{m['t']}\n频道:{m['ch']}\n时长:{round(m['dur']/60)}分钟\n日期:{m['date']}")
+        r = ds(GATE_SYS, f"人物:{person}\n标题:{m['t']}\n频道:{m['ch']}\n时长:{round(m['dur']/60)}分钟\n"
+                         f"日期:{m['date']}\n简介:{m.get('desc','')[:400]}")
         return bool(r.get("keep")), r.get("reason", "")
     except Exception as e:
         return False, "gate 失败:" + str(e)[:40]
@@ -145,35 +159,128 @@ def register_pod(pod_en):
     return zh, True
 
 # ---- 频道维度发现:盯重点播客频道的最新上传(与人物维度互补) ----
-# handle 已逐一用 yt-dlp 核验(2026-07-03)。左=站内 pod.en 登记名,右=频道 /videos 页。
+# handle 已逐一用 yt-dlp 核验(2026-07-03;Dive Club / Latent Space 于 2026-08-02 补入并核验)。
+# 左=站内 pod.en 登记名,中=频道 /videos 页,右=是否核心频道。
+#
+# 核心频道(core=True):站内内容量最大的 8 个来源,**主嘉宾不在站内也收** —— 自动建人物档
+# (头像回退字母,pid 记进 pending_avatars.json 供事后补真照)。非核心频道仍只收站内已有人物。
+# 这条口子是 2026-08-02 加的:此前 `pid in pid_map` 一刀切,核心频道请新面孔时永远漏收
+# (Dwarkesh 7/10 Adam Brown 那期就是这么丢的)。
 CHANNELS = [
-    ("Lex Fridman Podcast", "https://www.youtube.com/@lexfridman/videos"),
-    ("Dwarkesh Podcast", "https://www.youtube.com/@DwarkeshPatel/videos"),
-    ("No Priors", "https://www.youtube.com/@NoPriorsPodcast/videos"),
-    ("Machine Learning Street Talk", "https://www.youtube.com/@MachineLearningStreetTalk/videos"),
-    ("Y Combinator", "https://www.youtube.com/@ycombinator/videos"),
-    ("Lenny\u2019s Podcast", "https://www.youtube.com/@LennysPodcast/videos"),
-    ("Training Data", "https://www.youtube.com/@sequoiacapital/videos"),
-    ("20VC", "https://www.youtube.com/@20VC/videos"),
-    ("Google DeepMind", "https://www.youtube.com/@GoogleDeepMind/videos"),
-    ("The a16z Podcast", "https://www.youtube.com/@a16z/videos"),
-    ("Unsupervised Learning", "https://www.youtube.com/@RedpointAI/videos"),
-    ("The TWIML AI Podcast", "https://www.youtube.com/@twimlai/videos"),
+    ("Dive Club", "https://www.youtube.com/channel/UCkCnraWwlnBw1_i7C9-3p0w/videos", True),
+    ("Lenny\u2019s Podcast", "https://www.youtube.com/@LennysPodcast/videos", True),
+    ("Lex Fridman Podcast", "https://www.youtube.com/@lexfridman/videos", True),
+    ("Dwarkesh Podcast", "https://www.youtube.com/@DwarkeshPatel/videos", True),
+    ("Latent Space", "https://www.youtube.com/@LatentSpacePod/videos", True),
+    ("Training Data", "https://www.youtube.com/@sequoiacapital/videos", True),
+    ("Y Combinator", "https://www.youtube.com/@ycombinator/videos", True),
+    ("Unsupervised Learning", "https://www.youtube.com/@RedpointAI/videos", True),
+    ("No Priors", "https://www.youtube.com/@NoPriorsPodcast/videos", False),
+    ("Machine Learning Street Talk", "https://www.youtube.com/@MachineLearningStreetTalk/videos", False),
+    ("Google DeepMind", "https://www.youtube.com/@GoogleDeepMind/videos", False),
+    ("The a16z Podcast", "https://www.youtube.com/@a16z/videos", False),
+    ("The TWIML AI Podcast", "https://www.youtube.com/@twimlai/videos", False),
+    ("20VC", "https://www.youtube.com/@20VC/videos", False),
 ]
+FIELD_KEYS = ["deep-learning", "nlp", "product", "rl", "safety", "robotics"]
 CH_GATE_SYS = ("你是 AI Podcast 选题编辑。给定一个播客视频与站内人物名单,判断:"
     "① 视频的**主要嘉宾**是否为名单中的某个人(必须是主嘉宾/主讲,不是多人圆桌一员、不是被提及);"
     "② 英文、实质性 AI/技术访谈(不是新闻短片、预告、混剪、发布会口播)。"
     '只输出 JSON:{"keep":true/false,"pid":"名单中匹配的 pid,无则空串","guest":"嘉宾英文名","reason":"简短中文理由"}')
 
+# 核心频道用的闸门:允许新人物,但要求模型连同人物档一起产出。
+# 身份闸门比话题闸门重要 —— 本站收的是"这个人的思考",所以 DeepMind 的物理学家谈广义相对论要收,
+# 历史学家谈马基雅维利、地缘政治学者谈普京不收(嘉宾本身不是 AI/技术/设计从业者)。
+CORE_GATE_SYS = ("你是 AI Podcast 选题编辑。站点收录「AI/技术/产品设计领域知名人物」的英文长访谈,做双语全文。\n"
+    "给定一个视频 + 站内已有人物名单,判断是否收录。\n"
+    "**收录标准(全部满足)**:\n"
+    "① 有明确的**单一主嘉宾**(主讲/被访者)。多人圆桌、纯主持人独白、无嘉宾的教程 → 弃。\n"
+    "② 嘉宾**身份**属于:AI/ML 研究者、实验室或模型团队建设者、技术工程师、AI 产品/设计从业者。\n"
+    "   → 纯财经投资人、纯媒体人、历史学家、政治/地缘学者、临床医生等非技术身份 → 弃(哪怕很有名)。\n"
+    "③ 英文内容,实质性访谈/对谈/演讲(不是新闻短片、预告、混剪、发布会口播、直播切片)。\n"
+    "**话题不设限**:只要嘉宾身份合格,他谈物理、数学、组织管理都收。\n\n"
+    "若嘉宾已在名单中:pid 填其 pid、isNew=false、person 填 null。\n"
+    "若嘉宾不在名单中且符合标准:pid 留空、isNew=true,并补全 person 人物档:\n"
+    "  en=英文全名; zh=中文译名; tiEn=≤6 词英文头衔(职务, 机构); tiZh=对应中文头衔;\n"
+    "  fields=从 [deep-learning, nlp, product, rl, safety, robotics] 里选 1-2 个最贴切的;\n"
+    "  bioEn=1-2 句英文简介; bioZh=对应中文简介(中英文/数字之间加空格)。\n"
+    '只输出 JSON:{"keep":true/false,"pid":"","guest":"嘉宾英文全名","isNew":true/false,'
+    '"person":{"en":"","zh":"","tiEn":"","tiZh":"","fields":[],"bioEn":"","bioZh":""},"reason":"简短中文理由"}')
+
+
+def make_pid(name, taken):
+    """英文全名 → pid(小写去非字母数字)。撞车则依次追加字母/数字。"""
+    base = re.sub(r"[^a-z0-9]", "", (name or "").lower()) or "person"
+    pid = base[:20]
+    if pid not in taken:
+        return pid
+    for suf in list("abcdefghijklmnopqrstuvwxyz") + [str(i) for i in range(2, 10)]:
+        if pid + suf not in taken:
+            return pid + suf
+    return pid + str(int(time.time()))[-4:]
+
+
+def ensure_person(pid, p):
+    """把新人物写进 app.js 的 PEOPLE{}。**不加进 PHOTOS** —— 头像回退字母,
+    pid 记进 pipeline/pending_avatars.json,事后由 avatar-hunting 流程补真照。"""
+    h = HTML.read_text(encoding="utf-8")
+    if "'" + pid + "':{en:" in h:
+        return False
+    esc = lambda s: str(s or "").replace("\\", "\\\\").replace("'", "\\'").replace("\n", " ")
+    fields = [x for x in (p.get("fields") or []) if x in FIELD_KEYS] or ["nlp"]
+    init = "".join(w[0] for w in str(p.get("en") or pid).split()[:2]).upper()
+    entry = ("  '" + pid + "':{en:'" + esc(p.get("en")) + "',zh:'" + esc(p.get("zh") or p.get("en")) +
+             "',init:'" + esc(init) + "',tiEn:'" + esc(p.get("tiEn")) + "',tiZh:'" + esc(p.get("tiZh")) +
+             "',fields:" + json.dumps(fields) + ",bioEn:'" + esc(p.get("bioEn")) +
+             "',bioZh:'" + esc(p.get("bioZh")) + "'},\n")
+    h = h.replace("const PEOPLE = {\n", "const PEOPLE = {\n" + entry, 1)
+    HTML.write_text(h, encoding="utf-8")
+    log(f"  + 新建人物 {pid}（{p.get('en')} / {p.get('zh')}）头像=字母 {init}，待补真照")
+    return True
+
+
+def note_pending_avatar(pid, p, pod_en):
+    """记一笔待补头像,供事后批量补真照。"""
+    fp = BASE / "pending_avatars.json"
+    try:
+        cur = json.loads(fp.read_text(encoding="utf-8"))
+    except Exception:
+        cur = []
+    if any(x.get("pid") == pid for x in cur):
+        return
+    cur.append({"pid": pid, "en": p.get("en"), "zh": p.get("zh"), "tiEn": p.get("tiEn"),
+                "from": pod_en, "added": datetime.now(timezone.utc).strftime("%Y-%m-%d")})
+    fp.write_text(json.dumps(cur, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+def drop_person(pid):
+    """回滚:把刚建的人物条目从 app.js 移除(收录失败时用,避免留下 0 期的空人物页)。"""
+    h = HTML.read_text(encoding="utf-8")
+    pat = re.compile(r"^  '" + re.escape(pid) + r"':\{en:.*?\},\n", re.S | re.M)
+    h2, n = pat.subn("", h, count=1)
+    if n:
+        HTML.write_text(h2, encoding="utf-8")
+        log(f"  ↩ 回滚新建人物 {pid}（该期收录失败）")
+    fp = BASE / "pending_avatars.json"
+    try:
+        cur = [x for x in json.loads(fp.read_text(encoding="utf-8")) if x.get("pid") != pid]
+        fp.write_text(json.dumps(cur, ensure_ascii=False, indent=1), encoding="utf-8")
+    except Exception:
+        pass
+
+
 def discover_channels(people, vids, days, per_channel_cap=2):
-    """每频道拉最近 10 条上传,主嘉宾必须是站内已有人物才收(新人物交给人物维度/人工)。"""
+    """每频道拉最近 10 条上传。
+    核心频道(core=True):主嘉宾是站外新人也收 —— 闸门连同人物档一起产出,收录前自动建档;
+    非核心频道:仍只收站内已有人物(新面孔留给人物维度/人工)。"""
     from datetime import timedelta
     exist = set(vids)
     floor = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y%m%d")
     roster = "\n".join(f"{p['pid']}: {p['en']}" for p in people)
     pid_map = {p["pid"]: p for p in people}
+    taken = set(pid_map)          # 已占用 pid(含本轮新建的),防撞车
     plan = []
-    for pod_en, url in CHANNELS:
+    for pod_en, url, core in CHANNELS:
         try:
             d = json.loads(subprocess.run(["yt-dlp", "--skip-download", "--no-warnings", "--flat-playlist",
                 "--playlist-end", "10", "--dump-single-json", url],
@@ -187,19 +294,41 @@ def discover_channels(people, vids, days, per_channel_cap=2):
             if not vid or vid in exist or (dur and dur < 1500): continue
             m = meta(vid)
             if not m or not m["cap"] or m["date"] < floor: continue
-            if not m["t"].isascii(): continue
+            if not latin_title(m["t"]): continue
+            payload = (f"频道:{pod_en}\n标题:{m['t']}\n时长:{round(m['dur']/60)}分钟\n日期:{m['date']}\n"
+                       f"视频简介(判断嘉宾身份主要靠它):\n{m.get('desc','')}\n\n"
+                       f"站内人物名单(pid: 姓名):\n{roster}")
             try:
-                r = ds(CH_GATE_SYS, f"频道:{pod_en}\n标题:{m['t']}\n时长:{round(m['dur']/60)}分钟\n日期:{m['date']}\n\n站内人物名单(pid: 姓名):\n{roster}", mx=300)
+                r = ds(CORE_GATE_SYS if core else CH_GATE_SYS, payload, mx=900 if core else 300)
             except Exception as ex:
                 log(f"  [频道] {pod_en} gate 失败:{str(ex)[:40]}"); continue
+
             pid = (r.get("pid") or "").strip()
-            ok = bool(r.get("keep")) and pid in pid_map
-            log(f"  [频道] {pod_en[:20]:20} {m['date']} [{round(m['dur']/60)}m] {m['t'][:44]} → {'收:'+pid if ok else '弃'}({str(r.get('reason',''))[:26]})")
+            keep = bool(r.get("keep"))
+            newp = None
+            if keep and core and (r.get("isNew") or pid not in pid_map):
+                # 新人物:闸门给的人物档必须字段齐全才敢自动建,缺就弃(不留半张档)
+                cand = r.get("person") or {}
+                if cand.get("en") and cand.get("zh") and cand.get("tiEn"):
+                    pid = make_pid(cand["en"], taken)
+                    newp = cand
+                else:
+                    keep = False
+                    r["reason"] = "新人物但人物档不全"
+            ok = keep and (newp is not None or pid in pid_map)
+
+            tag = ("新收:" + pid if newp else "收:" + pid) if ok else "弃"
+            log(f"  [频道] {pod_en[:20]:20} {m['date']} [{round(m['dur']/60)}m] {m['t'][:44]} → {tag}({str(r.get('reason',''))[:26]})")
             if ok:
-                p = pid_map[pid]
+                if newp:
+                    fields = [x for x in (newp.get("fields") or []) if x in FIELD_KEYS] or ["nlp"]
+                    guest = newp["en"].split()[0]
+                    taken.add(pid)
+                else:
+                    p = pid_map[pid]; fields = p["fields"]; guest = p["en"].split()[0]
                 plan.append({"pid": pid, "vid": m["vid"], "date": f"{m['date'][:4]}-{m['date'][4:6]}-{m['date'][6:]}",
                              "podEn": pod_en, "min": round(m["dur"] / 60),
-                             "fields": ",".join(p["fields"]), "guest": p["en"].split()[0]})
+                             "fields": ",".join(fields), "guest": guest, "newPerson": newp})
                 exist.add(vid); kept += 1
                 if kept >= per_channel_cap: break
     return plan
@@ -224,7 +353,7 @@ def discover(people, vids, days, per_person_cap=1):
         picks = []
         for vid in cands[:6]:
             m = meta(vid)
-            if not m or not m["cap"] or not m["t"].isascii(): continue
+            if not m or not m["cap"] or not latin_title(m["t"]): continue
             if not (floor <= m["date"] <= cutoff): continue
             on = p["latest"].replace("-", "")
             if on and m["date"] <= on: continue   # 不比在站的旧
@@ -281,7 +410,13 @@ def main():
 
     added = 0
     new_ids = []   # 收录成功的集 id,供后面做完整性审计门禁
+    new_people = []          # 本轮自动建档的新人物 pid,供提交信息/待补头像清单
     for x in plan:
+        np = x.get("newPerson")
+        if np:
+            if ensure_person(x["pid"], np):
+                note_pending_avatar(x["pid"], np, x["podEn"])
+                new_people.append(x["pid"])
         pod_zh, _ = register_pod(x["podEn"])
         if pod_zh is None:  # 已登记:取其 zh 名
             h = HTML.read_text(encoding="utf-8")
@@ -295,7 +430,10 @@ def main():
             added += 1; log(f"  ✓ 收录 {x['pid']} {x['date']}")
             m_eid = re.search(r"完成:(\S+)", outp)
             if m_eid: new_ids.append(m_eid.group(1))
-        else: log(f"  ✗ 失败 {x['pid']}: {outp.strip().splitlines()[-1][:80] if outp.strip() else rc}")
+        else:
+            log(f"  ✗ 失败 {x['pid']}: {outp.strip().splitlines()[-1][:80] if outp.strip() else rc}")
+            if np and x["pid"] in new_people:      # 人物是为这期新建的,这期没成 → 回滚,别留空人物页
+                drop_person(x["pid"]); new_people.remove(x["pid"])
 
     if not added:
         log("无成功收录,不提交。"); return
@@ -303,6 +441,7 @@ def main():
     log("重生成 观点演变 / 议题 / MCP 索引 / 分享页 …")
     for cmd in [["python3", "pipeline/gen_views.py"], ["python3", "pipeline/gen_topics.py"],
                 ["python3", "pipeline/gen_brief.py"], ["python3", "pipeline/gen_sectitles.py"],
+                ["python3", "pipeline/fix_spacing.py"],
                 ["node", "pipeline/build_mcp_data.js"], ["node", "pipeline/build_share_pages.js"]]:
         rc, outp = run_cmd(cmd)
         log(f"  {'✓' if rc == 0 else '✗'} {cmd[1].split('/')[-1]} {('' if rc==0 else outp[-120:])}")
@@ -332,6 +471,9 @@ def main():
 
     run_cmd(["git", "add", "-A"])
     msg = f"chore: 自动保鲜 +{added} 期（{', '.join(x['pid'] for x in plan[:added])}）"
+    if new_people:
+        msg += f" +{len(new_people)} 新人物"
+        log(f"本轮新建人物 {len(new_people)} 位（头像待补）:{', '.join(new_people)}")
     rc, outp = run_cmd(["git", "commit", "-q", "-m", msg,
         "-m", "由 pipeline/auto_refresh.py 自动收录\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"])
     rc2, outp2 = run_cmd(["git", "push", "-q", "origin", "master"])
