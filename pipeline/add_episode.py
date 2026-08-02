@@ -28,7 +28,9 @@ KEY = os.environ.get("DEEPSEEK_API_KEY") or sys.exit("需要环境变量 DEEPSEE
 URL = "https://api.deepseek.com/chat/completions"
 
 
-def call(system, user, mx=12000, retries=3):
+# deepseek-v4-flash 是推理模型:reasoning_tokens 也计入 max_tokens,单块常烧 10-12k。
+# mx 给小了会 finish_reason=length → JSON 截断 → 解析失败,2026-08-01 那批 18 期就是这么变成空壳的。
+def call(system, user, mx=32000, retries=3):
     body = json.dumps({"model": "deepseek-v4-flash", "messages": [
         {"role": "system", "content": system}, {"role": "user", "content": user}],
         "response_format": {"type": "json_object"}, "max_tokens": mx, "temperature": 0.3}).encode()
@@ -38,11 +40,14 @@ def call(system, user, mx=12000, retries=3):
         try:
             req = urllib.request.Request(URL, data=body, headers={
                 "Content-Type": "application/json", "Authorization": f"Bearer {KEY}"})
-            r = json.load(op.open(req, timeout=180))
-            return json.loads(r["choices"][0]["message"]["content"])
+            r = json.load(op.open(req, timeout=300))
+            ch = r["choices"][0]
+            if ch.get("finish_reason") == "length":  # 截断必然是坏 JSON,别让它伪装成"内容就这么少"
+                raise RuntimeError(f"输出被 max_tokens={mx} 截断(reasoning={ch.get('usage',{})})")
+            return json.loads(ch["message"]["content"])
         except Exception as e:
             last = e; time.sleep(2 + a * 3)
-    raise RuntimeError(str(last)[:90])
+    raise RuntimeError(str(last)[:200])
 
 
 def vid_of(url):
@@ -122,12 +127,20 @@ def translate(text, guest):
 {GT}""")
     cks = chunks(text)
     ts = [None] * len(cks)
+    errs = {}
     with ThreadPoolExecutor(max_workers=5) as ex:
         futs = {ex.submit(call, sec_sys, "英文转录:\n" + c): i for i, c in enumerate(cks)}
         for f in as_completed(futs):
             i = futs[f]
             try: ts[i] = f.result().get("ts", [])
-            except Exception: ts[i] = []
+            except Exception as e: ts[i] = []; errs[i] = str(e)[:160]
+    # 提交门禁:任何一块翻译失败都会让全文缺一段,但页面上看不出来。宁可整期不收,也不写半截稿。
+    if errs:
+        for i in sorted(errs): print(f"  ✗ 第 {i+1}/{len(cks)} 块失败:{errs[i]}", file=sys.stderr)
+        raise RuntimeError(f"{len(errs)}/{len(cks)} 块翻译失败,中止(不写入任何文件)")
+    empty = [i for i, p in enumerate(ts) if not p]
+    if empty:
+        raise RuntimeError(f"第 {[i+1 for i in empty]} 块翻译返回空,中止(不写入任何文件)")
     return [s for part in ts for s in (part or [])]
 
 
@@ -139,7 +152,7 @@ def insights(text):
 每条 en≤22 词 + 地道中文 zh,基于真实内容不杜撰。严格用术语表。只输出 JSON。
 术语表:
 {GT}""")
-    return call(ins_sys, "英文转录:\n" + text[:120000], mx=7000)
+    return call(ins_sys, "英文转录:\n" + text[:120000])  # mx 用默认 32000:推理模型下 7000 会被 reasoning 吃光
 
 
 def meta(text, guest):
@@ -199,6 +212,11 @@ def main():
         else:
             sys.exit(f"id {eid} 后缀 b-h 全被占用,请手工指定")
     edate = a.date or (f"{ydate[:4]}-{ydate[4:6]}-{ydate[6:]}" if ydate else "")
+    # yt_meta 被限流时 ydate/ymin 会是空:日期空会让这期排到列表最底、id 变成 `xxx-` 尾巴,必须显式补
+    if not edate:
+        sys.exit("日期为空(yt_meta 被限流且未传 --date),请补 --date YYYY-MM-DD 后重跑")
+    if not (a.min or ymin):
+        sys.exit("时长为空(yt_meta 被限流且未传 --min),请补 --min <分钟> 后重跑")
     pod = {"en": a.pod_en, "zh": a.pod_zh}
     fields = [f.strip() for f in a.fields.split(",") if f.strip()]
     # 领域必须是站内已登记的 key,否则前端 fdot 渲染会挂(2026-07-02 曾因 efficiency 白屏)
