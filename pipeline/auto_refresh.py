@@ -20,6 +20,16 @@ from datetime import datetime, timezone
 from io import BytesIO
 from pathlib import Path
 
+def _pick(r):
+    """取 choices[0] 的 JSON 内容。finish_reason=="length" 说明被 max_tokens 截断,
+    此时 content 必然是坏 JSON —— 显式当失败抛出,不能让它伪装成"内容就这么少"
+    (2026-08-01 那批 18 期空壳就是这么静默产生的)。"""
+    ch = r["choices"][0]
+    if ch.get("finish_reason") == "length":
+        raise RuntimeError("输出被 max_tokens 截断")
+    return json.loads(ch["message"]["content"])
+
+
 BASE = Path(__file__).resolve().parent
 ROOT = BASE.parent
 HTML = ROOT / "app.js"  # 2026-07-25 起:数据/逻辑已从 index.html 拆到独立 app.js(首屏瘦身,外链 defer 加载)
@@ -36,7 +46,7 @@ def log(msg):
 
 def ds(system, user, mx=3000):
     """DeepSeek 直连(绕 Clash 系统代理)。"""
-    body = json.dumps({"model": "deepseek-v4-flash", "messages": [
+    body = json.dumps({"model": "deepseek-chat", "messages": [
         {"role": "system", "content": system}, {"role": "user", "content": user}],
         "response_format": {"type": "json_object"}, "max_tokens": mx, "temperature": 0.1}).encode()
     op = urllib.request.build_opener(urllib.request.ProxyHandler({}))
@@ -45,7 +55,7 @@ def ds(system, user, mx=3000):
         try:
             req = urllib.request.Request(DS_URL, data=body, headers={
                 "Content-Type": "application/json", "Authorization": f"Bearer {KEY}"})
-            return json.loads(json.load(op.open(req, timeout=90))["choices"][0]["message"]["content"])
+            return _pick(json.load(op.open(req, timeout=90)))
         except Exception as e: last = e; time.sleep(2 + a * 3)
     raise RuntimeError(str(last)[:80])
 

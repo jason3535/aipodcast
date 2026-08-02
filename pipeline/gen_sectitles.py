@@ -4,6 +4,16 @@
 import json, os, sys, time, urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
+
+def _pick(r):
+    """取 choices[0] 的 JSON 内容。finish_reason=="length" 说明被 max_tokens 截断,
+    此时 content 必然是坏 JSON —— 显式当失败抛出,不能让它伪装成"内容就这么少"
+    (2026-08-01 那批 18 期空壳就是这么静默产生的)。"""
+    ch = r["choices"][0]
+    if ch.get("finish_reason") == "length":
+        raise RuntimeError("输出被 max_tokens 截断")
+    return json.loads(ch["message"]["content"])
+
 BASE = Path(__file__).resolve().parent; EPDIR = BASE.parent / "mcp-data" / "ep"
 KEY = os.environ.get("DEEPSEEK_API_KEY") or sys.exit("需要 DEEPSEEK_API_KEY")
 URL = "https://api.deepseek.com/chat/completions"
@@ -11,7 +21,7 @@ URL = "https://api.deepseek.com/chat/completions"
 def call(titles):
     sys_p = ("把下列英文播客章节标题逐条译成简洁地道的中文(每条≤14字,保留专有名词如 GPT/AGI/RLHF 原文)。"
              "只输出 JSON:{\"zh\":[\"...\",...]},顺序与数量与输入完全一致。")
-    body = json.dumps({"model": "deepseek-v4-flash", "messages": [
+    body = json.dumps({"model": "deepseek-chat", "messages": [
         {"role": "system", "content": sys_p},
         {"role": "user", "content": "\n".join(f"{i}. {t}" for i, t in enumerate(titles))}],
         "response_format": {"type": "json_object"}, "max_tokens": 5000, "temperature": 0.2}).encode()
@@ -20,7 +30,7 @@ def call(titles):
     for a in range(3):
         try:
             req = urllib.request.Request(URL, data=body, headers={"Content-Type": "application/json", "Authorization": f"Bearer {KEY}"})
-            return json.loads(json.load(op.open(req, timeout=120))["choices"][0]["message"]["content"]).get("zh", [])
+            return _pick(json.load(op.open(req, timeout=120))).get("zh", [])
         except Exception as e: last = e; time.sleep(2 + a * 3)
     raise RuntimeError(str(last)[:80])
 
