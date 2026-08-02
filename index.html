@@ -757,6 +757,17 @@
 
 .xsite-inline{display:inline-flex;align-items:center;gap:5px;color:var(--text-3);cursor:pointer;text-decoration:none}
 .xsite-inline:hover{color:var(--accent)}
+/* 节目索引页(#/pods):节目封面是方图,不能套人物头像的圆形裁切 */
+.ppl-card .av.podav{border-radius:22px;overflow:hidden;background:var(--line)}
+.ppl-card .av.podav img{border-radius:22px}
+/* 回到顶部(对齐 aipaper) */
+.totop{position:fixed;right:20px;bottom:86px;width:42px;height:42px;border-radius:50%;
+  background:var(--bg);border:1px solid var(--line);box-shadow:var(--shadow);
+  display:grid;place-items:center;cursor:pointer;color:var(--text-2);
+  opacity:0;pointer-events:none;transition:opacity .18s;z-index:60}
+.totop.on{opacity:1;pointer-events:auto}
+.totop:hover{color:var(--accent)}
+@media(max-width:760px){.totop{right:12px;bottom:76px;width:38px;height:38px}}
 </style>
 </head>
 <body>
@@ -765,6 +776,8 @@
   <div class="links">
     <a onclick="go('#/people')" data-route="people">人物</a>
     <a onclick="go('#/browse')" data-route="browse">播客</a>
+    <a onclick="go('#/pods')" data-route="pods">节目</a>
+    <a onclick="go('#/topics')" data-route="topics">议题</a>
     <a onclick="go('#/mine')" data-route="mine" id="navMarks">我的</a>
   </div>
   <div class="spacer"></div>
@@ -821,6 +834,9 @@
 <style>.sk-line{border-radius:8px;background:linear-gradient(100deg,#ececf0 40%,#f7f7fa 50%,#ececf0 60%);background-size:200% 100%;animation:skp 1.2s infinite linear}@keyframes skp{to{background-position:-200% 0}}</style>`);</script>
 </div>
 
-<script src="app.js?v=ed89914e1e" defer></script>
+<button class="totop" id="toTop" title="回到顶部" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l6-6 6 6"/></svg></button>
+<script>addEventListener('scroll',()=>{const t=document.getElementById('toTop');if(t)t.classList.toggle('on',scrollY>700);},{passive:true});</script>
+
+<script src="app.js?v=d57b40019e" defer></script>
 </body>
 </html>

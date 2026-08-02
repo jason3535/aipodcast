@@ -270,6 +270,7 @@ def main():
         log("没有新内容,结束(不提交)。"); return
 
     added = 0
+    new_ids = []   # 收录成功的集 id,供后面做完整性审计门禁
     for x in plan:
         pod_zh, _ = register_pod(x["podEn"])
         if pod_zh is None:  # 已登记:取其 zh 名
@@ -280,7 +281,10 @@ def main():
                "--pid", x["pid"], "--guest", x["guest"], "--pod-en", x["podEn"], "--pod-zh", pod_zh,
                "--fields", x["fields"], "--date", x["date"]]
         rc, outp = run_cmd(cmd)
-        if rc == 0 and "完成" in outp: added += 1; log(f"  ✓ 收录 {x['pid']} {x['date']}")
+        if rc == 0 and "完成" in outp:
+            added += 1; log(f"  ✓ 收录 {x['pid']} {x['date']}")
+            m_eid = re.search(r"完成:(\S+)", outp)
+            if m_eid: new_ids.append(m_eid.group(1))
         else: log(f"  ✗ 失败 {x['pid']}: {outp.strip().splitlines()[-1][:80] if outp.strip() else rc}")
 
     if not added:
@@ -307,6 +311,14 @@ def main():
         "console.log('ok')"], capture_output=True, text=True, cwd=str(ROOT))
     if "ok" not in chk.stdout:
         log("⚠️ JS 校验失败,放弃提交(保留改动供人工检查):" + chk.stderr[:150]); return
+
+    # 完整性审计门禁:只审本轮新收的集(全库有存量损坏,不能让它挡住每次自动运行)。
+    # 2026-08-01 那批"空壳"集就是缺这道闸门才上线的 —— 语法是对的,内容是空的。
+    if new_ids:
+        rc_a, out_a = run_cmd(["node", "pipeline/audit_completeness.js"] + new_ids)
+        if rc_a != 0:
+            log("⚠️ 完整性审计不通过,放弃提交(保留改动供人工检查):\n" + out_a[-600:]); return
+        log(f"  ✓ 完整性审计 {len(new_ids)} 期通过")
 
     run_cmd(["git", "add", "-A"])
     msg = f"chore: 自动保鲜 +{added} 期（{', '.join(x['pid'] for x in plan[:added])}）"
