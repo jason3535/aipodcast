@@ -1,0 +1,26 @@
+[
+ {
+  "pid": "tomverrilli",
+  "en": "Tom Verrilli",
+  "zh": "汤姆·维里利",
+  "tiEn": "Chief Product Officer, Whatnot",
+  "from": "Lenny’s Podcast",
+  "added": "2026-08-02"
+ },
+ {
+  "pid": "igorbabuschkin",
+  "en": "Igor Babuschkin",
+  "zh": "伊戈尔·巴布什金",
+  "tiEn": "Co-founder, River AI; former Co-founder, xAI",
+  "from": "Unsupervised Learning",
+  "added": "2026-08-02"
+ },
+ {
+  "pid": "bowang",
+  "en": "Bo Wang",
+  "zh": "王波",
+  "tiEn": "Chief AI Scientist, Xaira Therapeutics",
+  "from": "Latent Space",
+  "added": "2026-08-02"
+ }
+]
