@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 228 位人物 / 502 期访谈
+规模: 229 位人物 / 503 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -85,6 +85,7 @@
 - [Michael Truell / 迈克尔·特鲁埃尔](https://aipodcast.jasonlin.tech/pp/truell/): Co-founder & CEO, Cursor — 2 期
 - [Tom Verrilli / 汤姆·维里利](https://aipodcast.jasonlin.tech/pp/tomverrilli/): Chief Product Officer, Whatnot — 1 期
 - [Igor Babuschkin / 伊戈尔·巴布什金](https://aipodcast.jasonlin.tech/pp/igorbabuschkin/): Co-founder, River AI; former Co-founder, xAI — 1 期
+- [Patrick Collison / 帕特里克·科里森](https://aipodcast.jasonlin.tech/pp/collison/): Co-founder & CEO, Stripe — 1 期
 - [Tim Cook / 蒂姆·库克](https://aipodcast.jasonlin.tech/pp/timcook/): CEO, Apple — 1 期
 - [Adam Gleave / 亚当·格利夫](https://aipodcast.jasonlin.tech/pp/adamgleave/): Founder & CEO, FAR.AI — 1 期
 - [Charlie Deets / 查理·迪茨](https://aipodcast.jasonlin.tech/pp/charliedeets/): Designer — Safari, Arc, Dia browsers — 1 期
@@ -240,6 +241,7 @@
 - [Why We Regret Product Management Exists](https://aipodcast.jasonlin.tech/e/tomverrilli-lennyspo-2026/) — Tom Verrilli, Lenny’s Podcast, 2026-08-02
 - [Simulating Human Behavior: The Future of AI Prediction](https://aipodcast.jasonlin.tech/e/joonpark-20vc-2026/) — Joon Sung Park, 20VC, 2026-08-01
 - [From DeepMind to River AI: Igor Babuschkin on Personal AI and the Future of Agents](https://aipodcast.jasonlin.tech/e/igorbabuschkin-unsuperv-2026/) — Igor Babuschkin, Unsupervised Learning, 2026-07-31
+- [Startup School: Patrick Collison on Learning, Writing, and Dropping Out](https://aipodcast.jasonlin.tech/e/collison-ycombina-2026/) — Patrick Collison, Y Combinator, 2026-07-31
 - [Tim Cook's Final Apple Earnings Call: Record June Quarter Revenue of $109.4B](https://aipodcast.jasonlin.tech/e/timcook-appleq3-2026/) — Tim Cook, Apple Q3 2026 Earnings Call, 2026-07-30
 - [AI Security Leaderboard: Evaluating Frontier Models Against Misuse](https://aipodcast.jasonlin.tech/e/adamgleave-thecogni-2026/) — Adam Gleave, The Cognitive Revolution, 2026-07-30
 - [AI at Junior Engineer Level: Jeff Dean's Bold Prediction and the Future of Agentic Systems](https://aipodcast.jasonlin.tech/e/jeffdean-ycombina-2026/) — Jeff Dean, Y Combinator, 2026-07-30
@@ -276,7 +278,6 @@
 - [The Largest Infrastructure Build in History: Inside OpenAI's Compute Strategy](https://aipodcast.jasonlin.tech/e/sachinkatti-themadpo-2026/) — Sachin Katti, The MAD Podcast, 2026-07-16
 - [The Next Frontier: Scaling AI with Scientific Data](https://aipodcast.jasonlin.tech/e/andybeam-latentsp-2026/) — Andy Beam, Latent Space, 2026-07-16
 - [AI Models Are Smarter Than We Use: Insights on Claude Code](https://aipodcast.jasonlin.tech/e/thariq-southpar-2026/) — Thariq Shihipar, South Park Commons, 2026-07-16
-- [AI Hype vs. Historical Tech Shifts with Benedict Evans](https://aipodcast.jasonlin.tech/e/benedictevans-unsuperv-2026/) — Benedict Evans, Unsupervised Learning, 2026-07-16
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
