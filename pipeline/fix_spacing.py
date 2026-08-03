@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """fix_spacing.py — 收录/重建后统一 CJK-EN 空格(站点标准:中英文与数字之间加半角空格)。
 gen_brief/gen_topics/gen_views/meta 的 DeepSeek 输出常漏这个空格,每轮跑一次即可。幂等。
-覆盖:app.js 内联 EPISODES 标题(tZh/sZh)+ TOPICS/VIEWS zh + data/ep-extra.json 的 brief。
+覆盖:app.js 内联 EPISODES 标题(tZh/sZh)+ TOPICS/VIEWS zh + data/{ep-extra,views,topics}.json。
 用法:python3 pipeline/fix_spacing.py"""
 import io, json, re
 from pathlib import Path
@@ -54,6 +54,12 @@ def main():
             st, en, obj = r
             html = html[:st] + json.dumps(deep_fix(obj), ensure_ascii=False) + html[en:]
     (ROOT / 'app.js').write_text(html, encoding='utf-8')
+    # 2b) split_data 拆出去的 views/topics(内联块此时为空,不修这两个文件就漏掉了)
+    for fn in ('views.json', 'topics.json'):
+        f = ROOT / 'data' / fn
+        if f.exists():
+            f.write_text(json.dumps(deep_fix(json.loads(f.read_text(encoding='utf-8'))),
+                                    ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
     # 3) mcp-data/ep/*.json 标题(分享页/SEO 从这里生成)
     epdir = ROOT / 'mcp-data' / 'ep'
     if epdir.exists():

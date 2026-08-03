@@ -41,6 +41,7 @@ pipeline/               内容管线(见下)
 | `add_person.py` | 抓维基头像 + 生成 PEOPLE 条目 |
 | `add_episode.py` | yt-dlp 取字幕 → DeepSeek 双语全文 + 共识/反共识 → 写库 |
 | `gen_views.py` / `gen_brief.py` / `gen_topics.py` / `gen_sectitles.py` | 观点演变 / 速览 / 议题 / 中文章节标题 |
+| `split_extra.py` / `split_data.py` | 首屏瘦身:insights/brief → `data/ep-extra.json`;VIEWS/TOPICS.items → `data/views.json`、`data/topics.json`(前端按需拉) |
 | `build_mcp_data.js` / `build_share_pages.js` | MCP 数据 + 每期 OG 分享页 + sitemap |
 | `auto_refresh.py` | 无人值守保鲜:发现新单集 → 选题闸门 → 收录 → 再生成 → 推送(本地 launchd 定时) |
 

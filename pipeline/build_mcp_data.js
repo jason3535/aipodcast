@@ -11,7 +11,12 @@ try{const extra=JSON.parse(fs.readFileSync(path.join(ROOT,'data','ep-extra.json'
   EPISODES.forEach(e=>{const x=extra[e.id];if(x){if(!e.insights&&x.insights)e.insights=x.insights;if(!e.brief&&x.brief)e.brief=x.brief;}});
 }catch(err){console.error('ep-extra 合并失败:',err.message);}
 const PEOPLE=eval('('+h.match(/const PEOPLE = (\{[\s\S]*?\n\});/)[1]+')');
-const VIEWS=JSON.parse(h.match(/VIEWS_START\*\/const VIEWS=(\{[\s\S]*?\});\/\*VIEWS_END/)[1]);
+// 观点演变:split_data 把它移到 data/views.json 了,内联块为空时从那里读(两种状态都兼容)
+let VIEWS=JSON.parse(h.match(/VIEWS_START\*\/const VIEWS=(\{[\s\S]*?\});\/\*VIEWS_END/)[1]);
+if(!Object.keys(VIEWS).length){
+  try{VIEWS=JSON.parse(fs.readFileSync(path.join(ROOT,'data','views.json'),'utf8'));}
+  catch(err){console.error('views.json 读取失败(MCP 人物数据将缺观点演变):',err.message);}
+}
 const OUT=path.join(ROOT,'mcp-data'),EP=path.join(OUT,'ep');
 fs.mkdirSync(EP,{recursive:true});
 

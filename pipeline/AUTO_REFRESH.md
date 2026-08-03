@@ -8,7 +8,7 @@
 1b. **频道维度(2026-07-03 新增)**:盯 12 个重点播客频道(Lex/Dwarkesh/No Priors/MLST/YC/Lenny/Training Data/20VC/DeepMind/a16z/Unsupervised Learning/TWIML,handle 均已核验)的最近 10 条上传,主嘉宾必须是**站内已有人物**才收(新人物交给人工);每频道 ≤2 期。两维度按视频去重、每人合计 ≤2 期。
 2. **选题闸门**(替代人工筛):每个候选过 DeepSeek 判断——必须是该人物作为**主嘉宾**的**英文****实质 AI 访谈**(自动剔除新闻短片/圆桌/非英语/本人非主角)。
 3. **收录**:每人最多 1 期最新、全局每轮 ≤6 期;调 `add_episode.py` 抓双语全文+核心观点;新播客台自动登记(DeepSeek 双语简介 + iTunes logo)。
-4. **重生成**:`gen_views` 观点演变 / `gen_topics` 议题 / `build_mcp_data` MCP 索引 / `build_share_pages` 分享页。
+4. **重生成**:`gen_views` 观点演变 / `gen_topics` 议题 / `split_data` 把这两份数据抽出 app.js(首屏瘦身,**必须在 build_mcp_data 之前**)/ `build_mcp_data` MCP 索引 / `build_share_pages` 分享页(**必须最后**,它按 app.js 内容回填 `?v=` 哈希)。
 5. **上线**:JS 校验通过后 `git commit && push`,GitHub Pages 自动部署。**没有新内容就不提交。**
 
 ## ⚠️ 仓库位置(TCC 坑,2026-07-03)
