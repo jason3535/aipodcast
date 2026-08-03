@@ -122,10 +122,7 @@ async function getEpisode(a) {
   return ep;
 }
 async function searchPapers(a) {
-  const { papers } = await (async () => { const url = PDATA + '/index.json';
-    const cache = caches.default; let r = await cache.match(url);
-    if (!r) { r = await fetch(url, { cf: { cacheTtl: 600 } }); if (r.ok) await cache.put(url, r.clone()); }
-    if (!r.ok) throw new Error('AI Paper 目录获取失败 ' + r.status); return await r.json(); })();
+  const { papers } = await getPaperJSON('index.json');
   const q = (a.query || '').toLowerCase().trim(); const terms = q ? q.split(/\s+/) : [];
   let res = papers.filter(p => !a.person || (p.person || '').toLowerCase().includes((a.person || '').toLowerCase()));
   const blob = p => [p.person, p.tEn, p.tZh, p.sEn, (p.contrib || []).map(x => (x.en || '') + (x.zh || '')).join(' ')].join(' ').toLowerCase();
@@ -140,9 +137,13 @@ async function searchPapers(a) {
     summary: p.sEn, contrib: (p.contrib || []).slice(0, 3),
     url: 'https://aipaper.jasonlin.tech/#/paper/' + p.id })) };
 }
-// AI Paper 侧的数据(与播客站的 mcp-data 分开,走 aipaper.jasonlin.tech/data)
+/* AI Paper 侧的数据(与播客站的 mcp-data 分开,走 aipaper.jasonlin.tech/data)。
+   缓存键带 10 分钟时间桶:纯按 URL 存 + cf.cacheTtl 会互相续命,实测纸站
+   data/index.json 更新后 15 分钟仍在发旧目录(2026-08-03)。带桶后每个 10 分钟
+   窗口必定回源一次,GitHub Pages 忽略 query,拿到的还是同一个文件。 */
+function paperKey(p) { return `${PDATA}/${p}?w=${Math.floor(Date.now() / 600000)}`; }
 async function getPaperJSON(p) {
-  const url = `${PDATA}/${p}`;
+  const url = paperKey(p);
   const cache = caches.default;
   let r = await cache.match(url);
   if (!r) { r = await fetch(url, { cf: { cacheTtl: 600 } }); if (r.ok) await cache.put(url, r.clone()); }
@@ -167,11 +168,9 @@ async function getScholar(a) {
 }
 async function getPaper(a) {
   const id = (a.id || '').replace(/[^a-z0-9.-]/gi, '');
-  const url = PDATA + '/' + id + '.json';
-  const cache = caches.default; let r = await cache.match(url);
-  if (!r) { r = await fetch(url, { cf: { cacheTtl: 600 } }); if (r.ok) await cache.put(url, r.clone()); }
-  if (!r.ok) throw new Error(`没有这篇: ${a.id}。用 search_papers 查 id。`);
-  let p = await r.json();
+  let p;
+  try { p = await getPaperJSON(id + '.json'); }
+  catch { throw new Error(`没有这篇: ${a.id}。用 search_papers 查 id。`); }
   const lang = a.lang || 'both';
   if (lang !== 'both' && Array.isArray(p.full)) {
     p = { ...p, full: p.full.map(s => ({ sec: s.sec, secZh: s.secZh,
