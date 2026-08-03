@@ -55,6 +55,16 @@ const TOOLS = [
       query: { type: 'string', description: '关键词(中英皆可),匹配标题/摘要/作者名' },
       person: { type: 'string', description: '可选,按作者姓名(英文)过滤,如 Kaiming He' },
       limit: { type: 'number', description: '返回条数,默认 8' } }, additionalProperties: false } },
+  { name: 'list_scholars',
+    description: '列出 AI Paper 收录的学者/机构实体(姓名、头衔、领域、论文数)。想按人找论文时先用它拿 pid。',
+    inputSchema: { type: 'object', properties: {
+      query: { type: 'string', description: '可选,按姓名/头衔/领域筛选(中英皆可)' },
+      limit: { type: 'number', description: '返回条数,默认 60' } }, additionalProperties: false } },
+  { name: 'get_scholar',
+    description: '取某位学者的中英简介、研究领域,以及 TA 在站内的全部论文/长文列表(含日期、被引数)。再用 get_paper 取全文。',
+    inputSchema: { type: 'object', properties: {
+      pid: { type: 'string', description: '学者 id,如 kaiming / ilya / zhilinyang(来自 list_scholars)' } },
+      required: ['pid'], additionalProperties: false } },
   { name: 'get_paper',
     description: '取某篇论文/文章的逐段双语全文 + 核心贡献/局限。lang 可选 both/en/zh 控制返回大小。',
     inputSchema: { type: 'object', properties: {
@@ -130,6 +140,31 @@ async function searchPapers(a) {
     summary: p.sEn, contrib: (p.contrib || []).slice(0, 3),
     url: 'https://aipaper.jasonlin.tech/#/paper/' + p.id })) };
 }
+// AI Paper 侧的数据(与播客站的 mcp-data 分开,走 aipaper.jasonlin.tech/data)
+async function getPaperJSON(p) {
+  const url = `${PDATA}/${p}`;
+  const cache = caches.default;
+  let r = await cache.match(url);
+  if (!r) { r = await fetch(url, { cf: { cacheTtl: 600 } }); if (r.ok) await cache.put(url, r.clone()); }
+  if (!r.ok) throw new Error(`AI Paper 数据获取失败 ${p} (${r.status})`);
+  return await r.json();
+}
+async function listScholars(a) {
+  const { people } = await getPaperJSON('people.json');
+  const q = (a.query || '').toLowerCase().trim();
+  let res = people;
+  if (q) res = people.filter(p => [p.en, p.zh, p.tiEn, p.tiZh, (p.fields || []).join(' ')].join(' ').toLowerCase().includes(q));
+  const lim = Math.min(a.limit || 60, 250);
+  return { total: res.length, scholars: res.slice(0, lim).map(p => ({
+    pid: p.pid, name: p.en, nameZh: p.zh, title: p.tiEn, titleZh: p.tiZh,
+    fields: p.fields, papers: p.papers.length, isOrg: p.isOrg || undefined })) };
+}
+async function getScholar(a) {
+  const { people } = await getPaperJSON('people.json');
+  const p = people.find(x => x.pid === a.pid);
+  if (!p) throw new Error(`没有这位学者: ${a.pid}。用 list_scholars 查可用 pid。`);
+  return { ...p, url: 'https://aipaper.jasonlin.tech/#/person/' + p.pid };
+}
 async function getPaper(a) {
   const id = (a.id || '').replace(/[^a-z0-9.-]/gi, '');
   const url = PDATA + '/' + id + '.json';
@@ -151,6 +186,8 @@ async function runTool(name, args) {
   if (name === 'search_episodes') return await searchEpisodes(args);
   if (name === 'get_episode') return await getEpisode(args);
   if (name === 'search_papers') return await searchPapers(args);
+  if (name === 'list_scholars') return await listScholars(args);
+  if (name === 'get_scholar') return await getScholar(args);
   if (name === 'get_paper') return await getPaper(args);
   throw new Error(`未知工具: ${name}`);
 }
@@ -164,7 +201,7 @@ async function handle(msg) {
   if (method === 'initialize') {
     const pv = (params && params.protocolVersion) || PROTO;
     return rpc(id, { protocolVersion: pv, capabilities: { tools: { listChanged: false } },
-      serverInfo: SERVER, instructions: '本服务覆盖两个站:AI Podcast(392+ 期播客双语全文)与 AI Paper(514+ 篇论文/长文双语全文)。播客用 list_people/search_episodes→get_episode;论文用 search_papers→get_paper。' });
+      serverInfo: SERVER, instructions: '本服务覆盖两个站:AI Podcast(392+ 期播客双语全文)与 AI Paper(558+ 篇论文/长文双语全文,238 位学者)。播客用 list_people/get_person/search_episodes→get_episode;论文用 list_scholars/get_scholar 或 search_papers 定位,再 get_paper 取全文。' });
   }
   if (method === 'notifications/initialized' || method === 'notifications/cancelled') return null; // 通知无响应
   if (method === 'ping') return rpc(id, {});
