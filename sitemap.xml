@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-08-04</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/nateparrott/</loc><lastmod>2026-08-04</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/joshmeier/</loc><lastmod>2026-08-04</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/dmitridolgov/</loc><lastmod>2026-08-04</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/tomverrilli/</loc><lastmod>2026-08-02</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/joonpark/</loc><lastmod>2026-08-02</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/igorbabuschkin/</loc><lastmod>2026-08-02</lastmod></url>
@@ -230,6 +233,9 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/albertgu/</loc><lastmod>2026-06-27</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/pathak/</loc><lastmod>2026-06-27</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/abbeel/</loc><lastmod>2026-06-17</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/nateparrott-diveclub-2026/</loc><lastmod>2026-08-04</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/joshmeier-training-2026/</loc><lastmod>2026-08-04</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/dmitridolgov-ycombina-2026/</loc><lastmod>2026-08-04</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/tomverrilli-lennyspo-2026/</loc><lastmod>2026-08-02</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/joonpark-20vc-2026/</loc><lastmod>2026-08-02</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/igorbabuschkin-unsuperv-2026/</loc><lastmod>2026-08-02</lastmod></url>

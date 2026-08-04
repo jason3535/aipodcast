@@ -22,5 +22,29 @@
   "tiEn": "Chief AI Scientist, Xaira Therapeutics",
   "from": "Latent Space",
   "added": "2026-08-02"
+ },
+ {
+  "pid": "nateparrott",
+  "en": "Nate Parrott",
+  "zh": "内特·帕罗特",
+  "tiEn": "Designer at Anthropic",
+  "from": "Dive Club",
+  "added": "2026-08-04"
+ },
+ {
+  "pid": "joshmeier",
+  "en": "Josh Meier",
+  "zh": "乔什·迈尔",
+  "tiEn": "Co-founder, Chai Discovery",
+  "from": "Training Data",
+  "added": "2026-08-04"
+ },
+ {
+  "pid": "dmitridolgov",
+  "en": "Dmitri Dolgov",
+  "zh": "德米特里·多尔戈夫",
+  "tiEn": "Co-CEO, Waymo",
+  "from": "Y Combinator",
+  "added": "2026-08-04"
  }
 ]
