@@ -735,7 +735,7 @@ const POD_LOGO={
   'This Past Weekend':'thispastweeken',
 };
 const podLogo=(e,cls='')=>POD_LOGO[e.pod.en]
-  ? `<img class="podlogo ${cls}" src="assets/pods/${POD_LOGO[e.pod.en]}.jpg" alt="${e.pod.en}" loading="lazy" onerror="this.remove()">` : '';
+  ? `<img class="podlogo ${cls}" src="assets/pods/${POD_LOGO[e.pod.en]}.webp" alt="${e.pod.en}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/pods/${POD_LOGO[e.pod.en]}.jpg'">` : '';
 
 /* 播客媒体简介（详情页用） */
 const POD_INFO={
@@ -1215,7 +1215,7 @@ const fmtDate=d=>{const[y,m,dd]=(d||'').split('-');return dd?`${y}.${m}.${dd}`:`
 const fmtDur=m=>m>=60?`${Math.floor(m/60)}h${String(m%60).padStart(2,'0')}m`:`${m}m`;
 function av(pid,cls=''){const p=PEOPLE[pid];const cs=(p.fields.length?p.fields:['deep-learning']).map(fcolor);
   const bg=cs.length>1?`linear-gradient(135deg,${cs[0]},${cs[1]})`:`linear-gradient(135deg,${cs[0]},${cs[0]})`;
-  const img=PHOTOS.has(pid)?`<img src="assets/people/${pid}.jpg" alt="${p.en}" loading="lazy" onerror="this.remove()">`:'';
+  const img=PHOTOS.has(pid)?`<img src="assets/people/${pid}.webp" alt="${p.en}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/people/${pid}.jpg'">`:'';
   return `<div class="av ${cls}" style="background:${bg}">${p.init}${img}</div>`;}
 function epCover(e){const p=PEOPLE[e.pid];const bg=coverBg(p.fields);
   return `<div class="ep-cover" style="background:${bg}">
@@ -1441,7 +1441,7 @@ function sharePromoHtml(st,hrs){
   const ups=[...new Set(st.eps.map(e=>e.pid))];
   const mx=Math.min(7,ups.length);let avs='';
   for(let i=0;i<mx;i++){const pid=ups[i];const p=PEOPLE[pid]||{};
-    avs+=(typeof PHOTOS!=='undefined'&&PHOTOS.has(pid))?`<img src="assets/people/${pid}.jpg" alt="" loading="lazy">`:`<span>${p.init||'?'}</span>`;}
+    avs+=(typeof PHOTOS!=='undefined'&&PHOTOS.has(pid))?`<img src="assets/people/${pid}.webp" alt="" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/people/${pid}.jpg'">`:`<span>${p.init||'?'}</span>`;}
   if(ups.length>mx)avs+=`<span>+${ups.length-mx}</span>`;
   return `<div class="shp-card">
     <div class="shp-dots"><i></i><i></i><i></i><i></i><i></i></div>
@@ -1479,7 +1479,7 @@ function vStats(){
   const mx=top.length?top[0][1].n:1;
   const rows=top.map(([name,v])=>{
     const slug=POD_LOGO[v.en]||POD_LOGO[name];
-    const ic=slug?`<img class="rk-logo" src="assets/pods/${slug}.jpg" alt="">`:`<span class="rk-ini">${name.slice(0,2)}</span>`;
+    const ic=slug?`<img class="rk-logo" src="assets/pods/${slug}.webp" alt="" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/pods/${slug}.jpg'">`:`<span class="rk-ini">${name.slice(0,2)}</span>`;
     return `<div class="rk-row">${ic}<span class="rk-name">${name}</span><span class="rk-bar" style="width:${Math.round(v.n/mx*220)}px"></span><span class="rk-n">${v.n} 期</span></div>`;}).join('');
   return `<div class="wrap"><section class="reveal">
     <div class="eyebrow">My Space · 我的</div><h2 class="title">我的</h2><div class="st-h2">我的数据</div>
@@ -1568,7 +1568,7 @@ function vHome(){
   <div class="site-tag">海外一线最新 AI 人物播客 · 中英对照全文<span class="st-n">${EPISODES.length} 期 · ${Object.keys(PEOPLE).length} 位</span></div>
   <div class="wrap hero">
     <div class="hero-card reveal">
-      <div class="hero-art" style="background:${(()=>{const cs=fp.fields.map(fcolor);return cs.length>1?`linear-gradient(150deg,${cs.join(',')})`:(cs[0]||'var(--accent)');})()}"><div class="hero-cov"><span class="hc-pod">${(()=>{const s=POD_LOGO[feat.pod.en]||POD_LOGO[feat.pod.zh];return s?`<img src="assets/pods/${s}.jpg" alt="">`:'';})()}${feat.pod.zh}</span><span class="hc-ct"><b>${fp.en}</b><span>${(feat.date||'').replace(/-/g,'.')}${feat.min?' · '+feat.min+'m':''}</span></span></div>${av(feat.pid)}</div>
+      <div class="hero-art" style="background:${(()=>{const cs=fp.fields.map(fcolor);return cs.length>1?`linear-gradient(150deg,${cs.join(',')})`:(cs[0]||'var(--accent)');})()}"><div class="hero-cov"><span class="hc-pod">${(()=>{const s=POD_LOGO[feat.pod.en]||POD_LOGO[feat.pod.zh];return s?`<img src="assets/pods/${s}.webp" alt="" decoding="async" onerror="this.onerror=null;this.src='assets/pods/${s}.jpg'">`:'';})()}${feat.pod.zh}</span><span class="hc-ct"><b>${fp.en}</b><span>${(feat.date||'').replace(/-/g,'.')}${feat.min?' · '+feat.min+'m':''}</span></span></div>${av(feat.pid)}</div>
       <div class="hero-body">
         <div class="eyebrow">最新上线 · Latest</div>
         <h1>${feat.tZh||feat.tEn}</h1>
@@ -1805,7 +1805,7 @@ function podStats(){
 }
 function podCard(key,v){
   const lg=POD_LOGO[key]
-    ? `<img src="assets/pods/${POD_LOGO[key]}.jpg" alt="${key}" loading="lazy" onerror="this.remove()">`
+    ? `<img src="assets/pods/${POD_LOGO[key]}.webp" alt="${key}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/pods/${POD_LOGO[key]}.jpg'">`
     : '';
   const info=POD_INFO[key];
   const zh=v.zh&&v.zh!==key?v.zh:'';
@@ -1833,7 +1833,7 @@ function vPod(slug){
   const info=POD_INFO[key]||{zh:'',host:'',en:'',cn:''};
   const eps=EPISODES.filter(e=>e.pod.en===key).sort((a,b)=>a.date<b.date?1:-1);
   const lg=POD_LOGO[key]
-    ? `<img class="pod-logo-lg" src="assets/pods/${POD_LOGO[key]}.jpg" alt="${key}">`
+    ? `<img class="pod-logo-lg" src="assets/pods/${POD_LOGO[key]}.webp" alt="${key}" decoding="async" onerror="this.onerror=null;this.src='assets/pods/${POD_LOGO[key]}.jpg'">`
     : `<div class="pod-logo-lg fallback">${key.slice(0,2)}</div>`;
   return `<div class="wrap">
     <div class="pp-head reveal">${lg}
