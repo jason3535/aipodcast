@@ -21,6 +21,7 @@ import json
 import re
 import sys
 import urllib.parse
+import unicodedata
 import urllib.request
 from io import BytesIO
 from pathlib import Path
@@ -31,11 +32,17 @@ HDR = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKi
                      "(KHTML, like Gecko) Chrome/126 Safari/537.36"}
 
 
+def fold(s):
+    """去重音 + 小写,让 Martín / Martin 这类写法能对上。"""
+    return "".join(c for c in unicodedata.normalize("NFD", s or "")
+                   if not unicodedata.combining(c)).lower()
+
+
 def get(url, timeout=25):
     return urllib.request.urlopen(urllib.request.Request(url, headers=HDR), timeout=timeout).read()
 
 
-def save(pid, raw, face=True, zoom=2.6):
+def save(pid, raw, face=True, zoom=2.6, allow_faceless=False):
     """裁成 256×256:能检出人脸就以最大那张脸为中心裁,否则退回居中偏上(证件照构图)。
     zoom = 裁边长 ÷ 脸宽,越小脸越大;封面上人脸靠边、周围压着标题文字时调小(如 1.9)。"""
     from PIL import Image
@@ -48,7 +55,11 @@ def save(pid, raw, face=True, zoom=2.6):
             import numpy as np
             cas = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
             g = cv2.cvtColor(np.array(im), cv2.COLOR_RGB2GRAY)
-            fs = cas.detectMultiScale(g, 1.1, 5, minSize=(max(40, w // 12), max(40, h // 12)))
+            mn = (max(40, w // 12), max(40, h // 12))
+            fs = cas.detectMultiScale(g, 1.1, 5, minSize=mn)
+            if not len(fs):      # 正脸没检到再试侧脸(访谈截图常是侧身)
+                fs = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_profileface.xml") \
+                    .detectMultiScale(g, 1.1, 5, minSize=mn)
             if len(fs):
                 x, y, fw, fh = max(fs, key=lambda f: f[2] * f[3])
                 cx, cy = x + fw / 2, y + fh / 2
@@ -60,6 +71,11 @@ def save(pid, raw, face=True, zoom=2.6):
         except Exception as e:
             print(f"  人脸检测跳过: {e}", file=sys.stderr)
     if box is None:
+        if face and not allow_faceless:
+            # 这一步很关键:GitHub/og:image 常常给的是 logo、剪影、品牌图标而不是人像
+            # (踩过三次:Albert Gu 的几何图标、Jonathan Ho 的粉色方块、苏剑林的剪影插画)。
+            # 检不到脸就判这个来源不可用,让调用方自动去试下一个源,而不是把 logo 当头像装上。
+            raise RuntimeError("这张图里检不到人脸(多半是 logo/插画),不采用;确认要用加 --allow-faceless")
         s = min(w, h)
         box = ((w - s) // 2, (h - s) // 3, (w - s) // 2 + s, (h - s) // 3 + s)
     OUT.mkdir(parents=True, exist_ok=True)
@@ -78,8 +94,12 @@ def from_wikidata(name, expect):
     want = [w.strip().lower() for w in expect.split(",") if w.strip()]
     for hit in d.get("search", []):
         desc = (hit.get("description") or "").lower()
-        label = (hit.get("label") or "").lower()
-        if label != name.lower() or not any(w in desc for w in want):
+        # 名字比对:去重音 + 要求查询里每个词都是标签里的一个完整词。
+        # 不用全等——"Warren McCulloch" 的条目标签是 "Warren Sturgis McCulloch",带中间名;
+        # "Martin Arjovsky" 的标签是 "Martín Arjovsky",带重音。但也不放宽成子串,否则
+        # "Albert Gu" 会被 "Albert Günther" 的 gu- 前缀蒙混过去。
+        lab_words = set(fold(hit.get("label") or "").split())
+        if not set(fold(name).split()) <= lab_words or not any(w in desc for w in want):
             print(f"  跳过 {hit['id']} 「{hit.get('label')}」({desc[:44]}) — 与 --expect 不符")
             continue
         ent = json.loads(get(f"https://www.wikidata.org/wiki/Special:EntityData/{hit['id']}.json"))
@@ -150,7 +170,8 @@ def main():
     a.add_argument("--expect", help="身份校验:wikidata 用描述关键词(如 'computer scientist,researcher'),github 用真名")
     a.add_argument("--region", choices=["left","right"], help="双人封面只取半边再检脸")
     a.add_argument("--zoom", type=float, default=2.6, help="裁边长÷脸宽,默认2.6;人脸靠边或周围有文字时调小")
-    a.add_argument("--no-face", action="store_true")
+    a.add_argument("--no-face", action="store_true", help="图已是方形人像,跳过检测直接居中裁")
+    a.add_argument("--allow-faceless", action="store_true", help="明知不是人脸也要用(如机构 logo)")
     g = a.parse_args()
 
     for name, fn in (("wikidata", lambda: from_wikidata(g.wikidata, g.expect) if g.wikidata else None),
@@ -159,13 +180,15 @@ def main():
                      ("youtube", lambda: from_youtube(g.youtube, g.region) if g.youtube else None)):
         try:
             raw = fn()
+            if not raw:
+                continue
+            # save 也放进 try:检不到人脸会抛错,那就当这个来源不可用,自动去试下一个
+            p = save(g.pid, raw, face=not g.no_face, zoom=g.zoom, allow_faceless=g.allow_faceless)
         except Exception as e:
-            print(f"  {name} 失败: {e}", file=sys.stderr); continue
-        if raw:
-            p = save(g.pid, raw, face=not g.no_face, zoom=g.zoom)
-            print(f"✓ {g.pid} ← {name} | {p} ({p.stat().st_size // 1024}KB)")
-            print(f"  记得把 '{g.pid}' 加进 app.js 的 PHOTOS")
-            return
+            print(f"  {name} 不可用: {e}", file=sys.stderr); continue
+        print(f"✓ {g.pid} ← {name} | {p} ({p.stat().st_size // 1024}KB)")
+        print(f"  记得把 '{g.pid}' 加进 app.js 的 PHOTOS")
+        return
     print(f"✗ {g.pid} 所有来源都没拿到", file=sys.stderr); sys.exit(1)
 
 
