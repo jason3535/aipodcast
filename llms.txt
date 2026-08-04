@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 229 位人物 / 503 期访谈
+规模: 232 位人物 / 506 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -83,6 +83,9 @@
 - [Bret Taylor / 布雷特·泰勒](https://aipodcast.jasonlin.tech/pp/brettaylor/): Co-founder & CEO of Sierra; Chairman of the Board, OpenAI — 2 期
 - [Scott Wu / 吴一](https://aipodcast.jasonlin.tech/pp/scottwu/): Co-founder & CEO, Cognition — 2 期
 - [Michael Truell / 迈克尔·特鲁埃尔](https://aipodcast.jasonlin.tech/pp/truell/): Co-founder & CEO, Cursor — 2 期
+- [Nate Parrott / 内特·帕罗特](https://aipodcast.jasonlin.tech/pp/nateparrott/): Designer at Anthropic — 1 期
+- [Josh Meier / 乔什·迈尔](https://aipodcast.jasonlin.tech/pp/joshmeier/): Co-founder, Chai Discovery — 1 期
+- [Dmitri Dolgov / 德米特里·多尔戈夫](https://aipodcast.jasonlin.tech/pp/dmitridolgov/): Co-CEO, Waymo — 1 期
 - [Tom Verrilli / 汤姆·维里利](https://aipodcast.jasonlin.tech/pp/tomverrilli/): Chief Product Officer, Whatnot — 1 期
 - [Igor Babuschkin / 伊戈尔·巴布什金](https://aipodcast.jasonlin.tech/pp/igorbabuschkin/): Co-founder, River AI; former Co-founder, xAI — 1 期
 - [Patrick Collison / 帕特里克·科里森](https://aipodcast.jasonlin.tech/pp/collison/): Co-founder & CEO, Stripe — 1 期
@@ -238,6 +241,9 @@
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 1 期
 
 ## 最新访谈 Latest episodes
+- [Behind the Scenes of Claude Design with Nate Parrot](https://aipodcast.jasonlin.tech/e/nateparrott-diveclub-2026/) — Nate Parrott, Dive Club, 2026-08-04
+- [From Serendipity to Design: Engineering Biology with AI](https://aipodcast.jasonlin.tech/e/joshmeier-training-2026/) — Josh Meier, Training Data, 2026-08-04
+- [Building Physical AI: Lessons from Waymo's Autonomous Driving](https://aipodcast.jasonlin.tech/e/dmitridolgov-ycombina-2026/) — Dmitri Dolgov, Y Combinator, 2026-08-03
 - [Why We Regret Product Management Exists](https://aipodcast.jasonlin.tech/e/tomverrilli-lennyspo-2026/) — Tom Verrilli, Lenny’s Podcast, 2026-08-02
 - [Simulating Human Behavior: The Future of AI Prediction](https://aipodcast.jasonlin.tech/e/joonpark-20vc-2026/) — Joon Sung Park, 20VC, 2026-08-01
 - [From DeepMind to River AI: Igor Babuschkin on Personal AI and the Future of Agents](https://aipodcast.jasonlin.tech/e/igorbabuschkin-unsuperv-2026/) — Igor Babuschkin, Unsupervised Learning, 2026-07-31
@@ -275,9 +281,6 @@
 - [Designing Loops and Workflows for AI Agents](https://aipodcast.jasonlin.tech/e/thariq-peteryan-2026/) — Thariq Shihipar, Peter Yang, 2026-07-19
 - [Inkling, Liquid AI, and the Push for AI Regulation](https://aipodcast.jasonlin.tech/e/hasani-moonshot-2026/) — Ramin Hasani, Moonshots with Peter Diamandis, 2026-07-17
 - [Designed to Sound Right, Not to Know What's Right](https://aipodcast.jasonlin.tech/e/danklein-theaiwhy-2026/) — Dan Klein, The AI Why with Liam Lawson, 2026-07-16
-- [The Largest Infrastructure Build in History: Inside OpenAI's Compute Strategy](https://aipodcast.jasonlin.tech/e/sachinkatti-themadpo-2026/) — Sachin Katti, The MAD Podcast, 2026-07-16
-- [The Next Frontier: Scaling AI with Scientific Data](https://aipodcast.jasonlin.tech/e/andybeam-latentsp-2026/) — Andy Beam, Latent Space, 2026-07-16
-- [AI Models Are Smarter Than We Use: Insights on Claude Code](https://aipodcast.jasonlin.tech/e/thariq-southpar-2026/) — Thariq Shihipar, South Park Commons, 2026-07-16
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
