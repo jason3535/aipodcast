@@ -1731,7 +1731,9 @@ function vTopic(slug){
   const pids=Object.keys(byPid).sort((a,b)=>byPid[a][0].date<byPid[b][0].date?1:-1);
   const epTitle=ep=>{const e=EPISODES.find(x=>x.id===ep);return e?(e.tZh||e.tEn):'';};
   // 引用反查出处章节（与该期 insights 精确匹配），命中则深链 ?at= 直达原文
-  const secOf=q=>{const e=EPISODES.find(x=>x.id===q.ep);if(!e||!e.insights)return null;
+  const secOf=q=>{
+    if(typeof q.sec==='number'&&q.sec>=0)return q.sec;   // 构建期(split_data)已标好出处章节
+    const e=EPISODES.find(x=>x.id===q.ep);if(!e||!e.insights)return null;
     const hit=[...(e.insights.consensus||[]),...(e.insights.contrarian||[])].find(x=>x.en===q.en);
     return (hit&&typeof hit.sec==='number'&&hit.sec>=0)?hit.sec:null;};
   return `<div class="wrap"><section class="reveal" style="padding-bottom:0">
@@ -1943,14 +1945,14 @@ function vEpisode(id){
       <div class="br-h br-h2">本期回答 · Answers</div>
       <ul class="br-qs">${(e.brief.qs||[]).map(x=>`<li><span class="ie">${x.en}</span><span class="iz">${x.zh}</span></li>`).join('')}</ul>
       <div class="br-meta">原音频 ${fmtDur(e.min)}${e.brief.words?` · 全文约 ${Math.max(1,Math.round(e.brief.words/220))} 分钟阅读`:''}</div>
-    </div>`:(!window._extraReady?`<div class="sk-card reveal in">
+    </div>`:(!EP_EXTRA_OK[e.id]?`<div class="sk-card reveal in">
       <div class="sk" style="width:110px;height:13px;margin-bottom:14px"></div>
       <div class="sk" style="width:92%;height:15px;margin-bottom:9px"></div><div class="sk" style="width:85%;height:15px;margin-bottom:9px"></div><div class="sk" style="width:88%;height:15px"></div>
     </div>`:'');
   const insights=e.insights?`<div class="insights reveal in">
       <div class="ins-col consensus"><div class="ins-h">核心观点 · Key points</div><ul>${insRow(e.insights.consensus||[])}</ul></div>
       <div class="ins-col contrarian"><div class="ins-h">反共识 · Contrarian</div><ul>${insRow(e.insights.contrarian||[])}</ul></div>
-    </div>`:(!window._extraReady?`<div class="sk-card reveal in" style="min-height:180px">
+    </div>`:(!EP_EXTRA_OK[e.id]?`<div class="sk-card reveal in" style="min-height:180px">
       <div class="sk" style="width:150px;height:13px;margin-bottom:14px"></div>
       <div class="sk" style="width:90%;height:14px;margin-bottom:8px"></div><div class="sk" style="width:86%;height:14px;margin-bottom:8px"></div>
       <div class="sk" style="width:82%;height:14px;margin-bottom:8px"></div><div class="sk" style="width:88%;height:14px"></div>
@@ -2058,13 +2060,31 @@ function initTOC(){
 }
 
 /* ====== 逐字稿按需加载（首屏只装元数据，打开单集再拉全文，显著提速） ====== */
+const EP_EXTRA_OK={};                 // 哪几集的核心观点/速览已到位(随 ep/<id>.json 一起来)
+/* 全站观点句检索用的索引:只有打开搜索面板才拉,首屏不碰 */
+let _extraLoading=false;
+function ensureExtra(){
+  if(window._extraReady||_extraLoading)return;
+  _extraLoading=true;
+  fetch('data/ep-extra.json').then(r=>r.ok?r.json():Promise.reject(r.status)).then(x=>{
+    const by={};EPISODES.forEach(e=>{by[e.id]=e;});
+    for(const id in x){const e=by[id];if(e){if(!e.insights)e.insights=x[id].insights;if(!e.brief)e.brief=x[id].brief;EP_EXTRA_OK[id]=1;}}
+    window._extraReady=true;
+    if($('#searchOverlay').classList.contains('on'))searchInput($('#searchInput').value||'');   // 索引到了就地重搜
+  }).catch(()=>{_extraLoading=false;});
+}
 const TS_CACHE={};let _tsLoading=null;
 const TS_ERR={};
 function ensureTs(id){
   if((id in TS_CACHE)||_tsLoading===id)return;
   _tsLoading=id;delete TS_ERR[id];
   fetch('mcp-data/ep/'+id+'.json').then(r=>r.ok?r.json():Promise.reject(r.status))
-    .then(j=>{TS_CACHE[id]=j.transcript||[];})
+    .then(j=>{TS_CACHE[id]=j.transcript||[];
+      /* 核心观点/速览就在这个文件里,顺手回填 —— 单集页因此不必再等 data/ep-extra.json 整包 */
+      const e=EPISODES.find(x=>x.id===id);
+      if(e){if(j.insights&&Object.keys(j.insights).length&&!e.insights)e.insights=j.insights;
+            if(j.brief&&!e.brief)e.brief=j.brief;}
+      EP_EXTRA_OK[id]=1;})
     .catch(()=>{TS_ERR[id]=1;})   // 不缓存失败:留重试机会
     .finally(()=>{_tsLoading=null;
       if((location.hash||'').indexOf('/episode/'+id)>=0){const y=scrollY;render();scrollTo(0,y);}});
@@ -2444,7 +2464,7 @@ function syncSeg(){
 function toggleTheme(){const t=document.documentElement.dataset.theme==='dark'?'light':'dark';
   document.documentElement.dataset.theme=t;localStorage.theme=t;localStorage.prefsT=Date.now();syncTouch();}
 function toggleSearch(){$('#searchOverlay').classList.contains('on')?closeSearch():openSearch();}
-function openSearch(){const o=$('#searchOverlay');o.classList.add('on');searchInput('');
+function openSearch(){const o=$('#searchOverlay');o.classList.add('on');ensureExtra();searchInput('');
   setTimeout(()=>$('#searchInput').focus(),40);}
 function closeSearch(){const o=$('#searchOverlay');o.classList.remove('on');$('#searchInput').value='';}
 function srPerson(id){const p=PEOPLE[id];return `<div class="sr-row" data-go="#/person/${id}" onclick="srPick('#/person/${id}')">
@@ -2785,11 +2805,7 @@ document.addEventListener('keydown',e=>{
 ttsInit();
 render();
 if(syncCode())syncPull();   // 开启同步的设备:启动即拉取合并
-/* 懒加载 insights/brief（首屏后非阻塞回填；详情页/议题/搜索/hero 引言用，均已空值保护，未回填前优雅降级） */
-(function(){fetch('data/ep-extra.json').then(function(r){return r.ok?r.json():{};}).then(function(x){
-  var by={};EPISODES.forEach(function(e){by[e.id]=e;});
-  for(var id in x){var e=by[id];if(e){e.insights=x[id].insights;e.brief=x[id].brief;}}
-  window._extraReady=true;
-  var onEp=(location.hash||'').indexOf('/episode/')>=0;
-  if(onEp){var y=window.scrollY;render();window.scrollTo(0,y);}   // 单集页补上核心观点/速览;首页不重渲染避免闪烁
-}).catch(function(){});})();
+/* data/ep-extra.json(gzip 558KB)原本每次开页都拉,但它只有两个真正的用途:
+   ① 单集页的核心观点/速览 —— 已改由 mcp-data/ep/<id>.json 提供(那个文件单集页本来就要拉);
+   ② 全站搜索里按观点句检索 —— 改成打开搜索面板时才拉(绝大多数访客根本不搜)。
+   首屏因此完全不碰这 558KB。 */

@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parent.parent
 APP = ROOT / "app.js"
 VIEWS_JSON = ROOT / "data" / "views.json"
 TOPICS_JSON = ROOT / "data" / "topics.json"
+EP_EXTRA = ROOT / "data" / "ep-extra.json"
 
 REL_MAX = 8      # 每集存几个同议题候选:runtime 要跳过已读/已出现的,留余量
 
@@ -76,6 +77,19 @@ def main():
     ta, tb, topics = block(s, "TOPICS")
     items = topics.get("items") or {}
     if items:
+        # 每条观点标上它在原集里的章节号:议题页靠它给「直达出处 ↦」深链。
+        # 以前是运行时拿全量 insights 反查(逼着首屏背 ep-extra 整包),现在构建期查好写进 topics.json。
+        extra = json.loads(EP_EXTRA.read_text(encoding="utf-8")) if EP_EXTRA.exists() else {}
+        marked = 0
+        for v in items.values():
+            for it in v:
+                ins = (extra.get(it["ep"]) or {}).get("insights") or {}
+                hit = next((x for x in list(ins.get("consensus") or []) + list(ins.get("contrarian") or [])
+                            if x.get("en") == it.get("en")), None)
+                if hit and isinstance(hit.get("sec"), int) and hit["sec"] >= 0:
+                    it["sec"] = hit["sec"]
+                    marked += 1
+        out.append(f"议题引文标注出处 {marked}/{sum(len(v) for v in items.values())} 条")
         TOPICS_JSON.write_text(dump({"defs": topics["defs"], "items": items}), encoding="utf-8")
 
         counts = {slug: [len(v), len({i["pid"] for i in v})] for slug, v in items.items()}

@@ -60,7 +60,20 @@ EPISODES.forEach(e=>{
   fs.writeFileSync(path.join(EP,e.id+'.json'),JSON.stringify({
     id:e.id,pid:e.pid,person:p.en,personZh:p.zh,podEn:e.pod.en,podZh:e.pod.zh,
     date:e.date,min:e.min,fields:e.fields,tEn:e.tEn,tZh:e.tZh,sEn:e.sEn,sZh:e.sZh,
-    src:e.src,insights:e.insights||{},transcript:e.ts}));
+    src:e.src,insights:e.insights||{},brief:e.brief||null,transcript:e.ts}));
   wrote++;
 });
-console.log('mcp-data:',index.length,'期索引 +',people.length,'人 | ep 补写',wrote,'(其余沿用已有全文)');
+
+// 3b) 把 insights/brief 补进已有的 ep 文件:单集页本来就要拉这个文件,拿到这两块就不必再为
+//     data/ep-extra.json(gzip 558KB)整包买单。只补缺的字段,不碰 transcript。
+let patched=0;
+EPISODES.forEach(e=>{
+  const f=path.join(EP,e.id+'.json');
+  if(!fs.existsSync(f))return;
+  let d;try{d=JSON.parse(fs.readFileSync(f,'utf8'));}catch(_){return;}
+  let ch=false;
+  if(e.insights&&Object.keys(e.insights).length&&!(d.insights&&Object.keys(d.insights).length)){d.insights=e.insights;ch=true;}
+  if(e.brief&&!d.brief){d.brief=e.brief;ch=true;}
+  if(ch){fs.writeFileSync(f,JSON.stringify(d));patched++;}
+});
+console.log('mcp-data:',index.length,'期索引 +',people.length,'人 | ep 补写',wrote,'(其余沿用已有全文) | 补 insights/brief',patched);
