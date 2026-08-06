@@ -123,14 +123,21 @@ def gate(person, m):
 # ---- 播客台登记(双语简介 + iTunes logo) ----
 def slug(n): return re.sub(r"[^a-z0-9]", "", n.lower())[:14]
 
-def register_pod(pod_en):
-    """返回 (pod_zh, 是否新登记)。若已登记返回 (None, False)。"""
+def register_pod(pod_en, desc=""):
+    """返回 (pod_zh, 是否新登记)。若已登记返回 (None, False)。
+    desc = 该频道某期的视频简介,喂给模型当依据 —— 只给台名会瞎猜:
+    "Sourcery with Molly O'Shea"(VC 访谈节目)被先后编成"探索魔法与神秘主义"和"厨师分享食谱"。"""
     h = HTML.read_text(encoding="utf-8")
-    if f"'{pod_en}':{{zh:" in h or f'"{pod_en}":{{zh:' in h:
+    # 存进文件时单引号是转义过的(Molly O\'Shea),查重必须用同样的转义形式,
+    # 否则带撇号的台名永远查不到 → 每轮重复登记一条(实测攒出 3 条重复)。
+    esc = lambda s: s.replace("\\", "\\\\").replace("'", "\\'")
+    if f"'{esc(pod_en)}':{{zh:" in h or f'"{pod_en}":{{zh:' in h:
         return None, False
     try:
-        info = ds("给定一个播客/频道名,产出双语简介 JSON:{\"zh\":\"中文台名\",\"host\":\"主持/机构\",\"en\":\"≤22词英文简介\",\"cn\":\"≤40字中文简介\"}。只输出 JSON。",
-                  pod_en, mx=300)
+        info = ds("根据播客/频道名和它某一期的视频简介,产出双语简介 JSON:"
+                  "{\"zh\":\"中文台名\",\"host\":\"主持/机构\",\"en\":\"≤22词英文简介\",\"cn\":\"≤40字中文简介\"}。"
+                  "只依据给出的材料,材料不足就写得笼统些,不要凭台名联想。只输出 JSON。",
+                  f"频道名: {pod_en}\n视频简介: {desc[:600] or '(无)'}", mx=300)
     except Exception:
         info = {"zh": pod_en, "host": pod_en, "en": pod_en, "cn": pod_en}
     zh = info.get("zh", pod_en)
@@ -148,7 +155,6 @@ def register_pod(pod_en):
                 Image.open(BytesIO(raw)).convert("RGB").resize((256, 256), Image.LANCZOS).save(ROOT / "assets" / "pods" / f"{slug(pod_en)}.jpg", quality=85)
                 logo = slug(pod_en)
     except Exception: pass
-    esc = lambda s: s.replace("\\", "\\\\").replace("'", "\\'")
     entry = (f" '{esc(pod_en)}':{{zh:'{esc(zh)}',host:'{esc(info.get('host', pod_en))}',\n"
              f"   en:'{esc(info.get('en', pod_en))}',\n   cn:'{esc(info.get('cn', zh))}'}},\n")
     h = h.replace("const POD_INFO={\n", "const POD_INFO={\n" + entry, 1)
@@ -423,10 +429,10 @@ def main():
             if ensure_person(x["pid"], np):
                 note_pending_avatar(x["pid"], np, x["podEn"])
                 new_people.append(x["pid"])
-        pod_zh, _ = register_pod(x["podEn"])
+        pod_zh, _ = register_pod(x["podEn"], (meta(x["vid"]) or {}).get("desc", ""))
         if pod_zh is None:  # 已登记:取其 zh 名
             h = HTML.read_text(encoding="utf-8")
-            mm = re.search(r"'" + re.escape(x["podEn"]) + r"':\{zh:'([^']*)'", h)
+            mm = re.search(r"'" + re.escape(x["podEn"].replace("'", "\\'")) + r"':\{zh:'((?:[^'\\]|\\.)*)'", h)
             pod_zh = mm.group(1) if mm else x["podEn"]
         cmd = ["python3", "pipeline/add_episode.py", "--url", f"https://youtu.be/{x['vid']}",
                "--pid", x["pid"], "--guest", x["guest"], "--pod-en", x["podEn"], "--pod-zh", pod_zh,
