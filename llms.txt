@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 233 位人物 / 510 期访谈
+规模: 237 位人物 / 514 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -83,9 +83,12 @@
 - [Bret Taylor / 布雷特·泰勒](https://aipodcast.jasonlin.tech/pp/brettaylor/): Co-founder & CEO of Sierra; Chairman of the Board, OpenAI — 2 期
 - [Scott Wu / 吴一](https://aipodcast.jasonlin.tech/pp/scottwu/): Co-founder & CEO, Cognition — 2 期
 - [Michael Truell / 迈克尔·特鲁埃尔](https://aipodcast.jasonlin.tech/pp/truell/): Co-founder & CEO, Cursor — 2 期
+- [Garry Tan / 陈嘉兴](https://aipodcast.jasonlin.tech/pp/garrytan/): President & CEO, Y Combinator — 1 期
+- [Philip Johnston / 菲利普·约翰斯顿](https://aipodcast.jasonlin.tech/pp/philipjohnston/): Co-founder & CEO, Starcloud — 1 期
 - [Josh Meier / 乔什·迈尔](https://aipodcast.jasonlin.tech/pp/joshmeier/): Co-founder, Chai Discovery — 1 期
 - [Nate Parrott / 内特·帕罗特](https://aipodcast.jasonlin.tech/pp/nateparrott/): Designer at Anthropic — 1 期
 - [Dmitri Dolgov / 德米特里·多尔戈夫](https://aipodcast.jasonlin.tech/pp/dmitridolgov/): Co-CEO, Waymo — 1 期
+- [Philip Kiely / 菲利普·基利](https://aipodcast.jasonlin.tech/pp/philipkiely/): Developer Relations Lead, Baseten — 1 期
 - [Tom Verrilli / 汤姆·维里利](https://aipodcast.jasonlin.tech/pp/tomverrilli/): Chief Product Officer, Whatnot — 1 期
 - [Patrick Collison / 帕特里克·科里森](https://aipodcast.jasonlin.tech/pp/collison/): Co-founder & CEO, Stripe — 1 期
 - [Igor Babuschkin / 伊戈尔·巴布什金](https://aipodcast.jasonlin.tech/pp/igorbabuschkin/): Co-founder, River AI; former Co-founder, xAI — 1 期
@@ -124,6 +127,7 @@
 - [Bryan Catanzaro / 布莱恩·卡坦扎罗](https://aipodcast.jasonlin.tech/pp/catanzaro/): VP Applied Deep Learning Research, NVIDIA — 1 期
 - [Sergey Edunov / 谢尔盖·叶杜诺夫](https://aipodcast.jasonlin.tech/pp/edunov/): CTO, Genesis Molecular AI; led Llama 2/3 pretraining at Meta — 1 期
 - [Grant Sanderson / 格兰特·桑德森](https://aipodcast.jasonlin.tech/pp/grantsanderson/): Creator of 3Blue1Brown; math educator — 1 期
+- [Thomas Ahle / 托马斯·阿勒](https://aipodcast.jasonlin.tech/pp/thomasahle/): Head of ML & Staff Research Scientist, Normal Computing — 1 期
 - [Loredana Crisan / 洛雷达娜·克里桑](https://aipodcast.jasonlin.tech/pp/loredanacrisan/): Chief Design Officer, Figma — 1 期
 - [Matei Zaharia / 马泰·扎哈里亚](https://aipodcast.jasonlin.tech/pp/matei/): Co-founder & CTO, Databricks; Associate Professor, UC Berkeley — 1 期
 - [Dean Ball / 迪恩·鲍尔](https://aipodcast.jasonlin.tech/pp/deanball/): Head of Strategic Futures, OpenAI — 1 期
@@ -242,10 +246,13 @@
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 1 期
 
 ## 最新访谈 Latest episodes
+- [Personal AGI: The Spinoza Heresy of Intelligence](https://aipodcast.jasonlin.tech/e/garrytan-ycombina-2026/) — Garry Tan, Y Combinator, 2026-08-06
+- [Book a Launch Before You Know What to Launch](https://aipodcast.jasonlin.tech/e/philipjohnston-ycombina-2026/) — Philip Johnston, Y Combinator, 2026-08-05
 - [SpaceX Q2 2026 Earnings Call: Starship, Starlink, and AI Ambitions](https://aipodcast.jasonlin.tech/e/elon-spacexq2-2026/) — Elon Musk, SpaceX Q2 2026 Earnings Call, 2026-08-04
 - [From Serendipity to Design: Engineering Biology with AI](https://aipodcast.jasonlin.tech/e/joshmeier-training-2026/) — Josh Meier, Training Data, 2026-08-04
 - [Behind the Scenes of Claude Design with Nate Parrot](https://aipodcast.jasonlin.tech/e/nateparrott-diveclub-2026/) — Nate Parrott, Dive Club, 2026-08-04
 - [Building Physical AI: Lessons from Waymo's Autonomous Driving](https://aipodcast.jasonlin.tech/e/dmitridolgov-ycombina-2026/) — Dmitri Dolgov, Y Combinator, 2026-08-03
+- [How JLM52 Writes GPU Kernels and Long Query Routing](https://aipodcast.jasonlin.tech/e/philipkiely-latentsp-2026/) — Philip Kiely, Latent Space, 2026-08-03
 - [Why We Regret Product Management Exists](https://aipodcast.jasonlin.tech/e/tomverrilli-lennyspo-2026/) — Tom Verrilli, Lenny’s Podcast, 2026-08-02
 - [Simulating Human Behavior: The Future of AI Prediction](https://aipodcast.jasonlin.tech/e/joonpark-20vc-2026/) — Joon Sung Park, 20VC, 2026-08-01
 - [Startup School: Patrick Collison on Learning, Writing, and Dropping Out](https://aipodcast.jasonlin.tech/e/collison-ycombina-2026/) — Patrick Collison, Y Combinator, 2026-07-31
@@ -279,9 +286,6 @@
 - [Factory CEO on Customer Obsession vs Output Metrics and Enterprise AI Strategy](https://aipodcast.jasonlin.tech/e/matangrinberg-sequoiac-2026/) — Matan Grinberg, Training Data, 2026-07-21
 - [Building Creative Tools with AI Agents: Pablo Stanley on Ecto and the Future of Design](https://aipodcast.jasonlin.tech/e/pablostanley-diveclub-2026/) — Pablo Stanley, Dive Club, 2026-07-21
 - [Applied Intuition: Putting Intelligence on a Billion Machines](https://aipodcast.jasonlin.tech/e/qasaryounis-thea16zp-2026/) — Qasar Younis, The a16z Podcast, 2026-07-21
-- [The Case for Specialized Intelligence](https://aipodcast.jasonlin.tech/e/linqiao-20vcwith-2026/) — Lin Qiao, 20VC, 2026-07-20
-- [Designing Loops and Workflows for AI Agents](https://aipodcast.jasonlin.tech/e/thariq-peteryan-2026/) — Thariq Shihipar, Peter Yang, 2026-07-19
-- [Navigating Role Fluidity in the Age of AI with Netflix's Elizabeth Stone](https://aipodcast.jasonlin.tech/e/elizabethstone-lennyspo-2026/) — Elizabeth Stone, Lenny’s Podcast, 2026-07-19
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
