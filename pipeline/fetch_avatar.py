@@ -144,7 +144,46 @@ def from_url(url):
             u = urllib.parse.urljoin(url, m.group(1))
             print(f"  og:image → {u[:100]}")
             return get(u)
-    raise RuntimeError("页面里没有 og:image")
+
+    # 兜底:学术个人主页普遍不写 og:image,人像就是页面里一个普通 <img>。
+    # 逐个下载候选图做人脸检测,取第一张检出人脸的 —— 检测本身就是筛选器,
+    # 顺带把 logo、图标、论文配图排除掉。
+    cands = []
+    for m in re.finditer(r'<img[^>]+src=["\']([^"\']+)', html, re.I):
+        u = urllib.parse.urljoin(url, m.group(1))
+        if re.search(r"\.(svg|gif)(\?|$)", u, re.I) or re.search(r"icon|logo|badge|banner", u, re.I):
+            continue
+        if u not in cands:
+            cands.append(u)
+    print(f"  页面无 og:image,改扫 <img>:{len(cands)} 个候选")
+    for u in cands[:12]:
+        try:
+            raw = get(u, timeout=15)
+            if len(raw) < 2000:                    # 太小基本是图标
+                continue
+            if _has_face(raw):
+                print(f"  命中人像 → {u[:90]}")
+                return raw
+        except Exception:
+            continue
+    raise RuntimeError("页面里没有 og:image,扫 <img> 也没找到人像")
+
+
+def _has_face(raw):
+    """只做检测、不裁剪 —— 给 from_url 挑候选图用。"""
+    try:
+        import cv2
+        import numpy as np
+        from PIL import Image
+        im = Image.open(BytesIO(raw)).convert("RGB")
+        g = cv2.cvtColor(np.array(im), cv2.COLOR_RGB2GRAY)
+        mn = (max(30, im.width // 14), max(30, im.height // 14))
+        for xml in ("haarcascade_frontalface_default.xml", "haarcascade_profileface.xml"):
+            if len(cv2.CascadeClassifier(cv2.data.haarcascades + xml).detectMultiScale(g, 1.1, 5, minSize=mn)):
+                return True
+    except Exception:
+        pass
+    return False
 
 
 def from_youtube(url, region=None):
