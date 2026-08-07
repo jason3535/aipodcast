@@ -11,6 +11,32 @@
 const DATA = 'https://aipodcast.jasonlin.tech/mcp-data';
 const ALLOW = new Set(['https://aipodcast.jasonlin.tech','http://localhost:8000','http://127.0.0.1:8000','null']);
 const MAX_Q = 500, MAX_CTX = 46000;
+// 问答额度(次/天)。DeepSeek 便宜,但仍要有上限防被当免费 API 刷。
+const ASK_IP_DAY = 50, ASK_DAY = 400;
+
+/* ---------- 限流:按 IP 按天 + 全站按天硬上限(防刷钱) ----------
+ * cost 的单位由调用方决定:TTS 用字符数(ElevenLabs 按字符计费),问答用次数。
+ * KV 最终一致,并发下可能小幅超出 —— 这是成本护栏不是安全边界,够用。
+ * KV 故障时**放行**:宁可短暂失去护栏,也不让计数层故障拖垮整个功能;
+ * 全站上限是最后的兜底。改额度不必动代码,在 Worker 环境变量里设即可。 */
+async function quota(env, kind, ip, cost, ipCap, dayCap) {
+  if (!env.RL) return null;                       // 未绑定 KV → 不限流(本地/回滚场景)
+  const day = new Date().toISOString().slice(0, 10);
+  const kIp = `${kind}:${day}:${ip || 'unknown'}`, kAll = `${kind}:${day}:_all`;
+  try {
+    const [a, b] = await Promise.all([env.RL.get(kIp), env.RL.get(kAll)]);
+    const used = +a || 0, all = +b || 0;
+    if (used + cost > ipCap) return 'ip';
+    if (all + cost > dayCap) return 'all';
+    const ttl = 172800;                           // 2 天,跨时区也够
+    await Promise.all([
+      env.RL.put(kIp, String(used + cost), { expirationTtl: ttl }),
+      env.RL.put(kAll, String(all + cost), { expirationTtl: ttl }),
+    ]);
+  } catch (_) { return null; }
+  return null;
+}
+
 const mem = {};
 const cors = o => ({ 'Access-Control-Allow-Origin': ALLOW.has(o) ? o : 'https://aipodcast.jasonlin.tech',
   'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type', 'Vary': 'Origin' });
@@ -122,6 +148,11 @@ export default {
     const history = (Array.isArray(b.history) ? b.history.slice(-4) : [])
       .filter(m => m && m.role && m.content).map(m => ({ role: m.role === 'assistant' ? 'assistant' : 'user', content: ('' + m.content).slice(0, 1500) }));
     if (!question) return jerr('缺少 question', 400, co);
+
+    const over = await quota(env, 'ask', req.headers.get('CF-Connecting-IP'), 1,
+      +env.ASK_IP_DAY || ASK_IP_DAY, +env.ASK_DAY || ASK_DAY);
+    if (over) return jerr(over === 'ip' ? '今天的提问次数已用完，明天再来吧。'
+      : '本站今日问答额度已用完，明天再来吧。', 429, co);
 
     const hasSearch = !!env.SEARCH_KEY;
     let sys, ctxTitle = '';

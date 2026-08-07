@@ -5,3 +5,8 @@ compatibility_date = "2024-11-01"
 routes = [
   { pattern = "tts.jasonlin.tech", custom_domain = true }
 ]
+
+# 限流计数(按 IP 按天 + 全站按天硬上限)。两个 worker 共用同一命名空间,key 自带前缀区分。
+[[kv_namespaces]]
+binding = "RL"
+id = "b23556a020c74d4dafbd147895e87745"
