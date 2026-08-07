@@ -129,7 +129,13 @@ def from_github(user, expect):
 def from_url(url):
     if re.search(r"\.(jpe?g|png|webp)(\?|$)", url, re.I):
         return get(url)
-    html = get(url).decode("utf-8", "ignore")
+    raw = get(url)
+    # 不能只看扩展名:GitHub 组织/用户头像这类 URL 没有后缀,却直接就是图片,
+    # 按网页去找 og:image 必然失败。改成按内容的魔数判断。
+    if raw[:3] == b"\xff\xd8\xff" or raw[:8] == b"\x89PNG\r\n\x1a\n" or raw[:4] == b"RIFF":
+        print("  URL 直接返回图片(按内容判定,非扩展名)")
+        return raw
+    html = raw.decode("utf-8", "ignore")
     for pat in (r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)',
                 r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
                 r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)'):
@@ -156,12 +162,9 @@ def from_youtube(url, region=None):
     if region:
         from PIL import Image
         im = Image.open(BytesIO(raw)).convert("RGB"); w, h = im.size
-        box = {"left": (0, 0, int(w * .5), h),
-               "right": (int(w * .5), 0, w, h),
-               "center": (int(w * .32), 0, int(w * .68), h)}[region]   # 合影里主角常在正中
-        im = im.crop(box)
+        im = im.crop((0, 0, int(w * .5), h) if region == "left" else (int(w * .5), 0, w, h))
         buf = BytesIO(); im.save(buf, "JPEG", quality=95); raw = buf.getvalue()
-        print(f"  只取封面{ {'left':'左半','right':'右半','center':'中段'}[region] }")
+        print(f"  只取封面{'左' if region == 'left' else '右'}半")
     return raw
 
 
@@ -171,7 +174,7 @@ def main():
     a.add_argument("--wikidata"); a.add_argument("--github")
     a.add_argument("--url"); a.add_argument("--youtube")
     a.add_argument("--expect", help="身份校验:wikidata 用描述关键词(如 'computer scientist,researcher'),github 用真名")
-    a.add_argument("--region", choices=["left","right","center"], help="多人封面先切一块再检脸:left/right/center")
+    a.add_argument("--region", choices=["left","right"], help="双人封面只取半边再检脸")
     a.add_argument("--zoom", type=float, default=2.6, help="裁边长÷脸宽,默认2.6;人脸靠边或周围有文字时调小")
     a.add_argument("--no-face", action="store_true", help="图已是方形人像,跳过检测直接居中裁")
     a.add_argument("--allow-faceless", action="store_true", help="明知不是人脸也要用(如机构 logo)")
