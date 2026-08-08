@@ -30,9 +30,19 @@ TOPICS_DEF=[
 ]
 SLUGS={s for s,_,_ in TOPICS_DEF}
 THEMELIST="\n".join(f"  {s}: {zh} / {en}" for s,zh,en in TOPICS_DEF)
-SYS=f"""你是 AI Podcast 编辑。给定一位嘉宾在某期播客里的若干「观点」(中英),把每条归到最贴切的一个议题;不贴合任何议题就丢弃。
+# 2026-08-08 审计:约 20% 条目不贴合所归议题,architecture 桶被当成兜底(混入大量纯设计/招聘/
+# 创业心法)。prompt 加硬性丢弃规则和负例;宁可少归不可硬塞。
+SYS=f"""你是 AI Podcast 编辑。给定一位嘉宾在某期播客里的若干「观点」(中英),把每条归到最贴切的一个议题。
 议题清单(只能用这些 slug):
 {THEMELIST}
+**丢弃规则(最重要)**:与 AI 无关的观点必须丢弃,不要硬塞进最接近的议题。以下内容一律丢弃:
+- 纯设计方法论/审美品味/作品集建议(不涉及 AI 模型的)
+- 招聘、管理、组织文化、职业建议
+- 创业心法、融资故事、营销/品牌、人生哲学
+- 纯航天/硬件财报/地缘政治(不涉及 AI 算力或模型的)
+注意:architecture 只收「模型架构与技术突破」,不是产品架构或组织架构;
+economy-jobs 要求真的谈就业/经济影响;agents 要求真的谈 AI 智能体。
+宁可全部丢弃,也不要把不贴合的观点归进议题。
 只输出 JSON:{{"items":[{{"slug":"...","en":"原英文","zh":"原中文"}}]}}。slug 必须来自清单;en/zh 原样复制不要改写。"""
 def call(system,user):
     body=json.dumps({"model":"deepseek-chat","messages":[{"role":"system","content":system},{"role":"user","content":user}],

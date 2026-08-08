@@ -189,6 +189,27 @@ CHANNELS = [
     ("20VC", "https://www.youtube.com/@20VC/videos", False),
 ]
 FIELD_KEYS = ["deep-learning", "nlp", "product", "rl", "safety", "robotics"]
+
+# ---- 集级领域标签:按「这一期讲什么」分类,不继承人物标签 ----
+# 2026-08-08 审计:此前每期 fields 直接抄人物档(Elon 谈育儿也带 robotics、Altman 每期都带
+# safety),514 期里 82% 与人物标签逐字相同,抽样准确率仅 ~64%。人物标签只作分类失败的回退。
+FIELDS_SYS = ("你是 AI Podcast 编辑。根据一期播客的标题和简介,从领域清单里选 1-2 个最贴合**这一期内容**的标签。\n"
+    "清单:deep-learning(深度学习/模型研究), nlp(大模型/LLM), product(产品与设计/商业/创业), "
+    "rl(强化学习), safety(对齐与安全/AI 风险), robotics(机器人/具身/自动驾驶)。\n"
+    "只看这一期讲什么,不要按嘉宾身份或名气推断(安全研究员谈创业史 → product,不是 safety)。"
+    "内容与 AI 技术无关(纯创业史/财报/管理/人生哲学)就只选 product。\n"
+    '只输出 JSON:{"fields":["..."]}')
+
+def classify_fields(title, desc, fallback):
+    """按这一期的标题+简介选 fields;失败才回退 fallback(人物标签)。"""
+    try:
+        r = ds(FIELDS_SYS, f"标题:{title}\n简介:{(desc or '')[:500]}", mx=100)
+        fl = [x for x in (r.get("fields") or []) if x in FIELD_KEYS][:2]
+        if fl:
+            return fl
+    except Exception:
+        pass
+    return [x for x in (fallback or []) if x in FIELD_KEYS][:2] or ["nlp"]
 CH_GATE_SYS = ("你是 AI Podcast 选题编辑。给定一个播客视频与站内人物名单,判断:"
     "① 视频的**主要嘉宾**是否为名单中的某个人(必须是主嘉宾/主讲,不是多人圆桌一员、不是被提及);"
     "② 英文、实质性 AI/技术访谈(不是新闻短片、预告、混剪、发布会口播)。"
@@ -345,11 +366,12 @@ def discover_channels(people, vids, days, per_channel_cap=2):
             log(f"  [频道] {pod_en[:20]:20} {m['date']} [{round(m['dur']/60)}m] {m['t'][:44]} → {tag}({str(r.get('reason',''))[:26]})")
             if ok:
                 if newp:
-                    fields = [x for x in (newp.get("fields") or []) if x in FIELD_KEYS] or ["nlp"]
+                    pfields = [x for x in (newp.get("fields") or []) if x in FIELD_KEYS] or ["nlp"]
                     guest = newp["en"].split()[0]
                     taken.add(pid)
                 else:
-                    p = pid_map[pid]; fields = p["fields"]; guest = p["en"].split()[0]
+                    p = pid_map[pid]; pfields = p["fields"]; guest = p["en"].split()[0]
+                fields = classify_fields(m["t"], m.get("desc", ""), pfields)
                 plan.append({"pid": pid, "vid": m["vid"], "date": f"{m['date'][:4]}-{m['date'][4:6]}-{m['date'][6:]}",
                              "podEn": pod_en, "min": round(m["dur"] / 60),
                              "fields": ",".join(fields), "guest": guest, "newPerson": newp})
@@ -390,7 +412,8 @@ def discover(people, vids, days, per_person_cap=1):
             if ok:
                 kept.append({"pid": pid, "vid": m["vid"], "date": f"{m['date'][:4]}-{m['date'][4:6]}-{m['date'][6:]}",
                              "podEn": m["ch"], "min": round(m["dur"] / 60),
-                             "fields": ",".join(p["fields"]), "guest": name.split()[0]})
+                             "fields": ",".join(classify_fields(m["t"], m.get("desc", ""), p["fields"])),
+                             "guest": name.split()[0]})
                 if len(kept) >= per_person_cap: break
         return kept
 
