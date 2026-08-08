@@ -80,8 +80,11 @@ def yt_meta(url):
     return "", 0, ""
 
 
+SUB_END_MIN = 0   # 最后一条字幕的结束时刻(分钟);yt_meta 被限流拿不到时长时用它推算
+
 def get_subs(url):
     # 字幕端点同样会被限流返回空;重试 + 退避 + --sleep-subtitles,尽量拿到自动字幕。
+    global SUB_END_MIN
     for attempt in range(3):
         with tempfile.TemporaryDirectory() as td:
             subprocess.run(["yt-dlp", "--proxy", "http://127.0.0.1:7890", "--skip-download", "--write-auto-subs", "--sub-lang", "en",
@@ -89,10 +92,15 @@ def get_subs(url):
                 capture_output=True, timeout=180)
             v = list(Path(td).glob("*.vtt"))
             if v:
-                out, prev = [], None
+                out, prev, last_ts = [], None, 0
                 for ln in v[0].read_text(encoding="utf-8").splitlines():
                     ln = ln.strip()
-                    if not ln or ln == "WEBVTT" or ln.isdigit() or "-->" in ln or re.match(r"^\d{2}:\d{2}", ln):
+                    if "-->" in ln:   # 记住最后一条时间轴的结束时刻,用于推算时长
+                        mt = re.search(r"-->\s*(?:(\d+):)?(\d{2}):(\d{2})", ln)
+                        if mt:
+                            last_ts = max(last_ts, int(mt.group(1) or 0) * 3600 + int(mt.group(2)) * 60 + int(mt.group(3)))
+                        continue
+                    if not ln or ln == "WEBVTT" or ln.isdigit() or re.match(r"^\d{2}:\d{2}", ln):
                         continue
                     if ln.startswith(("Kind:", "Language:")):
                         continue
@@ -101,6 +109,7 @@ def get_subs(url):
                         out.append(ln); prev = ln
                 text = re.sub(r"\s+", " ", " ".join(out)).strip()
                 if len(text) >= 2000:
+                    SUB_END_MIN = round(last_ts / 60)
                     return text
         if attempt < 2:
             time.sleep(20 + attempt * 25)
@@ -230,8 +239,11 @@ def main():
     # yt_meta 被限流时 ydate/ymin 会是空:日期空会让这期排到列表最底、id 变成 `xxx-` 尾巴,必须显式补
     if not edate:
         sys.exit("日期为空(yt_meta 被限流且未传 --date),请补 --date YYYY-MM-DD 后重跑")
+    emin = a.min or ymin or SUB_END_MIN   # 限流拿不到时长时,用字幕末尾时间戳推算(误差通常 <1 分钟)
+    if not emin:
+        sys.exit("时长为空(yt_meta 被限流、未传 --min,且字幕没有可用时间轴),请补 --min <分钟> 后重跑")
     if not (a.min or ymin):
-        sys.exit("时长为空(yt_meta 被限流且未传 --min),请补 --min <分钟> 后重跑")
+        print(f"  ⚠️ yt_meta 无时长,按字幕末尾时间轴推算为 {emin} 分钟", file=sys.stderr)
     pod = {"en": a.pod_en, "zh": a.pod_zh}
     fields = [f.strip() for f in a.fields.split(",") if f.strip()]
     # 领域必须是站内已登记的 key,否则前端 fdot 渲染会挂(2026-07-02 曾因 efficiency 白屏)
@@ -244,12 +256,12 @@ def main():
     # 逐字稿权威源:写 mcp-data/ep/<id>.json(网页懒加载 + MCP 都用它);内联只存元数据,首屏才不臃肿
     epdir = BASE.parent / "mcp-data" / "ep"; epdir.mkdir(parents=True, exist_ok=True)
     json.dump({"id": eid, "pid": a.pid, "podEn": a.pod_en, "podZh": a.pod_zh,
-               "date": edate, "min": a.min or ymin, "fields": fields, "tEn": tEn, "tZh": tZh, "sEn": sEn, "sZh": sZh,
+               "date": edate, "min": emin, "fields": fields, "tEn": tEn, "tZh": tZh, "sEn": sEn, "sZh": sZh,
                "src": src, "insights": ins, "transcript": ts},
               open(epdir / f"{eid}.json", "w"), ensure_ascii=False)
 
     # 内联 EPISODES 只存元数据 + insights(不含 ts),保持 index.html 轻量
-    ep = {"id": eid, "pid": a.pid, "pod": pod, "date": edate, "min": a.min or ymin,
+    ep = {"id": eid, "pid": a.pid, "pod": pod, "date": edate, "min": emin,
           "fields": fields, "src": src, "tEn": tEn, "tZh": tZh, "sEn": sEn, "sZh": sZh, "insights": ins,
           "addedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}   # 收录时间戳(UTC,精确到秒;最近上新按此精确排序)
 
