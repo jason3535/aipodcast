@@ -472,7 +472,7 @@ def main():
     log("重生成 观点演变 / 议题 / MCP 索引 / 分享页 …")
     for cmd in [["python3", "pipeline/gen_views.py"], ["python3", "pipeline/gen_topics.py"],
                 ["python3", "pipeline/gen_brief.py"], ["python3", "pipeline/gen_sectitles.py"],
-                ["python3", "pipeline/fix_spacing.py"], ["python3", "pipeline/split_data.py"],
+                ["python3", "pipeline/fix_spacing.py"], ["python3", "pipeline/fix_terms.py"], ["python3", "pipeline/split_data.py"],
                 ["node", "pipeline/build_mcp_data.js"], ["node", "pipeline/build_share_pages.js"]]:
         rc, outp = run_cmd(cmd)
         log(f"  {'✓' if rc == 0 else '✗'} {cmd[1].split('/')[-1]} {('' if rc==0 else outp[-120:])}")
@@ -499,6 +499,12 @@ def main():
         if rc_a != 0:
             log("⚠️ 完整性审计不通过,放弃提交(保留改动供人工检查):\n" + out_a[-600:]); return
         log(f"  ✓ 完整性审计 {len(new_ids)} 期通过")
+
+    # 术语门禁:fix_terms 跑过之后不该再有 Claude 误听残留(自动字幕把 Claude 听成
+    # Cloud/Claw/Cloth/Clock 是常态,漏网就会一路发到线上)。
+    rc_t, out_t = run_cmd(["python3", "pipeline/fix_terms.py", "--check"])
+    if rc_t != 0:
+        log("⚠️ 术语检查未通过(仍有 Claude 误听残留),放弃提交:\n" + out_t[-300:]); return
 
     run_cmd(["git", "add", "-A"])
     msg = f"chore: 自动保鲜 +{added} 期（{', '.join(x['pid'] for x in plan[:added])}）"
