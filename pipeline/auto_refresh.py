@@ -275,6 +275,24 @@ def drop_person(pid):
         pass
 
 
+def drop_pod(pod_en):
+    """回滚:把刚登记的节目从 app.js 移除(收录失败时用)。
+    人物档早有 drop_person(),节目登记一直没有 —— 2026-08-08 那轮 cron 就登记了
+    「My First Million」但该期收录失败,留下一条 0 单集、简介还是猜的僵尸登记。"""
+    esc = lambda x: x.replace("\\", "\\\\").replace("'", "\\'")
+    h = HTML.read_text(encoding="utf-8")
+    e = re.escape(esc(pod_en))
+    h2 = re.sub(r"^\s*'" + e + r"':'[^']*',\n", "", h, flags=re.M)                      # POD_LOGO
+    h2, n = re.subn(r"^ '" + e + r"':\{zh:.*?\n(?:.*?\n)*?.*?\},\n", "", h2, flags=re.M)  # POD_INFO
+    if h2 != h:
+        HTML.write_text(h2, encoding="utf-8")
+        log(f"  ↩ 回滚新登记节目 {pod_en}（该期收录失败）")
+    try: (ROOT / "assets" / "pods" / f"{slug(pod_en)}.jpg").unlink()
+    except Exception: pass
+    try: (ROOT / "assets" / "pods" / f"{slug(pod_en)}.webp").unlink()
+    except Exception: pass
+
+
 def discover_channels(people, vids, days, per_channel_cap=2):
     """每频道拉最近 10 条上传。
     核心频道(core=True):主嘉宾是站外新人也收 —— 闸门连同人物档一起产出,收录前自动建档;
@@ -429,7 +447,7 @@ def main():
             if ensure_person(x["pid"], np):
                 note_pending_avatar(x["pid"], np, x["podEn"])
                 new_people.append(x["pid"])
-        pod_zh, _ = register_pod(x["podEn"], (meta(x["vid"]) or {}).get("desc", ""))
+        pod_zh, new_pod = register_pod(x["podEn"], (meta(x["vid"]) or {}).get("desc", ""))
         if pod_zh is None:  # 已登记:取其 zh 名
             h = HTML.read_text(encoding="utf-8")
             mm = re.search(r"'" + re.escape(x["podEn"].replace("'", "\\'")) + r"':\{zh:'((?:[^'\\]|\\.)*)'", h)
@@ -446,6 +464,7 @@ def main():
             log(f"  ✗ 失败 {x['pid']}: {outp.strip().splitlines()[-1][:80] if outp.strip() else rc}")
             if np and x["pid"] in new_people:      # 人物是为这期新建的,这期没成 → 回滚,别留空人物页
                 drop_person(x["pid"]); new_people.remove(x["pid"])
+            if new_pod: drop_pod(x["podEn"])
 
     if not added:
         log("无成功收录,不提交。"); return
