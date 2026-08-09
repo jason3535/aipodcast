@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 239 位人物 / 516 期访谈
+规模: 240 位人物 / 517 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -84,6 +84,7 @@
 - [Scott Wu / 吴一](https://aipodcast.jasonlin.tech/pp/scottwu/): Co-founder & CEO, Cognition — 2 期
 - [Michael Truell / 迈克尔·特鲁埃尔](https://aipodcast.jasonlin.tech/pp/truell/): Co-founder & CEO, Cursor — 2 期
 - [Stephen Haney / 斯蒂芬·哈尼](https://aipodcast.jasonlin.tech/pp/stephenhaney/): Founder of Paper, AI-native design tool — 1 期
+- [Max Hodak / 马克斯·霍达克](https://aipodcast.jasonlin.tech/pp/maxhodak/): CEO of Science — 1 期
 - [Garry Tan / 陈嘉兴](https://aipodcast.jasonlin.tech/pp/garrytan/): President & CEO, Y Combinator — 1 期
 - [Philip Johnston / 菲利普·约翰斯顿](https://aipodcast.jasonlin.tech/pp/philipjohnston/): Co-founder & CEO, Starcloud — 1 期
 - [Josh Meier / 乔什·迈尔](https://aipodcast.jasonlin.tech/pp/joshmeier/): Co-founder, Chai Discovery — 1 期
@@ -249,6 +250,7 @@
 
 ## 最新访谈 Latest episodes
 - [Paper: An AI-Native Design Tool for the Next Era](https://aipodcast.jasonlin.tech/e/stephenhaney-ycombina-2026/) — Stephen Haney, Y Combinator, 2026-08-07
+- [Startup Infrastructure: Lessons from Deep Tech](https://aipodcast.jasonlin.tech/e/maxhodak-ycombina-2026/) — Max Hodak, Y Combinator, 2026-08-07
 - [Personal AGI: The Spinoza Heresy of Intelligence](https://aipodcast.jasonlin.tech/e/garrytan-ycombina-2026/) — Garry Tan, Y Combinator, 2026-08-06
 - [Book a Launch Before You Know What to Launch](https://aipodcast.jasonlin.tech/e/philipjohnston-ycombina-2026/) — Philip Johnston, Y Combinator, 2026-08-05
 - [SpaceX Q2 2026 Earnings Call: Starship, Starlink, and AI Ambitions](https://aipodcast.jasonlin.tech/e/elon-spacexq2-2026/) — Elon Musk, SpaceX Q2 2026 Earnings Call, 2026-08-04
@@ -287,7 +289,6 @@
 - [Tesla Q2 2026: Record Deliveries, FSD Demand Surge, and Robo Taxi Expansion](https://aipodcast.jasonlin.tech/e/elon-teslaq22-2026/) — Elon Musk, Tesla Q2 2026 Earnings Call, 2026-07-22
 - [Xaira Therapeutics: AI-Native Drug Discovery with Virtual Cell Models](https://aipodcast.jasonlin.tech/e/bowang-latentsp-2026/) — Bo Wang, Latent Space, 2026-07-21
 - [Factory CEO on Customer Obsession vs Output Metrics and Enterprise AI Strategy](https://aipodcast.jasonlin.tech/e/matangrinberg-sequoiac-2026/) — Matan Grinberg, Training Data, 2026-07-21
-- [Building Creative Tools with AI Agents: Pablo Stanley on Ecto and the Future of Design](https://aipodcast.jasonlin.tech/e/pablostanley-diveclub-2026/) — Pablo Stanley, Dive Club, 2026-07-21
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
