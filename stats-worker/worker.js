@@ -1,8 +1,10 @@
 /**
  * AI Podcast — 匿名访问统计 (Cloudflare Worker + D1)
  * 埋点: POST / {type,path,ref,ua,sid} → 写 D1(无 Cookie / 不存 IP / 无个人信息)。
- *   UV: 服务端算「每日匿名 hash」vid = SHA256(盐 + 当天日期 + IP + UA) 前 80bit,只存 hash、永不存 IP;
- *       hash 含日期→次日自动失效、跨天不可关联(隐私友好,规避 Cookie)。
+ *   UV: 优先用客户端 localStorage 里的随机匿名 ID(aid,2026-08-09 起);没有才回落服务端
+ *       「每日匿名 hash」= SHA256(盐 + 当天日期 + IP + UA) 前 80bit,只存 hash、永不存 IP。
+ *       改因:日哈希含当天日期 → 同一人隔天必换 ID,**跨天/跨周留存在结构上不可测**。
+ *       aid 是纯随机数、与任何个人信息无关(比 IP 哈希更保守),仍无 Cookie。
  *   sid: 客户端可选传「同步码的哈希」(仅开启多设备同步者才有);同一人多设备 sid 相同 →
  *        UV 按 coalesce(sid,vid) 去重,多设备算 1 人。存的是哈希而非原始同步码(后者是读写凭证)。
  *   UV = count(distinct coalesce(nullif(sid,''), vid))。
@@ -70,8 +72,12 @@ export default {
       let b;try{b=await req.json();}catch{return new Response('bad json',{status:400,headers:co});}
       const type=(''+(b.type||'view')).slice(0,16),path=(''+(b.path||'/')).slice(0,200),
             ref=(''+(b.ref||'')).slice(0,120),ua=(''+(b.ua||'')).slice(0,12),
-            sid=/^[0-9a-f]{1,16}$/.test(''+(b.sid||''))?b.sid:'';   // 只接受同步码哈希(hex),防注入
-      let vid='';try{vid=await vidOf(env,req);}catch(_){}
+            sid=/^[0-9a-f]{1,16}$/.test(''+(b.sid||''))?b.sid:'',   // 只接受同步码哈希(hex),防注入
+            aid=/^[0-9a-f]{8,40}$/.test(''+(b.aid||''))?b.aid:'';     // 客户端 localStorage 随机匿名 ID
+      // vid 优先用客户端持久匿名 ID:服务端日哈希含当天日期,同一人隔天必换 → 跨天留存不可测。
+      // 拿不到 aid(旧版前端/禁用 localStorage)才回落日哈希,行为与改动前一致。
+      let vid=aid;
+      if(!vid){try{vid=await vidOf(env,req);}catch(_){}}
       try{await env.DB.prepare("INSERT INTO events(ts,day,type,path,ref,ua,vid,sid) VALUES(?,date('now'),?,?,?,?,?,?)").bind(Date.now(),type,path,ref,ua,vid,sid).run();}catch(_){}
       return new Response(null,{status:204,headers:co});
     }
