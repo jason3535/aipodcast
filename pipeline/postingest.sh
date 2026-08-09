@@ -11,18 +11,19 @@ export HTTPS_PROXY="${HTTPS_PROXY:-http://127.0.0.1:7890}" HTTP_PROXY="${HTTP_PR
 
 ids=("$@")
 
-echo "── 1/10 观点演变(gen_views)";        python3 pipeline/gen_views.py | tail -1
-echo "── 2/10 议题(gen_topics)";           python3 pipeline/gen_topics.py | tail -1
-echo "── 3/10 首页速览(gen_brief)";        python3 pipeline/gen_brief.py | tail -1
-echo "── 4/10 章节标题(gen_sectitles)";    python3 pipeline/gen_sectitles.py | tail -1
-echo "── 5/10 盘古之白(fix_spacing,必须在分享页之前)"; python3 pipeline/fix_spacing.py | tail -1
-echo "── 6/10 术语归一(fix_terms)";        python3 pipeline/fix_terms.py 2>&1 | tail -1
-echo "── 7/10 首屏拆分(split_data)";       python3 pipeline/split_data.py | tail -1
-echo "── 8/10 MCP 数据(build_mcp_data)";   node pipeline/build_mcp_data.js | tail -1
-echo "── 9/10 分享页+sitemap(build_share_pages)"; node pipeline/build_share_pages.js | tail -1
+echo "── 1/11 公司归属(build_person_org,供 Browse 页按公司筛选)"; node pipeline/build_person_org.js
+echo "── 2/11 观点演变(gen_views)";        python3 pipeline/gen_views.py | tail -1
+echo "── 3/11 议题(gen_topics)";           python3 pipeline/gen_topics.py | tail -1
+echo "── 4/11 首页速览(gen_brief)";        python3 pipeline/gen_brief.py | tail -1
+echo "── 5/11 章节标题(gen_sectitles)";    python3 pipeline/gen_sectitles.py | tail -1
+echo "── 6/11 盘古之白(fix_spacing,必须在分享页之前)"; python3 pipeline/fix_spacing.py | tail -1
+echo "── 7/11 术语归一(fix_terms)";        python3 pipeline/fix_terms.py 2>&1 | tail -1
+echo "── 8/11 首屏拆分(split_data)";       python3 pipeline/split_data.py | tail -1
+echo "── 9/11 MCP 数据(build_mcp_data)";   node pipeline/build_mcp_data.js | tail -1
+echo "── 10/11 分享页+sitemap(build_share_pages)"; node pipeline/build_share_pages.js | tail -1
 python3 pipeline/webp_avatars.py | tail -1
 
-echo "── 10/10 门禁"
+echo "── 11/11 门禁"
 node -e 'new Function(require("fs").readFileSync("app.js","utf8")); console.log("  app.js 语法 OK")'
 python3 pipeline/fix_terms.py --check 2>&1 | tail -1        # 术语残留=非零退出
 if (( ${#ids} )); then
