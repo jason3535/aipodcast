@@ -77,9 +77,12 @@ for (const e of targets) {
       // turn 里 spk 只有一种 → 说话人没分开
       const spks = new Set(t.flatMap(s => (s.turns || []).map(x => x.spk)));
       if (secs > 0 && spks.size < 2) warn.push(`说话人只有 ${[...spks].join("/") || "无"}`);
-      // 中译缺失
-      const noZh = t.flatMap(s => (s.turns || [])).filter(x => !x.zh || !x.zh.trim()).length;
-      if (noZh) warn.push(`${noZh} 个 turn 缺中文`);
+      // 中译缺失:零星缺是警告;大面积缺(>20%)= 翻译环节整段失败,必须拦——
+      // 2026-08-09 故障演练发现整期 0 中文只报"警告(可上线)",空翻译能带病上线
+      const allTurns = t.flatMap(s => (s.turns || []));
+      const noZh = allTurns.filter(x => !x.zh || !x.zh.trim()).length;
+      if (allTurns.length && noZh / allTurns.length > 0.2) bad.push(`${noZh}/${allTurns.length} turn 缺中文(>20%,翻译疑似整段失败)`);
+      else if (noZh) warn.push(`${noZh} 个 turn 缺中文`);
       const ins = d.insights || {};
       if (!(ins.consensus || []).length) bad.push("缺核心观点");
       if (!(ins.contrarian || []).length) warn.push("缺反共识");
