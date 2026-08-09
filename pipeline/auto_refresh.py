@@ -188,14 +188,15 @@ CHANNELS = [
     ("The TWIML AI Podcast", "https://www.youtube.com/@twimlai/videos", False),
     ("20VC", "https://www.youtube.com/@20VC/videos", False),
 ]
-FIELD_KEYS = ["deep-learning", "nlp", "product", "rl", "safety", "robotics"]
+FIELD_KEYS = ["deep-learning", "nlp", "product", "rl", "safety", "robotics", "bio"]
 
 # ---- 集级领域标签:按「这一期讲什么」分类,不继承人物标签 ----
 # 2026-08-08 审计:此前每期 fields 直接抄人物档(Elon 谈育儿也带 robotics、Altman 每期都带
 # safety),514 期里 82% 与人物标签逐字相同,抽样准确率仅 ~64%。人物标签只作分类失败的回退。
 FIELDS_SYS = ("你是 AI Podcast 编辑。根据一期播客的标题和简介,从领域清单里选 1-2 个最贴合**这一期内容**的标签。\n"
     "清单:deep-learning(深度学习/模型研究), nlp(大模型/LLM), product(产品与设计/商业/创业), "
-    "rl(强化学习), safety(对齐与安全/AI 风险), robotics(机器人/具身/自动驾驶)。\n"
+    "rl(强化学习), safety(对齐与安全/AI 风险), robotics(机器人/具身/自动驾驶), "
+    "bio(生物医药:蛋白质/药物发现/基因组/临床医疗/神经科学等 AI for bio&medicine)。\n"
     "只看这一期讲什么,不要按嘉宾身份或名气推断(安全研究员谈创业史 → product,不是 safety)。"
     "内容与 AI 技术无关(纯创业史/财报/管理/人生哲学)就只选 product。\n"
     '只输出 JSON:{"fields":["..."]}')
