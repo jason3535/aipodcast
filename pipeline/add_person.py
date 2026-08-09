@@ -8,7 +8,7 @@ add_person.py — 新增人物:抓 Wikimedia 头像存到 assets/people/<pid>.jp
     --en "Jensen Huang" --zh "黄仁勋" --ti-en "Founder & CEO, NVIDIA" --ti-zh "NVIDIA 创始人兼 CEO" \
     --fields deep-learning,robotics
 """
-import argparse, json, sys, urllib.request
+import argparse, json, sys, urllib.request, urllib.parse
 from io import BytesIO
 from pathlib import Path
 
@@ -20,7 +20,7 @@ HDR = {"User-Agent": "AIPodcast/1.0 (prototype)"}
 def fetch_photo(pid, wiki):
     try:
         d = json.load(urllib.request.urlopen(urllib.request.Request(
-            f"https://en.wikipedia.org/api/rest_v1/page/summary/{wiki.replace(' ','_')}", headers=HDR), timeout=15))
+            "https://en.wikipedia.org/api/rest_v1/page/summary/" + urllib.parse.quote(wiki.replace(" ", "_")), headers=HDR), timeout=15))  # 重音字符必须 quote(Söderström 曾直接 ascii 报错)
         u = (d.get("thumbnail") or {}).get("source") or (d.get("originalimage") or {}).get("source")
         if not u:
             return False
