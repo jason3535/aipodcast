@@ -6,5 +6,21 @@
   "tiEn": "AI Engineer, Podcaster, Operator at Cognition",
   "from": "Unsupervised Learning",
   "added": "2026-08-07"
+ },
+ {
+  "pid": "stephenhaney",
+  "en": "Stephen Haney",
+  "zh": "斯蒂芬·哈尼",
+  "tiEn": "Founder of Paper, AI-native design tool",
+  "from": "Y Combinator",
+  "added": "2026-08-09"
+ },
+ {
+  "pid": "kellerrinaudocliffto",
+  "en": "Keller Rinaudo Cliffton",
+  "zh": "凯勒·里纳乌多·克利夫顿",
+  "tiEn": "Co-founder and CEO, Zipline",
+  "from": "Training Data",
+  "added": "2026-08-09"
  }
 ]
