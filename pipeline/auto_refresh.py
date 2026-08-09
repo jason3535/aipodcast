@@ -492,8 +492,9 @@ def main():
     if not added:
         log("无成功收录,不提交。"); return
 
-    log("重生成 观点演变 / 议题 / MCP 索引 / 分享页 …")
-    for cmd in [["python3", "pipeline/gen_views.py"], ["python3", "pipeline/gen_topics.py"],
+    log("重生成 公司归属 / 观点演变 / 议题 / MCP 索引 / 分享页 …")
+    for cmd in [["node", "pipeline/build_person_org.js"],
+                ["python3", "pipeline/gen_views.py"], ["python3", "pipeline/gen_topics.py"],
                 ["python3", "pipeline/gen_brief.py"], ["python3", "pipeline/gen_sectitles.py"],
                 ["python3", "pipeline/fix_spacing.py"], ["python3", "pipeline/fix_terms.py"], ["python3", "pipeline/split_data.py"],
                 ["node", "pipeline/build_mcp_data.js"], ["node", "pipeline/build_share_pages.js"]]:
