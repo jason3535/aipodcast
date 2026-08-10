@@ -46,10 +46,14 @@ if (KILL) {
     for (let i = 0; i < keys.length - max; i++) await c.delete(keys[i]);
   };
 
-  const put = async (name, req, res, max) => {
-    if (!res || !res.ok) return;
+  /* 注意:调用方必须传入"已经 clone 好的响应副本"。
+     clone 必须在把原响应交给页面之前同步完成 —— put 里第一步 caches.open() 是异步的,
+     等它回来时原响应体已被页面消费,再 clone 会抛 body already used,
+     结果是静默存不进任何东西(首版就是这么翻的,离线测试 0 命中)。 */
+  const put = async (name, req, copy, max) => {
+    if (!copy || !copy.ok) return;
     const c = await caches.open(name);
-    await c.put(req, res.clone());
+    await c.put(req.url, copy);                       // 按 URL 存:导航请求的 mode 不参与匹配,统一掉
     if (max) trim(name, max);                         // 不 await,别拖慢响应
   };
 
@@ -64,10 +68,10 @@ if (KILL) {
       e.respondWith((async () => {
         try {
           const res = await fetch(req);
-          put(PAGES, req, res);
+          put(PAGES, req, res.clone());               // 同步 clone 后再异步入缓存
           return res;
         } catch (_) {
-          return (await caches.match(req)) || (await caches.match('/')) ||
+          return (await caches.match(req.url)) || (await caches.match('/')) ||
                  new Response('offline', { status: 503 });
         }
       })());
@@ -77,10 +81,10 @@ if (KILL) {
     // app.js?v=hash:cache-first(哈希即不可变)
     if (url.pathname.endsWith('/app.js') && url.searchParams.has('v')) {
       e.respondWith((async () => {
-        const hit = await caches.match(req);
+        const hit = await caches.match(req.url);
         if (hit) return hit;
         const res = await fetch(req);
-        put(STATIC, req, res);
+        put(STATIC, req, res.clone());
         return res;
       })());
       return;
@@ -91,8 +95,8 @@ if (KILL) {
     const bucket = isImg ? IMG : DATA;
     const max = isImg ? IMG_MAX : DATA_MAX;
     e.respondWith((async () => {
-      const hit = await caches.match(req);
-      const refresh = fetch(req).then(res => { put(bucket, req, res, max); return res; })
+      const hit = await caches.match(req.url);
+      const refresh = fetch(req).then(res => { put(bucket, req, res.clone(), max); return res; })
                                 .catch(() => null);
       if (hit) { e.waitUntil(refresh); return hit; }
       return (await refresh) || new Response('', { status: 504 });
