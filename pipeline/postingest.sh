@@ -22,6 +22,9 @@ echo "── 8/11 首屏拆分(split_data)";       python3 pipeline/split_data.p
 echo "── 9/11 MCP 数据(build_mcp_data)";   node pipeline/build_mcp_data.js | tail -1
 echo "── 10/11 分享页+sitemap(build_share_pages)"; node pipeline/build_share_pages.js | tail -1
 python3 pipeline/webp_avatars.py | tail -1
+echo "── 10.5/11 站群闭环(互链 map 补全 + 图谱分享页)"
+python3 pipeline/build_crosslinks.py --apply | tail -3       # 六站互链只增不删;动了其他仓库会打印提醒
+python3 pipeline/graph_share_pages.py --apply | tail -5      # 图谱新节点的 /p+/og 页(2026-08-10 garrytan 404 教训)
 
 echo "── 11/11 门禁"
 node -e 'new Function(require("fs").readFileSync("app.js","utf8")); console.log("  app.js 语法 OK")'
