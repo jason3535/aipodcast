@@ -498,7 +498,10 @@ def main():
                 ["python3", "pipeline/gen_views.py"], ["python3", "pipeline/gen_topics.py"],
                 ["python3", "pipeline/gen_brief.py"], ["python3", "pipeline/gen_sectitles.py"],
                 ["python3", "pipeline/fix_spacing.py"], ["python3", "pipeline/fix_terms.py"], ["python3", "pipeline/split_data.py"],
-                ["node", "pipeline/build_mcp_data.js"], ["node", "pipeline/build_share_pages.js"]]:
+                ["node", "pipeline/build_mcp_data.js"], ["node", "pipeline/build_share_pages.js"],
+                # 站群互链:只写本仓库 app.js 的 map(新收人物若已在图谱/纸站,当天就挂上互链按钮);
+                # 其他仓库的缺口只进日志,由人工会话跑 --apply 收口(cron 不跨仓库留未提交改动)
+                ["python3", "pipeline/build_crosslinks.py", "--apply", "--write-pod-only"]]:
         rc, outp = run_cmd(cmd)
         log(f"  {'✓' if rc == 0 else '✗'} {cmd[1].split('/')[-1]} {('' if rc==0 else outp[-120:])}")
 
