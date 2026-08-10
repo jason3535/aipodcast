@@ -16,17 +16,25 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # 误听变体 → 正确产品名。key 是正则(不含边界),value 是替换后的正确写法。
 VAR = r"(?:cloud|claw|clawed|cloth|clock|clod|klaude|klaud|glaude|cla)"
+# 边界不用 \b:Python 的 \b 把 CJK 当词字符,「与Whimo基础模型」这类中文紧贴场景会漏
+# (2026-08-10 实测漏网)。改用「前后不是拉丁字母」的环视。
+BL, BR = r"(?<![A-Za-z])", r"(?![A-Za-z])"
 RULES = [
-    (re.compile(r"\bclockcode\b", re.I), "Claude Code"),
-    (re.compile(rf"\b{VAR}\s?(codes)\b", re.I), "Claude Codes"),
-    (re.compile(rf"\b{VAR}\s?(coding)\b", re.I), "Claude Coding"),
-    (re.compile(rf"\b{VAR}\s?(code)\b", re.I), "Claude Code"),
-    (re.compile(rf"\b{VAR}\s?(co-?work)\b", re.I), "Claude Cowork"),
-    (re.compile(rf"\b{VAR}\s?(desktop)\b", re.I), "Claude Desktop"),
-    (re.compile(rf"\b{VAR}\s?(opus)\b", re.I), "Claude Opus"),
-    (re.compile(rf"\b{VAR}\s?(sonnet)\b", re.I), "Claude Sonnet"),
-    (re.compile(rf"\b{VAR}\s?(haiku)\b", re.I), "Claude Haiku"),
-    (re.compile(r"\bcloud for chrome\b", re.I), "Claude for Chrome"),
+    (re.compile(BL+r"clockcode"+BR, re.I), "Claude Code"),
+    (re.compile(BL+rf"{VAR}\s?(codes)"+BR, re.I), "Claude Codes"),
+    (re.compile(BL+rf"{VAR}\s?(coding)"+BR, re.I), "Claude Coding"),
+    (re.compile(BL+rf"{VAR}\s?(code)"+BR, re.I), "Claude Code"),
+    (re.compile(BL+rf"{VAR}\s?(co-?work)"+BR, re.I), "Claude Cowork"),
+    (re.compile(BL+rf"{VAR}\s?(desktop)"+BR, re.I), "Claude Desktop"),
+    (re.compile(BL+rf"{VAR}\s?(opus)"+BR, re.I), "Claude Opus"),
+    (re.compile(BL+rf"{VAR}\s?(sonnet)"+BR, re.I), "Claude Sonnet"),
+    (re.compile(BL+rf"{VAR}\s?(haiku)"+BR, re.I), "Claude Haiku"),
+    (re.compile(BL+r"cloud for chrome"+BR, re.I), "Claude for Chrome"),
+    # ---- 其他品牌误听(2026-08-10 起) ----
+    # Waymo → 自动字幕常听成 Whimo(全站曾攒 58 处,散布在 6 期);"way mo" 只匹配全小写,
+    # 防误伤 "the way Mo Gawdat…" 这类句中人名(Mo 大写)与 "way more"(\b 挡住)。
+    (re.compile(BL+r"Wh[iy]mo"+BR, re.I), "Waymo"),
+    (re.compile(BL+r"way mo"+BR), "Waymo"),
 ]
 # 这些上下文里的 "class code" 是 best-in-class code,不是误听
 GUARD = re.compile(r"(best|world)[- ]in[- ]?class\s*$|(best|world)-class\s*$", re.I)
