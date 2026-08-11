@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 241 位人物 / 522 期访谈
+规模: 242 位人物 / 523 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -122,6 +122,7 @@
 - [Danielle Perszyk / 丹妮尔·佩尔西克](https://aipodcast.jasonlin.tech/pp/perszyk/): Cognitive Scientist, Amazon AGI Lab — 1 期
 - [Arvind Jain / 阿尔温德·贾恩](https://aipodcast.jasonlin.tech/pp/arvindjain/): Founder & CEO, Glean — 1 期
 - [Neel Nanda / 尼尔·南达](https://aipodcast.jasonlin.tech/pp/neelnanda/): Mechanistic Interpretability Lead, Google DeepMind — 1 期
+- [Adam Brown / 亚当·布朗](https://aipodcast.jasonlin.tech/pp/adambrown/): Physicist, Stanford Lecturer — 1 期
 - [Adam Mosseri / 亚当·莫塞里](https://aipodcast.jasonlin.tech/pp/mosseri/): Head of Instagram — 1 期
 - [Akshat Bubna / 阿克沙特·布布纳](https://aipodcast.jasonlin.tech/pp/akshatbubna/): CTO, Modal — 1 期
 - [Meaghan Choi / 梅根·崔](https://aipodcast.jasonlin.tech/pp/meaghanchoi/): Head of Design, Claude Code & Cowork at Anthropic — 1 期
