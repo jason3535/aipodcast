@@ -72,6 +72,10 @@ export default {
     // ---- 埋点 ----
     if(req.method==='POST'){
       if(origin&&!ALLOW.has(origin))return new Response('forbidden',{status:403,headers:co});
+      // 无头浏览器/爬虫直接丢弃:部署后的 Playwright 线上验证每次都是新指纹,
+      // 一次验证 = 好几个假 UV,已实际污染过 8/7 的数据。返回 ok 让前端无感。
+      const rawUA=req.headers.get('user-agent')||'';
+      if(/HeadlessChrome|Playwright|puppeteer|bot|spider|crawl/i.test(rawUA))return J({ok:1},200,co);
       let b;try{b=await req.json();}catch{return new Response('bad json',{status:400,headers:co});}
       const type=(''+(b.type||'view')).slice(0,16),path=(''+(b.path||'/')).slice(0,200),
             ref=(''+(b.ref||'')).slice(0,120),ua=(''+(b.ua||'')).slice(0,12),
