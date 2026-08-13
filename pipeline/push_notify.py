@@ -76,22 +76,45 @@ def main():
             prev = []
 
     now = int(time.time() * 1000)
-    seen = {i["id"] for i in prev}
-    fresh = []
+
+    def mk(x, ts):
+        return {"id": x["id"], "t": x.get("tZh") or x.get("tEn") or x["id"],
+                "u": site["url"].format(id=x["id"]), "ts": ts}
+
+    def date_ms(d):
+        """把 'YYYY-MM-DD' 转成毫秒时间戳,给回填条目当 ts。"""
+        try:
+            return int(time.mktime(time.strptime(d[:10], "%Y-%m-%d")) * 1000)
+        except Exception:
+            return 0
+
+    # pool 的 ts 语义 = 「这条什么时候被当作新内容宣告过」,SW 拿它跟自己记的 seen 比。
+    pool = {i["id"]: i for i in prev}      # ① 既有条目保留原 ts(宣告过就是宣告过)
+
+    fresh = []                              # ② 本轮真新收:ts=now,对所有订阅者都算「新」
     for eid in a.ids:
-        if eid in seen:
-            continue
         x = by_id.get(eid)
         if not x:
             print(f"  ⚠ {eid} 不在 {site['data']} 里,跳过(重建链没跑完?)", file=sys.stderr)
             continue
-        fresh.append({"id": eid, "t": x.get("tZh") or x.get("tEn") or eid,
-                      "u": site["url"].format(id=eid), "ts": now})
+        if eid in pool:
+            continue
+        pool[eid] = mk(x, now)
+        fresh.append(eid)
 
-    items = (fresh + prev)[:KEEP]
+    # ③ 回填站内最新若干条。**这一步是必需的**:没有它,这个文件就只反映"上一次带 ids
+    #    跑过什么",可能停在任意历史状态 —— 新订阅者收到推送后点开看到的是一条老内容
+    #    (2026-08-13 实测:文件里只剩一条 dry-run 时塞的条目)。
+    #    回填条目的 ts 用发布日期而非 now,这样它们**不会**被当成新内容去打扰老订阅者。
+    newest = sorted(items_all, key=lambda x: x.get("date", ""), reverse=True)[:KEEP]
+    for x in newest:
+        if x["id"] not in pool:
+            pool[x["id"]] = mk(x, date_ms(x.get("date", "")))
+
+    items = sorted(pool.values(), key=lambda i: i.get("ts", 0), reverse=True)[:KEEP]
     out_path.write_text(json.dumps({"updated": now, "items": items}, ensure_ascii=False),
                         encoding="utf-8")
-    print(f"push-latest.json: {len(items)} 条(本轮新增 {len(fresh)})")
+    print(f"push-latest.json: {len(items)} 条(本轮新收 {len(fresh)},其余为最新内容回填)")
 
     if not fresh:
         print("本轮无新条目,不发推送。")
