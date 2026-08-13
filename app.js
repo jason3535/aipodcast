@@ -2863,6 +2863,85 @@ async function pushUnsubscribe(){
   }catch(e){_pushNote='关闭时出错：'+(''+((e&&e.message)||e)).slice(0,100);}
   pushPanelRefresh();}
 
+
+/* ====== 更新提醒的「软提示」==========================================================
+   为什么不在页面刷新时直接弹浏览器授权框:
+   ① Safari 与 Firefox **要求用户手势**,页面加载时自动调 requestPermission()/subscribe()
+      会直接失败 —— 而 Safari 恰恰是国内唯一真收得到推送的浏览器;
+   ② Chrome 虽然允许,但对"一进站就弹"会降权成静默 UI;
+   ③ 最要紧:浏览器授权**只有一次机会**,被拒过就再也弹不出来,等于永久失去这个人。
+   所以先在站内问一次(这一步不消耗那次机会),用户点「开启」那一下正好是手势,
+   再去调浏览器授权框。这也是转化率最高的做法 —— 埋在「我的」页里基本等于没有。
+
+   打扰控制:只对**已经读过内容**的人问(明确兴趣信号),或在详情页停留够久才问;
+   关掉一次隔 14 天再问,累计关两次就永不再问。 */
+const NUDGE_GAP=14*864e5, NUDGE_MAX=2, NUDGE_DWELL=45000;
+function pushNudgeHide(){const c=document.getElementById('pushNudge');
+  if(c){c.classList.remove('on');setTimeout(()=>c.remove(),260);}}
+function pushNudgeDismiss(){
+  localStorage.pushNudgeTs=Date.now();
+  localStorage.pushNudgeN=(+localStorage.pushNudgeN||0)+1;
+  pushNudgeHide();}
+async function pushNudgeAccept(){
+  const c=document.getElementById('pushNudge');const b=c&&c.querySelector('.pn-b');
+  if(b){b.disabled=true;b.textContent='正在开启…';}
+  await pushSubscribe();
+  if(!c||!document.body.contains(c))return;
+  if(_pushSynced){
+    c.querySelector('.pn-t').textContent='已开启 ✓';
+    c.querySelector('.pn-s').textContent='有新一期时会收到一条通知。';
+    c.querySelector('.pn-btns').innerHTML='';
+    setTimeout(pushNudgeHide,2400);
+  }else{
+    c.querySelector('.pn-s').innerHTML=_pushNote||'开启失败，可以稍后在「我的」页再试。';
+    if(b){b.disabled=false;b.textContent='重试';}
+  }}
+function pushNudgeShow(){
+  if(document.getElementById('pushNudge'))return;
+  if(!document.getElementById('pnStyle')){
+    const st=document.createElement('style');st.id='pnStyle';
+    st.textContent=`.pn{position:fixed;z-index:80;left:16px;right:16px;bottom:16px;margin:0 auto;max-width:390px;
+      display:flex;gap:12px;align-items:flex-start;padding:16px 16px 14px;border-radius:16px;
+      background:var(--surface-2,var(--surface,#fff));border:1px solid var(--line,rgba(0,0,0,.1));
+      box-shadow:0 10px 34px rgba(0,0,0,.16);opacity:0;transform:translateY(14px);
+      transition:opacity .24s ease,transform .24s ease}
+    .pn.on{opacity:1;transform:none}
+    .pn-ic{flex:0 0 auto;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;
+      background:var(--accent,var(--acc,#0a84ff));color:#fff}
+    .pn-ic svg{width:16px;height:16px;display:block}
+    .pn-tx{flex:1;min-width:0}
+    .pn-t{font-size:15px;font-weight:600;color:var(--text,#111);letter-spacing:-.01em}
+    .pn-s{margin-top:4px;font-size:13px;line-height:1.5;color:var(--text-2,var(--sub,#666))}
+    .pn-btns{display:flex;gap:8px;margin-top:12px;justify-content:flex-end;width:100%}
+    .pn-x,.pn-b{font:inherit;font-size:13px;border-radius:9px;padding:7px 14px;cursor:pointer;border:1px solid transparent}
+    .pn-x{background:none;color:var(--text-2,var(--sub,#666))}
+    .pn-x:hover{background:var(--surface,rgba(0,0,0,.05))}
+    .pn-b{background:var(--accent,var(--acc,#0a84ff));color:#fff;font-weight:600}
+    .pn-b:disabled{opacity:.6;cursor:default}
+    @media(min-width:720px){.pn{left:auto;right:22px;bottom:22px;margin:0}}`;
+    document.head.appendChild(st);}
+  const d=document.createElement('div');d.id='pushNudge';d.className='pn';
+  d.innerHTML=`<div class="pn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
+    <div class="pn-tx"><div class="pn-t">有新一期访谈时提醒你？</div><div class="pn-s">有新内容时发一条浏览器通知，不需要账号，随时可关。</div>
+    <div class="pn-btns"><button class="pn-x" type="button" onclick="pushNudgeDismiss()">以后再说</button>
+    <button class="pn-b" type="button" onclick="pushNudgeAccept()">开启提醒</button></div></div>`;
+  document.body.appendChild(d);
+  requestAnimationFrame(()=>d.classList.add('on'));}
+let _nudgeTimer=null;
+async function pushNudgeTick(){
+  if(document.getElementById('pushNudge'))return;
+  if(!pushSupported()||pushIOSNeedsInstall())return;
+  if(Notification.permission==='denied')return;
+  if((+localStorage.pushNudgeN||0)>=NUDGE_MAX)return;
+  const t=+localStorage.pushNudgeTs||0; if(t&&Date.now()-t<NUDGE_GAP)return;
+  try{const r=await swReady(6000);if(await r.pushManager.getSubscription())return;}catch(_){}
+  if(readGet().size>=1){pushNudgeShow();return;}      // 读过东西 = 有兴趣,直接问
+  clearTimeout(_nudgeTimer);                           // 否则在详情页读满一会儿再问
+  if(/^#\/episode\//.test(location.hash))
+    _nudgeTimer=setTimeout(pushNudgeTick,NUDGE_DWELL);}
+addEventListener('load',()=>setTimeout(pushNudgeTick,2000));
+addEventListener('hashchange',()=>setTimeout(pushNudgeTick,300));
+
 /* ====== 匿名访问统计（无 Cookie / 不收集个人信息；数据进自有 D1，可在 Claude Code 直接查） ====== */
 const STATS_URL='https://stats.jasonlin.tech';
 const _dev=/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)?'mobile':'desktop';
