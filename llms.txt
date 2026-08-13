@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 246 位人物 / 529 期访谈
+规模: 246 位人物 / 530 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -54,6 +54,7 @@
 - [Noam Shazeer / 诺姆·沙泽尔](https://aipodcast.jasonlin.tech/pp/shazeer/): Co-lead, Google Gemini — 3 期
 - [Jan Leike / 扬·莱克](https://aipodcast.jasonlin.tech/pp/leike/): Alignment Lead, Anthropic — 3 期
 - [Jason Yuan / Jason Yuan](https://aipodcast.jasonlin.tech/pp/jasonyuan/): Founder & CEO, Hivemind; ex-New Computer, ex-Apple — 2 期
+- [Daniel Kokotajlo / 丹尼尔·科科塔伊洛](https://aipodcast.jasonlin.tech/pp/kokotajlo/): Author, AI 2027 · ex-OpenAI — 2 期
 - [Philip Kiely / 菲利普·基利](https://aipodcast.jasonlin.tech/pp/philipkiely/): Developer Relations Lead, Baseten — 2 期
 - [Karina Nguyen / 卡丽娜·阮](https://aipodcast.jasonlin.tech/pp/karina/): Research, OpenAI — 2 期
 - [Meng To / 孟托](https://aipodcast.jasonlin.tech/pp/mengto/): Founder of Design+Code — 2 期
@@ -119,7 +120,6 @@
 - [Sachin Katti / 萨钦·卡蒂](https://aipodcast.jasonlin.tech/pp/sachinkatti/): Compute Chief, OpenAI · ex-CTO, Intel — 1 期
 - [Chris Pedregal / 克里斯·佩德雷加尔](https://aipodcast.jasonlin.tech/pp/chrispedregal/): Co-founder & CEO of Granola — 1 期
 - [Katelyn Lesse / 凯特琳·莱西](https://aipodcast.jasonlin.tech/pp/katelynlesse/): Head of Platform Product, Anthropic — 1 期
-- [Daniel Kokotajlo / 丹尼尔·科科塔伊洛](https://aipodcast.jasonlin.tech/pp/kokotajlo/): Author, AI 2027 · ex-OpenAI — 1 期
 - [Alistair Pullen / 阿利斯泰尔·普伦](https://aipodcast.jasonlin.tech/pp/pullen/): Co-founder & CEO, Cosine (Genie) — 1 期
 - [Noam Segal / 诺姆·西格尔](https://aipodcast.jasonlin.tech/pp/noamsegal/): Research leader (Airbnb, Meta, Figma); AI builder & coach — 1 期
 - [David "davidad" Dalrymple / 大卫·"davidad"·达尔林普尔](https://aipodcast.jasonlin.tech/pp/davidad/): Technical Advisor, Safeguarded AI, ARIA — 1 期
@@ -263,6 +263,7 @@
 - [Building Elite High Talent Density Teams with Adam Ward](https://aipodcast.jasonlin.tech/e/adamward-lennyspo-2026/) — Adam Ward, Lenny’s Podcast, 2026-08-09
 - [Paper: An AI-Native Design Tool for the Next Era](https://aipodcast.jasonlin.tech/e/stephenhaney-ycombina-2026/) — Stephen Haney, Y Combinator, 2026-08-07
 - [Startup Infrastructure: Lessons from Deep Tech](https://aipodcast.jasonlin.tech/e/maxhodak-ycombina-2026/) — Max Hodak, Y Combinator, 2026-08-07
+- [AI 2040: From Prediction to Recommendation](https://aipodcast.jasonlin.tech/e/kokotajlo-lawfare-2026/) — Daniel Kokotajlo, Lawfare, 2026-08-07
 - [Personal AGI: The Spinoza Heresy of Intelligence](https://aipodcast.jasonlin.tech/e/garrytan-ycombina-2026/) — Garry Tan, Y Combinator, 2026-08-06
 - [Book a Launch Before You Know What to Launch](https://aipodcast.jasonlin.tech/e/philipjohnston-ycombina-2026/) — Philip Johnston, Y Combinator, 2026-08-05
 - [SpaceX Q2 2026 Earnings Call: Starship, Starlink, and AI Ambitions](https://aipodcast.jasonlin.tech/e/elon-spacexq2-2026/) — Elon Musk, SpaceX Q2 2026 Earnings Call, 2026-08-04
@@ -294,7 +295,6 @@
 - [Sam Altman on AI Revolutionizing Startups](https://aipodcast.jasonlin.tech/e/altman-relentle-2026/) — Sam Altman, Relentless, 2026-07-25
 - [The AI Factory: The Heart of the AI Revolution](https://aipodcast.jasonlin.tech/e/jensen-bg2podwi-2026/) — Jensen Huang, BG2Pod with Bill Gurley & Brad Gerstner, 2026-07-24
 - [The Largest Chip Ever and the Speed of AI](https://aipodcast.jasonlin.tech/e/feldman-themadpo-2026/) — Andrew Feldman, The MAD Podcast, 2026-07-23
-- [DoorDash Co-Founders on Agentic Commerce and the Future of Food Delivery](https://aipodcast.jasonlin.tech/e/andyfang-nopriors-2026/) — Andy Fang, No Priors, 2026-07-23
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
