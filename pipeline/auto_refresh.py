@@ -498,6 +498,9 @@ def main():
                 ["python3", "pipeline/gen_views.py"], ["python3", "pipeline/gen_topics.py"],
                 ["python3", "pipeline/gen_brief.py"], ["python3", "pipeline/gen_sectitles.py"],
                 ["python3", "pipeline/fix_spacing.py"], ["python3", "pipeline/fix_terms.py"], ["python3", "pipeline/split_data.py"],
+                # 新人物补头像(用其单集封面人脸裁剪,消化 pending_avatars)+ 转 webp。
+                # 个人 Mac 若没装 cv2,fill 会安全落空、条目留在 pending,不影响链路。
+                ["python3", "pipeline/fill_pending_avatars.py"], ["python3", "pipeline/webp_avatars.py"],
                 ["node", "pipeline/build_mcp_data.js"], ["node", "pipeline/build_share_pages.js"],
                 # RSS:2026-08-13 才发现这一步从没进过任何链条,feed.xml 停更两周半
                 ["python3", "pipeline/gen_feed.py"],
