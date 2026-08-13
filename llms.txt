@@ -3,13 +3,13 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 251 位人物 / 534 期访谈
+规模: 251 位人物 / 535 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
 - [Sam Altman / 萨姆·奥尔特曼](https://aipodcast.jasonlin.tech/pp/altman/): CEO, OpenAI — 18 期
 - [Dario Amodei / 达里奥·阿莫迪](https://aipodcast.jasonlin.tech/pp/dario/): CEO, Anthropic — 16 期
-- [Elon Musk / 埃隆·马斯克](https://aipodcast.jasonlin.tech/pp/elon/): Founder, xAI — 14 期
+- [Elon Musk / 埃隆·马斯克](https://aipodcast.jasonlin.tech/pp/elon/): Founder, xAI — 15 期
 - [Naval Ravikant / 纳瓦尔·拉维坎特](https://aipodcast.jasonlin.tech/pp/naval/): Co-founder, AngelList; angel investor & philosopher — 14 期
 - [Jensen Huang / 黄仁勋](https://aipodcast.jasonlin.tech/pp/jensen/): Founder & CEO, NVIDIA — 12 期
 - [Demis Hassabis / 杰米斯·哈萨比斯](https://aipodcast.jasonlin.tech/pp/demis/): CEO, Google DeepMind — 12 期
@@ -263,6 +263,7 @@
 - [Recursive Self-Improvement and the Path to Superintelligence](https://aipodcast.jasonlin.tech/e/ryangreenblatt-dwarkesh-2026/) — Ryan Greenblatt, Dwarkesh Podcast, 2026-08-11
 - [AI-Powered Design Workflows: HTML Artifacts and Autonomous Agents](https://aipodcast.jasonlin.tech/e/kylezantos-diveclub-2026/) — Kyle Zantos, Dive Club, 2026-08-11
 - [Building a Research Lab on a Budget: Harvey's Playbook](https://aipodcast.jasonlin.tech/e/gabepereyra-sequoiac-2026/) — Gabe Pereyra, Sequoia Capital, 2026-08-11
+- [SpaceX: From Falcon 1 to Starship](https://aipodcast.jasonlin.tech/e/elon-spacexal-2026/) — Elon Musk, SpaceX All-Hands, 2026-08-11
 - [From Annoyance to AGI: The Birth of OpenClaw](https://aipodcast.jasonlin.tech/e/steinberger-ycombina-2026/) — Peter Steinberger, Y Combinator, 2026-08-10
 - [Physics of Intelligence: From Sand to Latent Space](https://aipodcast.jasonlin.tech/e/matthieuwyart-machinel-2026/) — Matthieu Wyart, Machine Learning Street Talk, 2026-08-10
 - [OpenRouter CEO on the AI Gateway Market](https://aipodcast.jasonlin.tech/e/alexatallah-20vc-2026/) — Alex Atallah, 20VC, 2026-08-10
@@ -299,7 +300,6 @@
 - [Opus 5: Unstoppable Performance and Prompt Injection Immunity](https://aipodcast.jasonlin.tech/e/boris-ycombina-2026b/) — Boris Cherny, Y Combinator, 2026-07-27
 - [Cognition's Scott Wu on AI Coding Agents and the Abundance Era](https://aipodcast.jasonlin.tech/e/scottwu-sourcery-2026/) — Scott Wu, Sourcery with Molly O'Shea, 2026-07-27
 - [From Underdog to Leader: Diane Penn on Anthropic's Rise and Product Strategy](https://aipodcast.jasonlin.tech/e/diannepenn-lennyspo-2026/) — Dianne Na Penn, Lenny’s Podcast, 2026-07-26
-- [Nvidia's Start: Learning from Textbooks](https://aipodcast.jasonlin.tech/e/jensen-ycombina-2026/) — Jensen Huang, Y Combinator, 2026-07-26
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
