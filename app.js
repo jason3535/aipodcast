@@ -2788,14 +2788,26 @@ async function pushState(){
     /* 本地有订阅 ≠ 服务器有。上报只要失败过一次,面板就会永远显示"已开启"而服务端空空如也
        —— 2026-08-13 实测就是这么丢的(Safari 面板显示已开启,push_subs 表为空)。
        每次进面板补一次幂等上报(worker 的 /sub 是 upsert),让两边自动收敛。 */
-    if(!_pushSynced){
-      try{const rr=await fetch(PUSH_API+'/sub',{method:'POST',headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({site:PUSH_SITE,sub:s.toJSON()})});
-        _pushSynced=rr.ok;
-        if(!rr.ok)return 'unsynced';
-      }catch(_){return 'unsynced';}}
+    if(!_pushSynced&&!(await pushReRegister(s)))return 'unsynced';
     return 'on';
   }catch(_){return 'off';}}
+/* 把本地订阅补登记到服务器(/sub 是幂等 upsert)。成功返回 true。 */
+async function pushReRegister(s){
+  try{const rr=await fetch(PUSH_API+'/sub',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({site:PUSH_SITE,sub:s.toJSON()})});
+    _pushSynced=rr.ok;return rr.ok;
+  }catch(_){return false;}}
+/* 每次访问都静默自愈一次。**不能只在「我的」页做** —— 面板只在那一页渲染,
+   而用户多数时候根本不去那儿(2026-08-13:订阅丢了,让 Jason 刷新,他刷的是首页和
+   人物页,自愈代码压根没跑)。放在 load 后延迟执行,不抢首屏。 */
+async function pushSyncQuiet(){
+  if(!pushSupported()||_pushSynced)return;
+  try{
+    if(Notification.permission!=='granted')return;
+    const r=await swReady(8000);const s=await r.pushManager.getSubscription();
+    if(s)await pushReRegister(s);
+  }catch(_){}}
+addEventListener('load',()=>setTimeout(pushSyncQuiet,2500));
 let _pushNote='';
 const RSS_TIP='<a href="/feed.xml" style="color:var(--accent)">订阅 RSS</a>（任何网络都能用）';
 function pushPanelHtml(){setTimeout(pushPanelRefresh,0);
