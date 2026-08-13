@@ -2778,11 +2778,24 @@ function pushIOSNeedsInstall(){
 function swReady(ms){
   return Promise.race([navigator.serviceWorker.ready,
     new Promise((_,rj)=>setTimeout(()=>rj(new Error('Service Worker 未就绪')),ms||3000))]);}
+let _pushSynced=false;
 async function pushState(){
   if(!pushSupported())return 'unsupported';
   if(pushIOSNeedsInstall())return 'ios';
   if(Notification.permission==='denied')return 'denied';
-  try{const r=await swReady();return (await r.pushManager.getSubscription())?'on':'off';}catch(_){return 'off';}}
+  try{const r=await swReady();const s=await r.pushManager.getSubscription();
+    if(!s)return 'off';
+    /* 本地有订阅 ≠ 服务器有。上报只要失败过一次,面板就会永远显示"已开启"而服务端空空如也
+       —— 2026-08-13 实测就是这么丢的(Safari 面板显示已开启,push_subs 表为空)。
+       每次进面板补一次幂等上报(worker 的 /sub 是 upsert),让两边自动收敛。 */
+    if(!_pushSynced){
+      try{const rr=await fetch(PUSH_API+'/sub',{method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({site:PUSH_SITE,sub:s.toJSON()})});
+        _pushSynced=rr.ok;
+        if(!rr.ok)return 'unsynced';
+      }catch(_){return 'unsynced';}}
+    return 'on';
+  }catch(_){return 'off';}}
 let _pushNote='';
 const RSS_TIP='<a href="/feed.xml" style="color:var(--accent)">订阅 RSS</a>（任何网络都能用）';
 function pushPanelHtml(){setTimeout(pushPanelRefresh,0);
@@ -2795,26 +2808,39 @@ async function pushPanelRefresh(){
   if(st==='unsupported')el.innerHTML=`<div class="st-empty">这个浏览器不支持网页推送。${RSS_TIP}</div>`;
   else if(st==='ios')el.innerHTML=`<div class="st-empty">iPhone / iPad 上，需要先用 Safari 的「分享 → 添加到主屏幕」把本站装成图标，才能开启推送。或者${RSS_TIP}。</div>`;
   else if(st==='denied')el.innerHTML=`<div class="st-empty">本站的通知权限被浏览器屏蔽了，需要在地址栏的站点设置里恢复。或者${RSS_TIP}。</div>`;
+  else if(st==='unsynced')el.innerHTML=`<div class="st-empty">浏览器这边已订阅，但没能登记到提醒服务器（多半是网络问题），所以还收不到。点下面重试。</div>${btn('重试登记','pushSubscribe()')}${note}`;
   else if(st==='on')el.innerHTML=`<div class="st-empty">已开启 ✓ 有新一期时会收到一条通知（多期会合并成一条）。</div>${btn('关闭提醒','pushUnsubscribe()')}${note}`;
   else el.innerHTML=`<div class="st-empty">有新访谈时给你发一条浏览器通知。不需要账号，也不收集任何个人信息。</div>${btn('开启更新提醒','pushSubscribe()')}${note}`;}
 function pushDiagnose(e){
   const m=''+((e&&e.message)||e);
-  if(/push service|AbortError|Registration failed|not permitted|denied/i.test(m))
+  const safari=/Safari/.test(navigator.userAgent)&&!/Chrome|Chromium|Edg|CriOS|FxiOS/.test(navigator.userAgent);
+  if(Notification.permission==='denied')
+    return '浏览器里选择了不允许通知。Safari 可在「设置 → 网站 → 通知」改回允许；Chrome 点地址栏左侧图标改。或'+RSS_TIP+'。';
+  if(safari)   // Safari 的失败多是"手势已失效",别拿 FCM 那套解释误导
+    return '开启失败：'+m.slice(0,110)+'。Safari 要求授权后立刻订阅，再点一次通常就成；或'+RSS_TIP+'。';
+  if(/push service|AbortError|Registration failed|applicationServerKey/i.test(m))
     return '开启失败：浏览器连不上它自己的推送服务器。Chrome / Edge 的推送要经 Google FCM，国内网络通常不通 —— 可以改用 Safari，或'+RSS_TIP+'。';
   return '开启失败：'+m.slice(0,140)+'。可以先'+RSS_TIP+'。';}
 async function pushSubscribe(){
   const b=document.getElementById('pushBtn');if(b){b.disabled=true;b.textContent='正在开启…';}
-  _pushNote='';
+  _pushNote='';let sub=null;
   try{
-    if(await Notification.requestPermission()!=='granted'){_pushNote='没有授予通知权限，提醒未开启。';return pushPanelRefresh();}
     const reg=await swReady(5000);
-    const sub=await reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:urlB64ToBytes(VAPID_PUB)});
+    /* 直接 subscribe —— 它自己会弹权限请求。先 await Notification.requestPermission() 再
+       subscribe,Safari 会认为已脱离用户手势而抛 NotAllowedError(Safari 的经典坑)。*/
+    sub=await reg.pushManager.getSubscription()
+        ||await reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:urlB64ToBytes(VAPID_PUB)});
     const r=await fetch(PUSH_API+'/sub',{method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({site:PUSH_SITE,sub:sub.toJSON()})});
     if(!r.ok)throw new Error('订阅服务器未接受（HTTP '+r.status+'）');
-    // 告诉 SW「现有内容都算已看过」,否则第一条推送会说"N 期新访谈"(N=全站)
-    if(reg.active)reg.active.postMessage({type:'push-seen-init',ts:Date.now()});
-  }catch(e){_pushNote=pushDiagnose(e);}
+    _pushSynced=true;
+    const act=reg.active||navigator.serviceWorker.controller;   // 刚注册时 reg.active 可能还是 null
+    if(act)act.postMessage({type:'push-seen-init',ts:Date.now()});
+  }catch(e){
+    _pushNote=pushDiagnose(e);
+    // 服务器没收下就别留着本地订阅,否则面板会一直谎称"已开启"
+    if(sub&&!_pushSynced){try{await sub.unsubscribe();}catch(_){}}
+  }
   pushPanelRefresh();}
 async function pushUnsubscribe(){
   const b=document.getElementById('pushBtn');if(b){b.disabled=true;b.textContent='正在关闭…';}
