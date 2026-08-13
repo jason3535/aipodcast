@@ -136,12 +136,12 @@ export default {
       if (!subs.length) return J({ sent: 0, gone: 0, failed: 0, next: null, note: '该站暂无订阅' }, 200, co);
 
       const cache = new Map();
-      let sent = 0, gone = 0, failed = 0; const dead = [], errs = {};
+      let sent = 0, gone = 0, failed = 0; const dead = [], ok = [], errs = {};
       for (const s of subs) {
         let st;
         try { st = await sendOne(env, s.endpoint, cache); }
         catch (e) { failed++; errs['exception'] = ('' + (e && e.message || e)).slice(0, 120); continue; }
-        if (st >= 200 && st < 300) { sent++; }
+        if (st >= 200 && st < 300) { sent++; ok.push(s.endpoint); }
         else if (st === 404 || st === 410) { gone++; dead.push(s.endpoint); }   // 订阅已失效 → 删
         else { failed++; errs['http' + st] = (errs['http' + st] || 0) + 1; }
       }
@@ -149,8 +149,10 @@ export default {
         // D1 不支持数组绑定,逐条删;死订阅数量天然很小
         for (const ep of dead) { try { await env.DB.prepare('DELETE FROM push_subs WHERE endpoint=?').bind(ep).run(); } catch (_) { } }
       }
-      if (sent) {
-        try { await env.DB.prepare('UPDATE push_subs SET last_ok=? WHERE site=?').bind(Date.now(), site).run(); } catch (_) { }
+      // 只给**真的发成功**的那些打时间戳。早先按 site 整表更新,5 个里成功 3 个也会
+      // 把 5 个都标成健康 —— /stat 的 alive 就成了假信号,排查时会被它带偏。
+      for (const ep of ok) {
+        try { await env.DB.prepare('UPDATE push_subs SET last_ok=?,fails=0 WHERE endpoint=?').bind(Date.now(), ep).run(); } catch (_) { }
       }
       return J({ sent, gone, failed, errs, next: subs.length === BATCH ? offset + BATCH : null }, 200, co);
     }
