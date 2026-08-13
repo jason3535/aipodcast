@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-08-12</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-08-13</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/ryangreenblatt/</loc><lastmod>2026-08-12</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/kylezantos/</loc><lastmod>2026-08-12</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/gabepereyra/</loc><lastmod>2026-08-12</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/elon/</loc><lastmod>2026-08-13</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/steinberger/</loc><lastmod>2026-08-12</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/matthieuwyart/</loc><lastmod>2026-08-12</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/alexatallah/</loc><lastmod>2026-08-12</lastmod></url>
@@ -14,7 +15,6 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/garrytan/</loc><lastmod>2026-08-07</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/philipjohnston/</loc><lastmod>2026-08-07</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/zvi/</loc><lastmod>2026-08-12</lastmod></url>
-  <url><loc>https://aipodcast.jasonlin.tech/pp/elon/</loc><lastmod>2026-08-05</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/joshmeier/</loc><lastmod>2026-08-04</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/nateparrott/</loc><lastmod>2026-08-04</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/dmitridolgov/</loc><lastmod>2026-08-04</lastmod></url>
@@ -255,6 +255,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/e/ryangreenblatt-dwarkesh-2026/</loc><lastmod>2026-08-12</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/kylezantos-diveclub-2026/</loc><lastmod>2026-08-12</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/gabepereyra-sequoiac-2026/</loc><lastmod>2026-08-12</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/elon-spacexal-2026/</loc><lastmod>2026-08-13</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/steinberger-ycombina-2026/</loc><lastmod>2026-08-12</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/matthieuwyart-machinel-2026/</loc><lastmod>2026-08-12</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/alexatallah-20vc-2026/</loc><lastmod>2026-08-12</lastmod></url>
