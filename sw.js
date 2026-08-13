@@ -24,6 +24,18 @@ const PAGES = 'pages-' + V, STATIC = 'static-' + V, DATA = 'data-' + V, IMG = 'i
 const DATA_MAX = 80;   // 单集 json 平均 ~50KB,80 个约 4MB
 const IMG_MAX = 200;   // 头像/台标 ~10KB 一张
 
+/* 推送相关常量(两站共用这份 sw.js,靠域名区分文案与上报的 site) */
+const PUSH_META = 'push-meta';    // 只存一条「上次已提醒到哪个时间戳」,不参与版本清理
+const PUSH_API = 'https://push.jasonlin.tech';
+const VAPID_PUB = 'BKZpK04qWu3AxxSH9KatKT0882TaRH43G1JhOQ1cLkaEg_AyR8os6JcLpzNhUKvyhmlEpD6no9SHphYbd_-n2hc';
+const IS_PAPER = /aipaper/.test(self.location.hostname);
+const SITE_KEY = IS_PAPER ? 'aipaper' : 'aipodcast';
+const SITE_NAME = IS_PAPER ? 'AI Paper' : 'AI Podcast';
+const SITE_UNIT = IS_PAPER ? '篇' : '期';
+const SITE_WORD = IS_PAPER ? '新内容' : '新访谈';
+const NOTIFY_ICON = '/assets/notify-icon.png';
+const NOTIFY_TAG = 'latest';      // 固定 tag:多次推送替换同一条,不在通知中心堆一摞
+
 if (KILL) {
   self.addEventListener('install', () => self.skipWaiting());
   self.addEventListener('activate', e => e.waitUntil((async () => {
@@ -35,9 +47,92 @@ if (KILL) {
 
   self.addEventListener('install', () => self.skipWaiting());
   self.addEventListener('activate', e => e.waitUntil((async () => {
-    const keep = new Set([PAGES, STATIC, DATA, IMG]);
+    const keep = new Set([PAGES, STATIC, DATA, IMG, PUSH_META]);   // PUSH_META 必须留,否则每次换版都把「已提醒到哪」清零 → 重复轰炸
     for (const k of await caches.keys()) if (!keep.has(k)) await caches.delete(k);
     await self.clients.claim();
+  })()));
+
+  /* ── 浏览器推送 ─────────────────────────────────────────────────────
+     服务端发的是**不带 payload** 的推送(理由见 push-worker/worker.js),这里收到后
+     自己拉 /push-latest.json 再决定弹什么。因此:
+       · 攒了多期只弹一条「N 期新访谈」,不是轰炸 N 条;
+       · 用户离线几天后上线,看到的是"此刻最新",不是发送时的旧快照。
+     「上次提醒到哪」存在 Cache 里(SW 里 IndexedDB 要写的样板代码多得多)。 */
+  const seenGet = async () => {
+    try { const c = await caches.open(PUSH_META); const r = await c.match('/__push_seen');
+          return r ? (+(await r.text()) || 0) : 0; } catch (_) { return 0; }
+  };
+  const seenSet = async v => {
+    try { const c = await caches.open(PUSH_META); await c.put('/__push_seen', new Response(String(v))); } catch (_) { }
+  };
+
+  self.addEventListener('push', e => e.waitUntil((async () => {
+    let items = [];
+    try {
+      const r = await fetch('/push-latest.json?_=' + Date.now(), { cache: 'no-store' });
+      const d = await r.json();
+      if (d && Array.isArray(d.items)) items = d.items;
+    } catch (_) { }
+
+    // 拉不到(断网/正在部署):也必须弹点什么 —— 什么都不弹的话浏览器会替你弹
+    // 一条"此网站已在后台更新",那个更难看。
+    if (!items.length) {
+      return self.registration.showNotification(SITE_NAME, {
+        body: '有' + SITE_WORD + '更新', icon: NOTIFY_ICON, badge: NOTIFY_ICON,
+        tag: NOTIFY_TAG, data: { url: '/' },
+      });
+    }
+
+    const seen = await seenGet();
+    let fresh = items.filter(i => (+i.ts || 0) > seen);
+    if (!fresh.length) fresh = items.slice(0, 1);   // 同上:宁可重复说一条最新的,也不留空推
+    await seenSet(items.reduce((m, i) => Math.max(m, +i.ts || 0), 0));
+
+    const one = fresh.length === 1;
+    await self.registration.showNotification(
+      one ? SITE_NAME + ' · ' + SITE_WORD : SITE_NAME + ' · ' + fresh.length + ' ' + SITE_UNIT + SITE_WORD,
+      {
+        body: fresh.slice(0, 3).map(i => i.t).join('\n') + (fresh.length > 3 ? '\n等 ' + fresh.length + ' ' + SITE_UNIT : ''),
+        icon: NOTIFY_ICON, badge: NOTIFY_ICON, tag: NOTIFY_TAG, renotify: true,
+        data: { url: one ? (fresh[0].u || '/') : '/' },
+      });
+  })()));
+
+  self.addEventListener('notificationclick', e => {
+    e.notification.close();
+    const url = (e.notification.data && e.notification.data.url) || '/';
+    e.waitUntil((async () => {
+      // 已经开着本站的窗口就复用,别每次点通知都开新标签页
+      const wins = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
+      for (const c of wins) {
+        if (new URL(c.url).origin === self.location.origin) {
+          await c.focus();
+          try { await c.navigate(url); } catch (_) { }   // 个别浏览器拒绝 navigate,聚焦本身已达目的
+          return;
+        }
+      }
+      await self.clients.openWindow(url);
+    })());
+  });
+
+  // 页面在用户刚订阅时告诉 SW「当前这些都算已读」,否则第一条推送会说"N 篇新内容"(N=全站)
+  self.addEventListener('message', e => {
+    const d = e.data || {};
+    if (d.type === 'push-seen-init') e.waitUntil(seenSet(+d.ts || Date.now()));
+  });
+
+  /* 浏览器会主动轮换订阅(密钥过期、存储清理)。不接这个事件的话推送就静默死了,
+     用户还以为自己订着。这里用同一个 VAPID 公钥重新订阅并上报新端点。 */
+  self.addEventListener('pushsubscriptionchange', e => e.waitUntil((async () => {
+    try {
+      const raw = atob(VAPID_PUB.replace(/-/g, '+').replace(/_/g, '/'));
+      const key = new Uint8Array(raw.length);
+      for (let i = 0; i < raw.length; i++) key[i] = raw.charCodeAt(i);
+      const sub = await self.registration.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: key });
+      const old = e.oldSubscription && e.oldSubscription.endpoint;
+      if (old) await fetch(PUSH_API + '/unsub', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ endpoint: old }) }).catch(() => { });
+      await fetch(PUSH_API + '/sub', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ site: SITE_KEY, sub: sub.toJSON() }) });
+    } catch (_) { }
   })()));
 
   const trim = async (name, max) => {

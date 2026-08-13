@@ -6,216 +6,216 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Thu, 30 Jul 2026 03:13:52 -0000</lastBuildDate>
+  <lastBuildDate>Thu, 13 Aug 2026 01:35:06 -0000</lastBuildDate>
   <item>
-    <title>从隐形到匠心：在苹果与浏览器公司设计浏览器的思考 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/e/charliedeets-diveclub-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/charliedeets-diveclub-2026/</guid>
-    <pubDate>Thu, 30 Jul 2026 03:13:52 -0000</pubDate>
-    <description>前苹果 Safari 设计师 Charlie Deets 揭示设计无处不在的隐形浏览器与打造个性化体验的差异，并分享包括拥抱冲动在内的设计原则。</description>
+    <title>AI 2040：从预测到建议 — Lawfare</title>
+    <link>https://aipodcast.jasonlin.tech/e/kokotajlo-lawfare-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/kokotajlo-lawfare-2026/</guid>
+    <pubDate>Thu, 13 Aug 2026 01:35:06 -0000</pubDate>
+    <description>Daniel 讨论了从 AI 2027 的预测情景到 AI 2040 的政策建议的转变，并强调了情景审查的重要性。</description>
   </item>
   <item>
-    <title>科技从业者心态调查：职业倦怠加剧，AI 引发担忧导致乐观情绪下降 — Lenny 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/noamsegal-lennyspo-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/noamsegal-lennyspo-2026/</guid>
-    <pubDate>Thu, 30 Jul 2026 03:13:52 -0000</pubDate>
-    <description>Lenny 与 Noam 讨论最大规模科技从业者心态调查结果，揭示职业倦怠加剧、乐观情绪下降，AI 使得员工被期望以同等薪酬完成更多工作。</description>
+    <title>AI 驱动的设计工作流：HTML 工件与自主代理 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/kylezantos-diveclub-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/kylezantos-diveclub-2026/</guid>
+    <pubDate>Wed, 12 Aug 2026 01:43:34 -0000</pubDate>
+    <description>Kyle 和 Vid 讨论使用 HTML 工件和链式 AI 技能来自动化设计审计并可视化拟议更改。</description>
   </item>
   <item>
-    <title>从经验中学习：超越强化学习与 Transformer — Training Data</title>
-    <link>https://aipodcast.jasonlin.tech/e/tworek-training-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/tworek-training-2026/</guid>
-    <pubDate>Wed, 29 Jul 2026 15:17:01 -0000</pubDate>
-    <description>Jerry 和 Rohan 讨论如何从经验中学习不仅限于强化学习，以及当前 Transformer 架构为何可能成为 AI 进展的瓶颈。</description>
+    <title>Chai Discovery：AI 原生的药物发现软件工厂 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/e/mattmcpartland-latentsp-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/mattmcpartland-latentsp-2026/</guid>
+    <pubDate>Wed, 12 Aug 2026 01:43:34 -0000</pubDate>
+    <description>Chai Discovery 的创始人讨论他们的 AI 模型和设计套件如何将药物发现从瀑布流程转变为敏捷循环，并与大型制药公司建立合作。</description>
   </item>
   <item>
-    <title>构建空间智能：World Labs 与 Scenix 合并 — a16z 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/feifei-thea16zp-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/feifei-thea16zp-2026/</guid>
-    <pubDate>Wed, 29 Jul 2026 15:17:01 -0000</pubDate>
-    <description>李飞飞与 Yinuo 讨论空间智能的愿景以及用于训练机器人的现实到模拟再到现实的管道。</description>
+    <title>预算有限，如何打造研究实验室 — Training Data</title>
+    <link>https://aipodcast.jasonlin.tech/e/gabepereyra-training-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/gabepereyra-training-2026/</guid>
+    <pubDate>Wed, 12 Aug 2026 01:43:34 -0000</pubDate>
+    <description>Harvey 联合创始人 Gabe 分享应用层公司如何利用前沿生态系统、构建基准数据集并对开源模型进行后训练，从而与前沿实验室竞争。</description>
   </item>
   <item>
-    <title>Sam Altman 谈 AI 的潜力与专注 — Invest Like The Best</title>
-    <link>https://aipodcast.jasonlin.tech/e/altman-investli-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/altman-investli-2026/</guid>
-    <pubDate>Wed, 29 Jul 2026 15:17:01 -0000</pubDate>
-    <description>Sam Altman 讨论 AI 作为人类历史上最伟大的技术成就，专注的重要性，以及避免权力集中的必要性。</description>
+    <title>直觉、AI 与群体思维：与 Jason 的对话 — Avec</title>
+    <link>https://aipodcast.jasonlin.tech/e/jasonyuan-avec-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/jasonyuan-avec-2026/</guid>
+    <pubDate>Wed, 12 Aug 2026 01:43:34 -0000</pubDate>
+    <description>Jason 探讨直觉、AI 的人性本质，并用中文向奶奶解释群体思维。</description>
   </item>
   <item>
-    <title>山姆·奥特曼谈 YC 早期岁月与创业公司的未来 — Y Combinator</title>
-    <link>https://aipodcast.jasonlin.tech/e/altman-ycombina-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/altman-ycombina-2026/</guid>
-    <pubDate>Wed, 29 Jul 2026 15:17:01 -0000</pubDate>
-    <description>山姆·奥特曼回顾 Y Combinator 的初创时期，并分享了他对 AGI 时代创业公司未来的展望。</description>
+    <title>从烦恼到 AGI：OpenClaw 的诞生 — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/e/steinberger-ycombina-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/steinberger-ycombina-2026/</guid>
+    <pubDate>Wed, 12 Aug 2026 01:43:34 -0000</pubDate>
+    <description>OpenClaw 的创始人分享了一个烦恼时刻如何催生出一款感觉像 AGI 的产品，以及他如何意外地将其推向世界。</description>
   </item>
   <item>
-    <title>抓住 AI 机遇：行动胜于确定 — Evan Carmichael</title>
-    <link>https://aipodcast.jasonlin.tech/e/mengto-evancarm-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/mengto-evancarm-2026/</guid>
-    <pubDate>Wed, 29 Jul 2026 15:17:01 -0000</pubDate>
-    <description>大多数人因追求确定性而错失人生最大的机会。在 AI 时代，一个人一台笔记本电脑就能超越整个公司的收入。立即开始，而非等待感觉准备好。</description>
+    <title>与 Adam Ward 一起打造精英高密度人才团队 — Lenny’s Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/e/adamward-lennyspo-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/adamward-lennyspo-2026/</guid>
+    <pubDate>Wed, 12 Aug 2026 01:43:34 -0000</pubDate>
+    <description>Adam Ward 分享了他关于在招聘中避免“厄运漏斗”并打造精英团队的见解。</description>
   </item>
   <item>
-    <title>Opus 5：持续运转与提示注入免疫的突破 — Y Combinator</title>
-    <link>https://aipodcast.jasonlin.tech/e/boris-ycombina-2026b/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/boris-ycombina-2026b/</guid>
-    <pubDate>Wed, 29 Jul 2026 15:17:01 -0000</pubDate>
-    <description>Opus 5 可连续运行数周且不受提示注入攻击，促使 Claude Code 的系统提示被删减 80%。</description>
+    <title>理解广义相对论：爱因斯坦最美丽的思想 — Dwarkesh 播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/adambrown-dwarkesh-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/adambrown-dwarkesh-2026/</guid>
+    <pubDate>Tue, 11 Aug 2026 13:28:59 -0000</pubDate>
+    <description>亚当·布朗解释广义相对论的核心洞见，让爱因斯坦的革命性理论为大众所理解。</description>
   </item>
   <item>
-    <title>外包智能但不能外包理解：Logan Kilpatrick 谈 AI 速度与保持理智 — 1st10 Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/e/logankilpatrick-1st10pod-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/logankilpatrick-1st10pod-2026/</guid>
-    <pubDate>Wed, 29 Jul 2026 15:17:01 -0000</pubDate>
-    <description>前 OpenAI 开发者关系负责人 Logan Kilpatrick 分享对 AI 速度的见解、理解的重要性，以及园艺如何让他保持理智。</description>
+    <title>模型塑造的艺术：为何后训练是主观的 — MTS</title>
+    <link>https://aipodcast.jasonlin.tech/e/karina-mts-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/karina-mts-2026/</guid>
+    <pubDate>Mon, 10 Aug 2026 01:38:50 -0000</pubDate>
+    <description>Karina W 探讨为何后训练是艺术而非科学，以及人类判断如何塑造面向数十亿用户的 AI 模型。</description>
   </item>
   <item>
-    <title>埃隆·马斯克预测 AI 将在 2030 年代超越人类智能，带来丰裕时代 — 经济学人</title>
-    <link>https://aipodcast.jasonlin.tech/e/elon-theecono-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/elon-theecono-2026/</guid>
-    <pubDate>Tue, 28 Jul 2026 14:44:29 -0000</pubDate>
-    <description>在 2026 年的采访中，埃隆·马斯克展望 2036 年：AI 远超人类智能、人形机器人，以及由于商品和服务充裕而金钱不再重要的世界。</description>
+    <title>AI 先驱谈智能未来与自我复制机器人 — Alex Kantrowitz</title>
+    <link>https://aipodcast.jasonlin.tech/e/schmidhuber-alexkant-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/schmidhuber-alexkant-2026/</guid>
+    <pubDate>Mon, 10 Aug 2026 01:38:50 -0000</pubDate>
+    <description>AI 先驱 Jürgen Schmidhuber 探讨当前 AI 的局限、物理世界机器人的潜力以及即将到来的经济颠覆。</description>
   </item>
   <item>
-    <title>英伟达起步：从教科书学习 — Y Combinator</title>
-    <link>https://aipodcast.jasonlin.tech/e/jensen-ycombina-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/jensen-ycombina-2026/</guid>
-    <pubDate>Mon, 27 Jul 2026 16:16:03 -0000</pubDate>
-    <description>黄仁勋分享英伟达如何从错误技术起步，通过教科书学习重新发明 3D 图形。</description>
+    <title>AI 中最快的时间线：推理工程 — TWIML AI 播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/philipkiely-thetwiml-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/philipkiely-thetwiml-2026/</guid>
+    <pubDate>Mon, 10 Aug 2026 01:38:50 -0000</pubDate>
+    <description>Philip Kyle 讨论了为什么推理是 AI 中最重要且最具粘性的工作负载，以及 Base 10 如何转向专注于推理。</description>
   </item>
   <item>
-    <title>从逆袭到领先：Anthropic 产品主管 Diane Penn 谈崛起与产品战略 — Lenny 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/diannepenn-lennyspo-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/diannepenn-lennyspo-2026/</guid>
-    <pubDate>Mon, 27 Jul 2026 16:16:03 -0000</pubDate>
-    <description>Anthropic 研究实验室产品主管分享公司早期挣扎、Opus 3 与 Claude Code 的突破，以及 AI 时代产品管理角色的演变。</description>
+    <title>从联席总裁到 CEO：Spotify 非同寻常的接班内幕 — Founders</title>
+    <link>https://aipodcast.jasonlin.tech/e/gustav-founders-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/gustav-founders-2026/</guid>
+    <pubDate>Sun, 09 Aug 2026 04:27:47 -0000</pubDate>
+    <description>Spotify 新任 CEO 分享三年联席总裁的历练和独特的领导风格如何为他执掌公司做好准备。</description>
   </item>
   <item>
-    <title>为 AI 代理设计循环和工作流 — Peter Yang</title>
-    <link>https://aipodcast.jasonlin.tech/e/thariq-peteryan-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/thariq-peteryan-2026/</guid>
-    <pubDate>Mon, 27 Jul 2026 16:16:03 -0000</pubDate>
-    <description>来自 cloud code 团队的 Tharic 解释了如何使用 /loop、/goal 和工作流让 Claude 长时间自主运行，并演示了视频编辑。</description>
+    <title>从策展到生成：Spotify 的 Gustav Söderström 谈 AI 与产品演变 — Lenny 的播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/gustav-lennyspo-2023/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/gustav-lennyspo-2023/</guid>
+    <pubDate>Sun, 09 Aug 2026 04:27:47 -0000</pubDate>
+    <description>Spotify 联合总裁探讨从用户策展到算法推荐再到 AI 生成的转变，以及这对产品设计的意义。</description>
   </item>
   <item>
-    <title>Inkling、Liquid AI 与 AI 监管呼声 — Moonshots</title>
-    <link>https://aipodcast.jasonlin.tech/e/hasani-moonshot-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/hasani-moonshot-2026/</guid>
-    <pubDate>Mon, 27 Jul 2026 16:16:03 -0000</pubDate>
-    <description>米拉·穆拉蒂推出可定制 AI 模型 Inkling，Liquid AI CEO 探讨小语言模型，行业热议监管。</description>
+    <title>创业基础设施：深度科技的经验教训 — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/e/maxhodak-ycombina-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/maxhodak-ycombina-2026/</guid>
+    <pubDate>Sun, 09 Aug 2026 03:33:00 -0000</pubDate>
+    <description>Max Hodak 分享了在深度科技初创公司中管理基础设施的见解，从采购设备到预算控制。</description>
   </item>
   <item>
-    <title>AI 战略与技能：十年回顾 — WCIT</title>
-    <link>https://aipodcast.jasonlin.tech/e/demis-wcit-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/demis-wcit-2026/</guid>
-    <pubDate>Mon, 27 Jul 2026 16:16:03 -0000</pubDate>
-    <description>Wendy Hall 和 Demis Hassabis 讨论了英国的 AI 国家战略和技能挑战，指出英国曾是先锋，但已被新加坡等国超越。</description>
+    <title>Paper：面向下一个时代的 AI 原生设计工具 — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/e/stephenhaney-ycombina-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/stephenhaney-ycombina-2026/</guid>
+    <pubDate>Sun, 09 Aug 2026 01:35:39 -0000</pubDate>
+    <description>Paper 创始人 Steven Haney 探讨其 AI 原生设计工具如何利用 HTML 和 CSS 赋能设计师与智能体。</description>
   </item>
   <item>
-    <title>Sam Altman 谈 AI 如何革新创业环境 — Relentless</title>
-    <link>https://aipodcast.jasonlin.tech/e/altman-relentle-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/altman-relentle-2026/</guid>
-    <pubDate>Mon, 27 Jul 2026 08:40:02 -0000</pubDate>
-    <description>Sam Altman 讨论了过去十年 AI 和指数增长如何改变创业动态，强调拥抱混乱并为未来能力做规划的重要性。</description>
+    <title>从卢旺达到全球物流：Zipline 的旅程 — Training Data</title>
+    <link>https://aipodcast.jasonlin.tech/e/kellerrinaudocliffto-training-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/kellerrinaudocliffto-training-2026/</guid>
+    <pubDate>Sun, 09 Aug 2026 01:35:39 -0000</pubDate>
+    <description>Zipline 联合创始人和系统工程负责人讨论卢旺达的客户反馈如何塑造了他们构建自主物流系统的使命，并揭示无人机仅占解决方案的 15%。</description>
   </item>
   <item>
-    <title>AI 模型比我们使用的更智能：Claude Code 的洞见 — South Park Commons</title>
-    <link>https://aipodcast.jasonlin.tech/e/thariq-southpar-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/thariq-southpar-2026/</guid>
-    <pubDate>Sat, 25 Jul 2026 14:02:39 -0000</pubDate>
-    <description>一位 Anthropic 团队成员讨论 AI 智能体比当前使用更智能，分享构建 Claude Code 功能（如询问用户）的经验，并反思模型改进。</description>
+    <title>个人 AGI：智能的斯宾诺莎异端 — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/e/garrytan-ycombina-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/garrytan-ycombina-2026/</guid>
+    <pubDate>Fri, 07 Aug 2026 03:32:21 -0000</pubDate>
+    <description>一场关于个人 AGI 的演讲，它如同斯宾诺莎的上帝，弥散于基础设施之中，而非单一事件，并阐述为何你应该构建自己的 AGI。</description>
   </item>
   <item>
-    <title>AI 工厂：AI 革命的核心 — BG2Pod</title>
-    <link>https://aipodcast.jasonlin.tech/e/jensen-bg2podwi-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/jensen-bg2podwi-2026/</guid>
-    <pubDate>Sat, 25 Jul 2026 04:00:06 -0000</pubDate>
-    <description>黄仁勋解析 AI 工厂如何推动人类史上最大规模的基础设施建设，以及为何它们是企业未来十年的最佳投资。</description>
+    <title>在知道要发射什么之前，先预订发射 — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/e/philipjohnston-ycombina-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/philipjohnston-ycombina-2026/</guid>
+    <pubDate>Fri, 07 Aug 2026 03:32:21 -0000</pubDate>
+    <description>StarCloud 的 Philip Johnston 解释了为什么尽早预订发射对航天公司来说是一种推动力，以及他的公司如何从太空太阳能转向太空数据中心。</description>
   </item>
   <item>
-    <title>Alphabet 2026 年第二季度财报：AI 推动营收增长 24% — Alphabet Q2 2026 财报电话会议</title>
-    <link>https://aipodcast.jasonlin.tech/e/sundarpichai-alphabet-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/sundarpichai-alphabet-2026/</guid>
-    <pubDate>Fri, 24 Jul 2026 07:51:07 -0000</pubDate>
-    <description>Alphabet 营收增长 24%，得益于 AI 投资，搜索增长 17%，云增长 82%，Gemini 模型快速普及。</description>
+    <title>JLM52 如何编写 GPU 内核及长查询路由 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/e/philipkiely-latentsp-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/philipkiely-latentsp-2026/</guid>
+    <pubDate>Fri, 07 Aug 2026 03:32:21 -0000</pubDate>
+    <description>探讨使用 JLM52 自动编写 GPU 内核，以及推理引擎中处理长查询的过程。</description>
   </item>
   <item>
-    <title>特斯拉 2026 年第二季度：创纪录交付、FSD 需求激增与 Robo Taxi 扩张 — 特斯拉 Q2 2026 财报电话会议</title>
-    <link>https://aipodcast.jasonlin.tech/e/elon-teslaq22-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/elon-teslaq22-2026/</guid>
-    <pubDate>Fri, 24 Jul 2026 07:40:37 -0000</pubDate>
-    <description>埃隆·马斯克讨论创纪录的第二季度交付、FSD 需求激增、能源业务增长以及谨慎的 Robo Taxi 扩张。</description>
+    <title>构建随机性：热力学计算与 AI 驱动的芯片设计 — ML Street Talk</title>
+    <link>https://aipodcast.jasonlin.tech/e/thomasahle-machinel-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/thomasahle-machinel-2026/</guid>
+    <pubDate>Fri, 07 Aug 2026 03:32:21 -0000</pubDate>
+    <description>Thomas Ali 探讨热力学计算、AI 生成的 Verilog 以及验证芯片正确性的挑战。</description>
   </item>
   <item>
-    <title>创造者之忧：伊利亚·苏茨克沃的人工智能之旅 — 视觉经济</title>
-    <link>https://aipodcast.jasonlin.tech/e/ilya-visionec-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/ilya-visionec-2026/</guid>
-    <pubDate>Thu, 23 Jul 2026 01:30:20 -0000</pubDate>
-    <description>伊利亚·苏茨克沃参与创造了现代人工智能，从 AlexNet 到 GPT，但随着 AI 变得强大，他转而反对 OpenAI CEO 萨姆·奥尔特曼，担忧超级智能机器带来的生存威胁。</description>
+    <title>Applied Intuition：为十亿台机器赋予智能 — a16z 播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/qasaryounis-thea16zp-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/qasaryounis-thea16zp-2026/</guid>
+    <pubDate>Fri, 07 Aug 2026 01:41:36 -0000</pubDate>
+    <description>Applied Intuition 是一家实体 AI 公司，致力于为十亿台机器赋予智能，并认为在智能革命中，影响实体世界的公司可能比影响数字世界的公司更大。</description>
   </item>
   <item>
-    <title>用 Claude 构建更好的 AI 体验：从硬件伙伴到 AI 原生代 — How I AI</title>
-    <link>https://aipodcast.jasonlin.tech/e/felixrieseberg-howiai-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/felixrieseberg-howiai-2026/</guid>
-    <pubDate>Wed, 22 Jul 2026 01:34:32 -0000</pubDate>
-    <description>Anthropic 的 Felix Reeseberg 探讨如何用 Claude 解决几乎所有问题，分享 20 美元 DIY 硬件伙伴，并解释为何孩子是最自然的 AI 用户。</description>
+    <title>Anthropic Labs：AI 产品前沿探秘 — Alex Kantrowitz</title>
+    <link>https://aipodcast.jasonlin.tech/e/mikekrieger-alexkant-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/mikekrieger-alexkant-2026/</guid>
+    <pubDate>Fri, 07 Aug 2026 01:41:36 -0000</pubDate>
+    <description>Mike Krieger 探讨 Anthropic Labs、Fable 模型争议以及 AI 发展的快速节奏。</description>
   </item>
   <item>
-    <title>AI 时代的设计：品味、工艺与观点 — 杨彼得</title>
-    <link>https://aipodcast.jasonlin.tech/e/dylanfield-peteryan-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/dylanfield-peteryan-2026/</guid>
-    <pubDate>Wed, 22 Jul 2026 01:34:32 -0000</pubDate>
-    <description>Figma CEO Dylan Field 探讨设计在 AI 时代不断演变的角色，强调品味、工艺和观点的重要性。</description>
+    <title>AI 编程之战与智能体的未来 — Unsupervised Learning</title>
+    <link>https://aipodcast.jasonlin.tech/e/shawnwang-unsuperv-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/shawnwang-unsuperv-2026/</guid>
+    <pubDate>Fri, 07 Aug 2026 01:41:36 -0000</pubDate>
+    <description>跨界对话，探讨 AI 编程现状、智能体框架及市场动态。</description>
   </item>
   <item>
-    <title>用 AI 代理构建创意工具：Pablo Stanley 谈 Ecto 与设计未来 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/e/pablostanley-diveclub-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/pablostanley-diveclub-2026/</guid>
-    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
-    <description>Pablo Stanley 分享他构建创意工具的历程，包括带有 AI 代理的设计工具 Ecto，以及如何利用 AI 拓展思维而非替代思考。</description>
+    <title>SpaceX 2026 年第二季度财报电话会议：星舰、星链与 AI 雄心 — SpaceX Q2 2026 财报电话会议</title>
+    <link>https://aipodcast.jasonlin.tech/e/elon-spacexq2-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/elon-spacexq2-2026/</guid>
+    <pubDate>Wed, 05 Aug 2026 02:55:49 -0000</pubDate>
+    <description>SpaceX 公布创纪录营收，并阐述星舰巨大轨道运力、星链 V3 及 AI 计算扩展计划。</description>
   </item>
   <item>
-    <title>Factory CEO 谈客户痴迷与产出指标及企业 AI 战略 — 红杉资本 (Training Data)</title>
-    <link>https://aipodcast.jasonlin.tech/e/matangrinberg-sequoiac-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/matangrinberg-sequoiac-2026/</guid>
-    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
-    <description>Factory 联合创始人兼 CEO Matan 讨论了产出指标相对于客户痴迷等输入指标的重要性，以及 Factory 如何通过模型独立性和模块化在企业 AI 市场中脱颖而出。</description>
+    <title>从偶然发现到工程设计：用 AI 改造生物学 — Training Data</title>
+    <link>https://aipodcast.jasonlin.tech/e/joshmeier-training-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/joshmeier-training-2026/</guid>
+    <pubDate>Tue, 04 Aug 2026 15:56:10 -0000</pubDate>
+    <description>Chai Discovery 联合创始人探讨 AI 如何将药物发现从试错转变为以设计为导向的工程过程。</description>
   </item>
   <item>
-    <title>AI 时代角色流动性的导航：Netflix 的 Elizabeth Stone — Lenny 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/elizabethstone-lennyspo-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/elizabethstone-lennyspo-2026/</guid>
-    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
-    <description>Elizabeth Stone 探讨 AI 如何模糊传统角色、人才密度和冒险的重要性，以及如何为 AI 时代调整组织文化。</description>
+    <title>Nate Parrot 揭秘 Claude Design 幕后 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/nateparrott-diveclub-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/nateparrott-diveclub-2026/</guid>
+    <pubDate>Tue, 04 Aug 2026 15:56:10 -0000</pubDate>
+    <description>Nate Parrot 分享 Claude Design 如何从一个副项目演变为快速原型设计和迭代的强大工具。</description>
   </item>
   <item>
-    <title>下一个前沿：用科学数据扩展 AI 规模 — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/e/andybeam-latentsp-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/andybeam-latentsp-2026/</guid>
-    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
-    <description>来自 LILA Science 的 Rafa Gomez-Bombarelli 和 Andy Beam 讨论未来实验室应如何像数据中心一样，以科学数据作为新前沿来扩展 AI 规模。</description>
+    <title>构建物理 AI：Waymo 自动驾驶的经验教训 — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/e/dmitridolgov-ycombina-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/dmitridolgov-ycombina-2026/</guid>
+    <pubDate>Tue, 04 Aug 2026 15:56:10 -0000</pubDate>
+    <description>Waymo CEO 分享在物理世界中安全部署 AI 的七条技术经验，强调与数字 AI 的差异。</description>
   </item>
   <item>
-    <title>AI 协作设计：从 Figma 到代码的 Notion 实践 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/e/andymadrick-diveclub-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/andymadrick-diveclub-2026/</guid>
-    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
-    <description>Notion 设计师 Andy Madrick 分享 AI 工具（如 LLM 和代码原型）如何改变与工程师的协作，让设计师掌握最后的设计细节。</description>
+    <title>创业学校：帕特里克·科利森谈学习、写作与辍学 — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/e/collison-ycombina-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/collison-ycombina-2026/</guid>
+    <pubDate>Mon, 03 Aug 2026 11:03:03 -0000</pubDate>
+    <description>帕特里克·科利森探讨了从第一性原理学习的价值、为何仍亲自写作，以及他两次辍学创业的经历。</description>
   </item>
   <item>
-    <title>用设计下大赌注：Shop App 的故事 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/e/katarinabatina-diveclub-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/katarinabatina-diveclub-2026/</guid>
-    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
-    <description>Shop 应用设计总监 Katarina Betatina 探讨 Shopify 如何大胆冒险，将包裹追踪和支付整合成一个消费者平台，并打造高度个性化、内容驱动的浏览体验。</description>
+    <title>我们为何后悔产品管理存在 — Lenny’s Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/e/tomverrilli-lennyspo-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/tomverrilli-lennyspo-2026/</guid>
+    <pubDate>Sun, 02 Aug 2026 13:05:06 -0000</pubDate>
+    <description>Whatnot 首席产品官 Tom Verilli 解释为何他的团队避免招聘产品经理，而是赋能工程师和设计师做决策。</description>
   </item>
   <item>
-    <title>品味、AI 与决断力：一位设计师从 X 到独立之路 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/e/brandonjacoby-diveclub-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/brandonjacoby-diveclub-2026/</guid>
-    <pubDate>Tue, 21 Jul 2026 15:24:47 -0000</pubDate>
-    <description>布兰登·雅各比分享关于品味、AI 创造力以及 X 的决断文化的见解，他正启动自己的实践，帮助创始人超越“足够好”。</description>
+    <title>模拟人类行为：AI 预测的未来 — 20VC 创投播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/joonpark-20vc-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/joonpark-20vc-2026/</guid>
+    <pubDate>Sun, 02 Aug 2026 13:05:06 -0000</pubDate>
+    <description>Jun Song Park 探讨 Simily 如何利用 AI 模拟预测人类行为，以及未来单次模拟可能价值 1 亿美元的潜力。</description>
   </item>
 </channel>
 </rss>

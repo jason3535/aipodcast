@@ -1,0 +1,21 @@
+name = "aipodcast-push"
+main = "worker.js"
+compatibility_date = "2025-06-01"
+routes = [
+  { pattern = "push.jasonlin.tech", custom_domain = true }
+]
+
+# 与统计共用同一个 D1(订阅表 push_subs 与 events 表互不干扰,省一套库)
+[[d1_databases]]
+binding = "DB"
+database_name = "aipodcast-stats"
+database_id = "100dcc28-c90c-40e7-ab0b-e49484031a4c"
+
+[vars]
+# VAPID 公钥是公开信息(前端也硬编码同一份),放 vars 便于核对
+VAPID_PUBLIC = "BKZpK04qWu3AxxSH9KatKT0882TaRH43G1JhOQ1cLkaEg_AyR8os6JcLpzNhUKvyhmlEpD6no9SHphYbd_-n2hc"
+VAPID_SUB = "https://aipodcast.jasonlin.tech"
+
+# secrets(不在此文件,用 wrangler secret put 注入):
+#   VAPID_JWK  — P-256 私钥 JWK(签 VAPID JWT 用)
+#   PUSH_TOKEN — /send 与 /stat 的保护令牌

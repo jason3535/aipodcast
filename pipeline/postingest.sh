@@ -26,6 +26,14 @@ echo "── 10.5/11 站群闭环(互链 map 补全 + 图谱分享页)"
 python3 pipeline/build_crosslinks.py --apply | tail -3       # 六站互链只增不删;动了其他仓库会打印提醒
 python3 pipeline/graph_share_pages.py --apply | tail -5      # 图谱新节点的 /p+/og 页(2026-08-10 garrytan 404 教训)
 
+echo "── 10.6/11 RSS(gen_feed)"
+# 2026-08-13 发现:这一步脚本一直在,但从没被任何链条调用过,feed.xml 停更了两周半。
+# RSS 是国内 Chrome 用户唯一能用的更新通道(浏览器推送要经 FCM,国内不通),不能再漏。
+python3 pipeline/gen_feed.py | tail -1
+echo "── 10.7/11 更新提醒(push-latest.json + 浏览器推送)"
+# 只在传了新收 id 时才真发推送;推送失败不阻断提交(订阅者收不到 ≠ 内容有问题)
+python3 pipeline/push_notify.py --site aipodcast --ids "${ids[@]}" || echo "  ⚠ 推送环节失败(不阻断,内容照常可提交)"
+
 echo "── 11/11 门禁"
 node -e 'new Function(require("fs").readFileSync("app.js","utf8")); console.log("  app.js 语法 OK")'
 python3 pipeline/fix_terms.py --check 2>&1 | tail -1        # 术语残留=非零退出
