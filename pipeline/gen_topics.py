@@ -27,6 +27,8 @@ TOPICS_DEF=[
  ("agents","智能体","Agents"),
  ("economy-jobs","就业与经济","Jobs & the economy"),
  ("architecture","架构与下一突破","Architectures & next breakthroughs"),
+ # 2026-08-14 新增:近一个月语料密度最高的主题(Greenblatt/Kokotajlo/Ilya/Zvi/Schmidhuber/Suleyman 等 14+ 期)
+ ("self-improvement","递归自我改进与超级智能","Self-improvement & superintelligence"),
 ]
 SLUGS={s for s,_,_ in TOPICS_DEF}
 THEMELIST="\n".join(f"  {s}: {zh} / {en}" for s,zh,en in TOPICS_DEF)
