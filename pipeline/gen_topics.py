@@ -19,6 +19,7 @@ KEY=os.environ.get("DEEPSEEK_API_KEY") or sys.exit("需要 DEEPSEEK_API_KEY")
 URL="https://api.deepseek.com/chat/completions"
 # 8 个核心议题(slug, 中文, 英文)
 TOPICS_DEF=[
+ ("self-improvement","递归自我改进与超级智能","Self-improvement & superintelligence"),   # 置顶:当前最热
  ("agi-timeline","AGI 时间表","Timeline to AGI"),
  ("scaling","规模化与瓶颈","Scaling & its limits"),
  ("rl","强化学习的角色","The role of RL"),
@@ -27,8 +28,6 @@ TOPICS_DEF=[
  ("agents","智能体","Agents"),
  ("economy-jobs","就业与经济","Jobs & the economy"),
  ("architecture","架构与下一突破","Architectures & next breakthroughs"),
- # 2026-08-14 新增:近一个月语料密度最高的主题(Greenblatt/Kokotajlo/Ilya/Zvi/Schmidhuber/Suleyman 等 14+ 期)
- ("self-improvement","递归自我改进与超级智能","Self-improvement & superintelligence"),
 ]
 SLUGS={s for s,_,_ in TOPICS_DEF}
 THEMELIST="\n".join(f"  {s}: {zh} / {en}" for s,zh,en in TOPICS_DEF)
