@@ -1,34 +1,10 @@
 [
  {
-  "pid": "adambrown",
-  "en": "Adam Brown",
-  "zh": "亚当·布朗",
-  "tiEn": "Physicist, Stanford Lecturer",
-  "from": "Dwarkesh Podcast",
-  "added": "2026-08-11"
- },
- {
-  "pid": "kylezantos",
-  "en": "Kyle Zantos",
-  "zh": "Kyle Zantos",
-  "tiEn": "AI Design Workflow Expert",
-  "from": "Dive Club",
-  "added": "2026-08-12"
- },
- {
   "pid": "mattmcpartland",
   "en": "Matt McPartland",
   "zh": "马特·麦克帕特兰",
   "tiEn": "Co-founder, Chai Discovery",
   "from": "Latent Space",
-  "added": "2026-08-12"
- },
- {
-  "pid": "gabepereyra",
-  "en": "Gabe Pereyra",
-  "zh": "加布·佩雷拉",
-  "tiEn": "Co-founder and President, Harvey",
-  "from": "Training Data",
   "added": "2026-08-12"
  },
  {

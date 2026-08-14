@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 253 位人物 / 540 期访谈
+规模: 253 位人物 / 542 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -39,6 +39,7 @@
 - [Mike Krieger / 迈克·克里格](https://aipodcast.jasonlin.tech/pp/mikekrieger/): Co-lead, Anthropic Labs · Instagram co-founder — 4 期
 - [Zico Kolter / 齐科·科尔特](https://aipodcast.jasonlin.tech/pp/kolter/): Professor, CMU · OpenAI board — 4 期
 - [Peter Steinberger / 彼得·施泰因贝格尔](https://aipodcast.jasonlin.tech/pp/steinberger/): Creator of OpenClaw; founder of PSPDFKit — 3 期
+- [Dan Shipper / 丹·希珀](https://aipodcast.jasonlin.tech/pp/danshipper/): Co-founder & CEO, Every — 3 期
 - [Joon Sung Park / 朴俊成](https://aipodcast.jasonlin.tech/pp/joonpark/): Co-founder, Simile; creator of Generative Agents (Stanford) — 3 期
 - [Jeff Dean / 杰夫·迪恩](https://aipodcast.jasonlin.tech/pp/jeffdean/): Chief Scientist, Google — 3 期
 - [Jerry Tworek / 杰里·特沃雷克](https://aipodcast.jasonlin.tech/pp/tworek/): VP of Research, OpenAI — 3 期
@@ -54,6 +55,7 @@
 - [Yejin Choi / 崔艺珍](https://aipodcast.jasonlin.tech/pp/yejin/): Professor, Stanford (prev. NVIDIA, AI2); commonsense reasoning — 3 期
 - [Noam Shazeer / 诺姆·沙泽尔](https://aipodcast.jasonlin.tech/pp/shazeer/): Co-lead, Google Gemini — 3 期
 - [Jan Leike / 扬·莱克](https://aipodcast.jasonlin.tech/pp/leike/): Alignment Lead, Anthropic — 3 期
+- [Garry Tan / 陈嘉兴](https://aipodcast.jasonlin.tech/pp/garrytan/): President & CEO, Y Combinator — 2 期
 - [Gabe Pereyra / 加布·佩雷拉](https://aipodcast.jasonlin.tech/pp/gabepereyra/): President & Co-founder, Harvey — 2 期
 - [Jason Yuan / Jason Yuan](https://aipodcast.jasonlin.tech/pp/jasonyuan/): Founder & CEO, Hivemind; ex-New Computer, ex-Apple — 2 期
 - [Daniel Kokotajlo / 丹尼尔·科科塔伊洛](https://aipodcast.jasonlin.tech/pp/kokotajlo/): Author, AI 2027 · ex-OpenAI — 2 期
@@ -75,7 +77,6 @@
 - [Carina Hong / 洪乐潼](https://aipodcast.jasonlin.tech/pp/carinahong/): Founder & CEO, Axiom (AI for formal mathematical reasoning) — 2 期
 - [Łukasz Kaiser / 武卡什·凯泽](https://aipodcast.jasonlin.tech/pp/kaiser/): Researcher, OpenAI — 2 期
 - [Felix Rieseberg / 菲利克斯·里泽伯格](https://aipodcast.jasonlin.tech/pp/felixrieseberg/): Claude Cowork Lead, Anthropic · ex-Slack — 2 期
-- [Dan Shipper / 丹·希珀](https://aipodcast.jasonlin.tech/pp/danshipper/): Co-founder & CEO, Every — 2 期
 - [Reiner Pope / 赖纳·波普](https://aipodcast.jasonlin.tech/pp/reinerpope/): Co-founder & CEO, MatX; ex-Google (LLM serving) — 2 期
 - [Oriol Vinyals / 奥里奥尔·维尼亚尔斯](https://aipodcast.jasonlin.tech/pp/oriol/): VP of Research & Gemini Co-lead · Google DeepMind — 2 期
 - [Jenny Wen / 温珍妮](https://aipodcast.jasonlin.tech/pp/jennywen/): Design Lead for Claude (Anthropic); now Head of Design at Cursor — 2 期
@@ -99,7 +100,6 @@
 - [Dan Balsam / 丹·巴尔萨姆](https://aipodcast.jasonlin.tech/pp/danbalsam/): Co-founder & CTO, Goodfire — 1 期
 - [Stephen Haney / 斯蒂芬·哈尼](https://aipodcast.jasonlin.tech/pp/stephenhaney/): Founder of Paper, AI-native design tool — 1 期
 - [Max Hodak / 马克斯·霍达克](https://aipodcast.jasonlin.tech/pp/maxhodak/): CEO of Science — 1 期
-- [Garry Tan / 陈嘉兴](https://aipodcast.jasonlin.tech/pp/garrytan/): President & CEO, Y Combinator — 1 期
 - [Philip Johnston / 菲利普·约翰斯顿](https://aipodcast.jasonlin.tech/pp/philipjohnston/): Co-founder & CEO, Starcloud — 1 期
 - [Zvi Mowshowitz / 兹维·莫肖维茨](https://aipodcast.jasonlin.tech/pp/zvi/): Writer, Don't Worry About the Vase — 1 期
 - [Josh Meier / 乔什·迈尔](https://aipodcast.jasonlin.tech/pp/joshmeier/): Co-founder, Chai Discovery — 1 期
@@ -262,6 +262,7 @@
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 1 期
 
 ## 最新访谈 Latest episodes
+- [From Microsoft to Startup: Gary's Journey and the Cult of Earnestness](https://aipodcast.jasonlin.tech/e/garrytan-thea16zp-2026/) — Garry Tan, The a16z Podcast, 2026-08-12
 - [AI-Powered Design Workflows: HTML Artifacts and Autonomous Agents](https://aipodcast.jasonlin.tech/e/kylezantos-diveclub-2026/) — Kyle Zantos, Dive Club, 2026-08-11
 - [Chai Discovery: The AI-Native Software Factory for Drug Discovery](https://aipodcast.jasonlin.tech/e/mattmcpartland-latentsp-2026/) — Matt McPartland, Latent Space, 2026-08-11
 - [Building a Research Lab on a Budget](https://aipodcast.jasonlin.tech/e/gabepereyra-training-2026/) — Gabe Pereyra, Training Data, 2026-08-11
@@ -287,6 +288,7 @@
 - [Building Physical AI: Lessons from Waymo's Autonomous Driving](https://aipodcast.jasonlin.tech/e/dmitridolgov-ycombina-2026/) — Dmitri Dolgov, Y Combinator, 2026-08-03
 - [How JLM52 Writes GPU Kernels and Long Query Routing](https://aipodcast.jasonlin.tech/e/philipkiely-latentsp-2026/) — Philip Kiely, Latent Space, 2026-08-03
 - [The Art of Model Crafting: Why Post-Training Is Subjective](https://aipodcast.jasonlin.tech/e/karina-mts-2026/) — Karina Nguyen, MTS , 2026-08-03
+- [Living in the Future: AI, Craft, and the Art of Writing](https://aipodcast.jasonlin.tech/e/danshipper-jonnymil-2026/) — Dan Shipper, Jonny Miller│Nervous System Mastery, 2026-08-03
 - [Why We Regret Product Management Exists](https://aipodcast.jasonlin.tech/e/tomverrilli-lennyspo-2026/) — Tom Verrilli, Lenny’s Podcast, 2026-08-02
 - [Simulating Human Behavior: The Future of AI Prediction](https://aipodcast.jasonlin.tech/e/joonpark-20vc-2026/) — Joon Sung Park, 20VC, 2026-08-01
 - [Startup School: Patrick Collison on Learning, Writing, and Dropping Out](https://aipodcast.jasonlin.tech/e/collison-ycombina-2026/) — Patrick Collison, Y Combinator, 2026-07-31
@@ -300,8 +302,6 @@
 - [Elon Musk Predicts AI Will Surpass Human Intelligence by 2030s, Leading to an Age of Abundance](https://aipodcast.jasonlin.tech/e/elon-theecono-2026/) — Elon Musk, The Economist, 2026-07-29
 - [From No-Code to ChatGPT Work: The Era of Bottoms-Up Ambition](https://aipodcast.jasonlin.tech/e/akshaynathan-latentsp-2026/) — Akshay Nathan, Latent Space, 2026-07-28
 - [Seize the AI Opportunity: Action Over Certainty](https://aipodcast.jasonlin.tech/e/mengto-evancarm-2026/) — Meng To, Evan Carmichael, 2026-07-28
-- [Sam Altman on YC's Early Days and the Future of Startups](https://aipodcast.jasonlin.tech/e/altman-ycombina-2026/) — Sam Altman, Y Combinator, 2026-07-28
-- [Sam Altman on AI's Potential and Focus](https://aipodcast.jasonlin.tech/e/altman-investli-2026/) — Sam Altman, Invest Like The Best, 2026-07-28
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
