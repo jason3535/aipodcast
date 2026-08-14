@@ -218,8 +218,19 @@ async function handle(msg) {
   return rpcErr(id, -32601, `Method not found: ${method}`);
 }
 
+/* 用量计数:写进 stats 同一个 D1,type='mcp',path=工具名。
+   查询侧一直按 type='view' 过滤,互不污染;UA 里的 bot/HeadlessChrome 不丢弃——
+   MCP 客户端本来就是程序,这里要数的就是程序调用。 */
+function logUse(env, ctx, tool) {
+  try {
+    ctx.waitUntil(env.DB.prepare(
+      "INSERT INTO events(ts,day,type,path,ref,ua,vid,sid) VALUES(?,date('now'),'mcp',?,'','','','')")
+      .bind(Date.now(), (tool || 'unknown').slice(0, 60)).run());
+  } catch (_) {}
+}
+
 export default {
-  async fetch(req) {
+  async fetch(req, env, ctx) {
     if (req.method === 'OPTIONS') return new Response(null, { status: 204, headers: CORS });
     const url = new URL(req.url);
     // 人类访问根路径给个说明
@@ -230,6 +241,10 @@ export default {
     if (req.method !== 'POST') return new Response('Use POST /mcp (MCP Streamable HTTP)', { status: 405, headers: CORS });
     let body;
     try { body = await req.json(); } catch { return new Response(JSON.stringify(rpcErr(null, -32700, 'Parse error')), { status: 400, headers: { ...CORS, 'Content-Type': 'application/json' } }); }
+    const _names = (Array.isArray(body) ? body : [body])
+      .map(b => b && b.method === 'tools/call' ? (b.params && b.params.name) : b && b.method)
+      .filter(Boolean);
+    for (const n of _names) logUse(env, ctx, n);
     const out = Array.isArray(body)
       ? (await Promise.all(body.map(handle))).filter(x => x !== null)
       : await handle(body);
