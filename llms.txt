@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 255 位人物 / 545 期访谈
+规模: 259 位人物 / 555 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -50,7 +50,10 @@
 - [Mark Chen / 马克·陈](https://aipodcast.jasonlin.tech/pp/markchen/): Chief Research Officer, OpenAI — 3 期
 - [John Jumper / 约翰·江珀](https://aipodcast.jasonlin.tech/pp/jumper/): Director, Google DeepMind; Nobel Laureate in Chemistry — 3 期
 - [Lip-Bu Tan / 陈立武](https://aipodcast.jasonlin.tech/pp/lipbutan/): CEO, Intel — 3 期
+- [Ivy Ross / 艾维·罗斯](https://aipodcast.jasonlin.tech/pp/ivyross/): Chief Design Officer, Consumer Devices at Google — 3 期
+- [Jony Ive / 乔纳森·艾维](https://aipodcast.jasonlin.tech/pp/jonyive/): Founder, LoveFrom; former Chief Design Officer, Apple — 3 期
 - [Edwin Chen / 陈埃德温](https://aipodcast.jasonlin.tech/pp/edwinchen/): Founder & CEO, Surge AI — 3 期
+- [Carl Pei / 裴宇](https://aipodcast.jasonlin.tech/pp/carlpei/): Founder & CEO, Nothing; co-founder of OnePlus — 3 期
 - [Yejin Choi / 崔艺珍](https://aipodcast.jasonlin.tech/pp/yejin/): Professor, Stanford (prev. NVIDIA, AI2); commonsense reasoning — 3 期
 - [Noam Shazeer / 诺姆·沙泽尔](https://aipodcast.jasonlin.tech/pp/shazeer/): Co-lead, Google Gemini — 3 期
 - [Jan Leike / 扬·莱克](https://aipodcast.jasonlin.tech/pp/leike/): Alignment Lead, Anthropic — 3 期
@@ -259,6 +262,7 @@
 - [Jitendra Malik / 吉滕德拉·马利克](https://aipodcast.jasonlin.tech/pp/malik/): Professor, UC Berkeley; pioneer of computer vision — 1 期
 - [John Schulman / 约翰·舒尔曼](https://aipodcast.jasonlin.tech/pp/schulman/): Co-founder, OpenAI — 1 期
 - [Sébastien Bubeck / 塞巴斯蒂安·布贝克](https://aipodcast.jasonlin.tech/pp/bubeck/): AI Researcher, OpenAI (prev. Microsoft Research) — 1 期
+- [Hugo Barra / 雨果·巴拉](https://aipodcast.jasonlin.tech/pp/hugobarra/): Consumer hardware veteran: Google Android, Xiaomi, Oculus VR — 1 期
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 - [Deepak Pathak / 迪帕克·帕塔克](https://aipodcast.jasonlin.tech/pp/pathak/): Assistant Professor, CMU; Co-founder, Skild AI — 1 期
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 1 期
