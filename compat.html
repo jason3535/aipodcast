@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>兼容性诊断 — AI Podcast</title>
+<meta name="robots" content="noindex">
+<style>
+body{font-family:-apple-system,"Helvetica Neue",Arial,sans-serif;font-size:15px;line-height:1.6;
+  margin:0;padding:16px;color:#111;background:#fff;-webkit-text-size-adjust:100%}
+h1{font-size:18px;margin:0 0 4px}
+p.sub{color:#666;margin:0 0 16px;font-size:13px}
+table{border-collapse:collapse;width:100%;margin:0 0 18px}
+td{border-bottom:1px solid #ddd;padding:6px 4px;vertical-align:top;font-size:14px}
+td.k{color:#555;width:52%}
+td.v{font-weight:bold;width:48%;word-break:break-all}
+.ok{color:#060}
+.no{color:#b00}
+pre{background:#f4f4f4;padding:10px;font-size:12px;white-space:pre-wrap;word-break:break-all;margin:0 0 18px}
+h2{font-size:15px;margin:18px 0 6px;border-top:2px solid #111;padding-top:10px}
+</style>
+</head><body>
+<h1>兼容性诊断</h1>
+<p class="sub">把这一页整屏截图发回即可 — 它用 ES5 写成,任何浏览器都能跑。</p>
+
+<h2>1. 浏览器</h2>
+<pre id="ua">…</pre>
+
+<h2>2. app.js 能否加载(最关键)</h2>
+<table id="appbox"><tr><td class="k">状态</td><td class="v" id="appstate">检测中…</td></tr></table>
+<pre id="apperr" style="display:none"></pre>
+
+<h2>3. JS 语法支持</h2>
+<table id="syn"></table>
+
+<h2>4. JS 运行时 API</h2>
+<table id="api"></table>
+
+<h2>5. CSS 支持</h2>
+<table id="css"></table>
+
+<script>
+/* 全 ES5 写法:不用箭头函数、模板字符串、const/let。
+   目的是在最老的引擎上也能跑完并把结果显示出来。 */
+(function () {
+  function put(tblId, k, ok, extra) {
+    var t = document.getElementById(tblId);
+    var tr = t.insertRow(-1);
+    var c1 = tr.insertCell(0); c1.className = 'k'; c1.appendChild(document.createTextNode(k));
+    var c2 = tr.insertCell(1); c2.className = 'v ' + (ok ? 'ok' : 'no');
+    c2.appendChild(document.createTextNode((ok ? '支持' : '不支持') + (extra ? ' ' + extra : '')));
+  }
+  function canParse(src) { try { eval(src); return true; } catch (e) { return false; } }
+
+  document.getElementById('ua').appendChild(document.createTextNode(navigator.userAgent));
+
+  /* —— 语法(用 eval 隔离,解析失败只影响这一条) —— */
+  var syn = [
+    ['let / const (ES2015)', 'let _a=1;const _b=2;'],
+    ['箭头函数 (ES2015)', 'var f=function(){};[1].map(function(x){return x});(function(){var g=(x)=>x;})'],
+    ['模板字符串 (ES2015)', 'var s=`x`;'],
+    ['解构赋值 (ES2015)', 'var {a}= {a:1};'],
+    ['展开运算符 (ES2015)', 'var a=[].concat([]);var b=[...[1]];'],
+    ['class (ES2015)', 'class C{};'],
+    ['async / await (ES2017)', 'var f=async function(){await 0;};'],
+    ['对象展开 {...x} (ES2018)', 'var o={...{a:1}};'],
+    ['catch 无参数 (ES2019)', 'try{}catch{}'],
+    ['可选链 ?. (ES2020)', 'var o={};var x=o?.a;'],
+    ['空值合并 ?? (ES2020)', 'var x=null??1;']
+  ];
+  for (var i = 0; i < syn.length; i++) put('syn', syn[i][0], canParse(syn[i][1]));
+
+  /* —— 运行时 API —— */
+  put('api', 'Promise', typeof Promise !== 'undefined');
+  put('api', 'fetch', typeof fetch !== 'undefined');
+  put('api', 'Object.assign', typeof Object.assign === 'function');
+  put('api', 'Object.entries', typeof Object.entries === 'function');
+  put('api', 'Array.includes', !!([].includes));
+  put('api', 'String.padStart', !!(''.padStart));
+  put('api', 'localStorage', (function () { try { localStorage.setItem('_t', '1'); localStorage.removeItem('_t'); return true; } catch (e) { return false; } })());
+  put('api', 'Service Worker', 'serviceWorker' in navigator);
+  put('api', 'IntersectionObserver', typeof IntersectionObserver !== 'undefined');
+  put('api', 'MutationObserver', typeof MutationObserver !== 'undefined');
+  put('api', 'crypto.getRandomValues', !!(window.crypto && window.crypto.getRandomValues));
+
+  /* —— CSS —— */
+  function css(prop, val) {
+    try { var d = document.createElement('div'); d.style[prop] = val; return d.style[prop] !== ''; } catch (e) { return false; }
+  }
+  put('css', 'CSS 变量 var()', (function () {
+    try { return window.CSS && CSS.supports && CSS.supports('color', 'var(--x)'); } catch (e) { return false; }
+  })());
+  put('css', 'flexbox', css('display', 'flex'));
+  put('css', 'grid', css('display', 'grid'));
+  put('css', 'position: sticky', css('position', 'sticky'));
+  put('css', 'backdrop-filter', css('backdropFilter', 'blur(1px)') || css('webkitBackdropFilter', 'blur(1px)'));
+  put('css', 'CSS.supports 本身', !!(window.CSS && CSS.supports));
+
+  /* —— 取回 app.js 全文,只「解析」不「执行」 ——
+     用 <script src> 加载会让整个 SPA 接管这一页(它就是往 #app 渲染的),
+     所以改用 XHR 拿文本 + new Function(src):能触发一模一样的语法解析,
+     但不会真的运行。语法不支持时这里会抛 SyntaxError,正是我们要看的东西。
+     用 XHR 而非 fetch —— 老引擎可能没有 fetch。 */
+  var errBox = document.getElementById('apperr');
+  var state = document.getElementById('appstate');
+  function say(txt, ok, detail) {
+    state.className = 'v ' + (ok ? 'ok' : 'no');
+    state.firstChild.nodeValue = txt;
+    if (detail) { errBox.style.display = 'block'; errBox.appendChild(document.createTextNode(detail)); }
+  }
+  try {
+    var x = new XMLHttpRequest();
+    x.open('GET', '/app.js?compat=' + (new Date()).getTime(), true);
+    x.onreadystatechange = function () {
+      if (x.readyState !== 4) return;
+      if (x.status !== 200) { say('app.js 下载失败 HTTP ' + x.status, false); return; }
+      var src = x.responseText;
+      var kb = Math.round(src.length / 1024);
+      try {
+        new Function(src);            // 只解析,不执行
+        say('app.js 语法能解析(' + kb + 'KB)—— 白屏另有原因', true);
+      } catch (e) {
+        say('app.js 解析失败(' + kb + 'KB)', false,
+            '错误类型: ' + (e.name || '?') + '\n错误信息: ' + (e.message || e) +
+            (e.line ? '\n行: ' + e.line : '') + (e.sourceURL ? '\n源: ' + e.sourceURL : ''));
+      }
+    };
+    x.send();
+  } catch (e) {
+    say('无法发起请求: ' + (e.message || e), false);
+  }
+})();
+</script>
+</body></html>
