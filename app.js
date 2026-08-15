@@ -3115,11 +3115,19 @@ function footer(){return `<footer class="footer"><div class="wrap">
 
 /* init */
 if(localStorage.theme)document.documentElement.dataset.theme=localStorage.theme;
-/* iOS Safari 的状态栏/工具栏跟随 <meta name="theme-color"> 上色。data-theme 会被多处改写
-   (手动切换 / 启动恢复 / 多设备同步),与其逐个补调用,不如用 observer 统一跟随 ——
-   漏掉任何一条路径都会让浏览器顶栏与页面脱节。 */
-(function(){const m=document.querySelector('meta[name="theme-color"]');if(!m)return;
-  const upd=()=>{m.content=document.documentElement.dataset.theme==='dark'?'#0e0e10':'#fcfcfe';};
+/* iOS Safari 的状态栏区域跟随 <meta name="theme-color"> 与 color-scheme,但**它在页面加载时
+   定色之后,对已存在 meta 的 content 变更不会重新取色** —— 2026-08-15 真机实测:以深色进入
+   再切浅色,页面已经变白而状态栏仍是黑的。可靠做法是把 meta **删掉重建**(换成新元素),
+   并把 color-scheme 直接写成行内样式(比等 CSS 规则随属性重新匹配更确定地触发重绘)。
+   data-theme 会被多处改写(手动切换 / 启动恢复 / 多设备同步),用 observer 统一跟随。 */
+(function(){
+  const upd=()=>{
+    const dark=document.documentElement.dataset.theme==='dark';
+    document.documentElement.style.colorScheme=dark?'dark':'light';
+    document.querySelectorAll('meta[name="theme-color"]').forEach(n=>n.remove());
+    const m=document.createElement('meta');m.name='theme-color';m.content=dark?'#0e0e10':'#fcfcfe';
+    document.head.appendChild(m);
+  };
   new MutationObserver(upd).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
   upd();})();
 if(localStorage.lang)document.body.dataset.lang=localStorage.lang;
