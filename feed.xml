@@ -6,7 +6,21 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Thu, 13 Aug 2026 05:28:00 -0000</lastBuildDate>
+  <lastBuildDate>Fri, 14 Aug 2026 01:36:16 -0000</lastBuildDate>
+  <item>
+    <title>从微软到创业：Gary 的旅程与真诚的信徒 — a16z 播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/garrytan-thea16zp-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/garrytan-thea16zp-2026/</guid>
+    <pubDate>Fri, 14 Aug 2026 01:36:16 -0000</pubDate>
+    <description>Gary 分享了他早期的职业错误、真诚胜过炒作的重要性，以及为什么初创公司必须像邪教一样才能成功。</description>
+  </item>
+  <item>
+    <title>生活在未来：AI、技艺与写作的艺术 — Jonny Miller│神经系统掌控</title>
+    <link>https://aipodcast.jasonlin.tech/e/danshipper-jonnymil-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/danshipper-jonnymil-2026/</guid>
+    <pubDate>Fri, 14 Aug 2026 01:36:16 -0000</pubDate>
+    <description>一场关于 AI 与人类创造力交汇的对话，灵感来自安妮·迪拉德的写作，以及如何在深度思考与协调智能体之间取得平衡。</description>
+  </item>
   <item>
     <title>SpaceX：从猎鹰 1 号到星舰 — SpaceX 全员大会</title>
     <link>https://aipodcast.jasonlin.tech/e/elon-spacexal-2026/</link>
@@ -202,20 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/philipjohnston-ycombina-2026/</guid>
     <pubDate>Fri, 07 Aug 2026 03:32:21 -0000</pubDate>
     <description>StarCloud 的 Philip Johnston 解释了为什么尽早预订发射对航天公司来说是一种推动力，以及他的公司如何从太空太阳能转向太空数据中心。</description>
-  </item>
-  <item>
-    <title>JLM52 如何编写 GPU 内核及长查询路由 — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/e/philipkiely-latentsp-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/philipkiely-latentsp-2026/</guid>
-    <pubDate>Fri, 07 Aug 2026 03:32:21 -0000</pubDate>
-    <description>探讨使用 JLM52 自动编写 GPU 内核，以及推理引擎中处理长查询的过程。</description>
-  </item>
-  <item>
-    <title>构建随机性：热力学计算与 AI 驱动的芯片设计 — ML Street Talk</title>
-    <link>https://aipodcast.jasonlin.tech/e/thomasahle-machinel-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/thomasahle-machinel-2026/</guid>
-    <pubDate>Fri, 07 Aug 2026 03:32:21 -0000</pubDate>
-    <description>Thomas Ali 探讨热力学计算、AI 生成的 Verilog 以及验证芯片正确性的挑战。</description>
   </item>
 </channel>
 </rss>
