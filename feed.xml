@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sat, 15 Aug 2026 01:35:52 -0000</lastBuildDate>
+  <lastBuildDate>Sat, 15 Aug 2026 11:37:43 -0000</lastBuildDate>
+  <item>
+    <title>AI 教母谈视觉、学习与以人为本的人工智能 — 休伯曼实验室</title>
+    <link>https://aipodcast.jasonlin.tech/e/feifei-huberman-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/feifei-huberman-2026/</guid>
+    <pubDate>Sat, 15 Aug 2026 11:37:43 -0000</pubDate>
+    <description>李飞飞博士探讨视觉的进化、人脑的学习方式，以及保持人工智能以人为本的重要性。</description>
+  </item>
   <item>
     <title>AI 炒作与现实：关于幻觉与恐惧叙事的对话 — 伯格鲁恩研究所</title>
     <link>https://aipodcast.jasonlin.tech/e/andrewng-berggrue-2026/</link>
@@ -209,13 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/matthieuwyart-machinel-2026/</guid>
     <pubDate>Wed, 12 Aug 2026 04:05:33 -0000</pubDate>
     <description>一位物理学家探讨统计物理原理如何解释大脑的高效性，以及为什么在潜在空间预测优于在词元空间预测。</description>
-  </item>
-  <item>
-    <title>OpenRouter CEO 谈 AI 网关市场 — 20VC 创投播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/alexatallah-20vc-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/alexatallah-20vc-2026/</guid>
-    <pubDate>Wed, 12 Aug 2026 04:05:33 -0000</pubDate>
-    <description>Alex Atallah 讨论 OpenRouter 的历程、推理提供商格局以及 AI 基础设施的未来。</description>
   </item>
 </channel>
 </rss>
