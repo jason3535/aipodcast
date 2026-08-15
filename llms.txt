@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 253 位人物 / 542 期访谈
+规模: 253 位人物 / 543 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -19,11 +19,11 @@
 - [Greg Brockman / 格雷格·布罗克曼](https://aipodcast.jasonlin.tech/pp/brockman/): President & Co-founder, OpenAI — 9 期
 - [Alexandr Wang / 亚历山大·王](https://aipodcast.jasonlin.tech/pp/awang/): Founder, Scale AI · Meta Superintelligence — 8 期
 - [Fei-Fei Li / 李飞飞](https://aipodcast.jasonlin.tech/pp/feifei/): Co-founder, World Labs — 8 期
+- [Andrew Ng / 吴恩达](https://aipodcast.jasonlin.tech/pp/andrewng/): Founder, DeepLearning.AI — 8 期
 - [Tony Fadell / 托尼·法德尔](https://aipodcast.jasonlin.tech/pp/fadell/): Principal at Future Shape (Build Collective); creator of the iPod, co-creator of the iPhone, founder of Nest — 8 期
 - [Evan Spiegel / 埃文·斯皮格尔](https://aipodcast.jasonlin.tech/pp/evanspiegel/): Co-founder & CEO, Snap — 7 期
 - [Geoffrey Hinton / 杰弗里·辛顿](https://aipodcast.jasonlin.tech/pp/hinton/): Professor Emeritus, U of Toronto — 7 期
 - [Mark Zuckerberg / 马克·扎克伯格](https://aipodcast.jasonlin.tech/pp/zuckerberg/): Founder, Chairman & CEO, Meta Platforms — 7 期
-- [Andrew Ng / 吴恩达](https://aipodcast.jasonlin.tech/pp/andrewng/): Founder, DeepLearning.AI — 7 期
 - [Mustafa Suleyman / 穆斯塔法·苏莱曼](https://aipodcast.jasonlin.tech/pp/suleyman/): CEO, Microsoft AI — 7 期
 - [Nathan Lambert / 内森·兰伯特](https://aipodcast.jasonlin.tech/pp/lambert/): Research Scientist, Ai2 — 7 期
 - [Noam Brown / 诺姆·布朗](https://aipodcast.jasonlin.tech/pp/noambrown/): Research Scientist, OpenAI — 6 期
