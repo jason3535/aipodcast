@@ -6,13 +6,20 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Fri, 14 Aug 2026 01:36:16 -0000</lastBuildDate>
+  <lastBuildDate>Sat, 15 Aug 2026 01:35:52 -0000</lastBuildDate>
   <item>
-    <title>从微软到创业：Gary 的旅程与真诚的信徒 — a16z 播客</title>
+    <title>AI 炒作与现实：关于幻觉与恐惧叙事的对话 — 伯格鲁恩研究所</title>
+    <link>https://aipodcast.jasonlin.tech/e/andrewng-berggrue-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/andrewng-berggrue-2026/</guid>
+    <pubDate>Sat, 15 Aug 2026 01:35:52 -0000</pubDate>
+    <description>一场关于 AI 幻觉、恐惧炒作以及实验室测试与现实差距的讨论。</description>
+  </item>
+  <item>
+    <title>从微软到创业学校：加里的旅程与硅谷文化 — a16z 播客</title>
     <link>https://aipodcast.jasonlin.tech/e/garrytan-thea16zp-2026/</link>
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/garrytan-thea16zp-2026/</guid>
     <pubDate>Fri, 14 Aug 2026 01:36:16 -0000</pubDate>
-    <description>Gary 分享了他早期的职业错误、真诚胜过炒作的重要性，以及为什么初创公司必须像邪教一样才能成功。</description>
+    <description>加里反思了他早期的职业错误、真诚的重要性以及硅谷文化的现状。</description>
   </item>
   <item>
     <title>生活在未来：AI、技艺与写作的艺术 — Jonny Miller│神经系统掌控</title>
@@ -209,13 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/garrytan-ycombina-2026/</guid>
     <pubDate>Fri, 07 Aug 2026 03:32:21 -0000</pubDate>
     <description>一场关于个人 AGI 的演讲，它如同斯宾诺莎的上帝，弥散于基础设施之中，而非单一事件，并阐述为何你应该构建自己的 AGI。</description>
-  </item>
-  <item>
-    <title>在知道要发射什么之前，先预订发射 — Y Combinator</title>
-    <link>https://aipodcast.jasonlin.tech/e/philipjohnston-ycombina-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/philipjohnston-ycombina-2026/</guid>
-    <pubDate>Fri, 07 Aug 2026 03:32:21 -0000</pubDate>
-    <description>StarCloud 的 Philip Johnston 解释了为什么尽早预订发射对航天公司来说是一种推动力，以及他的公司如何从太空太阳能转向太空数据中心。</description>
   </item>
 </channel>
 </rss>

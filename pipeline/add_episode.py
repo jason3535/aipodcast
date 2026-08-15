@@ -84,10 +84,13 @@ SUB_END_MIN = 0   # 最后一条字幕的结束时刻(分钟);yt_meta 被限流�
 
 def get_subs(url):
     # 字幕端点同样会被限流返回空;重试 + 退避 + --sleep-subtitles,尽量拿到自动字幕。
+    # --write-subs 是 2026-08-14 补的:部分频道(如 WIRED)只上传**人工**英文字幕,自动字幕那栏
+    # 只有 "en-en"(从英文机翻回英文)这种轨,--write-auto-subs --sub-lang en 一条都匹配不到 →
+    # 拿到 0 字符直接判失败。两个开关一起给,yt-dlp 有人工就用人工(质量还更高),没有才退自动。
     global SUB_END_MIN
     for attempt in range(3):
         with tempfile.TemporaryDirectory() as td:
-            subprocess.run(["yt-dlp", "--proxy", "http://127.0.0.1:7890", "--skip-download", "--write-auto-subs", "--sub-lang", "en",
+            subprocess.run(["yt-dlp", "--proxy", "http://127.0.0.1:7890", "--skip-download", "--write-subs", "--write-auto-subs", "--sub-lang", "en",
                 "--sub-format", "vtt", "--sleep-subtitles", "2", "-o", f"{td}/s.%(ext)s", url],
                 capture_output=True, timeout=180)
             v = list(Path(td).glob("*.vtt"))

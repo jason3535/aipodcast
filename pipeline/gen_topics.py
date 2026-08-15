@@ -19,6 +19,7 @@ KEY=os.environ.get("DEEPSEEK_API_KEY") or sys.exit("需要 DEEPSEEK_API_KEY")
 URL="https://api.deepseek.com/chat/completions"
 # 8 个核心议题(slug, 中文, 英文)
 TOPICS_DEF=[
+ ("self-improvement","递归自我改进与超级智能","Self-improvement & superintelligence"),   # 置顶:当前最热
  ("agi-timeline","AGI 时间表","Timeline to AGI"),
  ("scaling","规模化与瓶颈","Scaling & its limits"),
  ("rl","强化学习的角色","The role of RL"),
