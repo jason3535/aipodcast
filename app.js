@@ -3121,12 +3121,24 @@ if(localStorage.theme)document.documentElement.dataset.theme=localStorage.theme;
    并把 color-scheme 直接写成行内样式(比等 CSS 规则随属性重新匹配更确定地触发重绘)。
    data-theme 会被多处改写(手动切换 / 启动恢复 / 多设备同步),用 observer 统一跟随。 */
 (function(){
+  let first=true;
   const upd=()=>{
     const dark=document.documentElement.dataset.theme==='dark';
     document.documentElement.style.colorScheme=dark?'dark':'light';
     document.querySelectorAll('meta[name="theme-color"]').forEach(n=>n.remove());
     const m=document.createElement('meta');m.name='theme-color';m.content=dark?'#0e0e10':'#fcfcfe';
     document.head.appendChild(m);
+    /* iOS Safari 只在加载/导航时给状态栏定色,运行时换了 meta 也不重绘
+       (Jason 真机实测:切换主题后要跳去别的网页再回来才生效)。这里用 1px 滚动
+       微调去触发它的 scroll-edge 重算 —— 视觉上察觉不到,失败也无害(下次导航自然正确)。
+       首次调用不做,免得干扰浏览器的滚动位置恢复。 */
+    if(first){first=false;return;}
+    /* 必须显式 behavior:'instant' —— 站点 html 上有 scroll-behavior:smooth,
+       默认会把这两次程序化滚动变成动画,肉眼可见地抖一下,而且异步没跑完就被下一句打断
+       (实测滚动位置从 1333 漂到 1381)。 */
+    try{const y=window.scrollY;
+      window.scrollTo({top:y+(y>0?-1:1),behavior:'instant'});
+      window.scrollTo({top:y,behavior:'instant'});}catch(_){}
   };
   new MutationObserver(upd).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
   upd();})();
