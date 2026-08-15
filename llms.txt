@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 259 位人物 / 557 期访谈
+规模: 259 位人物 / 558 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -16,9 +16,9 @@
 - [Boris Cherny / 鲍里斯·切尔尼](https://aipodcast.jasonlin.tech/pp/boris/): Creator of Claude Code, Anthropic — 11 期
 - [Yoshua Bengio / 约书亚·本吉奥](https://aipodcast.jasonlin.tech/pp/bengio/): Professor, Mila — 10 期
 - [Yann LeCun / 杨立昆](https://aipodcast.jasonlin.tech/pp/lecun/): Chief AI Scientist, Meta — 10 期
+- [Fei-Fei Li / 李飞飞](https://aipodcast.jasonlin.tech/pp/feifei/): Co-founder, World Labs — 9 期
 - [Greg Brockman / 格雷格·布罗克曼](https://aipodcast.jasonlin.tech/pp/brockman/): President & Co-founder, OpenAI — 9 期
 - [Alexandr Wang / 亚历山大·王](https://aipodcast.jasonlin.tech/pp/awang/): Founder, Scale AI · Meta Superintelligence — 8 期
-- [Fei-Fei Li / 李飞飞](https://aipodcast.jasonlin.tech/pp/feifei/): Co-founder, World Labs — 8 期
 - [Andrew Ng / 吴恩达](https://aipodcast.jasonlin.tech/pp/andrewng/): Founder, DeepLearning.AI — 8 期
 - [Tony Fadell / 托尼·法德尔](https://aipodcast.jasonlin.tech/pp/fadell/): Principal at Future Shape (Build Collective); creator of the iPod, co-creator of the iPhone, founder of Nest — 8 期
 - [Evan Spiegel / 埃文·斯皮格尔](https://aipodcast.jasonlin.tech/pp/evanspiegel/): Co-founder & CEO, Snap — 7 期
@@ -284,6 +284,7 @@
 - [Physics of Intelligence: From Sand to Latent Space](https://aipodcast.jasonlin.tech/e/matthieuwyart-machinel-2026/) — Matthieu Wyart, Machine Learning Street Talk, 2026-08-10
 - [OpenRouter CEO on the AI Gateway Market](https://aipodcast.jasonlin.tech/e/alexatallah-20vc-2026/) — Alex Atallah, 20VC, 2026-08-10
 - [Lindy Launches AI Teammate in Slack, Running on DeepSeek](https://aipodcast.jasonlin.tech/e/flocrivello-thecogni-2026/) — Flo Crivello, The Cognitive Revolution, 2026-08-10
+- [The Godmother of AI on Vision, Learning, and Human-Centered AI](https://aipodcast.jasonlin.tech/e/feifei-huberman-2026/) — Fei-Fei Li, Huberman Lab, 2026-08-10
 - [Building Elite High Talent Density Teams with Adam Ward](https://aipodcast.jasonlin.tech/e/adamward-lennyspo-2026/) — Adam Ward, Lenny’s Podcast, 2026-08-09
 - [Goodfire CTO on Silico Platform and AI Safety](https://aipodcast.jasonlin.tech/e/danbalsam-thecogni-2026/) — Dan Balsam, The Cognitive Revolution, 2026-08-08
 - [Paper: An AI-Native Design Tool for the Next Era](https://aipodcast.jasonlin.tech/e/stephenhaney-ycombina-2026/) — Stephen Haney, Y Combinator, 2026-08-07
@@ -307,7 +308,6 @@
 - [AI Security Leaderboard: Evaluating Frontier Models Against Misuse](https://aipodcast.jasonlin.tech/e/adamgleave-thecogni-2026/) — Adam Gleave, The Cognitive Revolution, 2026-07-30
 - [Tim Cook's Final Apple Earnings Call: Record June Quarter Revenue of $109.4B](https://aipodcast.jasonlin.tech/e/timcook-appleq3-2026/) — Tim Cook, Apple Q3 2026 Earnings Call, 2026-07-30
 - [Alexander Wang on Founding Scale at 19](https://aipodcast.jasonlin.tech/e/awang-ycombina-2026/) — Alexandr Wang, Y Combinator, 2026-07-29
-- [From Invisible to Crafted: Designing Browsers at Apple and The Browser Company](https://aipodcast.jasonlin.tech/e/charliedeets-diveclub-2026/) — Charlie Deets, Dive Club, 2026-07-29
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
