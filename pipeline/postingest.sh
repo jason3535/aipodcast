@@ -34,6 +34,16 @@ echo "── 10.7/11 更新提醒(push-latest.json + 浏览器推送)"
 # 只在传了新收 id 时才真发推送;推送失败不阻断提交(订阅者收不到 ≠ 内容有问题)
 python3 pipeline/push_notify.py --site aipodcast --ids "${ids[@]}" || echo "  ⚠ 推送环节失败(不阻断,内容照常可提交)"
 
+echo "── 10.8/11 主动推给搜索引擎(IndexNow)"
+# 2026-08-15 查到:六站在 Bing 一条都没被索引 —— 技术准备齐全,但全网无外链,爬虫从没来过。
+# IndexNow 不需要任何账号,是唯一能自己捅破这层的办法。Google 不支持,那边仍需人工提交。
+if (( ${#ids} )); then
+  python3 pipeline/indexnow.py --site aipodcast \
+    --urls ${^ids/#/https://aipodcast.jasonlin.tech/e/} || echo "  ⚠ IndexNow 推送失败(不阻断)"
+else
+  python3 pipeline/indexnow.py --site aipodcast || echo "  ⚠ IndexNow 推送失败(不阻断)"
+fi
+
 echo "── 11/11 门禁"
 node -e 'new Function(require("fs").readFileSync("app.js","utf8")); console.log("  app.js 语法 OK")'
 python3 pipeline/fix_terms.py --check        # 术语残留=非零退出。**不能接 | tail**:管道退出码是 tail 的,门禁会永远通过
