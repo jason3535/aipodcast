@@ -1,3 +1,8 @@
+/* ⚠️ 兼容性红线:这份 app.js 直接发给浏览器,不经任何转译。
+   **不要使用 ES2020+ 语法**(可选链 ?. 、空值合并 ?? 、逻辑赋值 ||= &&= ??=)——
+   老引擎遇到不认识的语法会在**解析阶段**就抛 SyntaxError,整份脚本一行都不执行,
+   表现为「SPA 全白、静态分享页却正常」(2026-08-15 Jason 的 Kindle 浏览器实拍)。
+   postingest 有门禁会拦(pipeline/check_es_compat.js)。 */
 /* ============================ DATA ============================ */
 const FIELDS = {
   'deep-learning':{en:'Deep Learning',zh:'深度学习',c:'var(--f-dl)'},
@@ -27,9 +32,7 @@ function coverBg(fields){
 }
 const PEOPLE = {
   'adamward':{en:'Adam Ward',zh:'亚当·沃德',init:'AW',tiEn:'Head of Talent at Cursor',tiZh:'Cursor 人才负责人',fields:["product"],bioEn:'Adam Ward is the Head of Talent at Cursor, with over 20 years of experience building elite teams in AI and tech companies.',bioZh:'亚当·沃德是 Cursor 的人才负责人，拥有 20 多年在 AI 和科技公司打造精英团队的经验。'},
-  'gabepereyra':{en:'Gabe Pereyra',zh:'加布·佩雷拉',init:'GP',tiEn:'Co-founder and President, Harvey',tiZh:'Harvey 联合创始人兼总裁',fields:["product", "nlp"],bioEn:'Gabe Pereyra is the co-founder and president of Harvey, an AI company building legal technology. He focuses on leveraging frontier models and building research labs for practical applications.',bioZh:'加布·佩雷拉是 Harvey 的联合创始人兼总裁，该公司致力于构建法律科技。他专注于利用前沿模型并为实际应用建立研究实验室。'},
   'mattmcpartland':{en:'Matt McPartland',zh:'马特·麦克帕特兰',init:'MM',tiEn:'Co-founder, Chai Discovery',tiZh:'联合创始人，Chai Discovery',fields:["product", "deep-learning"],bioEn:'Co-founder of Chai Discovery, an AI-driven drug design company. He focuses on building AI tools for pharmaceutical research.',bioZh:'Chai Discovery 联合创始人，专注于为药物研发构建 AI 工具的公司。'},
-  'kylezantos':{en:'Kyle Zantos',zh:'Kyle Zantos',init:'KZ',tiEn:'AI Design Workflow Expert',tiZh:'AI 设计工作流专家',fields:["product"],bioEn:'Kyle Zantos is a designer focused on AI-integrated design workflows, known for practical applications in UX and product design.',bioZh:'Kyle Zantos 是一位专注于 AI 集成设计流程的设计师，以在 UX 和产品设计中的实际应用而闻名。'},
   'adambrown':{en:'Adam Brown',zh:'亚当·布朗',init:'AB',tiEn:'Physicist, Stanford Lecturer',tiZh:'物理学家，斯坦福讲师',fields:["deep-learning"],bioEn:'Adam Brown is a physicist who has taught a graduate course on general relativity at Stanford, known for his clear explanations of complex physical concepts.',bioZh:'亚当·布朗是一位物理学家，曾在斯坦福教授广义相对论研究生课程，以清晰解释复杂物理概念而闻名。'},
 'gustav':{en:'Gustav Söderström',zh:'古斯塔夫·瑟德斯特伦',init:'GS',tiEn:'Co-President & CPTO, Spotify',tiZh:'Spotify 联席总裁兼首席产品技术官',fields:['product','nlp'],
   bioEn:'Co-President and Chief Product & Technology Officer at Spotify, overseeing product, design, data and engineering. Previously founded 13th Lab (acquired by Oculus) and led Yahoo Mobile; the main architect of Spotify\'s bet-driven product culture and its AI/ML strategy from Discover Weekly to the AI DJ.',
@@ -101,7 +104,6 @@ const PEOPLE = {
   'catanzaro':{en:'Bryan Catanzaro',zh:'布莱恩·卡坦扎罗',init:'BC',tiEn:'VP Applied Deep Learning Research, NVIDIA',tiZh:'NVIDIA 应用深度学习研究副总裁',fields:['deep-learning'],bioEn:'Leads NVIDIA applied deep learning research and the Nemotron open-model effort; his early GPU deep learning work helped spark cuDNN.',bioZh:'负责 NVIDIA 应用深度学习研究与 Nemotron 开源模型；早年的 GPU 深度学习工作催生了 cuDNN。'},
   'mosseri':{en:'Adam Mosseri',zh:'亚当·莫塞里',init:'AM',tiEn:'Head of Instagram',tiZh:'Instagram 负责人',fields:['deep-learning','product'],bioEn:'Head of Instagram, steering a two-billion-user product through the AI content wave with an emphasis on taste, authenticity and creator trust.',bioZh:'Instagram 负责人，在 AI 内容洪流中带领这款二十亿用户的产品，强调品味、真实性与创作者信任。'},
   'katelynlesse':{en:'Katelyn Lesse',zh:'凯特琳·莱西',init:'KL',tiEn:'Head of Platform Product, Anthropic',tiZh:'Anthropic 平台产品负责人',fields:['nlp','product'],bioEn:'Leads Anthropic platform and API products, building the developer ecosystem around Claude as an open ecosystem rather than a walled garden.',bioZh:'负责 Anthropic 平台与 API 产品，围绕 Claude 构建开发者生态，主张开放生态而非围墙花园。'},
-  'danbiderman':{en:'Dan Biderman',zh:'丹·比德曼',init:'DB',tiEn:'Co-founder & CEO, Engram',tiZh:'Engram 联合创始人兼 CEO',fields:['nlp'],bioEn:'Co-founder and CEO of Engram, working on memory and continual learning for AI beyond long context windows; previously researched at Columbia and Databricks MosaicML.',bioZh:'Engram 联合创始人兼 CEO，研究长上下文之外的 AI 记忆与持续学习；曾在哥伦比亚大学与 Databricks MosaicML 做研究。'},
   'akshatbubna':{en:'Akshat Bubna',zh:'阿克沙特·布布纳',init:'AB',tiEn:'CTO, Modal',tiZh:'Modal 首席技术官',fields:['deep-learning'],bioEn:'CTO of Modal, building serverless infrastructure for AI workloads, from GPU functions to sandboxes for coding agents.',bioZh:'Modal 首席技术官，为 AI 工作负载构建无服务器基础设施，从 GPU 函数到编码智能体沙箱。'},
   'perszyk':{en:'Danielle Perszyk',zh:'丹妮尔·佩尔西克',init:'DP',tiEn:'Cognitive Scientist, Amazon AGI Lab',tiZh:'亚马逊 AGI 实验室认知科学家',fields:['nlp'],bioEn:'Cognitive scientist at the Amazon AGI lab studying why agents misread human intent, bringing developmental psychology and language research into AI.',bioZh:'亚马逊 AGI 实验室认知科学家，研究智能体为何误解人类意图，把发展心理学与语言研究带入 AI。'},
   'lipbutan':{en:'Lip-Bu Tan',zh:'陈立武',init:'LT',tiEn:'CEO, Intel',tiZh:'英特尔 CEO',fields:['deep-learning'],bioEn:'CEO of Intel and veteran semiconductor investor; long-time Cadence CEO and founder of Walden International, now steering the Intel turnaround in the AI era.',bioZh:'英特尔 CEO、资深半导体投资人；曾长期执掌 Cadence 并创办华登国际，如今在 AI 时代主导英特尔的转型。'},
@@ -327,9 +329,6 @@ const PEOPLE = {
   'waldenyan':{en:'Walden Yan',zh:'沃尔登·严',init:'WY',tiEn:'Co-founder & CPO, Cognition (Devin); coined \'context engineering\'',tiZh:'Cognition(Devin)联合创始人兼 CPO；「context engineering」提出者',fields:['nlp'],
     bioEn:'Co-founder and chief product officer of Cognition, the company behind the AI software engineer Devin. Credited with coining the term \'context engineering\'.',
     bioZh:'Cognition 联合创始人兼首席产品官——AI 软件工程师 Devin 背后的公司。「context engineering」一词的提出者。'},
-  'schmidhuber':{en:'Jürgen Schmidhuber',zh:'于尔根·施密德胡伯',init:'JS',tiEn:'Scientific Director, IDSIA; co-inventor of LSTM',tiZh:'IDSIA 科学主任；LSTM 共同发明人',fields:['deep-learning'],
-    bioEn:'One of the pioneers of modern AI: co-invented LSTM, early work on meta-learning, GANs\' precursors and self-improving systems. Scientific director of IDSIA and AI professor at KAUST.',
-    bioZh:'现代 AI 先驱之一：LSTM 共同发明人，元学习、GAN 前身与自我改进系统的早期开创者。IDSIA 科学主任、KAUST 教授。'},
   'neelnanda':{en:'Neel Nanda',zh:'尼尔·南达',init:'NN',tiEn:'Mechanistic Interpretability Lead, Google DeepMind',tiZh:'Google DeepMind 机制可解释性负责人',fields:['safety','deep-learning'],
     bioEn:'Leads mechanistic interpretability research at Google DeepMind — reverse-engineering what actually happens inside large models. Known for open-source interpretability tooling and prolific mentoring.',
     bioZh:'领导 Google DeepMind 的机制可解释性研究——逆向工程大模型内部到底发生了什么。以开源可解释性工具与大量培养新人著称。'},
@@ -2683,8 +2682,8 @@ function searchKey(e){
   const rows=[...document.querySelectorAll('#searchResults .sr-row')];
   let i=rows.findIndex(r=>r.classList.contains('sel'));
   if(e.key==='Escape'){closeSearch();}
-  else if(e.key==='ArrowDown'){e.preventDefault();srSel(Math.min(rows.length-1,i+1));rows[Math.min(rows.length-1,i+1)]?.scrollIntoView({block:'nearest'});}
-  else if(e.key==='ArrowUp'){e.preventDefault();srSel(Math.max(0,i-1));rows[Math.max(0,i-1)]?.scrollIntoView({block:'nearest'});}
+  else if(e.key==='ArrowDown'){e.preventDefault();srSel(Math.min(rows.length-1,i+1));{const _r=rows[Math.min(rows.length-1,i+1)];if(_r)_r.scrollIntoView({block:'nearest'});}}
+  else if(e.key==='ArrowUp'){e.preventDefault();srSel(Math.max(0,i-1));{const _r=rows[Math.max(0,i-1)];if(_r)_r.scrollIntoView({block:'nearest'});}}
   else if(e.key==='Enter'){const r=rows[i<0?0:i];if(r){if(r.dataset.mk){const m=r.dataset.mk.split('|');srPickMark(m[0],+m[1],+m[2]);}else srPick(r.dataset.go);}}
 }
 
@@ -3187,7 +3186,7 @@ if(localStorage.size)document.body.dataset.size=localStorage.size;
 document.body.dataset.order=localStorage.order||'en';
 window.addEventListener('hashchange',render);
 document.addEventListener('keydown',e=>{
-  const typing=/^(INPUT|TEXTAREA)$/.test(document.activeElement?.tagName);
+  const typing=/^(INPUT|TEXTAREA)$/.test((document.activeElement||{}).tagName||'');
   if((e.key==='/'||((e.metaKey||e.ctrlKey)&&e.key==='k'))&&!typing){e.preventDefault();openSearch();}
   else if(e.key==='Escape'&&$('#searchOverlay').classList.contains('on')){closeSearch();}
 });

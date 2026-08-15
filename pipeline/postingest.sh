@@ -47,6 +47,9 @@ fi
 echo "── 11/11 门禁"
 node -e 'new Function(require("fs").readFileSync("app.js","utf8")); console.log("  app.js 语法 OK")'
 python3 pipeline/fix_terms.py --check        # 术语残留=非零退出。**不能接 | tail**:管道退出码是 tail 的,门禁会永远通过
+# ES 兼容:app.js 直接发给浏览器、不经转译,一个 ES2020+ 语法就会让老引擎在解析阶段
+# 整份脚本失败 → SPA 全白而静态页正常(2026-08-15 Kindle 实拍)。node --check 抓不到。
+node pipeline/check_es_compat.js app.js
 # 嘉宾名误听:自动字幕把冷门姓氏音译错(Carl Pei→Carl Pay、Liam Fedus→Liam Fetus),
 # 错得像模像样,肉眼扫标题发现不了。基线已清到 0,再冒出来就是本轮新引入的。
 # **不能接 | tail** —— 管道的退出码是 tail 的,门禁会永远"通过"(这坑踩过两次)。
