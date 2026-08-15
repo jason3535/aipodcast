@@ -207,6 +207,10 @@ if(m)m.content=document.documentElement.dataset.theme==='dark'?'#0e0e10':'#fcfcf
      2026-08-15 之前首页原始 HTML 深链为 0,2000+ 静态页对 Google 是孤岛。
      默认收起(339 条链接全铺开会淹掉页脚),但**不能用 display:none 藏** ——
      用户看不见、只给爬虫看的链接会被 Google 判定为作弊。 */
+  /* 骨架屏阶段不显示:站点地图排在 #app 之后,主脚本还没跑完时会孤零零冒在加载动画下面。
+     render() 完成后打 data-ready 再显示。注意这是**加载态**的隐藏,不是对爬虫隐藏 ——
+     Googlebot 会执行 JS,渲染完照样看得到。 */
+  body:not([data-ready]) .site-index{display:none}
   .site-index{max-width:1080px;margin:-42px auto 0;padding:0 22px 52px;color:var(--text-3);
     font-size:13px;line-height:1.7}
   .site-index summary{cursor:pointer;padding:2px 0;list-style:none;color:var(--text-2)}
@@ -879,7 +883,7 @@ if(m)m.content=document.documentElement.dataset.theme==='dark'?'#0e0e10':'#fcfcf
 <button class="totop" id="toTop" title="回到顶部" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l6-6 6 6"/></svg></button>
 <script>addEventListener('scroll',()=>{const t=document.getElementById('toTop');if(t)t.classList.toggle('on',scrollY>700);},{passive:true});</script>
 
-<script src="app.js?v=9b56feaf7e" defer></script>
+<script src="app.js?v=117cf67416" defer></script>
 <script>/* SW 只在生产域名注册:本地预览(http/127.0.0.1)不注册,避免把 localhost 缓存搞混 */
 if('serviceWorker' in navigator&&/jasonlin\.tech$/.test(location.hostname))addEventListener('load',function(){navigator.serviceWorker.register('/sw.js')});</script>
 <!--SITE_INDEX_START--><details class="site-index"><summary>站点地图 · Sitemap（259 位人物 · 557 期）</summary>

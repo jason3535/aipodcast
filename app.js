@@ -3090,6 +3090,8 @@ function render(){
   if(parts[0]==='episode'&&!pendingLocate){const rp=readPosGet()[parts[1]];if(rp&&rp.s>0&&!readHas(parts[1]))pendingLocate={id:parts[1],at:rp.s,hl:''};}
   applyLocate();
   trackView();
+  // 页脚的站点地图在骨架屏阶段不该露出来(它排在 #app 之后,加载动画期间会先冒出一行)
+  document.body.dataset.ready='1';
 }
 let pendingLocate=null;
 function applyLocate(){
