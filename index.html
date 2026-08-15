@@ -57,7 +57,10 @@ if(m)m.content=document.documentElement.dataset.theme==='dark'?'#0e0e10':'#fcfcf
   }
   [data-size="s"]{--read-scale:.9} [data-size="m"]{--read-scale:1} [data-size="l"]{--read-scale:1.18}
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
+  /* 背景必须**显式写在 html 上**,不能只写 body。规范里 body 的背景会传播到画布,
+     Chromium 也照做,但 iOS Safari 在状态栏区域与上下回弹区用的是 html 自身的背景,
+     只写 body 会在深色主题下露出白底(2026-08-15 真机截图实测)。 */
+  html{scroll-behavior:smooth;background:var(--bg)}
   body{background:var(--bg);color:var(--text);font-family:var(--ui);
     -webkit-font-smoothing:antialiased;line-height:1.5;letter-spacing:-.01em;
     transition:background .4s,color .4s}
