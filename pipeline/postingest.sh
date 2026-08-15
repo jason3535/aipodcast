@@ -36,7 +36,11 @@ python3 pipeline/push_notify.py --site aipodcast --ids "${ids[@]}" || echo "  �
 
 echo "── 11/11 门禁"
 node -e 'new Function(require("fs").readFileSync("app.js","utf8")); console.log("  app.js 语法 OK")'
-python3 pipeline/fix_terms.py --check 2>&1 | tail -1        # 术语残留=非零退出
+python3 pipeline/fix_terms.py --check        # 术语残留=非零退出。**不能接 | tail**:管道退出码是 tail 的,门禁会永远通过
+# 嘉宾名误听:自动字幕把冷门姓氏音译错(Carl Pei→Carl Pay、Liam Fedus→Liam Fetus),
+# 错得像模像样,肉眼扫标题发现不了。基线已清到 0,再冒出来就是本轮新引入的。
+# **不能接 | tail** —— 管道的退出码是 tail 的,门禁会永远"通过"(这坑踩过两次)。
+python3 pipeline/check_guest_names.py --check
 if (( ${#ids} )); then
   node pipeline/audit_completeness.js "${ids[@]}"           # 只审本轮新收(全库有存量损坏)
   echo "  完整性审计 ${#ids} 期通过"

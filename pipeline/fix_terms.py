@@ -35,6 +35,10 @@ RULES = [
     # 防误伤 "the way Mo Gawdat…" 这类句中人名(Mo 大写)与 "way more"(\b 挡住)。
     (re.compile(BL+r"Wh[iy]mo"+BR, re.I), "Waymo"),
     (re.compile(BL+r"way mo"+BR), "Waymo"),
+    # Carl Pei(Nothing 创始人)→ 自动字幕听成 Carl Pay / Pie / Pay-e(2026-08-15 用户报,
+    # 该期正确写法有 23 处、误写 4 处,英文与中文正文里都有)。只匹配这几个确定的误写,
+    # 不含正确的 "Pei" —— 否则 --check 门禁会永远报"待修 N 处"。
+    (re.compile(BL+r"Carl\s+P(?:ay|ie|aye|eh)"+BR), "Carl Pei"),
 ]
 # 这些上下文里的 "class code" 是 best-in-class code,不是误听
 GUARD = re.compile(r"(best|world)[- ]in[- ]?class\s*$|(best|world)-class\s*$", re.I)

@@ -294,7 +294,7 @@
 - [AI Rundown with Zvi Mowshowitz: From Editing to Existential Risks](https://aipodcast.jasonlin.tech/e/zvi-thecogni-2026/) — Zvi Mowshowitz, The Cognitive Revolution, 2026-08-05
 - [SpaceX Q2 2026 Earnings Call: Starship, Starlink, and AI Ambitions](https://aipodcast.jasonlin.tech/e/elon-spacexq2-2026/) — Elon Musk, SpaceX Q2 2026 Earnings Call, 2026-08-04
 - [From Serendipity to Design: Engineering Biology with AI](https://aipodcast.jasonlin.tech/e/joshmeier-training-2026/) — Josh Meier, Training Data, 2026-08-04
-- [Behind the Scenes of Claude Design with Nate Parrot](https://aipodcast.jasonlin.tech/e/nateparrott-diveclub-2026/) — Nate Parrott, Dive Club, 2026-08-04
+- [Behind the Scenes of Claude Design with Nate Parrott](https://aipodcast.jasonlin.tech/e/nateparrott-diveclub-2026/) — Nate Parrott, Dive Club, 2026-08-04
 - [Building Physical AI: Lessons from Waymo's Autonomous Driving](https://aipodcast.jasonlin.tech/e/dmitridolgov-ycombina-2026/) — Dmitri Dolgov, Y Combinator, 2026-08-03
 - [How JLM52 Writes GPU Kernels and Long Query Routing](https://aipodcast.jasonlin.tech/e/philipkiely-latentsp-2026/) — Philip Kiely, Latent Space, 2026-08-03
 - [The Art of Model Crafting: Why Post-Training Is Subjective](https://aipodcast.jasonlin.tech/e/karina-mts-2026/) — Karina Nguyen, MTS , 2026-08-03

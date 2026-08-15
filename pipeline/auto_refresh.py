@@ -497,7 +497,11 @@ def main():
     for cmd in [["node", "pipeline/build_person_org.js"],
                 ["python3", "pipeline/gen_views.py"], ["python3", "pipeline/gen_topics.py"],
                 ["python3", "pipeline/gen_brief.py"], ["python3", "pipeline/gen_sectitles.py"],
-                ["python3", "pipeline/fix_spacing.py"], ["python3", "pipeline/fix_terms.py"], ["python3", "pipeline/split_data.py"],
+                ["python3", "pipeline/fix_spacing.py"], ["python3", "pipeline/fix_terms.py"],
+                # 嘉宾名误听:自动字幕把冷门姓氏音译错(Carl Pei→Carl Pay、Liam Fedus→Liam Fetus),
+                # 以站内登记名为权威改回去;只动「名+近似姓」的组合,不碰单独出现的词
+                ["python3", "pipeline/check_guest_names.py", "--apply"],
+                ["python3", "pipeline/split_data.py"],
                 # 新人物补头像(用其单集封面人脸裁剪,消化 pending_avatars)+ 转 webp。
                 # 个人 Mac 若没装 cv2,fill 会安全落空、条目留在 pending,不影响链路。
                 ["python3", "pipeline/fill_pending_avatars.py"], ["python3", "pipeline/webp_avatars.py"],
