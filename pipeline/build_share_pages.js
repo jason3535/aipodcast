@@ -107,5 +107,24 @@ const appHash=crypto.createHash('md5').update(h).digest('hex').slice(0,10);
 const idxPath=path.join(ROOT,'index.html');
 let idx=fs.readFileSync(idxPath,'utf8');
 idx=idx.replace(/<script src="app\.js(\?v=[a-f0-9]+)?" defer><\/script>/,`<script src="app.js?v=${appHash}" defer></script>`);
+
+/* 首页静态索引 —— 这是「已发现-尚未编入索引」的解药。
+   2026-08-15 Search Console 实况:1,119 页「已发现-尚未编入索引」,而已收录的只有 4 个首页。
+   查下来根因很具体:单集页 ⇄ 人物页 的互链是健全的,但**首页原始 HTML 里指向静态页的
+   链接是 0 条**(整页只有 4 个 <a>,其余全靠 JS 渲染,且 SPA 用的是 hash 路由,
+   到不了 /e/ 和 /pp/)。于是唯一被收录的首页成了孤岛,Google 从它出发一步都走不出去,
+   2000+ 静态页只能靠 sitemap 被"发现"然后无限期搁置。
+   这里在首页尾部生成一份真实可爬的索引:首页 → 人物 hub → 各期,两跳覆盖全站。
+   用 <details> 收起,不打扰阅读;<details> 里的链接 Google 照常抓取。 */
+const idxPeople=Object.keys(byPid).filter(pid=>PEOPLE[pid])
+  .sort((a,b)=>byPid[b].length-byPid[a].length);
+const latest=EPISODES.slice().sort((a,b)=>(b.date||'').localeCompare(a.date||'')).slice(0,80);
+const block=`<!--SITE_INDEX_START--><details class="site-index"><summary>站内索引 · Site index（${idxPeople.length} 位人物 · ${EPISODES.length} 期）</summary>
+<nav><b>人物</b> ${idxPeople.map(pid=>`<a href="/pp/${pid}/">${esc(PEOPLE[pid].zh||PEOPLE[pid].en)}</a>`).join(' · ')}</nav>
+<nav><b>最新</b> ${latest.map(e=>`<a href="/e/${e.id}/">${esc(e.tZh||e.tEn)}</a>`).join(' · ')}</nav>
+</details><!--SITE_INDEX_END-->`;
+if(/<!--SITE_INDEX_START-->[\s\S]*?<!--SITE_INDEX_END-->/.test(idx))
+  idx=idx.replace(/<!--SITE_INDEX_START-->[\s\S]*?<!--SITE_INDEX_END-->/,block);
+else idx=idx.replace('</body>',block+'\n</body>');
 fs.writeFileSync(idxPath,idx);
 console.log('分享页',n,'期 + 人物 hub',pn,'个 + sitemap',urls.length,'条 + llms.txt + app.js?v='+appHash);
