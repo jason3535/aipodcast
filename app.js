@@ -3079,6 +3079,13 @@ function footer(){return `<footer class="footer"><div class="wrap">
 
 /* init */
 if(localStorage.theme)document.documentElement.dataset.theme=localStorage.theme;
+/* iOS Safari 的状态栏/工具栏跟随 <meta name="theme-color"> 上色。data-theme 会被多处改写
+   (手动切换 / 启动恢复 / 多设备同步),与其逐个补调用,不如用 observer 统一跟随 ——
+   漏掉任何一条路径都会让浏览器顶栏与页面脱节。 */
+(function(){const m=document.querySelector('meta[name="theme-color"]');if(!m)return;
+  const upd=()=>{m.content=document.documentElement.dataset.theme==='dark'?'#0e0e10':'#fcfcfe';};
+  new MutationObserver(upd).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+  upd();})();
 if(localStorage.lang)document.body.dataset.lang=localStorage.lang;
 if(localStorage.size)document.body.dataset.size=localStorage.size;
 document.body.dataset.order=localStorage.order||'en';
