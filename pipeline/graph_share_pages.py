@@ -92,7 +92,11 @@ def build_page(site, gid, n, z, neigh, pod_pid, pap_pid, has_photo, style, scrip
         "worksFor": {"@type": "Organization", "name": n["org"]}, "description": desc,
         "url": url, "image": og}}, ensure_ascii=False)
     return f'''<!doctype html><html lang="zh-CN"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<style>/* 纯深色页:钉死 dark 并把背景写在 html 上,否则 iOS Safari 状态栏区域按浅色画,
+   深色页面顶上留一条白边(2026-08-15 实测) */
+:root{{color-scheme:dark}}html{{background:#000}}</style>
 <script>try{{document.documentElement.className=(localStorage.getItem('graphLang')==='en')?'lang-en':'lang-zh'}}catch(e){{document.documentElement.className='lang-zh'}}</script>
 <title>{esc(name)} · {esc(n["org"])} | {site["zh"]}</title>
 <meta name="description" content="{esc(desc)}…">
