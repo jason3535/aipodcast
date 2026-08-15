@@ -2567,6 +2567,21 @@ function askSel(){
   const chat=document.querySelector('.chat');if(chat&&chat.scrollIntoView)chat.scrollIntoView({behavior:'smooth',block:'center'});
   askEp('请解释这段话：“'+(t.length>140?t.slice(0,140)+'…':t)+'”');
 }
+
+/* 点空白处清掉文字选区。浏览器原生并不总会清(移动端 Safari 尤其明显),会出现
+   「选中的蓝底一直留在那儿」的残留(2026-08-15 用户报)。ttsCheckSel 只隐藏了工具条,
+   没动选区本身,所以之前修不掉。
+   排除 #selBar —— 上面的「朗读/标记/分享/看译文」按钮都要用当前选区,先清就没得用了;
+   排除 .hl —— 那是已有标记,点它是要移除标记。 */
+document.addEventListener('pointerdown',e=>{
+  const t=e.target;
+  if(t&&t.closest&&(t.closest('#selBar')||t.closest('.hl')))return;
+  const s=window.getSelection();
+  if(!s||s.isCollapsed)return;
+  if(typeof hlHideSel==='function')hlHideSel();
+  else{try{s.removeAllRanges();}catch(_){}}
+},true);
+
 function ttsInit(){
   const h=()=>setTimeout(()=>{ttsCheckSel();syncCross();},10);
   document.addEventListener('mouseup',h);
