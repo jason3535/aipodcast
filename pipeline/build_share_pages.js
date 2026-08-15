@@ -119,7 +119,7 @@ idx=idx.replace(/<script src="app\.js(\?v=[a-f0-9]+)?" defer><\/script>/,`<scrip
 const idxPeople=Object.keys(byPid).filter(pid=>PEOPLE[pid])
   .sort((a,b)=>byPid[b].length-byPid[a].length);
 const latest=EPISODES.slice().sort((a,b)=>(b.date||'').localeCompare(a.date||'')).slice(0,80);
-const block=`<!--SITE_INDEX_START--><details class="site-index"><summary>站内索引 · Site index（${idxPeople.length} 位人物 · ${EPISODES.length} 期）</summary>
+const block=`<!--SITE_INDEX_START--><details class="site-index"><summary>站点地图 · Sitemap（${idxPeople.length} 位人物 · ${EPISODES.length} 期）</summary>
 <nav><b>人物</b> ${idxPeople.map(pid=>`<a href="/pp/${pid}/">${esc(PEOPLE[pid].zh||PEOPLE[pid].en)}</a>`).join(' · ')}</nav>
 <nav><b>最新</b> ${latest.map(e=>`<a href="/e/${e.id}/">${esc(e.tZh||e.tEn)}</a>`).join(' · ')}</nav>
 </details><!--SITE_INDEX_END-->`;
