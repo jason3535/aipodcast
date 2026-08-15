@@ -1652,12 +1652,35 @@ function readPosSave(id,s,n){
 }
 /* 阅读栏底部进度线（滚动百分比） */
 let _progTick=false;
+/* 阅读进度按**正文**算,不按整份文档算。文档里正文之前有标题/速览/洞察(实测占 4.0%)、
+   之后有页脚与推荐(1.9%),按文档算会「一进来就有进度、读完正文才 98%」。
+   起点 = 正文第一段顶碰到粘性栏下沿;终点 = 正文最后一段底碰到视口底部。
+   范围缓存起来,文档高度变了(切字号/语言/展开译文)才重算 —— 344 段的 DOM 查询
+   不能每帧都跑。 */
+let _progBox=null,_progDocH=-1;
+function progBounds(){
+  const dh=document.documentElement.scrollHeight;
+  if(_progBox!==null&&_progDocH===dh)return _progBox;
+  _progDocH=dh;
+  const els=document.querySelectorAll('.reader .turn,.reader .sec-h');
+  if(!els.length)return _progBox=false;
+  const rb=document.querySelector('.read-bar');
+  const sticky=rb?Math.round(rb.getBoundingClientRect().bottom):100;   // 菜单栏+标题栏 的下沿
+  const top=els[0].getBoundingClientRect().top+scrollY;
+  const bot=els[els.length-1].getBoundingClientRect().bottom+scrollY;
+  const start=top-sticky, end=bot-innerHeight;
+  return _progBox=(end>start?{start,end}:false);
+}
+function progWidth(){
+  const b=progBounds();
+  if(!b)return 0;
+  return Math.min(100,Math.max(0,(scrollY-b.start)/(b.end-b.start)*100));
+}
 addEventListener('scroll',()=>{
   if(_progTick)return;_progTick=true;
   requestAnimationFrame(()=>{_progTick=false;
     const bar=document.getElementById('readProg');if(!bar)return;
-    const max=document.documentElement.scrollHeight-innerHeight;
-    bar.style.width=(max>0?Math.min(100,scrollY/max*100):0)+'%';
+    bar.style.width=progWidth()+'%';
   });
 },{passive:true});
 /* 切字号/语言/顺序时锚定视口顶部内容，避免 reflow 后位置漂移 */
