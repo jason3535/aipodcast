@@ -6,7 +6,63 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sun, 16 Aug 2026 03:39:07 -0000</lastBuildDate>
+  <lastBuildDate>Sun, 16 Aug 2026 09:45:00 -0000</lastBuildDate>
+  <item>
+    <title>Claude Code：AI 代理与软件工程的未来 — 彭博播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/boris-bloomber-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/boris-bloomber-2026/</guid>
+    <pubDate>Sun, 16 Aug 2026 09:45:00 -0000</pubDate>
+    <description>Anthropic 的 Claude Code 负责人 Boris Cherny 讨论了 AI 代理的演变、对软件工程的影响以及人机交互的未来。</description>
+  </item>
+  <item>
+    <title>从代码洞穴到 Y Combinator：坚韧与创新之旅 — Rick Rubin 四字神名</title>
+    <link>https://aipodcast.jasonlin.tech/e/garrytan-tetragra-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/garrytan-tetragra-2026/</guid>
+    <pubDate>Sun, 16 Aug 2026 09:45:00 -0000</pubDate>
+    <description>一位创始人分享童年困境如何激发对科技的热爱，以及 Y Combinator 如何识别下一代创造者。</description>
+  </item>
+  <item>
+    <title>Y Combinator 在 AI 时代的演变 — SXSW</title>
+    <link>https://aipodcast.jasonlin.tech/e/garrytan-sxsw-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/garrytan-sxsw-2026/</guid>
+    <pubDate>Sun, 16 Aug 2026 09:45:00 -0000</pubDate>
+    <description>Gary 与主持人讨论 Y Combinator 的申请流程和标准如何随 AI 时代变化，强调技能而非学历背景。</description>
+  </item>
+  <item>
+    <title>Gary Tan 谈旧金山、科技与 YC — Out Of Office 播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/garrytan-outofoff-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/garrytan-outofoff-2026/</guid>
+    <pubDate>Sun, 16 Aug 2026 09:45:00 -0000</pubDate>
+    <description>Gary Tan 探讨旧金山的科技文化、个人经历及 YC 的影响力。</description>
+  </item>
+  <item>
+    <title>AI 时代重新思考设计流程 — Hatch 大会</title>
+    <link>https://aipodcast.jasonlin.tech/e/jennywen-hatchcon-2025/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/jennywen-hatchcon-2025/</guid>
+    <pubDate>Sun, 16 Aug 2026 09:45:00 -0000</pubDate>
+    <description>一位设计负责人挑战传统设计流程，认为在 AI 和角色演变的时代，它已经过时了。</description>
+  </item>
+  <item>
+    <title>让科技重拾乐趣：Carl Pei 谈 Nothing 的使命 — Gstaad Guy 播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/carlpei-thegstaa-2025/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/carlpei-thegstaa-2025/</guid>
+    <pubDate>Sun, 16 Aug 2026 09:45:00 -0000</pubDate>
+    <description>Nothing 创始人 Carl Pei 分享其使命：通过创新的硬件设计让科技变得有趣，激发人类创造力。</description>
+  </item>
+  <item>
+    <title>名字游戏：Carl Pei 谈 Nothing 的成功 — ACCESS 播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/carlpei-accesspo-2025/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/carlpei-accesspo-2025/</guid>
+    <pubDate>Sun, 16 Aug 2026 09:45:00 -0000</pubDate>
+    <description>Carl Pei 探讨公司名称不如成功重要，以及 Nothing 作为蓬勃发展的独立智能手机品牌的历程。</description>
+  </item>
+  <item>
+    <title>从 Instagram 到 AI：Mike Krieger 谈单人创业 — 硅谷女孩</title>
+    <link>https://aipodcast.jasonlin.tech/e/mikekrieger-siliconv-2025/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/mikekrieger-siliconv-2025/</guid>
+    <pubDate>Sun, 16 Aug 2026 09:45:00 -0000</pubDate>
+    <description>Mike Krieger 探讨 AI 如何让单人创业者打造百万美元公司，并分享他在 Instagram 和 Anthropic 的经历与见解。</description>
+  </item>
   <item>
     <title>从比特到原子：下一次工业革命 — a16z 播客</title>
     <link>https://aipodcast.jasonlin.tech/e/traviskalanick-thea16zp-2026b/</link>
@@ -160,62 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/linqiao-training-2026/</guid>
     <pubDate>Fri, 14 Aug 2026 02:25:12 -0000</pubDate>
     <description>Firework CEO Lynn 解释了为何后训练是公司将独特判断和数据嵌入 AI 模型、超越现成 API 的关键。</description>
-  </item>
-  <item>
-    <title>生活在未来：AI、技艺与写作的艺术 — Jonny Miller│神经系统掌控</title>
-    <link>https://aipodcast.jasonlin.tech/e/danshipper-jonnymil-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/danshipper-jonnymil-2026/</guid>
-    <pubDate>Fri, 14 Aug 2026 01:36:16 -0000</pubDate>
-    <description>一场关于 AI 与人类创造力交汇的对话，灵感来自安妮·迪拉德的写作，以及如何在深度思考与协调智能体之间取得平衡。</description>
-  </item>
-  <item>
-    <title>SpaceX：从猎鹰 1 号到星舰 — SpaceX 全员大会</title>
-    <link>https://aipodcast.jasonlin.tech/e/elon-spacexal-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/elon-spacexal-2026/</guid>
-    <pubDate>Thu, 13 Aug 2026 05:28:00 -0000</pubDate>
-    <description>埃隆·马斯克回顾 SpaceX 从早期失败到火箭回收及星链全球互联网的历程。</description>
-  </item>
-  <item>
-    <title>AI 2040：从预测到建议 — Lawfare</title>
-    <link>https://aipodcast.jasonlin.tech/e/kokotajlo-lawfare-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/kokotajlo-lawfare-2026/</guid>
-    <pubDate>Thu, 13 Aug 2026 01:35:06 -0000</pubDate>
-    <description>Daniel 讨论了从 AI 2027 的预测情景到 AI 2040 的政策建议的转变，并强调了情景审查的重要性。</description>
-  </item>
-  <item>
-    <title>Lindy 推出基于 DeepSeek 的 Slack AI 同事 — The Cognitive Revolution</title>
-    <link>https://aipodcast.jasonlin.tech/e/flocrivello-thecogni-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/flocrivello-thecogni-2026/</guid>
-    <pubDate>Wed, 12 Aug 2026 08:10:15 -0000</pubDate>
-    <description>Flo Carllo 讨论 Lindy 新推出的 Slack AI 员工、多人 AI、记忆以及使用中国模型的政治问题。</description>
-  </item>
-  <item>
-    <title>Goodfire CTO 谈 Silico 平台与 AI 安全 — The Cognitive Revolution</title>
-    <link>https://aipodcast.jasonlin.tech/e/danbalsam-thecogni-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/danbalsam-thecogni-2026/</guid>
-    <pubDate>Wed, 12 Aug 2026 08:10:15 -0000</pubDate>
-    <description>Dan Balsam 讨论 Goodfire 的新平台 Silico、预测性数据调试以及 AI 概念的几何结构。</description>
-  </item>
-  <item>
-    <title>与 Zvi Mowshowitz 的 AI 全景：从编辑到存在风险 — The Cognitive Revolution</title>
-    <link>https://aipodcast.jasonlin.tech/e/zvi-thecogni-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/zvi-thecogni-2026/</guid>
-    <pubDate>Wed, 12 Aug 2026 08:10:15 -0000</pubDate>
-    <description>Zvi Mowshowitz 探讨 AI 编辑、前沿事件、对齐挑战，以及在快速加速的 AI 格局中的前进之路。</description>
-  </item>
-  <item>
-    <title>Cognition 的 Scott Wu 谈 AI 编程代理与富足时代 — Sourcery · 莫莉·奥谢</title>
-    <link>https://aipodcast.jasonlin.tech/e/scottwu-sourcery-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/scottwu-sourcery-2026/</guid>
-    <pubDate>Wed, 12 Aug 2026 08:10:15 -0000</pubDate>
-    <description>Scott Wu 讨论 Cognition 的快速增长、Devin 等 AI 编程代理的生产力以及富足时代的未来。</description>
-  </item>
-  <item>
-    <title>从 Spotify 到 Playbit：Rasmus Andersson 谈设计、工程与构建操作系统 — South Park Commons</title>
-    <link>https://aipodcast.jasonlin.tech/e/rasmusandersson-southpar-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/rasmusandersson-southpar-2026/</guid>
-    <pubDate>Wed, 12 Aug 2026 08:10:15 -0000</pubDate>
-    <description>GraphQL 联合创造者、Spotify 设计师 Rasmus Andersson 分享他从对现有工具不满到创立新操作系统公司 Playbit 的历程。</description>
   </item>
 </channel>
 </rss>
