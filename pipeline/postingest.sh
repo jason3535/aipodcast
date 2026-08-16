@@ -25,6 +25,7 @@ python3 pipeline/webp_avatars.py | tail -1
 echo "── 10.5/11 站群闭环(互链 map 补全 + 图谱分享页)"
 python3 pipeline/build_crosslinks.py --apply | tail -3       # 六站互链只增不删;动了其他仓库会打印提醒
 python3 pipeline/graph_share_pages.py --apply | tail -5      # 图谱新节点的 /p+/og 页(2026-08-10 garrytan 404 教训)
+python3 pipeline/graph_share_xlinks.py || echo "  ⚠ 图谱分享页互链失败(不阻断)"
 
 echo "── 10.6/11 RSS(gen_feed)"
 # 2026-08-13 发现:这一步脚本一直在,但从没被任何链条调用过,feed.xml 停更了两周半。
