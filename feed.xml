@@ -6,7 +6,28 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sat, 15 Aug 2026 11:37:43 -0000</lastBuildDate>
+  <lastBuildDate>Sun, 16 Aug 2026 01:37:07 -0000</lastBuildDate>
+  <item>
+    <title>EXO：完全递归的自我改进智能体 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/e/alexkrentsel-latentsp-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/alexkrentsel-latentsp-2026/</guid>
+    <pubDate>Sun, 16 Aug 2026 01:37:07 -0000</pubDate>
+    <description>Alex Cransel 讨论 EXO，一个能在运行时安全自我编辑的完全递归智能体，以及从模型中心到框架中心的 AI 转变。</description>
+  </item>
+  <item>
+    <title>英特尔复兴：陈立武谈抓住下一个大浪潮 — TechSurge：深科技风投播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/lipbutan-techsurg-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/lipbutan-techsurg-2026/</guid>
+    <pubDate>Sun, 16 Aug 2026 01:37:07 -0000</pubDate>
+    <description>陈立武分享他从核工程到领导英特尔的历程，以及他为何决心不错过下一个科技大浪潮。</description>
+  </item>
+  <item>
+    <title>AI 的指数级飞跃：为何未来十年可能重新定义人类寿命 — FoundMyFitness</title>
+    <link>https://aipodcast.jasonlin.tech/e/derya-foundmyf-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/derya-foundmyf-2026/</guid>
+    <pubDate>Sun, 16 Aug 2026 01:37:07 -0000</pubDate>
+    <description>杜里亚·埃诺特马斯博士解释 AI 的指数级增长如何在 10-20 年内实现疾病治愈、衰老逆转和长寿逃逸速度。</description>
+  </item>
   <item>
     <title>AI 教母谈视觉、学习与以人为本的人工智能 — 休伯曼实验室</title>
     <link>https://aipodcast.jasonlin.tech/e/feifei-huberman-2026/</link>
@@ -195,27 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/ryangreenblatt-dwarkesh-2026/</guid>
     <pubDate>Wed, 12 Aug 2026 04:05:33 -0000</pubDate>
     <description>Ryan Greenblatt 探讨了递归自我改进导致 AI 快速进步并在 2030 年代初实现超级智能的可能性。</description>
-  </item>
-  <item>
-    <title>预算有限的研究实验室：Harvey 的实战手册 — 红杉资本</title>
-    <link>https://aipodcast.jasonlin.tech/e/gabepereyra-sequoiac-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/gabepereyra-sequoiac-2026/</guid>
-    <pubDate>Wed, 12 Aug 2026 04:05:33 -0000</pubDate>
-    <description>Harvey 联合创始人分享应用层公司如何利用前沿生态系统、构建基准和微调开源模型，与前沿实验室竞争。</description>
-  </item>
-  <item>
-    <title>从烦恼到 AGI：OpenClaw 的诞生 — Y Combinator</title>
-    <link>https://aipodcast.jasonlin.tech/e/steinberger-ycombina-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/steinberger-ycombina-2026/</guid>
-    <pubDate>Wed, 12 Aug 2026 04:05:33 -0000</pubDate>
-    <description>OpenClaw 的创始人分享了一次挫折如何催生革命性的 AI 代理，以及早期用户为何感受到魔力。</description>
-  </item>
-  <item>
-    <title>智能的物理学：从沙堆到潜在空间 — ML Street Talk</title>
-    <link>https://aipodcast.jasonlin.tech/e/matthieuwyart-machinel-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/matthieuwyart-machinel-2026/</guid>
-    <pubDate>Wed, 12 Aug 2026 04:05:33 -0000</pubDate>
-    <description>一位物理学家探讨统计物理原理如何解释大脑的高效性，以及为什么在潜在空间预测优于在词元空间预测。</description>
   </item>
 </channel>
 </rss>

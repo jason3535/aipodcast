@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 260 位人物 / 561 期访谈
+规模: 261 位人物 / 563 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -58,6 +58,7 @@
 - [Yejin Choi / 崔艺珍](https://aipodcast.jasonlin.tech/pp/yejin/): Professor, Stanford (prev. NVIDIA, AI2); commonsense reasoning — 3 期
 - [Noam Shazeer / 诺姆·沙泽尔](https://aipodcast.jasonlin.tech/pp/shazeer/): Co-lead, Google Gemini — 3 期
 - [Jan Leike / 扬·莱克](https://aipodcast.jasonlin.tech/pp/leike/): Alignment Lead, Anthropic — 3 期
+- [Travis Kalanick / 特拉维斯·卡兰尼克](https://aipodcast.jasonlin.tech/pp/traviskalanick/): Founder of Uber, CEO of CloudKitchens — 2 期
 - [Garry Tan / 陈嘉兴](https://aipodcast.jasonlin.tech/pp/garrytan/): President & CEO, Y Combinator — 2 期
 - [Chelsea Finn / 切尔西·芬恩](https://aipodcast.jasonlin.tech/pp/finn/): Assistant Professor, Stanford; co-founder, Physical Intelligence — 2 期
 - [Lin Qiao / 乔琳](https://aipodcast.jasonlin.tech/pp/linqiao/): Co-founder & CEO, Fireworks AI — 2 期
@@ -99,6 +100,7 @@
 - [Alex Krentsel / 亚历克斯·克伦塞尔](https://aipodcast.jasonlin.tech/pp/alexkrentsel/): Founder of Exo — 1 期
 - [Harrison Chase / 哈里森·蔡斯](https://aipodcast.jasonlin.tech/pp/harrisonchase/): Co-founder & CEO, LangChain — 1 期
 - [Tom McGrath / 汤姆·麦格拉思](https://aipodcast.jasonlin.tech/pp/tommcgrath/): Co-founder & Chief Scientist, Goodfire — 1 期
+- [Brendan Foody / 布伦丹·富迪](https://aipodcast.jasonlin.tech/pp/brendanfoody/): CEO, Mercor — 1 期
 - [Kyle Zantos / 凯尔·赞托斯](https://aipodcast.jasonlin.tech/pp/kylezantos/): Designer & Builder; UX Tools Labs — 1 期
 - [Matthew McPartlon / 马修·麦克帕特隆](https://aipodcast.jasonlin.tech/pp/mattmcpartland/): Co-founder, Chai Discovery — 1 期
 - [Ryan Greenblatt / 瑞安·格林布拉特](https://aipodcast.jasonlin.tech/pp/ryangreenblatt/): Chief Scientist, Redwood Research — 1 期
@@ -123,7 +125,6 @@
 - [Akshay Nathan / 阿克谢·内森](https://aipodcast.jasonlin.tech/pp/akshaynathan/): OpenAI Product Lead, ChatGPT — 1 期
 - [Andy Fang / 安迪·方](https://aipodcast.jasonlin.tech/pp/andyfang/): Co-founder and CTO of DoorDash — 1 期
 - [Kareem Amin / 卡里姆·阿明](https://aipodcast.jasonlin.tech/pp/kareemamin/): Co-founder and CEO of Clay — 1 期
-- [Travis Kalanick / 特拉维斯·卡兰尼克](https://aipodcast.jasonlin.tech/pp/traviskalanick/): Founder of Uber, CEO of CloudKitchens — 1 期
 - [Eiso Kant / 艾索·康德](https://aipodcast.jasonlin.tech/pp/eisokant/): Co-founder and CEO of Poolside AI — 1 期
 - [Sundar Pichai / 桑达尔·皮查伊](https://aipodcast.jasonlin.tech/pp/sundarpichai/): CEO, Google & Alphabet — 1 期
 - [Bo Wang / 王波](https://aipodcast.jasonlin.tech/pp/bowang/): Chief AI Scientist, Xaira Therapeutics — 1 期
@@ -270,11 +271,13 @@
 
 ## 最新访谈 Latest episodes
 - [EXO: Fully Recursive Self-Improving Agents](https://aipodcast.jasonlin.tech/e/alexkrentsel-latentsp-2026/) — Alex Krentsel, Latent Space, 2026-08-15
+- [From Bits to Atoms: The Next Industrial Revolution](https://aipodcast.jasonlin.tech/e/traviskalanick-thea16zp-2026b/) — Travis Kalanick, The a16z Podcast, 2026-08-14
 - [Harnesses and Evals: Owning Your Intelligence](https://aipodcast.jasonlin.tech/e/harrisonchase-training-2026/) — Harrison Chase, Training Data, 2026-08-13
 - [AI Reward Hacking: The Interpretability Dilemma](https://aipodcast.jasonlin.tech/e/tommcgrath-southpar-2026/) — Tom McGrath, South Park Commons, 2026-08-13
 - [From Microsoft to Startup School: Gary's Journey and Silicon Valley Culture](https://aipodcast.jasonlin.tech/e/garrytan-thea16zp-2026/) — Garry Tan, The a16z Podcast, 2026-08-12
 - [The Path to General-Purpose Robots in the Real World](https://aipodcast.jasonlin.tech/e/finn-ycombina-2026/) — Chelsea Finn, Y Combinator, 2026-08-12
 - [Owning Intelligence: Post-Training for Durable AI Businesses](https://aipodcast.jasonlin.tech/e/linqiao-training-2026/) — Lin Qiao, Training Data, 2026-08-12
+- [RL Environments: The New Frontier in Agentic Data](https://aipodcast.jasonlin.tech/e/brendanfoody-training-2026/) — Brendan Foody, Training Data, 2026-08-12
 - [AI-Powered Design Workflows: HTML Artifacts and Autonomous Agents](https://aipodcast.jasonlin.tech/e/kylezantos-diveclub-2026/) — Kyle Zantos, Dive Club, 2026-08-11
 - [Chai Discovery: The AI-Native Software Factory for Drug Discovery](https://aipodcast.jasonlin.tech/e/mattmcpartland-latentsp-2026/) — Matthew McPartlon, Latent Space, 2026-08-11
 - [Building a Research Lab on a Budget](https://aipodcast.jasonlin.tech/e/gabepereyra-training-2026/) — Gabe Pereyra, Training Data, 2026-08-11
@@ -307,8 +310,6 @@
 - [Simulating Human Behavior: The Future of AI Prediction](https://aipodcast.jasonlin.tech/e/joonpark-20vc-2026/) — Joon Sung Park, 20VC, 2026-08-01
 - [Startup School: Patrick Collison on Learning, Writing, and Dropping Out](https://aipodcast.jasonlin.tech/e/collison-ycombina-2026/) — Patrick Collison, Y Combinator, 2026-07-31
 - [From DeepMind to River AI: Igor Babuschkin on Personal AI and the Future of Agents](https://aipodcast.jasonlin.tech/e/igorbabuschkin-unsuperv-2026/) — Igor Babuschkin, Unsupervised Learning, 2026-07-31
-- [AI at Junior Engineer Level: Jeff Dean's Bold Prediction and the Future of Agentic Systems](https://aipodcast.jasonlin.tech/e/jeffdean-ycombina-2026/) — Jeff Dean, Y Combinator, 2026-07-30
-- [AI Security Leaderboard: Evaluating Frontier Models Against Misuse](https://aipodcast.jasonlin.tech/e/adamgleave-thecogni-2026/) — Adam Gleave, The Cognitive Revolution, 2026-07-30
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
