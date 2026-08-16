@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 261 位人物 / 563 期访谈
+规模: 261 位人物 / 571 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -11,9 +11,9 @@
 - [Dario Amodei / 达里奥·阿莫迪](https://aipodcast.jasonlin.tech/pp/dario/): CEO, Anthropic — 16 期
 - [Elon Musk / 埃隆·马斯克](https://aipodcast.jasonlin.tech/pp/elon/): Founder, xAI — 15 期
 - [Naval Ravikant / 纳瓦尔·拉维坎特](https://aipodcast.jasonlin.tech/pp/naval/): Co-founder, AngelList; angel investor & philosopher — 14 期
+- [Boris Cherny / 鲍里斯·切尔尼](https://aipodcast.jasonlin.tech/pp/boris/): Creator of Claude Code, Anthropic — 12 期
 - [Jensen Huang / 黄仁勋](https://aipodcast.jasonlin.tech/pp/jensen/): Founder & CEO, NVIDIA — 12 期
 - [Demis Hassabis / 杰米斯·哈萨比斯](https://aipodcast.jasonlin.tech/pp/demis/): CEO, Google DeepMind — 12 期
-- [Boris Cherny / 鲍里斯·切尔尼](https://aipodcast.jasonlin.tech/pp/boris/): Creator of Claude Code, Anthropic — 11 期
 - [Yoshua Bengio / 约书亚·本吉奥](https://aipodcast.jasonlin.tech/pp/bengio/): Professor, Mila — 10 期
 - [Yann LeCun / 杨立昆](https://aipodcast.jasonlin.tech/pp/lecun/): Chief AI Scientist, Meta — 10 期
 - [Fei-Fei Li / 李飞飞](https://aipodcast.jasonlin.tech/pp/feifei/): Co-founder, World Labs — 9 期
@@ -30,14 +30,16 @@
 - [Arthur Mensch / 阿瑟·门施](https://aipodcast.jasonlin.tech/pp/mensch/): Co-founder & CEO, Mistral AI — 6 期
 - [Andrej Karpathy / 安德烈·卡帕西](https://aipodcast.jasonlin.tech/pp/karpathy/): Founder, Eureka Labs — 6 期
 - [Richard Sutton / 理查德·萨顿](https://aipodcast.jasonlin.tech/pp/sutton/): Professor, U of Alberta — 6 期
+- [Garry Tan / 陈嘉兴](https://aipodcast.jasonlin.tech/pp/garrytan/): President & CEO, Y Combinator — 5 期
 - [Andrew Feldman / 安德鲁·费尔德曼](https://aipodcast.jasonlin.tech/pp/feldman/): Co-founder & CEO, Cerebras Systems — 5 期
+- [Mike Krieger / 迈克·克里格](https://aipodcast.jasonlin.tech/pp/mikekrieger/): Co-lead, Anthropic Labs · Instagram co-founder — 5 期
+- [Carl Pei / 裴宇](https://aipodcast.jasonlin.tech/pp/carlpei/): Founder & CEO, Nothing; co-founder of OnePlus — 5 期
 - [Sholto Douglas / 肖尔托·道格拉斯](https://aipodcast.jasonlin.tech/pp/sholto/): Researcher, Anthropic — 5 期
 - [Lip-Bu Tan / 陈立武](https://aipodcast.jasonlin.tech/pp/lipbutan/): CEO, Intel — 4 期
 - [Benedict Evans / 本尼迪克特·埃文斯](https://aipodcast.jasonlin.tech/pp/benedictevans/): Independent technology analyst; former partner at Andreessen Horowitz (a16z) — 4 期
 - [Ilya Sutskever / 伊利亚·苏茨克维尔](https://aipodcast.jasonlin.tech/pp/ilya/): Co-founder, Safe Superintelligence — 4 期
 - [Marc Andreessen / 马克·安德森](https://aipodcast.jasonlin.tech/pp/andreessen/): Co-founder & General Partner, Andreessen Horowitz (a16z) — 4 期
 - [Aravind Srinivas / 阿拉文德·斯里尼瓦斯](https://aipodcast.jasonlin.tech/pp/aravind/): Co-founder & CEO, Perplexity — 4 期
-- [Mike Krieger / 迈克·克里格](https://aipodcast.jasonlin.tech/pp/mikekrieger/): Co-lead, Anthropic Labs · Instagram co-founder — 4 期
 - [Zico Kolter / 齐科·科尔特](https://aipodcast.jasonlin.tech/pp/kolter/): Professor, CMU · OpenAI board — 4 期
 - [Peter Steinberger / 彼得·施泰因贝格尔](https://aipodcast.jasonlin.tech/pp/steinberger/): Creator of OpenClaw; founder of PSPDFKit — 3 期
 - [Dan Shipper / 丹·希珀](https://aipodcast.jasonlin.tech/pp/danshipper/): Co-founder & CEO, Every — 3 期
@@ -53,13 +55,12 @@
 - [John Jumper / 约翰·江珀](https://aipodcast.jasonlin.tech/pp/jumper/): Director, Google DeepMind; Nobel Laureate in Chemistry — 3 期
 - [Ivy Ross / 艾维·罗斯](https://aipodcast.jasonlin.tech/pp/ivyross/): Chief Design Officer, Consumer Devices at Google — 3 期
 - [Jony Ive / 乔纳森·艾维](https://aipodcast.jasonlin.tech/pp/jonyive/): Founder, LoveFrom; former Chief Design Officer, Apple — 3 期
+- [Jenny Wen / 温珍妮](https://aipodcast.jasonlin.tech/pp/jennywen/): Design Lead for Claude (Anthropic); now Head of Design at Cursor — 3 期
 - [Edwin Chen / 陈埃德温](https://aipodcast.jasonlin.tech/pp/edwinchen/): Founder & CEO, Surge AI — 3 期
-- [Carl Pei / 裴宇](https://aipodcast.jasonlin.tech/pp/carlpei/): Founder & CEO, Nothing; co-founder of OnePlus — 3 期
 - [Yejin Choi / 崔艺珍](https://aipodcast.jasonlin.tech/pp/yejin/): Professor, Stanford (prev. NVIDIA, AI2); commonsense reasoning — 3 期
 - [Noam Shazeer / 诺姆·沙泽尔](https://aipodcast.jasonlin.tech/pp/shazeer/): Co-lead, Google Gemini — 3 期
 - [Jan Leike / 扬·莱克](https://aipodcast.jasonlin.tech/pp/leike/): Alignment Lead, Anthropic — 3 期
 - [Travis Kalanick / 特拉维斯·卡兰尼克](https://aipodcast.jasonlin.tech/pp/traviskalanick/): Founder of Uber, CEO of CloudKitchens — 2 期
-- [Garry Tan / 陈嘉兴](https://aipodcast.jasonlin.tech/pp/garrytan/): President & CEO, Y Combinator — 2 期
 - [Chelsea Finn / 切尔西·芬恩](https://aipodcast.jasonlin.tech/pp/finn/): Assistant Professor, Stanford; co-founder, Physical Intelligence — 2 期
 - [Lin Qiao / 乔琳](https://aipodcast.jasonlin.tech/pp/linqiao/): Co-founder & CEO, Fireworks AI — 2 期
 - [Gabe Pereyra / 加布·佩雷拉](https://aipodcast.jasonlin.tech/pp/gabepereyra/): President & Co-founder, Harvey — 2 期
@@ -86,7 +87,6 @@
 - [Felix Rieseberg / 菲利克斯·里泽伯格](https://aipodcast.jasonlin.tech/pp/felixrieseberg/): Claude Cowork Lead, Anthropic · ex-Slack — 2 期
 - [Reiner Pope / 赖纳·波普](https://aipodcast.jasonlin.tech/pp/reinerpope/): Co-founder & CEO, MatX; ex-Google (LLM serving) — 2 期
 - [Oriol Vinyals / 奥里奥尔·维尼亚尔斯](https://aipodcast.jasonlin.tech/pp/oriol/): VP of Research & Gemini Co-lead · Google DeepMind — 2 期
-- [Jenny Wen / 温珍妮](https://aipodcast.jasonlin.tech/pp/jennywen/): Design Lead for Claude (Anthropic); now Head of Design at Cursor — 2 期
 - [Alex Kendall / 亚历克斯·肯德尔](https://aipodcast.jasonlin.tech/pp/kendall/): Co-founder & CEO, Wayve — 2 期
 - [Dylan Field / 迪伦·菲尔德](https://aipodcast.jasonlin.tech/pp/dylanfield/): Co-founder & CEO of Figma — 2 期
 - [Jakub Pachocki / 雅库布·帕霍茨基](https://aipodcast.jasonlin.tech/pp/pachocki/): Chief Scientist, OpenAI — 2 期

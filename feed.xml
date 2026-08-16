@@ -6,7 +6,21 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sun, 16 Aug 2026 01:37:07 -0000</lastBuildDate>
+  <lastBuildDate>Sun, 16 Aug 2026 03:39:07 -0000</lastBuildDate>
+  <item>
+    <title>从比特到原子：下一次工业革命 — a16z 播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/traviskalanick-thea16zp-2026b/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/traviskalanick-thea16zp-2026b/</guid>
+    <pubDate>Sun, 16 Aug 2026 03:39:07 -0000</pubDate>
+    <description>一位远见者探讨如何将物理世界数字化，从交通到制造，推动下一次工业革命。</description>
+  </item>
+  <item>
+    <title>强化学习环境：智能体数据的新前沿 — Training Data</title>
+    <link>https://aipodcast.jasonlin.tech/e/brendanfoody-training-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/brendanfoody-training-2026/</guid>
+    <pubDate>Sun, 16 Aug 2026 03:39:07 -0000</pubDate>
+    <description>Brendan 探讨了强化学习环境如何变革智能体数据，专家构建世界、应用和任务来训练前沿模型。</description>
+  </item>
   <item>
     <title>EXO：完全递归的自我改进智能体 — Latent Space</title>
     <link>https://aipodcast.jasonlin.tech/e/alexkrentsel-latentsp-2026/</link>
@@ -202,20 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/rasmusandersson-southpar-2026/</guid>
     <pubDate>Wed, 12 Aug 2026 08:10:15 -0000</pubDate>
     <description>GraphQL 联合创造者、Spotify 设计师 Rasmus Andersson 分享他从对现有工具不满到创立新操作系统公司 Playbit 的历程。</description>
-  </item>
-  <item>
-    <title>AI 驱动的设计工作流：HTML 工件与自主代理 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/e/kylezantos-diveclub-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/kylezantos-diveclub-2026/</guid>
-    <pubDate>Wed, 12 Aug 2026 04:05:33 -0000</pubDate>
-    <description>Kyle Xantos 分享如何利用 HTML 工件和链式 AI 技能自动化设计审计，以可视化提案供审批。</description>
-  </item>
-  <item>
-    <title>递归自我改进与通往超级智能之路 — Dwarkesh 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/ryangreenblatt-dwarkesh-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/ryangreenblatt-dwarkesh-2026/</guid>
-    <pubDate>Wed, 12 Aug 2026 04:05:33 -0000</pubDate>
-    <description>Ryan Greenblatt 探讨了递归自我改进导致 AI 快速进步并在 2030 年代初实现超级智能的可能性。</description>
   </item>
 </channel>
 </rss>
