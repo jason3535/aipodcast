@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 261 位人物 / 571 期访谈
+规模: 261 位人物 / 573 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -53,6 +53,7 @@
 - [Mark Pincus / 马克·平卡斯](https://aipodcast.jasonlin.tech/pp/pincus/): Founder, Zynga — 3 期
 - [Mark Chen / 马克·陈](https://aipodcast.jasonlin.tech/pp/markchen/): Chief Research Officer, OpenAI — 3 期
 - [John Jumper / 约翰·江珀](https://aipodcast.jasonlin.tech/pp/jumper/): Director, Google DeepMind; Nobel Laureate in Chemistry — 3 期
+- [Fiona Fung / 菲奥娜·冯](https://aipodcast.jasonlin.tech/pp/fiona/): Claude Code & Cowork Lead · Anthropic — 3 期
 - [Ivy Ross / 艾维·罗斯](https://aipodcast.jasonlin.tech/pp/ivyross/): Chief Design Officer, Consumer Devices at Google — 3 期
 - [Jony Ive / 乔纳森·艾维](https://aipodcast.jasonlin.tech/pp/jonyive/): Founder, LoveFrom; former Chief Design Officer, Apple — 3 期
 - [Jenny Wen / 温珍妮](https://aipodcast.jasonlin.tech/pp/jennywen/): Design Lead for Claude (Anthropic); now Head of Design at Cursor — 3 期
@@ -66,6 +67,7 @@
 - [Gabe Pereyra / 加布·佩雷拉](https://aipodcast.jasonlin.tech/pp/gabepereyra/): President & Co-founder, Harvey — 2 期
 - [Jason Yuan / Jason Yuan](https://aipodcast.jasonlin.tech/pp/jasonyuan/): Founder & CEO, Hivemind; ex-New Computer, ex-Apple — 2 期
 - [Daniel Kokotajlo / 丹尼尔·科科塔伊洛](https://aipodcast.jasonlin.tech/pp/kokotajlo/): Author, AI 2027 · ex-OpenAI — 2 期
+- [Nate Parrott / 内特·帕罗特](https://aipodcast.jasonlin.tech/pp/nateparrott/): Designer at Anthropic — 2 期
 - [Philip Kiely / 菲利普·基利](https://aipodcast.jasonlin.tech/pp/philipkiely/): Developer Relations Lead, Baseten — 2 期
 - [Karina Nguyen / 卡丽娜·阮](https://aipodcast.jasonlin.tech/pp/karina/): Research, OpenAI — 2 期
 - [Meng To / 孟托](https://aipodcast.jasonlin.tech/pp/mengto/): Founder of Design+Code — 2 期
@@ -77,7 +79,6 @@
 - [Dan Klein / 丹·克莱因](https://aipodcast.jasonlin.tech/pp/danklein/): Professor of Computer Science, UC Berkeley; Co-founder & CTO, Scaled Cognition — 2 期
 - [Dan Biderman / 丹·比德曼](https://aipodcast.jasonlin.tech/pp/danbiderman/): Co-founder, Engram; memory & continual learning — 2 期
 - [Andrew Ambrosino / 安德鲁·安布罗西诺](https://aipodcast.jasonlin.tech/pp/ajambrosino/): Codex App Lead, OpenAI — 2 期
-- [Fiona Fung / 菲奥娜·冯](https://aipodcast.jasonlin.tech/pp/fiona/): Claude Code & Cowork Lead · Anthropic — 2 期
 - [Ethan He / 伊森·何](https://aipodcast.jasonlin.tech/pp/ethanhe/): Member of Technical Staff, xAI (Grok Imagine); ex-NVIDIA (Cosmos) — 2 期
 - [Gustav Söderström / 古斯塔夫·瑟德斯特伦](https://aipodcast.jasonlin.tech/pp/gustav/): Co-President & CPTO, Spotify — 2 期
 - [Satya Nadella / 萨提亚·纳德拉](https://aipodcast.jasonlin.tech/pp/satya/): Chairman & CEO, Microsoft — 2 期
@@ -114,7 +115,6 @@
 - [Philip Johnston / 菲利普·约翰斯顿](https://aipodcast.jasonlin.tech/pp/philipjohnston/): Co-founder & CEO, Starcloud — 1 期
 - [Zvi Mowshowitz / 兹维·莫肖维茨](https://aipodcast.jasonlin.tech/pp/zvi/): Writer, Don't Worry About the Vase — 1 期
 - [Josh Meier / 乔什·迈尔](https://aipodcast.jasonlin.tech/pp/joshmeier/): Co-founder, Chai Discovery — 1 期
-- [Nate Parrott / 内特·帕罗特](https://aipodcast.jasonlin.tech/pp/nateparrott/): Designer at Anthropic — 1 期
 - [Dmitri Dolgov / 德米特里·多尔戈夫](https://aipodcast.jasonlin.tech/pp/dmitridolgov/): Co-CEO, Waymo — 1 期
 - [Tom Verrilli / 汤姆·维里利](https://aipodcast.jasonlin.tech/pp/tomverrilli/): Chief Product Officer, Whatnot — 1 期
 - [Patrick Collison / 帕特里克·科里森](https://aipodcast.jasonlin.tech/pp/collison/): Co-founder & CEO, Stripe — 1 期
