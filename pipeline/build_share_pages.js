@@ -10,6 +10,20 @@ try{const extra=JSON.parse(fs.readFileSync(path.join(ROOT,'data','ep-extra.json'
   EPISODES.forEach(e=>{const x=extra[e.id];if(x){if(!e.insights&&x.insights)e.insights=x.insights;if(!e.brief&&x.brief)e.brief=x.brief;}});
 }catch(err){console.error('ep-extra 合并失败:',err.message);}
 const PEOPLE=eval('('+h.match(/const PEOPLE = (\{[\s\S]*?\n\});/)[1]+')');
+/* 站群互链 map(来自 app.js,由 build_crosslinks.py 保持无缺口)——静态人物页要把
+   同一人物在姊妹站的入口也给爬虫和无 JS 用户(SPA 端 1935 行早就有,静态页此前是 0)。 */
+const XMAP=n=>{try{return eval('('+h.match(new RegExp('const '+n+'=(\\{[\\s\\S]*?\\});'))[1]+')')}catch(e){return{}}};
+const POD2PAPER=XMAP('POD2PAPER'),GRAPH_ID=XMAP('GRAPH_ID'),HW_GRAPH=XMAP('HW_GRAPH'),INV_GRAPH=XMAP('INV_GRAPH');
+const DESIGN_IDS=(()=>{try{return new Set(eval(h.match(/const DESIGN_IDS=new Set\((\[[\s\S]*?\])\)/)[1]))}catch(e){return new Set()}})();
+const xlinksOf=pid=>{
+  const x=[];
+  if(POD2PAPER[pid])x.push(`<a href="https://aipaper.jasonlin.tech/pp/${POD2PAPER[pid]}/">读 TA 的论文与长文（AI Paper）</a>`);
+  if(GRAPH_ID[pid])x.push(`<a href="https://ai.jasonlin.tech/p/${GRAPH_ID[pid]}.html">AI 学者图谱</a>`);
+  if(HW_GRAPH[pid])x.push(`<a href="https://hardware.jasonlin.tech/p/${HW_GRAPH[pid]}.html">硬件图谱</a>`);
+  if(INV_GRAPH[pid])x.push(`<a href="https://investor.jasonlin.tech/p/${INV_GRAPH[pid]}.html">投资图谱</a>`);
+  if(DESIGN_IDS.has(pid))x.push(`<a href="https://design.jasonlin.tech/p/${pid}.html">设计图谱</a>`);
+  return x.length?`<p class="meta">同一人物 · 姊妹站：${x.join(' · ')}</p>`:'';
+};
 const esc=s=>(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 const jl=o=>`<script type="application/ld+json">${JSON.stringify(o).replace(/</g,'\\u003c')}</script>`;
 const chapters=id=>{try{const d=JSON.parse(fs.readFileSync(path.join(ROOT,'mcp-data','ep',id+'.json'),'utf8'));return (d.transcript||[]).map(t=>({en:t.sec||'',zh:t.secZh||''})).filter(c=>c.en||c.zh);}catch(e){return[];}};
@@ -84,6 +98,7 @@ Object.keys(byPid).forEach(pid=>{
 <h1>${esc(p.zh||'')} ${esc(p.en||'')}</h1><p class="en-t">${esc(p.tiZh||'')} · ${esc(p.tiEn||'')}</p>
 ${p.bioZh?`<p class="zh">${esc(p.bioZh)}</p><p class="en">${esc(p.bioEn||'')}</p>`:''}
 <a class="cta" href="${SITE}/#/person/${pid}">在 AI Podcast 查看 TA 的全部内容 →</a>
+${xlinksOf(pid)}
 <h2>收录的 ${eps.length} 期访谈</h2>
 <ul class="ep-list">${eps.map(e=>`<li><a href="${SITE}/e/${e.id}/">${esc(e.tZh||e.tEn)}</a> — ${esc((e.pod&&e.pod.zh)||'')} · ${esc(e.date||'')}</li>`).join('')}</ul>`;
   const ld=[{"@context":"https://schema.org","@type":"ProfilePage",mainEntity:{"@type":"Person",name:p.en,alternateName:p.zh,jobTitle:p.tiEn,description:p.bioEn,url}},
@@ -123,6 +138,7 @@ const idxPeople=Object.keys(byPid).filter(pid=>PEOPLE[pid])
   .sort((a,b)=>byPid[b].length-byPid[a].length);
 const latest=EPISODES.slice().sort((a,b)=>(b.date||'').localeCompare(a.date||'')).slice(0,80);
 const block=`<!--SITE_INDEX_START--><details class="site-index"><summary>站点地图 · Sitemap（${idxPeople.length} 位人物 · ${EPISODES.length} 期）</summary>
+<nav><b>姊妹站</b> <a href="https://aipaper.jasonlin.tech/">AI Paper（论文与长文双语）</a> · <a href="https://ai.jasonlin.tech/">AI 学者图谱</a> · <a href="https://hardware.jasonlin.tech/">硬件创业图谱</a> · <a href="https://investor.jasonlin.tech/">投资人图谱</a> · <a href="https://design.jasonlin.tech/">设计师图谱</a></nav>
 <nav><b>人物</b> ${idxPeople.map(pid=>`<a href="/pp/${pid}/">${esc(PEOPLE[pid].zh||PEOPLE[pid].en)}</a>`).join(' · ')}</nav>
 <nav><b>最新</b> ${latest.map(e=>`<a href="/e/${e.id}/">${esc(e.tZh||e.tEn)}</a>`).join(' · ')}</nav>
 </details><!--SITE_INDEX_END-->`;
