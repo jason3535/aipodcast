@@ -6,7 +6,21 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sun, 16 Aug 2026 09:45:00 -0000</lastBuildDate>
+  <lastBuildDate>Sun, 16 Aug 2026 09:56:24 -0000</lastBuildDate>
+  <item>
+    <title>从瓶颈到突破：扩展 Claude Code 的团队经验 — Claude 官方频道</title>
+    <link>https://aipodcast.jasonlin.tech/e/fiona-claude-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/fiona-claude-2026/</guid>
+    <pubDate>Sun, 16 Aug 2026 09:56:24 -0000</pubDate>
+    <description>Fiona Fung 分享在 AI 编程时代，随着工程瓶颈转移，团队如何调整协作规范的实战经验。</description>
+  </item>
+  <item>
+    <title>从 Snap 工程师到创始设计师：Nate Parrott 谈 Arc 浏览器的设计 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/nateparrott-diveclub-2024/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/nateparrott-diveclub-2024/</guid>
+    <pubDate>Sun, 16 Aug 2026 09:56:24 -0000</pubDate>
+    <description>Nate Parrott 分享了他如何从 Snap 的 iOS 工程师转变为 Arc 浏览器的创始设计师，强调原型制作和动手设计的重要性。</description>
+  </item>
   <item>
     <title>Claude Code：AI 代理与软件工程的未来 — 彭博播客</title>
     <link>https://aipodcast.jasonlin.tech/e/boris-bloomber-2026/</link>
@@ -202,20 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/garrytan-thea16zp-2026/</guid>
     <pubDate>Fri, 14 Aug 2026 02:25:12 -0000</pubDate>
     <description>加里反思了他早期的职业错误、真诚的重要性以及硅谷文化的现状。</description>
-  </item>
-  <item>
-    <title>通用机器人在现实世界的实现路径 — Y Combinator</title>
-    <link>https://aipodcast.jasonlin.tech/e/finn-ycombina-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/finn-ycombina-2026/</guid>
-    <pubDate>Fri, 14 Aug 2026 02:25:12 -0000</pubDate>
-    <description>探讨如何开发能在现实世界中自主可靠运行的通用机器人，并从 AI 应用历史中汲取经验。</description>
-  </item>
-  <item>
-    <title>拥有智能：为持久 AI 业务进行后训练 — Training Data</title>
-    <link>https://aipodcast.jasonlin.tech/e/linqiao-training-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/linqiao-training-2026/</guid>
-    <pubDate>Fri, 14 Aug 2026 02:25:12 -0000</pubDate>
-    <description>Firework CEO Lynn 解释了为何后训练是公司将独特判断和数据嵌入 AI 模型、超越现成 API 的关键。</description>
   </item>
 </channel>
 </rss>
