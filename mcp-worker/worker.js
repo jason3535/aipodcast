@@ -50,7 +50,7 @@ const TOOLS = [
       year: { type: 'string', description: '可选,年份如 2026' },
       limit: { type: 'number', description: '返回条数,默认 8' } }, additionalProperties: false } },
   { name: 'search_papers',
-    description: '检索姊妹站 AI Paper(aipaper.jasonlin.tech) 的论文/重要人物长文(514+ 篇,含双语标题/一句话摘要/核心贡献)。定位后用 get_paper 取全文。',
+    description: '检索姊妹站 AI Paper(aipaper.jasonlin.tech) 的论文/重要人物长文(570+ 篇,含双语标题/一句话摘要/核心贡献)。定位后用 get_paper 取全文。',
     inputSchema: { type: 'object', properties: {
       query: { type: 'string', description: '关键词(中英皆可),匹配标题/摘要/作者名' },
       person: { type: 'string', description: '可选,按作者姓名(英文)过滤,如 Kaiming He' },
@@ -200,11 +200,18 @@ async function handle(msg) {
   if (method === 'initialize') {
     const pv = (params && params.protocolVersion) || PROTO;
     return rpc(id, { protocolVersion: pv, capabilities: { tools: { listChanged: false } },
-      serverInfo: SERVER, instructions: '本服务覆盖两个站:AI Podcast(392+ 期播客双语全文)与 AI Paper(558+ 篇论文/长文双语全文,238 位学者)。播客用 list_people/get_person/search_episodes→get_episode;论文用 list_scholars/get_scholar 或 search_papers 定位,再 get_paper 取全文。' });
+      serverInfo: SERVER, instructions: '本服务覆盖两个站:AI Podcast(570+ 期播客双语全文,260+ 位人物)与 AI Paper(570+ 篇论文/长文双语全文,230+ 位学者)。播客用 list_people/get_person/search_episodes→get_episode;论文用 list_scholars/get_scholar 或 search_papers 定位,再 get_paper 取全文。' });
   }
   if (method === 'notifications/initialized' || method === 'notifications/cancelled') return null; // 通知无响应
   if (method === 'ping') return rpc(id, {});
   if (method === 'tools/list') return rpc(id, { tools: TOOLS });
+  /* 非标准发现方法:有客户端(注册表/爬虫)initialize 之后发的是 server/discover 而不是
+     tools/list,原来落到 -32601 就走了,拿不到工具列表——2026-08-16 埋点里两次连接都死在这。
+     按 tools/list 的形状回,附 serverInfo,对标准客户端无影响。 */
+  if (method === 'server/discover' || method === 'server/info') {
+    return rpc(id, { serverInfo: SERVER, protocolVersion: PROTO,
+      capabilities: { tools: { listChanged: false } }, tools: TOOLS });
+  }
   if (method === 'tools/call') {
     const nm = params && params.name;
     try {
