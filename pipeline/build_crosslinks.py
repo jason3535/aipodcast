@@ -18,16 +18,34 @@ map 各写各的,每次加人都可能漏(2026-08-09 我给图谱加 7 人,7 条
   --write-pod-only  # 配合 --apply:只写播客站 app.js 自己的 map,其他仓库只报告
                     # (无人值守 cron 用,避免跨仓库留未提交改动)
 """
-import json, re, sys, unicodedata
+import json, os, re, sys, unicodedata
 from pathlib import Path
 
-POD = Path("/Users/jason/CascadeProjects/aipodcast/app.js")
-PAPER = Path("/Users/jason/Downloads/ai-paper-prototype/app.js")
+# 仓库路径:两台 Mac 布局不同(个人 Mac ~/CascadeProjects 等,工作 Mac 直接在 ~ 下),
+# 按候选路径取第一个存在的。也可用环境变量强制指定,如 SITE_ROOT_AI=/path/to/repo。
+# 找不到的仓库不再让整个脚本崩掉:_people_block 会跳过并计入告警。
+def repo_file(key, rel, *roots):
+    env = os.environ.get("SITE_ROOT_" + key.upper())
+    if env:
+        return Path(env) / rel
+    for r in roots:
+        if (Path(r) / rel).exists():
+            return Path(r) / rel
+    return Path(roots[0]) / rel
+
+POD = repo_file("aipodcast", "app.js", "/Users/jason/CascadeProjects/aipodcast",
+                "/Users/jason.lin/aipodcast")
+PAPER = repo_file("aipaper", "app.js", "/Users/jason/Downloads/ai-paper-prototype",
+                  "/Users/jason.lin/aipaper")
 GRAPHS = {
-    "ai": Path("/Users/jason/ai-scholar-graph/index.html"),
-    "hw": Path("/Users/jason/hardware-startup-graph/index.html"),
-    "inv": Path("/Users/jason/investor-graph/index.html"),
-    "design": Path("/Users/jason/designer-graph/index.html"),
+    "ai": repo_file("ai", "index.html", "/Users/jason/ai-scholar-graph",
+                    "/Users/jason.lin/ai-scholar-graph"),
+    "hw": repo_file("hw", "index.html", "/Users/jason/hardware-startup-graph",
+                    "/Users/jason.lin/hardware-startup-graph"),
+    "inv": repo_file("inv", "index.html", "/Users/jason/investor-graph",
+                     "/Users/jason.lin/investor-graph"),
+    "design": repo_file("design", "index.html", "/Users/jason/designer-graph",
+                        "/Users/jason.lin/designer-graph"),
 }
 # 已知同名不同人/不配对的黑名单:(corpusA, idA, corpusB, idB)
 BLOCK = set()
@@ -71,6 +89,9 @@ def match(a, b):
 def _people_block(path):
     """只在 const PEOPLE = { ... }; 块内抽人——否则 FIELDS 表('deep-learning':{en:'Deep Learning'})
     也长得像人物条目,会配出 deep-learning↔deep-learning 这种鬼(首轮实测)。"""
+    if not path.exists():
+        print(f"  ⚠ 跳过(本机无此仓库): {path}", file=sys.stderr)
+        return {}
     s = path.read_text(encoding="utf-8")
     m = re.search(r"const PEOPLE\s*=\s*\{(.*?)\n\};", s, re.S)
     blk = m.group(1) if m else s
@@ -82,11 +103,15 @@ def pod_people(): return _people_block(POD)
 def paper_people(): return _people_block(PAPER)
 
 def graph_people(path):
+    if not path.exists():
+        print(f"  ⚠ 跳过(本机无此仓库): {path}", file=sys.stderr)
+        return {}
     s = path.read_text(encoding="utf-8")
     return {m.group(1): m.group(2)
             for m in re.finditer(r'\{\s*"?id"?:\s*"([\w-]+)"\s*,\s*"?name"?:\s*"((?:[^"\\]|\\.)*)"', s)}
 
 def read_map(path, name):
+    if not path.exists(): return None
     s = path.read_text(encoding="utf-8")
     m = re.search(name + r"\s*=\s*\{(.*?)\};", s, re.S)
     if not m: return None
