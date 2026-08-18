@@ -16,19 +16,37 @@ IndexNow 是唯一**不需要注册任何账号**就能主动通知搜索引擎�
   python3 pipeline/indexnow.py --site aipodcast --urls https://... https://...
   python3 pipeline/indexnow.py --site aipodcast   # 只推该站 sitemap 里最近改动的
 """
-import argparse, json, re, sys, urllib.request
+import argparse, json, os, re, sys, urllib.request
 from pathlib import Path
 
 KEY = "8f3c1d7a9b2e4056c1a8d3f7e920b64c"      # 与各站根目录的 <KEY>.txt 一致
 ENDPOINT = "https://api.indexnow.org/indexnow"
 
+# 站点根目录:两台 Mac 布局不同(个人 Mac ~/CascadeProjects 等,工作 Mac 直接在 ~ 下),
+# 按候选路径取第一个存在的;都不在就回退第一个候选(报错信息仍指向个人 Mac 的规范路径)。
+# 也可用环境变量强制指定,如 SITE_ROOT_AIPODCAST=/path/to/repo。
+def site_root(key, *candidates):
+    env = os.environ.get("SITE_ROOT_" + key.upper())
+    if env:
+        return Path(env)
+    for c in candidates:
+        if Path(c).exists():
+            return Path(c)
+    return Path(candidates[0])
+
 SITES = {
-    "aipodcast": (Path("/Users/jason/CascadeProjects/aipodcast"), "aipodcast.jasonlin.tech"),
-    "aipaper":   (Path("/Users/jason/Downloads/ai-paper-prototype"), "aipaper.jasonlin.tech"),
-    "ai":        (Path("/Users/jason/ai-scholar-graph"), "ai.jasonlin.tech"),
-    "hw":        (Path("/Users/jason/hardware-startup-graph"), "hardware.jasonlin.tech"),
-    "inv":       (Path("/Users/jason/investor-graph"), "investor.jasonlin.tech"),
-    "design":    (Path("/Users/jason/designer-graph"), "design.jasonlin.tech"),
+    "aipodcast": (site_root("aipodcast", "/Users/jason/CascadeProjects/aipodcast",
+                            "/Users/jason.lin/aipodcast"), "aipodcast.jasonlin.tech"),
+    "aipaper":   (site_root("aipaper", "/Users/jason/Downloads/ai-paper-prototype",
+                            "/Users/jason.lin/aipaper"), "aipaper.jasonlin.tech"),
+    "ai":        (site_root("ai", "/Users/jason/ai-scholar-graph",
+                            "/Users/jason.lin/ai-scholar-graph"), "ai.jasonlin.tech"),
+    "hw":        (site_root("hw", "/Users/jason/hardware-startup-graph",
+                            "/Users/jason.lin/hardware-startup-graph"), "hardware.jasonlin.tech"),
+    "inv":       (site_root("inv", "/Users/jason/investor-graph",
+                            "/Users/jason.lin/investor-graph"), "investor.jasonlin.tech"),
+    "design":    (site_root("design", "/Users/jason/designer-graph",
+                            "/Users/jason.lin/designer-graph"), "design.jasonlin.tech"),
 }
 BATCH = 9000          # 协议上限 10000,留余量
 
