@@ -39,6 +39,11 @@ RULES = [
     # 该期正确写法有 23 处、误写 4 处,英文与中文正文里都有)。只匹配这几个确定的误写,
     # 不含正确的 "Pei" —— 否则 --check 门禁会永远报"待修 N 处"。
     (re.compile(BL+r"Carl\s+P(?:ay|ie|aye|eh)"+BR), "Carl Pei"),
+    # Meizu(魅族)→ 自动字幕听成 Mazu/Matzu/Mazoo(2026-08-18 用户报,carlpei-accesspo-2025
+    # 里 6 处,英文正文、中文译文、章节标题都有)。Carl 早年那段「在中国电脑市场买到一台
+    # 不输 iPod 的 MP3」讲的就是魅族。
+    # 注意:Mazu 也是妈祖/马祖的拼音,本库目前无此语境;若将来收录相关内容需给这条加限定。
+    (re.compile(BL+r"Ma(?:tzu|zoo|zu)"+BR), "Meizu"),
 ]
 # 这些上下文里的 "class code" 是 best-in-class code,不是误听
 GUARD = re.compile(r"(best|world)[- ]in[- ]?class\s*$|(best|world)-class\s*$", re.I)
