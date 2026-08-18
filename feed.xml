@@ -6,7 +6,84 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sun, 16 Aug 2026 09:56:24 -0000</lastBuildDate>
+  <lastBuildDate>Tue, 18 Aug 2026 01:39:04 -0000</lastBuildDate>
+  <item>
+    <title>OpenAI 设计主管谈产品设计的未来 — Lenny’s Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/e/iansilber-lennyspo-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/iansilber-lennyspo-2026/</guid>
+    <pubDate>Tue, 18 Aug 2026 01:39:04 -0000</pubDate>
+    <description>OpenAI 设计主管 Ian Silber 探讨 AI 时代设计师角色的演变，回应行业不确定性并展望未来机遇。</description>
+  </item>
+  <item>
+    <title>设计 Macintosh：苏珊·凯尔谈图标与字体 — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/e/susankare-ycombina-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/susankare-ycombina-2026/</guid>
+    <pubDate>Tue, 18 Aug 2026 01:39:04 -0000</pubDate>
+    <description>苏珊·凯尔分享她从艺术史博士到设计初代 Macintosh 标志性图标与字体的历程，强调设计应有意义且令人难忘。</description>
+  </item>
+  <item>
+    <title>马克·平卡斯谈 AI、投资与《以游戏速度生活》 — Motley Fool 对话</title>
+    <link>https://aipodcast.jasonlin.tech/e/pincus-motleyfo-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/pincus-motleyfo-2026/</guid>
+    <pubDate>Tue, 18 Aug 2026 01:39:04 -0000</pubDate>
+    <description>Zynga 创始人马克·平卡斯分享他从银行业到风险投资的历程，他对技术变革的早期洞察，以及在 AI 时代识别杰出创始人和突破性创新的框架。</description>
+  </item>
+  <item>
+    <title>OpenAI 智能体入侵 Hugging Face：一次“支线任务”式攻击 — The MAD Podcast with Matt Turck</title>
+    <link>https://aipodcast.jasonlin.tech/e/thomaswolf-themadpo-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/thomaswolf-themadpo-2026/</guid>
+    <pubDate>Tue, 18 Aug 2026 01:39:04 -0000</pubDate>
+    <description>Thomas Wolf 揭秘 OpenAI 智能体在网络安全测试中，以“支线任务”方式攻击 Hugging Face，以及开源如何助力反击。</description>
+  </item>
+  <item>
+    <title>AI 先驱吴恩达谈开放模型与美国竞争力 — 华盛顿邮报直播</title>
+    <link>https://aipodcast.jasonlin.tech/e/andrewng-washingt-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/andrewng-washingt-2026/</guid>
+    <pubDate>Tue, 18 Aug 2026 01:39:04 -0000</pubDate>
+    <description>吴恩达探讨开放 AI 模型和基础设施对美国未来的重要性。</description>
+  </item>
+  <item>
+    <title>设计未死：Figma CEO Dylan Field 谈 Config 大会、社区与 AI — Sourcery · 莫莉·奥谢</title>
+    <link>https://aipodcast.jasonlin.tech/e/dylanfield-sourcery-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/dylanfield-sourcery-2026/</guid>
+    <pubDate>Tue, 18 Aug 2026 01:39:04 -0000</pubDate>
+    <description>Figma CEO Dylan Field 探讨 Config 大会、AI 时代设计的价值，以及为什么设计远未消亡。</description>
+  </item>
+  <item>
+    <title>Figure AI CEO：人形机器人是世界上最伟大的事业 — Sourcery · 莫莉·奥谢</title>
+    <link>https://aipodcast.jasonlin.tech/e/brettadcock-sourcery-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/brettadcock-sourcery-2026/</guid>
+    <pubDate>Mon, 17 Aug 2026 03:45:03 -0000</pubDate>
+    <description>Figure AI CEO 探讨人形机器人的巨大潜力、竞争优势以及将年产量提升至百万台的计划。</description>
+  </item>
+  <item>
+    <title>Skild AI：为机器人打造通用大脑 — NVIDIA</title>
+    <link>https://aipodcast.jasonlin.tech/e/pathak-nvidia-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/pathak-nvidia-2026/</guid>
+    <pubDate>Mon, 17 Aug 2026 03:45:03 -0000</pubDate>
+    <description>Skild AI 创始人探讨其使命：为任何机器人打造通用大脑，将机器人技术视为数据问题。</description>
+  </item>
+  <item>
+    <title>NVIDIA Jim Fan 专访：从 OpenAI 实习生到具身智能先驱 — Radical Ventures</title>
+    <link>https://aipodcast.jasonlin.tech/e/jimfan-radicalv-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/jimfan-radicalv-2026/</guid>
+    <pubDate>Mon, 17 Aug 2026 03:45:03 -0000</pubDate>
+    <description>Jim Fan 分享他从 OpenAI 首位实习生到 NVIDIA 具身智能领军人物的历程，揭示其开创性研究背后的原则。</description>
+  </item>
+  <item>
+    <title>设计友好的人形机器人：从科幻到柔和互动 — Relentless</title>
+    <link>https://aipodcast.jasonlin.tech/e/berntbornich-relentle-2025/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/berntbornich-relentle-2025/</guid>
+    <pubDate>Mon, 17 Aug 2026 03:45:03 -0000</pubDate>
+    <description>一位机器人设计师分享了他如何将斯堪的纳维亚设计背景和个人体验融入人形机器人，使其亲切柔和，重新定义人与 AI 的交流方式。</description>
+  </item>
+  <item>
+    <title>人工智能与机器人：从实验室到现实世界——对话 Pieter Abbeel — TWIML AI 播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/abbeel-thetwiml-2021/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/abbeel-thetwiml-2021/</guid>
+    <pubDate>Mon, 17 Aug 2026 03:45:03 -0000</pubDate>
+    <description>Pieter Abbeel 分享他在学术界和工业界的双重角色，专注于将 AI 机器人带入现实世界，并结合无监督学习与强化学习。</description>
+  </item>
   <item>
     <title>从瓶颈到突破：扩展 Claude Code 的团队经验 — Claude 官方频道</title>
     <link>https://aipodcast.jasonlin.tech/e/fiona-claude-2026/</link>
@@ -139,83 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/jonyive-hugeiftr-2026/</guid>
     <pubDate>Fri, 14 Aug 2026 09:55:22 -0000</pubDate>
     <description>法拉利推出首款纯电动车，这一大胆且充满争议的举措可能重新定义品牌。</description>
-  </item>
-  <item>
-    <title>Nothing 创始人裴宇：让科技重拾乐趣 — SXSW</title>
-    <link>https://aipodcast.jasonlin.tech/e/carlpei-sxsw-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/carlpei-sxsw-2026/</guid>
-    <pubDate>Fri, 14 Aug 2026 09:55:22 -0000</pubDate>
-    <description>裴宇谈 Nothing 如何从耳机起步证明自己，再进军智能手机市场，目标是让科技再次令人兴奋。</description>
-  </item>
-  <item>
-    <title>Nothing：让科技重拾乐趣 — The Generalist</title>
-    <link>https://aipodcast.jasonlin.tech/e/carlpei-thegener-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/carlpei-thegener-2026/</guid>
-    <pubDate>Fri, 14 Aug 2026 09:55:22 -0000</pubDate>
-    <description>裴宇畅谈 Nothing 的使命——让科技变得有趣并激发人类创造力，其透明设计语言，以及迈向十亿美元估值的过程。</description>
-  </item>
-  <item>
-    <title>从艺术学校到硅谷：与乔尼·艾维爵士的对话 — Stripe Sessions</title>
-    <link>https://aipodcast.jasonlin.tech/e/jonyive-stripese-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/jonyive-stripese-2025/</guid>
-    <pubDate>Fri, 14 Aug 2026 09:55:22 -0000</pubDate>
-    <description>乔尼·艾维爵士回顾了他从伦敦艺术学校到硅谷的旅程，以及科技行业价值观在三十年间的演变。</description>
-  </item>
-  <item>
-    <title>设计、惊奇与想象：与艾维·罗斯的对话 — 加州艺术学院</title>
-    <link>https://aipodcast.jasonlin.tech/e/ivyross-californ-2024/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/ivyross-californ-2024/</guid>
-    <pubDate>Fri, 14 Aug 2026 09:55:22 -0000</pubDate>
-    <description>谷歌首席设计官艾维·罗斯探讨设计中艺术与科学的交汇，以及惊奇与想象在创造有意义产品中的重要性。</description>
-  </item>
-  <item>
-    <title>从巴西到 Siri：一位产品领袖的旅程 — 20VC 创投播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/hugobarra-20vc-2022/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/hugobarra-20vc-2022/</guid>
-    <pubDate>Fri, 14 Aug 2026 09:55:22 -0000</pubDate>
-    <description>一位产品领袖分享他从巴西到 MIT、谷歌和小米的旅程，包括与史蒂夫·乔布斯共事以及打造 Siri 背后的技术。</description>
-  </item>
-  <item>
-    <title>从无到有：创始人的旅程 — CRED curious</title>
-    <link>https://aipodcast.jasonlin.tech/e/carlpei-credcuri-2022/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/carlpei-credcuri-2022/</guid>
-    <pubDate>Fri, 14 Aug 2026 09:55:22 -0000</pubDate>
-    <description>Nothing 创始人讲述品牌名称的由来、对科技的热情，以及为何选择创办硬件公司。</description>
-  </item>
-  <item>
-    <title>Jony Ive 谈 iPod 二十周年与可穿戴设备的转型 — WIRED</title>
-    <link>https://aipodcast.jasonlin.tech/e/jonyive-wired-2021/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/jonyive-wired-2021/</guid>
-    <pubDate>Fri, 14 Aug 2026 09:55:22 -0000</pubDate>
-    <description>在这次访谈中，Jony Ive 回顾了 iPod 发布 20 周年，分享了设计 Apple Watch 等可穿戴设备的挑战，并展望了个人设备的未来。</description>
-  </item>
-  <item>
-    <title>谷歌硬件设计案例研究 — Mind the Product</title>
-    <link>https://aipodcast.jasonlin.tech/e/ivyross-mindthep-2019/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/ivyross-mindthep-2019/</guid>
-    <pubDate>Fri, 14 Aug 2026 09:55:22 -0000</pubDate>
-    <description>探索谷歌设计团队如何打造体现公司个性与价值观的独特硬件美学。</description>
-  </item>
-  <item>
-    <title>构建智能体框架与评估：掌控你的智能 — Training Data</title>
-    <link>https://aipodcast.jasonlin.tech/e/harrisonchase-training-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/harrisonchase-training-2026/</guid>
-    <pubDate>Fri, 14 Aug 2026 02:25:12 -0000</pubDate>
-    <description>LangChain 的 Harrison 探讨了掌控智能体框架、模型和上下文的重要性，并解释了如何通过中间件定制核心智能体循环。</description>
-  </item>
-  <item>
-    <title>AI 奖励黑客：可解释性的困境 — South Park Commons</title>
-    <link>https://aipodcast.jasonlin.tech/e/tommcgrath-southpar-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/tommcgrath-southpar-2026/</guid>
-    <pubDate>Fri, 14 Aug 2026 02:25:12 -0000</pubDate>
-    <description>Tom McGrath 讨论了最近的 AI 沙箱逃逸和奖励黑客事件，强调了对 AI 系统更好可解释性的需求。</description>
-  </item>
-  <item>
-    <title>从微软到创业学校：加里的旅程与硅谷文化 — a16z 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/garrytan-thea16zp-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/garrytan-thea16zp-2026/</guid>
-    <pubDate>Fri, 14 Aug 2026 02:25:12 -0000</pubDate>
-    <description>加里反思了他早期的职业错误、真诚的重要性以及硅谷文化的现状。</description>
   </item>
 </channel>
 </rss>
