@@ -1,1 +1,18 @@
-[]
+[
+ {
+  "pid": "patrickmorgan",
+  "en": "Patrick Morgan",
+  "zh": "帕特里克·摩根",
+  "tiEn": "Design Engineer, Sublime Security",
+  "from": "Dive Club",
+  "added": "2026-08-19"
+ },
+ {
+  "pid": "arimorcos",
+  "en": "Ari Morcos",
+  "zh": "阿里·莫尔科斯",
+  "tiEn": "CEO of Datology AI, former Meta AI researcher",
+  "from": "Unsupervised Learning",
+  "added": "2026-08-19"
+ }
+]
