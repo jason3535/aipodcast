@@ -48,7 +48,10 @@ def token():
 def post(path, body, tok=""):
     url = API + path + (f"?token={tok}" if tok else "")
     req = urllib.request.Request(url, data=json.dumps(body).encode(),
-                                 headers={"Content-Type": "application/json"})
+                                 headers={"Content-Type": "application/json",
+                                          # Python-urllib 默认 UA 会被 Cloudflare Bot 防护间歇性 403
+                                          # (2026-08 三次 403 全在此;worker 业务码只会 401/400)
+                                          "User-Agent": "aipodcast-pipeline/1.0 (+https://aipodcast.jasonlin.tech)"})
     # push worker 是 Cloudflare 上的公网服务,别走 Clash(与 DeepSeek 同理)
     op = urllib.request.build_opener(urllib.request.ProxyHandler({}))
     with op.open(req, timeout=30) as r:

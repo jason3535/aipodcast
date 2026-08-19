@@ -554,6 +554,17 @@ def main():
     rc, outp = run_cmd(["git", "commit", "-q", "-m", msg,
         "-m", "由 pipeline/auto_refresh.py 自动收录\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"])
     rc2, outp2 = run_cmd(["git", "push", "-q", "origin", "master"])
+    if rc2 != 0:
+        # push 失败的两大常因:远端有新提交(分叉) / 网络抖动。先 rebase 重试一次;
+        # rebase 冲突则 abort 留待人工(2026-08-18/19 连续两天分叉的教训——
+        # 之前失败就放着,本地越积越多,人工 merge 成本远高于这里自动 rebase)
+        log("  push 失败,尝试 pull --rebase 后重试…")
+        rc_rb, out_rb = run_cmd(["git", "pull", "--rebase", "origin", "master"])
+        if rc_rb == 0:
+            rc2, outp2 = run_cmd(["git", "push", "-q", "origin", "master"])
+        else:
+            run_cmd(["git", "rebase", "--abort"])
+            log("  rebase 冲突,已 abort,保留本地提交待人工合并:" + out_rb[-150:])
     rc_ix, _ = run_cmd(["python3", "pipeline/indexnow.py"])   # 新收录 URL 即时推给 Bing 系(失败不影响主流程)
     log(f"  {'✓' if rc_ix == 0 else '✗'} indexnow")
     log(f"提交推送:{'✓ 已上线 +' + str(added) + ' 期' if rc2 == 0 else '✗ push 失败:' + outp2[-120:]}")
