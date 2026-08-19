@@ -71,16 +71,26 @@ def submit(host, urls):
         }).encode()
         req = urllib.request.Request(ENDPOINT, data=body,
                                      headers={"Content-Type": "application/json; charset=utf-8"})
-        # 走直连,别经 Clash(与 DeepSeek 同理);IndexNow 端点本身可直连
-        op = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+        # 先直连(短超时);超时/连不通再走系统代理重试——cron 环境下直连
+        # api.indexnow.org 连续多日超时(✗ indexnow),交互式手跑却 200,
+        # 差别就在网络时段/路由,双通道兜底(2026-08-19)
+        def _try(opener, t):
+            with opener.open(req, timeout=t) as r:
+                return f"{len(chunk)} 条 → HTTP {r.status}"
+        direct = urllib.request.build_opener(urllib.request.ProxyHandler({}))
         try:
-            with op.open(req, timeout=45) as r:
-                out.append(f"{len(chunk)} 条 → HTTP {r.status}")
+            out.append(_try(direct, 15))
         except urllib.error.HTTPError as e:
             # 202 = 已接受待校验 key;422 = URL 与 host 不符;403 = key 校验失败
             out.append(f"{len(chunk)} 条 → HTTP {e.code} {e.read()[:120].decode('utf-8','ignore')}")
-        except Exception as e:
-            out.append(f"{len(chunk)} 条 → 失败 {str(e)[:80]}")
+        except Exception:
+            try:
+                proxied = urllib.request.build_opener(
+                    urllib.request.ProxyHandler({"https": "http://127.0.0.1:7890",
+                                                 "http": "http://127.0.0.1:7890"}))
+                out.append(_try(proxied, 30) + "(经代理)")
+            except Exception as e2:
+                out.append(f"{len(chunk)} 条 → 失败 {str(e2)[:80]}")
     return " · ".join(out)
 
 

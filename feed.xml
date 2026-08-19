@@ -6,7 +6,35 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Tue, 18 Aug 2026 01:39:04 -0000</lastBuildDate>
+  <lastBuildDate>Wed, 19 Aug 2026 01:39:14 -0000</lastBuildDate>
+  <item>
+    <title>从 Figma 到定制原型：Patrick Morgan 的内部工具之旅 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/e/patrickmorgan-diveclub-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/patrickmorgan-diveclub-2026/</guid>
+    <pubDate>Wed, 19 Aug 2026 01:39:14 -0000</pubDate>
+    <description>Patrick Morgan 分享了如何为 Sublime Security 构建专用原型环境，摆脱 Figma，实现团队协作与灵活性。</description>
+  </item>
+  <item>
+    <title>里奇·萨顿：这个领域才是奇怪的，不是我 — Training Data</title>
+    <link>https://aipodcast.jasonlin.tech/e/sutton-training-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/sutton-training-2026/</guid>
+    <pubDate>Wed, 19 Aug 2026 01:39:14 -0000</pubDate>
+    <description>里奇·萨顿讨论了他关于持续学习的非传统观点，以及他创立 Oak Lab 的历程。</description>
+  </item>
+  <item>
+    <title>AI 氛围检查：编程代理、开放权重 AI 与算力紧张 — Unsupervised Learning</title>
+    <link>https://aipodcast.jasonlin.tech/e/arimorcos-unsuperv-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/arimorcos-unsuperv-2026/</guid>
+    <pubDate>Wed, 19 Aug 2026 01:39:14 -0000</pubDate>
+    <description>Jacob、Ari 和 Rob 讨论 AI 领域的最新趋势，从编程代理到开放权重模型的未来。</description>
+  </item>
+  <item>
+    <title>仓库中的自主机器人：现场演示 — 地平线之外</title>
+    <link>https://aipodcast.jasonlin.tech/e/brettadcock-overtheh-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/brettadcock-overtheh-2026/</guid>
+    <pubDate>Wed, 19 Aug 2026 01:39:14 -0000</pubDate>
+    <description>Brett 展示了使用 Helix 2 的自主机器人车队进行包裹分拣，具备自动充电和车队协调功能。</description>
+  </item>
   <item>
     <title>OpenAI 设计主管谈产品设计的未来 — Lenny’s Podcast</title>
     <link>https://aipodcast.jasonlin.tech/e/iansilber-lennyspo-2026/</link>
@@ -188,34 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/derya-foundmyf-2026/</guid>
     <pubDate>Sun, 16 Aug 2026 01:37:07 -0000</pubDate>
     <description>杜里亚·埃诺特马斯博士解释 AI 的指数级增长如何在 10-20 年内实现疾病治愈、衰老逆转和长寿逃逸速度。</description>
-  </item>
-  <item>
-    <title>AI 教母谈视觉、学习与以人为本的人工智能 — 休伯曼实验室</title>
-    <link>https://aipodcast.jasonlin.tech/e/feifei-huberman-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/feifei-huberman-2026/</guid>
-    <pubDate>Sat, 15 Aug 2026 11:37:43 -0000</pubDate>
-    <description>李飞飞博士探讨视觉的进化、人脑的学习方式，以及保持人工智能以人为本的重要性。</description>
-  </item>
-  <item>
-    <title>AI 炒作与现实：关于幻觉与恐惧叙事的对话 — 伯格鲁恩研究所</title>
-    <link>https://aipodcast.jasonlin.tech/e/andrewng-berggrue-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/andrewng-berggrue-2026/</guid>
-    <pubDate>Sat, 15 Aug 2026 01:35:52 -0000</pubDate>
-    <description>一场关于 AI 幻觉、恐惧炒作以及实验室测试与现实差距的讨论。</description>
-  </item>
-  <item>
-    <title>设计人生：Ivy Ross 谈好奇心、工艺与谷歌领导力 — Future London Academy</title>
-    <link>https://aipodcast.jasonlin.tech/e/ivyross-futurelo-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/ivyross-futurelo-2026/</guid>
-    <pubDate>Fri, 14 Aug 2026 09:55:22 -0000</pubDate>
-    <description>谷歌首席设计官 Ivy Ross 分享好奇心与手工工艺背景如何塑造了她非传统的职业道路和领导哲学。</description>
-  </item>
-  <item>
-    <title>法拉利首款电动车：一场充满争议的冒险 — Huge If True</title>
-    <link>https://aipodcast.jasonlin.tech/e/jonyive-hugeiftr-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/jonyive-hugeiftr-2026/</guid>
-    <pubDate>Fri, 14 Aug 2026 09:55:22 -0000</pubDate>
-    <description>法拉利推出首款纯电动车，这一大胆且充满争议的举措可能重新定义品牌。</description>
   </item>
 </channel>
 </rss>
