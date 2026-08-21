@@ -6,7 +6,21 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Wed, 19 Aug 2026 01:39:14 -0000</lastBuildDate>
+  <lastBuildDate>Fri, 21 Aug 2026 01:38:00 -0000</lastBuildDate>
+  <item>
+    <title>视网膜植入物恢复视力：与 Max Hodak 的对话 — No Priors 播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/maxhodak-nopriors-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/maxhodak-nopriors-2026/</guid>
+    <pubDate>Fri, 21 Aug 2026 01:38:00 -0000</pubDate>
+    <description>Max Hodak 讨论 Science 公司的视网膜假体，该产品最近获得欧洲批准，以及将大脑视为计算机的更广泛使命。</description>
+  </item>
+  <item>
+    <title>平衡 AI 领导力：布雷特·泰勒谈 OpenAI、Sierra 与生活 — ClickHouse</title>
+    <link>https://aipodcast.jasonlin.tech/e/brettaylor-clickhou-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/brettaylor-clickhou-2026/</guid>
+    <pubDate>Fri, 21 Aug 2026 01:38:00 -0000</pubDate>
+    <description>布雷特·泰勒分享了他作为 OpenAI 董事长和 Sierra CEO 的双重角色，探讨了时间管理、领导力以及 AI 的未来。</description>
+  </item>
   <item>
     <title>从 Figma 到定制原型：Patrick Morgan 的内部工具之旅 — Dive Club</title>
     <link>https://aipodcast.jasonlin.tech/e/patrickmorgan-diveclub-2026/</link>
@@ -202,20 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/alexkrentsel-latentsp-2026/</guid>
     <pubDate>Sun, 16 Aug 2026 01:37:07 -0000</pubDate>
     <description>Alex Cransel 讨论 EXO，一个能在运行时安全自我编辑的完全递归智能体，以及从模型中心到框架中心的 AI 转变。</description>
-  </item>
-  <item>
-    <title>英特尔复兴：陈立武谈抓住下一个大浪潮 — TechSurge：深科技风投播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/lipbutan-techsurg-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/lipbutan-techsurg-2026/</guid>
-    <pubDate>Sun, 16 Aug 2026 01:37:07 -0000</pubDate>
-    <description>陈立武分享他从核工程到领导英特尔的历程，以及他为何决心不错过下一个科技大浪潮。</description>
-  </item>
-  <item>
-    <title>AI 的指数级飞跃：为何未来十年可能重新定义人类寿命 — FoundMyFitness</title>
-    <link>https://aipodcast.jasonlin.tech/e/derya-foundmyf-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/derya-foundmyf-2026/</guid>
-    <pubDate>Sun, 16 Aug 2026 01:37:07 -0000</pubDate>
-    <description>杜里亚·埃诺特马斯博士解释 AI 的指数级增长如何在 10-20 年内实现疾病治愈、衰老逆转和长寿逃逸速度。</description>
   </item>
 </channel>
 </rss>
