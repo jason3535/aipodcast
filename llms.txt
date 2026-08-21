@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 266 位人物 / 590 期访谈
+规模: 270 位人物 / 594 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -106,11 +106,13 @@
 - [Michael Truell / 迈克尔·特鲁埃尔](https://aipodcast.jasonlin.tech/pp/truell/): Co-founder & CEO, Cursor — 2 期
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 2 期
 - [Patrick Morgan / 帕特里克·摩根](https://aipodcast.jasonlin.tech/pp/patrickmorgan/): Design Engineer, Sublime Security — 1 期
+- [Michael Kratsios / 迈克尔·克拉齐奥斯](https://aipodcast.jasonlin.tech/pp/michaelkratsios/): Director, White House Office of Science and Technology Policy — 1 期
 - [Alex Krentsel / 亚历克斯·克伦塞尔](https://aipodcast.jasonlin.tech/pp/alexkrentsel/): Founder of Exo — 1 期
 - [Susan Kare / 苏珊·凯尔](https://aipodcast.jasonlin.tech/pp/susankare/): Icon Designer, Original Mac Team — 1 期
 - [Harrison Chase / 哈里森·蔡斯](https://aipodcast.jasonlin.tech/pp/harrisonchase/): Co-founder & CEO, LangChain — 1 期
 - [Tom McGrath / 汤姆·麦格拉思](https://aipodcast.jasonlin.tech/pp/tommcgrath/): Co-founder & Chief Scientist, Goodfire — 1 期
 - [Brendan Foody / 布伦丹·富迪](https://aipodcast.jasonlin.tech/pp/brendanfoody/): CEO, Mercor — 1 期
+- [Fatih Porikli / 法提赫·波里克利](https://aipodcast.jasonlin.tech/pp/fatihporikli/): VP of Technology, Qualcomm — 1 期
 - [Kyle Zantos / 凯尔·赞托斯](https://aipodcast.jasonlin.tech/pp/kylezantos/): Designer & Builder; UX Tools Labs — 1 期
 - [Matthew McPartlon / 马修·麦克帕特隆](https://aipodcast.jasonlin.tech/pp/mattmcpartland/): Co-founder, Chai Discovery — 1 期
 - [Ryan Greenblatt / 瑞安·格林布拉特](https://aipodcast.jasonlin.tech/pp/ryangreenblatt/): Chief Scientist, Redwood Research — 1 期
@@ -127,10 +129,12 @@
 - [Tom Verrilli / 汤姆·维里利](https://aipodcast.jasonlin.tech/pp/tomverrilli/): Chief Product Officer, Whatnot — 1 期
 - [Patrick Collison / 帕特里克·科里森](https://aipodcast.jasonlin.tech/pp/collison/): Co-founder & CEO, Stripe — 1 期
 - [Igor Babuschkin / 伊戈尔·巴布什金](https://aipodcast.jasonlin.tech/pp/igorbabuschkin/): Co-founder, River AI; former Co-founder, xAI — 1 期
+- [Melisa Tokmak / 梅莉莎·托克马克](https://aipodcast.jasonlin.tech/pp/melisatokmak/): Founder & CEO, Netic — 1 期
 - [Adam Gleave / 亚当·格利夫](https://aipodcast.jasonlin.tech/pp/adamgleave/): Founder & CEO, FAR.AI — 1 期
 - [Tim Cook / 蒂姆·库克](https://aipodcast.jasonlin.tech/pp/timcook/): CEO, Apple — 1 期
 - [Charlie Deets / 查理·迪茨](https://aipodcast.jasonlin.tech/pp/charliedeets/): Designer — Safari, Arc, Dia browsers — 1 期
 - [Akshay Nathan / 阿克谢·内森](https://aipodcast.jasonlin.tech/pp/akshaynathan/): OpenAI Product Lead, ChatGPT — 1 期
+- [Damian Borth / 达米安·博思](https://aipodcast.jasonlin.tech/pp/damianborth/): Professor of AI & Machine Learning, University of St. Gallen — 1 期
 - [Andy Fang / 安迪·方](https://aipodcast.jasonlin.tech/pp/andyfang/): Co-founder and CTO of DoorDash — 1 期
 - [Kareem Amin / 卡里姆·阿明](https://aipodcast.jasonlin.tech/pp/kareemamin/): Co-founder and CEO of Clay — 1 期
 - [Eiso Kant / 艾索·康德](https://aipodcast.jasonlin.tech/pp/eisokant/): Co-founder and CEO of Poolside AI — 1 期
@@ -278,6 +282,7 @@
 - [Restoring Vision with Retinal Implants: A Conversation with Max Hodak](https://aipodcast.jasonlin.tech/e/maxhodak-nopriors-2026/) — Max Hodak, No Priors, 2026-08-20
 - [From Figma to Custom Prototyping: Patrick Morgan's Internal Tool Journey](https://aipodcast.jasonlin.tech/e/patrickmorgan-diveclub-2026/) — Patrick Morgan, Dive Club, 2026-08-18
 - [Rich Sutton: The Field Is Weird, Not Me](https://aipodcast.jasonlin.tech/e/sutton-training-2026/) — Richard Sutton, Training Data, 2026-08-18
+- [AI Policy at the White House: A Conversation with Michael Kratsios](https://aipodcast.jasonlin.tech/e/michaelkratsios-ycombina-2026/) — Michael Kratsios, Y Combinator, 2026-08-18
 - [The Future of Product Design with OpenAI's Head of Design](https://aipodcast.jasonlin.tech/e/iansilber-lennyspo-2026/) — Ian Silber, Lenny’s Podcast, 2026-08-16
 - [EXO: Fully Recursive Self-Improving Agents](https://aipodcast.jasonlin.tech/e/alexkrentsel-latentsp-2026/) — Alex Krentsel, Latent Space, 2026-08-15
 - [From Bits to Atoms: The Next Industrial Revolution](https://aipodcast.jasonlin.tech/e/traviskalanick-thea16zp-2026b/) — Travis Kalanick, The a16z Podcast, 2026-08-14
@@ -288,6 +293,7 @@
 - [The Path to General-Purpose Robots in the Real World](https://aipodcast.jasonlin.tech/e/finn-ycombina-2026/) — Chelsea Finn, Y Combinator, 2026-08-12
 - [Owning Intelligence: Post-Training for Durable AI Businesses](https://aipodcast.jasonlin.tech/e/linqiao-training-2026/) — Lin Qiao, Training Data, 2026-08-12
 - [RL Environments: The New Frontier in Agentic Data](https://aipodcast.jasonlin.tech/e/brendanfoody-training-2026/) — Brendan Foody, Training Data, 2026-08-12
+- [From Plausible to Precise: The Next Frontier in Image Generation](https://aipodcast.jasonlin.tech/e/fatihporikli-thetwiml-2026/) — Fatih Porikli, The TWIML AI Podcast, 2026-08-12
 - [AI-Powered Design Workflows: HTML Artifacts and Autonomous Agents](https://aipodcast.jasonlin.tech/e/kylezantos-diveclub-2026/) — Kyle Zantos, Dive Club, 2026-08-11
 - [Chai Discovery: The AI-Native Software Factory for Drug Discovery](https://aipodcast.jasonlin.tech/e/mattmcpartland-latentsp-2026/) — Matthew McPartlon, Latent Space, 2026-08-11
 - [Building a Research Lab on a Budget](https://aipodcast.jasonlin.tech/e/gabepereyra-training-2026/) — Gabe Pereyra, Training Data, 2026-08-11
@@ -313,8 +319,6 @@
 - [AI Rundown with Zvi Mowshowitz: From Editing to Existential Risks](https://aipodcast.jasonlin.tech/e/zvi-thecogni-2026/) — Zvi Mowshowitz, The Cognitive Revolution, 2026-08-05
 - [SpaceX Q2 2026 Earnings Call: Starship, Starlink, and AI Ambitions](https://aipodcast.jasonlin.tech/e/elon-spacexq2-2026/) — Elon Musk, SpaceX Q2 2026 Earnings Call, 2026-08-04
 - [From Serendipity to Design: Engineering Biology with AI](https://aipodcast.jasonlin.tech/e/joshmeier-training-2026/) — Josh Meier, Training Data, 2026-08-04
-- [Behind the Scenes of Claude Design with Nate Parrott](https://aipodcast.jasonlin.tech/e/nateparrott-diveclub-2026/) — Nate Parrott, Dive Club, 2026-08-04
-- [Building Physical AI: Lessons from Waymo's Autonomous Driving](https://aipodcast.jasonlin.tech/e/dmitridolgov-ycombina-2026/) — Dmitri Dolgov, Y Combinator, 2026-08-03
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
