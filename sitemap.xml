@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-08-19</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-08-21</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/maxhodak/</loc><lastmod>2026-08-21</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/patrickmorgan/</loc><lastmod>2026-08-19</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/sutton/</loc><lastmod>2026-08-19</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/iansilber/</loc><lastmod>2026-08-18</lastmod></url>
@@ -29,7 +30,6 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/adamward/</loc><lastmod>2026-08-12</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/danbalsam/</loc><lastmod>2026-08-12</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/stephenhaney/</loc><lastmod>2026-08-09</lastmod></url>
-  <url><loc>https://aipodcast.jasonlin.tech/pp/maxhodak/</loc><lastmod>2026-08-09</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/kokotajlo/</loc><lastmod>2026-08-13</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/thomaswolf/</loc><lastmod>2026-08-18</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/philipjohnston/</loc><lastmod>2026-08-07</lastmod></url>
@@ -115,6 +115,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/mikekrieger/</loc><lastmod>2026-08-16</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/loredanacrisan/</loc><lastmod>2026-07-17</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/matei/</loc><lastmod>2026-07-14</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/brettaylor/</loc><lastmod>2026-08-21</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/kolter/</loc><lastmod>2026-07-05</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/jumper/</loc><lastmod>2026-07-03</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/fiona/</loc><lastmod>2026-08-16</lastmod></url>
@@ -227,7 +228,6 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/eschavera/</loc><lastmod>2026-07-15</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/carlrivera/</loc><lastmod>2026-07-21</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/nanda/</loc><lastmod>2026-06-27</lastmod></url>
-  <url><loc>https://aipodcast.jasonlin.tech/pp/brettaylor/</loc><lastmod>2026-08-02</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/saravienna/</loc><lastmod>2026-07-21</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/tombrown/</loc><lastmod>2026-07-05</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/jackph/</loc><lastmod>2026-06-27</lastmod></url>
@@ -267,6 +267,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/hugobarra/</loc><lastmod>2026-08-14</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/albertgu/</loc><lastmod>2026-06-27</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/abbeel/</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/maxhodak-nopriors-2026/</loc><lastmod>2026-08-21</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/patrickmorgan-diveclub-2026/</loc><lastmod>2026-08-19</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/sutton-training-2026/</loc><lastmod>2026-08-19</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/iansilber-lennyspo-2026/</loc><lastmod>2026-08-18</lastmod></url>
@@ -411,6 +412,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/e/matei-latentsp-2026/</loc><lastmod>2026-07-14</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/danbiderman-training-2026/</loc><lastmod>2026-07-09</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/demis-semafort-2026/</loc><lastmod>2026-07-02</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/brettaylor-clickhou-2026/</loc><lastmod>2026-08-21</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/joonpark-googlede-2026/</loc><lastmod>2026-07-10</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/steinberger-ainewspo-2026/</loc><lastmod>2026-07-13</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/kolter-latentsp-2026/</loc><lastmod>2026-07-05</lastmod></url>
