@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 266 位人物 / 588 期访谈
+规模: 266 位人物 / 590 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -53,6 +53,7 @@
 - [Dylan Patel / 迪伦·帕特尔](https://aipodcast.jasonlin.tech/pp/dylanpatel/): Founder & Chief Analyst, SemiAnalysis — 3 期
 - [Dylan Field / 迪伦·菲尔德](https://aipodcast.jasonlin.tech/pp/dylanfield/): Co-founder & CEO of Figma — 3 期
 - [Mark Chen / 马克·陈](https://aipodcast.jasonlin.tech/pp/markchen/): Chief Research Officer, OpenAI — 3 期
+- [Bret Taylor / 布雷特·泰勒](https://aipodcast.jasonlin.tech/pp/brettaylor/): Co-founder & CEO of Sierra; Chairman of the Board, OpenAI — 3 期
 - [John Jumper / 约翰·江珀](https://aipodcast.jasonlin.tech/pp/jumper/): Director, Google DeepMind; Nobel Laureate in Chemistry — 3 期
 - [Fiona Fung / 菲奥娜·冯](https://aipodcast.jasonlin.tech/pp/fiona/): Claude Code & Cowork Lead · Anthropic — 3 期
 - [Ivy Ross / 艾维·罗斯](https://aipodcast.jasonlin.tech/pp/ivyross/): Chief Design Officer, Consumer Devices at Google — 3 期
@@ -62,6 +63,7 @@
 - [Yejin Choi / 崔艺珍](https://aipodcast.jasonlin.tech/pp/yejin/): Professor, Stanford (prev. NVIDIA, AI2); commonsense reasoning — 3 期
 - [Noam Shazeer / 诺姆·沙泽尔](https://aipodcast.jasonlin.tech/pp/shazeer/): Co-lead, Google Gemini — 3 期
 - [Jan Leike / 扬·莱克](https://aipodcast.jasonlin.tech/pp/leike/): Alignment Lead, Anthropic — 3 期
+- [Max Hodak / 马克斯·霍达克](https://aipodcast.jasonlin.tech/pp/maxhodak/): CEO of Science — 2 期
 - [Ian Silber / 伊恩·西尔伯](https://aipodcast.jasonlin.tech/pp/iansilber/): Head of Product Design, OpenAI — 2 期
 - [Travis Kalanick / 特拉维斯·卡兰尼克](https://aipodcast.jasonlin.tech/pp/traviskalanick/): Founder of Uber, CEO of CloudKitchens — 2 期
 - [Chelsea Finn / 切尔西·芬恩](https://aipodcast.jasonlin.tech/pp/finn/): Assistant Professor, Stanford; co-founder, Physical Intelligence — 2 期
@@ -101,7 +103,6 @@
 - [Jim Fan / 范麟熙](https://aipodcast.jasonlin.tech/pp/jimfan/): Senior Research Scientist, NVIDIA — 2 期
 - [Henry Modisett / 亨利·莫迪塞特](https://aipodcast.jasonlin.tech/pp/henrymodisett/): VP of Design, Perplexity — 2 期
 - [Nad Chishtie / 纳德·奇什蒂](https://aipodcast.jasonlin.tech/pp/nadchishtie/): Founding Designer & Head of Design, Lovable — 2 期
-- [Bret Taylor / 布雷特·泰勒](https://aipodcast.jasonlin.tech/pp/brettaylor/): Co-founder & CEO of Sierra; Chairman of the Board, OpenAI — 2 期
 - [Michael Truell / 迈克尔·特鲁埃尔](https://aipodcast.jasonlin.tech/pp/truell/): Co-founder & CEO, Cursor — 2 期
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 2 期
 - [Patrick Morgan / 帕特里克·摩根](https://aipodcast.jasonlin.tech/pp/patrickmorgan/): Design Engineer, Sublime Security — 1 期
@@ -119,7 +120,6 @@
 - [Adam Ward / 亚当·沃德](https://aipodcast.jasonlin.tech/pp/adamward/): Head of Talent at Cursor — 1 期
 - [Dan Balsam / 丹·巴尔萨姆](https://aipodcast.jasonlin.tech/pp/danbalsam/): Co-founder & CTO, Goodfire — 1 期
 - [Stephen Haney / 斯蒂芬·哈尼](https://aipodcast.jasonlin.tech/pp/stephenhaney/): Founder of Paper, AI-native design tool — 1 期
-- [Max Hodak / 马克斯·霍达克](https://aipodcast.jasonlin.tech/pp/maxhodak/): CEO of Science — 1 期
 - [Philip Johnston / 菲利普·约翰斯顿](https://aipodcast.jasonlin.tech/pp/philipjohnston/): Co-founder & CEO, Starcloud — 1 期
 - [Zvi Mowshowitz / 兹维·莫肖维茨](https://aipodcast.jasonlin.tech/pp/zvi/): Writer, Don't Worry About the Vase — 1 期
 - [Josh Meier / 乔什·迈尔](https://aipodcast.jasonlin.tech/pp/joshmeier/): Co-founder, Chai Discovery — 1 期
@@ -275,6 +275,7 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
+- [Restoring Vision with Retinal Implants: A Conversation with Max Hodak](https://aipodcast.jasonlin.tech/e/maxhodak-nopriors-2026/) — Max Hodak, No Priors, 2026-08-20
 - [From Figma to Custom Prototyping: Patrick Morgan's Internal Tool Journey](https://aipodcast.jasonlin.tech/e/patrickmorgan-diveclub-2026/) — Patrick Morgan, Dive Club, 2026-08-18
 - [Rich Sutton: The Field Is Weird, Not Me](https://aipodcast.jasonlin.tech/e/sutton-training-2026/) — Richard Sutton, Training Data, 2026-08-18
 - [The Future of Product Design with OpenAI's Head of Design](https://aipodcast.jasonlin.tech/e/iansilber-lennyspo-2026/) — Ian Silber, Lenny’s Podcast, 2026-08-16
@@ -314,7 +315,6 @@
 - [From Serendipity to Design: Engineering Biology with AI](https://aipodcast.jasonlin.tech/e/joshmeier-training-2026/) — Josh Meier, Training Data, 2026-08-04
 - [Behind the Scenes of Claude Design with Nate Parrott](https://aipodcast.jasonlin.tech/e/nateparrott-diveclub-2026/) — Nate Parrott, Dive Club, 2026-08-04
 - [Building Physical AI: Lessons from Waymo's Autonomous Driving](https://aipodcast.jasonlin.tech/e/dmitridolgov-ycombina-2026/) — Dmitri Dolgov, Y Combinator, 2026-08-03
-- [How JLM52 Writes GPU Kernels and Long Query Routing](https://aipodcast.jasonlin.tech/e/philipkiely-latentsp-2026/) — Philip Kiely, Latent Space, 2026-08-03
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
