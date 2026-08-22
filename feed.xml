@@ -6,7 +6,35 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Fri, 21 Aug 2026 01:38:00 -0000</lastBuildDate>
+  <lastBuildDate>Fri, 21 Aug 2026 03:11:53 -0000</lastBuildDate>
+  <item>
+    <title>白宫 AI 政策：与迈克尔·克拉齐奥斯的对话 — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/e/michaelkratsios-ycombina-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/michaelkratsios-ycombina-2026/</guid>
+    <pubDate>Fri, 21 Aug 2026 03:11:53 -0000</pubDate>
+    <description>迈克尔·克拉齐奥斯讨论他在塑造美国 AI 政策中的角色，以及他选择公共服务的原因。</description>
+  </item>
+  <item>
+    <title>从看似合理到精确：图像生成的下一前沿 — TWIML AI 播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/fatihporikli-thetwiml-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/fatihporikli-thetwiml-2026/</guid>
+    <pubDate>Fri, 21 Aug 2026 03:11:53 -0000</pubDate>
+    <description>高通研究员讨论文本到图像生成中剩余的挑战，包括可控性、质量和效率。</description>
+  </item>
+  <item>
+    <title>梅丽莎·塔克马克谈为现实世界基本服务构建 AI — No Priors</title>
+    <link>https://aipodcast.jasonlin.tech/e/melisatokmak-nopriors-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/melisatokmak-nopriors-2026/</guid>
+    <pubDate>Fri, 21 Aug 2026 03:11:53 -0000</pubDate>
+    <description>Netic 创始人梅丽莎·塔克马克讨论她的公司如何利用 AI 处理暖通空调和宠物护理等基本服务的客户互动，取代传统的人工支持。</description>
+  </item>
+  <item>
+    <title>基于权重的学习：将模型权重视为数据 — TWIML AI 播客</title>
+    <link>https://aipodcast.jasonlin.tech/e/damianborth-thetwiml-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/damianborth-thetwiml-2026/</guid>
+    <pubDate>Fri, 21 Aug 2026 03:11:53 -0000</pubDate>
+    <description>Damian Wirth 探讨将训练好的模型权重作为新神经网络的输入数据，从而更快地生成和分析模型。</description>
+  </item>
   <item>
     <title>视网膜植入物恢复视力：与 Max Hodak 的对话 — No Priors 播客</title>
     <link>https://aipodcast.jasonlin.tech/e/maxhodak-nopriors-2026/</link>
@@ -188,34 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/carlpei-accesspo-2025/</guid>
     <pubDate>Sun, 16 Aug 2026 09:45:00 -0000</pubDate>
     <description>Carl Pei 探讨公司名称不如成功重要，以及 Nothing 作为蓬勃发展的独立智能手机品牌的历程。</description>
-  </item>
-  <item>
-    <title>从 Instagram 到 AI：Mike Krieger 谈单人创业 — 硅谷女孩</title>
-    <link>https://aipodcast.jasonlin.tech/e/mikekrieger-siliconv-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/mikekrieger-siliconv-2025/</guid>
-    <pubDate>Sun, 16 Aug 2026 09:45:00 -0000</pubDate>
-    <description>Mike Krieger 探讨 AI 如何让单人创业者打造百万美元公司，并分享他在 Instagram 和 Anthropic 的经历与见解。</description>
-  </item>
-  <item>
-    <title>从比特到原子：下一次工业革命 — a16z 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/traviskalanick-thea16zp-2026b/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/traviskalanick-thea16zp-2026b/</guid>
-    <pubDate>Sun, 16 Aug 2026 03:39:07 -0000</pubDate>
-    <description>一位远见者探讨如何将物理世界数字化，从交通到制造，推动下一次工业革命。</description>
-  </item>
-  <item>
-    <title>强化学习环境：智能体数据的新前沿 — Training Data</title>
-    <link>https://aipodcast.jasonlin.tech/e/brendanfoody-training-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/brendanfoody-training-2026/</guid>
-    <pubDate>Sun, 16 Aug 2026 03:39:07 -0000</pubDate>
-    <description>Brendan 探讨了强化学习环境如何变革智能体数据，专家构建世界、应用和任务来训练前沿模型。</description>
-  </item>
-  <item>
-    <title>EXO：完全递归的自我改进智能体 — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/e/alexkrentsel-latentsp-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/alexkrentsel-latentsp-2026/</guid>
-    <pubDate>Sun, 16 Aug 2026 01:37:07 -0000</pubDate>
-    <description>Alex Cransel 讨论 EXO，一个能在运行时安全自我编辑的完全递归智能体，以及从模型中心到框架中心的 AI 转变。</description>
   </item>
 </channel>
 </rss>

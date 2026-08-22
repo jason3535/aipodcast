@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 270 位人物 / 594 期访谈
+规模: 270 位人物 / 595 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -35,6 +35,7 @@
 - [Mike Krieger / 迈克·克里格](https://aipodcast.jasonlin.tech/pp/mikekrieger/): Co-lead, Anthropic Labs · Instagram co-founder — 5 期
 - [Carl Pei / 裴宇](https://aipodcast.jasonlin.tech/pp/carlpei/): Founder & CEO, Nothing; co-founder of OnePlus — 5 期
 - [Sholto Douglas / 肖尔托·道格拉斯](https://aipodcast.jasonlin.tech/pp/sholto/): Researcher, Anthropic — 5 期
+- [Joon Sung Park / 朴俊成](https://aipodcast.jasonlin.tech/pp/joonpark/): Co-founder, Simile; creator of Generative Agents (Stanford) — 4 期
 - [Lip-Bu Tan / 陈立武](https://aipodcast.jasonlin.tech/pp/lipbutan/): CEO, Intel — 4 期
 - [Mark Pincus / 马克·平卡斯](https://aipodcast.jasonlin.tech/pp/pincus/): Founder, Zynga — 4 期
 - [Benedict Evans / 本尼迪克特·埃文斯](https://aipodcast.jasonlin.tech/pp/benedictevans/): Independent technology analyst; former partner at Andreessen Horowitz (a16z) — 4 期
@@ -44,7 +45,6 @@
 - [Zico Kolter / 齐科·科尔特](https://aipodcast.jasonlin.tech/pp/kolter/): Professor, CMU · OpenAI board — 4 期
 - [Peter Steinberger / 彼得·施泰因贝格尔](https://aipodcast.jasonlin.tech/pp/steinberger/): Creator of OpenClaw; founder of PSPDFKit — 3 期
 - [Dan Shipper / 丹·希珀](https://aipodcast.jasonlin.tech/pp/danshipper/): Co-founder & CEO, Every — 3 期
-- [Joon Sung Park / 朴俊成](https://aipodcast.jasonlin.tech/pp/joonpark/): Co-founder, Simile; creator of Generative Agents (Stanford) — 3 期
 - [Jeff Dean / 杰夫·迪恩](https://aipodcast.jasonlin.tech/pp/jeffdean/): Chief Scientist, Google — 3 期
 - [Jerry Tworek / 杰里·特沃雷克](https://aipodcast.jasonlin.tech/pp/tworek/): VP of Research, OpenAI — 3 期
 - [Scott Wu / 吴一](https://aipodcast.jasonlin.tech/pp/scottwu/): Co-founder & CEO, Cognition — 3 期
@@ -279,6 +279,7 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
+- [Simulating 8 Billion Lives: AI for Wicked Problems](https://aipodcast.jasonlin.tech/e/joonpark-latentsp-2026/) — Joon Sung Park, Latent Space, 2026-08-21
 - [Restoring Vision with Retinal Implants: A Conversation with Max Hodak](https://aipodcast.jasonlin.tech/e/maxhodak-nopriors-2026/) — Max Hodak, No Priors, 2026-08-20
 - [From Figma to Custom Prototyping: Patrick Morgan's Internal Tool Journey](https://aipodcast.jasonlin.tech/e/patrickmorgan-diveclub-2026/) — Patrick Morgan, Dive Club, 2026-08-18
 - [Rich Sutton: The Field Is Weird, Not Me](https://aipodcast.jasonlin.tech/e/sutton-training-2026/) — Richard Sutton, Training Data, 2026-08-18
@@ -318,7 +319,6 @@
 - [Book a Launch Before You Know What to Launch](https://aipodcast.jasonlin.tech/e/philipjohnston-ycombina-2026/) — Philip Johnston, Y Combinator, 2026-08-05
 - [AI Rundown with Zvi Mowshowitz: From Editing to Existential Risks](https://aipodcast.jasonlin.tech/e/zvi-thecogni-2026/) — Zvi Mowshowitz, The Cognitive Revolution, 2026-08-05
 - [SpaceX Q2 2026 Earnings Call: Starship, Starlink, and AI Ambitions](https://aipodcast.jasonlin.tech/e/elon-spacexq2-2026/) — Elon Musk, SpaceX Q2 2026 Earnings Call, 2026-08-04
-- [From Serendipity to Design: Engineering Biology with AI](https://aipodcast.jasonlin.tech/e/joshmeier-training-2026/) — Josh Meier, Training Data, 2026-08-04
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
