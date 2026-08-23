@@ -3509,7 +3509,7 @@ async function pushSyncQuiet(){
   }catch(_){}}
 addEventListener('load',()=>setTimeout(pushSyncQuiet,2500));
 let _pushNote='';
-const RSS_TIP='<a href="/feed.xml" style="color:var(--accent)">订阅 RSS</a>（任何网络都能用）';
+const RSS_TIP='<a href="https://feed.jasonlin.tech/aipodcast.xml" style="color:var(--accent)">订阅 RSS</a>（任何网络都能用）';
 function pushPanelHtml(){setTimeout(pushPanelRefresh,0);
   return `<div class="st-h3">更新提醒</div><div id="pushPanel"><div class="st-empty">检查中…</div></div>`;}
 async function pushPanelRefresh(){
@@ -3767,7 +3767,7 @@ function footer(){return `<footer class="footer"><div class="wrap">
   </div>
   <div class="mcp-note" id="syncPanel"><div class="legal-note" style="margin-bottom:14px"><b>姊妹站</b> — 同一批人物，三种读法：<a href="https://aipaper.jasonlin.tech" target="_blank" rel="noopener" style="color:var(--accent)">AI Paper</a>（他们的论文与长文，双语全文）· <a href="https://ai.jasonlin.tech" target="_blank" rel="noopener" style="color:var(--accent)">AI 学者图谱</a>（谁和谁共事、师承、合创）。另有 <a href="https://hardware.jasonlin.tech" target="_blank" rel="noopener" style="color:var(--accent)">硬件</a>、<a href="https://investor.jasonlin.tech" target="_blank" rel="noopener" style="color:var(--accent)">投资</a>、<a href="https://design.jasonlin.tech" target="_blank" rel="noopener" style="color:var(--accent)">设计</a>三个姊妹图谱。阅读记录用同一个同步码互通。</div>
     ${syncPanelHtml()}</div>
-  <b style="color:var(--text-2)">AI Podcast · AI 播客</b> — 知名 AI 人物播客，双语阅读。<a href="/feed.xml" style="color:var(--accent)">📡 RSS 订阅</a><br>
+  <b style="color:var(--text-2)">AI Podcast · AI 播客</b> — 知名 AI 人物播客，双语阅读。<a href="https://feed.jasonlin.tech/aipodcast.xml" style="color:var(--accent)">📡 RSS 订阅</a><br>
   内容版权归原播客方；双语全文为 AI 转录翻译，仅供学习，以原节目为准。权利人如需下架：<a href="mailto:linzheng3535@gmail.com?subject=AI%20Podcast%20Takedown%20Request">linzheng3535@gmail.com</a>，即刻处理。<br>
   译文 AI 生成，偶有瑕疵；照片来自 <a href="https://commons.wikimedia.org" target="_blank">Wikimedia</a> 及本人公开主页、封面来自 Apple Podcasts，仅作识别；匿名统计，无 Cookie。分类法来自 <a href="https://ai.jasonlin.tech" target="_blank">AI 人物图谱</a>。
 </div></footer>`;}

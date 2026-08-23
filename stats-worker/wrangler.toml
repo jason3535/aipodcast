@@ -2,7 +2,10 @@ name = "aipodcast-stats"
 main = "worker.js"
 compatibility_date = "2025-06-01"
 routes = [
-  { pattern = "stats.jasonlin.tech", custom_domain = true }
+  { pattern = "stats.jasonlin.tech", custom_domain = true },
+  # RSS 计数代理。两站的 feed.xml 在 GitHub Pages 上(域名灰云直连,Worker route 拦不到),
+  # 订阅者不可测;读者改用 feed.jasonlin.tech/<site>.xml,由本 worker 回源并计数。
+  { pattern = "feed.jasonlin.tech", custom_domain = true }
 ]
 
 [[d1_databases]]

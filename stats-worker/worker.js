@@ -26,10 +26,50 @@ async function vidOf(env,req){
   const buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode((env.STATS_TOKEN||'salt')+'|'+day+'|'+ip+'|'+ua));
   return [...new Uint8Array(buf)].slice(0,10).map(x=>x.toString(16).padStart(2,'0')).join('');
 }
+// ---- RSS 计数代理 ----
+// 起因:feed.xml 直接放在 GitHub Pages 上(域名是灰云 DNS-only,Worker route 拦不到),
+// 抓取不经过任何可观测的环节 → 订阅者数量在结构上不可知。这里做一层回源代理:
+// 读者拿 feed.jasonlin.tech/<site>.xml,worker 回源取真 feed、记一条 type='feed' 再原样返回。
+const FEED_SRC={aipodcast:'https://aipodcast.jasonlin.tech/feed.xml',
+                aipaper:  'https://aipaper.jasonlin.tech/feed.xml'};
+// 站群共用一个 D1,沿用页面埋点的 path 前缀约定(aipodcast 无前缀,其余带前缀)
+const FEED_PATH={aipodcast:'/feed.xml',aipaper:'paper:/feed.xml'};
+// Feedly/Inoreader 这类聚合器会在 UA 里自报代抓了多少订阅者:
+// "Feedly/1.0 (+http://www.feedly.com/fetcher.html; 17 subscribers; ...)"
+// 一次抓取 = 背后 N 个真人,不解析出来会把它们低估成 1。
+const subsOf=ua=>{const m=/(\d+)\s+subscribers?/i.exec(ua||'');return m?Math.min(parseInt(m[1],10),99999):0;};
+
 export default {
   async fetch(req,env){
     const origin=req.headers.get('Origin')||'',co=cors(origin),url=new URL(req.url);
     if(req.method==='OPTIONS')return new Response(null,{status:204,headers:co});
+    // ---- /feed/<site>.xml(stats 域)或 /<site>.xml(feed 域)----
+    {
+      const m=/^(?:\/feed)?\/(aipodcast|aipaper)\.xml$/.exec(url.pathname);
+      if(m&&(req.method==='GET'||req.method==='HEAD')){
+        const site=m[1];
+        const up=await fetch(FEED_SRC[site],{cf:{cacheTtl:300,cacheEverything:true}});
+        if(!up.ok)return new Response('upstream '+up.status,{status:502});
+        let xml=await up.text();
+        // self 链接指向计数地址,阅读器会自我校正到这个 URL。
+        // 注意属性顺序:gen_feed.py 输出的是 href 在前、rel 在后,按 rel...href 写的正则匹配不上。
+        xml=xml.replace(/<atom:link\b[^>]*\brel=["']self["'][^>]*\/?>/,
+          t=>t.replace(/href=["'][^"']*["']/,'href="'+url.origin+'/'+site+'.xml"'));
+        const ua=req.headers.get('User-Agent')||'';
+        if(req.method==='GET'&&!/HeadlessChrome|Playwright|puppeteer/i.test(ua)){
+          // 一行一次抓取;ref 存聚合器自报的订阅数(没有则 0),ua 存客户端标识前 60 字符便于分辨阅读器
+          try{
+            const vid=await vidOf(env,req);
+            await env.DB.prepare("INSERT INTO events(ts,day,type,path,ref,ua,vid,sid) VALUES(?,date('now'),'feed',?,?,?,?,'')")
+              .bind(Date.now(),FEED_PATH[site],''+subsOf(ua),ua.slice(0,60),vid).run();
+          }catch(_){}
+        }
+        return new Response(req.method==='HEAD'?null:xml,{headers:{
+          'Content-Type':'application/rss+xml; charset=utf-8',
+          'Cache-Control':'public, max-age=900',
+          'Access-Control-Allow-Origin':'*'}});
+      }
+    }
     // ---- 查询(token 保护)----
     if(req.method==='GET'&&url.pathname==='/q'){
       if(url.searchParams.get('token')!==env.STATS_TOKEN)return J({error:'unauthorized'},401,co);
