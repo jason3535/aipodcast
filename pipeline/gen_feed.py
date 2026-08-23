@@ -39,10 +39,15 @@ for t, e in rows:
     desc = esc(e.get("sZh") or e.get("sEn") or "")
     if tldr:
         desc += "  要点: " + " / ".join(esc(x.get("zh") or x.get("en") or "") for x in tldr)
+    # link 指 hash 路由(SPA 详情页):点 RSS 直接进互动版,有朗读/问答/深色模式。
+    # 2026-08-23 起静态页 e/<id>/ 带完整中英对照全文,是给搜索引擎和分享用的落地页;
+    # guid **必须保持原值不变**(仍是 e/<id>/),否则阅读器会把全部 30 条当成新条目重推一遍,
+    # 所以只把 isPermaLink 改成 false —— 值不动,含义从"这是永久链接"变成"这只是个唯一 id",
+    # 阅读器于是改用 <link> 作为点击目标。两者不一致是有意为之,别"顺手改回去"。
     items.append(f"""  <item>
     <title>{esc(e.get('tZh') or e.get('tEn'))} — {esc((e.get('pod') or {}).get('zh') or '')}</title>
-    <link>{SITE}/e/{e['id']}/</link>
-    <guid isPermaLink="true">{SITE}/e/{e['id']}/</guid>
+    <link>{SITE}/#/episode/{e['id']}</link>
+    <guid isPermaLink="false">{SITE}/e/{e['id']}/</guid>
     <pubDate>{formatdate(t)}</pubDate>
     <description>{desc}</description>
   </item>""")
