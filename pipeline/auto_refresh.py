@@ -88,11 +88,31 @@ def meta(vid):
     try:
         d = json.loads(subprocess.run(["yt-dlp", "--skip-download", "--no-warnings", "-J",
             f"https://youtu.be/{vid}"], capture_output=True, text=True, timeout=50).stdout)
+        ac = d.get("automatic_captions") or {}
         return {"vid": vid, "date": d.get("upload_date") or "", "ch": d.get("channel") or "",
                 "dur": d.get("duration") or 0, "t": d.get("title") or "",
                 "desc": (d.get("description") or "")[:700],
-                "cap": "en" in (d.get("automatic_captions") or {})}
+                "cap": "en" in ac,
+                "origlang": orig_lang(d, ac)}
     except Exception: return None
+
+
+def orig_lang(d, ac):
+    """视频原声语言;判不出返回 ''(判不出一律放行,别学 isascii() 那样静默漏收)。
+
+    `automatic_captions` 里的 `en` 轨可能是 YouTube 从别的语言**机翻**来的 —— 2026-08-23
+    收进过一期法语的 À LA FRENCH LeCun 访谈,"英文原文"其实是机翻,中文成了翻译的翻译,
+    跟读音频对不上。原声语言看两个信号:`<lang>-orig` 轨(更准),其次 yt-dlp 的 `language`。
+    """
+    for k in ac:
+        if k.endswith("-orig"):
+            return k[:-5].split("-")[0].lower()
+    return (d.get("language") or "").split("-")[0].lower()
+
+
+def english_audio(m):
+    """原声是英文(或判不出)。判不出返回 True —— 宁可交给闸门,也不静默丢。"""
+    return (m.get("origlang") or "en") == "en"
 
 
 # 标题语言判定。**不能用 str.isascii()** —— 排版破折号(–)、弯引号(’)、重音字母(é)都是非 ASCII,
@@ -344,6 +364,9 @@ def discover_channels(people, vids, days, per_channel_cap=2):
             m = meta(vid)
             if not m or not m["cap"] or m["date"] < floor: continue
             if not latin_title(m["t"]): continue
+            if not english_audio(m):
+                log(f"  [频道] {pod_en[:20]:20} {m['date']} {m['t'][:44]} → 弃(原声 {m['origlang']},en 字幕是机翻)")
+                continue
             payload = (f"频道:{pod_en}\n标题:{m['t']}\n时长:{round(m['dur']/60)}分钟\n日期:{m['date']}\n"
                        f"视频简介(判断嘉宾身份主要靠它):\n{m.get('desc','')}\n\n"
                        f"站内人物名单(pid: 姓名):\n{roster}")
@@ -404,6 +427,9 @@ def discover(people, vids, days, per_person_cap=1):
         for vid in cands[:6]:
             m = meta(vid)
             if not m or not m["cap"] or not latin_title(m["t"]): continue
+            if not english_audio(m):
+                log(f"  {pid:12} {m['date']} {m['t'][:44]} → 弃(原声 {m['origlang']},en 字幕是机翻)")
+                continue
             if not (floor <= m["date"] <= cutoff): continue
             on = p["latest"].replace("-", "")
             if on and m["date"] <= on: continue   # 不比在站的旧

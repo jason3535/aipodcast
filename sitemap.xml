@@ -100,7 +100,6 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/wiltschko/</loc><lastmod>2026-07-12</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/lamismukta/</loc><lastmod>2026-07-20</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/kellerrinaudocliffto/</loc><lastmod>2026-08-09</lastmod></url>
-  <url><loc>https://aipodcast.jasonlin.tech/pp/lecun/</loc><lastmod>2026-08-23</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/ilya/</loc><lastmod>2026-07-23</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/andreessen/</loc><lastmod>2026-07-19</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/naval/</loc><lastmod>2026-07-12</lastmod></url>
@@ -134,6 +133,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/fadell/</loc><lastmod>2026-08-02</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/ivyross/</loc><lastmod>2026-08-14</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/rongoldin/</loc><lastmod>2026-08-01</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/lecun/</loc><lastmod>2026-07-05</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/suleyman/</loc><lastmod>2026-07-02</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/gustav/</loc><lastmod>2026-08-09</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/satya/</loc><lastmod>2026-07-16</lastmod></url>
@@ -393,7 +393,6 @@
   <url><loc>https://aipodcast.jasonlin.tech/e/wiltschko-thetwiml-2026/</loc><lastmod>2026-07-12</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/lamismukta-ainative-2026/</loc><lastmod>2026-07-20</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/kellerrinaudocliffto-training-2026/</loc><lastmod>2026-08-09</lastmod></url>
-  <url><loc>https://aipodcast.jasonlin.tech/e/lecun-alafrenc-2026/</loc><lastmod>2026-08-23</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/derya-theopena-2026/</loc><lastmod>2026-07-13</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/ilya-visionec-2026/</loc><lastmod>2026-07-23</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/hasani-thecogni-2026/</loc><lastmod>2026-07-09</lastmod></url>

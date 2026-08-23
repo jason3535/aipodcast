@@ -6,7 +6,28 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sat, 22 Aug 2026 01:36:54 -0000</lastBuildDate>
+  <lastBuildDate>Sun, 23 Aug 2026 01:33:19 -0000</lastBuildDate>
+  <item>
+    <title>AI 支出趋于平稳，Agent 正成为同事 — SemiAnalysis</title>
+    <link>https://aipodcast.jasonlin.tech/e/dylanpatel-semianal-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/dylanpatel-semianal-2026/</guid>
+    <pubDate>Sun, 23 Aug 2026 01:33:19 -0000</pubDate>
+    <description>Dylan Patel 谈 AI 支出为何在稳态下趋于平缓、向持久化 agent 的转变、监管压力下被推迟的模型发布，以及替代加速器的竞争格局。</description>
+  </item>
+  <item>
+    <title>为工业打造物理 AI — David Senra</title>
+    <link>https://aipodcast.jasonlin.tech/e/traviskalanick-davidsen-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/traviskalanick-davidsen-2026/</guid>
+    <pubDate>Sun, 23 Aug 2026 01:33:19 -0000</pubDate>
+    <description>Adams CEO 讨论打造专用机器人和 AI，逐一变革行业，以及管理能力的重要性。</description>
+  </item>
+  <item>
+    <title>Glean：全球首家企业级生成式 AI 公司 — Composio</title>
+    <link>https://aipodcast.jasonlin.tech/e/arvindjain-composio-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/arvindjain-composio-2026/</guid>
+    <pubDate>Sun, 23 Aug 2026 01:33:19 -0000</pubDate>
+    <description>Arvind Jain 探讨 Glean 从企业搜索到全面 AI 平台的历程，强调 AI 在企业中的巨大潜力。</description>
+  </item>
   <item>
     <title>模拟 80 亿人的生活：AI 解决棘手问题 — Latent Space</title>
     <link>https://aipodcast.jasonlin.tech/e/joonpark-latentsp-2026/</link>
@@ -195,27 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/garrytan-sxsw-2026/</guid>
     <pubDate>Sun, 16 Aug 2026 09:45:00 -0000</pubDate>
     <description>Gary 与主持人讨论 Y Combinator 的申请流程和标准如何随 AI 时代变化，强调技能而非学历背景。</description>
-  </item>
-  <item>
-    <title>Gary Tan 谈旧金山、科技与 YC — Out Of Office 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/garrytan-outofoff-2026/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/garrytan-outofoff-2026/</guid>
-    <pubDate>Sun, 16 Aug 2026 09:45:00 -0000</pubDate>
-    <description>Gary Tan 探讨旧金山的科技文化、个人经历及 YC 的影响力。</description>
-  </item>
-  <item>
-    <title>AI 时代重新思考设计流程 — Hatch 大会</title>
-    <link>https://aipodcast.jasonlin.tech/e/jennywen-hatchcon-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/jennywen-hatchcon-2025/</guid>
-    <pubDate>Sun, 16 Aug 2026 09:45:00 -0000</pubDate>
-    <description>一位设计负责人挑战传统设计流程，认为在 AI 和角色演变的时代，它已经过时了。</description>
-  </item>
-  <item>
-    <title>让科技重拾乐趣：Carl Pei 谈 Nothing 的使命 — Gstaad Guy 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/carlpei-thegstaa-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/carlpei-thegstaa-2025/</guid>
-    <pubDate>Sun, 16 Aug 2026 09:45:00 -0000</pubDate>
-    <description>Nothing 创始人 Carl Pei 分享其使命：通过创新的硬件设计让科技变得有趣，激发人类创造力。</description>
   </item>
 </channel>
 </rss>
