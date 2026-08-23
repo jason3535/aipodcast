@@ -26,11 +26,46 @@ const xlinksOf=pid=>{
 };
 const esc=s=>(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 const jl=o=>`<script type="application/ld+json">${JSON.stringify(o).replace(/</g,'\\u003c')}</script>`;
-const chapters=id=>{try{const d=JSON.parse(fs.readFileSync(path.join(ROOT,'mcp-data','ep',id+'.json'),'utf8'));return (d.transcript||[]).map(t=>({en:t.sec||'',zh:t.secZh||''})).filter(c=>c.en||c.zh);}catch(e){return[];}};
+const _epCache={};
+const epData=id=>{
+  if(id in _epCache)return _epCache[id];
+  try{_epCache[id]=JSON.parse(fs.readFileSync(path.join(ROOT,'mcp-data','ep',id+'.json'),'utf8'));}
+  catch(e){_epCache[id]=null;}
+  return _epCache[id];
+};
+const chapters=id=>{const d=epData(id);return d?(d.transcript||[]).map(t=>({en:t.sec||'',zh:t.secZh||''})).filter(c=>c.en||c.zh):[];};
+
+/* 中英对照全文写进静态页(2026-08-23)。此前静态页只有速览+要点约 370 词,
+   而全站 680 万英文词的转录全在 hash 路由 `#/episode/id` 后面,搜索引擎一个字都抓不到 ——
+   最有价值的独家内容长期不可索引。现在整段渲染出来,每期从 ~370 词变成上万词。
+   `content-visibility:auto` 让屏幕外的章节不参与渲染,长页(最大一期 576KB 文本)也不卡。 */
+const transcriptHtml=id=>{
+  const d=epData(id);const tr=(d&&d.transcript)||[];
+  if(!tr.length)return '';
+  const secs=tr.map((s,i)=>{
+    const turns=(s.turns||[]).filter(t=>(t.en||'').trim()||(t.zh||'').trim());
+    if(!turns.length)return '';
+    const head=esc(s.secZh||s.sec||'')+(s.sec&&s.secZh?` <span class="en">${esc(s.sec)}</span>`:'');
+    const body=turns.map(t=>{
+      const spk=esc(t.spk||'');
+      return `<div class="turn">${spk?`<span class="spk">${spk}</span>`:''}`+
+             (t.zh?`<p class="zh">${esc(t.zh)}</p>`:'')+
+             (t.en?`<p class="en">${esc(t.en)}</p>`:'')+`</div>`;
+    }).join('');
+    return `<section class="sec"><h3 id="s${i+1}">${head}</h3>${body}</section>`;
+  }).join('');
+  return secs?`<h2>全文 · Full transcript（中英对照）</h2><div class="tr">${secs}</div>`:'';
+};
 /* 每处 var() 前都留了字面量兜底 —— 2011 年的 WebKit(Kindle 浏览器,实测 534.26)
    不支持 CSS 变量,只写 var() 会让颜色/边框全部失效,页面看起来像裸 HTML。
    老引擎丢弃看不懂的 var() 声明保留字面量;新引擎后者覆盖前者,表现不变。 */
-const CSS=`:root{--ink:#1d1d1f;--sub:#6e6e73;--line:#e6e6ea;--acc:#0071e3}*{box-sizing:border-box}body{font-family:-apple-system,"SF Pro Text",system-ui,"PingFang SC",sans-serif;color:#1d1d1f;color:var(--ink);background:#fff;margin:0;line-height:1.62}.wrap{max-width:760px;margin:0 auto;padding:34px 22px 80px}nav.bc{font-size:13px;color:#6e6e73;color:var(--sub);margin-bottom:20px}nav.bc a{color:#6e6e73;margin-bottom:20px}nav.bc a{color:var(--sub);text-decoration:none}h1{font-size:27px;line-height:1.25;margin:.2em 0 .1em;letter-spacing:-.02em}.en-t{font-size:16px;color:#6e6e73;color:var(--sub);margin:0 0 10px}.meta{font-size:14px;color:#6e6e73;color:var(--sub);margin:8px 0 22px}.meta a{color:#0071e3;margin:8px 0 22px}.meta a{color:var(--acc);text-decoration:none}.cta{display:inline-block;margin:6px 0 26px;padding:10px 18px;background:#0071e3;background:var(--acc);color:#fff;border-radius:980px;font-size:14px;font-weight:600;text-decoration:none}h2{font-size:16px;margin:30px 0 10px;padding-top:8px;border-top:1px solid #e6e6ea}.zh{margin:.35em 0}.en{margin:.15em 0 1em;border-top:1px solid var(--line)}.zh{margin:.35em 0}.en{margin:.15em 0 1em;color:#6e6e73;color:var(--sub);font-size:14.5px}ul{padding-left:1.1em}li{margin:.5em 0}.ep-list a{color:#1d1d1f}footer{margin-top:44px;font-size:14.5px}ul{padding-left:1.1em}li{margin:.5em 0}.ep-list a{color:var(--ink)}footer{margin-top:44px;padding-top:16px;border-top:1px solid #e6e6ea;border-top:1px solid var(--line);font-size:12px;color:#6e6e73}footer a{color:#6e6e73};color:var(--sub)}footer a{color:var(--sub)}`;
+const CSS=`:root{--ink:#1d1d1f;--sub:#6e6e73;--line:#e6e6ea;--acc:#0071e3}*{box-sizing:border-box}body{font-family:-apple-system,"SF Pro Text",system-ui,"PingFang SC",sans-serif;color:#1d1d1f;color:var(--ink);background:#fff;margin:0;line-height:1.62}.wrap{max-width:760px;margin:0 auto;padding:34px 22px 80px}nav.bc{font-size:13px;color:#6e6e73;color:var(--sub);margin-bottom:20px}nav.bc a{color:#6e6e73;margin-bottom:20px}nav.bc a{color:var(--sub);text-decoration:none}h1{font-size:27px;line-height:1.25;margin:.2em 0 .1em;letter-spacing:-.02em}.en-t{font-size:16px;color:#6e6e73;color:var(--sub);margin:0 0 10px}.meta{font-size:14px;color:#6e6e73;color:var(--sub);margin:8px 0 22px}.meta a{color:#0071e3;margin:8px 0 22px}.meta a{color:var(--acc);text-decoration:none}.cta{display:inline-block;margin:6px 0 26px;padding:10px 18px;background:#0071e3;background:var(--acc);color:#fff;border-radius:980px;font-size:14px;font-weight:600;text-decoration:none}h2{font-size:16px;margin:30px 0 10px;padding-top:8px;border-top:1px solid #e6e6ea}.zh{margin:.35em 0}.en{margin:.15em 0 1em;border-top:1px solid var(--line)}.zh{margin:.35em 0}.en{margin:.15em 0 1em;color:#6e6e73;color:var(--sub);font-size:14.5px}ul{padding-left:1.1em}li{margin:.5em 0}.ep-list a{color:#1d1d1f}footer{margin-top:44px;font-size:14.5px}ul{padding-left:1.1em}li{margin:.5em 0}.ep-list a{color:var(--ink)}footer{margin-top:44px;padding-top:16px;border-top:1px solid #e6e6ea;border-top:1px solid var(--line);font-size:12px;color:#6e6e73}footer a{color:#6e6e73};color:var(--sub)}footer a{color:var(--sub)}
+/* 全文区。content-visibility 让屏幕外章节跳过渲染 —— 最长一期文本 576KB,不这样会明显卡顿;
+   老引擎不认这条声明会直接忽略,不影响可读性(Kindle 那套兜底逻辑同理)。 */
+.tr{margin-top:8px}.tr .sec{content-visibility:auto;contain-intrinsic-size:auto 600px;margin:0 0 10px}
+.tr h3{font-size:15px;margin:26px 0 8px;color:#1d1d1f;color:var(--ink);border-top:1px solid #e6e6ea;border-top:1px solid var(--line);padding-top:14px}
+.tr .turn{margin:0 0 14px}.tr .spk{display:inline-block;font-size:12px;color:#6e6e73;color:var(--sub);font-weight:600;margin-bottom:2px}
+.tr p.zh{margin:.2em 0}.tr p.en{margin:.1em 0 0}`;
 const page=(title,desc,url,ogtype,bodyHtml,ld)=>`<!doctype html><html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${title}</title>
@@ -74,12 +109,11 @@ ${(e.sZh||e.sEn)?`<h2>本期速览 · Overview</h2><p class="zh">${esc(e.sZh||''
 ${tldr.length?`<h2>要点 · TL;DR</h2><ul>${li(tldr,x=>x)}</ul>`:''}
 ${cons.length?`<h2>核心观点 · Key points</h2><ul>${li(cons,x=>x)}</ul>`:''}
 ${cont.length?`<h2>反共识 · Contrarian takes</h2><ul>${li(cont,x=>x)}</ul>`:''}
-${chs.length?`<h2>本期章节 · Chapters（共 ${chs.length}）</h2><ul>${chs.map(c=>`<li><span class="zh">${esc(c.zh)}</span> <span class="en">${esc(c.en)}</span></li>`).join('')}</ul>`:''}
-<p style="margin-top:26px"><a class="cta" href="${hash}">阅读全文双语转录 →</a></p>
+${chs.length?`<h2>本期章节 · Chapters（共 ${chs.length}）</h2><ul>${chs.map((c,i)=>`<li><a href="#s${i+1}"><span class="zh">${esc(c.zh)}</span> <span class="en">${esc(c.en)}</span></a></li>`).join('')}</ul>`:''}
+${transcriptHtml(e.id)}
+<p style="margin-top:26px"><a class="cta" href="${hash}">互动版：逐字朗读 + 针对本期提问 →</a></p>
 <script>(function(){var q=location.search.replace(/^\\?/,'');var h=${JSON.stringify(hash)}+(q?'?'+q:'');
-document.querySelectorAll('a.cta').forEach(function(a){a.href=h});
-// 真人访客直达 SPA 详情页;爬虫(SEO/OG 卡片)留在本静态页
-if(!/bot|spider|crawl|slurp|preview|fetch|embed|facebookexternalhit|whatsapp\\//i.test(navigator.userAgent))location.replace(h);})()</script>`;
+document.querySelectorAll('a.cta').forEach(function(a){a.href=h});})()</script>`;
   const ld=[{"@context":"https://schema.org","@type":"PodcastEpisode",name:e.tEn,alternateName:e.tZh,url,datePublished:e.date,timeRequired:e.min?`PT${e.min}M`:undefined,inLanguage:["en","zh"],description:e.sEn||e.sZh,abstract:cons.map(c=>c.en).filter(Boolean).slice(0,5).join(' '),partOfSeries:{"@type":"PodcastSeries",name:(e.pod&&e.pod.en)||''},isPartOf:{"@type":"WebSite",name:"AI Podcast",url:SITE},actor:{"@type":"Person",name:p.en,jobTitle:p.tiEn,url:person},...(vid(e.src)?{associatedMedia:{"@type":"VideoObject",name:e.tEn,embedUrl:`https://www.youtube.com/embed/${vid(e.src)}`,uploadDate:e.date}}:{})},
     {"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"AI Podcast",item:SITE+"/"},{"@type":"ListItem",position:2,name:p.zh||p.en||'',item:person},{"@type":"ListItem",position:3,name:e.tZh||e.tEn,item:url}]}];
   fs.mkdirSync(path.join(EDIR,e.id),{recursive:true});
