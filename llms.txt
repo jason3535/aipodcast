@@ -316,7 +316,7 @@
 - [Paper: An AI-Native Design Tool for the Next Era](https://aipodcast.jasonlin.tech/e/stephenhaney-ycombina-2026/) — Stephen Haney, Y Combinator, 2026-08-07
 - [Startup Infrastructure: Lessons from Deep Tech](https://aipodcast.jasonlin.tech/e/maxhodak-ycombina-2026/) — Max Hodak, Y Combinator, 2026-08-07
 - [AI 2040: From Prediction to Recommendation](https://aipodcast.jasonlin.tech/e/kokotajlo-lawfare-2026/) — Daniel Kokotajlo, Lawfare, 2026-08-07
-- [The OpenAI Agent Hack: A Side Quest Attack on Hugging Face](https://aipodcast.jasonlin.tech/e/thomaswolf-themadpo-2026/) — Thomas Wolf, The MAD Podcast with Matt Turck, 2026-08-07
+- [The OpenAI Agent Hack: A Side Quest Attack on Hugging Face](https://aipodcast.jasonlin.tech/e/thomaswolf-themadpo-2026/) — Thomas Wolf, The MAD Podcast, 2026-08-07
 - [Glean: The World's First Enterprise Generative AI Company](https://aipodcast.jasonlin.tech/e/arvindjain-composio-2026/) — Arvind Jain, Composio, 2026-08-07
 - [Personal AGI: The Spinoza Heresy of Intelligence](https://aipodcast.jasonlin.tech/e/garrytan-ycombina-2026/) — Garry Tan, Y Combinator, 2026-08-06
 
