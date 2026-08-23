@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Fri, 21 Aug 2026 03:11:53 -0000</lastBuildDate>
+  <lastBuildDate>Sat, 22 Aug 2026 01:36:54 -0000</lastBuildDate>
+  <item>
+    <title>模拟 80 亿人的生活：AI 解决棘手问题 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/e/joonpark-latentsp-2026/</link>
+    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/joonpark-latentsp-2026/</guid>
+    <pubDate>Sat, 22 Aug 2026 01:36:54 -0000</pubDate>
+    <description>AI 模拟 80 亿人能帮助解决气候变化等棘手问题吗？</description>
+  </item>
   <item>
     <title>白宫 AI 政策：与迈克尔·克拉齐奥斯的对话 — Y Combinator</title>
     <link>https://aipodcast.jasonlin.tech/e/michaelkratsios-ycombina-2026/</link>
@@ -209,13 +216,6 @@
     <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/carlpei-thegstaa-2025/</guid>
     <pubDate>Sun, 16 Aug 2026 09:45:00 -0000</pubDate>
     <description>Nothing 创始人 Carl Pei 分享其使命：通过创新的硬件设计让科技变得有趣，激发人类创造力。</description>
-  </item>
-  <item>
-    <title>名字游戏：Carl Pei 谈 Nothing 的成功 — ACCESS 播客</title>
-    <link>https://aipodcast.jasonlin.tech/e/carlpei-accesspo-2025/</link>
-    <guid isPermaLink="true">https://aipodcast.jasonlin.tech/e/carlpei-accesspo-2025/</guid>
-    <pubDate>Sun, 16 Aug 2026 09:45:00 -0000</pubDate>
-    <description>Carl Pei 探讨公司名称不如成功重要，以及 Nothing 作为蓬勃发展的独立智能手机品牌的历程。</description>
   </item>
 </channel>
 </rss>
