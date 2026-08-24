@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 270 位人物 / 598 期访谈
+规模: 270 位人物 / 599 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -45,6 +45,7 @@
 - [Aravind Srinivas / 阿拉文德·斯里尼瓦斯](https://aipodcast.jasonlin.tech/pp/aravind/): Co-founder & CEO, Perplexity — 4 期
 - [Zico Kolter / 齐科·科尔特](https://aipodcast.jasonlin.tech/pp/kolter/): Professor, CMU · OpenAI board — 4 期
 - [Travis Kalanick / 特拉维斯·卡兰尼克](https://aipodcast.jasonlin.tech/pp/traviskalanick/): Founder of Uber, CEO of CloudKitchens — 3 期
+- [Brett Adcock / 布雷特·阿德科克](https://aipodcast.jasonlin.tech/pp/brettadcock/): Founder & CEO, Figure — 3 期
 - [Peter Steinberger / 彼得·施泰因贝格尔](https://aipodcast.jasonlin.tech/pp/steinberger/): Creator of OpenClaw; founder of PSPDFKit — 3 期
 - [Dan Shipper / 丹·希珀](https://aipodcast.jasonlin.tech/pp/danshipper/): Co-founder & CEO, Every — 3 期
 - [Jeff Dean / 杰夫·迪恩](https://aipodcast.jasonlin.tech/pp/jeffdean/): Chief Scientist, Google — 3 期
@@ -94,7 +95,6 @@
 - [Felix Rieseberg / 菲利克斯·里泽伯格](https://aipodcast.jasonlin.tech/pp/felixrieseberg/): Claude Cowork Lead, Anthropic · ex-Slack — 2 期
 - [Reiner Pope / 赖纳·波普](https://aipodcast.jasonlin.tech/pp/reinerpope/): Co-founder & CEO, MatX; ex-Google (LLM serving) — 2 期
 - [Oriol Vinyals / 奥里奥尔·维尼亚尔斯](https://aipodcast.jasonlin.tech/pp/oriol/): VP of Research & Gemini Co-lead · Google DeepMind — 2 期
-- [Brett Adcock / 布雷特·阿德科克](https://aipodcast.jasonlin.tech/pp/brettadcock/): Founder & CEO, Figure — 2 期
 - [Deepak Pathak / 迪帕克·帕塔克](https://aipodcast.jasonlin.tech/pp/pathak/): Assistant Professor, CMU; Co-founder, Skild AI — 2 期
 - [Alex Kendall / 亚历克斯·肯德尔](https://aipodcast.jasonlin.tech/pp/kendall/): Co-founder & CEO, Wayve — 2 期
 - [Jakub Pachocki / 雅库布·帕霍茨基](https://aipodcast.jasonlin.tech/pp/pachocki/): Chief Scientist, OpenAI — 2 期
@@ -279,7 +279,7 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
-- [Toby Lu: The Most Forward-Leaning CEO in AI](https://aipodcast.jasonlin.tech/e/altman-davidsen-2026/) — Sam Altman, David Senra, 2026-08-23
+- [Sam Altman on Building OpenAI and Betting on the Impossible](https://aipodcast.jasonlin.tech/e/altman-davidsen-2026/) — Sam Altman, David Senra, 2026-08-23
 - [Simulating 8 Billion Lives: AI for Wicked Problems](https://aipodcast.jasonlin.tech/e/joonpark-latentsp-2026/) — Joon Sung Park, Latent Space, 2026-08-21
 - [Restoring Vision with Retinal Implants: A Conversation with Max Hodak](https://aipodcast.jasonlin.tech/e/maxhodak-nopriors-2026/) — Max Hodak, No Priors, 2026-08-20
 - [From Figma to Custom Prototyping: Patrick Morgan's Internal Tool Journey](https://aipodcast.jasonlin.tech/e/patrickmorgan-diveclub-2026/) — Patrick Morgan, Dive Club, 2026-08-18
@@ -291,6 +291,7 @@
 - [EXO: Fully Recursive Self-Improving Agents](https://aipodcast.jasonlin.tech/e/alexkrentsel-latentsp-2026/) — Alex Krentsel, Latent Space, 2026-08-15
 - [From Bits to Atoms: The Next Industrial Revolution](https://aipodcast.jasonlin.tech/e/traviskalanick-thea16zp-2026b/) — Travis Kalanick, The a16z Podcast, 2026-08-14
 - [Designing the Macintosh: Susan Kare on Icons and Fonts](https://aipodcast.jasonlin.tech/e/susankare-ycombina-2026/) — Susan Kare, Y Combinator, 2026-08-14
+- [Brett Adcock: AI Will Be 100x Bigger Than the Internet](https://aipodcast.jasonlin.tech/e/brettadcock-myfirstm-2026/) — Brett Adcock, My First Million, 2026-08-14
 - [Harnesses and Evals: Owning Your Intelligence](https://aipodcast.jasonlin.tech/e/harrisonchase-training-2026/) — Harrison Chase, Training Data, 2026-08-13
 - [AI Reward Hacking: The Interpretability Dilemma](https://aipodcast.jasonlin.tech/e/tommcgrath-southpar-2026/) — Tom McGrath, South Park Commons, 2026-08-13
 - [From Microsoft to Startup School: Gary's Journey and Silicon Valley Culture](https://aipodcast.jasonlin.tech/e/garrytan-thea16zp-2026/) — Garry Tan, The a16z Podcast, 2026-08-12
@@ -318,7 +319,6 @@
 - [Startup Infrastructure: Lessons from Deep Tech](https://aipodcast.jasonlin.tech/e/maxhodak-ycombina-2026/) — Max Hodak, Y Combinator, 2026-08-07
 - [AI 2040: From Prediction to Recommendation](https://aipodcast.jasonlin.tech/e/kokotajlo-lawfare-2026/) — Daniel Kokotajlo, Lawfare, 2026-08-07
 - [The OpenAI Agent Hack: A Side Quest Attack on Hugging Face](https://aipodcast.jasonlin.tech/e/thomaswolf-themadpo-2026/) — Thomas Wolf, The MAD Podcast, 2026-08-07
-- [Glean: The World's First Enterprise Generative AI Company](https://aipodcast.jasonlin.tech/e/arvindjain-composio-2026/) — Arvind Jain, Composio, 2026-08-07
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
