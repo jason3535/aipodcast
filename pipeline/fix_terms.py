@@ -59,6 +59,15 @@ RULES = [
     (re.compile(BL+r"Zenga"+BR), "Zynga"),
     # MineDojo(Jim Fan 在 NVIDIA 的项目,Minecraft 里的具身智能体)→ 听成 MindDojo。
     (re.compile(BL+r"MindDojo"+BR), "MineDojo"),
+    # ---- Codex(OpenAI 编程 agent)→ 自动字幕听成 codec/codecs ----
+    # 2026-08-24 用户在 altman-davidsen-2026 报的。全库 49 处 codec 里约 3/4 是误听,
+    # 但 **codec 是真词**:MP3 codec、neural audio codec、video codec/FFmpeg、
+    # Meta 的 Codec Avatars 都必须留着。试过「排除音视频词」和「整段护栏」两种正则方案:
+    # 前者漏掉 "we train the codec…"(neural audio 在上百字符之外),后者又误挡了 4 期合法修正。
+    # 结论:**单个 codec 无法用正则可靠判定,只对确定的多词形态动手**,其余靠人工复核。
+    (re.compile(BL+r"(GPT[-\s]?5(?:\.\d)?)\s+codecs?"+BR, re.I), lambda m: m.group(1) + " Codex"),
+    (re.compile(BL+r"codecs?\s+research"+BR, re.I), "Codex research"),
+    (re.compile(BL+r"chachebt\s+codecs?"+BR, re.I), "ChatGPT Codex"),
     # ---- 2026-08-24 收 Brett Adcock(Figure CEO)与 Sam Altman 两期时发现 ----
     # Vettery(Brett Adcock 2013 创办的招聘市场,2018 被 Adecco 以约 1.1 亿美元收购)
     # → 听成 Veterary/Vetterary(brettadcock-myfirstm-2026 里 14 处)。已核实公司名拼写。
@@ -80,14 +89,22 @@ def fix_text(s):
     if not isinstance(s, str) or not s:
         return s, 0
     n = 0
-    for pat, good in RULES:
+    for rule in RULES:
+        pat, good = rule[0], rule[1]
+        ctx = rule[2] if len(rule) > 2 else None   # 可选:上下文护栏,命中则不替换
         def rep(m):
             nonlocal n
             if GUARD.search(s[max(0, m.start() - 16):m.start()]):
                 return m.group(0)
+            # 护栏查**整段文本**而非窗口:同一段里 "neural audio codec" 与后文的 "the codec"
+            # 可能隔了上百字符,窗口会漏。宁可整段不动,也不能把真 codec 改成 Codex。
+            if ctx and ctx.search(s):
+                return m.group(0)
             # 原文若是 "Claude Code" 本身不会进来(变体表里没有 claude)
             n += 1
-            return good
+            # good 允许是函数:需要保留原文片段(如版本号)时用,普通规则仍是字符串。
+            # 注意不能用 r"\1" 反向引用 —— 这里是函数式替换,sub 不会展开它。
+            return good(m) if callable(good) else good
         s = pat.sub(rep, s)
     return s, n
 
