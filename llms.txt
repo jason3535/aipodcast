@@ -3,11 +3,11 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 270 位人物 / 597 期访谈
+规模: 270 位人物 / 598 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
-- [Sam Altman / 萨姆·奥尔特曼](https://aipodcast.jasonlin.tech/pp/altman/): CEO, OpenAI — 18 期
+- [Sam Altman / 萨姆·奥尔特曼](https://aipodcast.jasonlin.tech/pp/altman/): CEO, OpenAI — 19 期
 - [Dario Amodei / 达里奥·阿莫迪](https://aipodcast.jasonlin.tech/pp/dario/): CEO, Anthropic — 16 期
 - [Elon Musk / 埃隆·马斯克](https://aipodcast.jasonlin.tech/pp/elon/): Founder, xAI — 15 期
 - [Naval Ravikant / 纳瓦尔·拉维坎特](https://aipodcast.jasonlin.tech/pp/naval/): Co-founder, AngelList; angel investor & philosopher — 14 期
@@ -279,6 +279,7 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
+- [Toby Lu: The Most Forward-Leaning CEO in AI](https://aipodcast.jasonlin.tech/e/altman-davidsen-2026/) — Sam Altman, David Senra, 2026-08-23
 - [Simulating 8 Billion Lives: AI for Wicked Problems](https://aipodcast.jasonlin.tech/e/joonpark-latentsp-2026/) — Joon Sung Park, Latent Space, 2026-08-21
 - [Restoring Vision with Retinal Implants: A Conversation with Max Hodak](https://aipodcast.jasonlin.tech/e/maxhodak-nopriors-2026/) — Max Hodak, No Priors, 2026-08-20
 - [From Figma to Custom Prototyping: Patrick Morgan's Internal Tool Journey](https://aipodcast.jasonlin.tech/e/patrickmorgan-diveclub-2026/) — Patrick Morgan, Dive Club, 2026-08-18
@@ -318,7 +319,6 @@
 - [AI 2040: From Prediction to Recommendation](https://aipodcast.jasonlin.tech/e/kokotajlo-lawfare-2026/) — Daniel Kokotajlo, Lawfare, 2026-08-07
 - [The OpenAI Agent Hack: A Side Quest Attack on Hugging Face](https://aipodcast.jasonlin.tech/e/thomaswolf-themadpo-2026/) — Thomas Wolf, The MAD Podcast, 2026-08-07
 - [Glean: The World's First Enterprise Generative AI Company](https://aipodcast.jasonlin.tech/e/arvindjain-composio-2026/) — Arvind Jain, Composio, 2026-08-07
-- [Personal AGI: The Spinoza Heresy of Intelligence](https://aipodcast.jasonlin.tech/e/garrytan-ycombina-2026/) — Garry Tan, Y Combinator, 2026-08-06
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
