@@ -38,9 +38,9 @@ python3 pipeline/push_notify.py --site aipodcast --ids "${ids[@]}" || echo "  �
 echo "── 10.8/11 主动推给搜索引擎(IndexNow)"
 # 2026-08-15 查到:六站在 Bing 一条都没被索引 —— 技术准备齐全,但全网无外链,爬虫从没来过。
 # IndexNow 不需要任何账号,是唯一能自己捅破这层的办法。Google 不支持,那边仍需人工提交。
-if (( ${#ids} )); then
+if (( ${#ids[@]} )); then
   python3 pipeline/indexnow.py --site aipodcast \
-    --urls ${^ids/#/https://aipodcast.jasonlin.tech/e/} || echo "  ⚠ IndexNow 推送失败(不阻断)"
+    --urls "${ids[@]/#/https://aipodcast.jasonlin.tech/e/}" || echo "  ⚠ IndexNow 推送失败(不阻断)"
 else
   python3 pipeline/indexnow.py --site aipodcast || echo "  ⚠ IndexNow 推送失败(不阻断)"
 fi
@@ -55,9 +55,9 @@ node pipeline/check_es_compat.js app.js
 # 错得像模像样,肉眼扫标题发现不了。基线已清到 0,再冒出来就是本轮新引入的。
 # **不能接 | tail** —— 管道的退出码是 tail 的,门禁会永远"通过"(这坑踩过两次)。
 python3 pipeline/check_guest_names.py --check
-if (( ${#ids} )); then
+if (( ${#ids[@]} )); then
   node pipeline/audit_completeness.js "${ids[@]}"           # 只审本轮新收(全库有存量损坏)
-  echo "  完整性审计 ${#ids} 期通过"
+  echo "  完整性审计 ${#ids[@]} 期通过"
 fi
 
-echo "\n✅ postingest 全部通过,可以 git add -A && git commit && git push"
+printf "\n"; echo "✅ postingest 全部通过,可以 git add -A && git commit && git push"

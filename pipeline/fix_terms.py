@@ -59,6 +59,18 @@ RULES = [
     (re.compile(BL+r"Zenga"+BR), "Zynga"),
     # MineDojo(Jim Fan 在 NVIDIA 的项目,Minecraft 里的具身智能体)→ 听成 MindDojo。
     (re.compile(BL+r"MindDojo"+BR), "MineDojo"),
+    # ---- 2026-08-24 收 Brett Adcock(Figure CEO)与 Sam Altman 两期时发现 ----
+    # Vettery(Brett Adcock 2013 创办的招聘市场,2018 被 Adecco 以约 1.1 亿美元收购)
+    # → 听成 Veterary/Vetterary(brettadcock-myfirstm-2026 里 14 处)。已核实公司名拼写。
+    (re.compile(BL+r"Vet+erary"+BR, re.I), "Vettery"),
+    # Figure(他现在的公司)→ 同一期里 1 处听成 Figer;正确的 "Figure" 有 40 处,不能误伤,
+    # 所以只匹配 Figer 这个确定的错拼。
+    (re.compile(BL+r"Figer"+BR), "Figure"),
+    # Tobi Lütke(Shopify CEO)→ 听成 Toby Lu(altman-davidsen-2026 里 5 处,连标题都错了)。
+    # 右侧环视挡住已正确的 "Tobi Lutke/Lütke",否则 --check 门禁会永远报待修。
+    (re.compile(BL+r"Tob(?:ey|[yie])\s+Lu(?![A-Za-z\u00fc])"), "Tobi L\u00fctke"),
+    # 顺带把 ASCII 的 Lutke 归一成 Lütke;替换后带 ü,不会再次匹配,--check 保持幂等。
+    (re.compile(BL+r"Tob(?:ey|[yie])\s+Lutke"+BR), "Tobi L\u00fctke"),
 ]
 # 这些上下文里的 "class code" 是 best-in-class code,不是误听
 GUARD = re.compile(r"(best|world)[- ]in[- ]?class\s*$|(best|world)-class\s*$", re.I)

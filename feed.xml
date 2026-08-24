@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sun, 23 Aug 2026 01:33:19 -0000</lastBuildDate>
+  <lastBuildDate>Mon, 24 Aug 2026 10:56:31 -0000</lastBuildDate>
+  <item>
+    <title>山姆·奥特曼：创办 OpenAI，以及押注看似不可能的事 — David Senra</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/altman-davidsen-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/altman-davidsen-2026/</guid>
+    <pubDate>Mon, 24 Aug 2026 10:56:31 -0000</pubDate>
+    <description>山姆·奥特曼谈非共识押注、为何 AI 的普及会比技术人预期得慢，以及当下对 OpenAI 最要紧的事。</description>
+  </item>
   <item>
     <title>AI 支出趋于平稳，Agent 正成为同事 — SemiAnalysis</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/dylanpatel-semianal-2026</link>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/garrytan-tetragra-2026/</guid>
     <pubDate>Sun, 16 Aug 2026 09:45:00 -0000</pubDate>
     <description>一位创始人分享童年困境如何激发对科技的热爱，以及 Y Combinator 如何识别下一代创造者。</description>
-  </item>
-  <item>
-    <title>Y Combinator 在 AI 时代的演变 — SXSW</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/garrytan-sxsw-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/garrytan-sxsw-2026/</guid>
-    <pubDate>Sun, 16 Aug 2026 09:45:00 -0000</pubDate>
-    <description>Gary 与主持人讨论 Y Combinator 的申请流程和标准如何随 AI 时代变化，强调技能而非学历背景。</description>
   </item>
 </channel>
 </rss>
