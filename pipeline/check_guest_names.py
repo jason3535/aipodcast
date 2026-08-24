@@ -26,6 +26,10 @@ COMMON = {"Most","More","Much","Many","Must","Fun","Fine","Full","First","From",
           "My","Me","Maybe","Make","Mean","Mr","Ms","No","Not","Now","New","Next","Never",
           "Right","Really","Actually","About","After","Also","All","An","As","At","Are",
           "Talk","Talking","Thank","Thanks","Yeah","Yes","Yep","Went","Well","Was","Were","Will",
+          # 2026-08-24 补:Garry Tan 那期的 "Too far." 被当成「Garry Too」报了几个月,
+          # 而这道门禁本来就返回非零 —— postingest 没 set -e 所以一直被忽略。
+          # 一个长期误报会让整道门禁失效,比漏报更危险。
+          "Too","Than","Think","Thought","Today","Together","Tell","Try","Turn","Time","Times",
           "Welcome","Would","Want","Way","Why","Who","With","Which","While","Whether","Working"}
 
 def lev(a, b):
