@@ -44,6 +44,21 @@ RULES = [
     # 不输 iPod 的 MP3」讲的就是魅族。
     # 注意:Mazu 也是妈祖/马祖的拼音,本库目前无此语境;若将来收录相关内容需给这条加限定。
     (re.compile(BL+r"Ma(?:tzu|zoo|zu)"+BR), "Meizu"),
+    # ---- 2026-08-24 周巡检发现的新人物/新公司名误听(全新嘉宾没有站内先验,全靠音译) ----
+    # Anthropic → 听成 Enthropic/Enthropics(dylanpatel-semianal-2026、arvindjain-20vcwith-2026
+    # 两期独立出现,同一批系统性误听)。拼写含多余的 h,与真实单词 entropic 不冲突。
+    (re.compile(BL+r"Enthropics"+BR, re.I), "Anthropic's"),
+    (re.compile(BL+r"Enthropic"+BR, re.I), "Anthropic"),
+    # Netic(melisatokmak 创业公司)→ 同一期里听成 NetC / ETIC 两种变体。
+    # 注意:ETIC 也是语言学/人类学里 emic-etic 对照的通用词根,若将来收录相关内容需加限定。
+    (re.compile(BL+r"NetC"+BR), "Netic"),
+    (re.compile(BL+r"ETIC"+BR), "Netic"),
+    # Zynga(Mark Pincus 创业公司)→ 听成 Zinga / Zenga(pincus-motleyfo-2026、
+    # pincus-ycombina-2026 两期都有,同一期内常与正确写法混杂出现)。
+    (re.compile(BL+r"Zinga"+BR), "Zynga"),
+    (re.compile(BL+r"Zenga"+BR), "Zynga"),
+    # MineDojo(Jim Fan 在 NVIDIA 的项目,Minecraft 里的具身智能体)→ 听成 MindDojo。
+    (re.compile(BL+r"MindDojo"+BR), "MineDojo"),
 ]
 # 这些上下文里的 "class code" 是 best-in-class code,不是误听
 GUARD = re.compile(r"(best|world)[- ]in[- ]?class\s*$|(best|world)-class\s*$", re.I)
