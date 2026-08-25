@@ -13,7 +13,7 @@ from pathlib import Path
 
 SITES = {
     "ai":     dict(path=Path("/Users/jason/ai-scholar-graph"),     zh="AI 学者图谱",   en="AI SCHOLAR GRAPH",   domain="ai.jasonlin.tech",       pfx="graph-ai"),
-    "hw":     dict(path=Path("/Users/jason/hardware-startup-graph"),zh="智能硬件创业图谱", en="HARDWARE STARTUP GRAPH", domain="hardware.jasonlin.tech", pfx="graph-hw"),
+    "hw":     dict(path=Path("/Users/jason/hardware-startup-graph"),zh="智能硬件图谱", en="HARDWARE STARTUP GRAPH", domain="hardware.jasonlin.tech", pfx="graph-hw"),
     "inv":    dict(path=Path("/Users/jason/investor-graph"),       zh="投资人图谱",    en="TECH INVESTOR GRAPH", domain="investor.jasonlin.tech",  pfx="graph-inv"),
     "design": dict(path=Path("/Users/jason/designer-graph"),       zh="设计师图谱",    en="DESIGNER GRAPH",      domain="design.jasonlin.tech",    pfx="graph-design"),
 }
