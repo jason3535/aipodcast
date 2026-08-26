@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Mon, 24 Aug 2026 10:56:31 -0000</lastBuildDate>
+  <lastBuildDate>Mon, 24 Aug 2026 11:49:58 -0000</lastBuildDate>
+  <item>
+    <title>布雷特·阿德科克：AI 会比互联网大一百倍 — My First Million</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/brettadcock-myfirstm-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brettadcock-myfirstm-2026/</guid>
+    <pubDate>Mon, 24 Aug 2026 11:49:58 -0000</pubDate>
+    <description>Figure 创始人布雷特·阿德科克谈：用人形机器人做体力活、用会用电脑的 agent 做数字活，以及为什么难点在智能而不在制造。</description>
+  </item>
   <item>
     <title>山姆·奥特曼：创办 OpenAI，以及押注看似不可能的事 — David Senra</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/altman-davidsen-2026</link>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/boris-bloomber-2026/</guid>
     <pubDate>Sun, 16 Aug 2026 09:45:00 -0000</pubDate>
     <description>Anthropic 的 Claude Code 负责人 Boris Cherny 讨论了 AI 代理的演变、对软件工程的影响以及人机交互的未来。</description>
-  </item>
-  <item>
-    <title>从代码洞穴到 Y Combinator：坚韧与创新之旅 — Tetragrammaton</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/garrytan-tetragra-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/garrytan-tetragra-2026/</guid>
-    <pubDate>Sun, 16 Aug 2026 09:45:00 -0000</pubDate>
-    <description>一位创始人分享童年困境如何激发对科技的热爱，以及 Y Combinator 如何识别下一代创造者。</description>
   </item>
 </channel>
 </rss>
