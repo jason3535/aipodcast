@@ -1,1 +1,18 @@
-[]
+[
+ {
+  "pid": "johnbai",
+  "en": "John Bai",
+  "zh": "John Bai",
+  "tiEn": "Designer, Cursor",
+  "from": "Dive Club",
+  "added": "2026-08-26"
+ },
+ {
+  "pid": "paragagrawal",
+  "en": "Parag Agrawal",
+  "zh": "帕拉格·阿格拉瓦尔",
+  "tiEn": "Founder & CEO, Parallel Web Systems",
+  "from": "Training Data",
+  "added": "2026-08-26"
+ }
+]
