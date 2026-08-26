@@ -59,6 +59,9 @@ RULES = [
     (re.compile(BL+r"Zenga"+BR), "Zynga"),
     # MineDojo(Jim Fan 在 NVIDIA 的项目,Minecraft 里的具身智能体)→ 听成 MindDojo。
     (re.compile(BL+r"MindDojo"+BR), "MineDojo"),
+    # Jerry Tworek(Core Automation 创始人,原 OpenAI 研究副总裁)→ 听成 Tourk/Torek/Twerk。
+    # 2026-08-26 tworek-mts-2026 里 Tourk 4 次、正确写法仅 2 次。姓氏冷门,音译必错。
+    (re.compile(BL+r"Jerry\s+T(?:ourk|orek|werk|urek)"+BR, re.I), "Jerry Tworek"),
     # ---- Codex(OpenAI 编程 agent)→ 自动字幕听成 codec/codecs ----
     # 2026-08-24 用户在 altman-davidsen-2026 报的。全库 49 处 codec 里约 3/4 是误听,
     # 但 **codec 是真词**:MP3 codec、neural audio codec、video codec/FFmpeg、

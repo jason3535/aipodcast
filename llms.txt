@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 272 位人物 / 602 期访谈
+规模: 272 位人物 / 603 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -36,6 +36,7 @@
 - [Mike Krieger / 迈克·克里格](https://aipodcast.jasonlin.tech/pp/mikekrieger/): Co-lead, Anthropic Labs · Instagram co-founder — 5 期
 - [Carl Pei / 裴宇](https://aipodcast.jasonlin.tech/pp/carlpei/): Founder & CEO, Nothing; co-founder of OnePlus — 5 期
 - [Sholto Douglas / 肖尔托·道格拉斯](https://aipodcast.jasonlin.tech/pp/sholto/): Researcher, Anthropic — 5 期
+- [Jerry Tworek / 杰里·特沃雷克](https://aipodcast.jasonlin.tech/pp/tworek/): Co-founder & CEO, Core Automation — 4 期
 - [Joon Sung Park / 朴俊成](https://aipodcast.jasonlin.tech/pp/joonpark/): Co-founder, Simile; creator of Generative Agents (Stanford) — 4 期
 - [Lip-Bu Tan / 陈立武](https://aipodcast.jasonlin.tech/pp/lipbutan/): CEO, Intel — 4 期
 - [Mark Pincus / 马克·平卡斯](https://aipodcast.jasonlin.tech/pp/pincus/): Founder, Zynga — 4 期
@@ -49,7 +50,6 @@
 - [Peter Steinberger / 彼得·施泰因贝格尔](https://aipodcast.jasonlin.tech/pp/steinberger/): Creator of OpenClaw; founder of PSPDFKit — 3 期
 - [Dan Shipper / 丹·希珀](https://aipodcast.jasonlin.tech/pp/danshipper/): Co-founder & CEO, Every — 3 期
 - [Jeff Dean / 杰夫·迪恩](https://aipodcast.jasonlin.tech/pp/jeffdean/): Chief Scientist, Google — 3 期
-- [Jerry Tworek / 杰里·特沃雷克](https://aipodcast.jasonlin.tech/pp/tworek/): VP of Research, OpenAI — 3 期
 - [Scott Wu / 吴一](https://aipodcast.jasonlin.tech/pp/scottwu/): Co-founder & CEO, Cognition — 3 期
 - [Qasar Younis / 卡萨尔·尤尼斯](https://aipodcast.jasonlin.tech/pp/qasaryounis/): Co-founder & CEO, Applied Intuition — 3 期
 - [Jürgen Schmidhuber / 于尔根·施密德胡伯](https://aipodcast.jasonlin.tech/pp/schmidhuber/): Director, KAUST AI — 3 期
@@ -281,7 +281,8 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
-- [AI Labs' Compute Dominance and Economics](https://aipodcast.jasonlin.tech/e/dylanpatel-dwarkesh-2026b/) — Dylan Patel, Dwarkesh Patel, 2026-08-25
+- [The Third Generation of AI Labs: Automating AI Research](https://aipodcast.jasonlin.tech/e/tworek-mts-2026/) — Jerry Tworek, MTS , 2026-08-26
+- [AI Labs' Compute Dominance and Economics](https://aipodcast.jasonlin.tech/e/dylanpatel-dwarkesh-2026b/) — Dylan Patel, Dwarkesh Podcast, 2026-08-25
 - [Designing Grockbot: From Cursor to Consumer](https://aipodcast.jasonlin.tech/e/johnbai-diveclub-2026/) — John Bai, Dive Club, 2026-08-25
 - [The Future of Search: Agentic Web and Parallel's Vision](https://aipodcast.jasonlin.tech/e/paragagrawal-training-2026/) — Parag Agrawal, Training Data, 2026-08-25
 - [Sam Altman on Building OpenAI and Betting on the Impossible](https://aipodcast.jasonlin.tech/e/altman-davidsen-2026/) — Sam Altman, David Senra, 2026-08-23
@@ -320,7 +321,6 @@
 - [Mark Pincus on AI, Investing, and Life at the Speed of Play](https://aipodcast.jasonlin.tech/e/pincus-motleyfo-2026/) — Mark Pincus, Motley Fool Conversations, 2026-08-10
 - [Building Elite High Talent Density Teams with Adam Ward](https://aipodcast.jasonlin.tech/e/adamward-lennyspo-2026/) — Adam Ward, Lenny’s Podcast, 2026-08-09
 - [Goodfire CTO on Silico Platform and AI Safety](https://aipodcast.jasonlin.tech/e/danbalsam-thecogni-2026/) — Dan Balsam, The Cognitive Revolution, 2026-08-08
-- [Paper: An AI-Native Design Tool for the Next Era](https://aipodcast.jasonlin.tech/e/stephenhaney-ycombina-2026/) — Stephen Haney, Y Combinator, 2026-08-07
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
