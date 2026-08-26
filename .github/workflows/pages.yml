@@ -26,6 +26,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      # 部署前剔除网站用不到的目录。2026-08-26 实测:Pages 构建耗时从 29 秒涨到
+      # 13-25 分钟(甚至 errored),因为仓库里 pipeline/transcripts 有 71MB 原始字幕缓存,
+      # 而 upload-pages-artifact 的 path:. 会把整个仓库打包上传。
+      # 站点真正需要的只有 e/ pp/ data/ mcp-data/ assets/ 与根目录若干文件。
+      - name: 剔除非站点文件
+        run: |
+          rm -rf pipeline .github *-worker
+          echo "上传体积: $(du -sh --exclude=.git . | cut -f1)"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .

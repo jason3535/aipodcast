@@ -6,7 +6,28 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Mon, 24 Aug 2026 11:49:58 -0000</lastBuildDate>
+  <lastBuildDate>Wed, 26 Aug 2026 01:37:18 -0000</lastBuildDate>
+  <item>
+    <title>AI 实验室的计算主导地位与经济 — Dwarkesh 播客</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/dylanpatel-dwarkesh-2026b</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dylanpatel-dwarkesh-2026b/</guid>
+    <pubDate>Wed, 26 Aug 2026 01:37:18 -0000</pubDate>
+    <description>Dylan Patel 讨论 OpenAI 和 Anthropic 如何集中计算资源，明年新增计算份额将达 40-50%，其经济模式从亏损转向盈利。</description>
+  </item>
+  <item>
+    <title>设计 Grockbot：从 Cursor 到消费级产品 — 潜水俱乐部</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/johnbai-diveclub-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/johnbai-diveclub-2026/</guid>
+    <pubDate>Wed, 26 Aug 2026 01:37:18 -0000</pubDate>
+    <description>Cursor 纽约办公室首位设计员工 John B，探讨 Grockbot 的设计演变，从内部辩论到最终面向消费者的界面。</description>
+  </item>
+  <item>
+    <title>搜索的未来：代理网络与 Parallel 的愿景 — 训练数据</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/paragagrawal-training-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/paragagrawal-training-2026/</guid>
+    <pubDate>Wed, 26 Aug 2026 01:37:18 -0000</pubDate>
+    <description>Parag Agrawal 讨论 Parallel 如何为 AI 代理重塑搜索，超越人类点击数据，转向代理反馈。</description>
+  </item>
   <item>
     <title>布雷特·阿德科克：AI 会比互联网大一百倍 — My First Million</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/brettadcock-myfirstm-2026</link>
@@ -195,27 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/abbeel-thetwiml-2021/</guid>
     <pubDate>Mon, 17 Aug 2026 03:45:03 -0000</pubDate>
     <description>Pieter Abbeel 分享他在学术界和工业界的双重角色，专注于将 AI 机器人带入现实世界，并结合无监督学习与强化学习。</description>
-  </item>
-  <item>
-    <title>从瓶颈到突破：扩展 Claude Code 的团队经验 — Claude 官方频道</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/fiona-claude-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/fiona-claude-2026/</guid>
-    <pubDate>Sun, 16 Aug 2026 09:56:24 -0000</pubDate>
-    <description>Fiona Fung 分享在 AI 编程时代，随着工程瓶颈转移，团队如何调整协作规范的实战经验。</description>
-  </item>
-  <item>
-    <title>从 Snap 工程师到创始设计师：Nate Parrott 谈 Arc 浏览器的设计 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/nateparrott-diveclub-2024</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/nateparrott-diveclub-2024/</guid>
-    <pubDate>Sun, 16 Aug 2026 09:56:24 -0000</pubDate>
-    <description>Nate Parrott 分享了他如何从 Snap 的 iOS 工程师转变为 Arc 浏览器的创始设计师，强调原型制作和动手设计的重要性。</description>
-  </item>
-  <item>
-    <title>Claude Code：AI 代理与软件工程的未来 — 彭博播客</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/boris-bloomber-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/boris-bloomber-2026/</guid>
-    <pubDate>Sun, 16 Aug 2026 09:45:00 -0000</pubDate>
-    <description>Anthropic 的 Claude Code 负责人 Boris Cherny 讨论了 AI 代理的演变、对软件工程的影响以及人机交互的未来。</description>
   </item>
 </channel>
 </rss>
