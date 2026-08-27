@@ -108,7 +108,7 @@
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 2 期
 - [DHH / DHH](https://aipodcast.jasonlin.tech/pp/dhh/): Creator of Ruby on Rails, CTO of 37signals — 1 期
 - [Anima Anandkumar / 阿尼玛·阿南德库马尔](https://aipodcast.jasonlin.tech/pp/animaanandkumar/): Professor at Caltech, Co-founder of Accelerated Understanding — 1 期
-- [John Bai / John Bai](https://aipodcast.jasonlin.tech/pp/johnbai/): Designer, Cursor — 1 期
+- [John Bai / John Bai](https://aipodcast.jasonlin.tech/pp/johnbai/): Design Lead for Grok Bot, Cursor — 1 期
 - [Parag Agrawal / 帕拉格·阿格拉瓦尔](https://aipodcast.jasonlin.tech/pp/paragagrawal/): Founder & CEO, Parallel Web Systems — 1 期
 - [Patrick Morgan / 帕特里克·摩根](https://aipodcast.jasonlin.tech/pp/patrickmorgan/): Design Engineer, Sublime Security — 1 期
 - [Michael Kratsios / 迈克尔·克拉齐奥斯](https://aipodcast.jasonlin.tech/pp/michaelkratsios/): Director, White House Office of Science and Technology Policy — 1 期
@@ -287,7 +287,7 @@
 - [From Skeptic to Believer: DHH on the AI Revolution](https://aipodcast.jasonlin.tech/e/dhh-lexfridm-2026/) — DHH, Lex Fridman Podcast, 2026-08-26
 - [AI for Science: Neural Operators and Weather Modeling](https://aipodcast.jasonlin.tech/e/animaanandkumar-latentsp-2026/) — Anima Anandkumar, Latent Space, 2026-08-26
 - [AI Labs' Compute Dominance and Economics](https://aipodcast.jasonlin.tech/e/dylanpatel-dwarkesh-2026b/) — Dylan Patel, Dwarkesh Podcast, 2026-08-25
-- [Designing Grockbot: From Cursor to Consumer](https://aipodcast.jasonlin.tech/e/johnbai-diveclub-2026/) — John Bai, Dive Club, 2026-08-25
+- [Designing Grok Bot: From Cursor to Consumer](https://aipodcast.jasonlin.tech/e/johnbai-diveclub-2026/) — John Bai, Dive Club, 2026-08-25
 - [The Future of Search: Agentic Web and Parallel's Vision](https://aipodcast.jasonlin.tech/e/paragagrawal-training-2026/) — Parag Agrawal, Training Data, 2026-08-25
 - [Sam Altman on Building OpenAI and Betting on the Impossible](https://aipodcast.jasonlin.tech/e/altman-davidsen-2026/) — Sam Altman, David Senra, 2026-08-23
 - [Simulating 8 Billion Lives: AI for Wicked Problems](https://aipodcast.jasonlin.tech/e/joonpark-latentsp-2026/) — Joon Sung Park, Latent Space, 2026-08-21
