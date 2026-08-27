@@ -6,7 +6,35 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Wed, 26 Aug 2026 22:16:38 -0000</lastBuildDate>
+  <lastBuildDate>Thu, 27 Aug 2026 01:45:08 -0000</lastBuildDate>
+  <item>
+    <title>从怀疑到拥抱：DHH 谈 AI 革命 — Lex Fridman 播客</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/dhh-lexfridm-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dhh-lexfridm-2026/</guid>
+    <pubDate>Thu, 27 Aug 2026 01:45:08 -0000</pubDate>
+    <description>DHH 讲述他从 AI 怀疑者到热情拥抱者的转变，称代理工程领域的飞速进展是千载难逢的时代变革。</description>
+  </item>
+  <item>
+    <title>AI 用于科学：神经算子与天气建模 — 潜在空间</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/animaanandkumar-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/animaanandkumar-latentsp-2026/</guid>
+    <pubDate>Thu, 27 Aug 2026 01:45:08 -0000</pubDate>
+    <description>Anima Anandkumar 讨论了神经算子如何，尽管最初受到气象学家的质疑，却实现了与传统模型相当的准确性，但速度快了数万倍，从而改变了 AI 在物理建模中的作用。</description>
+  </item>
+  <item>
+    <title>从聊天到完成：面向企业家的 AI 代理 — 企业家组织</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/ethanhe-entrepre-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ethanhe-entrepre-2026/</guid>
+    <pubDate>Thu, 27 Aug 2026 01:45:08 -0000</pubDate>
+    <description>Ethan King 讨论了 AI 从聊天机器人到能执行任务的代理的转变，以及为什么 Claude 已经超越了 ChatGPT。</description>
+  </item>
+  <item>
+    <title>新生儿、神经网络与放下 — 创业TM</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/elon-startupt-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/elon-startupt-2026/</guid>
+    <pubDate>Thu, 27 Aug 2026 01:45:08 -0000</pubDate>
+    <description>一位父亲谈论他新生儿的名字、婴儿大脑与人工智能的相似之处，以及他决定舍弃物质财富。</description>
+  </item>
   <item>
     <title>第三代 AI 实验室：自动化 AI 研究 — MTS</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/tworek-mts-2026</link>
@@ -22,11 +50,11 @@
     <description>Dylan Patel 讨论 OpenAI 和 Anthropic 如何集中计算资源，明年新增计算份额将达 40-50%，其经济模式从亏损转向盈利。</description>
   </item>
   <item>
-    <title>设计 Grockbot：从 Cursor 到消费级产品 — 潜水俱乐部</title>
+    <title>设计 Grok Bot：从 Cursor 到消费级产品 — 潜水俱乐部</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/johnbai-diveclub-2026</link>
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/johnbai-diveclub-2026/</guid>
     <pubDate>Wed, 26 Aug 2026 01:37:18 -0000</pubDate>
-    <description>Cursor 纽约办公室首位设计员工 John B，探讨 Grockbot 的设计演变，从内部辩论到最终面向消费者的界面。</description>
+    <description>Cursor 纽约办公室首位设计员工 John B，探讨 Grok Bot 的设计演变，从内部辩论到最终面向消费者的界面。</description>
   </item>
   <item>
     <title>搜索的未来：代理网络与 Parallel 的愿景 — 训练数据</title>
@@ -188,34 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dylanfield-sourcery-2026/</guid>
     <pubDate>Tue, 18 Aug 2026 01:39:04 -0000</pubDate>
     <description>Figma CEO Dylan Field 探讨 Config 大会、AI 时代设计的价值，以及为什么设计远未消亡。</description>
-  </item>
-  <item>
-    <title>Figure AI CEO：人形机器人是世界上最伟大的事业 — Sourcery · 莫莉·奥谢</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/brettadcock-sourcery-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brettadcock-sourcery-2026/</guid>
-    <pubDate>Mon, 17 Aug 2026 03:45:03 -0000</pubDate>
-    <description>Figure AI CEO 探讨人形机器人的巨大潜力、竞争优势以及将年产量提升至百万台的计划。</description>
-  </item>
-  <item>
-    <title>Skild AI：为机器人打造通用大脑 — NVIDIA</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/pathak-nvidia-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/pathak-nvidia-2026/</guid>
-    <pubDate>Mon, 17 Aug 2026 03:45:03 -0000</pubDate>
-    <description>Skild AI 创始人探讨其使命：为任何机器人打造通用大脑，将机器人技术视为数据问题。</description>
-  </item>
-  <item>
-    <title>NVIDIA Jim Fan 专访：从 OpenAI 实习生到具身智能先驱 — Radical Ventures</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/jimfan-radicalv-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jimfan-radicalv-2026/</guid>
-    <pubDate>Mon, 17 Aug 2026 03:45:03 -0000</pubDate>
-    <description>Jim Fan 分享他从 OpenAI 首位实习生到 NVIDIA 具身智能领军人物的历程，揭示其开创性研究背后的原则。</description>
-  </item>
-  <item>
-    <title>设计友好的人形机器人：从科幻到柔和互动 — Relentless</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/berntbornich-relentle-2025</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/berntbornich-relentle-2025/</guid>
-    <pubDate>Mon, 17 Aug 2026 03:45:03 -0000</pubDate>
-    <description>一位机器人设计师分享了他如何将斯堪的纳维亚设计背景和个人体验融入人形机器人，使其亲切柔和，重新定义人与 AI 的交流方式。</description>
   </item>
 </channel>
 </rss>

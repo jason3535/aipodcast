@@ -65,8 +65,8 @@ def load_state():
     const fs=require('fs');const h=fs.readFileSync(process.argv[1],'utf8');
     const EP=JSON.parse(h.match(/const EPISODES = (\[[\s\S]*?\]);\n\n\/\* ====== REAL/)[1]);
     const P=eval('('+h.match(/const PEOPLE = (\{[\s\S]*?\n\});/)[1]+')');
-    const POD=h.match(/const POD_INFO=(\{[\s\S]*?\n\});\nconst POD_SLUG/);
-    const podKeys=POD?[...POD[1].matchAll(/'([^']+)':\{zh:/g)].map(m=>m[1]):[];
+    const POD=h.match(/const POD_INFO\s*=\s*(\{[\s\S]*?\n\});/);
+    const podKeys=POD?Object.keys(JSON.parse(POD[1])):[];
     const vids=EP.map(e=>(e.src||'').split('/').pop());
     const latest={};EP.forEach(e=>{if(!latest[e.pid]||e.date>latest[e.pid])latest[e.pid]=e.date;});
     const people=Object.keys(P).map(pid=>({pid,en:P[pid].en,fields:P[pid].fields,latest:latest[pid]||''}));
@@ -146,15 +146,21 @@ def gate(person, m):
 # ---- 播客台登记(双语简介 + iTunes logo) ----
 def slug(n): return re.sub(r"[^a-z0-9]", "", n.lower())[:14]
 
+# POD_INFO 自 2026-08-26 起是标准 JSON(indent=1,双引号)。增删查一律走 json 解析,
+# 别做字符串/正则拼接 —— 旧的单引号锚点在新格式上全部静默 miss(查重失效、登记写不进去)。
+POD_INFO_RE = re.compile(r"(const POD_INFO\s*=\s*)(\{[\s\S]*?\n\});")
+def pod_info_load(h): return json.loads(POD_INFO_RE.search(h).group(2))
+def pod_info_save(h, pods):
+    return POD_INFO_RE.sub(lambda m: m.group(1) + json.dumps(pods, ensure_ascii=False, indent=1) + ";", h, count=1)
+
 def register_pod(pod_en, desc=""):
     """返回 (pod_zh, 是否新登记)。若已登记返回 (None, False)。
     desc = 该频道某期的视频简介,喂给模型当依据 —— 只给台名会瞎猜:
     "Sourcery with Molly O'Shea"(VC 访谈节目)被先后编成"探索魔法与神秘主义"和"厨师分享食谱"。"""
     h = HTML.read_text(encoding="utf-8")
-    # 存进文件时单引号是转义过的(Molly O\'Shea),查重必须用同样的转义形式,
-    # 否则带撇号的台名永远查不到 → 每轮重复登记一条(实测攒出 3 条重复)。
-    esc = lambda s: s.replace("\\", "\\\\").replace("'", "\\'")
-    if f"'{esc(pod_en)}':{{zh:" in h or f'"{pod_en}":{{zh:' in h:
+    esc = lambda s: s.replace("\\", "\\\\").replace("'", "\\'")  # 仅 POD_LOGO(仍是单引号格式)用
+    pods = pod_info_load(h)
+    if pod_en in pods:
         return None, False
     try:
         info = ds("根据播客/频道名和它某一期的视频简介,产出双语简介 JSON:"
@@ -178,9 +184,9 @@ def register_pod(pod_en, desc=""):
                 Image.open(BytesIO(raw)).convert("RGB").resize((256, 256), Image.LANCZOS).save(ROOT / "assets" / "pods" / f"{slug(pod_en)}.jpg", quality=85)
                 logo = slug(pod_en)
     except Exception: pass
-    entry = (f" '{esc(pod_en)}':{{zh:'{esc(zh)}',host:'{esc(info.get('host', pod_en))}',\n"
-             f"   en:'{esc(info.get('en', pod_en))}',\n   cn:'{esc(info.get('cn', zh))}'}},\n")
-    h = h.replace("const POD_INFO={\n", "const POD_INFO={\n" + entry, 1)
+    pods[pod_en] = {"zh": zh, "host": info.get("host", pod_en),
+                    "en": info.get("en", pod_en), "cn": info.get("cn", zh)}
+    h = pod_info_save(h, pods)
     if logo:
         h = h.replace("const POD_LOGO={\n", "const POD_LOGO={\n   '" + esc(pod_en) + "':'" + logo + "',\n", 1)
     HTML.write_text(h, encoding="utf-8")
@@ -328,7 +334,10 @@ def drop_pod(pod_en):
     h = HTML.read_text(encoding="utf-8")
     e = re.escape(esc(pod_en))
     h2 = re.sub(r"^\s*'" + e + r"':'[^']*',\n", "", h, flags=re.M)                      # POD_LOGO
-    h2, n = re.subn(r"^ '" + e + r"':\{zh:.*?\n(?:.*?\n)*?.*?\},\n", "", h2, flags=re.M)  # POD_INFO
+    pods = pod_info_load(h2)                                                             # POD_INFO
+    if pod_en in pods:
+        del pods[pod_en]
+        h2 = pod_info_save(h2, pods)
     if h2 != h:
         HTML.write_text(h2, encoding="utf-8")
         log(f"  ↩ 回滚新登记节目 {pod_en}（该期收录失败）")
