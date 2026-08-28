@@ -10,7 +10,7 @@ Jure Leskovec→Yuri Lecovitz、Carl Pei→Carl Pay(2026-08-15 用户报,站内�
 
 用法:python3 pipeline/check_guest_names.py [--check]   --check 有发现则退出码 1
 """
-import json, os, re, sys
+import difflib, json, os, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -72,12 +72,13 @@ def main():
         if not f.exists():
             continue
         try:
+            ep = json.loads(f.read_text(encoding="utf-8"))
             buf = []
-            texts(json.loads(f.read_text(encoding="utf-8")), buf)
+            texts(ep, buf)
             blob = "\n".join(buf)
         except Exception:
             continue
-        bad = {}
+        bad, cand = {}, {}
         for m in re.finditer(re.escape(first) + r"\s+([A-Z][A-Za-z'\-]{2,})", blob):
             w = m.group(1)
             if w == last:
@@ -94,8 +95,33 @@ def main():
             d = lev(w.lower(), last.lower())
             if 0 < d <= 2:
                 bad[w] = bad.get(w, 0) + 1
+            else:
+                cand[w] = cand.get(w, 0) + 1     # 距离超阈值,留给下面的「全错」判据
+
+        # 第二道判据(2026-08-28 补):**正确姓氏在整期英文正文里一次都没出现**。
+        # 上面的距离≤2 是为「混用」场景设的(Carl Pei 那期 23 处对、4 处错),阈值必须收紧
+        # 才不误报;但整期从头到尾都写错时没有正确写法作参照,距离往往大得多 ——
+        # 实测漏网的有 Churnney/Cherny(距离 3)、Carllo/Crivello(4)、Del/Dalrymple(7)、
+        # Wong/Huang(首字母还不同)。姓氏零出现本身就是极强的信号,此时可以放宽到相似比例。
+        #
+        # 两条约束缺一不可,都是实测调出来的:
+        #  ① 只看 **transcript 的 en 字段**,不用 texts() 抖出的整份 json ——
+        #     中文段/insights/brief 里的噪音会造出「David Sid」「Qasar You」这种鬼影。
+        #  ② 长度比 0.55-1.7 —— 挡掉截断产生的短词(Cre/Crisan、Sid/Silver 都是 0.5)。
+        # 这两条加上后,全库 607 期报 7 条、逐条人工核对全部为真误听,零误报。
+        en_body = " ".join(t.get("en", "") for s in (ep.get("transcript") or [])
+                           for t in (s.get("turns") or []))
+        ok = len(re.findall(re.escape(first) + r"\s+" + re.escape(last), blob))
+        if len(en_body) >= 500 and not re.search(r"\b" + re.escape(last) + r"\b", en_body):
+            for m in re.finditer(re.escape(first) + r"\s+([A-Z][A-Za-z']{2,16})", en_body):
+                w = m.group(1)
+                if w in COMMON or w == last or w[0].lower() != last[0].lower():
+                    continue
+                lr = len(w) / len(last)
+                if (difflib.SequenceMatcher(None, w.lower(), last.lower()).ratio() >= 0.4
+                        and 0.55 <= lr <= 1.7):
+                    bad[w] = bad.get(w, 0) + 1
         if bad:
-            ok = len(re.findall(re.escape(first) + r"\s+" + re.escape(last), blob))
             hits.append((e["id"], name, bad, ok))
 
     for eid, name, bad, ok in hits:

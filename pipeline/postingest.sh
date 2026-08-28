@@ -55,6 +55,19 @@ node pipeline/check_es_compat.js app.js
 # 错得像模像样,肉眼扫标题发现不了。基线已清到 0,再冒出来就是本轮新引入的。
 # **不能接 | tail** —— 管道的退出码是 tail 的,门禁会永远"通过"(这坑踩过两次)。
 python3 pipeline/check_guest_names.py --check
+# 节目登记:每个 podEn 必须在 POD_INFO 里有简介。audit 里本有这条但只是「警告」,
+# 且 audit 只审当轮新收 id —— 存量漏网的一直没人发现。2026-08-28 揪出两例,
+# 其中「Startup TM」是个中文搬运号,把 2020 年的 Joe Rogan #1470 当成 2026 新访谈收了进来。
+# 无登记 = 要么台名写错、要么来源可疑,一律拦住(全库范围,不只本轮)。
+node -e '
+const fs=require("fs");
+const s=fs.readFileSync("app.js","utf8");
+const info=JSON.parse(s.match(/const POD_INFO\s*=\s*(\{[\s\S]*?\n\});/)[1]);
+const eps=JSON.parse(fs.readFileSync("mcp-data/index.json","utf8")).episodes;
+const bad=[...new Set(eps.map(e=>e.podEn))].filter(p=>!(p in info));
+if(bad.length){console.error("  ✗ 这些节目没有 POD_INFO 登记:"+bad.map(x=>`「${x}」`).join("、")+
+  "\n    → 台名是否与登记键逐字一致?来源是不是搬运号?");process.exit(1);}
+console.log("  节目登记:"+new Set(eps.map(e=>e.podEn)).size+" 个节目全部有简介");'
 if (( ${#ids[@]} )); then
   node pipeline/audit_completeness.js "${ids[@]}"           # 只审本轮新收(全库有存量损坏)
   echo "  完整性审计 ${#ids[@]} 期通过"
