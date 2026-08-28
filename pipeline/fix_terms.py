@@ -62,6 +62,28 @@ RULES = [
     # Jerry Tworek(Core Automation 创始人,原 OpenAI 研究副总裁)→ 听成 Tourk/Torek/Twerk。
     # 2026-08-26 tworek-mts-2026 里 Tourk 4 次、正确写法仅 2 次。姓氏冷门,音译必错。
     (re.compile(BL+r"Jerry\s+T(?:ourk|orek|werk|urek)"+BR, re.I), "Jerry Tworek"),
+    # ---- 嘉宾姓氏误听(2026-08-28 全库扫出 6 处)----
+    # 都出现在主持人开场介绍嘉宾的位置,且各自那期里**正确写法零次出现**(不是混用,是全错)。
+    # 现有 check_guest_names 判据是「首字母相同且编辑距离≤2」,这 6 个全部超阈值而漏网:
+    # Churnney/Cherny 距离 3、Carllo/Crivello 距离 4、Del/Dalrymple 距离 7、Wong/Huang 首字母都不同。
+    # 第二批(同日扫出):判据只在**英文正文**上跑、且要求正确姓氏该期零出现,
+    # 比在全 json 上扫准得多(全 json 会把中文段和 insights 里的噪音也算进来)。
+    (re.compile(BL+r"Fiona\s+Fun"+BR), "Fiona Fung"),
+    (re.compile(BL+r"Philip\s+Kyle"+BR), "Philip Kiely"),
+    (re.compile(BL+r"Mark\s+Pink(?:inis)?"+BR), "Mark Pincus"),
+    (re.compile(BL+r"Travis\s+Kanic"+BR), "Travis Kalanick"),
+    (re.compile(BL+r"Jerry\s+Torque"+BR), "Jerry Tworek"),
+    (re.compile(BL+r"Matt\s+Sers"+BR), "Matt Sellers"),
+    # Baseten(AI 推理平台)→ 听成 "Base 10"。philipkiely 那期主持人介绍时说的就是它。
+    # BR 只挡字母不挡数字,"Base 100" 会被替成 "Baseten0" —— 必须显式排除后随数字。
+    (re.compile(BL+r"Base\s+10(?![\d.])"+BR), "Baseten"),
+    (re.compile(BL+r"Boris\s+Churnn?ey"+BR, re.I), "Boris Cherny"),
+    (re.compile(BL+r"Flo\s+Car+l+o"+BR, re.I), "Flo Crivello"),
+    (re.compile(BL+r"Noam\s+Seagull"+BR, re.I), "Noam Segal"),
+    (re.compile(BL+r"Jensen\s+Wong"+BR, re.I), "Jensen Huang"),
+    (re.compile(BL+r"Scott\s+Woo"+BR, re.I), "Scott Wu"),
+    # davidad 本名 David Dalrymple,自动字幕听成 "David Del Rimple"/"David Del"
+    (re.compile(BL+r"David\s+Del\s*Rimple"+BR, re.I), "David Dalrymple"),
     # Grok Bot(xAI 2026-08-11 发布的常驻 agent 产品)→ 听成 Grockbot/Grokbot/Grock Bot。
     # johnbai-diveclub-2026 整期 38 处全错,官方视频简介与封面均作 "Grok Bot"(两个词)。
     (re.compile(BL+r"Groc?kbot"+BR, re.I), "Grok Bot"),

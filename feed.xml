@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Thu, 27 Aug 2026 01:45:08 -0000</lastBuildDate>
+  <lastBuildDate>Fri, 28 Aug 2026 01:37:24 -0000</lastBuildDate>
+  <item>
+    <title>Jeff Dean 与 Dan Boneh：AI 的新前沿 — 亚裔美国学者论坛</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/jeffdean-asianame-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jeffdean-asianame-2026/</guid>
+    <pubDate>Fri, 28 Aug 2026 01:37:24 -0000</pubDate>
+    <description>Jeff Dean 与 Dan Boneh 探讨 AI 的演进与未来，从专家混合到斯坦福的新篇章。</description>
+  </item>
   <item>
     <title>从怀疑到拥抱：DHH 谈 AI 革命 — Lex Fridman 播客</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/dhh-lexfridm-2026</link>
@@ -20,20 +27,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/animaanandkumar-latentsp-2026/</guid>
     <pubDate>Thu, 27 Aug 2026 01:45:08 -0000</pubDate>
     <description>Anima Anandkumar 讨论了神经算子如何，尽管最初受到气象学家的质疑，却实现了与传统模型相当的准确性，但速度快了数万倍，从而改变了 AI 在物理建模中的作用。</description>
-  </item>
-  <item>
-    <title>从聊天到完成：面向企业家的 AI 代理 — 企业家组织</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/ethanhe-entrepre-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ethanhe-entrepre-2026/</guid>
-    <pubDate>Thu, 27 Aug 2026 01:45:08 -0000</pubDate>
-    <description>Ethan King 讨论了 AI 从聊天机器人到能执行任务的代理的转变，以及为什么 Claude 已经超越了 ChatGPT。</description>
-  </item>
-  <item>
-    <title>新生儿、神经网络与放下 — 创业TM</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/elon-startupt-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/elon-startupt-2026/</guid>
-    <pubDate>Thu, 27 Aug 2026 01:45:08 -0000</pubDate>
-    <description>一位父亲谈论他新生儿的名字、婴儿大脑与人工智能的相似之处，以及他决定舍弃物质财富。</description>
   </item>
   <item>
     <title>第三代 AI 实验室：自动化 AI 研究 — MTS</title>
@@ -216,6 +209,13 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dylanfield-sourcery-2026/</guid>
     <pubDate>Tue, 18 Aug 2026 01:39:04 -0000</pubDate>
     <description>Figma CEO Dylan Field 探讨 Config 大会、AI 时代设计的价值，以及为什么设计远未消亡。</description>
+  </item>
+  <item>
+    <title>Figure AI CEO：人形机器人是世界上最伟大的事业 — Sourcery · 莫莉·奥谢</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/brettadcock-sourcery-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brettadcock-sourcery-2026/</guid>
+    <pubDate>Mon, 17 Aug 2026 03:45:03 -0000</pubDate>
+    <description>Figure AI CEO 探讨人形机器人的巨大潜力、竞争优势以及将年产量提升至百万台的计划。</description>
   </item>
 </channel>
 </rss>

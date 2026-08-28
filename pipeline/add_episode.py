@@ -119,6 +119,99 @@ def get_subs(url):
     return ""
 
 
+def fetch_transcript(url):
+    """从网页速记稿取正文(财报电话会等**无字幕但有权威文字稿**的场合)。
+
+    2026-08-28 加:NVIDIA Q2 FY2027 财报会只有 Benzinga 的转播视频且**没有任何字幕轨**,
+    但存在带发言人标记的完整速记稿。此前 Apple Q3 那期(Six Colors 稿)是手工做的,
+    这是第 5 期财报会 —— 与其再写一次性脚本,不如把这条入口固化下来。
+
+    与自动字幕的本质区别:速记稿**自带发言人标记**,比模型猜的准得多,必须原样保留
+    (财报会有 CFO + IR + 接线员 + 8-9 位分析师,靠 Host/Guest 二分法必然标错)。
+    """
+    # r.jina.ai 国内直连被重置,必须走 Clash(与 yt-dlp 同;DeepSeek 反过来要绕代理)。
+    # 不能依赖环境变量:macOS 上 urllib 的 getproxies() 会优先读系统配置,export 未必生效。
+    px = os.environ.get("HTTPS_PROXY") or "http://127.0.0.1:7890"
+    op = urllib.request.build_opener(urllib.request.ProxyHandler({"http": px, "https": px}))
+    raw = op.open(urllib.request.Request(
+        "https://r.jina.ai/" + url, headers={"User-Agent": "Mozilla/5.0"}), timeout=120).read().decode("utf8", "ignore")
+    i = raw.find("Markdown Content:")
+    body = raw[i + len("Markdown Content:"):] if i > 0 else raw
+
+    # 只取正文段:速记稿站点在正文前有「参会者名单」(每行都长得像发言人行,会产出一堆空块)、
+    # 正文后有免责声明与推荐位。有 Presentation/Prepared Remarks 锚点就从那里开始。
+    for anchor in ("## Presentation", "## Prepared Remarks", "Read the full transcript"):
+        j = body.find(anchor)
+        if j > 0:
+            body = body[j + len(anchor):]
+            break
+
+    out, cur = [], None
+    for ln in body.splitlines():
+        ln = ln.strip()
+        if not ln:
+            continue
+        # 广告位/导航/免责声明:插在正文里,不剔除会被当成发言内容翻译。命中后 cur 置空,
+        # 免得它后面的推荐文章标题被挂到最后一位发言人名下。
+        if re.match(r"^\*{0,2}(Advertisement|Discover more|Sponsored|Related|Share this|Disclaimer|"
+                    r"Latest posts|Recommended|Categories|Search this site|Follow us|Follow on X)\b", ln, re.I):
+            cur = None; continue
+        # 发言人行的两种变体(同一份稿里混用):
+        #   `**Colette Kress** — _Executive Vice President..._`  破折号前有空格、头衔带下划线
+        #   `**Jensen Huang**— President and Chief Executive Officer`  紧跟破折号、头衔裸文本
+        # 2026-08-28 只写了第一种,结果 Jensen 的 8 段回答全被并进上一位分析师的 turn ——
+        # 正是站点最忌讳的「把两个人的话合并」。加新来源前务必把该稿所有 ** 开头行打印一遍。
+        m = re.match(r"^\*\*([A-Z][A-Za-z .'’\-]{2,40})\*\*\s*[—–-]?\s*_?[^_\n]{0,80}_?\s*$", ln)
+        if m:
+            cur = m.group(1).strip()
+            out.append(f"\n[{cur}]: ")
+            continue
+        if ln.startswith("#") or ln.startswith("!["):
+            continue
+        ln = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", ln)   # 去 markdown 链接,留锚文本
+        ln = ln.replace("**", "").replace("__", "")
+        if cur:
+            out.append(ln + " ")
+    text = re.sub(r"[ \t]+", " ", "".join(out)).strip()
+    text = re.sub(r"\n{2,}", "\n", text)
+    # 去掉没有正文的空发言块(名单残留/连续两个发言人行)
+    text = re.sub(r"\n\[[^\]]+\]:\s*(?=\n|$)", "", text)
+    return text
+
+
+def chunks_scripted(t, size=7000):
+    """速记稿分块:只在发言人边界切,且每块开头补上当前发言人。
+
+    2026-08-28 事故:NVIDIA 那期 CFO 的陈述有 2906 词,被通用 chunks() 从中间切开,
+    后续块开头没有 `[Colette Kress]:` 标记 → 模型从正文里的产品名 "Vera" 幻觉出一个
+    叫 "Vero" 的发言人,7 节全部归错人。发言人标记是速记稿唯一的权威信息,不能被切没。
+    """
+    lines = [l for l in t.split("\n") if l.strip()]
+    out, cur, cur_spk, carry = [], "", None, None
+    for ln in lines:
+        m = re.match(r"^\[([^\]]+)\]:\s*(.*)$", ln, re.S)
+        if m:
+            cur_spk = m.group(1)
+        # 单个发言过长:内部按句子切,每片都重新冠上发言人名
+        piece = ln
+        while len(piece) > size:
+            k = piece.rfind(". ", size // 2, size)
+            k = k + 1 if k != -1 else size
+            head, piece = piece[:k], piece[k:]
+            if cur:
+                out.append(cur); cur = ""
+            out.append((f"[{cur_spk}]: " if not head.lstrip().startswith("[") else "") + head)
+            piece = f"[{cur_spk}]: (continued) " + piece.lstrip()
+        if len(cur) + len(piece) + 1 > size and cur:
+            out.append(cur)
+            cur = (f"[{cur_spk}]: (continued) " if not piece.lstrip().startswith("[") else "") + piece
+        else:
+            cur = (cur + "\n" + piece) if cur else piece
+    if cur.strip():
+        out.append(cur)
+    return out
+
+
 def chunks(t, size=7000):
     out, i, n = [], 0, len(t)
     while i < n:
@@ -133,7 +226,41 @@ def chunks(t, size=7000):
     return out
 
 
-def translate(text, guest):
+def translate(text, guest, scripted=False):
+    if scripted:
+        # 速记稿模式:输入自带 [发言人]: 标记。自动字幕那套「猜说话人」的规则在这里全是负作用
+        # —— 财报会有 CFO/IR/接线员/8-9 位分析师,套 Host-Guest 二分法必然把 CFO 标成主持人。
+        sec_sys = (f"""你是 AI Podcast 的转录编辑兼译者。输入是**带发言人标记的正式速记稿**
+(格式 `[发言人姓名]: 正文`),常见于财报电话会。整理成按主题分节的中英对照阅读稿,输出 JSON。
+- 【发言人铁律】spk **原样沿用方括号里的姓名**,绝不改写、绝不猜、绝不合并成 Host/Guest。
+  姓名要写全(如 "Joseph Moore" 不能简写成 "Joe");标了 (continued) 的是同一人上一块的延续,
+  沿用该姓名,**绝不能从正文里的产品名或公司名臆造一个发言人**。
+  分析师提问保留其本名。接线员保留 "Operator"。速记稿的标记是权威的,不要用语气去推翻它。
+- 不改原意、不杜撰、不省略;可清理重复语气词与口播噪音,合并同一人被拆碎的句子。
+- 按主题切小节(如财务摘要、数据中心业务、供应链、分析师问答等),sec 用简短英文短语。
+- 每个 turn 同时给 en(清理后英文)和 zh(地道中文)。严格用术语表。
+- 财务数字、产品代号、公司名必须逐字保真,数字不得改写或换算。
+- zh 一律使用全角中文标点（，。？！；：、弯引号“”、括号（））,不得混用半角 , ; : ? ! ( ) 或直引号 ";中英文之间、中文与数字之间加一个半角空格（如「营收 960 亿美元」）。
+- 只输出 JSON:{{"ts":[{{"sec":"...","turns":[{{"spk":"...","en":"...","zh":"..."}}]}}]}}
+术语表:
+{GT}""")
+        cks = chunks_scripted(text)
+        ts = [None] * len(cks)
+        errs = {}
+        with ThreadPoolExecutor(max_workers=5) as ex:
+            futs = {ex.submit(call, sec_sys, "速记稿:\n" + c): i for i, c in enumerate(cks)}
+            for f in as_completed(futs):
+                i = futs[f]
+                try: ts[i] = f.result().get("ts", [])
+                except Exception as e: ts[i] = []; errs[i] = str(e)[:160]
+        if errs:
+            for i in sorted(errs): print(f"  ✗ 第 {i+1}/{len(cks)} 块失败:{errs[i]}", file=sys.stderr)
+            raise RuntimeError(f"{len(errs)}/{len(cks)} 块翻译失败,中止(不写入任何文件)")
+        empty = [i for i, p in enumerate(ts) if not p]
+        if empty:
+            raise RuntimeError(f"第 {[i+1 for i in empty]} 块翻译返回空,中止(不写入任何文件)")
+        return [s for part in ts for s in (part or [])]
+
     sec_sys = (f"""你是 AI Podcast 的播客转录编辑兼译者。输入是 AI 人物访谈的英文自动字幕。
 整理成「按主题分节、按发言人分段」的中英对照阅读稿,输出 JSON。
 - 清理口语、修自动字幕错词、合并碎句;不改原意,不杜撰。
@@ -205,19 +332,48 @@ def main():
     ap.add_argument("--date", default=""); ap.add_argument("--min", type=int, default=0)
     ap.add_argument("--title-en", default=""); ap.add_argument("--title-zh", default="")
     ap.add_argument("--sub-en", default=""); ap.add_argument("--sub-zh", default="")
+    ap.add_argument("--transcript-url", default="",
+                    help="从网页速记稿取正文(无字幕的财报电话会等)。给了它就不走 yt-dlp,"
+                         "--url 仍作为读者可回溯的来源链接;--date/--min 此时必须显式给。")
     a = ap.parse_args()
 
-    vid = vid_of(a.url)
-    print(f"[1/5] 元数据 + 字幕 {vid}", file=sys.stderr)
-    ytitle, ymin, ydate = yt_meta(a.url)
-    text = get_subs(a.url)
-    if len(text) < 2000:
-        sys.exit(f"字幕不足({len(text)} 字符),无法生成。")
+    scripted = bool(a.transcript_url)
+    if scripted:
+        vid = re.sub(r"[^a-z0-9]+", "", a.pid.lower())[:12] + "-" + re.sub(r"[^a-z0-9]+", "", a.pod_en.lower())[:10]
+        print(f"[1/5] 速记稿 {a.transcript_url}", file=sys.stderr)
+        ytitle, ymin, ydate = "", 0, ""
+        text = fetch_transcript(a.transcript_url)
+        if len(text) < 2000:
+            sys.exit(f"速记稿正文不足({len(text)} 字符),无法生成。")
+        if text.count("[") < 4:
+            sys.exit(f"速记稿里只解析出 {text.count('[')} 个发言人标记,格式不符预期,中止。")
+    else:
+        vid = vid_of(a.url)
+        print(f"[1/5] 元数据 + 字幕 {vid}", file=sys.stderr)
+        ytitle, ymin, ydate = yt_meta(a.url)
+        text = get_subs(a.url)
+        if len(text) < 2000:
+            sys.exit(f"字幕不足({len(text)} 字符),无法生成。")
 
-    print(f"[2/5] 翻译({len(text)} 字符)", file=sys.stderr)
-    ts = translate(text, a.guest)
-    print(f"[3/5] 共识/反共识", file=sys.stderr)
-    ins = insights(text)
+    # 后面还有 fields 白名单等门禁,挂了就得重跑;翻译是最贵的一步(整期 8 块 × DeepSeek),
+    # 已有缓存就直接复用。2026-08-28:NVIDIA 那期正因 --fields 未登记被拦,翻译白烧一次。
+    cache = TRANS / f"ep_{vid}.json"
+    cached = None
+    if cache.exists():
+        try:
+            c = json.load(open(cache, encoding="utf-8"))
+            if c.get("ts") and c.get("insights"):
+                cached = c
+        except Exception:
+            pass
+    if cached:
+        print(f"[2/5] 复用已有翻译缓存 {cache.name}({len(cached['ts'])} 节)", file=sys.stderr)
+        ts, ins = cached["ts"], cached["insights"]
+    else:
+        print(f"[2/5] 翻译({len(text)} 字符)", file=sys.stderr)
+        ts = translate(text, a.guest, scripted=scripted)
+        print(f"[3/5] 共识/反共识", file=sys.stderr)
+        ins = insights(text)
     tEn, tZh, sEn, sZh = a.title_en, a.title_zh, a.sub_en, a.sub_zh
     if not (tEn and tZh and sEn and sZh):
         print(f"[3.5] 自动标题/导语", file=sys.stderr)
