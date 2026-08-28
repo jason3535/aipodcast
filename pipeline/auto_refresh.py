@@ -69,7 +69,10 @@ def load_state():
     const podKeys=POD?Object.keys(JSON.parse(POD[1])):[];
     const vids=EP.map(e=>(e.src||'').split('/').pop());
     const latest={};EP.forEach(e=>{if(!latest[e.pid]||e.date>latest[e.pid])latest[e.pid]=e.date;});
-    const people=Object.keys(P).map(pid=>({pid,en:P[pid].en,fields:P[pid].fields,latest:latest[pid]||''}));
+    // ti/bio 是给闸门做**同名核验**用的(2026-08-28 加):光有名字判不出「视频里这个 Ethan
+    // 是不是站内那个 Ethan」—— ethanhe 名下曾混进 Ethan Mollick 和 Ethan King 各一期。
+    const people=Object.keys(P).map(pid=>({pid,en:P[pid].en,fields:P[pid].fields,latest:latest[pid]||'',
+      ti:P[pid].tiEn||'',bio:(P[pid].bioEn||'').slice(0,260)}));
     process.stdout.write(JSON.stringify({people,vids,podKeys}));
     '''
     out = subprocess.run(["node", "-e", js, str(HTML)], capture_output=True, text=True)
@@ -133,12 +136,21 @@ GATE_SYS = ("你是 AI Podcast 选题编辑。判断给定 YouTube 视频是否�
     "④ 必须是**围绕该人物的完整单集**。财经/新闻日播栏目的整档节目(CNBC Squawk Box/Pod、Bloomberg 等,"
     "一集里混多段市场新闻 + 多位不相干嘉宾,该人物只占其中一段)→ 弃,哪怕标题只写了他。"
     "简介里出现当日新闻串场、多位嘉宾并列、栏目日期编号(如 08/17/26)都是这类节目的信号。"
+    "⑤ **同名核验**:候选是按人名搜出来的,重名极常见。给出了「档案」时,必须确认视频里的人"
+    "就是档案里那一个 —— 比对机构、职务、作品、所在领域。名字一致但身份对不上就弃,"
+    "并在 reason 里写明视频里的是谁。宁可漏收,也不能把另一个同名者的访谈挂到这个人名下。"
+    "(实例:站内 Ethan He 是 xAI Grok Imagine/前 NVIDIA Cosmos,但搜「Ethan He」搜出来的"
+    "Ethan Mollick(沃顿教授)和 Ethan King(面向企业家的 AI 工具讲师)都曾被误收。)"
     "只输出 JSON:{\"keep\":true/false,\"reason\":\"简短中文理由\"}")
 
-def gate(person, m):
+def gate(person, m, profile=""):
     try:
-        r = ds(GATE_SYS, f"人物:{person}\n标题:{m['t']}\n频道:{m['ch']}\n时长:{round(m['dur']/60)}分钟\n"
-                         f"日期:{m['date']}\n简介:{m.get('desc','')[:400]}")
+        u = f"人物:{person}\n"
+        if profile:
+            u += f"档案(站内登记,以此核验是否同一人):{profile}\n"
+        u += (f"标题:{m['t']}\n频道:{m['ch']}\n时长:{round(m['dur']/60)}分钟\n"
+              f"日期:{m['date']}\n简介:{m.get('desc','')[:400]}")
+        r = ds(GATE_SYS, u)
         return bool(r.get("keep")), r.get("reason", "")
     except Exception as e:
         return False, "gate 失败:" + str(e)[:40]
@@ -446,7 +458,8 @@ def discover(people, vids, days, per_person_cap=1):
         picks.sort(key=lambda x: x["date"], reverse=True)
         kept = []
         for m in picks:
-            ok, why = gate(name, m)
+            prof = "；".join(x for x in [p.get("ti", ""), p.get("bio", "")] if x)
+            ok, why = gate(name, m, prof)
             log(f"  {pid:12} {m['date']} [{round(m['dur']/60)}m] {m['t'][:48]} → {'收' if ok else '弃'}({why[:30]})")
             if ok:
                 kept.append({"pid": pid, "vid": m["vid"], "date": f"{m['date'][:4]}-{m['date'][4:6]}-{m['date'][6:]}",

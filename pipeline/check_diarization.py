@@ -38,6 +38,9 @@ TO_EDITOR = re.compile(r'(这|那)(段|部分|一段)(请|要)?(保留|留着|�
 # ⑥ 身份事实:自称「常住/我住的地方」。注意——「住那儿的人质问对方久未到访」是正常组合,不是矛盾;
 # 真正的矛盾是**两个不同的说话人都自称常住同一地**,只可能有一个是真的。
 RESIDE = re.compile(r'我(一直)?(住在|生活在|常住)|我一直在那里|我一直在居住的(国家|地方|城市)|我(就)?住那儿')
+# 主持人/接线员管理提问队列的措辞(多人场合专用):这类「你还有后续问题吗」是串场,
+# 不是把问答并给了一人。2026-08-28 财报会三期因此误报。
+MODERATE = re.compile(r"(后续问题|还有(?:什么)?问题|下一(?:个|位)问题|回答了(?:你|您)的问题|请提问|接下来(?:我们)?(?:请|来自)|follow[- ]?up)")
 
 def _in_quote(zh, pos):
     """pos 处是否落在引号内 —— 转述他人原话里的问句不是插话,别误报。"""
@@ -51,6 +54,23 @@ def scan(eid):
         print(f"  ✗ 找不到 {f}", file=sys.stderr); return 0
     d = json.load(open(f, encoding="utf-8"))
     guest_names = {t.get('spk') for s in d.get('transcript', []) for t in s.get('turns', [])} - {'Host', None}
+    # 「嘉宾在提问」这条判据只对**主嘉宾**成立。多人场合(财报电话会:接线员 + IR + CFO +
+    # 8-9 位分析师;圆桌)里,具名第三方提问恰恰是正确标注,套上去全是误报 ——
+    # 2026-08-28 英伟达那期报了 Timothy Arcuri / Ben Reitzes 两处,Alphabet 那期报了
+    # 分析师 Ron Josey 一处,全是假的。
+    # 主嘉宾 = spk 与该期登记人物同名(spk 常只写名,如 "Sundar" 对 "Sundar Pichai")。
+    person = (d.get("person") or "").strip()
+    if not person:
+        import re as _re
+        _s = (ROOT / "app.js").read_text(encoding="utf-8")
+        _m = _re.search(r"'" + _re.escape(d.get("pid", "\x00")) + r"':\{en:'([^']+)'", _s)
+        person = _m.group(1) if _m else ""
+    pl = person.lower().split()
+    def is_main_guest(spk):
+        s = (spk or "").lower()
+        return bool(s) and (s in person.lower() or any(w == s for w in pl)
+                            or person.lower() in s)
+    multi = len(guest_names) >= 4      # 多人场合才需要区分,双人访谈维持原行为
     hits = 0
     reside_by = {}   # ⑥ 身份事实:哪些 spk 自称常住(>1 人自称 = 有人被标错)
     for si, s in enumerate(d.get('transcript', [])):
@@ -59,6 +79,9 @@ def scan(eid):
             zh = t.get('zh', '') or ''
             spk = t.get('spk', '')
             if spk != 'Host':
+                # 多人场合里,只有主嘉宾提问才反常;分析师/其他与会者提问是正常标注
+                if multi and not is_main_guest(spk):
+                    continue
                 head_hit = bool(Q_HEAD.search(zh[:80]))
                 you_hit = bool(Q_YOU.search(zh))
                 if head_hit or (you_hit and len(zh) < 400):
@@ -98,6 +121,10 @@ def scan(eid):
         for ti in range(len(turns) - 1):
             a, b = turns[ti], turns[ti + 1]
             if a.get('spk') == b.get('spk') and (a.get('zh', '').rstrip().endswith(('？', '?'))):
+                # 多人场合的接线员串场:「谢谢。Colin,你还有后续问题吗?」后面接
+                # 「下一个问题来自…」,同一人连着说两轮是正常的,不是把问答并给了一人。
+                if multi and MODERATE.search(a.get('zh', '')[-60:]):
+                    continue
                 hits += 1
                 print(f"  ⚠️ 疑似合并/延续 {eid} sec{si}[{ti}-{ti+1}] 同 spk 前问后续: {a.get('zh','')[-40:]}")
     # ⑥ 两个以上说话人都自称常住 → 只可能有一个是真的,附近数轮多半整体错位
