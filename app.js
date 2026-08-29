@@ -2619,7 +2619,11 @@ function vHome(){
   <section class="wrap reveal" style="padding-top:8px">
     <div class="eyebrow">People · 人物</div>
     <h2 class="title">${Object.keys(PEOPLE).length} 位 AI 人物</h2>
-    <div class="ppl-grid home-ppl" style="margin-top:22px">${pplOrder().map(pplCard).join('')}<div class="ppl-card ppl-more" onclick="go('#/people')"><span class="pm-n">+${Math.max(0,Object.keys(PEOPLE).length-17)}</span><div class="n">查看全部人物</div><div class="cnt">共 ${Object.keys(PEOPLE).length} 位 →</div></div></div>
+    <div class="ppl-grid home-ppl" style="margin-top:22px">${pplOrder().map(pplCard).join('')}<div class="ppl-card ppl-more" onclick="go('#/people')"><!--
+      圆圈里原来写死「+(人物总数减 17)」,但首页到底列几位是 CSS 按宽度定的(≤640px 17 位、
+      更宽 23 位),JS 算不出来 —— 桌面上那个数一直是错的。改成中性符号,准确总数在下面那行。
+      注意:这段在模板字符串里,写美元花括号会被当成插值,别加。
+   --><span class="pm-n">···</span><div class="n">查看全部人物</div><div class="cnt">共 ${Object.keys(PEOPLE).length} 位 →</div></div></div>
   </section>
   ${footer()}`;
 }
