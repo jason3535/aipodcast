@@ -795,10 +795,20 @@ if(m)m.content=document.documentElement.dataset.theme==='dark'?'#0e0e10':'#fcfcf
 
 .ppl-more{display:none}
 .pm-n{width:68px;height:68px;border-radius:50%;background:var(--surface-2);border:1px dashed var(--line);color:var(--accent);font-size:19px;font-weight:600;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+/* 首页人物墙:只列前若干位 + 一张「更多」卡。
+   ⚠️ 2026-08-29 之前这两条只写在 @media(max-width:640px) 里,>640px 完全没生效:
+   桌面铺开全部 275 人、首页高 20,317px(23 屏),平板 3 列更长、26,822px(30 屏),
+   而「更多」卡还被上面那条默认的 .ppl-more{display:none} 藏着 —— 设计意图明摆着,
+   只是断点写窄了。手机上一直是对的,所以没人发现。
+   .ppl-grid 是 repeat(auto-fill,minmax(190px,1fr)) 流式列数,>640px 实测 3~4 列,
+   所以上限取 23+更多=24(3 列 8 行 / 4 列 6 行都是整行);≤640px 保持 17+更多=18(2 列 9 行)。
+   「更多」卡是最后一个子元素,会被 nth-child 一起隐藏,所以放行那条**必须排在所有隐藏规则之后**
+   (同特异度靠顺序决胜),挪到媒体查询前面就会在手机上消失。 */
+.home-ppl .ppl-card:nth-child(n+24){display:none}
 @media(max-width:640px){
   .home-ppl .ppl-card:nth-child(n+18){display:none}
-  .home-ppl .ppl-card.ppl-more{display:block}
 }
+.home-ppl .ppl-card.ppl-more{display:block}
 
 .st-h2{font-size:21px;font-weight:700;margin:26px 0 16px;letter-spacing:-.01em}
 
@@ -883,7 +893,7 @@ if(m)m.content=document.documentElement.dataset.theme==='dark'?'#0e0e10':'#fcfcf
 <button class="totop" id="toTop" title="回到顶部" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l6-6 6 6"/></svg></button>
 <script>addEventListener('scroll',()=>{const t=document.getElementById('toTop');if(t)t.classList.toggle('on',scrollY>700);},{passive:true});</script>
 
-<script src="app.js?v=67f457984a" defer></script>
+<script src="app.js?v=c8acb68b3c" defer></script>
 <script>/* SW 只在生产域名注册:本地预览(http/127.0.0.1)不注册,避免把 localhost 缓存搞混 */
 if('serviceWorker' in navigator&&/jasonlin\.tech$/.test(location.hostname))addEventListener('load',function(){navigator.serviceWorker.register('/sw.js')});</script>
 <!--SITE_INDEX_START--><details class="site-index"><summary>站点地图 · Sitemap（275 位人物 · 607 期）</summary>
