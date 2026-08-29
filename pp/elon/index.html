@@ -30,4 +30,38 @@
 <h2>收录的 15 期访谈</h2>
 <ul class="ep-list"><li><a href="https://aipodcast.jasonlin.tech/e/elon-spacexal-2026/">SpaceX：从猎鹰 1 号到星舰</a> — SpaceX 全员大会 · 2026-08-11</li><li><a href="https://aipodcast.jasonlin.tech/e/elon-spacexq2-2026/">SpaceX 2026 年第二季度财报电话会议：星舰、星链与 AI 雄心</a> — SpaceX Q2 2026 财报电话会议 · 2026-08-04</li><li><a href="https://aipodcast.jasonlin.tech/e/elon-theecono-2026/">埃隆·马斯克预测 AI 将在 2030 年代超越人类智能，带来丰裕时代</a> — 经济学人 · 2026-07-29</li><li><a href="https://aipodcast.jasonlin.tech/e/elon-teslaq22-2026/">特斯拉 2026 年第二季度：创纪录交付、FSD 需求激增与 Robo Taxi 扩张</a> — 特斯拉 Q2 2026 财报电话会议 · 2026-07-22</li><li><a href="https://aipodcast.jasonlin.tech/e/elon-seancste-2026/">埃隆·马斯克谈为人父、人工智能与极简主义</a> — Sean Stephens · 2026-07-02</li><li><a href="https://aipodcast.jasonlin.tech/e/elon-dwarkesh-2026/">为什么 AI 数据中心将在 36 个月内搬到太空</a> — Dwarkesh 播客 · 2026-02-05</li><li><a href="https://aipodcast.jasonlin.tech/e/elon-moonshot-2026/">驾驭 AI 海啸：从星际迷航到终结者</a> — Moonshots（彼得·戴曼迪斯） · 2026-01-06</li><li><a href="https://aipodcast.jasonlin.tech/e/elon-thejoero/">埃隆·马斯克谈 AI、机器人与未来</a> — The Joe Rogan Experience · 2025-10-31</li><li><a href="https://aipodcast.jasonlin.tech/e/elon-allinpod-2025/">擎天柱：有史以来最伟大的产品？</a> — All-In 播客 · 2025-09-10</li><li><a href="https://aipodcast.jasonlin.tech/e/elon-ycombina-2025/">埃隆·马斯克谈智能大爆炸与创造有用之物</a> — Y Combinator · 2025-06-19</li><li><a href="https://aipodcast.jasonlin.tech/e/elon-thejoero-2025/">乔·罗根与 AI 格洛克讨论诺克斯堡、假新闻和失控 AI</a> — The Joe Rogan Experience · 2025-02-28</li><li><a href="https://aipodcast.jasonlin.tech/e/elon-thejoero-2024/">电子游戏提升手术技能：研究显示错误减少 32%</a> — The Joe Rogan Experience · 2024-11-04</li><li><a href="https://aipodcast.jasonlin.tech/e/elon-lexfridm-2024/">埃隆·马斯克谈 Neuralink 首例人体植入与脑机接口的未来</a> — Lex Fridman 播客 · 2024-08-02</li><li><a href="https://aipodcast.jasonlin.tech/e/elon-lexfridm/">埃隆·马斯克谈战争、人性与中东和平</a> — Lex Fridman 播客 · 2023-11-09</li><li><a href="https://aipodcast.jasonlin.tech/e/elon-lexfridm-2021/">埃隆·马斯克谈 SpaceX 历史性发射与太空探索的未来</a> — Lex Fridman 播客 · 2021-12-28</li></ul>
 <footer>© AI Podcast · <a href="https://aipodcast.jasonlin.tech/">aipodcast.jasonlin.tech</a> — 双语播客全文阅读。转录/翻译仅供学习评论，版权归原播客与权利人，应要求即下架(linzheng3535@gmail.com)。</footer>
-</div></body></html>
+</div><script>(function(){try{
+var UA=navigator.userAgent||'';
+if(/bot|crawl|spider|slurp|headless|lighthouse|bingpreview|facebookexternalhit/i.test(UA))return;
+var U='https://stats.jasonlin.tech',DWELL=4000;
+var LS=null;try{LS=window.localStorage}catch(_){}
+var aid='';
+try{
+  aid=(LS&&LS.aid)||'';
+  if(!aid){var i,n;
+    try{var u=new Uint8Array(10);crypto.getRandomValues(u);
+        for(i=0;i<10;i++){n=u[i].toString(16);aid+=n.length<2?'0'+n:n;}}
+    catch(_){for(i=0;i<20;i++)aid+=Math.floor(Math.random()*16).toString(16);}
+    if(LS)LS.aid=aid;}   /* 与 SPA 共用同一个 aid:先落静态页再点进互动版的人算 1 个 UV */
+}catch(_){aid='';}
+var sid='';try{if(LS&&LS.syncSidFor&&LS.syncSidFor===LS.syncCode)sid=LS.syncSid||'';}catch(_){}
+var ref='';try{ref=(document.referrer||'').replace(/^[a-z]+:\/\//i,'').split('/')[0];}catch(_){}
+var dev=/Mobi|Android|iPhone|iPad|iPod/i.test(UA)?'mobile':'desktop';
+function post(type){
+  try{
+    var body=JSON.stringify({type:type,path:location.pathname.replace(/index\.html$/,''),ua:dev,ref:ref,sid:sid,aid:aid});
+    if(navigator.sendBeacon&&typeof Blob!=='undefined')navigator.sendBeacon(U,new Blob([body],{type:'text/plain'}));
+    else{var x=new XMLHttpRequest();x.open('POST',U,true);x.setRequestHeader('Content-Type','text/plain');x.send(body);}
+  }catch(_){}
+}
+post('view');                                  /* 打开即发,口径不变 */
+var sent=false,acc=0,since=null,timer=null;    /* 以下是 read:攒够可见时长或等到一次交互 */
+function read(){if(sent)return;sent=true;if(timer){clearTimeout(timer);timer=null;}post('read');}
+function pause(){if(since!==null){acc+=Date.now()-since;since=null;}if(timer){clearTimeout(timer);timer=null;}}
+function resume(){if(sent||since!==null)return;since=Date.now();timer=setTimeout(read,Math.max(0,DWELL-acc));}
+function vis(){if(document.visibilityState==='visible')resume();else pause();}
+try{document.addEventListener('visibilitychange',vis);}catch(_){}
+var evs=['scroll','pointerdown','mousedown','keydown','touchstart'];
+for(var k=0;k<evs.length;k++){try{window.addEventListener(evs[k],read,true);}catch(_){}}
+vis();
+}catch(_){}})()</script></body></html>

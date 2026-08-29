@@ -5,9 +5,11 @@ const fs=require('fs'),path=require('path'),crypto=require('crypto');
 const ROOT=path.resolve(__dirname,'..'),SITE='https://aipodcast.jasonlin.tech';
 const h=fs.readFileSync(path.join(ROOT,'app.js'),'utf8');
 const EPISODES=JSON.parse(h.match(/const EPISODES = (\[[\s\S]*?\]);\n\n\/\* ====== REAL/)[1]);
-// 合回 split_extra 移走的 insights/brief(静态页核心观点区块依赖;2026-07 曾因缺此步而空渲染)
+// 合回 split_* 移走的 insights/brief/导语(静态页的核心观点区块与「本期速览」依赖;
+// 2026-07 曾因缺此步而空渲染,2026-08-29 导语移出后同理 —— postingest 末尾有门禁抽查)
 try{const extra=JSON.parse(fs.readFileSync(path.join(ROOT,'data','ep-extra.json'),'utf8'));
-  EPISODES.forEach(e=>{const x=extra[e.id];if(x){if(!e.insights&&x.insights)e.insights=x.insights;if(!e.brief&&x.brief)e.brief=x.brief;}});
+  EPISODES.forEach(e=>{const x=extra[e.id];if(x){if(!e.insights&&x.insights)e.insights=x.insights;if(!e.brief&&x.brief)e.brief=x.brief;
+    if(!e.sEn&&x.sEn)e.sEn=x.sEn;if(!e.sZh&&x.sZh)e.sZh=x.sZh;}});
 }catch(err){console.error('ep-extra 合并失败:',err.message);}
 const PEOPLE=eval('('+h.match(/const PEOPLE = (\{[\s\S]*?\n\});/)[1]+')');
 /* 站群互链 map(来自 app.js,由 build_crosslinks.py 保持无缺口)——静态人物页要把
@@ -66,6 +68,19 @@ const CSS=`:root{--ink:#1d1d1f;--sub:#6e6e73;--line:#e6e6ea;--acc:#0071e3}*{box-
 .tr h3{font-size:15px;margin:26px 0 8px;color:#1d1d1f;color:var(--ink);border-top:1px solid #e6e6ea;border-top:1px solid var(--line);padding-top:14px}
 .tr .turn{margin:0 0 14px}.tr .spk{display:inline-block;font-size:12px;color:#6e6e73;color:var(--sub);font-weight:600;margin-bottom:2px}
 .tr p.zh{margin:.2em 0}.tr p.en{margin:.1em 0 0}`;
+/* 匿名访问统计 —— 静态页必须自带一份。
+   2026-08-29 之前只有 app.js(3846 行)埋了点,而 app.js 只有 SPA 首页加载:
+   e/ 607 页 + pp/ 275 页 —— 恰恰是全部 SEO 落地页 —— 一条都没上报。
+   后果不是少统计,是**结构性看不见**:近 30 天全站搜索引擎来源全部落在四图谱的
+   /p/*.html(它们有埋点),aipodcast 零条,于是「8/15 的深链修复到底有没有用」
+   在数据上无法判断。
+   片段本体在 pipeline/beacon.js(六站共用一份,含停留门槛的来龙去脉)。
+   这里上报的 path 是真实路径 /e/<id>/ 或 /pp/<pid>/,与 SPA 的 hash 路由
+   /episode/<id> 天然分开 —— 能直接分辨「搜索进来的」和「站内点进去的」。 */
+const BEACON=(()=>{const raw=fs.readFileSync(path.join(__dirname,'beacon.js'),'utf8');
+  return raw.slice(raw.indexOf('<script>'),raw.lastIndexOf('</script>')+9)
+            .replace('%PATH%',"location.pathname.replace(/index\\.html$/,'')");})();
+
 const page=(title,desc,url,ogtype,bodyHtml,ld)=>`<!doctype html><html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${title}</title>
@@ -84,7 +99,7 @@ const page=(title,desc,url,ogtype,bodyHtml,ld)=>`<!doctype html><html lang="zh">
 ${ld.map(jl).join('\n')}
 <style>${CSS}</style></head><body><div class="wrap">${bodyHtml}
 <footer>© AI Podcast · <a href="${SITE}/">aipodcast.jasonlin.tech</a> — 双语播客全文阅读。转录/翻译仅供学习评论，版权归原播客与权利人，应要求即下架(linzheng3535@gmail.com)。</footer>
-</div></body></html>`;
+</div>${BEACON}</body></html>`;
 
 const byPid={};EPISODES.forEach(e=>(byPid[e.pid]=byPid[e.pid]||[]).push(e));
 const EDIR=path.join(ROOT,'e');fs.rmSync(EDIR,{recursive:true,force:true});fs.mkdirSync(EDIR,{recursive:true});

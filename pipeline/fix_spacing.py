@@ -45,7 +45,11 @@ def main():
     a = html.index('const EPISODES = '); b = html.index('/* ====== REAL ASSETS')
     arr = json.loads(html[a + len('const EPISODES = '):b].rstrip().rstrip(';').rstrip())
     for e in arr:
-        e['tZh'] = space_fix(e.get('tZh', '')); e['sZh'] = space_fix(e.get('sZh', ''))
+        # 只修已存在的键:sZh 已被 split_data 移进 ep-extra,写死会给 607 条各造一个空 sZh,
+        # 既把拆分白做了,又让 audit 的「缺中文导语」判断失真。
+        for k in ('tZh', 'sZh'):
+            if e.get(k):
+                e[k] = space_fix(e[k])
     html = html[:a] + 'const EPISODES = ' + json.dumps(arr, ensure_ascii=False) + ';\n\n' + html[b:]
     # 2) TOPICS / VIEWS
     for name in ['TOPICS', 'VIEWS']:
@@ -75,8 +79,12 @@ def main():
     if exf.exists():
         ex = json.loads(exf.read_text(encoding='utf-8'))
         for v in ex.values():
-            if isinstance(v, dict) and 'brief' in v:
+            if not isinstance(v, dict):
+                continue
+            if 'brief' in v:
                 v['brief'] = deep_fix(v['brief'])
+            if v.get('sZh'):                      # 导语 2026-08-29 起也存这儿
+                v['sZh'] = space_fix(v['sZh'])
         exf.write_text(json.dumps(ex, ensure_ascii=False), encoding='utf-8')
     # 复检
     NOSPACE = re.compile(r'[一-鿿][A-Za-z0-9]|[A-Za-z0-9)][一-鿿]')

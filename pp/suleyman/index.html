@@ -30,4 +30,38 @@
 <h2>收录的 7 期访谈</h2>
 <ul class="ep-list"><li><a href="https://aipodcast.jasonlin.tech/e/suleyman-decoder/">超级智能将至——但要「以人为本」</a> — Decoder · 2026-06-08</li><li><a href="https://aipodcast.jasonlin.tech/e/suleyman-financia-2026/">AI 是泡沫吗？穆斯塔法·苏莱曼谈超级智能与微软战略</a> — 金融时报 · 2026-02-12</li><li><a href="https://aipodcast.jasonlin.tech/e/suleyman-moonshot-2025/">从操作系统到 AI 代理：穆斯塔法·苏莱曼谈微软的范式转变</a> — Moonshots（彼得·戴曼迪斯） · 2025-12-16</li><li><a href="https://aipodcast.jasonlin.tech/e/suleyman-bloomber/">谈超级智能与微软–OpenAI 交易</a> — 彭博播客 · 2025-12-12</li><li><a href="https://aipodcast.jasonlin.tech/e/suleyman-sineadbo-2025/">AI 意识之争：未来 18 个月</a> — Sinead Bovell · 2025-09-25</li><li><a href="https://aipodcast.jasonlin.tech/e/suleyman-intellig/">从哲学到人工智能：穆斯塔法·苏莱曼的旅程</a> — Intelligence Squared · 2024-07-05</li><li><a href="https://aipodcast.jasonlin.tech/e/suleyman-thisweek/">从扑克到 DeepMind：穆斯塔法·苏莱曼谈 AI 起源</a> — This Week in Startups · 2023-08-18</li></ul>
 <footer>© AI Podcast · <a href="https://aipodcast.jasonlin.tech/">aipodcast.jasonlin.tech</a> — 双语播客全文阅读。转录/翻译仅供学习评论，版权归原播客与权利人，应要求即下架(linzheng3535@gmail.com)。</footer>
-</div></body></html>
+</div><script>(function(){try{
+var UA=navigator.userAgent||'';
+if(/bot|crawl|spider|slurp|headless|lighthouse|bingpreview|facebookexternalhit/i.test(UA))return;
+var U='https://stats.jasonlin.tech',DWELL=4000;
+var LS=null;try{LS=window.localStorage}catch(_){}
+var aid='';
+try{
+  aid=(LS&&LS.aid)||'';
+  if(!aid){var i,n;
+    try{var u=new Uint8Array(10);crypto.getRandomValues(u);
+        for(i=0;i<10;i++){n=u[i].toString(16);aid+=n.length<2?'0'+n:n;}}
+    catch(_){for(i=0;i<20;i++)aid+=Math.floor(Math.random()*16).toString(16);}
+    if(LS)LS.aid=aid;}   /* 与 SPA 共用同一个 aid:先落静态页再点进互动版的人算 1 个 UV */
+}catch(_){aid='';}
+var sid='';try{if(LS&&LS.syncSidFor&&LS.syncSidFor===LS.syncCode)sid=LS.syncSid||'';}catch(_){}
+var ref='';try{ref=(document.referrer||'').replace(/^[a-z]+:\/\//i,'').split('/')[0];}catch(_){}
+var dev=/Mobi|Android|iPhone|iPad|iPod/i.test(UA)?'mobile':'desktop';
+function post(type){
+  try{
+    var body=JSON.stringify({type:type,path:location.pathname.replace(/index\.html$/,''),ua:dev,ref:ref,sid:sid,aid:aid});
+    if(navigator.sendBeacon&&typeof Blob!=='undefined')navigator.sendBeacon(U,new Blob([body],{type:'text/plain'}));
+    else{var x=new XMLHttpRequest();x.open('POST',U,true);x.setRequestHeader('Content-Type','text/plain');x.send(body);}
+  }catch(_){}
+}
+post('view');                                  /* 打开即发,口径不变 */
+var sent=false,acc=0,since=null,timer=null;    /* 以下是 read:攒够可见时长或等到一次交互 */
+function read(){if(sent)return;sent=true;if(timer){clearTimeout(timer);timer=null;}post('read');}
+function pause(){if(since!==null){acc+=Date.now()-since;since=null;}if(timer){clearTimeout(timer);timer=null;}}
+function resume(){if(sent||since!==null)return;since=Date.now();timer=setTimeout(read,Math.max(0,DWELL-acc));}
+function vis(){if(document.visibilityState==='visible')resume();else pause();}
+try{document.addEventListener('visibilitychange',vis);}catch(_){}
+var evs=['scroll','pointerdown','mousedown','keydown','touchstart'];
+for(var k=0;k<evs.length;k++){try{window.addEventListener(evs[k],read,true);}catch(_){}}
+vis();
+}catch(_){}})()</script></body></html>

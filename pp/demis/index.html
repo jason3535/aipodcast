@@ -30,4 +30,38 @@
 <h2>收录的 12 期访谈</h2>
 <ul class="ep-list"><li><a href="https://aipodcast.jasonlin.tech/e/demis-wcit-2026/">AI 战略与技能：十年回顾</a> — WCIT · 2026-07-15</li><li><a href="https://aipodcast.jasonlin.tech/e/demis-semafort-2026/">Demis Hassabis 谈 AGI、AI 风险与 DeepMind 的竞争优势</a> — Semafor Tech · 2026-06-24</li><li><a href="https://aipodcast.jasonlin.tech/e/demis-nobelpri-2026/">数字速度下的科学：AI 对发现的影响</a> — 诺贝尔奖官方 · 2026-06-07</li><li><a href="https://aipodcast.jasonlin.tech/e/demis-stanford-2026/">丹尼斯·哈萨比斯在斯坦福谈人工智能、创造力与人类繁荣</a> — 斯坦福商学院 · 2026-06-02</li><li><a href="https://aipodcast.jasonlin.tech/e/demis-unsuperv-2026/">Demis Hassabis：从单一梦想走向集体行动</a> — Unsupervised Learning · 2026-06-01</li><li><a href="https://aipodcast.jasonlin.tech/e/demis-ycombina-2026/">Demis Hassabis：通往 AGI 之路与缺失的拼图</a> — Y Combinator · 2026-04-29</li><li><a href="https://aipodcast.jasonlin.tech/e/demis-hugeiftr/">AI 解决过的最难的问题</a> — Huge If True · 2026-04-07</li><li><a href="https://aipodcast.jasonlin.tech/e/demis-bigtechn-2026/">从大语言模型到通用人工智能：谷歌 DeepMind CEO 谈进展、局限与突破</a> — Big Technology 播客 · 2026-01-23</li><li><a href="https://aipodcast.jasonlin.tech/e/demis-googlede-2025/">从规模到创新：通往 AGI 之路</a> — Google DeepMind · 2025-12-16</li><li><a href="https://aipodcast.jasonlin.tech/e/demis-lexfridm-2025/">自然界的模式可被经典 AI 高效学习</a> — Lex Fridman 播客 · 2025-07-23</li><li><a href="https://aipodcast.jasonlin.tech/e/demis-dwarkesh-2024/">十年内实现 AGI？Demis Hassabis 谈智能、迁移学习与神经科学洞见</a> — Dwarkesh 播客 · 2024-02-28</li><li><a href="https://aipodcast.jasonlin.tech/e/demis-publicle-2015/">人工智能与未来：从国际象棋到 DeepMind</a> — 公开讲座 · 2015-11-19</li></ul>
 <footer>© AI Podcast · <a href="https://aipodcast.jasonlin.tech/">aipodcast.jasonlin.tech</a> — 双语播客全文阅读。转录/翻译仅供学习评论，版权归原播客与权利人，应要求即下架(linzheng3535@gmail.com)。</footer>
-</div></body></html>
+</div><script>(function(){try{
+var UA=navigator.userAgent||'';
+if(/bot|crawl|spider|slurp|headless|lighthouse|bingpreview|facebookexternalhit/i.test(UA))return;
+var U='https://stats.jasonlin.tech',DWELL=4000;
+var LS=null;try{LS=window.localStorage}catch(_){}
+var aid='';
+try{
+  aid=(LS&&LS.aid)||'';
+  if(!aid){var i,n;
+    try{var u=new Uint8Array(10);crypto.getRandomValues(u);
+        for(i=0;i<10;i++){n=u[i].toString(16);aid+=n.length<2?'0'+n:n;}}
+    catch(_){for(i=0;i<20;i++)aid+=Math.floor(Math.random()*16).toString(16);}
+    if(LS)LS.aid=aid;}   /* 与 SPA 共用同一个 aid:先落静态页再点进互动版的人算 1 个 UV */
+}catch(_){aid='';}
+var sid='';try{if(LS&&LS.syncSidFor&&LS.syncSidFor===LS.syncCode)sid=LS.syncSid||'';}catch(_){}
+var ref='';try{ref=(document.referrer||'').replace(/^[a-z]+:\/\//i,'').split('/')[0];}catch(_){}
+var dev=/Mobi|Android|iPhone|iPad|iPod/i.test(UA)?'mobile':'desktop';
+function post(type){
+  try{
+    var body=JSON.stringify({type:type,path:location.pathname.replace(/index\.html$/,''),ua:dev,ref:ref,sid:sid,aid:aid});
+    if(navigator.sendBeacon&&typeof Blob!=='undefined')navigator.sendBeacon(U,new Blob([body],{type:'text/plain'}));
+    else{var x=new XMLHttpRequest();x.open('POST',U,true);x.setRequestHeader('Content-Type','text/plain');x.send(body);}
+  }catch(_){}
+}
+post('view');                                  /* 打开即发,口径不变 */
+var sent=false,acc=0,since=null,timer=null;    /* 以下是 read:攒够可见时长或等到一次交互 */
+function read(){if(sent)return;sent=true;if(timer){clearTimeout(timer);timer=null;}post('read');}
+function pause(){if(since!==null){acc+=Date.now()-since;since=null;}if(timer){clearTimeout(timer);timer=null;}}
+function resume(){if(sent||since!==null)return;since=Date.now();timer=setTimeout(read,Math.max(0,DWELL-acc));}
+function vis(){if(document.visibilityState==='visible')resume();else pause();}
+try{document.addEventListener('visibilitychange',vis);}catch(_){}
+var evs=['scroll','pointerdown','mousedown','keydown','touchstart'];
+for(var k=0;k<evs.length;k++){try{window.addEventListener(evs[k],read,true);}catch(_){}}
+vis();
+}catch(_){}})()</script></body></html>

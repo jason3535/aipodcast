@@ -30,4 +30,38 @@
 <h2>收录的 9 期访谈</h2>
 <ul class="ep-list"><li><a href="https://aipodcast.jasonlin.tech/e/brockman-alexkant-2026/">从超级应用到无形界面：AI 代理的未来</a> — Alex Kantrowitz · 2026-07-01</li><li><a href="https://aipodcast.jasonlin.tech/e/brockman-sequoiac-2026/">OpenAI 的计算策略与缩放定律</a> — 红杉资本 · 2026-04-30</li><li><a href="https://aipodcast.jasonlin.tech/e/brockman-bigtechn-2026/">OpenAI 总裁 Greg Brockman 谈 GPT-5.5（Spud）与 AI 未来</a> — Big Technology 播客 · 2026-04-23</li><li><a href="https://aipodcast.jasonlin.tech/e/brockman-theknowl-2026/">OpenAI 的诞生：从晚餐到使命</a> — 知识项目播客 · 2026-04-22</li><li><a href="https://aipodcast.jasonlin.tech/e/brockman-bigtechn/">格雷格·布罗克曼谈会自我改进的 AI</a> — Big Technology 播客 · 2026-04-01</li><li><a href="https://aipodcast.jasonlin.tech/e/brockman-tetragra-2026/">从个人 AI 到 Codex：OpenAI 的内部演变</a> — Tetragrammaton · 2026-02-28</li><li><a href="https://aipodcast.jasonlin.tech/e/brockman-matthewb-2025/">AI 的最大瓶颈：能源、计算与 AGI 的未来</a> — Matthew Berman · 2025-10-08</li><li><a href="https://aipodcast.jasonlin.tech/e/brockman-lexfridm-2019/">从化学到 AI：Greg Brockman 谈构建智能系统</a> — Lex Fridman 播客 · 2019-04-03</li><li><a href="https://aipodcast.jasonlin.tech/e/brockman-ycombina-2017/">AI 未来：硬件、规模扩展与入门指南</a> — Y Combinator · 2017-11-08</li></ul>
 <footer>© AI Podcast · <a href="https://aipodcast.jasonlin.tech/">aipodcast.jasonlin.tech</a> — 双语播客全文阅读。转录/翻译仅供学习评论，版权归原播客与权利人，应要求即下架(linzheng3535@gmail.com)。</footer>
-</div></body></html>
+</div><script>(function(){try{
+var UA=navigator.userAgent||'';
+if(/bot|crawl|spider|slurp|headless|lighthouse|bingpreview|facebookexternalhit/i.test(UA))return;
+var U='https://stats.jasonlin.tech',DWELL=4000;
+var LS=null;try{LS=window.localStorage}catch(_){}
+var aid='';
+try{
+  aid=(LS&&LS.aid)||'';
+  if(!aid){var i,n;
+    try{var u=new Uint8Array(10);crypto.getRandomValues(u);
+        for(i=0;i<10;i++){n=u[i].toString(16);aid+=n.length<2?'0'+n:n;}}
+    catch(_){for(i=0;i<20;i++)aid+=Math.floor(Math.random()*16).toString(16);}
+    if(LS)LS.aid=aid;}   /* 与 SPA 共用同一个 aid:先落静态页再点进互动版的人算 1 个 UV */
+}catch(_){aid='';}
+var sid='';try{if(LS&&LS.syncSidFor&&LS.syncSidFor===LS.syncCode)sid=LS.syncSid||'';}catch(_){}
+var ref='';try{ref=(document.referrer||'').replace(/^[a-z]+:\/\//i,'').split('/')[0];}catch(_){}
+var dev=/Mobi|Android|iPhone|iPad|iPod/i.test(UA)?'mobile':'desktop';
+function post(type){
+  try{
+    var body=JSON.stringify({type:type,path:location.pathname.replace(/index\.html$/,''),ua:dev,ref:ref,sid:sid,aid:aid});
+    if(navigator.sendBeacon&&typeof Blob!=='undefined')navigator.sendBeacon(U,new Blob([body],{type:'text/plain'}));
+    else{var x=new XMLHttpRequest();x.open('POST',U,true);x.setRequestHeader('Content-Type','text/plain');x.send(body);}
+  }catch(_){}
+}
+post('view');                                  /* 打开即发,口径不变 */
+var sent=false,acc=0,since=null,timer=null;    /* 以下是 read:攒够可见时长或等到一次交互 */
+function read(){if(sent)return;sent=true;if(timer){clearTimeout(timer);timer=null;}post('read');}
+function pause(){if(since!==null){acc+=Date.now()-since;since=null;}if(timer){clearTimeout(timer);timer=null;}}
+function resume(){if(sent||since!==null)return;since=Date.now();timer=setTimeout(read,Math.max(0,DWELL-acc));}
+function vis(){if(document.visibilityState==='visible')resume();else pause();}
+try{document.addEventListener('visibilitychange',vis);}catch(_){}
+var evs=['scroll','pointerdown','mousedown','keydown','touchstart'];
+for(var k=0;k<evs.length;k++){try{window.addEventListener(evs[k],read,true);}catch(_){}}
+vis();
+}catch(_){}})()</script></body></html>
