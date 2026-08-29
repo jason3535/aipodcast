@@ -17,17 +17,13 @@ SITES = {
     "inv":    dict(path=Path("/Users/jason/investor-graph"),       zh="投资人图谱",    en="TECH INVESTOR GRAPH", domain="investor.jasonlin.tech",  pfx="graph-inv"),
     "design": dict(path=Path("/Users/jason/designer-graph"),       zh="设计师图谱",    en="DESIGNER GRAPH",      domain="design.jasonlin.tech",    pfx="graph-design"),
 }
-# 匿名统计 beacon(与 index.html 同款,path 带站点前缀;2026-08-10 起全站群统一口径)
-BEACON = '''<script>
-(function(){try{
-var a='';try{a=localStorage.aid||'';if(!a){a=[].map.call(crypto.getRandomValues(new Uint8Array(10)),function(x){return x.toString(16).padStart(2,'0')}).join('');localStorage.aid=a;}}catch(e){}
-var dev=/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)?'mobile':'desktop';
-var ref='';try{ref=document.referrer?new URL(document.referrer).host:'';}catch(e){}
-var body=JSON.stringify({type:'view',path:'%PFX%:'+location.pathname+location.search,ua:dev,ref:ref,sid:'',aid:a});
-if(navigator.sendBeacon)navigator.sendBeacon('https://stats.jasonlin.tech',new Blob([body],{type:'text/plain'}));
-else fetch('https://stats.jasonlin.tech',{method:'POST',headers:{'Content-Type':'text/plain'},body:body,keepalive:true});
-}catch(e){}})();
-</script>'''
+# 匿名统计 beacon —— 片段本体在 pipeline/beacon.js(六站共用一份)。
+# 2026-08-29 之前这里内联着一份「打开即发」的旧版,正是它把 8/22 那 720 次分布式
+# 抓取原样记成了 720 个 UV。现在换成带停留门槛的共用版:view 口径不变(历史可比),
+# 另发 type='read'(可见满 4 秒或有交互才发)作为干净的那条流。理由详见 beacon.js 头注释。
+_BEACON_SRC = (Path(__file__).resolve().parent / "beacon.js").read_text(encoding="utf-8")
+BEACON = (_BEACON_SRC[_BEACON_SRC.index("<script>"):_BEACON_SRC.rindex("</script>") + len("</script>")]
+          .replace("%PATH%", "'%PFX%:'+location.pathname+location.search"))   # %PFX% 仍由下面按站替换
 FIELD_COLOR = {  # 领域丸/字母头像渐变的主色(与站内 fdot 一致的近似值)
     "nlp":"#0a84ff","deep-learning":"#0a84ff","vision":"#30d158","rl":"#ff9f0a","safety":"#ff453a",
     "consumer":"#0a84ff","robotics":"#bf5af2","ai-infra":"#64d2ff","ar-vr":"#5e5ce6","drones":"#30d158",

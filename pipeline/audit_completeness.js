@@ -32,6 +32,12 @@ const EPISODES = grab(/const EPISODES = (\[[\s\S]*?\]);/, "EPISODES");
 const PEOPLE = grab(/const PEOPLE\s*=\s*(\{[\s\S]*?\n\});/, "PEOPLE");
 const FIELDS = grab(/const FIELDS = (\{[\s\S]*?\n\});/, "FIELDS");
 const POD_INFO = grab(/const POD_INFO\s*=\s*(\{[\s\S]*?\n\});/, "POD_INFO");
+// 导语/insights/brief 已被 split_data 移进 data/ep-extra.json,不合回来这里会把全库判成「缺中文导语」。
+try {
+  const extra = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "ep-extra.json"), "utf8"));
+  EPISODES.forEach(e => { const x = extra[e.id]; if (!x) return;
+    for (const k of ["sEn", "sZh", "insights", "brief"]) if (!e[k] && x[k]) e[k] = x[k]; });
+} catch (err) { console.error("ep-extra 合并失败:", err.message); }
 
 const only = process.argv.slice(2).filter(a => !a.startsWith("--"));
 const asJson = process.argv.includes("--json");

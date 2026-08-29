@@ -11,6 +11,17 @@ SITE = "https://aipodcast.jasonlin.tech"
 
 html = io.open(ROOT / "app.js", encoding="utf-8").read()
 eps = json.loads(re.search(r"const EPISODES = (\[.*?\]);", html, re.S).group(1))
+# 合回 split_* 移走的字段。2026-08-29 之前漏了这步,后果不是报错而是**静默降级**:
+# brief 早就不在内联里了,于是下面的 tldr 恒为空 —— RSS 的「要点」一条都没生成过。
+try:
+    _ex = json.loads(io.open(ROOT / "data" / "ep-extra.json", encoding="utf-8").read())
+    for e in eps:
+        x = _ex.get(e["id"]) or {}
+        for k in ("sEn", "sZh", "brief", "insights"):
+            if not e.get(k) and x.get(k):
+                e[k] = x[k]
+except FileNotFoundError:
+    pass
 by_id = {e["id"]: e for e in eps}
 
 # 收录时间 = 该期 mcp-data/ep/<id>.json 首次进 git 的提交时间(一次 git log 全量拿)

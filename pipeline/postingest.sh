@@ -55,6 +55,9 @@ node pipeline/check_es_compat.js app.js
 # 错得像模像样,肉眼扫标题发现不了。基线已清到 0,再冒出来就是本轮新引入的。
 # **不能接 | tail** —— 管道的退出码是 tail 的,门禁会永远"通过"(这坑踩过两次)。
 python3 pipeline/check_guest_names.py --check
+# 产物抽查:导语/要点这类「被 split_* 移出内联」的内容,有没有在成品里静默丢掉。
+# 加代码合回 ep-extra 只是修当下,这道门禁才是防复发的那一层(理由见脚本头注释)。
+node pipeline/check_artifacts.js
 # 节目登记:每个 podEn 必须在 POD_INFO 里有简介。audit 里本有这条但只是「警告」,
 # 且 audit 只审当轮新收 id —— 存量漏网的一直没人发现。2026-08-28 揪出两例,
 # 其中「Startup TM」是个中文搬运号,把 2020 年的 Joe Rogan #1470 当成 2026 新访谈收了进来。

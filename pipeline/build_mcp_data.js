@@ -8,7 +8,8 @@ const h=fs.readFileSync(path.join(ROOT,'app.js'),'utf8');
 const EPISODES=JSON.parse(h.match(/const EPISODES = (\[[\s\S]*?\]);\n\n\/\* ====== REAL/)[1]);
 // 合并 data/ep-extra.json(split_extra 把 insights/brief 移了出去,这里补回作 MCP/Ask 材料)
 try{const extra=JSON.parse(fs.readFileSync(path.join(ROOT,'data','ep-extra.json'),'utf8'));
-  EPISODES.forEach(e=>{const x=extra[e.id];if(x){if(!e.insights&&x.insights)e.insights=x.insights;if(!e.brief&&x.brief)e.brief=x.brief;}});
+  EPISODES.forEach(e=>{const x=extra[e.id];if(x){if(!e.insights&&x.insights)e.insights=x.insights;if(!e.brief&&x.brief)e.brief=x.brief;
+    if(!e.sEn&&x.sEn)e.sEn=x.sEn;if(!e.sZh&&x.sZh)e.sZh=x.sZh;}});   // 导语 2026-08-29 起也移出了内联
 }catch(err){console.error('ep-extra 合并失败:',err.message);}
 const PEOPLE=eval('('+h.match(/const PEOPLE = (\{[\s\S]*?\n\});/)[1]+')');
 // 观点演变:split_data 把它移到 data/views.json 了,内联块为空时从那里读(两种状态都兼容)
