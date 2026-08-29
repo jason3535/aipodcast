@@ -2744,14 +2744,19 @@ function vPerson(pid){
       <div class="en">${p.bioEn}</div><div class="zh">${p.bioZh}</div>
       <div class="xlinks">${gid?`<a class="xlink" href="https://ai.jasonlin.tech/?node=${gid}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6.5" r="2.1"/><circle cx="18" cy="8" r="2.1"/><circle cx="10.5" cy="18" r="2.1"/><path d="M8 7l7.9 1M8.1 8l1.8 8"/></svg>在关系图谱中查看</a>`:''}${HW_GRAPH[pid]?`<a class="xlink" href="https://hardware.jasonlin.tech/?node=${HW_GRAPH[pid]}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6.5" r="2.1"/><circle cx="18" cy="8" r="2.1"/><circle cx="10.5" cy="18" r="2.1"/><path d="M8 7l7.9 1M8.1 8l1.8 8"/></svg>在硬件图谱中查看</a>`:''}${INV_GRAPH[pid]?`<a class="xlink" href="https://investor.jasonlin.tech/?node=${INV_GRAPH[pid]}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6.5" r="2.1"/><circle cx="18" cy="8" r="2.1"/><circle cx="10.5" cy="18" r="2.1"/><path d="M8 7l7.9 1M8.1 8l1.8 8"/></svg>在投资图谱中查看</a>`:''}${DESIGN_IDS.has(pid)?`<a class="xlink" href="https://design.jasonlin.tech/?node=${pid}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6.5" r="2.1"/><circle cx="18" cy="8" r="2.1"/><circle cx="10.5" cy="18" r="2.1"/><path d="M8 7l7.9 1M8.1 8l1.8 8"/></svg>在设计图谱中查看</a>`:''}${POD2PAPER[pid]?`<a class="xlink" href="https://aipaper.jasonlin.tech/#/person/${POD2PAPER[pid]}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v4h4"/><path d="M9 13h6M9 17h4"/></svg>在 AI Paper 中读论文</a>`:''}</div>
     </div>
+    <section class="reveal" style="padding-bottom:0">
+      <div class="sec-h" style="margin-top:44px">本站收录 · ${eps.length} 期</div>
+      <div class="ep-grid">${eps.map(epCard).join('')}</div>
+    </section>
+    ${/* 「观点演变」必须排在单集列表**之后**。2026-08-29 实测:它中位 5 条、占 850-900px,
+        挡在前面时首张单集卡落在手机第 2.1 屏(altman/dario),而版式一模一样的节目页只要 0.7 屏。
+        数据上对得起来 —— 节目页→单集 77%,人物页→单集 不到 15%,人物页出去 45% 是回首页。
+        受影响的 98 个人物页恰恰是收录最多的那批:内容最厚的页面把自己的目录埋得最深。
+        ensureViews() 是拉 data/views.json 的惰性触发器,跟着这段一起挪,别落下。 */''}
     ${(ensureViews(),VIEWS[pid]&&VIEWS[pid].length)?`<section class="reveal" style="padding-bottom:0">
       <div class="sec-h" style="margin-top:40px">观点演变 · How the views evolved<span class="evhint">由早及近</span></div>
       <ol class="viewlist">${VIEWS[pid].map(v=>`<li>${v.t?`<span class="vt">${v.t}</span>`:''}<span class="ve">${v.en}</span><span class="vz">${v.zh}</span></li>`).join('')}</ol>
     </section>`:''}
-    <section class="reveal" style="padding-bottom:0">
-      <div class="sec-h" style="margin-top:44px">他的播客 · ${eps.length}</div>
-      <div class="ep-grid">${eps.map(epCard).join('')}</div>
-    </section>
   </div>${footer()}`;
 }
 
