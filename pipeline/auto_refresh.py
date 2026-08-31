@@ -59,6 +59,23 @@ def ds(system, user, mx=3000):
         except Exception as e: last = e; time.sleep(2 + a * 3)
     raise RuntimeError(str(last)[:80])
 
+def excluded_vids():
+    """人工下架过的视频 id(pipeline/excluded.json,由 remove_episode.py 写入)。
+
+    判重原本只看 app.js 里已有哪些 vid —— 一期被人工下架后就从 EPISODES 消失了,
+    下一轮发现照样搜得到、照样过闸门、照样再收一遍,"删掉"其实删不掉。
+    (2026-08-31 下架 Throwing Fits 那期时发现)
+    """
+    f = BASE / "excluded.json"
+    if not f.exists():
+        return set()
+    try:
+        return {x["vid"] for x in json.loads(f.read_text(encoding="utf-8")) if x.get("vid")}
+    except Exception as e:
+        log(f"  ⚠ excluded.json 读取失败({e}),本轮不做排除")
+        return set()
+
+
 # ---- 从 index.html 取人物 + 已有单集(用 node,避免解析 JS 对象的坑) ----
 def load_state():
     js = r'''
@@ -364,7 +381,7 @@ def discover_channels(people, vids, days, per_channel_cap=2):
     核心频道(core=True):主嘉宾是站外新人也收 —— 闸门连同人物档一起产出,收录前自动建档;
     非核心频道:仍只收站内已有人物(新面孔留给人物维度/人工)。"""
     from datetime import timedelta
-    exist = set(vids)
+    exist = set(vids) | excluded_vids()   # 已下架的绝不再收
     floor = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y%m%d")
     roster = "\n".join(f"{p['pid']}: {p['en']}" for p in people)
     pid_map = {p["pid"]: p for p in people}
@@ -430,7 +447,7 @@ def discover_channels(people, vids, days, per_channel_cap=2):
 # ---- 主流程 ----
 def discover(people, vids, days, per_person_cap=1):
     """每人发现 ≤per_person_cap 期:近 days 天、比在站最新更新、英文长访谈、过选题闸门。"""
-    exist = set(vids)
+    exist = set(vids) | excluded_vids()   # 已下架的绝不再收
     cutoff = (datetime.now(timezone.utc).strftime("%Y%m%d"))
     from datetime import timedelta
     floor = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y%m%d")
