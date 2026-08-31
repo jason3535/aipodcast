@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 276 位人物 / 612 期访谈
+规模: 276 位人物 / 611 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -79,7 +79,6 @@
 - [Nate Parrott / 内特·帕罗特](https://aipodcast.jasonlin.tech/pp/nateparrott/): Designer at Anthropic — 2 期
 - [Philip Kiely / 菲利普·基利](https://aipodcast.jasonlin.tech/pp/philipkiely/): Developer Relations Lead, Baseten — 2 期
 - [Karina Nguyen / 卡丽娜·阮](https://aipodcast.jasonlin.tech/pp/karina/): Research, OpenAI — 2 期
-- [Adam Mosseri / 亚当·莫塞里](https://aipodcast.jasonlin.tech/pp/mosseri/): Head of Instagram — 2 期
 - [Meng To / 孟托](https://aipodcast.jasonlin.tech/pp/mengto/): Founder of Design+Code — 2 期
 - [Logan Kilpatrick / 洛根·基尔帕特里克](https://aipodcast.jasonlin.tech/pp/logankilpatrick/): Lead, Google AI Studio & Gemini API; ex-OpenAI — 2 期
 - [Dianne Na Penn / 黛安·娜·潘恩](https://aipodcast.jasonlin.tech/pp/diannepenn/): Head of Research Product Management, Anthropic — 2 期
@@ -161,6 +160,7 @@
 - [Danielle Perszyk / 丹妮尔·佩尔西克](https://aipodcast.jasonlin.tech/pp/perszyk/): Cognitive Scientist, Amazon AGI Lab — 1 期
 - [Neel Nanda / 尼尔·南达](https://aipodcast.jasonlin.tech/pp/neelnanda/): Mechanistic Interpretability Lead, Google DeepMind — 1 期
 - [Adam Brown / 亚当·布朗](https://aipodcast.jasonlin.tech/pp/adambrown/): Physicist, Stanford Lecturer — 1 期
+- [Adam Mosseri / 亚当·莫塞里](https://aipodcast.jasonlin.tech/pp/mosseri/): Head of Instagram — 1 期
 - [Akshat Bubna / 阿克沙特·布布纳](https://aipodcast.jasonlin.tech/pp/akshatbubna/): CTO, Modal — 1 期
 - [Meaghan Choi / 梅根·崔](https://aipodcast.jasonlin.tech/pp/meaghanchoi/): Head of Design, Claude Code & Cowork at Anthropic — 1 期
 - [Alex Wiltschko / 亚历克斯·维尔奇科](https://aipodcast.jasonlin.tech/pp/wiltschko/): Founder & CEO, Osmo; ex-Google Brain (digital olfaction) — 1 期

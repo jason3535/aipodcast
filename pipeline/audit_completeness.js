@@ -80,6 +80,15 @@ for (const e of targets) {
       if (secs === 0) bad.push("正文 0 节(全空)");
       else if (density && density < DENSITY_FATAL) bad.push(`正文密度 ${density} 字符/分(疑似整块被丢)`);
       else if (density && density < DENSITY_WARN) warn.push(`正文密度偏低 ${density} 字符/分`);
+      // 碎片化:turn 中位长度远低于全库常态 = 逐句对白、读起来极碎。
+      // 2026-08-31 从 mosseri-throwing-2026 反推出来的阈值:全库 610 期 turn 中位长
+      // 的中位数是 370 字符,那期只有 50(1012 个 turn、33% 短于 30 字符)。
+      // 注意这**不是转录坏了** —— 闲聊型播客的真实对白就是这样,所以只报警告不拦:
+      // 它是「这期选题适不适合做成阅读稿」的信号,该由人来判,不该由脚本替人下架。
+      const enLens = t.flatMap(s => (s.turns || []).map(x => (x.en || "").length)).sort((a, b) => a - b);
+      const medEn = enLens.length ? enLens[Math.floor(enLens.length / 2)] : 0;
+      if (enLens.length >= 150 && medEn < 90)
+        warn.push(`对白过碎(turn 中位 ${medEn} 字符,全库常态 ~370;共 ${enLens.length} turn)——闲聊型节目?复查选题`);
       // turn 里 spk 只有一种 → 说话人没分开
       const spks = new Set(t.flatMap(s => (s.turns || []).map(x => x.spk)));
       if (secs > 0 && spks.size < 2) warn.push(`说话人只有 ${[...spks].join("/") || "无"}`);
