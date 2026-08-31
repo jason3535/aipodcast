@@ -109,7 +109,7 @@
 - [Nad Chishtie / 纳德·奇什蒂](https://aipodcast.jasonlin.tech/pp/nadchishtie/): Founding Designer & Head of Design, Lovable — 2 期
 - [Michael Truell / 迈克尔·特鲁埃尔](https://aipodcast.jasonlin.tech/pp/truell/): Co-founder & CEO, Cursor — 2 期
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 2 期
-- [Tara Seshan / 塔拉·塞尚](https://aipodcast.jasonlin.tech/pp/taraseshan/): Product Lead, OpenAI — 1 期
+- [Tara Seshan / 塔拉·塞珊](https://aipodcast.jasonlin.tech/pp/taraseshan/): Product Lead, OpenAI — 1 期
 - [DHH / DHH](https://aipodcast.jasonlin.tech/pp/dhh/): Creator of Ruby on Rails, CTO of 37signals — 1 期
 - [Anima Anandkumar / 阿尼玛·阿南德库马尔](https://aipodcast.jasonlin.tech/pp/animaanandkumar/): Professor at Caltech, Co-founder of Accelerated Understanding — 1 期
 - [John Bai / John Bai](https://aipodcast.jasonlin.tech/pp/johnbai/): Design Lead for Grok Bot, Cursor — 1 期
@@ -285,7 +285,7 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
-- [Inside OpenAI: Tara Sash on Product, Ambition, and the Future of AI Work](https://aipodcast.jasonlin.tech/e/taraseshan-lennyspo-2026/) — Tara Seshan, Lenny’s Podcast, 2026-08-30
+- [Inside OpenAI: Tara Seshan on Product, Ambition, and the Future of AI Work](https://aipodcast.jasonlin.tech/e/taraseshan-lennyspo-2026/) — Tara Seshan, Lenny’s Podcast, 2026-08-30
 - [AI Agents' Collaborative Cheating in Hugging Face Hack](https://aipodcast.jasonlin.tech/e/ryangreenblatt-mts-2026/) — Ryan Greenblatt, MTS , 2026-08-28
 - [The Third Generation of AI Labs: Automating AI Research](https://aipodcast.jasonlin.tech/e/tworek-mts-2026/) — Jerry Tworek, MTS , 2026-08-26
 - [From Skeptic to Believer: DHH on the AI Revolution](https://aipodcast.jasonlin.tech/e/dhh-lexfridm-2026/) — DHH, Lex Fridman Podcast, 2026-08-26
