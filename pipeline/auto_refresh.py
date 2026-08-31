@@ -549,14 +549,21 @@ def main():
                 ["python3", "pipeline/gen_views.py"], ["python3", "pipeline/gen_topics.py"],
                 ["python3", "pipeline/gen_brief.py"], ["python3", "pipeline/gen_sectitles.py"],
                 ["python3", "pipeline/fix_spacing.py"], ["python3", "pipeline/fix_terms.py"],
-                # 嘉宾名误听:自动字幕把冷门姓氏音译错(Carl Pei→Carl Pay、Liam Fedus→Liam Fetus),
-                # 以站内登记名为权威改回去;只动「名+近似姓」的组合,不碰单独出现的词
-                ["python3", "pipeline/check_guest_names.py", "--apply"],
                 ["python3", "pipeline/split_data.py"],
                 # 新人物补头像(用其单集封面人脸裁剪,消化 pending_avatars)+ 转 webp。
                 # 个人 Mac 若没装 cv2,fill 会安全落空、条目留在 pending,不影响链路。
                 ["python3", "pipeline/fill_pending_avatars.py"], ["python3", "pipeline/webp_avatars.py"],
-                ["node", "pipeline/build_mcp_data.js"], ["node", "pipeline/build_share_pages.js"],
+                ["node", "pipeline/build_mcp_data.js"],
+                # 嘉宾名误听:自动字幕把冷门姓氏音译错(Carl Pei→Carl Pay、Liam Fedus→Liam Fetus),
+                # 以站内登记名为权威改回去;只动「名+近似姓」的组合,不碰单独出现的词。
+                # **必须排在 build_mcp_data 之后**:检测读的是 mcp-data/index.json + ep/*.json,
+                # 本轮新收那期在此之前还不存在 —— 放在前面等于对每一期新集永远空跑。
+                # 2026-08-31 Tara Seshan 全期被写成 Tara Sash/Sean/Station 发到线上,
+                # 就是这个顺序错误;人工链路 postingest.sh 顺序本来是对的,所以从没暴露。
+                # 改完再跑一次 build_mcp_data,把 index.json 里的标题也带正。
+                ["python3", "pipeline/check_guest_names.py", "--apply"],
+                ["node", "pipeline/build_mcp_data.js"],
+                ["node", "pipeline/build_share_pages.js"],
                 # RSS:2026-08-13 才发现这一步从没进过任何链条,feed.xml 停更两周半
                 ["python3", "pipeline/gen_feed.py"],
                 # 站群互链:只写本仓库 app.js 的 map(新收人物若已在图谱/纸站,当天就挂上互链按钮);
@@ -596,6 +603,12 @@ def main():
     rc_t, out_t = run_cmd(["python3", "pipeline/fix_terms.py", "--check"])
     if rc_t != 0:
         log("⚠️ 术语检查未通过(仍有 Claude 误听残留),放弃提交:\n" + out_t[-300:]); return
+
+    # 嘉宾名门禁:与 postingest.sh 对齐。上面的 --apply 之后不该再有残留;还有残留说明
+    # 登记名本身可能就是错的(--apply 拿登记名当权威,改不动这种),必须人工看一眼。
+    rc_g, out_g = run_cmd(["python3", "pipeline/check_guest_names.py", "--check"])
+    if rc_g != 0:
+        log("⚠️ 嘉宾名检查未通过(误听残留或登记名有误),放弃提交:\n" + out_g[-300:]); return
 
     run_cmd(["git", "add", "-A"])
     msg = f"chore: 自动保鲜 +{added} 期（{', '.join(x['pid'] for x in plan[:added])}）"

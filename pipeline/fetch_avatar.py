@@ -49,10 +49,16 @@ def save(pid, raw, face=True, zoom=2.6, allow_faceless=False):
     im = Image.open(BytesIO(raw)).convert("RGB")
     w, h = im.size
     box = None
+    det_err = None
     if face:
         try:
             import cv2
             import numpy as np
+            # OpenCV 5 把 Haar 级联从主模块删了 —— pip 装到 5.x 的机器上 cv2 导得进来、
+            # CascadeClassifier 却不存在,老代码会把它当成「这张图没有脸」,于是每个来源
+            # 都被判不可用,pending 里的人永远补不上头像而没人知道原因(2026-08-31 踩到)。
+            if not hasattr(cv2, "CascadeClassifier"):
+                raise ImportError(f"cv2 {cv2.__version__} 没有 CascadeClassifier(OpenCV 5 已移除)")
             cas = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
             g = cv2.cvtColor(np.array(im), cv2.COLOR_RGB2GRAY)
             mn = (max(40, w // 12), max(40, h // 12))
@@ -69,8 +75,15 @@ def save(pid, raw, face=True, zoom=2.6, allow_faceless=False):
                 box = (left, top, left + s, top + s)
                 print(f"  检出 {len(fs)} 张脸,取最大的 {fw}×{fh}")
         except Exception as e:
-            print(f"  人脸检测跳过: {e}", file=sys.stderr)
+            det_err = e
+            print(f"  人脸检测不可用: {e}", file=sys.stderr)
     if box is None:
+        if face and not allow_faceless and det_err is not None:
+            # 检测器本身没跑起来 ≠ 图里没有脸。这两种失败必须分开报,否则装错版本时
+            # 每张图都报「检不到人脸」,看起来像是图不好,实际是这台机器补不了头像。
+            raise RuntimeError(
+                f"人脸检测跑不起来({det_err}),这台机器现在补不了头像。"
+                "修:pip3 install --break-system-packages 'opencv-python-headless<5'")
         if face and not allow_faceless:
             # 这一步很关键:GitHub/og:image 常常给的是 logo、剪影、品牌图标而不是人像
             # (踩过三次:Albert Gu 的几何图标、Jonathan Ho 的粉色方块、苏剑林的剪影插画)。
