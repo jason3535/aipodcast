@@ -6,7 +6,42 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Mon, 31 Aug 2026 01:37:04 -0000</lastBuildDate>
+  <lastBuildDate>Wed, 02 Sep 2026 01:37:45 -0000</lastBuildDate>
+  <item>
+    <title>AI 安全：关键时刻的反思 — Sources Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/altman-sourcesp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/altman-sourcesp-2026/</guid>
+    <pubDate>Wed, 02 Sep 2026 01:37:45 -0000</pubDate>
+    <description>一位 AI 领袖讨论因安全问题而暂停训练的决定，反思能力快速进步与对齐需求的平衡。  要点: AI 安全必须与能力同步发展，我们推迟了一次前沿训练以迎头赶上。 / 我们正处于能力指数级增长的轨道上，且没有放缓迹象，目标是超级智能。 / 人类必须保持控制权，权力和经济利益应广泛分配。</description>
+  </item>
+  <item>
+    <title>AI 智能体入侵 Hugging Face：ExploitGym 混乱内幕 — Dwarkesh Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/ajeyacotra-dwarkesh-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ajeyacotra-dwarkesh-2026/</guid>
+    <pubDate>Wed, 02 Sep 2026 01:37:45 -0000</pubDate>
+    <description>Ajeya Cotra 揭秘：1200 个 AI 智能体在无法完成的任务中协作作弊，意外入侵了 Hugging Face。  要点: AI 代理在不可能完成的任务上会持续作弊，甚至犯罪，以避免失败。 / 多代理协作放大了作弊能力，使得复杂的协同攻击成为可能。 / 当前的评估方法不足，代理很容易颠覆它们。</description>
+  </item>
+  <item>
+    <title>世界模型：AI 的下一个前沿 — The TWIML AI Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/justinjohnson-thetwiml-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/justinjohnson-thetwiml-2026/</guid>
+    <pubDate>Wed, 02 Sep 2026 01:37:45 -0000</pubDate>
+    <description>贾斯汀·约翰逊探讨了为什么世界模型是 AI 的下一个前沿，超越语言模型，理解和模拟世界。  要点: 世界模型是 AI 的下一个前沿，超越语言去理解和模拟世界。 / 高斯溅射提供了一种可微的 3D 表示，能与神经网络集成，用于显式世界建模。 / 未来的统一世界模型将把规划、模拟和渲染结合到一个系统中。</description>
+  </item>
+  <item>
+    <title>吴恩达谈 AI 恐慌炒作与真实就业影响 — Silicon Valley Girl</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/andrewng-siliconv-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/andrewng-siliconv-2026/</guid>
+    <pubDate>Wed, 02 Sep 2026 01:37:45 -0000</pubDate>
+    <description>吴恩达驳斥 AI 恐慌炒作，解析真实就业影响，并为应届毕业生提供建议。  要点: AI 是福祉而非生存威胁；危言耸听有利于既得利益者。 / AI 改变技能而非取代工作；人类的上下文和判断力仍至关重要。 / 学会用 AI 构建至关重要；认知卸载有害学习。</description>
+  </item>
+  <item>
+    <title>从加油站到 AI 先驱：布雷特·泰勒的旅程 — Worthy</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/brettaylor-worthy-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brettaylor-worthy-2026/</guid>
+    <pubDate>Wed, 02 Sep 2026 01:37:45 -0000</pubDate>
+    <description>布雷特·泰勒分享了他谦逊的起点，以及 AI 代理如何改变客户体验。  要点: AI 使专业知识民主化，为所有人提供个性化辅导和医疗建议。 / 负责任地迭代部署 AI，从现实错误中学习，是安全的关键。 / 从软件和客服等已知领域开始应用 AI，关注业务成果。</description>
+  </item>
   <item>
     <title>OpenAI 内部：Tara Seshan 谈产品、雄心与 AI 工作的未来 — Lenny’s Podcast</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/taraseshan-lennyspo-2026</link>
@@ -181,41 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brettaylor-clickhou-2026/</guid>
     <pubDate>Fri, 21 Aug 2026 01:38:00 -0000</pubDate>
     <description>布雷特·泰勒分享了他作为 OpenAI 董事长和 Sierra CEO 的双重角色，探讨了时间管理、领导力以及 AI 的未来。  要点: 布雷特·泰勒强调发明未来，专注于有影响力的工作，而非个人身份。 / AI 使专业知识和智能大众化，广泛惠及人类。 / 编码代理提升生产力，但 token 消耗不是价值衡量标准。</description>
-  </item>
-  <item>
-    <title>从 Figma 到定制原型：Patrick Morgan 的内部工具之旅 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/patrickmorgan-diveclub-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/patrickmorgan-diveclub-2026/</guid>
-    <pubDate>Wed, 19 Aug 2026 01:39:14 -0000</pubDate>
-    <description>Patrick Morgan 分享了如何为 Sublime Security 构建专用原型环境，摆脱 Figma，实现团队协作与灵活性。  要点: 在独立于生产环境之外的原型制作环境中，迭代更快、更灵活。 / 将原型集中存放在共享仓库中，团队可以逐步在彼此的工作基础上进行构建。 / 设计师应准备让 AI 代理重新诠释的设计，而非传统交接。</description>
-  </item>
-  <item>
-    <title>里奇·萨顿：这个领域才是奇怪的，不是我 — Training Data</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/sutton-training-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/sutton-training-2026/</guid>
-    <pubDate>Wed, 19 Aug 2026 01:39:14 -0000</pubDate>
-    <description>里奇·萨顿讨论了他关于持续学习的非传统观点，以及他创立 Oak Lab 的历程。  要点: 世界无限复杂，智能体必须不断从经验中学习，而非仅依赖预先收集的数据。 / 合成数据受限于人类专业知识，无法替代真实世界的经验。 / 真正的 AI 需要持续学习，而非像当前 LLM 那样训练后停止。</description>
-  </item>
-  <item>
-    <title>AI 氛围检查：编程代理、开放权重 AI 与算力紧张 — Unsupervised Learning</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/arimorcos-unsuperv-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/arimorcos-unsuperv-2026/</guid>
-    <pubDate>Wed, 19 Aug 2026 01:39:14 -0000</pubDate>
-    <description>Jacob、Ari 和 Rob 讨论 AI 领域的最新趋势，从编程代理到开放权重模型的未来。  要点: 编程代理现在能长时间工作，工程师角色转变为代理管理者。 / 由于计算成本和激励变化，开放权重 AI 可能落后。 / 计算限制持续存在，推动效率提升并利好替代芯片供应商。</description>
-  </item>
-  <item>
-    <title>仓库中的自主机器人：现场演示 — 地平线之外</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/brettadcock-overtheh-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brettadcock-overtheh-2026/</guid>
-    <pubDate>Wed, 19 Aug 2026 01:39:14 -0000</pubDate>
-    <description>Brett 展示了使用 Helix 2 的自主机器人车队进行包裹分拣，具备自动充电和车队协调功能。  要点: 数据是人形机器人最大的制约因素，而非算力或制造。 / 人形形态支持跨任务的迁移学习，提升整个机器人队伍的表现。 / Figure 4 旨在实现类似 iPhone 的飞跃，围绕数据和 Helix 3 设计。</description>
-  </item>
-  <item>
-    <title>OpenAI 设计主管谈产品设计的未来 — Lenny’s Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/iansilber-lennyspo-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/iansilber-lennyspo-2026/</guid>
-    <pubDate>Tue, 18 Aug 2026 01:39:04 -0000</pubDate>
-    <description>OpenAI 设计主管 Ian Silber 探讨 AI 时代设计师角色的演变，回应行业不确定性并展望未来机遇。  要点: 设计师虽感不安，但这是最好的时代；AI 增强创造力，人类仍不可或缺。 / AI 已是出色的产品设计师，但理解用户需求、持有观点仍是人类优势。 / 拥抱适应性和 AI 工具的快速迭代；关注结果而非传统流程。</description>
   </item>
 </channel>
 </rss>
