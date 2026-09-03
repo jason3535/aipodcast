@@ -1,1 +1,18 @@
-[]
+[
+ {
+  "pid": "evilrabbit",
+  "en": "Evil Rabbit",
+  "zh": "Evil Rabbit",
+  "tiEn": "Founding Designer at Vercel",
+  "from": "Dive Club",
+  "added": "2026-09-03"
+ },
+ {
+  "pid": "seanlie",
+  "en": "Sean Lie",
+  "zh": "肖恩·利",
+  "tiEn": "Co-founder and CTO, Cerebras Systems",
+  "from": "Latent Space",
+  "added": "2026-09-03"
+ }
+]
