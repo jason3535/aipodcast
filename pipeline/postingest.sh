@@ -55,6 +55,11 @@ node pipeline/check_es_compat.js app.js
 # 错得像模像样,肉眼扫标题发现不了。基线已清到 0,再冒出来就是本轮新引入的。
 # **不能接 | tail** —— 管道的退出码是 tail 的,门禁会永远"通过"(这坑踩过两次)。
 python3 pipeline/check_guest_names.py --check
+# index 与 ep 两处元数据一致性:列表页读 index、详情页读 ep/<id>.json,同一集标题存两份。
+# build_mcp_data 对 ep 文件「无 ts 就不写」,导致 app.js 上的标题修正只落到 index —— 列表
+# 一个标题、点进去另一个(altman-davidsen-2026 挂错标题十天,全库 24 处)。根因已在
+# build_mcp_data.js 3c 步回写,这道门禁防它漂回去。**不能接 | tail**:管道退出码是 tail 的。
+node pipeline/check_index_ep_sync.js
 # 产物抽查:导语/要点这类「被 split_* 移出内联」的内容,有没有在成品里静默丢掉。
 # 加代码合回 ep-extra 只是修当下,这道门禁才是防复发的那一层(理由见脚本头注释)。
 node pipeline/check_artifacts.js

@@ -67,7 +67,16 @@ EPISODES.forEach(e=>{
 
 // 3b) 把 insights/brief 补进已有的 ep 文件:单集页本来就要拉这个文件,拿到这两块就不必再为
 //     data/ep-extra.json(gzip 558KB)整包买单。只补缺的字段,不碰 transcript。
-let patched=0;
+//
+// 3c) 元数据回写(2026-09-04 加):上面第 3 步「内联无 ts 就不写 ep 文件」意味着逐字稿一旦
+//     剥离,ep 里的 tEn/tZh/podEn 就冻在收录当天,之后在 app.js 上做的任何标题/台名修正
+//     都同步不过来 —— 而 SPA 单集页读的正是 ep 文件,于是列表页与详情页标题打架。
+//     2026-08-24 手改 altman-davidsen-2026 标题(自动标题抓了开场话题 Tobi Lütke 当整集标题)
+//     只落到了 index,详情页十天里一直显示错标题;全库同类不一致共 24 处。
+//     app.js 是元数据权威源 → 这里逐字段对齐。只覆盖非空的新值(防把已有值抹成空),
+//     且绝不碰 transcript/insights/brief。
+const META=['pid','person','personZh','podEn','podZh','date','min','fields','tEn','tZh','sEn','sZh','src'];
+let patched=0,resynced=0;
 EPISODES.forEach(e=>{
   const f=path.join(EP,e.id+'.json');
   if(!fs.existsSync(f))return;
@@ -75,6 +84,18 @@ EPISODES.forEach(e=>{
   let ch=false;
   if(e.insights&&Object.keys(e.insights).length&&!(d.insights&&Object.keys(d.insights).length)){d.insights=e.insights;ch=true;}
   if(e.brief&&!d.brief){d.brief=e.brief;ch=true;}
+  const p=PEOPLE[e.pid]||{};
+  const want={pid:e.pid,person:p.en,personZh:p.zh,podEn:e.pod.en,podZh:e.pod.zh,
+    date:e.date,min:e.min,fields:e.fields,tEn:e.tEn,tZh:e.tZh,sEn:e.sEn,sZh:e.sZh,src:e.src};
+  let meta=false;
+  META.forEach(k=>{
+    const v=want[k];
+    if(v===undefined||v===null||v==='')return;                     // 权威源没值 → 不覆盖
+    if(JSON.stringify(d[k])===JSON.stringify(v))return;
+    d[k]=v;ch=true;meta=true;
+  });
+  if(meta)resynced++;
   if(ch){fs.writeFileSync(f,JSON.stringify(d));patched++;}
 });
+if(resynced)console.log('  元数据回写 ep 文件:'+resynced+' 期(标题/台名等以 app.js 为准)');
 console.log('mcp-data:',index.length,'期索引 +',people.length,'人 | ep 补写',wrote,'(其余沿用已有全文) | 补 insights/brief',patched);
