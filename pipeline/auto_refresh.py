@@ -627,6 +627,13 @@ def main():
     if rc_g != 0:
         log("⚠️ 嘉宾名检查未通过(误听残留或登记名有误),放弃提交:\n" + out_g[-300:]); return
 
+    # index/ep 一致性门禁:与 postingest.sh 对齐。列表页读 index、详情页读 ep/<id>.json,
+    # 标题存两份;build_mcp_data 对已剥离逐字稿的 ep 文件曾长期不回写,导致两处标题打架
+    # (2026-09-04 查出 24 处,altman-davidsen-2026 详情页挂错标题十天)。
+    rc_s, out_s = run_cmd(["node", "pipeline/check_index_ep_sync.js"])
+    if rc_s != 0:
+        log("⚠️ index/ep 一致性未通过,放弃提交:\n" + out_s[-600:]); return
+
     run_cmd(["git", "add", "-A"])
     msg = f"chore: 自动保鲜 +{added} 期（{', '.join(x['pid'] for x in plan[:added])}）"
     if new_people:
