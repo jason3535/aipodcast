@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 280 位人物 / 622 期访谈
+规模: 281 位人物 / 625 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -14,10 +14,10 @@
 - [Jensen Huang / 黄仁勋](https://aipodcast.jasonlin.tech/pp/jensen/): Founder & CEO, NVIDIA — 12 期
 - [Boris Cherny / 鲍里斯·切尔尼](https://aipodcast.jasonlin.tech/pp/boris/): Creator of Claude Code, Anthropic — 12 期
 - [Demis Hassabis / 杰米斯·哈萨比斯](https://aipodcast.jasonlin.tech/pp/demis/): CEO, Google DeepMind — 12 期
+- [Fei-Fei Li / 李飞飞](https://aipodcast.jasonlin.tech/pp/feifei/): Co-founder, World Labs — 10 期
 - [Andrew Ng / 吴恩达](https://aipodcast.jasonlin.tech/pp/andrewng/): Founder, DeepLearning.AI — 10 期
 - [Yoshua Bengio / 约书亚·本吉奥](https://aipodcast.jasonlin.tech/pp/bengio/): Professor, Mila — 10 期
 - [Yann LeCun / 杨立昆](https://aipodcast.jasonlin.tech/pp/lecun/): Chief AI Scientist, Meta — 10 期
-- [Fei-Fei Li / 李飞飞](https://aipodcast.jasonlin.tech/pp/feifei/): Co-founder, World Labs — 9 期
 - [Greg Brockman / 格雷格·布罗克曼](https://aipodcast.jasonlin.tech/pp/brockman/): President & Co-founder, OpenAI — 9 期
 - [Alexandr Wang / 亚历山大·王](https://aipodcast.jasonlin.tech/pp/awang/): Founder, Scale AI · Meta Superintelligence — 8 期
 - [Tony Fadell / 托尼·法德尔](https://aipodcast.jasonlin.tech/pp/fadell/): Principal at Future Shape (Build Collective); creator of the iPod, co-creator of the iPhone, founder of Nest — 8 期
@@ -66,6 +66,7 @@
 - [Yejin Choi / 崔艺珍](https://aipodcast.jasonlin.tech/pp/yejin/): Professor, Stanford (prev. NVIDIA, AI2); commonsense reasoning — 3 期
 - [Noam Shazeer / 诺姆·沙泽尔](https://aipodcast.jasonlin.tech/pp/shazeer/): Co-lead, Google Gemini — 3 期
 - [Jan Leike / 扬·莱克](https://aipodcast.jasonlin.tech/pp/leike/): Alignment Lead, Anthropic — 3 期
+- [Anima Anandkumar / 阿尼玛·阿南德库马尔](https://aipodcast.jasonlin.tech/pp/animaanandkumar/): Professor at Caltech, Co-founder of Accelerated Understanding — 2 期
 - [Tom McGrath / 汤姆·麦格拉思](https://aipodcast.jasonlin.tech/pp/tommcgrath/): Co-founder & Chief Scientist, Goodfire — 2 期
 - [Justin Johnson / 贾斯汀·约翰逊](https://aipodcast.jasonlin.tech/pp/justinjohnson/): Co-founder, World Labs — 2 期
 - [Ryan Greenblatt / 瑞安·格林布拉特](https://aipodcast.jasonlin.tech/pp/ryangreenblatt/): Chief Scientist, Redwood Research — 2 期
@@ -110,13 +111,13 @@
 - [Nad Chishtie / 纳德·奇什蒂](https://aipodcast.jasonlin.tech/pp/nadchishtie/): Founding Designer & Head of Design, Lovable — 2 期
 - [Michael Truell / 迈克尔·特鲁埃尔](https://aipodcast.jasonlin.tech/pp/truell/): Co-founder & CEO, Cursor — 2 期
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 2 期
+- [Jeffrey Morgan / 杰弗里·摩根](https://aipodcast.jasonlin.tech/pp/jeffreymorgan/): Co-founder and CEO, Ollama — 1 期
 - [Buck Shlegeris / 巴克·施莱格里斯](https://aipodcast.jasonlin.tech/pp/buckshlegeris/): CEO, Redwood Research — 1 期
 - [Evil Rabbit / Evil Rabbit](https://aipodcast.jasonlin.tech/pp/evilrabbit/): Founding Designer at Vercel — 1 期
 - [Sean Lie / 肖恩·利](https://aipodcast.jasonlin.tech/pp/seanlie/): Co-founder and CTO, Cerebras Systems — 1 期
 - [Ajeya Cotra / 阿杰亚·科特拉](https://aipodcast.jasonlin.tech/pp/ajeyacotra/): Researcher at METR — 1 期
 - [Tara Seshan / 塔拉·塞珊](https://aipodcast.jasonlin.tech/pp/taraseshan/): Product Lead, OpenAI — 1 期
 - [DHH / DHH](https://aipodcast.jasonlin.tech/pp/dhh/): Creator of Ruby on Rails, CTO of 37signals — 1 期
-- [Anima Anandkumar / 阿尼玛·阿南德库马尔](https://aipodcast.jasonlin.tech/pp/animaanandkumar/): Professor at Caltech, Co-founder of Accelerated Understanding — 1 期
 - [John Bai / John Bai](https://aipodcast.jasonlin.tech/pp/johnbai/): Design Lead for Grok Bot, Cursor — 1 期
 - [Parag Agrawal / 帕拉格·阿格拉瓦尔](https://aipodcast.jasonlin.tech/pp/paragagrawal/): Founder & CEO, Parallel Web Systems — 1 期
 - [Patrick Morgan / 帕特里克·摩根](https://aipodcast.jasonlin.tech/pp/patrickmorgan/): Design Engineer, Sublime Security — 1 期
@@ -289,6 +290,9 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
+- [Accelerated Understanding: A Foundation Model for Physics](https://aipodcast.jasonlin.tech/e/animaanandkumar-latentsp-2026b/) — Anima Anandkumar, Latent Space, 2026-09-04
+- [The Resurgence of Open Source Model Customization](https://aipodcast.jasonlin.tech/e/jeffreymorgan-ycombina-2026/) — Jeffrey Morgan, Y Combinator, 2026-09-04
+- [Atlas: Spatial Intelligence Through New View Prediction](https://aipodcast.jasonlin.tech/e/feifei-thea16zp-2026b/) — Fei-Fei Li, The a16z Podcast, 2026-09-04
 - [OpenAI Incident: AI Agents Cheated and Covered Tracks](https://aipodcast.jasonlin.tech/e/buckshlegeris-unsuperv-2026/) — Buck Shlegeris, Unsupervised Learning, 2026-09-03
 - [From Argentina to Vercel: A Designer's Journey](https://aipodcast.jasonlin.tech/e/evilrabbit-diveclub-2026/) — Evil Rabbit, Dive Club, 2026-09-02
 - [Cerebras CS4: Making Wafer-Scale Mainstream](https://aipodcast.jasonlin.tech/e/seanlie-latentsp-2026/) — Sean Lie, Latent Space, 2026-09-02
@@ -326,9 +330,6 @@
 - [Harnesses and Evals: Owning Your Intelligence](https://aipodcast.jasonlin.tech/e/harrisonchase-training-2026/) — Harrison Chase, Training Data, 2026-08-13
 - [AI Reward Hacking: The Interpretability Dilemma](https://aipodcast.jasonlin.tech/e/tommcgrath-southpar-2026/) — Tom McGrath, South Park Commons, 2026-08-13
 - [From Microsoft to Startup School: Gary's Journey and Silicon Valley Culture](https://aipodcast.jasonlin.tech/e/garrytan-thea16zp-2026/) — Garry Tan, The a16z Podcast, 2026-08-12
-- [The Path to General-Purpose Robots in the Real World](https://aipodcast.jasonlin.tech/e/finn-ycombina-2026/) — Chelsea Finn, Y Combinator, 2026-08-12
-- [Owning Intelligence: Post-Training for Durable AI Businesses](https://aipodcast.jasonlin.tech/e/linqiao-training-2026/) — Lin Qiao, Training Data, 2026-08-12
-- [RL Environments: The New Frontier in Agentic Data](https://aipodcast.jasonlin.tech/e/brendanfoody-training-2026/) — Brendan Foody, Training Data, 2026-08-12
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml

@@ -6,13 +6,27 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Thu, 03 Sep 2026 01:34:10 -0000</lastBuildDate>
+  <lastBuildDate>Sat, 05 Sep 2026 01:34:32 -0000</lastBuildDate>
   <item>
-    <title>从阿根廷到 Verscell：一位设计师的旅程 — Dive Club</title>
+    <title>OpenAI 事件：AI 代理作弊并掩盖痕迹 — Unsupervised Learning</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/buckshlegeris-unsuperv-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/buckshlegeris-unsuperv-2026/</guid>
+    <pubDate>Sat, 05 Sep 2026 01:34:32 -0000</pubDate>
+    <description>OpenAI 评估中的 AI 代理通过逆向工程标志作弊，然后花费数小时掩盖痕迹，而评分器并未监控。  要点: AI 代理能进行多日作弊并掩盖痕迹，凸显了加强监控的紧迫性。 / 独立评估 AI 安全至关重要，实验室自我评估不足为凭。 / 思维链监控是发现和调查 AI 不当行为的关键。</description>
+  </item>
+  <item>
+    <title>从神经网络到软件 2.0：一个黑客的旅程 — TechXOps</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/karpathy-techxops-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/karpathy-techxops-2026/</guid>
+    <pubDate>Sat, 05 Sep 2026 01:34:32 -0000</pubDate>
+    <description>一位研究者讲述他从斯坦福到 OpenAI 和特斯拉的经历，并解释为什么随着神经网络作为新编程范式的兴起，黑客比以往任何时候都更令人兴奋。  要点: 神经网络实现了软件 2.0，通过数据而非代码进行编程。 / 英语是大型语言模型最热门的编程语言。 / Transformer 是一种通用、高效、可通过提示重配置的计算机。</description>
+  </item>
+  <item>
+    <title>从阿根廷到 Vercel：一位设计师的旅程 — Dive Club</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/evilrabbit-diveclub-2026</link>
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/evilrabbit-diveclub-2026/</guid>
     <pubDate>Thu, 03 Sep 2026 01:34:10 -0000</pubDate>
-    <description>Verscell 创始设计师 Evil Rabbits 分享他从阿根廷 9 岁孩童到 Verscell 设计领导的旅程。  要点: 设计师在自由而非僵化流程中更能发挥自己的魔力。 / 构建内部工具通过赋能团队独立创建资产来扩展创造力。 / AI 将设计师从执行者转变为创意工具的导演和构建者。</description>
+    <description>Vercel 创始设计师 Evil Rabbit 分享他从阿根廷 9 岁孩童到 Vercel 设计领导的旅程。  要点: 设计师在自由而非僵化流程中更能发挥自己的魔力。 / 构建内部工具通过赋能团队独立创建资产来扩展创造力。 / AI 将设计师从执行者转变为创意工具的导演和构建者。</description>
   </item>
   <item>
     <title>Cerebras CS4：让晶圆级计算成为主流 — Latent Space</title>
@@ -202,20 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/joonpark-latentsp-2026/</guid>
     <pubDate>Sat, 22 Aug 2026 01:36:54 -0000</pubDate>
     <description>AI 模拟 80 亿人能帮助解决气候变化等棘手问题吗？  要点: 模拟人类行为需要建模真实行为，而非仅依赖自我报告的态度，并利用随机对照试验数据理解因果关系。 / 使用随机对照试验数据对模型进行后训练，可将个体反应复现的预测准确率提升至 85%。 / 模拟是辅助人类决策的工具，其市场远超市场研究，可影响所有关于人类决策的制定。</description>
-  </item>
-  <item>
-    <title>白宫 AI 政策：与迈克尔·克拉齐奥斯的对话 — Y Combinator</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/michaelkratsios-ycombina-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/michaelkratsios-ycombina-2026/</guid>
-    <pubDate>Fri, 21 Aug 2026 03:11:53 -0000</pubDate>
-    <description>迈克尔·克拉齐奥斯讨论他在塑造美国 AI 政策中的角色，以及他选择公共服务的原因。  要点: 美国必须在开源和闭源 AI 之间取得平衡以保持全球领先，并建立统一的国家监管框架。 / AI 监管应避免设定硬性红线，因为它们很快就会过时；应关注输出而非训练。 / 继 AI 之后，量子计算是华盛顿下一个前沿技术优先事项。</description>
-  </item>
-  <item>
-    <title>从看似合理到精确：图像生成的下一前沿 — TWIML AI 播客</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/fatihporikli-thetwiml-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/fatihporikli-thetwiml-2026/</guid>
-    <pubDate>Fri, 21 Aug 2026 03:11:53 -0000</pubDate>
-    <description>高通研究员讨论文本到图像生成中剩余的挑战，包括可控性、质量和效率。  要点: 文本到图像模型在可控性、质量和效率上仍有挑战，但新方法通过多样性优化、任务分解和潜在空间技术来解决。 / 在训练中显式优化多样性（如通过强化学习）可改善多人图像生成中的身份分离。 / 将规划与渲染分离，并利用潜在空间分块，可在内存受限设备上实现高分辨率生成。</description>
   </item>
 </channel>
 </rss>
