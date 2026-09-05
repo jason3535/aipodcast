@@ -26,6 +26,8 @@ echo "── 10.5/11 站群闭环(互链 map 补全 + 图谱分享页)"
 python3 pipeline/build_crosslinks.py --apply | tail -3       # 六站互链只增不删;动了其他仓库会打印提醒
 python3 pipeline/graph_share_pages.py --apply | tail -5      # 图谱新节点的 /p+/og 页(2026-08-10 garrytan 404 教训)
 python3 pipeline/graph_share_xlinks.py || echo "  ⚠ 图谱分享页互链失败(不阻断)"
+python3 pipeline/graph_site_index.py --apply | tail -4       # 四图谱首页「站点地图」人物导航(2026-09-05 前从没更新过,新人物无内链)
+python3 pipeline/graph_conn_labels_zh.py --check || echo "  ⚠ 图谱有纯英文未译的关系边标签(跑 graph_conn_labels_zh.py --apply --identity-rest)"
 
 echo "── 10.6/11 RSS(gen_feed)"
 # 2026-08-13 发现:这一步脚本一直在,但从没被任何链条调用过,feed.xml 停更了两周半。
