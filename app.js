@@ -2453,8 +2453,8 @@ function vStats(){
     <div class="hm-legend">少 <i style="background:var(--surface-2);border:1px solid var(--line)"></i><i style="background:rgba(41,151,255,.25)"></i><i style="background:rgba(41,151,255,.45)"></i><i style="background:rgba(41,151,255,.7)"></i><i style="background:var(--accent)"></i> 多 · 每日阅读分钟数</div>
     <div class="st-h3">节目排行 · 我读得最多的频道</div>
     <div class="rk">${rows||'<div class="st-empty">暂无</div>'}</div>
-    ${pushPanelHtml()}
     ${sharePromoHtml(st,hrs)}
+    ${pushPanelHtml()}
     ${mineMarksHtml()}
   </section></div>`;
 }
@@ -3754,19 +3754,24 @@ async function pushSyncQuiet(){
 addEventListener('load',()=>setTimeout(pushSyncQuiet,2500));
 let _pushNote='';
 const RSS_TIP='<a href="https://feed.jasonlin.tech/aipodcast.xml" style="color:var(--accent)">订阅 RSS</a>（任何网络都能用）';
+/* 2026-09-05 改版:原来是一个独立小节(标题+两行说明+胶囊按钮)插在「节目排行」和分享卡之间,
+   视觉上像一块突兀的公告。现在收成一行「设置行」:铃铛 + 标题/一句状态 + 右侧开关,贴在分享卡下方,
+   宽度与分享卡对齐(560px)。不可用的状态(iOS 未加主屏/被屏蔽/不支持)开关置灰,状态句里给 RSS 出口。 */
 function pushPanelHtml(){setTimeout(pushPanelRefresh,0);
-  return `<div class="st-h3">更新提醒</div><div id="pushPanel"><div class="st-empty">检查中…</div></div>`;}
+  return `<div class="push-row" id="pushPanel"><span class="push-ic" aria-hidden="true">🔔</span><div class="push-tx"><b>更新提醒</b><span id="pushSub">检查中…</span></div></div>`;}
 async function pushPanelRefresh(){
   const el=document.getElementById('pushPanel');if(!el)return;
   const st=await pushState();
-  const note=_pushNote?`<div class="st-empty" style="margin-top:10px">${_pushNote}</div>`:'';
-  const btn=(txt,fn)=>`<button class="shp-btn" style="margin-top:12px;width:auto;padding:9px 20px" id="pushBtn" onclick="${fn}">${txt}</button>`;
-  if(st==='unsupported')el.innerHTML=`<div class="st-empty">这个浏览器不支持网页推送。${RSS_TIP}</div>`;
-  else if(st==='ios')el.innerHTML=`<div class="st-empty">iPhone / iPad 上，需要先用 Safari 的「分享 → 添加到主屏幕」把本站装成图标，才能开启推送。或者${RSS_TIP}。</div>`;
-  else if(st==='denied')el.innerHTML=`<div class="st-empty">本站的通知权限被浏览器屏蔽了，需要在地址栏的站点设置里恢复。或者${RSS_TIP}。</div>`;
-  else if(st==='unsynced')el.innerHTML=`<div class="st-empty">浏览器这边已订阅，但没能登记到提醒服务器（多半是网络问题），所以还收不到。点下面重试。</div>${btn('重试登记','pushSubscribe()')}${note}`;
-  else if(st==='on')el.innerHTML=`<div class="st-empty">已开启 ✓ 有新一期时会收到一条通知（多期会合并成一条）。</div>${btn('关闭提醒','pushUnsubscribe()')}${note}`;
-  else el.innerHTML=`<div class="st-empty">有新访谈时给你发一条浏览器通知。不需要账号，也不收集任何个人信息。</div>${btn('开启更新提醒','pushSubscribe()')}${note}`;}
+  const sw=(on,fn,dis)=>`<button class="sw${on?' on':''}${dis?' dis':''}" role="switch" aria-checked="${on?'true':'false'}" aria-label="更新提醒" id="pushBtn" ${fn?`onclick="${fn}"`:''}><i></i></button>`;
+  const note=_pushNote?`<div class="push-note">${_pushNote}</div>`:'';
+  let sub,ctl;
+  if(st==='unsupported'){sub=`这个浏览器不支持网页推送 · ${RSS_TIP}`;ctl=sw(false,'',true);}
+  else if(st==='ios'){sub=`iPhone 上先用 Safari「分享 → 添加到主屏幕」再开启 · ${RSS_TIP}`;ctl=sw(false,'',true);}
+  else if(st==='denied'){sub=`通知权限被浏览器屏蔽，在地址栏站点设置里恢复 · ${RSS_TIP}`;ctl=sw(false,'',true);}
+  else if(st==='unsynced'){sub=`浏览器已订阅，但没登记到提醒服务器（多半是网络）· <a href="#" onclick="pushSubscribe();return false" style="color:var(--accent)">重试</a>`;ctl=sw(false,'pushSubscribe()',false);}
+  else if(st==='on'){sub='已开启 · 有新一期时通知，多期合并成一条';ctl=sw(true,'pushUnsubscribe()',false);}
+  else {sub='有新访谈时发一条浏览器通知 · 无账号、不收集个人信息';ctl=sw(false,'pushSubscribe()',false);}
+  el.innerHTML=`<span class="push-ic" aria-hidden="true">🔔</span><div class="push-tx"><b>更新提醒</b><span id="pushSub">${sub}</span>${note}</div>${ctl}`;}
 function pushDiagnose(e){
   const m=''+((e&&e.message)||e);
   const safari=/Safari/.test(navigator.userAgent)&&!/Chrome|Chromium|Edg|CriOS|FxiOS/.test(navigator.userAgent);
