@@ -1,5 +1,6 @@
 <!doctype html><html lang="zh"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark"><meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <title>从代码洞穴到 Y Combinator：坚韧与创新之旅 · 陈嘉兴 — AI Podcast</title>
 <meta name="description" content="一位创始人分享童年困境如何激发对科技的热爱，以及 Y Combinator 如何识别下一代创造者。｜核心观点：最好的投资者是曾经的建造者，而非银行家，因为他们理解事物是如何构建的。">
 <link rel="canonical" href="https://aipodcast.jasonlin.tech/e/garrytan-tetragra-2026/">
@@ -20,6 +21,11 @@
 /* 全文区。content-visibility 让屏幕外章节跳过渲染 —— 最长一期文本 576KB,不这样会明显卡顿;
    老引擎不认这条声明会直接忽略,不影响可读性(Kindle 那套兜底逻辑同理)。 */
 .tr{margin-top:8px}.tr .sec{content-visibility:auto;contain-intrinsic-size:auto 600px;margin:0 0 10px}
+/* 深色模式:SPA 早就支持,静态分享页一直是纯白——夜里点开分享链接先闪一屏白(2026-09-05 补)。
+   上面不少规则写了硬编码色值兜底,这里用同优先级的后置规则整体覆盖。 */
+@media (prefers-color-scheme:dark){:root{--ink:#f5f5f7;--sub:#a1a1a6;--line:#2c2c2e;--acc:#2997ff}
+body{background:#000;color:#f5f5f7}nav.bc,nav.bc a,.en-t,.meta,.en,footer,footer a{color:#a1a1a6}.meta a{color:#2997ff}
+h2,footer{border-top-color:#2c2c2e}.ep-list a,.p-list a,.tr h3{color:#f5f5f7}.cta-2{background:#1c1c1e;border-color:#3a3a3c;color:#2997ff}}
 .tr h3{font-size:15px;margin:26px 0 8px;color:#1d1d1f;color:var(--ink);border-top:1px solid #e6e6ea;border-top:1px solid var(--line);padding-top:14px}
 .tr .turn{margin:0 0 14px}.tr .spk{display:inline-block;font-size:12px;color:#6e6e73;color:var(--sub);font-weight:600;margin-bottom:2px}
 .tr p.zh{margin:.2em 0}.tr p.en{margin:.1em 0 0}</style></head><body><div class="wrap"><nav class="bc"><a href="https://aipodcast.jasonlin.tech/">AI Podcast</a> › <a href="https://aipodcast.jasonlin.tech/pp/garrytan/">陈嘉兴</a> › 本期</nav>

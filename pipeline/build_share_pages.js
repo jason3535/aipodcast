@@ -65,6 +65,11 @@ const CSS=`:root{--ink:#1d1d1f;--sub:#6e6e73;--line:#e6e6ea;--acc:#0071e3}*{box-
 /* 全文区。content-visibility 让屏幕外章节跳过渲染 —— 最长一期文本 576KB,不这样会明显卡顿;
    老引擎不认这条声明会直接忽略,不影响可读性(Kindle 那套兜底逻辑同理)。 */
 .tr{margin-top:8px}.tr .sec{content-visibility:auto;contain-intrinsic-size:auto 600px;margin:0 0 10px}
+/* 深色模式:SPA 早就支持,静态分享页一直是纯白——夜里点开分享链接先闪一屏白(2026-09-05 补)。
+   上面不少规则写了硬编码色值兜底,这里用同优先级的后置规则整体覆盖。 */
+@media (prefers-color-scheme:dark){:root{--ink:#f5f5f7;--sub:#a1a1a6;--line:#2c2c2e;--acc:#2997ff}
+body{background:#000;color:#f5f5f7}nav.bc,nav.bc a,.en-t,.meta,.en,footer,footer a{color:#a1a1a6}.meta a{color:#2997ff}
+h2,footer{border-top-color:#2c2c2e}.ep-list a,.p-list a,.tr h3{color:#f5f5f7}.cta-2{background:#1c1c1e;border-color:#3a3a3c;color:#2997ff}}
 .tr h3{font-size:15px;margin:26px 0 8px;color:#1d1d1f;color:var(--ink);border-top:1px solid #e6e6ea;border-top:1px solid var(--line);padding-top:14px}
 .tr .turn{margin:0 0 14px}.tr .spk{display:inline-block;font-size:12px;color:#6e6e73;color:var(--sub);font-weight:600;margin-bottom:2px}
 .tr p.zh{margin:.2em 0}.tr p.en{margin:.1em 0 0}`;
@@ -84,7 +89,8 @@ const BEACON=(()=>{const raw=fs.readFileSync(path.join(__dirname,'beacon.js'),'u
 // 每页专属分享卡:og/e/<id>.jpg、og/pp/<pid>.jpg 由 gen_og_cards.py 生成;没有就回退全站默认图
 const ogFor=(sub,id)=>fs.existsSync(path.join(ROOT,'og',sub,id+'.jpg'))?`${SITE}/og/${sub}/${id}.jpg`:`${SITE}/assets/og.png`;
 const page=(title,desc,url,ogtype,bodyHtml,ld,og=`${SITE}/assets/og.png`)=>`<!doctype html><html lang="zh"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark"><meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <title>${title}</title>
 <meta name="description" content="${desc}">
 <link rel="canonical" href="${url}">
