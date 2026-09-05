@@ -82,3 +82,12 @@ if (realHash !== idxHash)
 
 if (bad.length) { bad.forEach(b => console.error("  ✗ " + b)); process.exit(1); }
 console.log(`  产物抽查:静态页 ${sample.length} 期速览/description 完整 | feed ${items} 条含要点 | mcp-data 导语完整 | 首页大卡片导语在位`);
+
+// app.js 版本号门禁(2026-09-05):index.html 里的 app.js?v=<md5> 必须等于当前 app.js 的 md5。
+// 否则=改了 app.js 没重建:新内容顶着旧 URL 上线,SW 对带 ?v= 的 app.js 是 cache-first,老用户永远拿不到新版
+//(或者反过来,回滚后仍看到旧版)。修法就是跑 build_share_pages.js。
+{const crypto=require('crypto');const fs=require('fs');const path=require('path');const ROOT=path.resolve(__dirname,'..');
+ const h=crypto.createHash('md5').update(fs.readFileSync(path.join(ROOT,'app.js'),'utf8')).digest('hex').slice(0,10);
+ const m=fs.readFileSync(path.join(ROOT,'index.html'),'utf8').match(/app\.js\?v=([a-f0-9]+)/);
+ if(!m||m[1]!==h){console.error(`  ✗ index.html 的 app.js?v=${m&&m[1]} ≠ 当前 app.js md5 ${h} —— 改了 app.js 没重建,跑 node pipeline/build_share_pages.js`);process.exit(1);}
+ console.log('  app.js 版本号与内容一致('+h+')');}
