@@ -37,6 +37,10 @@ LOG = BASE / "auto_refresh.log"
 KEY = os.environ.get("DEEPSEEK_API_KEY")
 DS_URL = "https://api.deepseek.com/chat/completions"
 HDR = {"User-Agent": "Mozilla/5.0"}
+# 搬运/剪辑号:不是原始出处,上传日期是重传日期(karpathy-techxops-2026 把 Stanford 讲座记成 8/19,
+# elon-startupt-2026 把 2020 年 Joe Rogan 记成 2026)。人物搜索最容易撞上它们——按频道名一律不收。
+REPOST_CHANNELS = {"TechXOps", "philia", "DRM News", "Startup TM", "Motiversity", "PunkAI", "Perfology Clips",
+                   "Rob Shocks", "Parker Prompts", "Kaushik Datta", "COAI"}
 
 def log(msg):
     line = f"[{datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M')}Z] {msg}"
@@ -410,6 +414,8 @@ def discover_channels(people, vids, days, per_channel_cap=2):
             if not vid or vid in exist or (dur and dur < 1500): continue
             m = meta(vid)
             if not m or not m["cap"] or m["date"] < floor: continue
+            if m.get("ch") in REPOST_CHANNELS:
+                log(f"  [频道] {pod_en[:20]:20} {m['date']} {m['t'][:44]} → 弃(搬运号 {m['ch']})"); continue
             if not latin_title(m["t"]): continue
             if not english_audio(m):
                 log(f"  [频道] {pod_en[:20]:20} {m['date']} {m['t'][:44]} → 弃(原声 {m['origlang']},en 字幕是机翻)")
@@ -474,6 +480,8 @@ def discover(people, vids, days, per_person_cap=1):
         for vid in cands[:6]:
             m = meta(vid)
             if not m or not m["cap"] or not latin_title(m["t"]): continue
+            if m.get("ch") in REPOST_CHANNELS:
+                log(f"  {pid:12} {m['date']} {m['t'][:44]} → 弃(搬运号 {m['ch']})"); continue
             if not english_audio(m):
                 log(f"  {pid:12} {m['date']} {m['t'][:44]} → 弃(原声 {m['origlang']},en 字幕是机翻)")
                 continue
