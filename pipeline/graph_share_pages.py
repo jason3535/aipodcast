@@ -6,7 +6,7 @@
 只补缺失,不重写已有页(既有页可能有人工调整);--check 有缺口退出 1(门禁用)。
 样式/脚本从该仓库任一既有页提取(保证视觉一致);OG 图按既有版式用 PIL 复刻
 (深底、站名眉题、领域丸、大名、org/title、双行 bio、右侧圆头像、底部域名+CTA)。
-用法:python3 pipeline/graph_share_pages.py [--apply] [--check]
+用法:python3 pipeline/graph_share_pages.py [--apply] [--check] [--refresh-all](模板改动后全站重写页,OG 不动)
 """
 import html, json, re, sys, textwrap
 from pathlib import Path
@@ -122,13 +122,17 @@ def build_page(site, gid, n, z, neigh, pod_pid, pap_pid, has_photo, style, scrip
 <p class="role"><span class="i18n-zh">{esc(title_zh)}</span><span class="i18n-en">{esc(title_en)}</span></p>
 <div class="fields">{tags}</div>
 <div class="bio i18n-zh">{esc(bio_zh)}</div><div class="bio i18n-en">{esc(bio_en)}</div>
-<a class="cta" href="/?node={gid}"><span class="i18n-zh">在关系图谱中查看 {esc(name)} →</span><span class="i18n-en">View {esc(name)} in the graph →</span></a>{cta2}{cta3}
+<a class="cta" href="/?node={gid}"><span class="i18n-zh">在关系图谱中查看 {esc(name)} →</span><span class="i18n-en">View {esc(name)} in the graph →</span></a><button class="cta cta-share" onclick="shareThis(this)"><span class="i18n-zh">分享</span><span class="i18n-en">Share</span></button>{cta2}{cta3}
 
 <h2><span class="i18n-zh">时间线</span><span class="i18n-en">Timeline</span></h2><ul>{tl}</ul>
 <h2><span class="i18n-zh">关系网络</span><span class="i18n-en">Connections</span></h2>{nbrs}
 <a class="back" href="/"><span class="i18n-zh">← 返回完整图谱</span><span class="i18n-en">← Back to the graph</span></a>
 </div>
 {script}
+<style>.cta-share{{margin-left:8px;background:transparent;color:#0a84ff;border:1px solid rgba(255,255,255,.18);cursor:pointer;font:inherit;font-weight:600}}</style>
+<script>function shareThis(b){{var u=document.querySelector('link[rel=canonical]').href,t=document.title,d=(document.querySelector('meta[name=description]')||{{}}).content||'';
+if(navigator.share){{navigator.share({{title:t,text:d,url:u}}).catch(function(){{}});return;}}
+try{{navigator.clipboard.writeText(u).then(function(){{var o=b.innerHTML;b.textContent='已复制链接 · Copied';setTimeout(function(){{b.innerHTML=o}},1600)}})}}catch(e){{}}}}</script>
 {BEACON.replace("%PFX%", site["pfx"])}
 </body></html>'''
 
@@ -190,7 +194,7 @@ def main():
         p = site["path"]
         nodes, zh, conns, pod, pap, photos = parse_graph(p)
         have = {f.stem for f in (p / "p").glob("*.html")}
-        missing = [g for g in nodes if g not in have]
+        missing = [g for g in nodes if g not in have or "--refresh-all" in sys.argv]   # --refresh-all:模板改了,全站重写页(OG 图不动)
         if not missing:
             print(f"  {key}: {len(nodes)} 节点,分享页齐"); continue
         missing_total += len(missing)
@@ -206,7 +210,8 @@ def main():
             pg = build_page(site, gid, nodes[gid], zh.get(gid, {}), neigh[:6],
                             pod.get(gid), pap.get(gid), gid in photos, style, script)
             (p / "p" / f"{gid}.html").write_text(pg, encoding="utf-8")
-            build_og(site, gid, nodes[gid], zh.get(gid, {}), gid in photos, p / "og" / f"{gid}.png")
+            if not (p / "og" / f"{gid}.png").exists():   # OG 图只补缺;已有的(含 build.mjs 的 Chromium 版)绝不覆盖
+                build_og(site, gid, nodes[gid], zh.get(gid, {}), gid in photos, p / "og" / f"{gid}.png")
             print(f"      ✓ {gid} 页+OG 已生成")
         # sitemap 追加
         sm = p / "sitemap.xml"
