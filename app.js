@@ -4023,7 +4023,12 @@ function observeReveals(){
 }
 const MCP_URL='https://mcp.jasonlin.tech/mcp';
 function copyMcp(){navigator.clipboard&&navigator.clipboard.writeText(MCP_URL);const b=$('#mcpCopy');if(b){b.textContent='已复制';setTimeout(()=>b.textContent='复制',1500);}}
-function copyShare(id){const u='https://aipodcast.jasonlin.tech/e/'+id+'/';if(navigator.clipboard)navigator.clipboard.writeText(u);const b=$('#shareBtn');if(b){b.textContent='已复制链接';setTimeout(()=>b.textContent='分享',1600);}}
+/* 分享:手机上走系统分享面板(微信/X/信息直接带上该期专属分享卡),桌面回退复制链接。
+   分享的是静态页 /e/<id>/ —— 只有它带每期专属 og:image,SPA 的 #/episode 路由没有。 */
+async function copyShare(id){const u='https://aipodcast.jasonlin.tech/e/'+id+'/';const e=EPISODES.find(x=>x.id===id)||{};const b=$('#shareBtn');
+  track('share','/episode/'+id);
+  if(navigator.share){try{await navigator.share({title:(e.tZh||e.tEn||'AI Podcast'),text:(e.sZh||e.sEn||''),url:u});return;}catch(_){}}
+  try{await navigator.clipboard.writeText(u);if(b){b.textContent='已复制链接';setTimeout(()=>b.textContent='分享',1600);}}catch(_){if(b)b.textContent='复制失败';}}
 function footer(){return `<footer class="footer"><div class="wrap">
   <div class="mcp-note">
     <b style="color:var(--text-2)">接入 AI 助手 · MCP</b> — 全站 ${EPISODES.length} 期双语全文，可接入 Claude、Cursor 等做问答。只读、免费、无需 key。<br>
