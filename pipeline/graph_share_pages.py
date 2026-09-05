@@ -39,12 +39,15 @@ def parse_graph(p: Path):
     for m in re.finditer(r'\{\s*"?id"?:\s*"([\w-]+)"\s*,\s*"?name"?:\s*"((?:[^"\\]|\\.)*)"([^\n]*)', s):
         gid, name, rest = m.group(1), m.group(2), m.group(3)
         def f(key, src):
-            mm = re.search(key + r'\s*:\s*"((?:[^"\\]|\\.)*)"', src)
+            # 键可能带引号("org":)也可能不带(org:)——2026-08 起新加的节点是单行 JSON 格式,
+            # 之前只认无引号写法,导致 yangyaodong / ghemawat 等页 org、bio 全空(2026-09-05 发现)。
+            mm = re.search(r'"?' + key + r'"?\s*:\s*"((?:[^"\\]|\\.)*)"', src)
             return mm.group(1) if mm else ""
         # bio/papers 可能跨行:从 id 起取到下一个节点边界
         blk_end = s.find('id:"', m.end())
         blk = s[m.start(): blk_end if blk_end > 0 else m.start() + 2500]
-        fields = re.findall(r'"([a-z-]+)"', (re.search(r'field:\s*\[([^\]]*)\]', blk) or [None, ""])[1] if re.search(r'field:\s*\[([^\]]*)\]', blk) else "")
+        fm = re.search(r'"?field"?\s*:\s*\[([^\]]*)\]', blk)
+        fields = re.findall(r'"([a-z-]+)"', fm.group(1)) if fm else []
         papers = re.findall(r'\{y:\s*"([^"]*)"\s*,\s*t:\s*"((?:[^"\\]|\\.)*)"\}', blk)
         nodes[gid] = dict(name=name, org=f("org", blk), title=f("title", blk),
                           bio=f("bio", blk), fields=fields, papers=papers)
