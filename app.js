@@ -2595,32 +2595,37 @@ function vHome(){
     <div class="rail" style="margin-top:22px">${lt.map(epCard).join('')}</div>
   </section>`:'';})()}
 
-  <section class="wrap reveal">
+  ${(()=>{
+   /* 2026-09-05 首页信息架构改版(数据驱动):真人是冲人名来的(/person/altman 全站第二热、/people 11 UV),
+      而原来排在首页第 6、7 屏的「议题」「领域」30 天合计不到 10 人点过,首页→二级页流失 75%。
+      于是:人物区提到最新收录之前、按「最近有新一期」排;「最新播客」与「最近收录」合并(内容高度重叠);
+      议题与领域降到页尾。人物卡数量仍由 CSS 按宽度截断(≤640px 17 位、更宽 23 位)。 */
+   return `<section class="wrap reveal" style="padding-top:8px">
     <div class="row-head"><div>
-      <div class="eyebrow">Latest · 最新单集</div>
-      <h2 class="title">最新播客</h2>
-      <div class="sub">知名 AI 人物的播客，中英双语对照全文。</div></div>
-      <a class="see-all" onclick="go('#/browse')">查看全部 ${EPISODES.length} 期 →</a></div>
-    <div class="rail" style="margin-top:22px">${EPISODES.slice(0,12).map(epCard).join('')}
-      <div class="ep-card more-card" onclick="go('#/browse')"><div class="more-inner"><b>+${EPISODES.length-12}</b><span>查看全部单集</span></div></div>
-    </div>
-  </section>
+      <div class="eyebrow">People · 人物</div>
+      <h2 class="title">${Object.keys(PEOPLE).length} 位 AI 人物</h2>
+      <div class="sub">按最近有新一期排。点头像进个人主页：全部访谈 + 观点演变。</div></div>
+      <a class="see-all" onclick="go('#/people')">全部人物 →</a></div>
+    <div class="ppl-grid home-ppl" style="margin-top:22px">${pplRecent().map(pplCard).join('')}<div class="ppl-card ppl-more" onclick="go('#/people')"><span class="pm-n">···</span><div class="n">查看全部人物</div><div class="cnt">共 ${Object.keys(PEOPLE).length} 位 →</div></div></div>
+  </section>`;})()}
 
   ${(()=>{
-   // 「最近上新」按 addedAt(收录时间)排,只排除 stub。
-   // 不排除头部大卡(feat):否则一次批量收录里"最新收录的那期"会被 hero 吃掉、从名为「最近收录」的列表里消失(用户曾反馈"刚加的没在最近收录里")。宁可 hero 与列表首卡少量重复,也要让列表名副其实。
-   // 不再用「最新播客」的 date 前 12 做排除——否则一期 date 挤进前12就会从最近上新消失(即便它是最新收录)
+   // 「最近收录」按 addedAt(收录时间)排,只排除 stub;不排除 hero 那一期(否则批量收录里最新的一期会从这里消失,用户反馈过)。
+   // 至少 12 期;若最近一次是批量收录,把同一天 addedAt 的整批都显示(上限 20)。
    const ranked=EPISODES.slice().sort((a,b)=>(b.addedAt||'').localeCompare(a.addedAt||'')||(b.date||'').localeCompare(a.date||'')).filter(e=>!e.stub);
-   // 至少 8 期;若最近一次是「批量收录」,把同一天 addedAt 的整批都显示（上限 20）,避免大批新收被截断
    const topDay=ranked[0]&&(ranked[0].addedAt||'').slice(0,10);
    const batch=topDay?ranked.filter(e=>(e.addedAt||'').slice(0,10)===topDay).length:0;
-   const fresh=ranked.slice(0,Math.min(20,Math.max(8,batch)));
-   return fresh.length?`<section class="wrap reveal" style="padding-top:8px">
-    <div class="eyebrow">Recently added · 最近上新</div>
-    <h2 class="title">最近收录</h2>
-    <div class="sub">按收录时间排——老播客的新收录也在这里，别错过。</div>
-    <div class="rail" style="margin-top:22px">${fresh.map(epCard).join('')}</div>
-  </section>`:'';})()}
+   const fresh=ranked.slice(0,Math.min(20,Math.max(12,batch)));
+   return `<section class="wrap reveal" style="padding-top:8px">
+    <div class="row-head"><div>
+      <div class="eyebrow">Recently added · 最近收录</div>
+      <h2 class="title">最近收录</h2>
+      <div class="sub">按收录时间排——老播客的新收录也在这里。</div></div>
+      <a class="see-all" onclick="go('#/browse')">查看全部 ${EPISODES.length} 期 →</a></div>
+    <div class="rail" style="margin-top:22px">${fresh.map(epCard).join('')}
+      <div class="ep-card more-card" onclick="go('#/browse')"><div class="more-inner"><b>+${EPISODES.length-fresh.length}</b><span>查看全部单集</span></div></div>
+    </div>
+  </section>`;})()}
 
   <section class="wrap reveal" style="padding-top:8px">
     <div class="row-head"><div>
@@ -2633,30 +2638,23 @@ function vHome(){
         <div class="tc-zh">${d.zh}</div><div class="tc-en">${d.en}</div>
         <div class="tc-meta">${st.p} 位 · ${st.n} 条观点</div></div>`;}).join('')}
     </div>
-  </section>
-
-  <section class="wrap reveal" style="padding-top:8px">
-    <div class="eyebrow">By field · 按领域浏览</div>
-    <h2 class="title">按研究领域浏览</h2>
-    <div class="chips" style="margin-top:20px">
+    <div class="eyebrow" style="margin-top:28px">By field · 按领域浏览</div>
+    <div class="chips" style="margin-top:12px">
       ${Object.keys(FIELDS).map(f=>`<span class="chip" onclick="go('#/browse?field=${f}')">${fdot(f)}${FIELDS[f].zh}</span>`).join('')}
     </div>
-  </section>
-
-  <section class="wrap reveal" style="padding-top:8px">
-    <div class="eyebrow">People · 人物</div>
-    <h2 class="title">${Object.keys(PEOPLE).length} 位 AI 人物</h2>
-    <div class="ppl-grid home-ppl" style="margin-top:22px">${pplOrder().map(pplCard).join('')}<div class="ppl-card ppl-more" onclick="go('#/people')"><!--
-      圆圈里原来写死「+(人物总数减 17)」,但首页到底列几位是 CSS 按宽度定的(≤640px 17 位、
-      更宽 23 位),JS 算不出来 —— 桌面上那个数一直是错的。改成中性符号,准确总数在下面那行。
-      注意:这段在模板字符串里,写美元花括号会被当成插值,别加。
-   --><span class="pm-n">···</span><div class="n">查看全部人物</div><div class="cnt">共 ${Object.keys(PEOPLE).length} 位 →</div></div></div>
   </section>
   ${footer()}`;
 }
 
 // 人物按播客覆盖量排序，让覆盖充分的大佬靠前（避免知名人物被新加入的人埋没），同量保持原有顺序
 function pplOrder(){const k=Object.keys(PEOPLE);return k.slice().sort((a,b)=>epsOf(b).length-epsOf(a).length||k.indexOf(a)-k.indexOf(b));}
+// 首页人物区:按「最近一期的日期」排,新有访谈的人靠前;同日按覆盖量。人物列表页仍按覆盖量(pplOrder)。
+function pplRecent(){const k=Object.keys(PEOPLE);const last=id=>epsOf(id).reduce((m,e)=>e.date>m?e.date:m,'');
+  // 纯按日期排会让「刚收 1 期的新面孔」压过 Altman/Karpathy(手机首屏只有 17 位):
+  // 先分「45 天内有新一期」与否两档,档内按覆盖量(大佬靠前),再按最近日期。
+  const cut=new Date(Date.now()-45*864e5).toISOString().slice(0,10);
+  const rec=id=>last(id)>=cut?0:1;
+  return k.slice().sort((a,b)=>rec(a)-rec(b)||epsOf(b).length-epsOf(a).length||last(b).localeCompare(last(a))||k.indexOf(a)-k.indexOf(b));}
 function pplCard(pid){const p=PEOPLE[pid];const n=epsOf(pid).length;
   return `<div class="ppl-card" onclick="go('#/person/${pid}')">
     ${av(pid)}<div class="n">${p.en}</div><div class="nz">${p.zh}</div>
