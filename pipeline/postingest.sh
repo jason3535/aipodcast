@@ -20,6 +20,7 @@ echo "── 6/11 盘古之白(fix_spacing,必须在分享页之前)"; python3 p
 echo "── 7/11 术语归一(fix_terms)";        python3 pipeline/fix_terms.py 2>&1 | tail -1
 echo "── 8/11 首屏拆分(split_data)";       python3 pipeline/split_data.py | tail -1
 echo "── 9/11 MCP 数据(build_mcp_data)";   node pipeline/build_mcp_data.js | tail -1
+echo "── 9.5/11 每页分享卡(gen_og_cards,新增的才生成)"; python3 pipeline/gen_og_cards.py --site aipodcast | tail -1
 echo "── 10/11 分享页+sitemap(build_share_pages)"; node pipeline/build_share_pages.js | tail -1
 python3 pipeline/webp_avatars.py | tail -1
 echo "── 10.5/11 站群闭环(互链 map 补全 + 图谱分享页)"

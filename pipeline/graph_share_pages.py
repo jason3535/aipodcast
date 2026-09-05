@@ -65,7 +65,10 @@ def parse_graph(p: Path):
 def donor_parts(p: Path):
     """从既有任一 /p 页提取 <style> 与底部 lang script,保证视觉一致。"""
     donor = sorted((p / "p").glob("*.html"))[0].read_text(encoding="utf-8")
-    style = re.search(r"<style>.*?</style>", donor, re.S).group(0)
+    # 页里有两个 <style>:head 顶部一个几十字节的「钉死深色」小块(2026-08-15 加,修 iOS 白边),
+    # 主样式表在后面。之前取第一个,于是 8/15 之后由本脚本生成的每一页都只有那个小块——
+    # 整页黑底白字裸 HTML(2026-09-05 用真实浏览器截图才发现)。取最长的那个。
+    style = max(re.findall(r"<style>.*?</style>", donor, re.S), key=len)
     script = re.search(r"<script>\(function\(\)\{var b=document\.getElementById\('langtoggle'.*?</script>", donor, re.S).group(0)
     return style, script
 

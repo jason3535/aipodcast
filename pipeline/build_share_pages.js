@@ -81,7 +81,9 @@ const BEACON=(()=>{const raw=fs.readFileSync(path.join(__dirname,'beacon.js'),'u
   return raw.slice(raw.indexOf('<script>'),raw.lastIndexOf('</script>')+9)
             .replace('%PATH%',"location.pathname.replace(/index\\.html$/,'')");})();
 
-const page=(title,desc,url,ogtype,bodyHtml,ld)=>`<!doctype html><html lang="zh"><head><meta charset="utf-8">
+// 每页专属分享卡:og/e/<id>.jpg、og/pp/<pid>.jpg 由 gen_og_cards.py 生成;没有就回退全站默认图
+const ogFor=(sub,id)=>fs.existsSync(path.join(ROOT,'og',sub,id+'.jpg'))?`${SITE}/og/${sub}/${id}.jpg`:`${SITE}/assets/og.png`;
+const page=(title,desc,url,ogtype,bodyHtml,ld,og=`${SITE}/assets/og.png`)=>`<!doctype html><html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${title}</title>
 <meta name="description" content="${desc}">
@@ -90,12 +92,13 @@ const page=(title,desc,url,ogtype,bodyHtml,ld)=>`<!doctype html><html lang="zh">
 <meta property="og:site_name" content="AI Podcast · AI 播客">
 <meta property="og:title" content="${title}">
 <meta property="og:description" content="${desc}">
-<meta property="og:image" content="${SITE}/assets/og.png">
+<meta property="og:image" content="${og}">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${title}">
 <meta property="og:url" content="${url}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${title}">
 <meta name="twitter:description" content="${desc}">
-<meta name="twitter:image" content="${SITE}/assets/og.png">
+<meta name="twitter:image" content="${og}">
 ${ld.map(jl).join('\n')}
 <style>${CSS}</style></head><body><div class="wrap">${bodyHtml}
 <footer>© AI Podcast · <a href="${SITE}/">aipodcast.jasonlin.tech</a> — 双语播客全文阅读。转录/翻译仅供学习评论，版权归原播客与权利人，应要求即下架(linzheng3535@gmail.com)。</footer>
@@ -132,7 +135,7 @@ document.querySelectorAll('a.cta').forEach(function(a){a.href=h});})()</script>`
   const ld=[{"@context":"https://schema.org","@type":"PodcastEpisode",name:e.tEn,alternateName:e.tZh,url,datePublished:e.date,timeRequired:e.min?`PT${e.min}M`:undefined,inLanguage:["en","zh"],description:e.sEn||e.sZh,abstract:cons.map(c=>c.en).filter(Boolean).slice(0,5).join(' '),partOfSeries:{"@type":"PodcastSeries",name:(e.pod&&e.pod.en)||''},isPartOf:{"@type":"WebSite",name:"AI Podcast",url:SITE},actor:{"@type":"Person",name:p.en,jobTitle:p.tiEn,url:person},...(vid(e.src)?{associatedMedia:{"@type":"VideoObject",name:e.tEn,embedUrl:`https://www.youtube.com/embed/${vid(e.src)}`,uploadDate:e.date}}:{})},
     {"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"AI Podcast",item:SITE+"/"},{"@type":"ListItem",position:2,name:p.zh||p.en||'',item:person},{"@type":"ListItem",position:3,name:e.tZh||e.tEn,item:url}]}];
   fs.mkdirSync(path.join(EDIR,e.id),{recursive:true});
-  fs.writeFileSync(path.join(EDIR,e.id,'index.html'),page(title,desc,url,'article',body,ld));
+  fs.writeFileSync(path.join(EDIR,e.id,'index.html'),page(title,desc,url,'article',body,ld,ogFor('e',e.id)));
   n++;
 });
 // person hub pages
@@ -154,7 +157,7 @@ ${xlinksOf(pid)}
     {"@context":"https://schema.org","@type":"ItemList",itemListElement:eps.map((e,i)=>({"@type":"ListItem",position:i+1,url:`${SITE}/e/${e.id}/`,name:e.tEn}))},
     {"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"AI Podcast",item:SITE+"/"},{"@type":"ListItem",position:2,name:p.zh||p.en||'',item:url}]}];
   fs.mkdirSync(path.join(PDIR,pid),{recursive:true});
-  fs.writeFileSync(path.join(PDIR,pid,'index.html'),page(title,desc,url,'profile',body,ld));
+  fs.writeFileSync(path.join(PDIR,pid,'index.html'),page(title,desc,url,'profile',body,ld,ogFor('pp',pid)));
   pn++;
 });
 // sitemap: 首页 + 议题 + 人物 hub + 各期
