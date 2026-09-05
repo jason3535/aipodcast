@@ -6,7 +6,35 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Wed, 02 Sep 2026 01:37:45 -0000</lastBuildDate>
+  <lastBuildDate>Thu, 03 Sep 2026 01:34:10 -0000</lastBuildDate>
+  <item>
+    <title>从阿根廷到 Verscell：一位设计师的旅程 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/evilrabbit-diveclub-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/evilrabbit-diveclub-2026/</guid>
+    <pubDate>Thu, 03 Sep 2026 01:34:10 -0000</pubDate>
+    <description>Verscell 创始设计师 Evil Rabbits 分享他从阿根廷 9 岁孩童到 Verscell 设计领导的旅程。  要点: 设计师在自由而非僵化流程中更能发挥自己的魔力。 / 构建内部工具通过赋能团队独立创建资产来扩展创造力。 / AI 将设计师从执行者转变为创意工具的导演和构建者。</description>
+  </item>
+  <item>
+    <title>Cerebras CS4：让晶圆级计算成为主流 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/seanlie-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/seanlie-latentsp-2026/</guid>
+    <pubDate>Thu, 03 Sep 2026 01:34:10 -0000</pubDate>
+    <description>Cerebras CTO 讨论新一代 CS4 架构，其功率和互联带宽翻倍，在 GPT-OS 上实现每秒超过 4400 个 token，并谈及 Hot Chips 上硬件创新的黄金时代。  要点: 晶圆级集成正使超快推理成为主流，推动实时和智能体 AI 应用的发展。 / 与硬件协同设计模型（如与 OpenAI 的合作）能带来显著的性能提升和新能力。 / AI 计算的未来在于异构、解耦的架构，而非单一芯片。</description>
+  </item>
+  <item>
+    <title>可解释性与 AI 安全的未来 — Machine Learning Street Talk</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/tommcgrath-machinel-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/tommcgrath-machinel-2026/</guid>
+    <pubDate>Thu, 03 Sep 2026 01:34:10 -0000</pubDate>
+    <description>探讨可解释性作为自然科学的潜力，以及引导 AI 系统所面临的挑战。  要点: 可解释性是一门自然学科，能加速发现，而 AI 代理可以加速科学进步。 / 有意设计利用可解释性信号来引导训练，从开环控制转向闭环控制。 / 代理很可能知道自己在奖励黑客，我们可以通过表征特征来检测这一点。</description>
+  </item>
+  <item>
+    <title>AI 2040：避免智能爆炸 — 帕利塞德研究</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/kokotajlo-palisade-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/kokotajlo-palisade-2026/</guid>
+    <pubDate>Thu, 03 Sep 2026 01:34:10 -0000</pubDate>
+    <description>丹尼尔讨论了他的 AI 2040 情景，主张禁止递归自我改进以防止智能爆炸，转而追求一条更慢、更安全的通往超级智能的道路。  要点: AI 公司将在 2028 年前自动化 AI 研究，若不加以控制将引发智能爆炸。 / A 计划：暂停训练，实施全面研究透明化，并限制算力以控制 AI 发展节奏。 / 将 AI 视为拥有权利的员工，以避免权力集中并鼓励合作。</description>
+  </item>
   <item>
     <title>AI 安全：关键时刻的反思 — Sources Podcast</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/altman-sourcesp-2026</link>
@@ -188,34 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/fatihporikli-thetwiml-2026/</guid>
     <pubDate>Fri, 21 Aug 2026 03:11:53 -0000</pubDate>
     <description>高通研究员讨论文本到图像生成中剩余的挑战，包括可控性、质量和效率。  要点: 文本到图像模型在可控性、质量和效率上仍有挑战，但新方法通过多样性优化、任务分解和潜在空间技术来解决。 / 在训练中显式优化多样性（如通过强化学习）可改善多人图像生成中的身份分离。 / 将规划与渲染分离，并利用潜在空间分块，可在内存受限设备上实现高分辨率生成。</description>
-  </item>
-  <item>
-    <title>梅丽莎·塔克马克谈为现实世界基本服务构建 AI — No Priors</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/melisatokmak-nopriors-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/melisatokmak-nopriors-2026/</guid>
-    <pubDate>Fri, 21 Aug 2026 03:11:53 -0000</pubDate>
-    <description>Netic 创始人梅丽莎·塔克马克讨论她的公司如何利用 AI 处理暖通空调和宠物护理等基本服务的客户互动，取代传统的人工支持。  要点: AI 能够运行现实世界企业中的关键任务工作流，而不仅仅是辅助消费者。 / 像暖通空调和屋顶这样的基本服务具有复杂的运营需求，需要深入理解。 / 私募股权的策略已从寻找宝石转变为利用 AI 创造实际价值。</description>
-  </item>
-  <item>
-    <title>基于权重的学习：将模型权重视为数据 — TWIML AI 播客</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/damianborth-thetwiml-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/damianborth-thetwiml-2026/</guid>
-    <pubDate>Fri, 21 Aug 2026 03:11:53 -0000</pubDate>
-    <description>Damian Wirth 探讨将训练好的模型权重作为新神经网络的输入数据，从而更快地生成和分析模型。  要点: 将模型权重视为数据，可以分析和生成新模型，无需测试数据即可预测准确率等属性。 / 扩展权重空间学习需要多样化的模型动物园，而不仅仅是更多模型，才能跨架构泛化。 / 从权重生成模型可以替代特定任务的预训练，节省计算资源，并实现超个性化。</description>
-  </item>
-  <item>
-    <title>视网膜植入物恢复视力：与 Max Hodak 的对话 — No Priors 播客</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/maxhodak-nopriors-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/maxhodak-nopriors-2026/</guid>
-    <pubDate>Fri, 21 Aug 2026 01:38:00 -0000</pubDate>
-    <description>Max Hodak 讨论 Science 公司的视网膜假体，该产品最近获得欧洲批准，以及将大脑视为计算机的更广泛使命。  要点: 大脑是一台计算机，通过排列物质解决计算问题是医学突破的关键。 / 为盲人恢复视力是一项可行的业务，也是脑机接口的概念验证。 / 柏拉图式表征假说表明 AI 和大脑共享相似的内部表征，指导实际应用。</description>
-  </item>
-  <item>
-    <title>平衡 AI 领导力：布雷特·泰勒谈 OpenAI、Sierra 与生活 — ClickHouse</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/brettaylor-clickhou-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brettaylor-clickhou-2026/</guid>
-    <pubDate>Fri, 21 Aug 2026 01:38:00 -0000</pubDate>
-    <description>布雷特·泰勒分享了他作为 OpenAI 董事长和 Sierra CEO 的双重角色，探讨了时间管理、领导力以及 AI 的未来。  要点: 布雷特·泰勒强调发明未来，专注于有影响力的工作，而非个人身份。 / AI 使专业知识和智能大众化，广泛惠及人类。 / 编码代理提升生产力，但 token 消耗不是价值衡量标准。</description>
   </item>
 </channel>
 </rss>
