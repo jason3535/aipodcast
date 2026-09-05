@@ -61,7 +61,7 @@ const transcriptHtml=id=>{
 /* 每处 var() 前都留了字面量兜底 —— 2011 年的 WebKit(Kindle 浏览器,实测 534.26)
    不支持 CSS 变量,只写 var() 会让颜色/边框全部失效,页面看起来像裸 HTML。
    老引擎丢弃看不懂的 var() 声明保留字面量;新引擎后者覆盖前者,表现不变。 */
-const CSS=`:root{--ink:#1d1d1f;--sub:#6e6e73;--line:#e6e6ea;--acc:#0071e3}*{box-sizing:border-box}body{font-family:-apple-system,"SF Pro Text",system-ui,"PingFang SC",sans-serif;color:#1d1d1f;color:var(--ink);background:#fff;margin:0;line-height:1.62}.wrap{max-width:760px;margin:0 auto;padding:34px 22px 80px}nav.bc{font-size:13px;color:#6e6e73;color:var(--sub);margin-bottom:20px}nav.bc a{color:#6e6e73;margin-bottom:20px}nav.bc a{color:var(--sub);text-decoration:none}h1{font-size:27px;line-height:1.25;margin:.2em 0 .1em;letter-spacing:-.02em}.en-t{font-size:16px;color:#6e6e73;color:var(--sub);margin:0 0 10px}.meta{font-size:14px;color:#6e6e73;color:var(--sub);margin:8px 0 22px}.meta a{color:#0071e3;margin:8px 0 22px}.meta a{color:var(--acc);text-decoration:none}.cta{display:inline-block;margin:6px 0 26px;padding:10px 18px;background:#0071e3;background:var(--acc);color:#fff;border-radius:980px;font-size:14px;font-weight:600;text-decoration:none}h2{font-size:16px;margin:30px 0 10px;padding-top:8px;border-top:1px solid #e6e6ea}.zh{margin:.35em 0}.en{margin:.15em 0 1em;border-top:1px solid var(--line)}.zh{margin:.35em 0}.en{margin:.15em 0 1em;color:#6e6e73;color:var(--sub);font-size:14.5px}ul{padding-left:1.1em}li{margin:.5em 0}.ep-list a{color:#1d1d1f}footer{margin-top:44px;font-size:14.5px}ul{padding-left:1.1em}li{margin:.5em 0}.ep-list a{color:var(--ink)}footer{margin-top:44px;padding-top:16px;border-top:1px solid #e6e6ea;border-top:1px solid var(--line);font-size:12px;color:#6e6e73}footer a{color:#6e6e73};color:var(--sub)}footer a{color:var(--sub)}
+const CSS=`:root{--ink:#1d1d1f;--sub:#6e6e73;--line:#e6e6ea;--acc:#0071e3}*{box-sizing:border-box}body{font-family:-apple-system,"SF Pro Text",system-ui,"PingFang SC",sans-serif;color:#1d1d1f;color:var(--ink);background:#fff;margin:0;line-height:1.62}.wrap{max-width:760px;margin:0 auto;padding:34px 22px 80px}nav.bc{font-size:13px;color:#6e6e73;color:var(--sub);margin-bottom:20px}nav.bc a{color:#6e6e73;margin-bottom:20px}nav.bc a{color:var(--sub);text-decoration:none}h1{font-size:27px;line-height:1.25;margin:.2em 0 .1em;letter-spacing:-.02em}.en-t{font-size:16px;color:#6e6e73;color:var(--sub);margin:0 0 10px}.meta{font-size:14px;color:#6e6e73;color:var(--sub);margin:8px 0 22px}.meta a{color:#0071e3;margin:8px 0 22px}.meta a{color:var(--acc);text-decoration:none}.cta{display:inline-block;margin:6px 0 26px;padding:10px 18px;background:#0071e3;background:var(--acc);color:#fff;border-radius:980px;font-size:14px;font-weight:600;text-decoration:none}.cta-2{margin-left:8px;background:#fff;color:var(--acc);border:1px solid var(--line);cursor:pointer;font-family:inherit}h2{font-size:16px;margin:30px 0 10px;padding-top:8px;border-top:1px solid #e6e6ea}.zh{margin:.35em 0}.en{margin:.15em 0 1em;border-top:1px solid var(--line)}.zh{margin:.35em 0}.en{margin:.15em 0 1em;color:#6e6e73;color:var(--sub);font-size:14.5px}ul{padding-left:1.1em}li{margin:.5em 0}.ep-list a{color:#1d1d1f}footer{margin-top:44px;font-size:14.5px}ul{padding-left:1.1em}li{margin:.5em 0}.ep-list a{color:var(--ink)}footer{margin-top:44px;padding-top:16px;border-top:1px solid #e6e6ea;border-top:1px solid var(--line);font-size:12px;color:#6e6e73}footer a{color:#6e6e73};color:var(--sub)}footer a{color:var(--sub)}
 /* 全文区。content-visibility 让屏幕外章节跳过渲染 —— 最长一期文本 576KB,不这样会明显卡顿;
    老引擎不认这条声明会直接忽略,不影响可读性(Kindle 那套兜底逻辑同理)。 */
 .tr{margin-top:8px}.tr .sec{content-visibility:auto;contain-intrinsic-size:auto 600px;margin:0 0 10px}
@@ -102,7 +102,9 @@ const page=(title,desc,url,ogtype,bodyHtml,ld,og=`${SITE}/assets/og.png`)=>`<!do
 ${ld.map(jl).join('\n')}
 <style>${CSS}</style></head><body><div class="wrap">${bodyHtml}
 <footer>© AI Podcast · <a href="${SITE}/">aipodcast.jasonlin.tech</a> — 双语播客全文阅读。转录/翻译仅供学习评论，版权归原播客与权利人，应要求即下架(linzheng3535@gmail.com)。</footer>
-</div>${BEACON}</body></html>`;
+</div><script>function shareThis(b){var u=document.querySelector('link[rel=canonical]').href,t=document.title,d=(document.querySelector('meta[name=description]')||{}).content||'';
+if(navigator.share){navigator.share({title:t,text:d,url:u}).catch(function(){});return;}
+try{navigator.clipboard.writeText(u).then(function(){var o=b.textContent;b.textContent='已复制链接';setTimeout(function(){b.textContent=o},1600)})}catch(e){}}</script>${BEACON}</body></html>`;
 
 const byPid={};EPISODES.forEach(e=>(byPid[e.pid]=byPid[e.pid]||[]).push(e));
 const EDIR=path.join(ROOT,'e');fs.rmSync(EDIR,{recursive:true,force:true});fs.mkdirSync(EDIR,{recursive:true});
@@ -122,7 +124,7 @@ EPISODES.forEach(e=>{
   const body=`<nav class="bc"><a href="${SITE}/">AI Podcast</a> › <a href="${person}">${esc(p.zh||p.en||'')}</a> › 本期</nav>
 <h1>${esc(e.tZh||e.tEn)}</h1><p class="en-t">${esc(e.tEn)}</p>
 <p class="meta"><a href="${person}">${esc(p.zh||'')} ${esc(p.en||'')}</a> · ${esc((e.pod&&e.pod.zh)||(e.pod&&e.pod.en)||'')} · ${esc(e.date||'')} · 约 ${e.min||''} 分钟${vid(e.src)?` · <a href="${esc(e.src)}" rel="nofollow">原视频 ↗</a>`:''}</p>
-<a class="cta" href="${hash}">打开互动全文版（中英对照 + 朗读 + 问答）→</a>
+<a class="cta" href="${hash}">打开互动全文版（中英对照 + 朗读 + 问答）→</a><button class="cta cta-2" onclick="shareThis(this)">分享本期</button>
 ${(e.sZh||e.sEn)?`<h2>本期速览 · Overview</h2><p class="zh">${esc(e.sZh||'')}</p><p class="en">${esc(e.sEn||'')}</p>`:''}
 ${tldr.length?`<h2>要点 · TL;DR</h2><ul>${li(tldr,x=>x)}</ul>`:''}
 ${cons.length?`<h2>核心观点 · Key points</h2><ul>${li(cons,x=>x)}</ul>`:''}
@@ -149,7 +151,7 @@ Object.keys(byPid).forEach(pid=>{
   const body=`<nav class="bc"><a href="${SITE}/">AI Podcast</a> › ${esc(p.zh||p.en||'')}</nav>
 <h1>${esc(p.zh||'')} ${esc(p.en||'')}</h1><p class="en-t">${esc(p.tiZh||'')} · ${esc(p.tiEn||'')}</p>
 ${p.bioZh?`<p class="zh">${esc(p.bioZh)}</p><p class="en">${esc(p.bioEn||'')}</p>`:''}
-<a class="cta" href="${SITE}/#/person/${pid}">在 AI Podcast 查看 TA 的全部内容 →</a>
+<a class="cta" href="${SITE}/#/person/${pid}">在 AI Podcast 查看 TA 的全部内容 →</a><button class="cta cta-2" onclick="shareThis(this)">分享</button>
 ${xlinksOf(pid)}
 <h2>收录的 ${eps.length} 期访谈</h2>
 <ul class="ep-list">${eps.map(e=>`<li><a href="${SITE}/e/${e.id}/">${esc(e.tZh||e.tEn)}</a> — ${esc((e.pod&&e.pod.zh)||'')} · ${esc(e.date||'')}</li>`).join('')}</ul>`;
