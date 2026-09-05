@@ -228,11 +228,29 @@ async function handle(msg) {
 /* 用量计数:写进 stats 同一个 D1,type='mcp',path=工具名。
    查询侧一直按 type='view' 过滤,互不污染;UA 里的 bot/HeadlessChrome 不丢弃——
    MCP 客户端本来就是程序,这里要数的就是程序调用。 */
-function logUse(env, ctx, tool) {
+/* 2026-09-05 起补记调用方:此前 ua/vid 全空,30 天 35 次调用一个都认不出是谁。
+   ua = MCP 客户端自报的 clientInfo(仅 initialize 带)+ HTTP User-Agent;
+   vid = SHA-256(盐|当天|IP) 前 20 位,与 stats worker 的 vidOf 同口径——IP 本身不落库,
+   只能回答「今天同一来源敲了几次」。 */
+async function callerMeta(env, req, body) {
+  const ip = req.headers.get('CF-Connecting-IP') || '';
+  const hua = (req.headers.get('User-Agent') || '').slice(0, 80);
+  const first = Array.isArray(body) ? body.find(b => b && b.method === 'initialize') : (body && body.method === 'initialize' ? body : null);
+  const ci = first && first.params && first.params.clientInfo;
+  const client = ci ? `${ci.name || '?'}/${ci.version || '?'}` : '';
+  let vid = '';
+  try {
+    const day = new Date().toISOString().slice(0, 10);
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode((env.STATS_TOKEN || 'salt') + '|' + day + '|' + ip));
+    vid = [...new Uint8Array(buf)].slice(0, 10).map(x => x.toString(16).padStart(2, '0')).join('');
+  } catch (_) {}
+  return { ua: (client ? client + ' | ' : '') + hua, vid };
+}
+function logUse(env, ctx, tool, meta) {
   try {
     ctx.waitUntil(env.DB.prepare(
-      "INSERT INTO events(ts,day,type,path,ref,ua,vid,sid) VALUES(?,date('now'),'mcp',?,'','','','')")
-      .bind(Date.now(), (tool || 'unknown').slice(0, 60)).run());
+      "INSERT INTO events(ts,day,type,path,ref,ua,vid,sid) VALUES(?,date('now'),'mcp',?,'',?,?,'')")
+      .bind(Date.now(), (tool || 'unknown').slice(0, 60), (meta && meta.ua) || '', (meta && meta.vid) || '').run());
   } catch (_) {}
 }
 
@@ -251,7 +269,8 @@ export default {
     const _names = (Array.isArray(body) ? body : [body])
       .map(b => b && b.method === 'tools/call' ? (b.params && b.params.name) : b && b.method)
       .filter(Boolean);
-    for (const n of _names) logUse(env, ctx, n);
+    const _meta = await callerMeta(env, req, body);
+    for (const n of _names) logUse(env, ctx, n, _meta);
     const out = Array.isArray(body)
       ? (await Promise.all(body.map(handle))).filter(x => x !== null)
       : await handle(body);
