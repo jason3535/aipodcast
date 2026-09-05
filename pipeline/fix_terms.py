@@ -109,6 +109,19 @@ RULES = [
     (re.compile(BL+r"Tob(?:ey|[yie])\s+Lu(?![A-Za-z\u00fc])"), "Tobi L\u00fctke"),
     # 顺带把 ASCII 的 Lutke 归一成 Lütke;替换后带 ü,不会再次匹配,--check 保持幂等。
     (re.compile(BL+r"Tob(?:ey|[yie])\s+Lutke"+BR), "Tobi L\u00fctke"),
+    # ---- 2026-09-05 查 UV 时顺手在 evilrabbit-diveclub-2026(Vercel 创始设计师)里扫到的系统性误听 ----
+    # Vercel → Verscell(该集正确写法 80 处、误写 14 处,连标题 tEn/tZh 都错了)
+    (re.compile(BL+r"Verscell"+BR), "Vercel"),
+    # Guillermo(Rauch,Vercel CEO)→ Gisharmmo(11 处;全篇没有一处听对)
+    (re.compile(BL+r"Gisharmmo"+BR), "Guillermo"),
+    # Auth0(他加入 Vercel 之前的公司,读作 auth-zero)→ Odd Zero / Ozero(合计 22 处),
+    # 中文译文跟着音译成了「奥泽罗」。上下文「和 Guillermo 的弟弟共事、15 人小团队」与
+    # Auth0 早期(阿根廷创始团队)吻合。
+    (re.compile(BL+r"Odd Zero"+BR), "Auth0"),
+    (re.compile(BL+r"Ozero"+BR), "Auth0"),
+    (re.compile(r"奥泽罗"), "Auth0"),
+    # 他的名字是 Evil Rabbit(单数),自动字幕多听出一个 s(6 处);所有格 Rabbit's 不受影响
+    (re.compile(BL+r"Evil Rabbits"+BR), "Evil Rabbit"),
 ]
 # 这些上下文里的 "class code" 是 best-in-class code,不是误听
 GUARD = re.compile(r"(best|world)[- ]in[- ]?class\s*$|(best|world)-class\s*$", re.I)

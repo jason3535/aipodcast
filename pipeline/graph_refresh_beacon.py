@@ -45,7 +45,9 @@ for pfx, repo in SITES.items():
             print(f"  ⚠ {f.relative_to(repo)} 有 {len(blocks)} 个埋点块,跳过(需人工看)")
             continue
         b = blocks[0]
-        if "post('read')" in b.group(0):
+        # 「已是新版」= 与共用片段逐字节相同。2026-09-05 之前用 "post('read')" 当标记,
+        # 结果 beacon.js 再改(补交互起步保护期)时 636 个老页面会被整体跳过、永远停在旧版。
+        if b.group(0) == new:
             skip += 1
             continue
         if apply_:
