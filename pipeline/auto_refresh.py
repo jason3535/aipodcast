@@ -124,10 +124,19 @@ def orig_lang(d, ac):
     收进过一期法语的 À LA FRENCH LeCun 访谈,"英文原文"其实是机翻,中文成了翻译的翻译,
     跟读音频对不上。原声语言看两个信号:`<lang>-orig` 轨(更准),其次 yt-dlp 的 `language`。
     """
-    for k in ac:
-        if k.endswith("-orig"):
-            return k[:-5].split("-")[0].lower()
-    return (d.get("language") or "").split("-")[0].lower()
+    # 2026-09 起 YouTube 给热门频道自动配多语种音轨,automatic_captions 里会同时出现
+    # ar-orig / bn-orig / … / en-orig 十几条 -orig 轨(每条配音各算一个"原声")。按字典序取第一条
+    # 就是 "ar" —— 2026-09-05 查到 Latent Space / YC / Training Data 三条同日被判成
+    # 「原声阿拉伯语」丢弃。多条 -orig 并存时,以 yt-dlp 的 language 为准;有 en-orig 就是英文。
+    origs = [k[:-5].split("-")[0].lower() for k in ac if k.endswith("-orig")]
+    lang = (d.get("language") or "").split("-")[0].lower()
+    if len(origs) == 1:
+        return origs[0]
+    if len(origs) > 1:
+        if lang and lang in origs: return lang
+        if "en" in origs: return "en"
+        return lang or origs[0]
+    return lang
 
 
 def english_audio(m):
@@ -653,8 +662,12 @@ def main():
         else:
             run_cmd(["git", "rebase", "--abort"])
             log("  rebase 冲突,已 abort,保留本地提交待人工合并:" + out_rb[-150:])
-    rc_ix, _ = run_cmd(["python3", "pipeline/indexnow.py"])   # 新收录 URL 即时推给 Bing 系(失败不影响主流程)
-    log(f"  {'✓' if rc_ix == 0 else '✗'} indexnow")
+    # 新收录 URL 即时推给 Bing 系(失败不影响主流程)。2026-09-05 前这里没传 --site,脚本直接报
+    # 「需要 --site 或 --all」退出,cron 日志里的 ✗ indexnow 其实一天都没成功过。
+    ix_cmd = ["python3", "pipeline/indexnow.py", "--site", "aipodcast"]
+    if new_ids: ix_cmd += ["--urls"] + [f"https://aipodcast.jasonlin.tech/e/{i}/" for i in new_ids]
+    rc_ix, out_ix = run_cmd(ix_cmd)
+    log(f"  {'✓' if rc_ix == 0 else '✗'} indexnow" + ("" if rc_ix == 0 else " " + out_ix.strip()[-120:]))
     log(f"提交推送:{'✓ 已上线 +' + str(added) + ' 期' if rc2 == 0 else '✗ push 失败:' + outp2[-120:]}")
     log("=== 完成 ===")
 
