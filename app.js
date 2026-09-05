@@ -2985,7 +2985,7 @@ function vEpisode(id){
   const reader=`
   <div class="reader">
     <div class="ep-head reveal in">
-      <div class="pod" onclick="goPod('${e.pod.en}')" style="color:${fcolor(e.fields[0])};display:flex;align-items:center;gap:9px;cursor:pointer">${podLogo(e)}<span>${e.pod.en} · ${e.pod.zh}</span></div>
+      <div class="pod" onclick="goPod('${e.pod.en}')" style="color:${fcolor(e.fields[0])};display:flex;align-items:center;gap:9px;cursor:pointer">${podLogo(e)}<span>${e.pod.en}${e.pod.zh&&e.pod.zh!==e.pod.en?' · '+e.pod.zh:''}</span></div>
       <h1>${e.tEn}</h1><div class="hz">${e.tZh}</div>
       <div class="info">
         <span class="who" onclick="go('#/person/${e.pid}')">${av(e.pid)} ${p.en}</span>${POD2PAPER[e.pid]?`<span>·</span><a class="xsite-inline" href="https://aipaper.jasonlin.tech/#/person/${POD2PAPER[e.pid]}" target="_blank" rel="noopener" title="在 AI Paper 读 TA 的论文与长文"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H14l6 6v8.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-13Z"/><path d="M14 4v6h6" /></svg>读 TA 的论文</a>`:''}

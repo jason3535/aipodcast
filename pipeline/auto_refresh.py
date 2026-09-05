@@ -597,6 +597,7 @@ def main():
                 # 改完再跑一次 build_mcp_data,把 index.json 里的标题也带正。
                 ["python3", "pipeline/check_guest_names.py", "--apply"],
                 ["node", "pipeline/build_mcp_data.js"],
+                ["python3", "pipeline/gen_og_cards.py", "--site", "aipodcast"],   # 新收单集/人物的分享卡(幂等)
                 ["node", "pipeline/build_share_pages.js"],
                 # RSS:2026-08-13 才发现这一步从没进过任何链条,feed.xml 停更两周半
                 ["python3", "pipeline/gen_feed.py"],
