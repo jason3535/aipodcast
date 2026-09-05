@@ -21,6 +21,14 @@
  * 注意:read 会漏掉「真人进来看两眼就走」的快速跳出,这是**故意**的取舍 ——
  * 它衡量的是「有效阅读」,不是「访问次数」。别把 read 和历史 view 直接放一起比。
  *
+ * 【2026-09-05 补的洞:交互门槛要有起步保护期】
+ * 8/31 jasonwei-stanford-2025 一天 14 个互不相同的 vid,各看且只看这一页、无 referrer、
+ * 前 5 个精确间隔约 1 分钟 —— 是抓取池;可其中 5 个的 read 与 view 只差 2ms。原因:
+ * 渲染型爬虫打开页面立刻 scrollTo 触发懒加载,而 scroll 一直算「真实交互」,于是秒发 read。
+ * 浏览器的滚动位置恢复、锚点跳转也会在加载瞬间冒一个 scroll。所以:打开后 GRACE 毫秒内
+ * 的任何交互一律不算,只认之后的;停留计时那条路不变。爬虫等够 800ms 再滚仍能骗过——
+ * 这是行为判别的上限,不是 bug;要更严只能上服务端指纹,那条路已在上面说明走不通。
+ *
  * 写法约束:直接发给老引擎(2026-08-15 Kindle 教训),全程 ES5、无可选链、
  * addEventListener 只用布尔 useCapture(老浏览器把 options 对象当 true,once 会失效,
  * 所以 send() 自带幂等锁)。任何一步出错都只是不上报,绝不能影响正文渲染。
@@ -28,7 +36,7 @@
 <script>(function(){try{
 var UA=navigator.userAgent||'';
 if(/bot|crawl|spider|slurp|headless|lighthouse|bingpreview|facebookexternalhit/i.test(UA))return;
-var U='https://stats.jasonlin.tech',DWELL=4000;
+var U='https://stats.jasonlin.tech',DWELL=4000,GRACE=800,T0=Date.now();
 var LS=null;try{LS=window.localStorage}catch(_){}
 var aid='';
 try{
@@ -56,7 +64,8 @@ function pause(){if(since!==null){acc+=Date.now()-since;since=null;}if(timer){cl
 function resume(){if(sent||since!==null)return;since=Date.now();timer=setTimeout(read,Math.max(0,DWELL-acc));}
 function vis(){if(document.visibilityState==='visible')resume();else pause();}
 try{document.addEventListener('visibilitychange',vis);}catch(_){}
+function interact(){if(Date.now()-T0<GRACE)return;read();}   /* 起步保护期内的滚动/点击不算 */
 var evs=['scroll','pointerdown','mousedown','keydown','touchstart'];
-for(var k=0;k<evs.length;k++){try{window.addEventListener(evs[k],read,true);}catch(_){}}
+for(var k=0;k<evs.length;k++){try{window.addEventListener(evs[k],interact,true);}catch(_){}}
 vis();
 }catch(_){}})()</script>

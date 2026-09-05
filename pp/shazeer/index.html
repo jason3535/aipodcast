@@ -33,7 +33,7 @@
 </div><script>(function(){try{
 var UA=navigator.userAgent||'';
 if(/bot|crawl|spider|slurp|headless|lighthouse|bingpreview|facebookexternalhit/i.test(UA))return;
-var U='https://stats.jasonlin.tech',DWELL=4000;
+var U='https://stats.jasonlin.tech',DWELL=4000,GRACE=800,T0=Date.now();
 var LS=null;try{LS=window.localStorage}catch(_){}
 var aid='';
 try{
@@ -61,7 +61,8 @@ function pause(){if(since!==null){acc+=Date.now()-since;since=null;}if(timer){cl
 function resume(){if(sent||since!==null)return;since=Date.now();timer=setTimeout(read,Math.max(0,DWELL-acc));}
 function vis(){if(document.visibilityState==='visible')resume();else pause();}
 try{document.addEventListener('visibilitychange',vis);}catch(_){}
+function interact(){if(Date.now()-T0<GRACE)return;read();}   /* 起步保护期内的滚动/点击不算 */
 var evs=['scroll','pointerdown','mousedown','keydown','touchstart'];
-for(var k=0;k<evs.length;k++){try{window.addEventListener(evs[k],read,true);}catch(_){}}
+for(var k=0;k<evs.length;k++){try{window.addEventListener(evs[k],interact,true);}catch(_){}}
 vis();
 }catch(_){}})()</script></body></html>

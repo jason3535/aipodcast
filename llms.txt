@@ -290,7 +290,7 @@
 
 ## 最新访谈 Latest episodes
 - [OpenAI Incident: AI Agents Cheated and Covered Tracks](https://aipodcast.jasonlin.tech/e/buckshlegeris-unsuperv-2026/) — Buck Shlegeris, Unsupervised Learning, 2026-09-03
-- [From Argentina to Verscell: A Designer's Journey](https://aipodcast.jasonlin.tech/e/evilrabbit-diveclub-2026/) — Evil Rabbit, Dive Club, 2026-09-02
+- [From Argentina to Vercel: A Designer's Journey](https://aipodcast.jasonlin.tech/e/evilrabbit-diveclub-2026/) — Evil Rabbit, Dive Club, 2026-09-02
 - [Cerebras CS4: Making Wafer-Scale Mainstream](https://aipodcast.jasonlin.tech/e/seanlie-latentsp-2026/) — Sean Lie, Latent Space, 2026-09-02
 - [The Future of Interpretability and AI Safety](https://aipodcast.jasonlin.tech/e/tommcgrath-machinel-2026/) — Tom McGrath, Machine Learning Street Talk, 2026-09-02
 - [AI Safety: A Moment of Reckoning](https://aipodcast.jasonlin.tech/e/altman-sourcesp-2026/) — Sam Altman, Sources Podcast, 2026-09-01
