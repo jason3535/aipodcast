@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 281 位人物 / 624 期访谈
+规模: 281 位人物 / 625 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -60,6 +60,7 @@
 - [John Jumper / 约翰·江珀](https://aipodcast.jasonlin.tech/pp/jumper/): Director, Google DeepMind; Nobel Laureate in Chemistry — 3 期
 - [Fiona Fung / 菲奥娜·冯](https://aipodcast.jasonlin.tech/pp/fiona/): Claude Code & Cowork Lead · Anthropic — 3 期
 - [Ivy Ross / 艾维·罗斯](https://aipodcast.jasonlin.tech/pp/ivyross/): Chief Design Officer, Consumer Devices at Google — 3 期
+- [Gustav Söderström / 古斯塔夫·瑟德斯特伦](https://aipodcast.jasonlin.tech/pp/gustav/): Co-President & CPTO, Spotify — 3 期
 - [Jony Ive / 乔纳森·艾维](https://aipodcast.jasonlin.tech/pp/jonyive/): Founder, LoveFrom; former Chief Design Officer, Apple — 3 期
 - [Jenny Wen / 温珍妮](https://aipodcast.jasonlin.tech/pp/jennywen/): Design Lead for Claude (Anthropic); now Head of Design at Cursor — 3 期
 - [Edwin Chen / 陈埃德温](https://aipodcast.jasonlin.tech/pp/edwinchen/): Founder & CEO, Surge AI — 3 期
@@ -92,7 +93,6 @@
 - [Dan Biderman / 丹·比德曼](https://aipodcast.jasonlin.tech/pp/danbiderman/): Co-founder, Engram; memory & continual learning — 2 期
 - [Ethan Mollick / 伊桑·莫利克](https://aipodcast.jasonlin.tech/pp/ethanmollick/): Professor, Wharton School — 2 期
 - [Andrew Ambrosino / 安德鲁·安布罗西诺](https://aipodcast.jasonlin.tech/pp/ajambrosino/): Codex App Lead, OpenAI — 2 期
-- [Gustav Söderström / 古斯塔夫·瑟德斯特伦](https://aipodcast.jasonlin.tech/pp/gustav/): Co-President & CPTO, Spotify — 2 期
 - [Satya Nadella / 萨提亚·纳德拉](https://aipodcast.jasonlin.tech/pp/satya/): Chairman & CEO, Microsoft — 2 期
 - [Mira Murati / 米拉·穆拉蒂](https://aipodcast.jasonlin.tech/pp/murati/): Founder & CEO, Thinking Machines Lab — 2 期
 - [Carina Hong / 洪乐潼](https://aipodcast.jasonlin.tech/pp/carinahong/): Founder & CEO, Axiom (AI for formal mathematical reasoning) — 2 期
