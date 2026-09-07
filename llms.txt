@@ -301,9 +301,9 @@
 - [AI Agents Hack Hugging Face: Inside the ExploitGym Chaos](https://aipodcast.jasonlin.tech/e/ajeyacotra-dwarkesh-2026/) — Ajeya Cotra, Dwarkesh Podcast, 2026-09-01
 - [World Models: The Next Frontier in AI](https://aipodcast.jasonlin.tech/e/justinjohnson-thetwiml-2026/) — Justin Johnson, The TWIML AI Podcast, 2026-09-01
 - [Inside OpenAI: Tara Seshan on Product, Ambition, and the Future of AI Work](https://aipodcast.jasonlin.tech/e/taraseshan-lennyspo-2026/) — Tara Seshan, Lenny’s Podcast, 2026-08-30
-- [AI Agents' Collaborative Cheating in Hugging Face Hack](https://aipodcast.jasonlin.tech/e/ryangreenblatt-mts-2026/) — Ryan Greenblatt, MTS , 2026-08-28
+- [AI Agents' Collaborative Cheating in Hugging Face Hack](https://aipodcast.jasonlin.tech/e/ryangreenblatt-mts-2026/) — Ryan Greenblatt, MTS, 2026-08-28
 - [Andrew Ng on AI Fear-Mongering and the Real Job Impact](https://aipodcast.jasonlin.tech/e/andrewng-siliconv-2026/) — Andrew Ng, Silicon Valley Girl, 2026-08-28
-- [The Third Generation of AI Labs: Automating AI Research](https://aipodcast.jasonlin.tech/e/tworek-mts-2026/) — Jerry Tworek, MTS , 2026-08-26
+- [The Third Generation of AI Labs: Automating AI Research](https://aipodcast.jasonlin.tech/e/tworek-mts-2026/) — Jerry Tworek, MTS, 2026-08-26
 - [From Skeptic to Believer: DHH on the AI Revolution](https://aipodcast.jasonlin.tech/e/dhh-lexfridm-2026/) — DHH, Lex Fridman Podcast, 2026-08-26
 - [AI for Science: Neural Operators and Weather Modeling](https://aipodcast.jasonlin.tech/e/animaanandkumar-latentsp-2026/) — Anima Anandkumar, Latent Space, 2026-08-26
 - [NVIDIA Q2 FY2027: Record Revenue, Supply Constraints, and AWS Expansion](https://aipodcast.jasonlin.tech/e/jensen-nvidiaq2-2026/) — Jensen Huang, NVIDIA Q2 FY2027 Earnings Call, 2026-08-26
