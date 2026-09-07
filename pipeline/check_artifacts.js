@@ -80,6 +80,40 @@ if (realHash !== idxHash)
   bad.push(`index.html 指向 app.js?v=${idxHash},但 app.js 现在是 ${realHash}` +
            `\n    → 有脚本在 build_share_pages 之后改了 app.js(多半是 build_crosslinks --apply);重跑 node pipeline/build_share_pages.js`);
 
+// 7) 每位人物都必须有头像。三种漏法都拦:
+//    a) 文件抓到了但没登记进 PHOTOS —— 前端只认 PHOTOS,不看磁盘,于是白白回退成首字母
+//       (2026-09-07 用户报:evilrabbit / seanlie 两人图片双份俱在,却显示字母块)
+//    b) 登记了 PHOTOS 但文件不在 —— 前端 .webp 404 后 onerror 回退 .jpg,再 404 就是破图
+//    c) 只有 jpg 没转 webp —— 每次都先吃一个 404,白费一次往返
+{
+  const peopleBlock = app.slice(app.indexOf("const PEOPLE = {"), app.indexOf("const PERSON_ORG"));
+  const pids = [...peopleBlock.matchAll(/^\s*'([\w.-]+)':\{en:/gm)].map(m => m[1]);
+  const photoM = app.match(/const PHOTOS=new Set\(\[(.*?)\]\)/s);
+  const photos = new Set(photoM ? [...photoM[1].matchAll(/'([\w.-]+)'/g)].map(m => m[1]) : []);
+  const AV = path.join(ROOT, "assets", "people");
+  const has = (pid, ext) => fs.existsSync(path.join(AV, pid + ext));
+
+  const unreg = pids.filter(p => !photos.has(p) && (has(p, ".webp") || has(p, ".jpg")));
+  const noface = pids.filter(p => !photos.has(p) && !has(p, ".webp") && !has(p, ".jpg"));
+  const broken = pids.filter(p => photos.has(p) && !has(p, ".webp") && !has(p, ".jpg"));
+  const nowebp = pids.filter(p => photos.has(p) && !has(p, ".webp") && has(p, ".jpg"));
+
+  if (unreg.length)
+    bad.push(`${unreg.length} 人图片已在磁盘却没登记进 PHOTOS(会显示首字母):${unreg.join(", ")}` +
+             `\n    → 把这些 pid 加进 app.js 的 PHOTOS 集合`);
+  if (noface.length)
+    bad.push(`${noface.length} 人完全没有头像文件:${noface.join(", ")}` +
+             `\n    → 跑 python3 pipeline/fetch_avatar.py --pid <pid> --expect "<姓名>",` +
+             `或用其单集封面 python3 pipeline/fill_pending_avatars.py`);
+  if (broken.length)
+    bad.push(`${broken.length} 人登记了 PHOTOS 但文件不存在(破图):${broken.join(", ")}`);
+  if (nowebp.length)
+    bad.push(`${nowebp.length} 人只有 jpg 没有 webp(前端每次先 404):${nowebp.join(", ")}` +
+             `\n    → 跑 python3 pipeline/webp_avatars.py`);
+  if (!unreg.length && !noface.length && !broken.length && !nowebp.length)
+    console.log(`  头像完备:${pids.length} 位人物全部有 webp 头像且已登记`);
+}
+
 if (bad.length) { bad.forEach(b => console.error("  ✗ " + b)); process.exit(1); }
 console.log(`  产物抽查:静态页 ${sample.length} 期速览/description 完整 | feed ${items} 条含要点 | mcp-data 导语完整 | 首页大卡片导语在位`);
 
