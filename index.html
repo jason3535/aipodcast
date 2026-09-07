@@ -421,8 +421,12 @@ if(m)m.content=document.documentElement.dataset.theme==='dark'?'#0e0e10':'#fcfcf
   body:not([data-lang="both"]) #orderBtn{display:none}
   @media(max-width:560px){.ordbtn .ol{display:none}.ordbtn{padding:6px 9px}}
   /* 移动端:标题栏只留 返回+语言+⋯,其余收进下拉面板 */
-  .rb-more{display:none;border:none;background:var(--surface-2);color:var(--text);font-size:17px;line-height:1;
+  .rb-more{display:none;align-items:center;justify-content:center;
+    border:none;background:var(--surface-2);color:var(--text);font-size:17px;line-height:1;
     padding:7px 12px;border-radius:9px;cursor:pointer;font-family:var(--ui)}
+  /* ⋯ 必须显式居中:移动端那条 min-width:44px/min-height:38px 把盒子撑得比内容大,
+     inline-flex 默认 justify-content:flex-start + align-items:stretch,
+     字形会偏左偏上各约 3-4px(2026-09-07 用户报) */
   .rb-drop{display:contents}
   @media(max-width:600px){
     .read-bar .rb-drop{display:none}
@@ -901,7 +905,7 @@ if(m)m.content=document.documentElement.dataset.theme==='dark'?'#0e0e10':'#fcfcf
 <button class="totop" id="toTop" title="回到顶部" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l6-6 6 6"/></svg></button>
 <script>addEventListener('scroll',()=>{const t=document.getElementById('toTop');if(t)t.classList.toggle('on',scrollY>700);},{passive:true});</script>
 
-<script src="app.js?v=2f618fc2bf" defer></script>
+<script src="app.js?v=2742299da4" defer></script>
 <script>/* SW 只在生产域名注册:本地预览(http/127.0.0.1)不注册,避免把 localhost 缓存搞混 */
 if('serviceWorker' in navigator&&/jasonlin\.tech$/.test(location.hostname))addEventListener('load',function(){navigator.serviceWorker.register('/sw.js')});</script>
 <!--SITE_INDEX_START--><details class="site-index"><summary>站点地图 · Sitemap（281 位人物 · 625 期）</summary>
