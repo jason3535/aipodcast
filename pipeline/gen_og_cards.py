@@ -15,10 +15,22 @@ import argparse, json, re, sys
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
+# 仓库路径:两台 Mac 布局不同(个人 Mac ~/CascadeProjects 等,工作 Mac 直接在 ~ 下),
+# 按候选路径取第一个存在的;也可用 SITE_ROOT_<KEY> 环境变量强制指定。
+# 2026-09-08:原来只写死了个人 Mac 的路径,在工作 Mac 上跑必然 FileNotFoundError。
+import os as _os
+def _root(key, *cands):
+    env = _os.environ.get("SITE_ROOT_" + key.upper())
+    if env: return Path(env)
+    for c in cands:
+        if Path(c).exists(): return Path(c)
+    return Path(cands[0])
+
+
 SITES = {
-  "aipodcast": dict(root=Path("/Users/jason/CascadeProjects/aipodcast"), label="AI PODCAST  ·  AI 播客", domain="aipodcast.jasonlin.tech",
+  "aipodcast": dict(root=_root("aipodcast", "/Users/jason/CascadeProjects/aipodcast", "/Users/jason.lin/aipodcast"), label="AI PODCAST  ·  AI 播客", domain="aipodcast.jasonlin.tech",
                     cta="读双语全文  →", item_dir="e", accent=(10, 132, 255)),
-  "aipaper":   dict(root=Path("/Users/jason/Downloads/ai-paper-prototype"), label="AI PAPER  ·  双语论文", domain="aipaper.jasonlin.tech",
+  "aipaper":   dict(root=_root("aipaper", "/Users/jason/Downloads/ai-paper-prototype", "/Users/jason.lin/aipaper"), label="AI PAPER  ·  双语论文", domain="aipaper.jasonlin.tech",
                     cta="读双语全文  →", item_dir="p", accent=(94, 92, 230)),
 }
 W, H = 1200, 630

@@ -16,16 +16,28 @@ SW 收到后拉这个文件、跟自己记的「上次提醒到哪」比对。�
 import argparse, json, os, sys, time, urllib.request
 from pathlib import Path
 
+# 仓库路径:两台 Mac 布局不同(个人 Mac ~/CascadeProjects 等,工作 Mac 直接在 ~ 下),
+# 按候选路径取第一个存在的;也可用 SITE_ROOT_<KEY> 环境变量强制指定。
+# 2026-09-08:原来只写死了个人 Mac 的路径,在工作 Mac 上跑必然 FileNotFoundError。
+import os as _os
+def _root(key, *cands):
+    env = _os.environ.get("SITE_ROOT_" + key.upper())
+    if env: return Path(env)
+    for c in cands:
+        if Path(c).exists(): return Path(c)
+    return Path(cands[0])
+
+
 KEEP = 10          # push-latest.json 保留最近多少条
 API = "https://push.jasonlin.tech"
 
 SITES = {
     "aipodcast": dict(
-        root=Path("/Users/jason/CascadeProjects/aipodcast"),
+        root=_root("aipodcast", "/Users/jason/CascadeProjects/aipodcast", "/Users/jason.lin/aipodcast"),
         data="mcp-data/index.json", key="episodes", url="/#/episode/{id}",
     ),
     "aipaper": dict(
-        root=Path("/Users/jason/Downloads/ai-paper-prototype"),
+        root=_root("aipaper", "/Users/jason/Downloads/ai-paper-prototype", "/Users/jason.lin/aipaper"),
         data="data/index.json", key="papers", url="/#/paper/{id}",
     ),
 }
