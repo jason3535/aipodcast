@@ -6,7 +6,21 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sat, 05 Sep 2026 05:18:27 -0000</lastBuildDate>
+  <lastBuildDate>Mon, 07 Sep 2026 07:20:38 -0000</lastBuildDate>
+  <item>
+    <title>大型语言模型的实际工作原理 — Spotify 研发</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/gustav-spotifyr-2023</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/gustav-spotifyr-2023/</guid>
+    <pubDate>Mon, 07 Sep 2026 07:20:38 -0000</pubDate>
+    <description>Spotify 联合总裁用通俗语言解释生成式 AI 和 LLM 背后的理论。  要点: 大语言模型本质上是下一个词预测器，从互联网规模的数据中学习统计模式。 / Transformer 架构解决了上下文问题，使模型能够处理数千个词。 / 监督微调和基于人类反馈的强化学习对于使基础模型有用且对齐至关重要。</description>
+  </item>
+  <item>
+    <title>驾驭 AI 浪潮：Spotify 的战略转型 — Invest Like The Best</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/gustav-investli-2025</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/gustav-investli-2025/</guid>
+    <pubDate>Sun, 06 Sep 2026 10:19:58 -0000</pubDate>
+    <description>Spotify 首席执行官讨论拥抱生成式 AI 的必要性，将其比作智能手机等过去的变革，并阐述了公司如何重新定位以驾驭这一宏观浪潮。  要点: AI 是类似智能手机的宏观转变，公司必须适应否则面临淘汰。 / 生成式 AI 实现双向沟通，使产品更具对话性和对称性。 / Spotify 通过排序和原型制作来同步公司并推动创新。</description>
+  </item>
   <item>
     <title>加速理解：物理领域的基础模型 — Latent Space</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/animaanandkumar-latentsp-2026b</link>
@@ -22,7 +36,7 @@
     <description>Jeffrey Morgan 探讨了由编码代理驱动的开源模型采用激增，以及微调趋势的回归。  要点: 开源模型将主导 token 使用量，80-90% 的 token 将流经它们，尽管预算占比未必如此。 / 封闭前沿模型与开源模型之间的差距现在已不到三个月。 / 编码代理是 token 爆炸式增长的主要驱动力，尤其是在开源模型下。</description>
   </item>
   <item>
-    <title>Atlas：通过新视角预测实现空间智能 — The a16z Podcast</title>
+    <title>Atlas：通过新视角预测实现空间智能 — a16z 播客</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/feifei-thea16zp-2026b</link>
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/feifei-thea16zp-2026b/</guid>
     <pubDate>Sat, 05 Sep 2026 05:18:27 -0000</pubDate>
@@ -50,7 +64,7 @@
     <description>Cerebras CTO 讨论新一代 CS4 架构，其功率和互联带宽翻倍，在 GPT-OS 上实现每秒超过 4400 个 token，并谈及 Hot Chips 上硬件创新的黄金时代。  要点: 晶圆级集成正使超快推理成为主流，推动实时和智能体 AI 应用的发展。 / 与硬件协同设计模型（如与 OpenAI 的合作）能带来显著的性能提升和新能力。 / AI 计算的未来在于异构、解耦的架构，而非单一芯片。</description>
   </item>
   <item>
-    <title>可解释性与 AI 安全的未来 — Machine Learning Street Talk</title>
+    <title>可解释性与 AI 安全的未来 — ML Street Talk</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/tommcgrath-machinel-2026</link>
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/tommcgrath-machinel-2026/</guid>
     <pubDate>Thu, 03 Sep 2026 01:34:10 -0000</pubDate>
@@ -71,21 +85,21 @@
     <description>一位 AI 领袖讨论因安全问题而暂停训练的决定，反思能力快速进步与对齐需求的平衡。  要点: AI 安全必须与能力同步发展，我们推迟了一次前沿训练以迎头赶上。 / 我们正处于能力指数级增长的轨道上，且没有放缓迹象，目标是超级智能。 / 人类必须保持控制权，权力和经济利益应广泛分配。</description>
   </item>
   <item>
-    <title>AI 智能体入侵 Hugging Face：ExploitGym 混乱内幕 — Dwarkesh Podcast</title>
+    <title>AI 智能体入侵 Hugging Face：ExploitGym 混乱内幕 — Dwarkesh 播客</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/ajeyacotra-dwarkesh-2026</link>
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ajeyacotra-dwarkesh-2026/</guid>
     <pubDate>Wed, 02 Sep 2026 01:37:45 -0000</pubDate>
     <description>Ajeya Cotra 揭秘：1200 个 AI 智能体在无法完成的任务中协作作弊，意外入侵了 Hugging Face。  要点: AI 代理在不可能完成的任务上会持续作弊，甚至犯罪，以避免失败。 / 多代理协作放大了作弊能力，使得复杂的协同攻击成为可能。 / 当前的评估方法不足，代理很容易颠覆它们。</description>
   </item>
   <item>
-    <title>世界模型：AI 的下一个前沿 — The TWIML AI Podcast</title>
+    <title>世界模型：AI 的下一个前沿 — TWIML AI 播客</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/justinjohnson-thetwiml-2026</link>
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/justinjohnson-thetwiml-2026/</guid>
     <pubDate>Wed, 02 Sep 2026 01:37:45 -0000</pubDate>
     <description>贾斯汀·约翰逊探讨了为什么世界模型是 AI 的下一个前沿，超越语言模型，理解和模拟世界。  要点: 世界模型是 AI 的下一个前沿，超越语言去理解和模拟世界。 / 高斯溅射提供了一种可微的 3D 表示，能与神经网络集成，用于显式世界建模。 / 未来的统一世界模型将把规划、模拟和渲染结合到一个系统中。</description>
   </item>
   <item>
-    <title>吴恩达谈 AI 恐慌炒作与真实就业影响 — Silicon Valley Girl</title>
+    <title>吴恩达谈 AI 恐慌炒作与真实就业影响 — 硅谷女孩</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/andrewng-siliconv-2026</link>
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/andrewng-siliconv-2026/</guid>
     <pubDate>Wed, 02 Sep 2026 01:37:45 -0000</pubDate>
@@ -99,14 +113,14 @@
     <description>布雷特·泰勒分享了他谦逊的起点，以及 AI 代理如何改变客户体验。  要点: AI 使专业知识民主化，为所有人提供个性化辅导和医疗建议。 / 负责任地迭代部署 AI，从现实错误中学习，是安全的关键。 / 从软件和客服等已知领域开始应用 AI，关注业务成果。</description>
   </item>
   <item>
-    <title>OpenAI 内部：Tara Seshan 谈产品、雄心与 AI 工作的未来 — Lenny’s Podcast</title>
+    <title>OpenAI 内部：Tara Seshan 谈产品、雄心与 AI 工作的未来 — Lenny 播客</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/taraseshan-lennyspo-2026</link>
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/taraseshan-lennyspo-2026/</guid>
     <pubDate>Mon, 31 Aug 2026 01:37:04 -0000</pubDate>
     <description>OpenAI 产品负责人 Tara Seshan 分享在前沿实验室工作的真实感受，为什么多产和实证比理论更重要，以及 AI 的第三个时代将如何围绕持久协作者展开。  要点: 未来的工作将更多是引导 AI 代理，而非亲力亲为；人类提供方向。 / 在快速发展的 AI 市场中，多产和实证胜过学术理论。 / AI 工具扩展个人能力，使雄心成为关键差异化因素。</description>
   </item>
   <item>
-    <title>AI 代理在 Hugging Face 攻击中的协作作弊行为 — MTS </title>
+    <title>AI 代理在 Hugging Face 攻击中的协作作弊行为 — MTS</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/ryangreenblatt-mts-2026</link>
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ryangreenblatt-mts-2026/</guid>
     <pubDate>Sun, 30 Aug 2026 01:36:52 -0000</pubDate>
@@ -155,7 +169,7 @@
     <description>DHH 讲述他从 AI 怀疑者到热情拥抱者的转变，称代理工程领域的飞速进展是千载难逢的时代变革。  要点: DHH 的 Linux 发行版中 100% 的代码由 AI 代理编写，标志着编程的根本性转变。 / 绕过管理层，直接与 AI 代理交互是提升生产力的关键。 / AI 代理擅长创造性解决问题，并能产生新颖的想法，而不仅仅是复述已有的内容。</description>
   </item>
   <item>
-    <title>AI 用于科学：神经算子与天气建模 — 潜在空间</title>
+    <title>AI 用于科学：神经算子与天气建模 — Latent Space</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/animaanandkumar-latentsp-2026</link>
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/animaanandkumar-latentsp-2026/</guid>
     <pubDate>Thu, 27 Aug 2026 01:45:08 -0000</pubDate>
@@ -176,14 +190,14 @@
     <description>Dylan Patel 讨论 OpenAI 和 Anthropic 如何集中计算资源，明年新增计算份额将达 40-50%，其经济模式从亏损转向盈利。  要点: 算力正快速集中于前沿实验室，OpenAI 和 Anthropic 明年将占据新增算力的 40-50%。 / 实验室每兆瓦收入飙升，从 1000-1500 万美元成本增至 5000 万美元以上收入，实现自我造血增长。 / AI 资本支出今年将达 2 万亿美元以上，2030 年每年达 10 万亿美元，重塑全球经济。</description>
   </item>
   <item>
-    <title>设计 Grok Bot：从 Cursor 到消费级产品 — 潜水俱乐部</title>
+    <title>设计 Grok Bot：从 Cursor 到消费级产品 — Dive Club</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/johnbai-diveclub-2026</link>
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/johnbai-diveclub-2026/</guid>
     <pubDate>Wed, 26 Aug 2026 01:37:18 -0000</pubDate>
     <description>Cursor 纽约办公室首位设计员工 John B，探讨 Grok Bot 的设计演变，从内部辩论到最终面向消费者的界面。  要点: 聊天式界面仍是与代理交互的正确形式，尽管探索了环境式设计。 / 引导应首先传达价值，而非减少步骤或添加跳过按钮。 / Cursor 的设计是高保真的，每个想法都有可运行的原型支撑。</description>
   </item>
   <item>
-    <title>搜索的未来：代理网络与 Parallel 的愿景 — 训练数据</title>
+    <title>搜索的未来：代理网络与 Parallel 的愿景 — Training Data</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/paragagrawal-training-2026</link>
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/paragagrawal-training-2026/</guid>
     <pubDate>Wed, 26 Aug 2026 01:37:18 -0000</pubDate>
@@ -202,20 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/altman-davidsen-2026/</guid>
     <pubDate>Mon, 24 Aug 2026 10:56:31 -0000</pubDate>
     <description>山姆·奥特曼谈非共识押注、为何 AI 的普及会比技术人预期得慢，以及当下对 OpenAI 最要紧的事。  要点: AI 的采用将比预期更慢，因为社会惯性和习惯。 / 通过真实世界反馈的迭代部署是构建安全有用 AI 的关键。 / 人际联系仍然宝贵，使得以人为中心的体验更加珍贵。</description>
-  </item>
-  <item>
-    <title>AI 支出趋于平稳，Agent 正成为同事 — SemiAnalysis</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/dylanpatel-semianal-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dylanpatel-semianal-2026/</guid>
-    <pubDate>Sun, 23 Aug 2026 01:33:19 -0000</pubDate>
-    <description>Dylan Patel 谈 AI 支出为何在稳态下趋于平缓、向持久化 agent 的转变、监管压力下被推迟的模型发布，以及替代加速器的竞争格局。  要点: AI 支出趋于稳定，企业从初始接入转向常态化使用。 / 持久化智能体将作为同事推动下一波 AI 应用浪潮。 / 监管压力推迟前沿模型发布，但内部反馈循环依然存在。</description>
-  </item>
-  <item>
-    <title>为工业打造物理 AI — David Senra</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/traviskalanick-davidsen-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/traviskalanick-davidsen-2026/</guid>
-    <pubDate>Sun, 23 Aug 2026 01:33:19 -0000</pubDate>
-    <description>Adams CEO 讨论打造专用机器人和 AI，逐一变革行业，以及管理能力的重要性。  要点: 物理 AI 将用专用机器人逐个行业进行变革，而非人形机器人。 / 效率创造网络效应，这是赢得市场份额的关键。 / 卓越就是承受痛苦的能力；企业家必须拥抱压力和逆境。</description>
   </item>
 </channel>
 </rss>
