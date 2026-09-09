@@ -662,7 +662,8 @@ def main():
         log("⚠️ index/ep 一致性未通过,放弃提交:\n" + out_s[-600:]); return
 
     run_cmd(["git", "add", "-A"])
-    msg = f"chore: 自动保鲜 +{added} 期（{', '.join(x['pid'] for x in plan[:added])}）"
+    # 2026-09-09:此前按 plan 前 added 位拼人名,单集中途失败回滚时会把失败的人写进标题(romanugarte 失败却上了 commit)
+    msg = f"chore: 自动保鲜 +{added} 期（{', '.join(i.split('-')[0] for i in new_ids) if new_ids else ''}）"
     if new_people:
         msg += f" +{len(new_people)} 新人物"
         log(f"本轮新建人物 {len(new_people)} 位（头像待补）:{', '.join(new_people)}")
