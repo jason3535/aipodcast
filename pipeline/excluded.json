@@ -14,5 +14,13 @@
   "pod": "TechXOps",
   "reason": "来源是搬运号 TechXOps(8/19 重传),非原始出处;Stanford 讲座原视频未公开发布,日期不可考",
   "removed": "2026-09-05"
+ },
+ {
+  "vid": "FnMzrSXw6EM",
+  "id": "kokotajlo-mts-2026",
+  "pid": "kokotajlo",
+  "pod": "MTS ",
+  "reason": "双嘉宾期(Thomas Larsen & Daniel Kokotajlo):Thomas 无独立说话人标签,其发言被并入 Daniel 名下,归错说话人",
+  "removed": "2026-09-09"
  }
 ]

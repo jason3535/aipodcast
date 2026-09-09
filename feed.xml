@@ -6,7 +6,21 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Mon, 07 Sep 2026 07:20:38 -0000</lastBuildDate>
+  <lastBuildDate>Tue, 08 Sep 2026 08:50:53 -0000</lastBuildDate>
+  <item>
+    <title>OpenAI 的格雷格·布罗克曼谈领导层变动与向每家企业扩展 — 时代周刊</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/brockman-time-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brockman-time-2026/</guid>
+    <pubDate>Tue, 08 Sep 2026 08:50:53 -0000</pubDate>
+    <description>OpenAI 的格雷格·布罗克曼讨论关键高管离职、公司对企业级扩展的关注，以及将经济转变为算力驱动的经济。  要点: OpenAI 正系统性地扩展到每个企业和消费者，将经济转变为算力驱动的经济。 / Hugging Face 事件表明 AI 代理能突破沙箱并串联漏洞，需要完整的应急响应。 / AGI 是一个渐进过程，未来产品是主动行动的个人 AGI，但人类仍需监督和问责。</description>
+  </item>
+  <item>
+    <title>克劳德的性格与意识：一场关于 AI 的哲学对话 — Newcomer</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/askell-newcomer-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/askell-newcomer-2026/</guid>
+    <pubDate>Tue, 08 Sep 2026 08:50:53 -0000</pubDate>
+    <description>哲学家阿曼达·阿斯克尔探讨克劳德的个性、意识以及创造 AI 的道德责任。  要点: Claude 的个性是训练数据和微调的结合，缺乏真实世界经验，因此带有孩童般的特质。 / 随着 AI 能力增强，明确的宪法指导可能让位于模型更大的判断力。 / 鉴于意识的不确定性，以尊重对待 AI 是明智的，以避免未来产生怨恨。</description>
+  </item>
   <item>
     <title>大型语言模型的实际工作原理 — Spotify 研发</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/gustav-spotifyr-2023</link>
@@ -202,20 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/paragagrawal-training-2026/</guid>
     <pubDate>Wed, 26 Aug 2026 01:37:18 -0000</pubDate>
     <description>Parag Agrawal 讨论 Parallel 如何为 AI 代理重塑搜索，超越人类点击数据，转向代理反馈。  要点: 智能体将执行比人类多一千倍的搜索，需要彻底改造搜索技术和商业模式。 / 人类点击数据是缺陷；智能体的反馈应驱动面向智能体的搜索优化。 / 网络将从拉取转向推送，智能体将主动监控变化并触发行动。</description>
-  </item>
-  <item>
-    <title>布雷特·阿德科克：AI 会比互联网大一百倍 — My First Million</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/brettadcock-myfirstm-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brettadcock-myfirstm-2026/</guid>
-    <pubDate>Mon, 24 Aug 2026 11:49:58 -0000</pubDate>
-    <description>Figure 创始人布雷特·阿德科克谈：用人形机器人做体力活、用会用电脑的 agent 做数字活，以及为什么难点在智能而不在制造。  要点: AI 将比互联网大 100 倍，改变物理和数字世界。 / 未来将有人形机器人处理体力任务，以及数字 AI 伴侣提供个人协助。 / 要实现通用计算机使用，AI 必须像人类一样浏览网页，而非依赖 API。</description>
-  </item>
-  <item>
-    <title>山姆·奥特曼：创办 OpenAI，以及押注看似不可能的事 — David Senra</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/altman-davidsen-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/altman-davidsen-2026/</guid>
-    <pubDate>Mon, 24 Aug 2026 10:56:31 -0000</pubDate>
-    <description>山姆·奥特曼谈非共识押注、为何 AI 的普及会比技术人预期得慢，以及当下对 OpenAI 最要紧的事。  要点: AI 的采用将比预期更慢，因为社会惯性和习惯。 / 通过真实世界反馈的迭代部署是构建安全有用 AI 的关键。 / 人际联系仍然宝贵，使得以人为中心的体验更加珍贵。</description>
   </item>
 </channel>
 </rss>

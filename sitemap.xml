@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://aipodcast.jasonlin.tech/pp/kokotajlo/</loc><lastmod>2026-09-08</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-09-09</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/animaanandkumar/</loc><lastmod>2026-09-05</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/jeffreymorgan/</loc><lastmod>2026-09-05</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/feifei/</loc><lastmod>2026-09-05</lastmod></url>
@@ -19,6 +18,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/tworek/</loc><lastmod>2026-08-26</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/dhh/</loc><lastmod>2026-08-27</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/jensen/</loc><lastmod>2026-08-28</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/kokotajlo/</loc><lastmod>2026-09-03</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/dylanpatel/</loc><lastmod>2026-08-26</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/johnbai/</loc><lastmod>2026-08-26</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/paragagrawal/</loc><lastmod>2026-08-26</lastmod></url>
@@ -282,7 +282,6 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/hugobarra/</loc><lastmod>2026-08-14</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/albertgu/</loc><lastmod>2026-06-27</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/abbeel/</loc><lastmod>2026-08-17</lastmod></url>
-  <url><loc>https://aipodcast.jasonlin.tech/e/kokotajlo-mts-2026/</loc><lastmod>2026-09-08</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/animaanandkumar-latentsp-2026b/</loc><lastmod>2026-09-05</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/jeffreymorgan-ycombina-2026/</loc><lastmod>2026-09-05</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/feifei-thea16zp-2026b/</loc><lastmod>2026-09-05</lastmod></url>

@@ -336,6 +336,7 @@ def main():
                     help="从网页速记稿取正文(无字幕的财报电话会等)。给了它就不走 yt-dlp,"
                          "--url 仍作为读者可回溯的来源链接;--date/--min 此时必须显式给。")
     a = ap.parse_args()
+    a.pod_en = a.pod_en.strip(); a.pod_zh = a.pod_zh.strip()  # 台名首尾空格会分裂节目
 
     scripted = bool(a.transcript_url)
     if scripted:
