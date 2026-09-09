@@ -113,7 +113,7 @@ def meta(vid):
         d = json.loads(subprocess.run(["yt-dlp", "--skip-download", "--no-warnings", "-J",
             f"https://youtu.be/{vid}"], capture_output=True, text=True, timeout=50).stdout)
         ac = d.get("automatic_captions") or {}
-        return {"vid": vid, "date": d.get("upload_date") or "", "ch": d.get("channel") or "",
+        return {"vid": vid, "date": d.get("upload_date") or "", "ch": (d.get("channel") or "").strip(),
                 "dur": d.get("duration") or 0, "t": d.get("title") or "",
                 "desc": (d.get("description") or "")[:700],
                 "cap": "en" in ac,
@@ -199,6 +199,7 @@ def register_pod(pod_en, desc=""):
     """返回 (pod_zh, 是否新登记)。若已登记返回 (None, False)。
     desc = 该频道某期的视频简介,喂给模型当依据 —— 只给台名会瞎猜:
     "Sourcery with Molly O'Shea"(VC 访谈节目)被先后编成"探索魔法与神秘主义"和"厨师分享食谱"。"""
+    pod_en = pod_en.strip()  # 台名首尾空格会分裂节目("MTS" vs "MTS ")
     h = HTML.read_text(encoding="utf-8")
     esc = lambda s: s.replace("\\", "\\\\").replace("'", "\\'")  # 仅 POD_LOGO(仍是单引号格式)用
     pods = pod_info_load(h)
@@ -383,10 +384,14 @@ def drop_pod(pod_en):
     if h2 != h:
         HTML.write_text(h2, encoding="utf-8")
         log(f"  ↩ 回滚新登记节目 {pod_en}（该期收录失败）")
-    try: (ROOT / "assets" / "pods" / f"{slug(pod_en)}.jpg").unlink()
-    except Exception: pass
-    try: (ROOT / "assets" / "pods" / f"{slug(pod_en)}.webp").unlink()
-    except Exception: pass
+    # 台标按 slug 命名,不同台名可能撞同一个 slug("MTS" 与频道名自带尾空格的 "MTS " 都是 mts)。
+    # 2026-09-09:撤回一期时把仍在用的 mts.jpg/webp 一起删了,3 期 MTS 的台标全空。
+    # 只有当剩下的 POD_LOGO 里没人再指向这个 slug 时才删。
+    sg = slug(pod_en)
+    if not re.search(r"':'" + re.escape(sg) + r"',", h2):
+        for ext in ("jpg", "webp"):
+            try: (ROOT / "assets" / "pods" / f"{sg}.{ext}").unlink()
+            except Exception: pass
 
 
 def discover_channels(people, vids, days, per_channel_cap=2):
