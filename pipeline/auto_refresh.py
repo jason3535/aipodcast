@@ -139,6 +139,10 @@ def orig_lang(d, ac):
     if len(origs) > 1:
         if lang and lang in origs: return lang
         if "en" in origs: return "en"
+        # 2026-09-09 又见 Logan Kilpatrick 一期被判 ar:多条配音轨、没有 en-orig、language 也空。
+        # ≥3 条 -orig 就是 YouTube 的自动配音包,只给热门英文频道配;这种情况下原声几乎必是英文,
+        # 与其按字典序猜 ar,不如判不出就放行给下游闸门(注释开头说的原则:判不出一律放行)。
+        if len(origs) >= 3: return lang or "en"
         return lang or origs[0]
     return lang
 
