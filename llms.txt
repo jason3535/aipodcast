@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 282 位人物 / 631 期访谈
+规模: 283 位人物 / 632 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -112,6 +112,7 @@
 - [Nad Chishtie / 纳德·奇什蒂](https://aipodcast.jasonlin.tech/pp/nadchishtie/): Founding Designer & Head of Design, Lovable — 2 期
 - [Michael Truell / 迈克尔·特鲁埃尔](https://aipodcast.jasonlin.tech/pp/truell/): Co-founder & CEO, Cursor — 2 期
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 2 期
+- [Roman Ugarte / 罗曼·乌加特](https://aipodcast.jasonlin.tech/pp/romanugarte/): Product Lead, Grok Bot (xAI) — 1 期
 - [Quinn Slack / Quinn Slack](https://aipodcast.jasonlin.tech/pp/quinnslack/): CEO of Amp — 1 期
 - [Jeffrey Morgan / 杰弗里·摩根](https://aipodcast.jasonlin.tech/pp/jeffreymorgan/): Co-founder and CEO, Ollama — 1 期
 - [Buck Shlegeris / 巴克·施莱格里斯](https://aipodcast.jasonlin.tech/pp/buckshlegeris/): CEO, Redwood Research — 1 期
@@ -293,6 +294,7 @@
 ## 最新访谈 Latest episodes
 - [Mark Zuckerberg on Open Source AI and the Muse Agent](https://aipodcast.jasonlin.tech/e/zuckerberg-sourcesp-2026/) — Mark Zuckerberg, Sources Podcast, 2026-09-08
 - [AI 2040: Plan A — A Slower, Safer Path to Superintelligence](https://aipodcast.jasonlin.tech/e/kokotajlo-machinel-2026/) — Daniel Kokotajlo, Machine Learning Street Talk, 2026-09-08
+- [Building Grok Bot: How a Small Team Created the Hottest AI Product](https://aipodcast.jasonlin.tech/e/romanugarte-lennyspo-2026/) — Roman Ugarte, Lenny’s Podcast, 2026-09-08
 - [AMP's Remote-First Revolution: Why Local Development Is Dead](https://aipodcast.jasonlin.tech/e/quinnslack-latentsp-2026/) — Quinn Slack, Latent Space, 2026-09-07
 - [Accelerated Understanding: A Foundation Model for Physics](https://aipodcast.jasonlin.tech/e/animaanandkumar-latentsp-2026b/) — Anima Anandkumar, Latent Space, 2026-09-04
 - [The Resurgence of Open Source Model Customization](https://aipodcast.jasonlin.tech/e/jeffreymorgan-ycombina-2026/) — Jeffrey Morgan, Y Combinator, 2026-09-04
@@ -330,7 +332,6 @@
 - [EXO: Fully Recursive Self-Improving Agents](https://aipodcast.jasonlin.tech/e/alexkrentsel-latentsp-2026/) — Alex Krentsel, Latent Space, 2026-08-15
 - [From Bits to Atoms: The Next Industrial Revolution](https://aipodcast.jasonlin.tech/e/traviskalanick-thea16zp-2026b/) — Travis Kalanick, The a16z Podcast, 2026-08-14
 - [Designing the Macintosh: Susan Kare on Icons and Fonts](https://aipodcast.jasonlin.tech/e/susankare-ycombina-2026/) — Susan Kare, Y Combinator, 2026-08-14
-- [Brett Adcock: AI Will Be 100x Bigger Than the Internet](https://aipodcast.jasonlin.tech/e/brettadcock-myfirstm-2026/) — Brett Adcock, My First Million, 2026-08-14
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
