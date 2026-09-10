@@ -6,7 +6,21 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Tue, 08 Sep 2026 08:50:53 -0000</lastBuildDate>
+  <lastBuildDate>Wed, 09 Sep 2026 13:49:17 -0000</lastBuildDate>
+  <item>
+    <title>马克·扎克伯格谈开源 AI 与 Muse 智能体 — Sources Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/zuckerberg-sourcesp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/zuckerberg-sourcesp-2026/</guid>
+    <pubDate>Wed, 09 Sep 2026 13:49:17 -0000</pubDate>
+    <description>马克阐述了他广泛分发 AI 的愿景、其宣言背后的原则，以及即将推出的 Muse 个人智能体。  要点: 广泛分发 AI 而非限制，才是通往安全与繁荣之路。 / 开源确保制衡，带来更安全的 AI 系统。 / 像 Muse 这样的个人 AI 代理应人人负担得起且保护隐私。</description>
+  </item>
+  <item>
+    <title>AMP 的远程优先革命：为何本地开发已死 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/quinnslack-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/quinnslack-latentsp-2026/</guid>
+    <pubDate>Wed, 09 Sep 2026 13:49:17 -0000</pubDate>
+    <description>AMP 团队讨论远程工作文化及向基于云的 orbs 开发转变，主张本地开发已过时。  要点: 本地开发已死；云端代理支持并行、安全且更快的开发流程。 / 在小型信任团队中，代码审查已过时；代理加速迭代并提升质量。 / 拥有代理的小型授权团队能超越大型组织并实现盈利。</description>
+  </item>
   <item>
     <title>OpenAI 的格雷格·布罗克曼谈领导层变动与向每家企业扩展 — 时代周刊</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/brockman-time-2026</link>
@@ -202,20 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dylanpatel-dwarkesh-2026b/</guid>
     <pubDate>Wed, 26 Aug 2026 01:37:18 -0000</pubDate>
     <description>Dylan Patel 讨论 OpenAI 和 Anthropic 如何集中计算资源，明年新增计算份额将达 40-50%，其经济模式从亏损转向盈利。  要点: 算力正快速集中于前沿实验室，OpenAI 和 Anthropic 明年将占据新增算力的 40-50%。 / 实验室每兆瓦收入飙升，从 1000-1500 万美元成本增至 5000 万美元以上收入，实现自我造血增长。 / AI 资本支出今年将达 2 万亿美元以上，2030 年每年达 10 万亿美元，重塑全球经济。</description>
-  </item>
-  <item>
-    <title>设计 Grok Bot：从 Cursor 到消费级产品 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/johnbai-diveclub-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/johnbai-diveclub-2026/</guid>
-    <pubDate>Wed, 26 Aug 2026 01:37:18 -0000</pubDate>
-    <description>Cursor 纽约办公室首位设计员工 John B，探讨 Grok Bot 的设计演变，从内部辩论到最终面向消费者的界面。  要点: 聊天式界面仍是与代理交互的正确形式，尽管探索了环境式设计。 / 引导应首先传达价值，而非减少步骤或添加跳过按钮。 / Cursor 的设计是高保真的，每个想法都有可运行的原型支撑。</description>
-  </item>
-  <item>
-    <title>搜索的未来：代理网络与 Parallel 的愿景 — Training Data</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/paragagrawal-training-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/paragagrawal-training-2026/</guid>
-    <pubDate>Wed, 26 Aug 2026 01:37:18 -0000</pubDate>
-    <description>Parag Agrawal 讨论 Parallel 如何为 AI 代理重塑搜索，超越人类点击数据，转向代理反馈。  要点: 智能体将执行比人类多一千倍的搜索，需要彻底改造搜索技术和商业模式。 / 人类点击数据是缺陷；智能体的反馈应驱动面向智能体的搜索优化。 / 网络将从拉取转向推送，智能体将主动监控变化并触发行动。</description>
   </item>
 </channel>
 </rss>
