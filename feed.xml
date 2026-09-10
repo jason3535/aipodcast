@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Wed, 09 Sep 2026 13:49:17 -0000</lastBuildDate>
+  <lastBuildDate>Thu, 10 Sep 2026 01:37:55 -0000</lastBuildDate>
+  <item>
+    <title>AI 2040：A 计划——通往超级智能的更慢、更安全之路 — Machine Learning Street Talk</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/kokotajlo-machinel-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/kokotajlo-machinel-2026/</guid>
+    <pubDate>Thu, 10 Sep 2026 01:37:55 -0000</pubDate>
+    <description>托马斯·拉森与丹尼尔·科科泰尔探讨《AI 2040：A 计划》——一个通过审慎可控的发展路径在 2040 年前构建超级智能的新情景。  要点: AI 2027 的预测正以约 75% 的速度在现实中应验，比预期稍慢。 / Plan A 2040 建议暂时暂停，以建立透明的核查基础设施，然后谨慎恢复。 / 与怀疑论者的主要分歧在于，AI 是否很快会成为“云端之人”。</description>
+  </item>
   <item>
     <title>马克·扎克伯格谈开源 AI 与 Muse 智能体 — Sources Podcast</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/zuckerberg-sourcesp-2026</link>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/tworek-mts-2026/</guid>
     <pubDate>Wed, 26 Aug 2026 22:16:38 -0000</pubDate>
     <description>Jerry Tworek 讨论 Core Automation 的使命，即构建全球最自动化的 AI 实验室，利用 AI 代理加速研究和实验。  要点: 人类研究员在 AI 研究中至少还有两年的重要性。 / 前沿研究将转向使用强大智能体的小团队。 / 自动化应首先针对大公司，因其官僚主义和信息传递困难。</description>
-  </item>
-  <item>
-    <title>AI 实验室的计算主导地位与经济 — Dwarkesh 播客</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/dylanpatel-dwarkesh-2026b</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dylanpatel-dwarkesh-2026b/</guid>
-    <pubDate>Wed, 26 Aug 2026 01:37:18 -0000</pubDate>
-    <description>Dylan Patel 讨论 OpenAI 和 Anthropic 如何集中计算资源，明年新增计算份额将达 40-50%，其经济模式从亏损转向盈利。  要点: 算力正快速集中于前沿实验室，OpenAI 和 Anthropic 明年将占据新增算力的 40-50%。 / 实验室每兆瓦收入飙升，从 1000-1500 万美元成本增至 5000 万美元以上收入，实现自我造血增长。 / AI 资本支出今年将达 2 万亿美元以上，2030 年每年达 10 万亿美元，重塑全球经济。</description>
   </item>
 </channel>
 </rss>

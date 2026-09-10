@@ -49,6 +49,8 @@ else
   python3 pipeline/indexnow.py --site aipodcast || echo "  ⚠ IndexNow 推送失败(不阻断)"
 fi
 
+echo "── 10.9/11 重跑分享页(10.5 的 build_crosslinks --apply 会改 app.js,必须让 index.html 的 app.js?v= 跟上,否则版本号门禁必红)"
+node pipeline/build_share_pages.js | tail -1
 echo "── 11/11 门禁"
 node -e 'new Function(require("fs").readFileSync("app.js","utf8")); console.log("  app.js 语法 OK")'
 python3 pipeline/fix_terms.py --check        # 术语残留=非零退出。**不能接 | tail**:管道退出码是 tail 的,门禁会永远通过
