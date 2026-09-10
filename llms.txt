@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 282 位人物 / 630 期访谈
+规模: 282 位人物 / 631 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -36,6 +36,7 @@
 - [Mike Krieger / 迈克·克里格](https://aipodcast.jasonlin.tech/pp/mikekrieger/): Co-lead, Anthropic Labs · Instagram co-founder — 5 期
 - [Carl Pei / 裴宇](https://aipodcast.jasonlin.tech/pp/carlpei/): Founder & CEO, Nothing; co-founder of OnePlus — 5 期
 - [Sholto Douglas / 肖尔托·道格拉斯](https://aipodcast.jasonlin.tech/pp/sholto/): Researcher, Anthropic — 5 期
+- [Daniel Kokotajlo / 丹尼尔·科科塔伊洛](https://aipodcast.jasonlin.tech/pp/kokotajlo/): Author, AI 2027 · ex-OpenAI — 4 期
 - [Jerry Tworek / 杰里·特沃雷克](https://aipodcast.jasonlin.tech/pp/tworek/): Co-founder & CEO, Core Automation — 4 期
 - [Joon Sung Park / 朴俊成](https://aipodcast.jasonlin.tech/pp/joonpark/): Co-founder, Simile; creator of Generative Agents (Stanford) — 4 期
 - [Jeff Dean / 杰夫·迪恩](https://aipodcast.jasonlin.tech/pp/jeffdean/): Chief Scientist, Google — 4 期
@@ -48,7 +49,6 @@
 - [Aravind Srinivas / 阿拉文德·斯里尼瓦斯](https://aipodcast.jasonlin.tech/pp/aravind/): Co-founder & CEO, Perplexity — 4 期
 - [Zico Kolter / 齐科·科尔特](https://aipodcast.jasonlin.tech/pp/kolter/): Professor, CMU · OpenAI board — 4 期
 - [Gustav Söderström / 古斯塔夫·瑟德斯特伦](https://aipodcast.jasonlin.tech/pp/gustav/): Co-President & CPTO, Spotify — 4 期
-- [Daniel Kokotajlo / 丹尼尔·科科塔伊洛](https://aipodcast.jasonlin.tech/pp/kokotajlo/): Author, AI 2027 · ex-OpenAI — 3 期
 - [Travis Kalanick / 特拉维斯·卡兰尼克](https://aipodcast.jasonlin.tech/pp/traviskalanick/): Founder of Uber, CEO of CloudKitchens — 3 期
 - [Brett Adcock / 布雷特·阿德科克](https://aipodcast.jasonlin.tech/pp/brettadcock/): Founder & CEO, Figure — 3 期
 - [Peter Steinberger / 彼得·施泰因贝格尔](https://aipodcast.jasonlin.tech/pp/steinberger/): Creator of OpenClaw; founder of PSPDFKit — 3 期
@@ -292,6 +292,7 @@
 
 ## 最新访谈 Latest episodes
 - [Mark Zuckerberg on Open Source AI and the Muse Agent](https://aipodcast.jasonlin.tech/e/zuckerberg-sourcesp-2026/) — Mark Zuckerberg, Sources Podcast, 2026-09-08
+- [AI 2040: Plan A — A Slower, Safer Path to Superintelligence](https://aipodcast.jasonlin.tech/e/kokotajlo-machinel-2026/) — Daniel Kokotajlo, Machine Learning Street Talk, 2026-09-08
 - [AMP's Remote-First Revolution: Why Local Development Is Dead](https://aipodcast.jasonlin.tech/e/quinnslack-latentsp-2026/) — Quinn Slack, Latent Space, 2026-09-07
 - [Accelerated Understanding: A Foundation Model for Physics](https://aipodcast.jasonlin.tech/e/animaanandkumar-latentsp-2026b/) — Anima Anandkumar, Latent Space, 2026-09-04
 - [The Resurgence of Open Source Model Customization](https://aipodcast.jasonlin.tech/e/jeffreymorgan-ycombina-2026/) — Jeffrey Morgan, Y Combinator, 2026-09-04
@@ -330,7 +331,6 @@
 - [From Bits to Atoms: The Next Industrial Revolution](https://aipodcast.jasonlin.tech/e/traviskalanick-thea16zp-2026b/) — Travis Kalanick, The a16z Podcast, 2026-08-14
 - [Designing the Macintosh: Susan Kare on Icons and Fonts](https://aipodcast.jasonlin.tech/e/susankare-ycombina-2026/) — Susan Kare, Y Combinator, 2026-08-14
 - [Brett Adcock: AI Will Be 100x Bigger Than the Internet](https://aipodcast.jasonlin.tech/e/brettadcock-myfirstm-2026/) — Brett Adcock, My First Million, 2026-08-14
-- [Harnesses and Evals: Owning Your Intelligence](https://aipodcast.jasonlin.tech/e/harrisonchase-training-2026/) — Harrison Chase, Training Data, 2026-08-13
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
