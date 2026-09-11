@@ -226,6 +226,13 @@ def chunks(t, size=7000):
     return out
 
 
+def guest_labels(guest):
+    """guest 可以是 "Cat" 也可以是 "Cat,Thariq" —— 三人场(一主持 + 两嘉宾)按两个标签给,
+    否则模型只有 Host/<guest> 两个格子,第二位嘉宾必然被塞进其中一个。
+    2026-09-11 catwu-aiengine-2026 就是这么错的:Thariq 的话一半进 Host 一半进 Cat。"""
+    return [g.strip() for g in str(guest).split(",") if g.strip()]
+
+
 def translate(text, guest, scripted=False):
     if scripted:
         # 速记稿模式:输入自带 [发言人]: 标记。自动字幕那套「猜说话人」的规则在这里全是负作用
@@ -261,10 +268,18 @@ def translate(text, guest, scripted=False):
             raise RuntimeError(f"第 {[i+1 for i in empty]} 块翻译返回空,中止(不写入任何文件)")
         return [s for part in ts for s in (part or [])]
 
+    _gs = guest_labels(guest)
+    if len(_gs) > 1:
+        SPK_RULE = ('本场是**多位嘉宾**:' + "、".join(f'"{g}"' for g in _gs)
+                    + ',主持人用 "Host"。**每位嘉宾各用自己的标签,绝不合并成一个人**——'
+                      '两位嘉宾会互相补充、互相接话,谁说的就标谁;分不清是哪位嘉宾时,'
+                      '按上下文里他们各自负责的领域和被点名的称呼判断,不要一律归给第一位。')
+    else:
+        SPK_RULE = f'嘉宾发言用 "{_gs[0] if _gs else guest}",主持人用 "Host"。'
     sec_sys = (f"""你是 AI Podcast 的播客转录编辑兼译者。输入是 AI 人物访谈的英文自动字幕。
 整理成「按主题分节、按发言人分段」的中英对照阅读稿,输出 JSON。
 - 清理口语、修自动字幕错词、合并碎句;不改原意,不杜撰。
-- 按主题切小节,sec 用简短英文短语。节内 spk:嘉宾发言用 "{guest}",主持人用 "Host"。
+- 按主题切小节,sec 用简短英文短语。节内 spk:{SPK_RULE}
 - 【说话人判定铁律】主持人=提问方:向对方发问(「你觉得/你怎么看/请讲讲/我很好奇你…」)、引导话题、念赞助广告、开场结尾致谢;嘉宾=被问的人,用第一人称讲亲身经历与自己公司内部("我在 Apple 时/我们团队")。称呼对方为「你」并向其提问的一定是主持人。
 - 长问题会被自动字幕切碎:提问的延续部分仍属主持人,绝不能把问题后半段并进嘉宾的 turn。若一个 turn 前半是提问、后半是回答,必须拆成两个 turn 分属两人。逐 turn 自检 spk 与内容是否矛盾。
 - 【禁止合并两人的话】自动字幕没有说话人标记,一段连续文字里往往藏着两个人。以下四种必须拆成独立 turn(en 与 zh 同步在句边界切):
