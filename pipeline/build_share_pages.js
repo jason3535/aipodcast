@@ -139,7 +139,13 @@ ${chs.length?`<h2>本期章节 · Chapters（共 ${chs.length}）</h2><ul>${chs.
 ${transcriptHtml(e.id)}
 <p style="margin-top:26px"><a class="cta" href="${hash}">互动版：逐字朗读 + 针对本期提问 →</a></p>
 <script>(function(){var q=location.search.replace(/^\\?/,'');var h=${JSON.stringify(hash)}+(q?'?'+q:'');
-document.querySelectorAll('a.cta').forEach(function(a){a.href=h});})()</script>`;
+document.querySelectorAll('a.cta').forEach(function(a){a.href=h});
+/* 带 ?at/hl 的是「引文分享」链接:分享出去的是某一句话,落在这张静态页上还得再点一次
+   「打开互动全文版」才看得到定位高亮。真人直接送到互动版;爬虫留在静态页——
+   OG 卡预览和全文索引都指着它。用 replace 不进历史,返回键回到聊天窗而不是卡在这页。
+   放在埋点脚本之前,跳走的这一次不记 view,由 SPA 自己记,口径不重复。*/
+var UA=navigator.userAgent||'';
+if(/[?&](at|hl)=/.test(location.search)&&!/bot|crawl|spider|slurp|headless|lighthouse|bingpreview|facebookexternalhit/i.test(UA))location.replace(h);})()</script>`;
   const ld=[{"@context":"https://schema.org","@type":"PodcastEpisode",name:e.tEn,alternateName:e.tZh,url,datePublished:e.date,timeRequired:e.min?`PT${e.min}M`:undefined,inLanguage:["en","zh"],description:e.sEn||e.sZh,abstract:cons.map(c=>c.en).filter(Boolean).slice(0,5).join(' '),partOfSeries:{"@type":"PodcastSeries",name:(e.pod&&e.pod.en)||''},isPartOf:{"@type":"WebSite",name:"AI Podcast",url:SITE},actor:{"@type":"Person",name:p.en,jobTitle:p.tiEn,url:person},...(vid(e.src)?{associatedMedia:{"@type":"VideoObject",name:e.tEn,embedUrl:`https://www.youtube.com/embed/${vid(e.src)}`,uploadDate:e.date}}:{})},
     {"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"AI Podcast",item:SITE+"/"},{"@type":"ListItem",position:2,name:p.zh||p.en||'',item:person},{"@type":"ListItem",position:3,name:e.tZh||e.tEn,item:url}]}];
   fs.mkdirSync(path.join(EDIR,e.id),{recursive:true});
