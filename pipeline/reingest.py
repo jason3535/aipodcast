@@ -52,6 +52,7 @@ def main():
     ap.add_argument("ids", nargs="*")
     ap.add_argument("--min-only", action="store_true", help="只用 YouTube 时长补 min,不重翻正文")
     ap.add_argument("--from-audit", action="store_true", help="用 audit_completeness.js 的严重项作为输入")
+    ap.add_argument("--guests", default="", help='覆盖说话人标签,逗号分隔。三人场(一主持+两嘉宾)必须给全,如 --guests "Cat,Thariq";留空则沿用人物档里的单个名字')
     a = ap.parse_args()
 
     ids = list(a.ids)
@@ -97,7 +98,7 @@ def main():
             text = AE.get_subs(src)
             if len(text) < 2000:
                 raise RuntimeError(f"字幕不足({len(text)} 字符)")
-            guest = guest_of(e["pid"], html)
+            guest = a.guests.strip() or guest_of(e["pid"], html)
             print(f"  翻译({len(text)} 字符, guest={guest})", file=sys.stderr)
             ts = AE.translate(text, guest)          # 任一块失败会抛错,不会写半截稿
             ins = AE.insights(text)
