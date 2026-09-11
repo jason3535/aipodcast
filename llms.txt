@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 283 位人物 / 632 期访谈
+规模: 284 位人物 / 634 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -90,6 +90,7 @@
 - [Thariq Shihipar / 塔里克·希希帕尔](https://aipodcast.jasonlin.tech/pp/thariq/): Engineer, Claude Code at Anthropic — 2 期
 - [Ramin Hasani / 拉明·哈萨尼](https://aipodcast.jasonlin.tech/pp/hasani/): Co-founder & CEO, Liquid AI; liquid neural networks (ex-MIT) — 2 期
 - [Dan Klein / 丹·克莱因](https://aipodcast.jasonlin.tech/pp/danklein/): Professor of Computer Science, UC Berkeley; Co-founder & CTO, Scaled Cognition — 2 期
+- [Cat Wu / 凯特·吴](https://aipodcast.jasonlin.tech/pp/catwu/): Product, Claude Code · Anthropic — 2 期
 - [Dan Biderman / 丹·比德曼](https://aipodcast.jasonlin.tech/pp/danbiderman/): Co-founder, Engram; memory & continual learning — 2 期
 - [Ethan Mollick / 伊桑·莫利克](https://aipodcast.jasonlin.tech/pp/ethanmollick/): Professor, Wharton School — 2 期
 - [Andrew Ambrosino / 安德鲁·安布罗西诺](https://aipodcast.jasonlin.tech/pp/ajambrosino/): Codex App Lead, OpenAI — 2 期
@@ -112,6 +113,7 @@
 - [Nad Chishtie / 纳德·奇什蒂](https://aipodcast.jasonlin.tech/pp/nadchishtie/): Founding Designer & Head of Design, Lovable — 2 期
 - [Michael Truell / 迈克尔·特鲁埃尔](https://aipodcast.jasonlin.tech/pp/truell/): Co-founder & CEO, Cursor — 2 期
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 2 期
+- [Ed Bayes / 埃德·贝斯](https://aipodcast.jasonlin.tech/pp/edbayes/): Design Lead, OpenAI — 1 期
 - [Roman Ugarte / 罗曼·乌加特](https://aipodcast.jasonlin.tech/pp/romanugarte/): Product Lead, Grok Bot (xAI) — 1 期
 - [Quinn Slack / Quinn Slack](https://aipodcast.jasonlin.tech/pp/quinnslack/): CEO of Amp — 1 期
 - [Jeffrey Morgan / 杰弗里·摩根](https://aipodcast.jasonlin.tech/pp/jeffreymorgan/): Co-founder and CEO, Ollama — 1 期
@@ -206,7 +208,6 @@
 - [Rafa Conde / 拉法·孔德](https://aipodcast.jasonlin.tech/pp/rafaconde/): Product Designer & Visual Design Specialist — 1 期
 - [Beth Barnes / 贝丝·巴恩斯](https://aipodcast.jasonlin.tech/pp/bethbarnes/): Founder & CEO, METR — 1 期
 - [Polly D'Arcy / 波莉·达西](https://aipodcast.jasonlin.tech/pp/pollydarcy/): VP of Design, Wealthsimple — 1 期
-- [Cat Wu / 凯特·吴](https://aipodcast.jasonlin.tech/pp/catwu/): Product, Claude Code · Anthropic — 1 期
 - [Shawn Wang / 王绍恩](https://aipodcast.jasonlin.tech/pp/shawnwang/): AI Engineer, Podcaster, Operator at Cognition — 1 期
 - [Brandon Jacoby / 布兰登·雅各比](https://aipodcast.jasonlin.tech/pp/brandonjacoby/): Designer — 1 期
 - [Aidan Gomez / 艾丹·戈麦斯](https://aipodcast.jasonlin.tech/pp/gomez/): Co-founder & CEO, Cohere — 1 期
@@ -292,6 +293,7 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
+- [Designing AI Experiences: Building for Six Months Out](https://aipodcast.jasonlin.tech/e/edbayes-diveclub-2026/) — Ed Bayes, Dive Club, 2026-09-09
 - [Mark Zuckerberg on Open Source AI and the Muse Agent](https://aipodcast.jasonlin.tech/e/zuckerberg-sourcesp-2026/) — Mark Zuckerberg, Sources Podcast, 2026-09-08
 - [AI 2040: Plan A — A Slower, Safer Path to Superintelligence](https://aipodcast.jasonlin.tech/e/kokotajlo-machinel-2026/) — Daniel Kokotajlo, Machine Learning Street Talk, 2026-09-08
 - [Building Grok Bot: How a Small Team Created the Hottest AI Product](https://aipodcast.jasonlin.tech/e/romanugarte-lennyspo-2026/) — Roman Ugarte, Lenny’s Podcast, 2026-09-08
@@ -331,7 +333,6 @@
 - [Building Physical AI for Industry](https://aipodcast.jasonlin.tech/e/traviskalanick-davidsen-2026/) — Travis Kalanick, David Senra, 2026-08-16
 - [EXO: Fully Recursive Self-Improving Agents](https://aipodcast.jasonlin.tech/e/alexkrentsel-latentsp-2026/) — Alex Krentsel, Latent Space, 2026-08-15
 - [From Bits to Atoms: The Next Industrial Revolution](https://aipodcast.jasonlin.tech/e/traviskalanick-thea16zp-2026b/) — Travis Kalanick, The a16z Podcast, 2026-08-14
-- [Designing the Macintosh: Susan Kare on Icons and Fonts](https://aipodcast.jasonlin.tech/e/susankare-ycombina-2026/) — Susan Kare, Y Combinator, 2026-08-14
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
