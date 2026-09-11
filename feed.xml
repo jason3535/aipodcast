@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Thu, 10 Sep 2026 01:37:55 -0000</lastBuildDate>
+  <lastBuildDate>Thu, 10 Sep 2026 16:18:42 -0000</lastBuildDate>
+  <item>
+    <title>打造 Grok Bot：小团队如何创造最热 AI 产品 — Lenny’s Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/romanugarte-lennyspo-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/romanugarte-lennyspo-2026/</guid>
+    <pubDate>Thu, 10 Sep 2026 16:18:42 -0000</pubDate>
+    <description>Grok Bot 产品负责人 Roman Ugarte 分享一个小型隔离团队如何在短短一个月内打造出全球最热门的 AI 产品。  要点: Grok Bot 小团队打造了拥有独立云电脑的 AI 队友，而非共享用户机器。 / 手动引导数百名用户是成功的核心，而非干扰。 / 能 100% 完成工作的 AI 与只能做到 90% 的 AI 有本质区别。</description>
+  </item>
   <item>
     <title>AI 2040：A 计划——通往超级智能的更慢、更安全之路 — Machine Learning Street Talk</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/kokotajlo-machinel-2026</link>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/animaanandkumar-latentsp-2026/</guid>
     <pubDate>Thu, 27 Aug 2026 01:45:08 -0000</pubDate>
     <description>Anima Anandkumar 讨论了神经算子如何，尽管最初受到气象学家的质疑，却实现了与传统模型相当的准确性，但速度快了数万倍，从而改变了 AI 在物理建模中的作用。  要点: 神经算子学习函数空间之间的映射，实现与分辨率无关的物理系统预测。 / AI 天气模型在精度上媲美传统模型，但速度快数万倍，使预报民主化。 / 融入球面几何等物理结构是稳定长期气候建模的关键。</description>
-  </item>
-  <item>
-    <title>第三代 AI 实验室：自动化 AI 研究 — MTS</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/tworek-mts-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/tworek-mts-2026/</guid>
-    <pubDate>Wed, 26 Aug 2026 22:16:38 -0000</pubDate>
-    <description>Jerry Tworek 讨论 Core Automation 的使命，即构建全球最自动化的 AI 实验室，利用 AI 代理加速研究和实验。  要点: 人类研究员在 AI 研究中至少还有两年的重要性。 / 前沿研究将转向使用强大智能体的小团队。 / 自动化应首先针对大公司，因其官僚主义和信息传递困难。</description>
   </item>
 </channel>
 </rss>
