@@ -41,12 +41,15 @@ h2,footer{border-top-color:#2c2c2e}.ep-list a,.p-list a,.tr h3{color:#f5f5f7}.ct
 <p style="margin-top:26px"><a class="cta" href="https://aipodcast.jasonlin.tech/#/episode/abbeel-thetwiml-2021">互动版：逐字朗读 + 针对本期提问 →</a></p>
 <script>(function(){var q=location.search.replace(/^\?/,'');var h="https://aipodcast.jasonlin.tech/#/episode/abbeel-thetwiml-2021"+(q?'?'+q:'');
 document.querySelectorAll('a.cta').forEach(function(a){a.href=h});
-/* 带 ?at/hl 的是「引文分享」链接:分享出去的是某一句话,落在这张静态页上还得再点一次
-   「打开互动全文版」才看得到定位高亮。真人直接送到互动版;爬虫留在静态页——
-   OG 卡预览和全文索引都指着它。用 replace 不进历史,返回键回到聊天窗而不是卡在这页。
-   放在埋点脚本之前,跳走的这一次不记 view,由 SPA 自己记,口径不重复。*/
+/* 这张静态页的职责是给爬虫看:OG 卡预览、全文索引、结构化数据都指着它。
+   真人一律送到互动版 —— 不管是引文分享(带 ?at/hl,要定位高亮)还是整期分享(裸链),
+   落在这张只读页上都得再点一次「打开互动全文版」才有朗读/问答/双语切换。
+   2026-09-11 先只放行了带 at/hl 的,裸链仍卡在中转页,次日又被发现,这里放开成全部真人。
+   用 replace 不进历史,返回键回到聊天窗而不是卡在中转页。
+   放在埋点脚本之前,跳走的这一次不记 view,由 SPA 自己记,UV 口径不重复。
+   要看静态页本身(排版/OG/SEO)加 ?static=1 绕过跳转。*/
 var UA=navigator.userAgent||'';
-if(/[?&](at|hl)=/.test(location.search)&&!/bot|crawl|spider|slurp|headless|lighthouse|bingpreview|facebookexternalhit/i.test(UA))location.replace(h);})()</script>
+if(!/[?&]static=1/.test(location.search)&&!/bot|crawl|spider|slurp|headless|lighthouse|bingpreview|facebookexternalhit/i.test(UA))location.replace(h);})()</script>
 <footer>© AI Podcast · <a href="https://aipodcast.jasonlin.tech/">aipodcast.jasonlin.tech</a> — 双语播客全文阅读。转录/翻译仅供学习评论，版权归原播客与权利人，应要求即下架(linzheng3535@gmail.com)。</footer>
 </div><script>function shareThis(b){var u=document.querySelector('link[rel=canonical]').href,t=document.title,d=(document.querySelector('meta[name=description]')||{}).content||'';
 if(navigator.share){navigator.share({title:t,text:d,url:u}).catch(function(){});return;}
