@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 284 位人物 / 637 期访谈
+规模: 284 位人物 / 639 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -73,6 +73,7 @@
 - [Justin Johnson / 贾斯汀·约翰逊](https://aipodcast.jasonlin.tech/pp/justinjohnson/): Co-founder, World Labs — 2 期
 - [Ryan Greenblatt / 瑞安·格林布拉特](https://aipodcast.jasonlin.tech/pp/ryangreenblatt/): Chief Scientist, Redwood Research — 2 期
 - [Sergey Levine / 谢尔盖·莱文](https://aipodcast.jasonlin.tech/pp/slevine/): Professor, UC Berkeley; co-founder, Physical Intelligence — 2 期
+- [Michael Kratsios / 迈克尔·克拉齐奥斯](https://aipodcast.jasonlin.tech/pp/michaelkratsios/): Director, White House Office of Science and Technology Policy — 2 期
 - [Max Hodak / 马克斯·霍达克](https://aipodcast.jasonlin.tech/pp/maxhodak/): CEO of Science — 2 期
 - [Ian Silber / 伊恩·西尔伯](https://aipodcast.jasonlin.tech/pp/iansilber/): Head of Product Design, OpenAI — 2 期
 - [Chelsea Finn / 切尔西·芬恩](https://aipodcast.jasonlin.tech/pp/finn/): Assistant Professor, Stanford; co-founder, Physical Intelligence — 2 期
@@ -92,6 +93,7 @@
 - [Ramin Hasani / 拉明·哈萨尼](https://aipodcast.jasonlin.tech/pp/hasani/): Co-founder & CEO, Liquid AI; liquid neural networks (ex-MIT) — 2 期
 - [Dan Klein / 丹·克莱因](https://aipodcast.jasonlin.tech/pp/danklein/): Professor of Computer Science, UC Berkeley; Co-founder & CTO, Scaled Cognition — 2 期
 - [Cat Wu / 凯特·吴](https://aipodcast.jasonlin.tech/pp/catwu/): Product, Claude Code · Anthropic — 2 期
+- [Claire Vo / 克莱尔·沃](https://aipodcast.jasonlin.tech/pp/clairevo/): Founder & CEO of ChatPRD; host of the "How I AI" podcast — 2 期
 - [Dan Biderman / 丹·比德曼](https://aipodcast.jasonlin.tech/pp/danbiderman/): Co-founder, Engram; memory & continual learning — 2 期
 - [Ethan Mollick / 伊桑·莫利克](https://aipodcast.jasonlin.tech/pp/ethanmollick/): Professor, Wharton School — 2 期
 - [Andrew Ambrosino / 安德鲁·安布罗西诺](https://aipodcast.jasonlin.tech/pp/ajambrosino/): Codex App Lead, OpenAI — 2 期
@@ -127,7 +129,6 @@
 - [John Bai / John Bai](https://aipodcast.jasonlin.tech/pp/johnbai/): Design Lead for Grok Bot, Cursor — 1 期
 - [Parag Agrawal / 帕拉格·阿格拉瓦尔](https://aipodcast.jasonlin.tech/pp/paragagrawal/): Founder & CEO, Parallel Web Systems — 1 期
 - [Patrick Morgan / 帕特里克·摩根](https://aipodcast.jasonlin.tech/pp/patrickmorgan/): Design Engineer, Sublime Security — 1 期
-- [Michael Kratsios / 迈克尔·克拉齐奥斯](https://aipodcast.jasonlin.tech/pp/michaelkratsios/): Director, White House Office of Science and Technology Policy — 1 期
 - [Alex Krentsel / 亚历克斯·克伦塞尔](https://aipodcast.jasonlin.tech/pp/alexkrentsel/): Founder of Exo — 1 期
 - [Susan Kare / 苏珊·凯尔](https://aipodcast.jasonlin.tech/pp/susankare/): Icon Designer, Original Mac Team — 1 期
 - [Harrison Chase / 哈里森·蔡斯](https://aipodcast.jasonlin.tech/pp/harrisonchase/): Co-founder & CEO, LangChain — 1 期
@@ -217,7 +218,6 @@
 - [Liam Fedus / 利亚姆·费杜斯](https://aipodcast.jasonlin.tech/pp/fedus/): Co-founder, Periodic Labs (ex-OpenAI) — 1 期
 - [Marvin Schwaibold / 马文·施瓦博尔德](https://aipodcast.jasonlin.tech/pp/marvinschwaibold/): Product design leader at Shopify — 1 期
 - [Simon Willison / 西蒙·威利森](https://aipodcast.jasonlin.tech/pp/simonwillison/): Independent software developer and AI blogger (simonwillison.net); creator of Datasette and the LLM CLI — 1 期
-- [Claire Vo / 克莱尔·沃](https://aipodcast.jasonlin.tech/pp/clairevo/): Founder & CEO of ChatPRD; host of the "How I AI" podcast — 1 期
 - [Stefano Ermon / 斯特凡诺·埃尔蒙](https://aipodcast.jasonlin.tech/pp/ermon/): Associate Professor of Computer Science, Stanford University; Co-founder & CEO of Inception Labs — 1 期
 - [Flora Guo / 弗洛拉·郭](https://aipodcast.jasonlin.tech/pp/floraguo/): AI-Native Product Designer — 1 期
 - [Kris Puckett / 克里斯·帕克特](https://aipodcast.jasonlin.tech/pp/krispuckett/): Design Manager, Stripe — 1 期
@@ -324,6 +324,7 @@
 - [Designing Grok Bot: From Cursor to Consumer](https://aipodcast.jasonlin.tech/e/johnbai-diveclub-2026/) — John Bai, Dive Club, 2026-08-25
 - [The Future of Search: Agentic Web and Parallel's Vision](https://aipodcast.jasonlin.tech/e/paragagrawal-training-2026/) — Parag Agrawal, Training Data, 2026-08-25
 - [From GPT to Robots: The Scaling Journey of Physical AI](https://aipodcast.jasonlin.tech/e/slevine-ryanpete-2026/) — Sergey Levine, Ryan Peterman, 2026-08-24
+- [Is the White House Anti-Science? A Conversation with OSTP Director Michael Kratsios](https://aipodcast.jasonlin.tech/e/michaelkratsios-allinpod-2026/) — Michael Kratsios, All-In Podcast, 2026-08-24
 - [Sam Altman on Building OpenAI and Betting on the Impossible](https://aipodcast.jasonlin.tech/e/altman-davidsen-2026/) — Sam Altman, David Senra, 2026-08-23
 - [Simulating 8 Billion Lives: AI for Wicked Problems](https://aipodcast.jasonlin.tech/e/joonpark-latentsp-2026/) — Joon Sung Park, Latent Space, 2026-08-21
 - [Restoring Vision with Retinal Implants: A Conversation with Max Hodak](https://aipodcast.jasonlin.tech/e/maxhodak-nopriors-2026/) — Max Hodak, No Priors, 2026-08-20
@@ -332,7 +333,6 @@
 - [AI Policy at the White House: A Conversation with Michael Kratsios](https://aipodcast.jasonlin.tech/e/michaelkratsios-ycombina-2026/) — Michael Kratsios, Y Combinator, 2026-08-18
 - [Jeff Dean and Dan Boneh: AI's New Frontier](https://aipodcast.jasonlin.tech/e/jeffdean-asianame-2026/) — Jeff Dean, Asian American Scholar Forum, 2026-08-18
 - [AI Spend Plateaus as Agents Become Coworkers](https://aipodcast.jasonlin.tech/e/dylanpatel-semianal-2026/) — Dylan Patel, SemiAnalysis, 2026-08-17
-- [The Future of Product Design with OpenAI's Head of Design](https://aipodcast.jasonlin.tech/e/iansilber-lennyspo-2026/) — Ian Silber, Lenny’s Podcast, 2026-08-16
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
