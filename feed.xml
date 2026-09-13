@@ -6,7 +6,21 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Thu, 10 Sep 2026 16:18:42 -0000</lastBuildDate>
+  <lastBuildDate>Fri, 11 Sep 2026 01:37:50 -0000</lastBuildDate>
+  <item>
+    <title>设计 AI 体验：为六个月后的未来而构建 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/edbayes-diveclub-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/edbayes-diveclub-2026/</guid>
+    <pubDate>Fri, 11 Sep 2026 01:37:50 -0000</pubDate>
+    <description>OpenAI 设计负责人 Ed Bayes 畅谈面向未来模型能力的原型设计，以及智能体优先界面如何成为新范式。  要点: 为六个月后的模型能力做设计，而不是为今天。 / 以黄金提示词驱动的评估式设计，正在成为新的设计科学。 / 聊天是持久的通用界面，而不只是过渡形态。</description>
+  </item>
+  <item>
+    <title>Claude Code 与 Fable：编程智能体如何重塑软件工程 — AI Engineer</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/catwu-aiengine-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/catwu-aiengine-2026/</guid>
+    <pubDate>Fri, 11 Sep 2026 01:37:50 -0000</pubDate>
+    <description>Anthropic 的 Thariq Shihipar 与 Cat Wu 探讨 Claude Code 与 Fable 如何改变日常工程实践，从逐条权限确认到一句话生成功能。  要点: 编码智能体让工程师从执行转向产品品味与商业判断。 / Claude Tag 承担了 Anthropic 65% 的产品 PR，支持多人协作且主动推进。 / 前沿模型的系统提示词缩减了 80%：约束更少，上下文更多。</description>
+  </item>
   <item>
     <title>打造 Grok Bot：小团队如何创造最热 AI 产品 — Lenny’s Podcast</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/romanugarte-lennyspo-2026</link>
@@ -202,20 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jeffdean-asianame-2026/</guid>
     <pubDate>Fri, 28 Aug 2026 01:37:24 -0000</pubDate>
     <description>Jeff Dean 与 Dan Boneh 探讨 AI 的演进与未来，从专家混合到斯坦福的新篇章。  要点: 扩展深度学习模型持续提升 AI 各领域表现，并统一了不同学科。 / 从头训练的多模态模型优于后期整合的模型。 / AI 能自动化科学方法，加速发现并提升实验质量。</description>
-  </item>
-  <item>
-    <title>从怀疑到拥抱：DHH 谈 AI 革命 — Lex Fridman 播客</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/dhh-lexfridm-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dhh-lexfridm-2026/</guid>
-    <pubDate>Thu, 27 Aug 2026 01:45:08 -0000</pubDate>
-    <description>DHH 讲述他从 AI 怀疑者到热情拥抱者的转变，称代理工程领域的飞速进展是千载难逢的时代变革。  要点: DHH 的 Linux 发行版中 100% 的代码由 AI 代理编写，标志着编程的根本性转变。 / 绕过管理层，直接与 AI 代理交互是提升生产力的关键。 / AI 代理擅长创造性解决问题，并能产生新颖的想法，而不仅仅是复述已有的内容。</description>
-  </item>
-  <item>
-    <title>AI 用于科学：神经算子与天气建模 — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/animaanandkumar-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/animaanandkumar-latentsp-2026/</guid>
-    <pubDate>Thu, 27 Aug 2026 01:45:08 -0000</pubDate>
-    <description>Anima Anandkumar 讨论了神经算子如何，尽管最初受到气象学家的质疑，却实现了与传统模型相当的准确性，但速度快了数万倍，从而改变了 AI 在物理建模中的作用。  要点: 神经算子学习函数空间之间的映射，实现与分辨率无关的物理系统预测。 / AI 天气模型在精度上媲美传统模型，但速度快数万倍，使预报民主化。 / 融入球面几何等物理结构是稳定长期气候建模的关键。</description>
   </item>
 </channel>
 </rss>
