@@ -19,6 +19,9 @@ VAR = r"(?:cloud|claw|clawed|cloth|clock|clod|klaude|klaud|glaude|cla)"
 # 边界不用 \b:Python 的 \b 把 CJK 当词字符,「与Whimo基础模型」这类中文紧贴场景会漏
 # (2026-08-10 实测漏网)。改用「前后不是拉丁字母」的环视。
 BL, BR = r"(?<![A-Za-z])", r"(?![A-Za-z])"
+# Grock 分流用:命中这些词说明在聊推理芯片,那个 Grock 指的是 Groq 而不是 xAI 的 Grok。
+_CHIPCTX = re.compile(r"Cerebr|LPU|chip|芯片|wafer|NVLink|推理芯片", re.I)
+
 RULES = [
     (re.compile(BL+r"clockcode"+BR, re.I), "Claude Code"),
     (re.compile(BL+rf"{VAR}\s?(codes)"+BR, re.I), "Claude Codes"),
@@ -30,6 +33,24 @@ RULES = [
     (re.compile(BL+rf"{VAR}\s?(sonnet)"+BR, re.I), "Claude Sonnet"),
     (re.compile(BL+rf"{VAR}\s?(haiku)"+BR, re.I), "Claude Haiku"),
     (re.compile(BL+r"cloud for chrome"+BR, re.I), "Claude for Chrome"),
+    # ---- Grok / Groq / Cerebras(2026-09-14 用户报) ----
+    # ⚠️ Grok(xAI 的模型)与 Groq(做 LPU 的推理芯片公司)是**两家**,自动字幕都听成 "Grock",
+    # 一律替换必然改错一半。全站扫出 54 处 Grock:50 处指 xAI,4 处指芯片公司
+    # (Greg Brockman 聊「Cerebras 或 Groq 这些新玩家」、Sean Lie 说「成千上万个 Groq LPU」)。
+    # 所以 bare Grock 用函数式替换,看前后 160 字符有没有芯片语境词再决定。
+    # "Grok Bot" 是准确写法;自动字幕把它听成 Grockpot / Grockbot,这两条必须排在 bare 规则前。
+    (re.compile(BL+r"Grockpots?"+BR), "Grok Bot"),
+    (re.compile(BL+r"Gro[ck]{1,2}kbots"+BR, re.I), "Grok Bots"),
+    (re.compile(BL+r"Gro[ck]{1,2}kbot"+BR, re.I), "Grok Bot"),
+    (re.compile(BL+r"Grock模型"), "Grok 模型"),
+    (re.compile(BL+r"grock"+BR, re.I),
+     lambda m: "Groq" if _CHIPCTX.search(m.string[max(0, m.start()-160):m.start()+160]) else "Grok"),
+    # 格洛克 是手枪 Glock 的标准译名,用在 xAI 的模型上会让人看岔(全站 4 处,都在
+    # elon-thejoero-2025 的标题和导语里)。站上统一用英文 Grok,不做音译。
+    (re.compile(r"格洛克"), "Grok"),
+    # Cerebras 同类误听:Cerebrus 22 处 + Cerebra 2 处(vs 正确写法 219 处)。
+    (re.compile(BL+r"Cerebrus"+BR, re.I), "Cerebras"),
+    (re.compile(BL+r"Cerebra"+r"(?![A-Za-z])"), "Cerebras"),
     # ---- 其他品牌误听(2026-08-10 起) ----
     # Waymo → 自动字幕常听成 Whimo(全站曾攒 58 处,散布在 6 期);"way mo" 只匹配全小写,
     # 防误伤 "the way Mo Gawdat…" 这类句中人名(Mo 大写)与 "way more"(\b 挡住)。

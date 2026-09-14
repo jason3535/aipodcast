@@ -3,12 +3,12 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 284 位人物 / 639 期访谈
+规模: 284 位人物 / 640 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
 - [Sam Altman / 萨姆·奥尔特曼](https://aipodcast.jasonlin.tech/pp/altman/): CEO, OpenAI — 21 期
-- [Dario Amodei / 达里奥·阿莫迪](https://aipodcast.jasonlin.tech/pp/dario/): CEO, Anthropic — 16 期
+- [Dario Amodei / 达里奥·阿莫迪](https://aipodcast.jasonlin.tech/pp/dario/): CEO, Anthropic — 17 期
 - [Elon Musk / 埃隆·马斯克](https://aipodcast.jasonlin.tech/pp/elon/): Founder, xAI — 15 期
 - [Naval Ravikant / 纳瓦尔·拉维坎特](https://aipodcast.jasonlin.tech/pp/naval/): Co-founder, AngelList; angel investor & philosopher — 14 期
 - [Jensen Huang / 黄仁勋](https://aipodcast.jasonlin.tech/pp/jensen/): Founder & CEO, NVIDIA — 12 期
@@ -293,6 +293,7 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
+- [Dario Amodei on AI's Existential Risk: A Warning Sign, Not a Five-Alarm Fire](https://aipodcast.jasonlin.tech/e/dario-cbssunda-2026/) — Dario Amodei, CBS Sunday Morning, 2026-09-13
 - [Sam Altman on AI Safety and the Road to AGI](https://aipodcast.jasonlin.tech/e/altman-fortunem-2026/) — Sam Altman, Fortune Magazine, 2026-09-12
 - [Designing at Anthropic: Joel Lewenstein on Navigating the AI Shift](https://aipodcast.jasonlin.tech/e/joellewenstein-southpar-2026/) — Joel Lewenstein, South Park Commons, 2026-09-10
 - [Designing AI Experiences: Building for Six Months Out](https://aipodcast.jasonlin.tech/e/edbayes-diveclub-2026/) — Ed Bayes, Dive Club, 2026-09-09
@@ -332,7 +333,6 @@
 - [Rich Sutton: The Field Is Weird, Not Me](https://aipodcast.jasonlin.tech/e/sutton-training-2026/) — Richard Sutton, Training Data, 2026-08-18
 - [AI Policy at the White House: A Conversation with Michael Kratsios](https://aipodcast.jasonlin.tech/e/michaelkratsios-ycombina-2026/) — Michael Kratsios, Y Combinator, 2026-08-18
 - [Jeff Dean and Dan Boneh: AI's New Frontier](https://aipodcast.jasonlin.tech/e/jeffdean-asianame-2026/) — Jeff Dean, Asian American Scholar Forum, 2026-08-18
-- [AI Spend Plateaus as Agents Become Coworkers](https://aipodcast.jasonlin.tech/e/dylanpatel-semianal-2026/) — Dylan Patel, SemiAnalysis, 2026-08-17
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
