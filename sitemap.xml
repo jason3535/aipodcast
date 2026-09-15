@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-09-14</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-09-15</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/elon/</loc><lastmod>2026-09-15</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/dario/</loc><lastmod>2026-09-14</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/altman/</loc><lastmod>2026-09-13</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/joellewenstein/</loc><lastmod>2026-09-13</lastmod></url>
@@ -49,7 +50,6 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/kylezantos/</loc><lastmod>2026-08-12</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/mattmcpartland/</loc><lastmod>2026-08-12</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/gabepereyra/</loc><lastmod>2026-08-12</lastmod></url>
-  <url><loc>https://aipodcast.jasonlin.tech/pp/elon/</loc><lastmod>2026-08-13</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/lipbutan/</loc><lastmod>2026-08-16</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/jasonyuan/</loc><lastmod>2026-08-12</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/steinberger/</loc><lastmod>2026-08-12</lastmod></url>
@@ -285,6 +285,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/hugobarra/</loc><lastmod>2026-08-14</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/albertgu/</loc><lastmod>2026-06-27</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/abbeel/</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/elon-allinpod-2026/</loc><lastmod>2026-09-15</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/dario-cbssunda-2026/</loc><lastmod>2026-09-14</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/altman-fortunem-2026/</loc><lastmod>2026-09-13</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/joellewenstein-southpar-2026/</loc><lastmod>2026-09-13</lastmod></url>
