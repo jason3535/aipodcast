@@ -32,5 +32,7 @@
   "Software 2.0": "软件 2.0",
   "ImageNet": "ImageNet",
   "AlphaFold": "AlphaFold",
-  "AlphaGo": "AlphaGo"
+  "AlphaGo": "AlphaGo",
+  "dogfooding": "吃自己的狗粮",
+  "dogfood": "吃自己的狗粮"
 }

@@ -264,6 +264,13 @@ CHANNELS = [
     ("The TWIML AI Podcast", "https://www.youtube.com/@twimlai/videos", False),
     ("20VC", "https://www.youtube.com/@20VC/videos", False),
 ]
+# 电视台的深度专访通常 20-28 分钟(CBS Sunday Morning 的 Dario 那期 24 分钟),被 30 分钟的
+# 通用下限一刀切掉;新闻切片才是要挡的东西,而这些台的 20 分钟以上就是完整访谈了。
+# 2026-09-15:这几个台放宽到 ≥20 分钟,其余频道下限不变。
+TV_LONGFORM = {"CBS Sunday Morning", "Face the Nation", "60 Minutes", "CBS Mornings", "Bloomberg Originals", "The Circuit"}
+def min_dur(channel, default):
+    return 1200 if (channel or "").strip() in TV_LONGFORM else default
+
 FIELD_KEYS = ["deep-learning", "nlp", "product", "rl", "safety", "robotics", "bio"]
 
 # ---- 集级领域标签:按「这一期讲什么」分类,不继承人物标签 ----
@@ -420,7 +427,7 @@ def discover_channels(people, vids, days, per_channel_cap=2):
         kept = 0
         for e in entries:
             vid = e.get("id"); dur = e.get("duration") or 0
-            if not vid or vid in exist or (dur and dur < 1500): continue
+            if not vid or vid in exist or (dur and dur < min_dur(pod_en, 1500)): continue
             m = meta(vid)
             if not m or not m["cap"] or m["date"] < floor: continue
             if m.get("ch") in REPOST_CHANNELS:
@@ -482,7 +489,7 @@ def discover(people, vids, days, per_person_cap=1):
         cands = []
         for e in flat(f"{name} AI podcast interview"):
             vid = e.get("id"); dur = e.get("duration") or 0; t = e.get("title") or ""
-            if not vid or vid in exist or dur < 1800: continue
+            if not vid or vid in exist or dur < min_dur(e.get("channel") or e.get("uploader"), 1800): continue
             if key.lower() not in t.lower(): continue
             cands.append(vid)
         picks = []

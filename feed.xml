@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Mon, 14 Sep 2026 05:28:31 -0000</lastBuildDate>
+  <lastBuildDate>Tue, 15 Sep 2026 06:15:01 -0000</lastBuildDate>
+  <item>
+    <title>马斯克与肖特韦尔谈 AI 风险、星舰、Terafab 与 SpaceX/Tesla 合并 — All-In Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/elon-allinpod-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/elon-allinpod-2026/</guid>
+    <pubDate>Tue, 15 Sep 2026 06:15:01 -0000</pubDate>
+    <description>All-In 峰会上，马斯克与 SpaceX 总裁格温·肖特韦尔畅谈 AI 风险与同行评审、星舰与火星时间表、Terafab 芯片计划，以及 SpaceX 与 Tesla 该不该合并。  要点: 星舰完全可复用是延续地球外生命的关键突破。 / 轨道数据中心提供免费冷却、太阳能和无限空间。 / AI 公司间的同行评审是最实际的安全措施。</description>
+  </item>
   <item>
     <title>达里奥·阿莫代伊谈 AI 生存风险：是警告信号，而非五级火警 — CBS 周日晨间</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/dario-cbssunda-2026</link>
@@ -90,6 +97,13 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/quinnslack-latentsp-2026/</guid>
     <pubDate>Wed, 09 Sep 2026 13:49:17 -0000</pubDate>
     <description>AMP 团队讨论远程工作文化及向基于云的 orbs 开发转变，主张本地开发已过时。  要点: 本地开发已死；云端代理支持并行、安全且更快的开发流程。 / 在小型信任团队中，代码审查已过时；代理加速迭代并提升质量。 / 拥有代理的小型授权团队能超越大型组织并实现盈利。</description>
+  </item>
+  <item>
+    <title>OpenAI 的 Astra 模型更难监控：Thomas Larsen 与 Daniel Kokotajlo 谈暂停 AI — MTS</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/kokotajlo-mts-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/kokotajlo-mts-2026/</guid>
+    <pubDate>Tue, 08 Sep 2026 08:50:53 -0000</pubDate>
+    <description>AI Futures Project 的 Thomas Larsen 与 Daniel Kokotajlo 讨论为何 OpenAI 的 Astra 模型更难监控，以及暂停超级智能的可行路径。  要点: AI 2027/2040 A 计划：先加速后暂停，以管理 AI 风险。 / 随着递归深度等新架构的出现，思维链可监控性正在下降。 / 最佳暂停时机是在 AI 即将失控的边缘，而非现在。</description>
   </item>
   <item>
     <title>OpenAI 的格雷格·布罗克曼谈领导层变动与向每家企业扩展 — 时代周刊</title>
@@ -202,20 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/andrewng-siliconv-2026/</guid>
     <pubDate>Wed, 02 Sep 2026 01:37:45 -0000</pubDate>
     <description>吴恩达驳斥 AI 恐慌炒作，解析真实就业影响，并为应届毕业生提供建议。  要点: AI 是福祉而非生存威胁；危言耸听有利于既得利益者。 / AI 改变技能而非取代工作；人类的上下文和判断力仍至关重要。 / 学会用 AI 构建至关重要；认知卸载有害学习。</description>
-  </item>
-  <item>
-    <title>从加油站到 AI 先驱：布雷特·泰勒的旅程 — Worthy</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/brettaylor-worthy-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brettaylor-worthy-2026/</guid>
-    <pubDate>Wed, 02 Sep 2026 01:37:45 -0000</pubDate>
-    <description>布雷特·泰勒分享了他谦逊的起点，以及 AI 代理如何改变客户体验。  要点: AI 使专业知识民主化，为所有人提供个性化辅导和医疗建议。 / 负责任地迭代部署 AI，从现实错误中学习，是安全的关键。 / 从软件和客服等已知领域开始应用 AI，关注业务成果。</description>
-  </item>
-  <item>
-    <title>OpenAI 内部：Tara Seshan 谈产品、雄心与 AI 工作的未来 — Lenny 播客</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/taraseshan-lennyspo-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/taraseshan-lennyspo-2026/</guid>
-    <pubDate>Mon, 31 Aug 2026 01:37:04 -0000</pubDate>
-    <description>OpenAI 产品负责人 Tara Seshan 分享在前沿实验室工作的真实感受，为什么多产和实证比理论更重要，以及 AI 的第三个时代将如何围绕持久协作者展开。  要点: 未来的工作将更多是引导 AI 代理，而非亲力亲为；人类提供方向。 / 在快速发展的 AI 市场中，多产和实证胜过学术理论。 / AI 工具扩展个人能力，使雄心成为关键差异化因素。</description>
   </item>
 </channel>
 </rss>

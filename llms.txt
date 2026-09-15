@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 284 位人物 / 641 期访谈
+规模: 284 位人物 / 642 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -27,10 +27,10 @@
 - [Geoffrey Hinton / 杰弗里·辛顿](https://aipodcast.jasonlin.tech/pp/hinton/): Professor Emeritus, U of Toronto — 7 期
 - [Mustafa Suleyman / 穆斯塔法·苏莱曼](https://aipodcast.jasonlin.tech/pp/suleyman/): CEO, Microsoft AI — 7 期
 - [Nathan Lambert / 内森·兰伯特](https://aipodcast.jasonlin.tech/pp/lambert/): Research Scientist, Ai2 — 7 期
+- [Daniel Kokotajlo / 丹尼尔·科科塔伊洛](https://aipodcast.jasonlin.tech/pp/kokotajlo/): Author, AI 2027 · ex-OpenAI — 6 期
 - [Noam Brown / 诺姆·布朗](https://aipodcast.jasonlin.tech/pp/noambrown/): Research Scientist, OpenAI — 6 期
 - [Arthur Mensch / 阿瑟·门施](https://aipodcast.jasonlin.tech/pp/mensch/): Co-founder & CEO, Mistral AI — 6 期
 - [Andrej Karpathy / 安德烈·卡帕西](https://aipodcast.jasonlin.tech/pp/karpathy/): Founder, Eureka Labs — 6 期
-- [Daniel Kokotajlo / 丹尼尔·科科塔伊洛](https://aipodcast.jasonlin.tech/pp/kokotajlo/): Author, AI 2027 · ex-OpenAI — 5 期
 - [Dylan Patel / 迪伦·帕特尔](https://aipodcast.jasonlin.tech/pp/dylanpatel/): Founder & Chief Analyst, SemiAnalysis — 5 期
 - [Garry Tan / 陈嘉兴](https://aipodcast.jasonlin.tech/pp/garrytan/): President & CEO, Y Combinator — 5 期
 - [Andrew Feldman / 安德鲁·费尔德曼](https://aipodcast.jasonlin.tech/pp/feldman/): Co-founder & CEO, Cerebras Systems — 5 期
@@ -303,6 +303,7 @@
 - [AI 2040: Plan A — A Slower, Safer Path to Superintelligence](https://aipodcast.jasonlin.tech/e/kokotajlo-machinel-2026/) — Daniel Kokotajlo, Machine Learning Street Talk, 2026-09-08
 - [Building Grok Bot: How a Small Team Created the Hottest AI Product](https://aipodcast.jasonlin.tech/e/romanugarte-lennyspo-2026/) — Roman Ugarte, Lenny’s Podcast, 2026-09-08
 - [AMP's Remote-First Revolution: Why Local Development Is Dead](https://aipodcast.jasonlin.tech/e/quinnslack-latentsp-2026/) — Quinn Slack, Latent Space, 2026-09-07
+- [OpenAI's Astra Is Less Monitorable: Thomas Larsen & Daniel Kokotajlo on Pausing AI](https://aipodcast.jasonlin.tech/e/kokotajlo-mts-2026/) — Daniel Kokotajlo, MTS, 2026-09-07
 - [Accelerated Understanding: A Foundation Model for Physics](https://aipodcast.jasonlin.tech/e/animaanandkumar-latentsp-2026b/) — Anima Anandkumar, Latent Space, 2026-09-04
 - [The Resurgence of Open Source Model Customization](https://aipodcast.jasonlin.tech/e/jeffreymorgan-ycombina-2026/) — Jeffrey Morgan, Y Combinator, 2026-09-04
 - [Atlas: Spatial Intelligence Through New View Prediction](https://aipodcast.jasonlin.tech/e/feifei-thea16zp-2026b/) — Fei-Fei Li, The a16z Podcast, 2026-09-04
@@ -332,7 +333,6 @@
 - [Restoring Vision with Retinal Implants: A Conversation with Max Hodak](https://aipodcast.jasonlin.tech/e/maxhodak-nopriors-2026/) — Max Hodak, No Priors, 2026-08-20
 - [From Figma to Custom Prototyping: Patrick Morgan's Internal Tool Journey](https://aipodcast.jasonlin.tech/e/patrickmorgan-diveclub-2026/) — Patrick Morgan, Dive Club, 2026-08-18
 - [Rich Sutton: The Field Is Weird, Not Me](https://aipodcast.jasonlin.tech/e/sutton-training-2026/) — Richard Sutton, Training Data, 2026-08-18
-- [AI Policy at the White House: A Conversation with Michael Kratsios](https://aipodcast.jasonlin.tech/e/michaelkratsios-ycombina-2026/) — Michael Kratsios, Y Combinator, 2026-08-18
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml

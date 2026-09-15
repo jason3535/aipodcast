@@ -107,9 +107,9 @@ def main():
             tEn, tZh = e.get("tEn", ""), e.get("tZh", "")
             sEn, sZh = e.get("sEn", ""), e.get("sZh", "")
             if not (tEn and tZh and sEn and sZh):
-                m = AE.meta(text, guest)
-                tEn = tEn or m.get("tEn", ytitle[:60]); tZh = tZh or m.get("tZh", "")
-                sEn = sEn or m.get("sEn", ""); sZh = sZh or m.get("sZh", "")
+                m = AE.meta(text, guest, ytitle)
+                tEn = tEn or m["tEn"]; tZh = tZh or m["tZh"]
+                sEn = sEn or m["sEn"]; sZh = sZh or m["sZh"]
 
             EPDIR.mkdir(parents=True, exist_ok=True)
             json.dump({"id": eid, "pid": e["pid"], "podEn": e["pod"]["en"], "podZh": e["pod"]["zh"],

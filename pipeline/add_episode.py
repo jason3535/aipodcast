@@ -324,10 +324,37 @@ def insights(text):
     return call(ins_sys, "英文转录:\n" + text[:120000])  # mx 用默认 32000:推理模型下 7000 会被 reasoning 吃光
 
 
-def meta(text, guest):
-    m_sys = ("""你是 AI Podcast 编辑。基于访谈开头转录,产出元信息 JSON:
-{"tEn":"英文标题(精炼)","tZh":"中文标题","sEn":"英文一句话导语","sZh":"中文一句话导语"}。只输出 JSON。""")
-    return call(m_sys, "英文转录:\n" + text[:6000])
+def meta(text, guest, ytitle=""):
+    """自动标题/导语。2026-09-14/15 连出两种失败,这里一并堵上:
+    - dario-cbssunda-2026:模型多吐了一个 "type":"json_object" 键,四个字段全空,却照常写库上线
+      → 只取四个键、逐个校验非空,不合格重试一次,仍不行就抛错(转录已先落盘,不会白翻)。
+    - elon-allinpod-2026:只看转录前 6000 字符,开场是 Gwynne 在讲,标题写成「Gwynne Shotwell on…」
+      Elon 一字未提 → 把嘉宾名单与 YouTube 原标题喂给模型,多嘉宾时标题/导语必须覆盖每一位,
+      取样也改成开头 + 中段两截,并校验每位嘉宾的名字出现在 tEn 或 sEn 里。"""
+    gs = guest_labels(guest)
+    multi = len(gs) > 1
+    m_sys = (f"""你是 AI Podcast 编辑。基于访谈转录,产出元信息 JSON:
+{{"tEn":"英文标题(精炼)","tZh":"中文标题","sEn":"英文一句话导语","sZh":"中文一句话导语"}}。
+- 本期嘉宾:{"、".join(gs)}{f"(共 {len(gs)} 位,标题与导语必须同时点到每一位,不能只写其中一人)" if multi else ""}
+- YouTube 原标题:{ytitle or "(无)"} —— 主题以它为准;转录节选可能只是其中一人在讲的片段
+- 四个字段都不能为空;只输出这四个键,不要任何多余字段。只输出 JSON。""")
+    if multi and len(text) > 12000:
+        mid = len(text) // 2
+        sample = text[:5000] + "\n…(中略)…\n" + text[mid:mid + 4000]
+    else:
+        sample = text[:6000]
+    err = ""
+    for attempt in range(2):
+        r = call(m_sys, "英文转录:\n" + sample) or {}
+        m = {k: str(r.get(k) or "").strip() for k in ("tEn", "tZh", "sEn", "sZh")}
+        missing = [k for k, v in m.items() if not v]
+        hay = (m["tEn"] + " " + m["sEn"]).lower()
+        uncovered = [g for g in gs if multi and g.lower() not in hay]
+        if not missing and not uncovered:
+            return m
+        err = f"缺字段 {missing} / 未覆盖嘉宾 {uncovered}"
+        print(f"  自动标题/导语第 {attempt + 1} 次不合格:{err},重试", file=sys.stderr)
+    raise RuntimeError(f"自动标题/导语两次都不合格({err}),中止。转录已缓存,可用 --title-en/--title-zh/--sub-en/--sub-zh 手动给定后重跑")
 
 
 def load_episodes(html):
@@ -379,7 +406,14 @@ def main():
         try:
             c = json.load(open(cache, encoding="utf-8"))
             if c.get("ts") and c.get("insights"):
-                cached = c
+                # 缓存里的说话人标签必须覆盖本次要求的每一位嘉宾。2026-09-15 kokotajlo-mts-2026
+                # 用 --guest "Daniel,Thomas" 重收,直接复用了单嘉宾时代的缓存,多嘉宾提示词根本没跑。
+                have = {t.get("spk") for sec in c["ts"] for t in sec.get("turns", [])}
+                lack = [g for g in guest_labels(a.guest) if g not in have]
+                if lack:
+                    print(f"[2/5] 缓存 {cache.name} 缺说话人标签 {lack},弃用重翻", file=sys.stderr)
+                else:
+                    cached = c
         except Exception:
             pass
     if cached:
@@ -390,14 +424,14 @@ def main():
         ts = translate(text, a.guest, scripted=scripted)
         print(f"[3/5] 共识/反共识", file=sys.stderr)
         ins = insights(text)
+    json.dump({"ts": ts, "insights": ins}, open(TRANS / f"ep_{vid}.json", "w"), ensure_ascii=False)  # 先落盘:下面 meta 抛错也不丢翻译
+
     tEn, tZh, sEn, sZh = a.title_en, a.title_zh, a.sub_en, a.sub_zh
     if not (tEn and tZh and sEn and sZh):
         print(f"[3.5] 自动标题/导语", file=sys.stderr)
-        m = meta(text, a.guest)
-        tEn = tEn or m.get("tEn", ytitle[:60]); tZh = tZh or m.get("tZh", "")
-        sEn = sEn or m.get("sEn", ""); sZh = sZh or m.get("sZh", "")
-
-    json.dump({"ts": ts, "insights": ins}, open(TRANS / f"ep_{vid}.json", "w"), ensure_ascii=False)
+        m = meta(text, a.guest, ytitle)
+        tEn = tEn or m["tEn"]; tZh = tZh or m["tZh"]
+        sEn = sEn or m["sEn"]; sZh = sZh or m["sZh"]
 
     eid = f"{a.pid}-{re.sub(r'[^a-z0-9]+','',a.pod_en.lower())[:8]}-{(a.date or (ydate[:4] if ydate else ''))[:4]}"
     # 同人同播客同年会撞 id;撞了自动加后缀 b/c/d…,绝不静默替换旧集(2026-07 naval 曾因此丢过一期)
