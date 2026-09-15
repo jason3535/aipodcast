@@ -1,26 +1,18 @@
 [
- {
-  "vid": "zHaardIm2rE",
-  "id": "mosseri-throwing-2026",
-  "pid": "mosseri",
-  "pod": "Throwing Fits",
-  "reason": "选题不符:Throwing Fits 是男装/闲聊播客,整期 AI 密度极低,对白碎到 turn 中位 50 字符(全库最碎),不适合做阅读稿",
-  "removed": "2026-08-31"
- },
- {
-  "vid": "EsQ_bmXKA4A",
-  "id": "karpathy-techxops-2026",
-  "pid": "karpathy",
-  "pod": "TechXOps",
-  "reason": "来源是搬运号 TechXOps(8/19 重传),非原始出处;Stanford 讲座原视频未公开发布,日期不可考",
-  "removed": "2026-09-05"
- },
- {
-  "vid": "FnMzrSXw6EM",
-  "id": "kokotajlo-mts-2026",
-  "pid": "kokotajlo",
-  "pod": "MTS ",
-  "reason": "双嘉宾期(Thomas Larsen & Daniel Kokotajlo):Thomas 无独立说话人标签,其发言被并入 Daniel 名下,归错说话人",
-  "removed": "2026-09-09"
- }
+  {
+    "vid": "zHaardIm2rE",
+    "id": "mosseri-throwing-2026",
+    "pid": "mosseri",
+    "pod": "Throwing Fits",
+    "reason": "选题不符:Throwing Fits 是男装/闲聊播客,整期 AI 密度极低,对白碎到 turn 中位 50 字符(全库最碎),不适合做阅读稿",
+    "removed": "2026-08-31"
+  },
+  {
+    "vid": "EsQ_bmXKA4A",
+    "id": "karpathy-techxops-2026",
+    "pid": "karpathy",
+    "pod": "TechXOps",
+    "reason": "来源是搬运号 TechXOps(8/19 重传),非原始出处;Stanford 讲座原视频未公开发布,日期不可考",
+    "removed": "2026-09-05"
+  }
 ]
