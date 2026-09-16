@@ -58,6 +58,16 @@ def call(system, user, mx=32000, retries=3):
     raise RuntimeError(str(last)[:200])
 
 
+
+# yt-dlp 代理:默认走 Clash(7890),YTDLP_PROXY 可覆盖(设为空串 = 直连)。
+# 2026-09-16:字幕端点对代理出口 IP 返回 429(前一天 4 路并行拉了 639 期标题),直连却正常——
+# 出口 IP 不同,配额是分开算的。get_subs 在代理三次都拿不到时会自动再试一次直连。
+def _proxy_args(force_direct=False):
+    # 注意:不传 --proxy 并不是直连 —— yt-dlp 会读 HTTP_PROXY/ALL_PROXY 环境变量(本机 Clash),
+    # 结果还是走那个被 429 的出口。yt-dlp 的约定是 --proxy "" 才强制直连,所以这里空串也要传。
+    px = "" if force_direct else os.environ.get("YTDLP_PROXY", "http://127.0.0.1:7890")
+    return ["--proxy", px]
+
 def vid_of(url):
     m = re.search(r"(?:v=|youtu\.be/|/shorts/|/embed/)([\w-]{11})", url)
     return m.group(1) if m else url
@@ -67,7 +77,7 @@ def yt_meta(url):
     # YouTube 会对密集请求限流,-J 返回空/`null` 会让旧代码 d.get 崩溃。重试 + 兜底(非致命)。
     for a in range(3):
         try:
-            out = subprocess.run(["yt-dlp", "--proxy", "http://127.0.0.1:7890", "--skip-download", "--no-warnings", "-J", url],
+            out = subprocess.run(["yt-dlp", *_proxy_args(), "--skip-download", "--no-warnings", "-J", url],
                                  capture_output=True, text=True, timeout=90).stdout
             d = json.loads(out) if out.strip() else None
             if isinstance(d, dict):
@@ -88,9 +98,9 @@ def get_subs(url):
     # 只有 "en-en"(从英文机翻回英文)这种轨,--write-auto-subs --sub-lang en 一条都匹配不到 →
     # 拿到 0 字符直接判失败。两个开关一起给,yt-dlp 有人工就用人工(质量还更高),没有才退自动。
     global SUB_END_MIN
-    for attempt in range(3):
+    for attempt in range(4):   # 第 4 次(attempt==3)绕过代理直连
         with tempfile.TemporaryDirectory() as td:
-            subprocess.run(["yt-dlp", "--proxy", "http://127.0.0.1:7890", "--skip-download", "--write-subs", "--write-auto-subs", "--sub-lang", "en",
+            subprocess.run(["yt-dlp", *_proxy_args(force_direct=(attempt == 3)), "--skip-download", "--write-subs", "--write-auto-subs", "--sub-lang", "en",
                 "--sub-format", "vtt", "--sleep-subtitles", "2", "-o", f"{td}/s.%(ext)s", url],
                 capture_output=True, timeout=180)
             v = list(Path(td).glob("*.vtt"))

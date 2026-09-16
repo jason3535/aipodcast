@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Tue, 15 Sep 2026 06:15:01 -0000</lastBuildDate>
+  <lastBuildDate>Tue, 15 Sep 2026 07:17:31 -0000</lastBuildDate>
+  <item>
+    <title>OpenAI 的 Astra 模型更难监控：Thomas Larsen 与 Daniel Kokotajlo 谈暂停 AI — MTS</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/kokotajlo-mts-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/kokotajlo-mts-2026/</guid>
+    <pubDate>Tue, 15 Sep 2026 07:17:31 -0000</pubDate>
+    <description>AI Futures Project 的 Thomas Larsen 与 Daniel Kokotajlo 讨论为何 OpenAI 的 Astra 模型更难监控，以及暂停超级智能的可行路径。  要点: AI 2027/2040 A 计划：先加速后暂停，以管理 AI 风险。 / 随着递归深度等新架构的出现，思维链可监控性正在下降。 / 最佳暂停时机是在 AI 即将失控的边缘，而非现在。</description>
+  </item>
   <item>
     <title>马斯克与肖特韦尔谈 AI 风险、星舰、Terafab 与 SpaceX/Tesla 合并 — All-In Podcast</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/elon-allinpod-2026</link>
@@ -97,13 +104,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/quinnslack-latentsp-2026/</guid>
     <pubDate>Wed, 09 Sep 2026 13:49:17 -0000</pubDate>
     <description>AMP 团队讨论远程工作文化及向基于云的 orbs 开发转变，主张本地开发已过时。  要点: 本地开发已死；云端代理支持并行、安全且更快的开发流程。 / 在小型信任团队中，代码审查已过时；代理加速迭代并提升质量。 / 拥有代理的小型授权团队能超越大型组织并实现盈利。</description>
-  </item>
-  <item>
-    <title>OpenAI 的 Astra 模型更难监控：Thomas Larsen 与 Daniel Kokotajlo 谈暂停 AI — MTS</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/kokotajlo-mts-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/kokotajlo-mts-2026/</guid>
-    <pubDate>Tue, 08 Sep 2026 08:50:53 -0000</pubDate>
-    <description>AI Futures Project 的 Thomas Larsen 与 Daniel Kokotajlo 讨论为何 OpenAI 的 Astra 模型更难监控，以及暂停超级智能的可行路径。  要点: AI 2027/2040 A 计划：先加速后暂停，以管理 AI 风险。 / 随着递归深度等新架构的出现，思维链可监控性正在下降。 / 最佳暂停时机是在 AI 即将失控的边缘，而非现在。</description>
   </item>
   <item>
     <title>OpenAI 的格雷格·布罗克曼谈领导层变动与向每家企业扩展 — 时代周刊</title>
