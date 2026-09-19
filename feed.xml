@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Tue, 15 Sep 2026 07:17:31 -0000</lastBuildDate>
+  <lastBuildDate>Wed, 16 Sep 2026 03:45:22 -0000</lastBuildDate>
+  <item>
+    <title>黄仁勋谈末日论骗局、超级智能，以及为什么赢得 AI 就赢得未来（特朗普中途来电） — All-In Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/jensen-allinpod-2026b</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jensen-allinpod-2026b/</guid>
+    <pubDate>Wed, 16 Sep 2026 03:45:22 -0000</pubDate>
+    <description>All-In 峰会上，黄仁勋驳斥 AI 末日论，认为超级智能在实践中已经到来，并阐明为什么 AI 竞赛决定未来；特朗普总统在对谈中途来电加入。  要点: AI 安全与快速创新可以并行，并非取舍关系。 / 开源模型是美国赢得 AI 竞赛、推动广泛创新的关键。 / 在自动驾驶、蛋白质合成等狭窄领域，我们已拥有 AGI 和超级智能。</description>
+  </item>
   <item>
     <title>OpenAI 的 Astra 模型更难监控：Thomas Larsen 与 Daniel Kokotajlo 谈暂停 AI — MTS</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/kokotajlo-mts-2026</link>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/justinjohnson-thetwiml-2026/</guid>
     <pubDate>Wed, 02 Sep 2026 01:37:45 -0000</pubDate>
     <description>贾斯汀·约翰逊探讨了为什么世界模型是 AI 的下一个前沿，超越语言模型，理解和模拟世界。  要点: 世界模型是 AI 的下一个前沿，超越语言去理解和模拟世界。 / 高斯溅射提供了一种可微的 3D 表示，能与神经网络集成，用于显式世界建模。 / 未来的统一世界模型将把规划、模拟和渲染结合到一个系统中。</description>
-  </item>
-  <item>
-    <title>吴恩达谈 AI 恐慌炒作与真实就业影响 — 硅谷女孩</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/andrewng-siliconv-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/andrewng-siliconv-2026/</guid>
-    <pubDate>Wed, 02 Sep 2026 01:37:45 -0000</pubDate>
-    <description>吴恩达驳斥 AI 恐慌炒作，解析真实就业影响，并为应届毕业生提供建议。  要点: AI 是福祉而非生存威胁；危言耸听有利于既得利益者。 / AI 改变技能而非取代工作；人类的上下文和判断力仍至关重要。 / 学会用 AI 构建至关重要；认知卸载有害学习。</description>
   </item>
 </channel>
 </rss>
