@@ -11,11 +11,21 @@
 import html, json, re, sys, textwrap
 from pathlib import Path
 
+# 仓库路径:两台 Mac 布局不同(个人 Mac ~/ 下,工作 Mac 也在 ~/ 下但用户名不同),按候选取第一个存在的;
+# SITE_ROOT_<KEY> 环境变量可覆盖。2026-09-20 在工作 Mac 刷新图谱时补的,此前只有 build_crosslinks 会找。
+import os as _os
+def _repo(key, *cands):
+    env = _os.environ.get("SITE_ROOT_" + key.upper())
+    if env: return env
+    for c in cands:
+        if _os.path.exists(c): return c
+    return cands[0]
+
 SITES = {
-    "ai":     dict(path=Path("/Users/jason/ai-scholar-graph"),     zh="AI 学者图谱",   en="AI SCHOLAR GRAPH",   domain="ai.jasonlin.tech",       pfx="graph-ai"),
-    "hw":     dict(path=Path("/Users/jason/hardware-startup-graph"),zh="智能硬件图谱", en="HARDWARE STARTUP GRAPH", domain="hardware.jasonlin.tech", pfx="graph-hw"),
-    "inv":    dict(path=Path("/Users/jason/investor-graph"),       zh="投资人图谱",    en="TECH INVESTOR GRAPH", domain="investor.jasonlin.tech",  pfx="graph-inv"),
-    "design": dict(path=Path("/Users/jason/designer-graph"),       zh="设计师图谱",    en="DESIGNER GRAPH",      domain="design.jasonlin.tech",    pfx="graph-design"),
+    "ai":     dict(path=Path(_repo("ai", _repo("ai", "/Users/jason/ai-scholar-graph", "/Users/jason.lin/ai-scholar-graph"), "/Users/jason.lin/ai-scholar-graph")),     zh="AI 学者图谱",   en="AI SCHOLAR GRAPH",   domain="ai.jasonlin.tech",       pfx="graph-ai"),
+    "hw":     dict(path=Path(_repo("hw", _repo("hw", "/Users/jason/hardware-startup-graph", "/Users/jason.lin/hardware-startup-graph"), "/Users/jason.lin/hardware-startup-graph")),zh="智能硬件图谱", en="HARDWARE STARTUP GRAPH", domain="hardware.jasonlin.tech", pfx="graph-hw"),
+    "inv":    dict(path=Path(_repo("inv", _repo("inv", "/Users/jason/investor-graph", "/Users/jason.lin/investor-graph"), "/Users/jason.lin/investor-graph")),       zh="投资人图谱",    en="TECH INVESTOR GRAPH", domain="investor.jasonlin.tech",  pfx="graph-inv"),
+    "design": dict(path=Path(_repo("design", _repo("design", "/Users/jason/designer-graph", "/Users/jason.lin/designer-graph"), "/Users/jason.lin/designer-graph")),       zh="设计师图谱",    en="DESIGNER GRAPH",      domain="design.jasonlin.tech",    pfx="graph-design"),
 }
 # 匿名统计 beacon —— 片段本体在 pipeline/beacon.js(六站共用一份)。
 # 2026-08-29 之前这里内联着一份「打开即发」的旧版,正是它把 8/22 那 720 次分布式
