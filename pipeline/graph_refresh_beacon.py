@@ -16,11 +16,21 @@
 import re, sys
 from pathlib import Path
 
+# 仓库路径:两台 Mac 布局不同(个人 Mac ~/ 下,工作 Mac 也在 ~/ 下但用户名不同),按候选取第一个存在的;
+# SITE_ROOT_<KEY> 环境变量可覆盖。2026-09-20 在工作 Mac 刷新图谱时补的,此前只有 build_crosslinks 会找。
+import os as _os
+def _repo(key, *cands):
+    env = _os.environ.get("SITE_ROOT_" + key.upper())
+    if env: return env
+    for c in cands:
+        if _os.path.exists(c): return c
+    return cands[0]
+
 SITES = {
-    "graph-ai":     Path("/Users/jason/ai-scholar-graph"),
-    "graph-hw":     Path("/Users/jason/hardware-startup-graph"),
-    "graph-inv":    Path("/Users/jason/investor-graph"),
-    "graph-design": Path("/Users/jason/designer-graph"),
+    "graph-ai":     Path(_repo("ai", _repo("ai", "/Users/jason/ai-scholar-graph", "/Users/jason.lin/ai-scholar-graph"), "/Users/jason.lin/ai-scholar-graph")),
+    "graph-hw":     Path(_repo("hw", _repo("hw", "/Users/jason/hardware-startup-graph", "/Users/jason.lin/hardware-startup-graph"), "/Users/jason.lin/hardware-startup-graph")),
+    "graph-inv":    Path(_repo("inv", _repo("inv", "/Users/jason/investor-graph", "/Users/jason.lin/investor-graph"), "/Users/jason.lin/investor-graph")),
+    "graph-design": Path(_repo("design", _repo("design", "/Users/jason/designer-graph", "/Users/jason.lin/designer-graph"), "/Users/jason.lin/designer-graph")),
 }
 SRC = (Path(__file__).resolve().parent / "beacon.js").read_text(encoding="utf-8")
 TPL = SRC[SRC.index("<script>"):SRC.rindex("</script>") + len("</script>")]

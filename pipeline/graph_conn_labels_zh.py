@@ -9,8 +9,18 @@
 """
 import io, json, os, re, sys, urllib.request
 from pathlib import Path
-SITES = {"ai": "/Users/jason/ai-scholar-graph", "hw": "/Users/jason/hardware-startup-graph",
-         "inv": "/Users/jason/investor-graph", "design": "/Users/jason/designer-graph"}
+# 仓库路径:两台 Mac 布局不同(个人 Mac ~/ 下,工作 Mac 也在 ~/ 下但用户名不同),按候选取第一个存在的;
+# SITE_ROOT_<KEY> 环境变量可覆盖。2026-09-20 在工作 Mac 刷新图谱时补的,此前只有 build_crosslinks 会找。
+import os as _os
+def _repo(key, *cands):
+    env = _os.environ.get("SITE_ROOT_" + key.upper())
+    if env: return env
+    for c in cands:
+        if _os.path.exists(c): return c
+    return cands[0]
+
+SITES = {"ai": _repo("ai", "/Users/jason/ai-scholar-graph", "/Users/jason.lin/ai-scholar-graph"), "hw": _repo("hw", "/Users/jason/hardware-startup-graph", "/Users/jason.lin/hardware-startup-graph"),
+         "inv": _repo("inv", "/Users/jason/investor-graph", "/Users/jason.lin/investor-graph"), "design": _repo("design", "/Users/jason/designer-graph", "/Users/jason.lin/designer-graph")}
 CJK = re.compile(r"[一-鿿]")
 def load(repo):
     s = Path(repo, "index.html").read_text(encoding="utf-8")
