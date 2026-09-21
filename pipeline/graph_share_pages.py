@@ -38,6 +38,9 @@ FIELD_COLOR = {  # 领域丸/字母头像渐变的主色(与站内 fdot 一致�
     "nlp":"#0a84ff","deep-learning":"#0a84ff","vision":"#30d158","rl":"#ff9f0a","safety":"#ff453a",
     "consumer":"#0a84ff","robotics":"#bf5af2","ai-infra":"#64d2ff","ar-vr":"#5e5ce6","drones":"#30d158",
     "health":"#ff375f","smart-home":"#ff9f0a","overseas":"#64d2ff",
+    # 硬件图谱 2026-09-21 改成 13 个产品品类(overseas 降为 region 属性,不再是 field)
+    "humanoid":"#bf5af2","embodied-ai":"#5e5ce6","home-robot":"#30d158","companion":"#ff9f0a","glasses":"#5e9eff",
+    "wearable":"#ff375f","ai-device":"#ffd60a","chips":"#64d2ff",
     "us-vc":"#0a84ff","china-vc":"#ff453a","cvc":"#5e5ce6","early":"#30d158","angel":"#ff9f0a","corporate":"#64d2ff",
 }
 
