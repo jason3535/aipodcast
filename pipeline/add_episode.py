@@ -100,7 +100,7 @@ def get_subs(url):
     global SUB_END_MIN
     for attempt in range(4):   # 第 4 次(attempt==3)绕过代理直连
         with tempfile.TemporaryDirectory() as td:
-            subprocess.run(["yt-dlp", *_proxy_args(force_direct=(attempt == 3)), "--skip-download", "--write-subs", "--write-auto-subs", "--sub-lang", "en",
+            subprocess.run(["yt-dlp", *_proxy_args(force_direct=(attempt == 3)), "--skip-download", "--ignore-errors", "--write-subs", "--write-auto-subs", "--sub-lang", "en-US-orig,en-orig,en-US,en-GB,en",   # 2026-09-24:各语言轨走不同端点,en 被 429 时 en-US-orig 往往仍可下。必须 --ignore-errors:yt-dlp 默认一条轨失败就中止整个视频,后面的轨轮不到
                 "--sub-format", "vtt", "--sleep-subtitles", "2", "-o", f"{td}/s.%(ext)s", url],
                 capture_output=True, timeout=180)
             v = list(Path(td).glob("*.vtt"))
