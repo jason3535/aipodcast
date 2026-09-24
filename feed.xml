@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sat, 19 Sep 2026 04:41:56 -0000</lastBuildDate>
+  <lastBuildDate>Mon, 21 Sep 2026 15:15:03 -0000</lastBuildDate>
+  <item>
+    <title>AI：好得难以置信，差得毫无用处 — AI 理事会</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/diogoalmeida-aicounci-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/diogoalmeida-aicounci-2026/</guid>
+    <pubDate>Mon, 21 Sep 2026 15:15:03 -0000</pubDate>
+    <description>前 OpenAI 研究员 Diogo 探讨大语言模型过度承诺与交付不足之间的巨大鸿沟，追问为何 AI 在某些任务上表现出色却在其他任务上失灵。  要点: 大语言模型被优化用于人类在环的辅助，而非可靠的自动化。 / RLHF 导致模式崩溃，使模型输出看似合理但常常错误。 / 对 LLM 进步而言，做对任务比算力或数据更重要。</description>
+  </item>
   <item>
     <title>302 个神经元的线虫启发了他们的架构——Ramin Hasani，Liquid AI — Latent Space</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/hasani-latentsp-2026</link>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jeffreymorgan-ycombina-2026/</guid>
     <pubDate>Sat, 05 Sep 2026 05:18:27 -0000</pubDate>
     <description>Jeffrey Morgan 探讨了由编码代理驱动的开源模型采用激增，以及微调趋势的回归。  要点: 开源模型将主导 token 使用量，80-90% 的 token 将流经它们，尽管预算占比未必如此。 / 封闭前沿模型与开源模型之间的差距现在已不到三个月。 / 编码代理是 token 爆炸式增长的主要驱动力，尤其是在开源模型下。</description>
-  </item>
-  <item>
-    <title>Atlas：通过新视角预测实现空间智能 — a16z 播客</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/feifei-thea16zp-2026b</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/feifei-thea16zp-2026b/</guid>
-    <pubDate>Sat, 05 Sep 2026 05:18:27 -0000</pubDate>
-    <description>Atlas 是一个世界模型，通过新视角预测生成、重建和模拟世界，仅用三台相机即可实现子弹时间效果。  要点: Atlas 是一个世界模型，通过新视角预测来生成、重建和模拟世界，统一了生成与重建。 / 新视角预测是一个基础原语，可能具有 AI 完备性，类似于下一词预测。 / 扩展定律适用于空间智能；更大的模型和更多的计算带来显著提升。</description>
   </item>
 </channel>
 </rss>
