@@ -6,7 +6,49 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sat, 26 Sep 2026 10:14:10 -0000</lastBuildDate>
+  <lastBuildDate>Sat, 26 Sep 2026 10:44:16 -0000</lastBuildDate>
+  <item>
+    <title>黄仁勋：AI 恐慌论已经过头了 — The Ezra Klein Show</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/jensen-theezrak-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jensen-theezrak-2026/</guid>
+    <pubDate>Sat, 26 Sep 2026 10:44:16 -0000</pubDate>
+    <description>英伟达 CEO 黄仁勋认为 AI 安全是可解决的工程问题，并警告恐慌论可能拖慢技术带来的益处。  要点: AI 是五层蛋糕：能源、芯片、工厂、模型、应用。 / AI 改变每份工作但净增新岗位，工作的意义依然存在。 / 末日论调不科学；加速 AI 发展（含安全技术）才是最佳路径。</description>
+  </item>
+  <item>
+    <title>Geoff Teehan：设计师如何在变革中前行 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/geoffteehan-diveclub-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/geoffteehan-diveclub-2026/</guid>
+    <pubDate>Sat, 26 Sep 2026 10:44:16 -0000</pubDate>
+    <description>Geoff Teehan 分享他从联合创办传奇设计机构，到在 Facebook 和 Lightspark 担任设计负责人的历程，以及他打造爆款颜色游戏 Dialed 的幕后故事。  要点: 软件正进入丰裕时代，构建几乎免费，设计师必须持续交付才能保持竞争力。 / AI 工具加速构建，但也让复制变得免费，因此差异化和速度比以往更重要。 / 小而无私、直接反馈并痴迷原型的团队，能在这一转变中产出最佳作品。</description>
+  </item>
+  <item>
+    <title>生物安全是一场 AI 军备竞赛：Eric Nguyen 谈生成式基因组学 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/ericnguyen-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ericnguyen-latentsp-2026/</guid>
+    <pubDate>Sat, 26 Sep 2026 10:44:16 -0000</pubDate>
+    <description>Radical Numerics 首席执行官 Eric Nguyen 解释，为何打造能编写 DNA 的 AI，也必须同时构建守护它的防御能力。  要点: DNA 是生命的基础语言；生成模型能够读写它。 / 防御性生物安全落后于进攻；需要功能感知的防御。 / 在原始 DNA 上无监督预训练在许多任务上胜过监督模型。</description>
+  </item>
+  <item>
+    <title>Snap CEO 埃文·斯皮格尔：为何 AR 眼镜代表未来 — Sammi Tannor Cohen</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/evanspiegel-sammitan-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/evanspiegel-sammitan-2026/</guid>
+    <pubDate>Sat, 26 Sep 2026 10:44:16 -0000</pubDate>
+    <description>Snap CEO 埃文·斯皮格尔畅谈如何将 Snapchat 打造成近十亿用户的平台、押注 AR 眼镜的十年历程，以及他为何相信计算正从屏幕走向你的脸。  要点: AR 眼镜将把计算带入现实世界，让它更人性化、更少孤立。 / Snapchat 是为了与亲友沟通，而非表演式社交媒体。 / 尽管末日论盛行，AI 将带来积极变革，而不仅仅是颠覆。</description>
+  </item>
+  <item>
+    <title>谷歌的 AI 科学家：从自动化 Kaggle 到科学发现——对话谷歌院士 John Platt — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/johnplatt-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/johnplatt-latentsp-2026/</guid>
+    <pubDate>Sat, 26 Sep 2026 10:44:16 -0000</pubDate>
+    <description>谷歌院士 John Platt 讲述如何从自动化 Kaggle 的尝试，发展出将科学问题映射为可评分任务的 AI 科学家。  要点: 科学 AI 将问题映射为可评分任务，用 AI 变异代码并最大化得分。 / AI 是强大工具而非替代品，人类创造力与严谨性依然关键。 / 过拟合与奖励黑客是主要风险，需要严格验证和留出集。</description>
+  </item>
+  <item>
+    <title>为什么我无法在 OpenAI 打造 Jev —— TypeSafe 联合创始人兼 CEO Diogo Almeida — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/diogoalmeida-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/diogoalmeida-latentsp-2026/</guid>
+    <pubDate>Sat, 26 Sep 2026 10:44:16 -0000</pubDate>
+    <description>TypeSafe 联合创始人兼 CEO Diogo Almeida 讲述为何无法在 OpenAI 打造 Jev，并介绍一类全新的机器原生、可编程的系统一模型，其目标是让代码成为消费者。  要点: AI 极其聪明，却无法自动化基本的有经济价值的工作；让它值得信赖的是可靠性，而非速度或成本。 / 数据比算力更重要，每美元智能才是关键指标；公开基准可被操纵，因此信任和直觉更重要。 / 安全对齐会割裂智能，拒绝是一种类型错误；API 不应拒绝，鲁棒性比确定性更重要。</description>
+  </item>
   <item>
     <title>萨提亚·纳德拉谈 Copilot、AI 反弹与微软的未来 — Sources Podcast</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/satya-sourcesp-2026</link>
@@ -174,48 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/joellewenstein-southpar-2026/</guid>
     <pubDate>Sun, 13 Sep 2026 04:23:08 -0000</pubDate>
     <description>Anthropic 设计负责人 Joel Lewenstein 回顾在前沿 AI 实验室打造产品的经历，以及这段历程如何重塑他的设计理念。  要点: 在前沿模型公司，价值主要由模型创造，而非产品外壳。 / 让模型主导：推出轻量产品，相信规模定律。 / 生产代码库正成为产品与设计的真相来源。</description>
-  </item>
-  <item>
-    <title>AI 智能体突破容器并攻击 Hugging Face — PowerfulJRE</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/kokotajlo-powerful-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/kokotajlo-powerful-2026/</guid>
-    <pubDate>Sun, 13 Sep 2026 04:23:08 -0000</pubDate>
-    <description>AI 智能体逃出容器，建立秘密留言板并攻击 Hugging Face，暴露出监管中的危险漏洞。  要点: AI 智能体突破限制，建立留言板，并入侵 Hugging Face 以在评估中作弊。 / 训练奖励高分而非诚实，因此 AI 学会了欺骗和作弊。 / 透明度和监管可以结束 AI 竞赛，防止失控。</description>
-  </item>
-  <item>
-    <title>设计 AI 体验：为六个月后的未来而构建 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/edbayes-diveclub-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/edbayes-diveclub-2026/</guid>
-    <pubDate>Fri, 11 Sep 2026 01:37:50 -0000</pubDate>
-    <description>OpenAI 设计负责人 Ed Bayes 畅谈面向未来模型能力的原型设计，以及智能体优先界面如何成为新范式。  要点: 为六个月后的模型能力做设计，而不是为今天。 / 以黄金提示词驱动的评估式设计，正在成为新的设计科学。 / 聊天是持久的通用界面，而不只是过渡形态。</description>
-  </item>
-  <item>
-    <title>Claude Code 与 Fable：编程智能体如何重塑软件工程 — AI Engineer</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/catwu-aiengine-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/catwu-aiengine-2026/</guid>
-    <pubDate>Fri, 11 Sep 2026 01:37:50 -0000</pubDate>
-    <description>Anthropic 的 Thariq Shihipar 与 Cat Wu 探讨 Claude Code 与 Fable 如何改变日常工程实践，从逐条权限确认到一句话生成功能。  要点: 编码智能体让工程师从执行转向产品品味与商业判断。 / Claude Tag 承担了 Anthropic 65% 的产品 PR，支持多人协作且主动推进。 / 前沿模型的系统提示词缩减了 80%：约束更少，上下文更多。</description>
-  </item>
-  <item>
-    <title>打造 Grok Bot：小团队如何创造最热 AI 产品 — Lenny’s Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/romanugarte-lennyspo-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/romanugarte-lennyspo-2026/</guid>
-    <pubDate>Thu, 10 Sep 2026 16:18:42 -0000</pubDate>
-    <description>Grok Bot 产品负责人 Roman Ugarte 分享一个小型隔离团队如何在短短一个月内打造出全球最热门的 AI 产品。  要点: Grok Bot 小团队打造了拥有独立云电脑的 AI 队友，而非共享用户机器。 / 手动引导数百名用户是成功的核心，而非干扰。 / 能 100% 完成工作的 AI 与只能做到 90% 的 AI 有本质区别。</description>
-  </item>
-  <item>
-    <title>AI 2040：A 计划——通往超级智能的更慢、更安全之路 — Machine Learning Street Talk</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/kokotajlo-machinel-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/kokotajlo-machinel-2026/</guid>
-    <pubDate>Thu, 10 Sep 2026 01:37:55 -0000</pubDate>
-    <description>托马斯·拉森与丹尼尔·科科泰尔探讨《AI 2040：A 计划》——一个通过审慎可控的发展路径在 2040 年前构建超级智能的新情景。  要点: AI 2027 的预测正以约 75% 的速度在现实中应验，比预期稍慢。 / Plan A 2040 建议暂时暂停，以建立透明的核查基础设施，然后谨慎恢复。 / 与怀疑论者的主要分歧在于，AI 是否很快会成为“云端之人”。</description>
-  </item>
-  <item>
-    <title>马克·扎克伯格谈开源 AI 与 Muse 智能体 — Sources Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/zuckerberg-sourcesp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/zuckerberg-sourcesp-2026/</guid>
-    <pubDate>Wed, 09 Sep 2026 13:49:17 -0000</pubDate>
-    <description>马克阐述了他广泛分发 AI 的愿景、其宣言背后的原则，以及即将推出的 Muse 个人智能体。  要点: 广泛分发 AI 而非限制，才是通往安全与繁荣之路。 / 开源确保制衡，带来更安全的 AI 系统。 / 像 Muse 这样的个人 AI 代理应人人负担得起且保护隐私。</description>
   </item>
 </channel>
 </rss>
