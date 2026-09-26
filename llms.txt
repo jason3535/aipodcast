@@ -298,7 +298,7 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
-- [CCTV Finance Exclusive: Elon Musk on China's Unmatched Charm](https://aipodcast.jasonlin.tech/e/elon-cctvfina-2026/) — Elon Musk, CCTV Finance, 2026-09-23
+- [CMG Exclusive: Elon Musk on China's Unmatched Charm](https://aipodcast.jasonlin.tech/e/elon-cctvfina-2026/) — Elon Musk, CGTN, 2026-09-25
 - [A Worm With 302 Neurons Inspired Their Architecture — Ramin Hasani, Liquid AI](https://aipodcast.jasonlin.tech/e/hasani-latentsp-2026/) — Ramin Hasani, Latent Space, 2026-09-18
 - [Why Diffusion Will Win AI Inference: Stefano Ermon on Challenging the Big Labs](https://aipodcast.jasonlin.tech/e/ermon-nopriors-2026/) — Stefano Ermon, No Priors, 2026-09-18
 - [OpenAI's Noam Brown on Agent Swarms and Recursive Self-Improvement](https://aipodcast.jasonlin.tech/e/noambrown-dwarkesh-2026/) — Noam Brown, Dwarkesh Podcast, 2026-09-17
