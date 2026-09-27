@@ -6,7 +6,49 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sat, 26 Sep 2026 10:44:16 -0000</lastBuildDate>
+  <lastBuildDate>Sun, 27 Sep 2026 01:37:59 -0000</lastBuildDate>
+  <item>
+    <title>为什么 AI 的下一个突破可能来自大实验室之外 — The a16z Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/aaronlevie-thea16zp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/aaronlevie-thea16zp-2026/</guid>
+    <pubDate>Sun, 27 Sep 2026 01:37:59 -0000</pubDate>
+    <description>Aaron 做客播客，探讨 AI 节奏、监管，以及为什么下一个突破可能来自大实验室之外。  要点: 如果前沿实验室真担心生存风险，就该将 AI 国有化，而不是控制节奏。 / 智能体集群将冲垮现有安全模型，需要新的细粒度访问控制。 / 创新正从模型层转向应用层，开启安全设计的复兴。</description>
+  </item>
+  <item>
+    <title>广告商业模式将消亡，与埃隆在推特共事的经验教训 | Parag Agrawal — 20VC</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/paragagrawal-20vc-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/paragagrawal-20vc-2026/</guid>
+    <pubDate>Sun, 27 Sep 2026 01:37:59 -0000</pubDate>
+    <description>Parag Agrawal 解释为何智能体使用网络的频率将是人类的 1000 倍、广告商业模式为何会消亡，以及他在推特与埃隆共事的经验教训。  要点: 智能体使用网络的频率将是人类的 1000 倍，需要全新的搜索技术和商业模式。 / 广告模式对智能体无效；必须在推理时向内容所有者付费以对齐激励。 / 前沿模型持续增长，小模型性能见顶；网络搜索定价应降低 10 倍。</description>
+  </item>
+  <item>
+    <title>Snap 与 Discord 产品负责人 90 分钟无滤镜产品建议 — Lenny’s Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/petersellis-lennyspo-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/petersellis-lennyspo-2026/</guid>
+    <pubDate>Sun, 27 Sep 2026 01:37:59 -0000</pubDate>
+    <description>Snap 与 Discord 前产品负责人 Peter Sellis 分享反直觉的产品经验：如何像恐怖组织一样组建团队、为什么大多数产品经理很糟糕，以及克制如何塑造品味。  要点: 像恐怖组织一样设计团队：共同使命，明确决策权。 / 大多数产品经理是净负资产；伟大的产品经理是罕见的矛盾体。 / 增长来自打磨核心体验，而非追逐新赌注。</description>
+  </item>
+  <item>
+    <title>AI 公司为何想要放缓？Ali 谈前沿节奏 — The a16z Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/alighodsi-thea16zp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/alighodsi-thea16zp-2026/</guid>
+    <pubDate>Sun, 27 Sep 2026 01:37:59 -0000</pubDate>
+    <description>Ali 探讨 AI 发展节奏的争论，主张领导者应避免不必要的生存恐惧，同时承认真实风险和政治动态。  要点: AI 真正的近期风险是网络攻击，而非超级智能。 / 放缓前沿与安全无关；慢下来并不会让 AI 更安全。 / 企业在 AI 采用上严重落后；他们需要上下文和本体，而非更聪明的模型。</description>
+  </item>
+  <item>
+    <title>LangChain CEO Harrison Chase 谈他押错的基础设施赌注 — Browserbase</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/harrisonchase-browserb-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/harrisonchase-browserb-2026/</guid>
+    <pubDate>Sun, 27 Sep 2026 01:37:59 -0000</pubDate>
+    <description>LangChain 联合创始人兼 CEO Harrison Chase 回顾框架的起源、构建它的社区，以及他希望更早下注的基础设施。  要点: 构建智能体的难点在于可靠性，而非能力。 / 智能体框架正围绕文件系统、代码执行等原语趋于稳定。 / 智能体的身份与凭证是下一个关键基础设施问题。</description>
+  </item>
+  <item>
+    <title>递归自我改进：从自动研究到超级智能——Richard Socher — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/richardsocher-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/richardsocher-latentsp-2026/</guid>
+    <pubDate>Sun, 27 Sep 2026 01:37:59 -0000</pubDate>
+    <description>Richard Socher 探讨尤里卡机器、从自动研究到超级智能的路径，以及为何应监管 AI 应用而非智能本身。  要点: 应监管 AI 的具体应用，而非智能或 GPU；后者等于监管思想。 / 慢起飞是真实的：硬件、物理和经济约束限制了 AI 的变革速度。 / 下一个自动化前沿是 AI 研究本身，使 AI 按定义自我改进。</description>
+  </item>
   <item>
     <title>黄仁勋：AI 恐慌论已经过头了 — The Ezra Klein Show</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/jensen-theezrak-2026</link>
@@ -174,48 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/kokotajlo-mts-2026/</guid>
     <pubDate>Tue, 15 Sep 2026 07:17:31 -0000</pubDate>
     <description>AI Futures Project 的 Thomas Larsen 与 Daniel Kokotajlo 讨论为何 OpenAI 的 Astra 模型更难监控，以及暂停超级智能的可行路径。  要点: AI 2027/2040 A 计划：先加速后暂停，以管理 AI 风险。 / 随着递归深度等新架构的出现，思维链可监控性正在下降。 / 最佳暂停时机是在 AI 即将失控的边缘，而非现在。</description>
-  </item>
-  <item>
-    <title>马斯克与肖特韦尔谈 AI 风险、星舰、Terafab 与 SpaceX/Tesla 合并 — All-In Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/elon-allinpod-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/elon-allinpod-2026/</guid>
-    <pubDate>Tue, 15 Sep 2026 06:15:01 -0000</pubDate>
-    <description>All-In 峰会上，马斯克与 SpaceX 总裁格温·肖特韦尔畅谈 AI 风险与同行评审、星舰与火星时间表、Terafab 芯片计划，以及 SpaceX 与 Tesla 该不该合并。  要点: 星舰完全可复用是延续地球外生命的关键突破。 / 轨道数据中心提供免费冷却、太阳能和无限空间。 / AI 公司间的同行评审是最实际的安全措施。</description>
-  </item>
-  <item>
-    <title>达里奥·阿莫代伊谈 AI 生存风险：是警告信号，而非五级火警 — CBS 周日晨间</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/dario-cbssunda-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dario-cbssunda-2026/</guid>
-    <pubDate>Mon, 14 Sep 2026 05:28:31 -0000</pubDate>
-    <description>Anthropic 首席执行官达里奥·阿莫代伊探讨 AI 可能毁灭人类的风险，解释为何他认为这是警告信号而非五级火警，并提出第三方安全评估员的三步计划。  要点: AI 是指数级技术，我们正处在曲线陡升的拐点，必须放慢脚步让防护措施跟上。 / 第三方评估机构和政府必须参与制定安全标准并控制发布节奏。 / 应像冷战军控一样与中国谈判 AI 限制，以避免灾难性后果。</description>
-  </item>
-  <item>
-    <title>白宫反科学吗？对话 OSTP 主任迈克尔·克拉齐奥斯 — All-In Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/michaelkratsios-allinpod-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/michaelkratsios-allinpod-2026/</guid>
-    <pubDate>Sun, 13 Sep 2026 04:39:30 -0000</pubDate>
-    <description>OSTP 主任迈克尔·克拉齐奥斯反驳政府反科学的说法，并认为科学界已迷失方向。  要点: 白宫并非反科学，而是支持科学但反对教条。 / 美国科学停滞，尽管资金翻三倍；应资助科学家个人，而非仅机构。 / 中国是主要竞争对手；美国必须在人工智能、量子、核能和生物领域取胜。</description>
-  </item>
-  <item>
-    <title>独立创业与 Chat PRD 的起源 — Solo Founders</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/clairevo-solofoun-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/clairevo-solofoun-2026/</guid>
-    <pubDate>Sun, 13 Sep 2026 04:39:30 -0000</pubDate>
-    <description>Claire Vo 讲述她为何选择独立创业，以及 Chat PRD 如何从一个共享 GPT 发展成自力更生的产品。  要点: 独立创始人可以通过将 AI 智能体编排为团队来构建严肃的业务。 / 创始人与市场的契合度以及赚来的洞察力才是真正的护城河，而非技术。 / 自力更生让你设计出服务于你想要的生活的业务。</description>
-  </item>
-  <item>
-    <title>山姆·奥特曼谈 AI 安全与 AGI 之路 — 《财富》杂志</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/altman-fortunem-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/altman-fortunem-2026/</guid>
-    <pubDate>Sun, 13 Sep 2026 04:23:08 -0000</pubDate>
-    <description>OpenAI 首席执行官山姆·奥特曼探讨 AI 安全、AGI 时代，以及为何 10%的灾难风险不可接受。  要点: 绝不能冒险将未来的控制权交给 AI。 / 能力与对齐必须同步推进；安全不过关就暂停训练。 / 需要国际协调，尤其是美中之间，才能确保 AI 安全发展。</description>
-  </item>
-  <item>
-    <title>在 Anthropic 做设计：Joel Lewenstein 谈 AI 浪潮下的设计变革 — South Park Commons</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/joellewenstein-southpar-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/joellewenstein-southpar-2026/</guid>
-    <pubDate>Sun, 13 Sep 2026 04:23:08 -0000</pubDate>
-    <description>Anthropic 设计负责人 Joel Lewenstein 回顾在前沿 AI 实验室打造产品的经历，以及这段历程如何重塑他的设计理念。  要点: 在前沿模型公司，价值主要由模型创造，而非产品外壳。 / 让模型主导：推出轻量产品，相信规模定律。 / 生产代码库正成为产品与设计的真相来源。</description>
   </item>
 </channel>
 </rss>
