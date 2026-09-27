@@ -6,7 +6,35 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sun, 27 Sep 2026 01:37:59 -0000</lastBuildDate>
+  <lastBuildDate>Sun, 27 Sep 2026 02:31:42 -0000</lastBuildDate>
+  <item>
+    <title>DHH 回应 Omarchy 的批评者（包括我） — Mischa van den Burg</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/dhh-mischava-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dhh-mischava-2026/</guid>
+    <pubDate>Sun, 27 Sep 2026 02:31:42 -0000</pubDate>
+    <description>DHH 做客节目，畅谈他为何打造 Omarchy、围绕它爆发的创造力与插件热潮，以及他如何在桌面 Linux 中弥合艺术与工程的鸿沟。  要点: Linux 天生适合 AI 代理，因为一切皆 CLI、配置文件和脚本。 / Omarchy 将安全视为第一要务，组建专门团队并坚持负责任披露。 / AI 代理现在写代码比大多数专业程序员（包括 DHH）更好。</description>
+  </item>
+  <item>
+    <title>安德鲁·费尔德曼谈打造 Cerebras 与芯片的未来 — Uncapped with Jack Altman</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/feldman-uncapped-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/feldman-uncapped-2026/</guid>
+    <pubDate>Sun, 27 Sep 2026 02:31:42 -0000</pubDate>
+    <description>Cerebras 首席执行官兼创始人安德鲁·费尔德曼探讨了如何通过激进创新打造出比英伟达快 10 到 500 倍的芯片。  要点: 要击败行业巨头，你需要做到 100 倍好，而不是便宜 10%。 / 彻底的创新需要控制芯片、板卡、系统、软件和 API。 / 数据中心和芯片的供应紧张至少还会持续五年。</description>
+  </item>
+  <item>
+    <title>德米斯·哈萨比斯爵士论 AI 革命、AI 的未来与人类创造力 — 英国皇家艺术学会</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/demis-royalsoc-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/demis-royalsoc-2026/</guid>
+    <pubDate>Sun, 27 Sep 2026 02:31:42 -0000</pubDate>
+    <description>诺贝尔奖得主德米斯·哈萨比斯爵士与汉娜·弗莱对话，探讨 AI 革命、人工智能的未来与人类创造力。  要点: AI 将像电力一样具有变革性，十年内带来十倍于工业革命的影响。 / AI 最重要的应用是改善人类健康，AlphaFold 已解析 2.62 亿个蛋白质结构。 / 教育必须彻底变革，让孩子成为 AI 原住民，翻转课堂实现个性化学习。</description>
+  </item>
+  <item>
+    <title>AI 史上最伟大：Jürgen Schmidhuber 谈欧洲的 AI 遗产 — Europe on Edge</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/schmidhuber-europeon-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/schmidhuber-europeon-2026/</guid>
+    <pubDate>Sun, 27 Sep 2026 02:31:42 -0000</pubDate>
+    <description>Jürgen Schmidhuber 讲述欧洲如何开创现代 AI 的核心算法，以及为何当下的 GPU 投资可能是一场泡沫。  要点: 90%的基础 AI 算法源自欧洲，1991 年的慕尼黑是关键节点。 / 大模型只会预测；AGI 需要独立控制器并掌握物理世界。 / 最优通用 AI 理论可行但计算不可行，需要实用近似。</description>
+  </item>
   <item>
     <title>为什么 AI 的下一个突破可能来自大实验室之外 — The a16z Podcast</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/aaronlevie-thea16zp-2026</link>
@@ -188,34 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/nevflynn-diveclub-2026/</guid>
     <pubDate>Sat, 19 Sep 2026 04:41:56 -0000</pubDate>
     <description>ElevenLabs 设计负责人 Nev Flynn 分享如何通过专家型人才、WebGL 艺术与 4000 万个光球着色器，将艺术表达带入企业级设计。  要点: 招聘专家型设计师，才能在 AI 拉平基础后实现差异化。 / 设计系统必须为智能体而限定范围，而非仅追求人类灵活性。 / 内部工具与设计工程师被低估，却是规模化质量的关键。</description>
-  </item>
-  <item>
-    <title>Box 的 Aaron Levie：在 AI 时代重塑自我与企业级扩散 — Training Data</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/aaronlevie-training-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/aaronlevie-training-2026/</guid>
-    <pubDate>Sat, 19 Sep 2026 04:41:56 -0000</pubDate>
-    <description>Box 创始人兼 CEO Aaron Levie 探讨为何应用公司成为新 Neolabs、AI 如何连接模型与企业工作流，以及创始人如何在 AI 浪潮中重塑自我。  要点: 应用公司是最热的新实验室，架起模型与企业工作流的桥梁。 / AI 向非编程知识工作的扩散将比硅谷预期慢得多。 / 记录系统必须打造出色的智能体，并走向无头化以暴露 API。</description>
-  </item>
-  <item>
-    <title>OpenAI 总裁 Greg：迈入 AGI 时代意味着什么 — The a16z Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/brockman-thea16zp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brockman-thea16zp-2026/</guid>
-    <pubDate>Sat, 19 Sep 2026 04:41:56 -0000</pubDate>
-    <description>OpenAI 总裁 Greg 解释为何他认为我们已迈入 AGI 时代，以及算力短缺与安全对齐为何可能成为真正的瓶颈。  要点: 我们已进入 AGI 时代；Astra 能在长任务上连贯运行 24 小时。 / 算力无法满足需求，因此分配 AI 红利才是被低估的挑战。 / 安全、安保与对齐必须持续升级，并成为进步的瓶颈。</description>
-  </item>
-  <item>
-    <title>黄仁勋谈末日论骗局、超级智能，以及为什么赢得 AI 就赢得未来（特朗普中途来电） — All-In Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/jensen-allinpod-2026b</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jensen-allinpod-2026b/</guid>
-    <pubDate>Wed, 16 Sep 2026 03:45:22 -0000</pubDate>
-    <description>All-In 峰会上，黄仁勋驳斥 AI 末日论，认为超级智能在实践中已经到来，并阐明为什么 AI 竞赛决定未来；特朗普总统在对谈中途来电加入。  要点: AI 安全与快速创新可以并行，并非取舍关系。 / 开源模型是美国赢得 AI 竞赛、推动广泛创新的关键。 / 在自动驾驶、蛋白质合成等狭窄领域，我们已拥有 AGI 和超级智能。</description>
-  </item>
-  <item>
-    <title>OpenAI 的 Astra 模型更难监控：Thomas Larsen 与 Daniel Kokotajlo 谈暂停 AI — MTS</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/kokotajlo-mts-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/kokotajlo-mts-2026/</guid>
-    <pubDate>Tue, 15 Sep 2026 07:17:31 -0000</pubDate>
-    <description>AI Futures Project 的 Thomas Larsen 与 Daniel Kokotajlo 讨论为何 OpenAI 的 Astra 模型更难监控，以及暂停超级智能的可行路径。  要点: AI 2027/2040 A 计划：先加速后暂停，以管理 AI 风险。 / 随着递归深度等新架构的出现，思维链可监控性正在下降。 / 最佳暂停时机是在 AI 即将失控的边缘，而非现在。</description>
   </item>
 </channel>
 </rss>
