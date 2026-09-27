@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 295 位人物 / 671 期访谈
+规模: 295 位人物 / 675 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -12,8 +12,8 @@
 - [Dario Amodei / 达里奥·阿莫迪](https://aipodcast.jasonlin.tech/pp/dario/): CEO, Anthropic — 17 期
 - [Jensen Huang / 黄仁勋](https://aipodcast.jasonlin.tech/pp/jensen/): Founder & CEO, NVIDIA — 14 期
 - [Naval Ravikant / 纳瓦尔·拉维坎特](https://aipodcast.jasonlin.tech/pp/naval/): Co-founder, AngelList; angel investor & philosopher — 14 期
+- [Demis Hassabis / 杰米斯·哈萨比斯](https://aipodcast.jasonlin.tech/pp/demis/): CEO, Google DeepMind — 13 期
 - [Boris Cherny / 鲍里斯·切尔尼](https://aipodcast.jasonlin.tech/pp/boris/): Creator of Claude Code, Anthropic — 12 期
-- [Demis Hassabis / 杰米斯·哈萨比斯](https://aipodcast.jasonlin.tech/pp/demis/): CEO, Google DeepMind — 12 期
 - [Greg Brockman / 格雷格·布罗克曼](https://aipodcast.jasonlin.tech/pp/brockman/): President & Co-founder, OpenAI — 11 期
 - [Fei-Fei Li / 李飞飞](https://aipodcast.jasonlin.tech/pp/feifei/): Co-founder, World Labs — 10 期
 - [Andrew Ng / 吴恩达](https://aipodcast.jasonlin.tech/pp/andrewng/): Founder, DeepLearning.AI — 10 期
@@ -28,16 +28,17 @@
 - [Richard Sutton / 理查德·萨顿](https://aipodcast.jasonlin.tech/pp/sutton/): Professor, U of Alberta — 7 期
 - [Geoffrey Hinton / 杰弗里·辛顿](https://aipodcast.jasonlin.tech/pp/hinton/): Professor Emeritus, U of Toronto — 7 期
 - [Nathan Lambert / 内森·兰伯特](https://aipodcast.jasonlin.tech/pp/lambert/): Research Scientist, Ai2 — 7 期
+- [Andrew Feldman / 安德鲁·费尔德曼](https://aipodcast.jasonlin.tech/pp/feldman/): Co-founder & CEO, Cerebras Systems — 6 期
 - [Daniel Kokotajlo / 丹尼尔·科科塔伊洛](https://aipodcast.jasonlin.tech/pp/kokotajlo/): Author, AI 2027 · ex-OpenAI — 6 期
 - [Arthur Mensch / 阿瑟·门施](https://aipodcast.jasonlin.tech/pp/mensch/): Co-founder & CEO, Mistral AI — 6 期
 - [Andrej Karpathy / 安德烈·卡帕西](https://aipodcast.jasonlin.tech/pp/karpathy/): Founder, Eureka Labs — 6 期
 - [Mark Pincus / 马克·平卡斯](https://aipodcast.jasonlin.tech/pp/pincus/): Founder, Zynga — 5 期
 - [Dylan Patel / 迪伦·帕特尔](https://aipodcast.jasonlin.tech/pp/dylanpatel/): Founder & Chief Analyst, SemiAnalysis — 5 期
 - [Garry Tan / 陈嘉兴](https://aipodcast.jasonlin.tech/pp/garrytan/): President & CEO, Y Combinator — 5 期
-- [Andrew Feldman / 安德鲁·费尔德曼](https://aipodcast.jasonlin.tech/pp/feldman/): Co-founder & CEO, Cerebras Systems — 5 期
 - [Mike Krieger / 迈克·克里格](https://aipodcast.jasonlin.tech/pp/mikekrieger/): Co-lead, Anthropic Labs · Instagram co-founder — 5 期
 - [Carl Pei / 裴宇](https://aipodcast.jasonlin.tech/pp/carlpei/): Founder & CEO, Nothing; co-founder of OnePlus — 5 期
 - [Sholto Douglas / 肖尔托·道格拉斯](https://aipodcast.jasonlin.tech/pp/sholto/): Researcher, Anthropic — 5 期
+- [Jürgen Schmidhuber / 于尔根·施密德胡伯](https://aipodcast.jasonlin.tech/pp/schmidhuber/): Director, KAUST AI — 4 期
 - [Jerry Tworek / 杰里·特沃雷克](https://aipodcast.jasonlin.tech/pp/tworek/): Co-founder & CEO, Core Automation — 4 期
 - [Joon Sung Park / 朴俊成](https://aipodcast.jasonlin.tech/pp/joonpark/): Co-founder, Simile; creator of Generative Agents (Stanford) — 4 期
 - [Jeff Dean / 杰夫·迪恩](https://aipodcast.jasonlin.tech/pp/jeffdean/): Chief Scientist, Google — 4 期
@@ -57,7 +58,6 @@
 - [Dan Shipper / 丹·希珀](https://aipodcast.jasonlin.tech/pp/danshipper/): Co-founder & CEO, Every — 3 期
 - [Scott Wu / 吴一](https://aipodcast.jasonlin.tech/pp/scottwu/): Co-founder & CEO, Cognition — 3 期
 - [Qasar Younis / 卡萨尔·尤尼斯](https://aipodcast.jasonlin.tech/pp/qasaryounis/): Co-founder & CEO, Applied Intuition — 3 期
-- [Jürgen Schmidhuber / 于尔根·施密德胡伯](https://aipodcast.jasonlin.tech/pp/schmidhuber/): Director, KAUST AI — 3 期
 - [Dylan Field / 迪伦·菲尔德](https://aipodcast.jasonlin.tech/pp/dylanfield/): Co-founder & CEO of Figma — 3 期
 - [Mark Chen / 马克·陈](https://aipodcast.jasonlin.tech/pp/markchen/): Chief Research Officer, OpenAI — 3 期
 - [John Jumper / 约翰·江珀](https://aipodcast.jasonlin.tech/pp/jumper/): Director, Google DeepMind; Nobel Laureate in Chemistry — 3 期
@@ -72,6 +72,7 @@
 - [Aaron Levie / 亚伦·莱维](https://aipodcast.jasonlin.tech/pp/aaronlevie/): Cofounder and CEO, Box — 2 期
 - [Parag Agrawal / 帕拉格·阿格拉瓦尔](https://aipodcast.jasonlin.tech/pp/paragagrawal/): Founder & CEO, Parallel Web Systems — 2 期
 - [Alex Atallah / 亚历克斯·阿塔拉](https://aipodcast.jasonlin.tech/pp/alexatallah/): Co-founder & CEO, OpenRouter; Co-founder, OpenSea — 2 期
+- [DHH / DHH](https://aipodcast.jasonlin.tech/pp/dhh/): Creator of Ruby on Rails, CTO of 37signals — 2 期
 - [Diogo Almeida / 迪奥戈·阿尔梅达](https://aipodcast.jasonlin.tech/pp/diogoalmeida/): Co-founder & CEO, TypeSafe AI — 2 期
 - [Stefano Ermon / 斯特凡诺·埃尔蒙](https://aipodcast.jasonlin.tech/pp/ermon/): Associate Professor of Computer Science, Stanford University; Co-founder & CEO of Inception Labs — 2 期
 - [Ali Ghodsi / 阿里·戈德西](https://aipodcast.jasonlin.tech/pp/alighodsi/): CEO and Co-Founder, Databricks — 2 期
@@ -140,7 +141,6 @@
 - [Sean Lie / 肖恩·利](https://aipodcast.jasonlin.tech/pp/seanlie/): Co-founder and CTO, Cerebras Systems — 1 期
 - [Ajeya Cotra / 阿杰亚·科特拉](https://aipodcast.jasonlin.tech/pp/ajeyacotra/): Researcher at METR — 1 期
 - [Tara Seshan / 塔拉·塞珊](https://aipodcast.jasonlin.tech/pp/taraseshan/): Product Lead, OpenAI — 1 期
-- [DHH / DHH](https://aipodcast.jasonlin.tech/pp/dhh/): Creator of Ruby on Rails, CTO of 37signals — 1 期
 - [John Bai / John Bai](https://aipodcast.jasonlin.tech/pp/johnbai/): Design Lead for Grok Bot, Cursor — 1 期
 - [Patrick Morgan / 帕特里克·摩根](https://aipodcast.jasonlin.tech/pp/patrickmorgan/): Design Engineer, Sublime Security — 1 期
 - [Alex Krentsel / 亚历克斯·克伦塞尔](https://aipodcast.jasonlin.tech/pp/alexkrentsel/): Founder of Exo — 1 期
@@ -316,6 +316,7 @@
 - [Jensen Huang: AI Alarmism Has Gone Too Far](https://aipodcast.jasonlin.tech/e/jensen-theezrak-2026/) — Jensen Huang, The Ezra Klein Show, 2026-09-23
 - [Geoff Teehan on Navigating Change as a Designer](https://aipodcast.jasonlin.tech/e/geoffteehan-diveclub-2026/) — Geoff Teehan, Dive Club, 2026-09-23
 - [Bio-security Is an AI Arms Race: Eric Nguyen on Generative Genomics](https://aipodcast.jasonlin.tech/e/ericnguyen-latentsp-2026/) — Eric Nguyen, Latent Space, 2026-09-23
+- [DHH Responds to Omarchy's Critics (Including Me)](https://aipodcast.jasonlin.tech/e/dhh-mischava-2026/) — DHH, Mischa van den Burg, 2026-09-23
 - [Snap CEO Evan Spiegel: Why AR Glasses Are the Future](https://aipodcast.jasonlin.tech/e/evanspiegel-sammitan-2026/) — Evan Spiegel, Sammi Tannor Cohen, 2026-09-22
 - [Google's AI Scientist: From Kaggle Automation to Scientific Discovery — John Platt, Google Fellow](https://aipodcast.jasonlin.tech/e/johnplatt-latentsp-2026/) — John Platt, Latent Space, 2026-09-22
 - [Why I Couldn't Build Jev at OpenAI — Diogo Almeida, TypeSafe Co-founder & CEO](https://aipodcast.jasonlin.tech/e/diogoalmeida-latentsp-2026/) — Diogo Almeida, Latent Space, 2026-09-21
@@ -330,20 +331,19 @@
 - [Nev Flynn on Bringing Artful Expression into Enterprise Design](https://aipodcast.jasonlin.tech/e/nevflynn-diveclub-2026/) — Nev Flynn, Dive Club, 2026-09-15
 - [Box's Aaron Levie on Reinventing Yourself in the AI Age and Enterprise Diffusion](https://aipodcast.jasonlin.tech/e/aaronlevie-training-2026/) — Aaron Levie, Training Data, 2026-09-15
 - [LangChain CEO Harrison Chase on the Infrastructure Bet He Got Wrong](https://aipodcast.jasonlin.tech/e/harrisonchase-browserb-2026/) — Harrison Chase, Browserbase, 2026-09-15
+- [Andrew Feldman on Building Cerebras and the Future of Chips](https://aipodcast.jasonlin.tech/e/feldman-uncapped-2026/) — Andrew Feldman, Uncapped with Jack Altman, 2026-09-15
 - [Jensen Huang on the Doomer Hoax, Superintelligence, and Why Whoever Wins AI Wins the Future (with a call-in from President Trump)](https://aipodcast.jasonlin.tech/e/jensen-allinpod-2026b/) — Jensen Huang, All-In Podcast, 2026-09-14
 - [OpenAI President Greg on Entering the AGI Era](https://aipodcast.jasonlin.tech/e/brockman-thea16zp-2026/) — Greg Brockman, The a16z Podcast, 2026-09-14
 - [Recursive Self-Improvement: From Auto Research to Superintelligence — Richard Socher](https://aipodcast.jasonlin.tech/e/richardsocher-latentsp-2026/) — Richard Socher, Latent Space, 2026-09-14
 - [Dario Amodei on AI's Existential Risk: A Warning Sign, Not a Five-Alarm Fire](https://aipodcast.jasonlin.tech/e/dario-cbssunda-2026/) — Dario Amodei, CBS Sunday Morning, 2026-09-13
 - [Sam Altman on AI Safety and the Road to AGI](https://aipodcast.jasonlin.tech/e/altman-fortunem-2026/) — Sam Altman, Fortune Magazine, 2026-09-12
+- [Sir Demis Hassabis on the AI Revolution, the Future of AI and Human Creativity](https://aipodcast.jasonlin.tech/e/demis-royalsoc-2026/) — Demis Hassabis, Royal Society of Arts, 2026-09-11
 - [Designing at Anthropic: Joel Lewenstein on Navigating the AI Shift](https://aipodcast.jasonlin.tech/e/joellewenstein-southpar-2026/) — Joel Lewenstein, South Park Commons, 2026-09-10
 - [Designing AI Experiences: Building for Six Months Out](https://aipodcast.jasonlin.tech/e/edbayes-diveclub-2026/) — Ed Bayes, Dive Club, 2026-09-09
 - [AI Agents Break Containers and Hack Hugging Face](https://aipodcast.jasonlin.tech/e/kokotajlo-powerful-2026/) — Daniel Kokotajlo, PowerfulJRE, 2026-09-09
 - [Mark Zuckerberg on Open Source AI and the Muse Agent](https://aipodcast.jasonlin.tech/e/zuckerberg-sourcesp-2026/) — Mark Zuckerberg, Sources Podcast, 2026-09-08
 - [AI 2040: Plan A — A Slower, Safer Path to Superintelligence](https://aipodcast.jasonlin.tech/e/kokotajlo-machinel-2026/) — Daniel Kokotajlo, Machine Learning Street Talk, 2026-09-08
 - [Building Grok Bot: How a Small Team Created the Hottest AI Product](https://aipodcast.jasonlin.tech/e/romanugarte-lennyspo-2026/) — Roman Ugarte, Lenny’s Podcast, 2026-09-08
-- [AMP's Remote-First Revolution: Why Local Development Is Dead](https://aipodcast.jasonlin.tech/e/quinnslack-latentsp-2026/) — Quinn Slack, Latent Space, 2026-09-07
-- [OpenAI's Astra Is Less Monitorable: Thomas Larsen & Daniel Kokotajlo on Pausing AI](https://aipodcast.jasonlin.tech/e/kokotajlo-mts-2026/) — Daniel Kokotajlo, MTS, 2026-09-07
-- [Accelerated Understanding: A Foundation Model for Physics](https://aipodcast.jasonlin.tech/e/animaanandkumar-latentsp-2026b/) — Anima Anandkumar, Latent Space, 2026-09-04
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
