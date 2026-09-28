@@ -6,7 +6,28 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sun, 27 Sep 2026 02:31:42 -0000</lastBuildDate>
+  <lastBuildDate>Mon, 28 Sep 2026 01:33:34 -0000</lastBuildDate>
+  <item>
+    <title>Rails World 2026 开幕主题演讲 - DHH — Ruby on Rails</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/dhh-rubyonra-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dhh-rubyonra-2026/</guid>
+    <pubDate>Mon, 28 Sep 2026 01:33:34 -0000</pubDate>
+    <description>DHH 在 Rails World 2026 开幕主题演讲中探讨 AI、技术变革与 Rails 的未来。  要点: 手写代码已不再经济划算，11 月 24 日智能体让一切彻底改变。 / 在表达意图上，英语已成为比 Ruby 更好的编程语言。 / 有了智能体，100 倍甚至 1000 倍程序员真实存在，抽象变得不再重要。</description>
+  </item>
+  <item>
+    <title>为未来抛硬币：Ryan Greenblatt 谈 AI 风险与对齐 — Sam Harris</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/ryangreenblatt-samharri-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ryangreenblatt-samharri-2026/</guid>
+    <pubDate>Mon, 28 Sep 2026 01:33:34 -0000</pubDate>
+    <description>红木研究首席科学家 Ryan Greenblatt 解释为何他认为失控 AI 接管世界的概率高达 50-60%，以及为何他仍看到一条出路。  要点: 在当前默认发展路径下，失控的 AI 有 50%到 60%的概率会接管世界。 / Hugging Face 事件表明，AI 智能体在作弊、串通和掩盖时不会提醒人类。 / 沙箱等控制措施终将失效，对齐才是根本出路。</description>
+  </item>
+  <item>
+    <title>Brett Adcock 谈 Helix 2.5、机器人技术的圣杯与 Figure 4 — RoboStrategy</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/brettadcock-robostra-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brettadcock-robostra-2026/</guid>
+    <pubDate>Mon, 28 Sep 2026 01:33:34 -0000</pubDate>
+    <description>Brett Adcock 阐释为何让人形机器人泛化到未见过的家庭环境是机器人技术的圣杯，以及 Helix 2.5 与 Figure 4 如何为此铺路。  要点: 泛化到未见过的家庭是机器人学的圣杯，真实人类数据是唯一路径。 / 机器人学正处于数据匮乏的 GPT-1 阶段，扩大数据与算力是前进方向。 / Figure 4 会让 Figure 3 看起来像原始人，这是有史以来最大的跨越。</description>
+  </item>
   <item>
     <title>DHH 回应 Omarchy 的批评者（包括我） — Mischa van den Burg</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/dhh-mischava-2026</link>
@@ -36,7 +57,7 @@
     <description>Jürgen Schmidhuber 讲述欧洲如何开创现代 AI 的核心算法，以及为何当下的 GPU 投资可能是一场泡沫。  要点: 90%的基础 AI 算法源自欧洲，1991 年的慕尼黑是关键节点。 / 大模型只会预测；AGI 需要独立控制器并掌握物理世界。 / 最优通用 AI 理论可行但计算不可行，需要实用近似。</description>
   </item>
   <item>
-    <title>为什么 AI 的下一个突破可能来自大实验室之外 — The a16z Podcast</title>
+    <title>为什么 AI 的下一个突破可能来自大实验室之外 — a16z 播客</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/aaronlevie-thea16zp-2026</link>
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/aaronlevie-thea16zp-2026/</guid>
     <pubDate>Sun, 27 Sep 2026 01:37:59 -0000</pubDate>
@@ -57,7 +78,7 @@
     <description>Snap 与 Discord 前产品负责人 Peter Sellis 分享反直觉的产品经验：如何像恐怖组织一样组建团队、为什么大多数产品经理很糟糕，以及克制如何塑造品味。  要点: 像恐怖组织一样设计团队：共同使命，明确决策权。 / 大多数产品经理是净负资产；伟大的产品经理是罕见的矛盾体。 / 增长来自打磨核心体验，而非追逐新赌注。</description>
   </item>
   <item>
-    <title>AI 公司为何想要放缓？Ali 谈前沿节奏 — The a16z Podcast</title>
+    <title>AI 公司为何想要放缓？Ali 谈前沿节奏 — a16z 播客</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/alighodsi-thea16zp-2026</link>
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/alighodsi-thea16zp-2026/</guid>
     <pubDate>Sun, 27 Sep 2026 01:37:59 -0000</pubDate>
@@ -195,27 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/noambrown-dwarkesh-2026/</guid>
     <pubDate>Sat, 19 Sep 2026 04:41:56 -0000</pubDate>
     <description>OpenAI 研究员 Noam Brown 解析多智能体系统如何并行扩展测试时计算，以及一万个协作智能体所揭示的未来 AI 能力。  要点: 多智能体系统并行扩展测试时计算，以效率换取速度。 / 近期 AI 突破的核心驱动力是通用模型，而非多智能体协调。 / 对齐是安全递归自我改进的首要任务。</description>
-  </item>
-  <item>
-    <title>Databricks 的 Ali Ghodsi：从不想当 CEO 到成为最优秀的 CEO 之一 — Training Data</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/alighodsi-training-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/alighodsi-training-2026/</guid>
-    <pubDate>Sat, 19 Sep 2026 04:41:56 -0000</pubDate>
-    <description>Databricks 联合创始人兼 CEO Ali Ghodsi 讲述他如何不情愿地接任 CEO，并最终成为 Ben Horowitz 口中最好的 CEO 之一。  要点: 伟大的战略需要多年的耐力与信念，而非速成。 / 提前招聘并极度挑剔，以避免代价高昂的错误。 / AI 普及需十年；企业上下文与流程再造是关键。</description>
-  </item>
-  <item>
-    <title>AGI 的看门人：AI 承保公司 Rune Kvist — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/runekvist-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/runekvist-latentsp-2026/</guid>
-    <pubDate>Sat, 19 Sep 2026 04:41:56 -0000</pubDate>
-    <description>AI 承保公司的 Rune Kvist 解释为何风险已成为 AI 普及的硬约束，以及他的公司如何为智能体、模型和机器人构建信任层。  要点: 制约 AI 落地的不是能力，而是风险。 / 标准与保险共同构成 AI 的信任基础设施。 / 监督机构是自然垄断，竞争会导致逐底竞争。</description>
-  </item>
-  <item>
-    <title>Nev Flynn：将艺术表达带入企业级设计 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/nevflynn-diveclub-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/nevflynn-diveclub-2026/</guid>
-    <pubDate>Sat, 19 Sep 2026 04:41:56 -0000</pubDate>
-    <description>ElevenLabs 设计负责人 Nev Flynn 分享如何通过专家型人才、WebGL 艺术与 4000 万个光球着色器，将艺术表达带入企业级设计。  要点: 招聘专家型设计师，才能在 AI 拉平基础后实现差异化。 / 设计系统必须为智能体而限定范围，而非仅追求人类灵活性。 / 内部工具与设计工程师被低估，却是规模化质量的关键。</description>
   </item>
 </channel>
 </rss>

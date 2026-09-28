@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 295 位人物 / 678 期访谈
+规模: 297 位人物 / 680 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -127,6 +127,8 @@
 - [Anastasis Germanidis / 阿纳斯塔西斯·杰尔马尼迪斯](https://aipodcast.jasonlin.tech/pp/anastasisgermanidis/): Co-founder & CTO, Runway — 1 期
 - [Geoff Teehan / 杰夫·蒂汉](https://aipodcast.jasonlin.tech/pp/geoffteehan/): Chief Design Officer, Lightspark — 1 期
 - [Eric Nguyen / 埃里克·阮](https://aipodcast.jasonlin.tech/pp/ericnguyen/): CEO & Co-founder, Radical Numerics — 1 期
+- [Frank Hutter / 弗兰克·胡特](https://aipodcast.jasonlin.tech/pp/frankhutter/): Professor of Machine Learning, University of Freiburg; ELLIS Institute Tübingen — 1 期
+- [Amjad Masad / 阿姆贾德·马萨德](https://aipodcast.jasonlin.tech/pp/amjadmasad/): Founder & CEO, Replit — 1 期
 - [John Platt / 约翰·普拉特](https://aipodcast.jasonlin.tech/pp/johnplatt/): Google Fellow, Google Research — 1 期
 - [Peter Sellis / 彼得·塞利斯](https://aipodcast.jasonlin.tech/pp/petersellis/): Former Head of Product, Discord — 1 期
 - [Rune Kvist / 鲁内·克维斯特](https://aipodcast.jasonlin.tech/pp/runekvist/): Cofounder, AI Underwriting Company (AIUC) — 1 期
@@ -319,6 +321,8 @@
 - [Geoff Teehan on Navigating Change as a Designer](https://aipodcast.jasonlin.tech/e/geoffteehan-diveclub-2026/) — Geoff Teehan, Dive Club, 2026-09-23
 - [Bio-security Is an AI Arms Race: Eric Nguyen on Generative Genomics](https://aipodcast.jasonlin.tech/e/ericnguyen-latentsp-2026/) — Eric Nguyen, Latent Space, 2026-09-23
 - [DHH Responds to Omarchy's Critics (Including Me)](https://aipodcast.jasonlin.tech/e/dhh-mischava-2026/) — DHH, Mischa van den Burg, 2026-09-23
+- [TabPFN: The AI That Replaces Hours of Model Tuning for Tabular Data](https://aipodcast.jasonlin.tech/e/frankhutter-machinel-2026/) — Frank Hutter, Machine Learning Street Talk, 2026-09-23
+- [Replit CEO Amjad Masad: What Young People Should Learn in the AI Era](https://aipodcast.jasonlin.tech/e/amjadmasad-a16zpodc-2026/) — Amjad Masad, The a16z Podcast, 2026-09-23
 - [Snap CEO Evan Spiegel: Why AR Glasses Are the Future](https://aipodcast.jasonlin.tech/e/evanspiegel-sammitan-2026/) — Evan Spiegel, Sammi Tannor Cohen, 2026-09-22
 - [Google's AI Scientist: From Kaggle Automation to Scientific Discovery — John Platt, Google Fellow](https://aipodcast.jasonlin.tech/e/johnplatt-latentsp-2026/) — John Platt, Latent Space, 2026-09-22
 - [Brett Adcock on Helix 2.5, the Holy Grail of Robotics, and Figure 4](https://aipodcast.jasonlin.tech/e/brettadcock-robostra-2026/) — Brett Adcock, RoboStrategy, 2026-09-22
@@ -342,8 +346,6 @@
 - [Sam Altman on AI Safety and the Road to AGI](https://aipodcast.jasonlin.tech/e/altman-fortunem-2026/) — Sam Altman, Fortune Magazine, 2026-09-12
 - [Sir Demis Hassabis on the AI Revolution, the Future of AI and Human Creativity](https://aipodcast.jasonlin.tech/e/demis-royalsoc-2026/) — Demis Hassabis, Royal Society of Arts, 2026-09-11
 - [Designing at Anthropic: Joel Lewenstein on Navigating the AI Shift](https://aipodcast.jasonlin.tech/e/joellewenstein-southpar-2026/) — Joel Lewenstein, South Park Commons, 2026-09-10
-- [Designing AI Experiences: Building for Six Months Out](https://aipodcast.jasonlin.tech/e/edbayes-diveclub-2026/) — Ed Bayes, Dive Club, 2026-09-09
-- [AI Agents Break Containers and Hack Hugging Face](https://aipodcast.jasonlin.tech/e/kokotajlo-powerful-2026/) — Daniel Kokotajlo, PowerfulJRE, 2026-09-09
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
