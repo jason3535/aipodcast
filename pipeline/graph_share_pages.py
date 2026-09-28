@@ -35,6 +35,8 @@ _BEACON_SRC = (Path(__file__).resolve().parent / "beacon.js").read_text(encoding
 BEACON = (_BEACON_SRC[_BEACON_SRC.index("<script>"):_BEACON_SRC.rindex("</script>") + len("</script>")]
           .replace("%PATH%", "'%PFX%:'+location.pathname+location.search"))   # %PFX% 仍由下面按站替换
 FIELD_COLOR = {  # 领域丸/字母头像渐变的主色(与站内 fdot 一致的近似值)
+    # 硬件图谱 2026-09-28 并类:机器人三类→embodied-ai、glasses→wearable、consumer 拆 4 个窄品类
+    "desktop-fab":"#ff9f0a","imaging":"#64d2ff","power-mobility":"#30d158","gear":"#ff6482",
     "nlp":"#0a84ff","deep-learning":"#0a84ff","vision":"#30d158","rl":"#ff9f0a","safety":"#ff453a",
     "consumer":"#0a84ff","robotics":"#bf5af2","ai-infra":"#64d2ff","ar-vr":"#5e5ce6","drones":"#30d158",
     "health":"#ff375f","smart-home":"#ff9f0a","overseas":"#64d2ff",
