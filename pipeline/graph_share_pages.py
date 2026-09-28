@@ -75,7 +75,7 @@ def parse_graph(p: Path):
     pod = dict(re.findall(r"([\w-]+)\s*:\s*'([^']*)'", (re.search(r"var PODCAST=\{([^;]*)\};", s) or [None, ""])[1]))
     pap = dict(re.findall(r"([\w-]+)\s*:\s*'([^']*)'", (re.search(r"var PAPER=\{([^;]*)\};", s) or [None, ""])[1]))
     photos = set(re.findall(r'"([\w-]+)"', (re.search(r"LOCAL_PHOTOS = new Set\(\[(.*?)\]\)", s, re.S) or [None, ""])[1]))
-    return nodes, zh, conns, pod, pap, photos
+    return nodes, zh, conns, pod, pap, photos, parse_org_zh(s)
 
 def donor_parts(p: Path):
     """从既有任一 /p 页提取 <style> 与底部 lang script,保证视觉一致。"""
@@ -87,8 +87,27 @@ def donor_parts(p: Path):
     script = re.search(r"<script>\(function\(\)\{var b=document\.getElementById\('langtoggle'.*?</script>", donor, re.S).group(0)
     return style, script
 
-def build_page(site, gid, n, z, neigh, pod_pid, pap_pid, has_photo, style, script):
+def parse_org_zh(html):
+    """取图谱里的 orgZh 映射(机构中文名);没有这块就返回空 dict。"""
+    m = re.search(r'const orgZh\s*=\s*\{', html)
+    if not m: return {}
+    i = m.end() - 1; d = 0
+    for j in range(i, len(html)):
+        if html[j] == '{': d += 1
+        elif html[j] == '}':
+            d -= 1
+            if d == 0:
+                blk = html[i:j+1]; break
+    else:
+        return {}
+    return {a: b for a, b in re.findall(r'"([^"]+)"\s*:\s*"([^"]+)"', blk)}
+
+def build_page(site, gid, n, z, neigh, pod_pid, pap_pid, has_photo, style, script, org_zh=None):
     name, zname = n["name"], (z.get("zhName") or n["name"])
+    org_en = n["org"]; org_cn = (org_zh or {}).get(org_en, "")
+    # 标题中英双写:中文名/中文机构名在前,让中文搜索命中(2026-09-28)
+    t_person = (zname if re.search(r"[A-Za-z]", zname) else f"{zname} {name}") if zname and zname != name else name
+    t_org = f"{org_cn} {org_en}" if org_cn and org_cn != org_en else org_en
     title_zh, title_en = (z.get("title") or n["title"]), n["title"]
     bio_zh, bio_en = (z.get("bio") or n["bio"]), n["bio"]
     desc = (bio_zh or bio_en)[:150]
@@ -115,7 +134,7 @@ def build_page(site, gid, n, z, neigh, pod_pid, pap_pid, has_photo, style, scrip
    深色页面顶上留一条白边(2026-08-15 实测) */
 :root{{color-scheme:dark}}html{{background:#000}}</style>
 <script>try{{document.documentElement.className=(localStorage.getItem('graphLang')==='en')?'lang-en':'lang-zh'}}catch(e){{document.documentElement.className='lang-zh'}}</script>
-<title>{esc(name)} · {esc(n["org"])} | {site["zh"]}</title>
+<title>{esc(t_person)} · {esc(t_org)} | {site["zh"]}</title>
 <meta name="description" content="{esc(desc)}…">
 <link rel="canonical" href="{url}">
 <meta property="og:type" content="profile"><meta property="og:url" content="{url}">
@@ -207,7 +226,7 @@ def main():
     missing_total = 0
     for key, site in SITES.items():
         p = site["path"]
-        nodes, zh, conns, pod, pap, photos = parse_graph(p)
+        nodes, zh, conns, pod, pap, photos, org_zh = parse_graph(p)
         have = {f.stem for f in (p / "p").glob("*.html")}
         missing = [g for g in nodes if g not in have or "--refresh-all" in sys.argv]   # --refresh-all:模板改了,全站重写页(OG 图不动)
         if not missing:
@@ -223,7 +242,7 @@ def main():
                 o = b if a == gid else (a if b == gid else None)
                 if o and o in nodes: neigh.append((o, names[o] if names[o] == nodes[o]["name"] else f'{names[o]} {nodes[o]["name"]}', lb))
             pg = build_page(site, gid, nodes[gid], zh.get(gid, {}), neigh[:6],
-                            pod.get(gid), pap.get(gid), gid in photos, style, script)
+                            pod.get(gid), pap.get(gid), gid in photos, style, script, org_zh)
             (p / "p" / f"{gid}.html").write_text(pg, encoding="utf-8")
             if not (p / "og" / f"{gid}.png").exists():   # OG 图只补缺;已有的(含 build.mjs 的 Chromium 版)绝不覆盖
                 build_og(site, gid, nodes[gid], zh.get(gid, {}), gid in photos, p / "og" / f"{gid}.png")
