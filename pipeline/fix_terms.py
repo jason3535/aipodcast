@@ -33,6 +33,13 @@ RULES = [
     (re.compile(BL+rf"{VAR}\s?(sonnet)"+BR, re.I), "Claude Sonnet"),
     (re.compile(BL+rf"{VAR}\s?(haiku)"+BR, re.I), "Claude Haiku"),
     (re.compile(BL+r"cloud for chrome"+BR, re.I), "Claude for Chrome"),
+    (re.compile(BL+rf"{VAR}\s?(tag)"+BR, re.I), "Claude Tag"),                 # 2026-09-29 Thariq 期:cloud tag/claw tag ×10
+    (re.compile(BL+rf"{VAR}[\s.]?(md)"+BR, re.I), "CLAUDE.md"),                 # cloud MD / cloud.md / cloud. MD
+    (re.compile(BL+rf"{VAR}\s?(mods)"+BR, re.I), "Claude Mods"),
+    # 只在明确是误听变体时才碰 agent/skill——"cloud agent" 可能真指云端智能体,故排除 cloud
+    (re.compile(BL+r"(?:claw|clawed|cloth|clock|clod|klaude|klaud|glaude)\s?(agents?)"+BR, re.I), "Claude agent"),
+    (re.compile(BL+r"(?:claw|clawed|cloth|clock|clod|klaude|klaud|glaude)\s?(skills?)"+BR, re.I), "Claude Skill"),
+    (re.compile(r"云代码"), "Claude Code"),                                       # 中文侧:译者把 Cloud Code 直译成「云代码」
     # ---- Grok / Groq / Cerebras(2026-09-14 用户报) ----
     # ⚠️ Grok(xAI 的模型)与 Groq(做 LPU 的推理芯片公司)是**两家**,自动字幕都听成 "Grock",
     # 一律替换必然改错一半。全站扫出 54 处 Grock:50 处指 xAI,4 处指芯片公司
