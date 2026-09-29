@@ -6,7 +6,28 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Mon, 28 Sep 2026 03:09:53 -0000</lastBuildDate>
+  <lastBuildDate>Tue, 29 Sep 2026 01:34:00 -0000</lastBuildDate>
+  <item>
+    <title>Claude Code 的未来：Mods、可变软件与多智能体协作 — Thariq Shihipar，Anthropic — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/thariq-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/thariq-latentsp-2026/</guid>
+    <pubDate>Tue, 29 Sep 2026 01:34:00 -0000</pubDate>
+    <description>Anthropic 的 Thariq Shihipar 探讨 Claude Code 如何通过 Mods、可变软件与多智能体协作演进，以及如何跟上前沿节奏。  要点: 提示词是元技能：在脑中建模 Claude，像向高管汇报一样交代任务。 / 前期多花上下文和算力；在坏输出上反复迭代只会浪费 token。 / 前沿节奏是每个工程师都该理解并为之发声的技术问题。</description>
+  </item>
+  <item>
+    <title>Jev 如何让 AI 变成真正能做事的软件 — The a16z Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/diogoalmeida-thea16zp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/diogoalmeida-thea16zp-2026/</guid>
+    <pubDate>Tue, 29 Sep 2026 01:34:00 -0000</pubDate>
+    <description>TypeSafe 创始人 Diogo 讲述 Jev 如何把 AI 变成真正能自动完成工作的智能软件，而不只是更快地写代码。  要点: AI 很聪明但对自动化无用；我们需要智能软件，而非更快的编码。 / Jev 将自然语言与状态机结合，扩展软件能力。 / SaaS 公司会因 AI 而繁荣而非消亡；可靠性是核心挑战。</description>
+  </item>
+  <item>
+    <title>Max Junestrand：你需要比任何人都更快学习的意愿 — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/maxjunestrand-ycombina-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/maxjunestrand-ycombina-2026/</guid>
+    <pubDate>Tue, 29 Sep 2026 01:34:00 -0000</pubDate>
+    <description>Max Junestrand 分享 Legora 如何从被 YC 拒绝成长为服务全球超过 3% 律师的法律 AI 平台。  要点: 为市场构建产品时，学习意愿比领域专业知识更重要。 / 押注模型进步，不要微调；专注于交付价值。 / 文化、招聘成长型人才和讲故事对规模化至关重要。</description>
+  </item>
   <item>
     <title>TabPFN：取代数小时模型调优的表格数据 AI — 机器学习街谈</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/frankhutter-machinel-2026</link>
@@ -195,27 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/pincus-harvardb-2026/</guid>
     <pubDate>Sat, 26 Sep 2026 10:14:10 -0000</pubDate>
     <description>Zynga 创始人马克·平卡斯分享童年创伤如何塑造他的创始人思维，以及他“验证、优化、创新”的框架。  要点: 赢家直觉比点子更重要；假设你的点子有 75%的概率是错的。 / 运用“验证过、更好、全新”框架：将验证过的元素与最小创新结合。 / 在无法亲临现场前要微观管理，之后建立决策系统。</description>
-  </item>
-  <item>
-    <title>总台专访马斯克：中国的魅力无以言表 — CGTN 中国国际电视台</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/elon-cctvfina-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/elon-cctvfina-2026/</guid>
-    <pubDate>Thu, 24 Sep 2026 04:59:08 -0000</pubDate>
-    <description>特斯拉 CEO 埃隆·马斯克接受央视财经专访，畅谈中国市场的巨大进步、特斯拉上海超级工厂以及人形机器人和 AI 的未来。  要点: 马斯克呼吁大家亲自去中国看看，感受其飞速发展。 / 特斯拉上海超级工厂是其最大出口枢纽，已生产超 450 万辆汽车。 / 人形机器人 10 年内全球将达 10 亿台，提示工程是关键。</description>
-  </item>
-  <item>
-    <title>AI：好得难以置信，差得毫无用处 — AI 理事会</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/diogoalmeida-aicounci-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/diogoalmeida-aicounci-2026/</guid>
-    <pubDate>Mon, 21 Sep 2026 15:15:03 -0000</pubDate>
-    <description>前 OpenAI 研究员 Diogo 探讨大语言模型过度承诺与交付不足之间的巨大鸿沟，追问为何 AI 在某些任务上表现出色却在其他任务上失灵。  要点: 大语言模型被优化用于人类在环的辅助，而非可靠的自动化。 / RLHF 导致模式崩溃，使模型输出看似合理但常常错误。 / 对 LLM 进步而言，做对任务比算力或数据更重要。</description>
-  </item>
-  <item>
-    <title>302 个神经元的线虫启发了他们的架构——Ramin Hasani，Liquid AI — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/hasani-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/hasani-latentsp-2026/</guid>
-    <pubDate>Sat, 19 Sep 2026 04:41:56 -0000</pubDate>
-    <description>Liquid AI CEO Ramin Hasani 讲述 302 个神经元的秀丽隐杆线虫如何启发液态神经网络与高效类脑 AI。  要点: Liquid AI 从零构建基础模型，参数规模从数千万扩展到 700 亿。 / 端侧 AI 对成本、隐私、离线和气隙能力至关重要。 / 大规模下架构应无偏；偏见仅在小规模时有帮助。</description>
   </item>
 </channel>
 </rss>
