@@ -6,7 +6,21 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Mon, 28 Sep 2026 01:33:34 -0000</lastBuildDate>
+  <lastBuildDate>Mon, 28 Sep 2026 03:09:53 -0000</lastBuildDate>
+  <item>
+    <title>TabPFN：取代数小时模型调优的表格数据 AI — 机器学习街谈</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/frankhutter-machinel-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/frankhutter-machinel-2026/</guid>
+    <pubDate>Mon, 28 Sep 2026 03:09:53 -0000</pubDate>
+    <description>Frank Hutter 解释 TabPFN 如何将上下文学习引入表格数据，使深度学习最终超越 CatBoost 和 XGBoost。  要点: TabPFN 用一次前向传播替代超参数调优，在表格数据上超越 XGBoost。 / 带因果先验的合成数据使训练无需担心泄漏或记忆问题。 / 因果基础模型能从观察数据预测干预效果，减少对随机对照试验的需求。</description>
+  </item>
+  <item>
+    <title>Replit CEO Amjad Masad：AI 时代年轻人应该学什么 — a16z 播客</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/amjadmasad-a16zpodc-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/amjadmasad-a16zpodc-2026/</guid>
+    <pubDate>Mon, 28 Sep 2026 03:09:53 -0000</pubDate>
+    <description>Replit CEO Amjad Masad 认为，年轻人的真正价值在于质疑根深蒂固的观念、成为异端，大学应培养第一性原理思维，而非规定学习内容。  要点: 年轻人的价值在于质疑根深蒂固的观念，做异端者。 / 大学应允许探索，而非规定僵化路径；AI 能实现兴趣驱动的学习。 / 信任学生走自己的路，哪怕疯狂，才能构建未来。</description>
+  </item>
   <item>
     <title>Rails World 2026 开幕主题演讲 - DHH — Ruby on Rails</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/dhh-rubyonra-2026</link>
@@ -202,20 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/hasani-latentsp-2026/</guid>
     <pubDate>Sat, 19 Sep 2026 04:41:56 -0000</pubDate>
     <description>Liquid AI CEO Ramin Hasani 讲述 302 个神经元的秀丽隐杆线虫如何启发液态神经网络与高效类脑 AI。  要点: Liquid AI 从零构建基础模型，参数规模从数千万扩展到 700 亿。 / 端侧 AI 对成本、隐私、离线和气隙能力至关重要。 / 大规模下架构应无偏；偏见仅在小规模时有帮助。</description>
-  </item>
-  <item>
-    <title>为何扩散模型将赢得 AI 推理：Stefano Ermon 谈挑战大实验室 — No Priors</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/ermon-nopriors-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ermon-nopriors-2026/</guid>
-    <pubDate>Sat, 19 Sep 2026 04:41:56 -0000</pubDate>
-    <description>Inception 联合创始人兼 CEO Stefano Ermon 解释为何扩散模型将主导 AI 推理，以及速度与效率将如何定义 AI 的下一个阶段。  要点: 扩散模型通过并行处理 token，将在推理阶段占据主导，而非自回归方式。 / 推理效率已成为部署和强化学习后训练的新瓶颈。 / 小团队通过掌控全栈，也能与大型实验室竞争。</description>
-  </item>
-  <item>
-    <title>OpenAI 研究员 Noam 谈智能体集群与递归自我改进 — Dwarkesh Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/noambrown-dwarkesh-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/noambrown-dwarkesh-2026/</guid>
-    <pubDate>Sat, 19 Sep 2026 04:41:56 -0000</pubDate>
-    <description>OpenAI 研究员 Noam Brown 解析多智能体系统如何并行扩展测试时计算，以及一万个协作智能体所揭示的未来 AI 能力。  要点: 多智能体系统并行扩展测试时计算，以效率换取速度。 / 近期 AI 突破的核心驱动力是通用模型，而非多智能体协调。 / 对齐是安全递归自我改进的首要任务。</description>
   </item>
 </channel>
 </rss>
