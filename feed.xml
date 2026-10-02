@@ -6,7 +6,42 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Tue, 29 Sep 2026 01:34:00 -0000</lastBuildDate>
+  <lastBuildDate>Thu, 01 Oct 2026 01:39:02 -0000</lastBuildDate>
+  <item>
+    <title>意外后果：为我们所构建之物承担责任 — General Magic and the Soul of Tech</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/fadell-generalm-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/fadell-generalm-2026/</guid>
+    <pubDate>Thu, 01 Oct 2026 01:39:02 -0000</pubDate>
+    <description>托尼·法德尔反思他参与创造的技术所带来的意外后果，以及如何在人工智能时代负责任地创新。  要点: 技术创造者必须回归，成为意外后果的理性声音。 / 健康的用户造就健康的客户，驱动长期商业价值。 / 对 AI 的认知投降，比 AI 本身更危险。</description>
+  </item>
+  <item>
+    <title>OpenAI DevDay 内幕：超人级计算机使用、决策 API 与 AI 云 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/ariweinstein-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ariweinstein-latentsp-2026/</guid>
+    <pubDate>Thu, 01 Oct 2026 01:39:02 -0000</pubDate>
+    <description>OpenAI 的 Ari 深度解读 DevDay 重磅发布：从超人级计算机使用、决策 API 到 AI 云。  要点: 电脑操作现已超越普通人，下一个前沿是超人速度。 / 无障碍树和 DOM 访问优于截图滚动循环。 / 决策 API 是 Luna 权重加结构化输出和并行推理。</description>
+  </item>
+  <item>
+    <title>OpenRouter 创始人 Alex Atallah：以 70 亿美元出售给 Stripe，以及正在展开的 AI 经济 — Sabrina Halper Show</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/alexatallah-sabrinah-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/alexatallah-sabrinah-2026/</guid>
+    <pubDate>Thu, 01 Oct 2026 01:39:02 -0000</pubDate>
+    <description>OpenRouter 创始人 Alex Atallah 畅谈以 70 多亿美元出售给 Stripe、服务 1000 万开发者和每日处理 10 万亿 token，以及为何 AI 经济必须保持多元异构。  要点: OpenRouter 每天为 1000 万开发者路由 10 万亿 token，如今以 70 多亿美元卖给 Stripe。 / 开发者用脚投票的偏好，比静态基准更能反映模型优劣。 / 智能体将推动大部分 GDP 增长，稳定币更适合智能体支付。</description>
+  </item>
+  <item>
+    <title>Danny Martinez：在当今设计就业市场中脱颖而出 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/dannymartinez-diveclub-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dannymartinez-diveclub-2026/</guid>
+    <pubDate>Thu, 01 Oct 2026 01:39:02 -0000</pubDate>
+    <description>Decimals 首席执行官 Danny Martinez 解析设计就业市场的变革，以及设计师和招聘经理需要了解的关键趋势。  要点: 设计岗位正在融合，会用新工具动手做的人比名校背景更吃香。 / 作品集要有人味：独特、用心、个人化，不能是套路化生成。 / 顶尖设计工程师年薪超 30 万美元，自由品牌设计师可达 75 万。</description>
+  </item>
+  <item>
+    <title>Molly Graham：AI 转型中隐藏的悲伤、倦怠与机遇 — Lenny’s Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/mollygraham-lennyspo-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/mollygraham-lennyspo-2026/</guid>
+    <pubDate>Thu, 01 Oct 2026 01:39:02 -0000</pubDate>
+    <description>Molly Graham 再次做客，重新审视她经典的“交出你的乐高”职业建议在 AI 时代的适用性——哪些该放手、哪些该保留，以及如何面对变革中的悲伤与机遇。  要点: AI 转型带来悲伤和倦怠，但也为学习者带来机遇。 / 把 AI 当作初级实习生：提供背景、指导和迭代。 / 管理者是职场幸福的关键；削减管理层是个错误。</description>
+  </item>
   <item>
     <title>Claude Code 的未来：Mods、可变软件与多智能体协作 — Thariq Shihipar，Anthropic — Latent Space</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/thariq-latentsp-2026</link>
@@ -181,41 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/satya-sourcesp-2026/</guid>
     <pubDate>Sat, 26 Sep 2026 10:14:10 -0000</pubDate>
     <description>萨提亚·纳德拉探讨 AI 智能体的崛起、下一代交互入口之争，以及微软如何为企业布局 Copilot。  要点: 智能体时代将把可寻址市场扩大数个数量级，远超云计算。 / AGI 应以 GDP 提升来衡量，而非模型基准。 / 将 AI 拟人化可能阻碍对齐，而非实现对齐。</description>
-  </item>
-  <item>
-    <title>微软 AI CEO 穆斯塔法·苏莱曼：为何 AI 需要一条“红线” — 彭博科技</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/suleyman-bloomber-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/suleyman-bloomber-2026/</guid>
-    <pubDate>Sat, 26 Sep 2026 10:14:10 -0000</pubDate>
-    <description>穆斯塔法·苏莱曼解释近期 AI 事件为何令他警觉，以及为何行业需要为 AI 安全划定一条红线。  要点: AI 必须始终从属于人类，不可控系统是不可逾越的红线。 / 在放缓 AI 发展之前，必须先建立独立审计和可验证的遏制机制。 / 中国在防止失控 AI 方面有共同利益，需要合作而非对抗。</description>
-  </item>
-  <item>
-    <title>10 万亿美元的代币经济——OpenRouter 的 Alex Atallah — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/alexatallah-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/alexatallah-latentsp-2026/</guid>
-    <pubDate>Sat, 26 Sep 2026 10:14:10 -0000</pubDate>
-    <description>OpenRouter 的 Alex Atallah 解析代币经济如何增长至 10 万亿美元，以及为何模型市场是 AI 基础设施的未来。  要点: 代币是一种新的价值单位；代币经济十年内可能达到 10 万亿美元。 / 欺诈和滥用会随代币价值同步扩大，需要新的安全基础设施。 / 中立的模型路由层是关键的发行基础设施，而不仅仅是薄包装。</description>
-  </item>
-  <item>
-    <title>Runway 的超越视频之赌：世界模型、机器人与神经操作系统——Anastasis Germanidis — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/anastasisgermanidis-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/anastasisgermanidis-latentsp-2026/</guid>
-    <pubDate>Sat, 26 Sep 2026 10:14:10 -0000</pubDate>
-    <description>Runway 联合创始人 Anastasis Germanidis 探讨公司从生成式视频到世界模型、机器人以及全神经操作系统的演进。  要点: Runway 正从视频生成转向动作条件世界模型与神经界面。 / 第三人称视频预训练是机器人领域最具扩展性的数据来源。 / 仅靠扩展视频预测或许就足以构建世界模型，无需新架构。</description>
-  </item>
-  <item>
-    <title>扎克伯格谈 Meta AI 眼镜、Muse 与信任问题 — Joanna Stern</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/zuckerberg-joannast-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/zuckerberg-joannast-2026/</guid>
-    <pubDate>Sat, 26 Sep 2026 10:14:10 -0000</pubDate>
-    <description>马克·扎克伯格畅谈 Meta 新款 AI 眼镜、Muse 智能体，以及为何信任与对齐比能力更重要。  要点: 信任与对齐是下一项关键能力，而非与能力权衡取舍。 / 眼镜将成为最自然的计算平台，融合数字与物理世界。 / 每个人都将拥有理解目标与情境的个人智能体。</description>
-  </item>
-  <item>
-    <title>验证、优化、创新：马克·平卡斯谈掌控与押注自己 — 哈佛商学院</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/pincus-harvardb-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/pincus-harvardb-2026/</guid>
-    <pubDate>Sat, 26 Sep 2026 10:14:10 -0000</pubDate>
-    <description>Zynga 创始人马克·平卡斯分享童年创伤如何塑造他的创始人思维，以及他“验证、优化、创新”的框架。  要点: 赢家直觉比点子更重要；假设你的点子有 75%的概率是错的。 / 运用“验证过、更好、全新”框架：将验证过的元素与最小创新结合。 / 在无法亲临现场前要微观管理，之后建立决策系统。</description>
   </item>
 </channel>
 </rss>
