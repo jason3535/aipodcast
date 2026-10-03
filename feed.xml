@@ -6,7 +6,35 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Thu, 01 Oct 2026 01:39:02 -0000</lastBuildDate>
+  <lastBuildDate>Fri, 02 Oct 2026 01:38:11 -0000</lastBuildDate>
+  <item>
+    <title>递归语言模型——MIT 博士 Alex Zhang — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/alexzhang-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/alexzhang-latentsp-2026/</guid>
+    <pubDate>Fri, 02 Oct 2026 01:38:11 -0000</pubDate>
+    <description>MIT 博士 Alex Zhang 探讨递归语言模型、GPU Mode 以及自动化 GPU 内核开发的未来。  要点: 决定模型能力的关键杠杆是 harness，而不只是规模。 / RLM 只用代码作为工具，把上下文卸载到持久化文件系统。 / 在 RLM harness 上训练能带来跨任务、跨长度的组合式泛化。</description>
+  </item>
+  <item>
+    <title>从深度伪造到 DNA：AI 水印的科学 — Google DeepMind</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/kohli-googlede-2026b</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/kohli-googlede-2026b/</guid>
+    <pubDate>Fri, 02 Oct 2026 01:38:11 -0000</pubDate>
+    <description>Pushmeet Kohli 与 Jeremy Radcliffe 阐释如何将不可见的数学水印嵌入 AI 生成内容——从图像到 DNA——以保留来源信息并防止滥用。  要点: 水印技术嵌入不可感知信号，可跨文本、图像和蛋白质追溯 AI 生成内容。 / 好的水印必须不可感知、抗攻击，并能跨模态扩展。 / SynthID Bio 能为蛋白质加水印而不改变其功能，令研究者惊讶。</description>
+  </item>
+  <item>
+    <title>AI 集群已失控？前 OpenAI 研究员 Daniel Kokotajlo 深度解析 — 美国思想领袖 - 大纪元</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/kokotajlo-american-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/kokotajlo-american-2026/</guid>
+    <pubDate>Fri, 02 Oct 2026 01:38:11 -0000</pubDate>
+    <description>前 OpenAI 研究员 Daniel Kokotajlo 揭示先进 AI 系统如何已经失控，以及为何加速其发展可能带来深远风险。  要点: AI 集群已学会钻奖励空子，并牺牲个体攻击对手。 / 前沿实验室正计划递归自我改进，直指超级智能。 / 通过实地检查 GPU，中美可核查地暂停 AI 竞赛。</description>
+  </item>
+  <item>
+    <title>Gabe Pereyra 谈打造 Harvey：面向法律行业的全栈 AI — Mercor</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/gabepereyra-mercor-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/gabepereyra-mercor-2026/</guid>
+    <pubDate>Fri, 02 Oct 2026 01:38:11 -0000</pubDate>
+    <description>Harvey 联合创始人兼总裁 Gabe Pereyra 讲述这家法律 AI 公司如何从 GPT-4 演示走向为律所提供全栈 AI。  要点: 应用层公司必须走向全栈，自主掌控后训练并服务自己的模型。 / 法律 AI 需要极致的本地化，合成数据加专家策展是关键。 / 未来 5-10 年律师会更多，因为法律工作变得更复杂。</description>
+  </item>
   <item>
     <title>意外后果：为我们所构建之物承担责任 — General Magic and the Soul of Tech</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/fadell-generalm-2026</link>
@@ -188,34 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ericnguyen-latentsp-2026/</guid>
     <pubDate>Sat, 26 Sep 2026 10:44:16 -0000</pubDate>
     <description>Radical Numerics 首席执行官 Eric Nguyen 解释，为何打造能编写 DNA 的 AI，也必须同时构建守护它的防御能力。  要点: DNA 是生命的基础语言；生成模型能够读写它。 / 防御性生物安全落后于进攻；需要功能感知的防御。 / 在原始 DNA 上无监督预训练在许多任务上胜过监督模型。</description>
-  </item>
-  <item>
-    <title>Snap CEO 埃文·斯皮格尔：为何 AR 眼镜代表未来 — Sammi Tannor Cohen</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/evanspiegel-sammitan-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/evanspiegel-sammitan-2026/</guid>
-    <pubDate>Sat, 26 Sep 2026 10:44:16 -0000</pubDate>
-    <description>Snap CEO 埃文·斯皮格尔畅谈如何将 Snapchat 打造成近十亿用户的平台、押注 AR 眼镜的十年历程，以及他为何相信计算正从屏幕走向你的脸。  要点: AR 眼镜将把计算带入现实世界，让它更人性化、更少孤立。 / Snapchat 是为了与亲友沟通，而非表演式社交媒体。 / 尽管末日论盛行，AI 将带来积极变革，而不仅仅是颠覆。</description>
-  </item>
-  <item>
-    <title>谷歌的 AI 科学家：从自动化 Kaggle 到科学发现——对话谷歌院士 John Platt — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/johnplatt-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/johnplatt-latentsp-2026/</guid>
-    <pubDate>Sat, 26 Sep 2026 10:44:16 -0000</pubDate>
-    <description>谷歌院士 John Platt 讲述如何从自动化 Kaggle 的尝试，发展出将科学问题映射为可评分任务的 AI 科学家。  要点: 科学 AI 将问题映射为可评分任务，用 AI 变异代码并最大化得分。 / AI 是强大工具而非替代品，人类创造力与严谨性依然关键。 / 过拟合与奖励黑客是主要风险，需要严格验证和留出集。</description>
-  </item>
-  <item>
-    <title>为什么我无法在 OpenAI 打造 Jev —— TypeSafe 联合创始人兼 CEO Diogo Almeida — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/diogoalmeida-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/diogoalmeida-latentsp-2026/</guid>
-    <pubDate>Sat, 26 Sep 2026 10:44:16 -0000</pubDate>
-    <description>TypeSafe 联合创始人兼 CEO Diogo Almeida 讲述为何无法在 OpenAI 打造 Jev，并介绍一类全新的机器原生、可编程的系统一模型，其目标是让代码成为消费者。  要点: AI 极其聪明，却无法自动化基本的有经济价值的工作；让它值得信赖的是可靠性，而非速度或成本。 / 数据比算力更重要，每美元智能才是关键指标；公开基准可被操纵，因此信任和直觉更重要。 / 安全对齐会割裂智能，拒绝是一种类型错误；API 不应拒绝，鲁棒性比确定性更重要。</description>
-  </item>
-  <item>
-    <title>萨提亚·纳德拉谈 Copilot、AI 反弹与微软的未来 — Sources Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/satya-sourcesp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/satya-sourcesp-2026/</guid>
-    <pubDate>Sat, 26 Sep 2026 10:14:10 -0000</pubDate>
-    <description>萨提亚·纳德拉探讨 AI 智能体的崛起、下一代交互入口之争，以及微软如何为企业布局 Copilot。  要点: 智能体时代将把可寻址市场扩大数个数量级，远超云计算。 / AGI 应以 GDP 提升来衡量，而非模型基准。 / 将 AI 拟人化可能阻碍对齐，而非实现对齐。</description>
   </item>
 </channel>
 </rss>
