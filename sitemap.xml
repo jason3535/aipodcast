@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/alexzhang/</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/dylanpatel/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/kohli/</loc><lastmod>2026-10-02</lastmod></url>
@@ -19,7 +19,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/suleyman/</loc><lastmod>2026-09-26</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/anastasisgermanidis/</loc><lastmod>2026-09-26</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/kokotajlo/</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://aipodcast.jasonlin.tech/pp/zuckerberg/</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/zuckerberg/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/dhh/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/ryangreenblatt/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/pincus/</loc><lastmod>2026-09-26</lastmod></url>
@@ -325,6 +325,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/e/zuckerberg-joannast-2026/</loc><lastmod>2026-09-26</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/dhh-rubyonra-2026/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/ryangreenblatt-samharri-2026/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/zuckerberg-thenextb-2026/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/pincus-harvardb-2026/</loc><lastmod>2026-09-26</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/jensen-theezrak-2026/</loc><lastmod>2026-09-26</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/geoffteehan-diveclub-2026/</loc><lastmod>2026-09-26</lastmod></url>
