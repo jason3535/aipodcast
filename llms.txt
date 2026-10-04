@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 302 位人物 / 699 期访谈
+规模: 303 位人物 / 704 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -35,6 +35,7 @@
 - [Andrej Karpathy / 安德烈·卡帕西](https://aipodcast.jasonlin.tech/pp/karpathy/): Founder, Eureka Labs — 6 期
 - [Mark Pincus / 马克·平卡斯](https://aipodcast.jasonlin.tech/pp/pincus/): Founder, Zynga — 5 期
 - [Garry Tan / 陈嘉兴](https://aipodcast.jasonlin.tech/pp/garrytan/): President & CEO, Y Combinator — 5 期
+- [Andrew Bosworth / 安德鲁·博斯沃思](https://aipodcast.jasonlin.tech/pp/bosworth/): CTO, Meta Platforms; Head of Reality Labs — 5 期
 - [Mike Krieger / 迈克·克里格](https://aipodcast.jasonlin.tech/pp/mikekrieger/): Co-lead, Anthropic Labs · Instagram co-founder — 5 期
 - [Carl Pei / 裴宇](https://aipodcast.jasonlin.tech/pp/carlpei/): Founder & CEO, Nothing; co-founder of OnePlus — 5 期
 - [Sholto Douglas / 肖尔托·道格拉斯](https://aipodcast.jasonlin.tech/pp/sholto/): Researcher, Anthropic — 5 期
