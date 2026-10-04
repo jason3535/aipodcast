@@ -40,7 +40,9 @@ HDR = {"User-Agent": "Mozilla/5.0"}
 # 搬运/剪辑号:不是原始出处,上传日期是重传日期(karpathy-techxops-2026 把 Stanford 讲座记成 8/19,
 # elon-startupt-2026 把 2020 年 Joe Rogan 记成 2026)。人物搜索最容易撞上它们——按频道名一律不收。
 REPOST_CHANNELS = {"TechXOps", "philia", "DRM News", "Startup TM", "Motiversity", "PunkAI", "Perfology Clips",
-                   "Rob Shocks", "Parker Prompts", "Kaushik Datta", "COAI"}
+                   "Rob Shocks", "Parker Prompts", "Kaushik Datta", "COAI",
+                   # 2026-10-04 补扫时抓到的搬运号(Pet circle 重传 Dwarkesh/No Priors/Cadence 整期,其余是讲座/CNBC 片段搬运)
+                   "Pet circle", "UninformedInvestors", "Vampyre Drakul", "LufSec Cyber Security", "BetterDailyLabs"}
 
 def log(msg):
     line = f"[{datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M')}Z] {msg}"
@@ -503,7 +505,9 @@ def discover(people, vids, days, per_person_cap=1):
                 continue
             if not (floor <= m["date"] <= cutoff): continue
             on = p["latest"].replace("-", "")
-            if on and m["date"] <= on: continue   # 不比在站的旧
+            # 只挡**比在站最新更旧**的;同日放行 —— 2026-09-24 扎克伯格同日两期(Joanna Stern + The Next Big Thing),
+            # 原来的 <= 把第二期静默挡了 10 天,人工补扫才发现。同日已收的那期靠 exist(vid)去重,不会重收。
+            if on and m["date"] < on: continue   # 不比在站的旧(同日放行)
             picks.append(m)
         picks.sort(key=lambda x: x["date"], reverse=True)
         kept = []
