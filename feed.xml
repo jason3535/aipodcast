@@ -6,7 +6,28 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Fri, 02 Oct 2026 01:38:11 -0000</lastBuildDate>
+  <lastBuildDate>Sat, 03 Oct 2026 01:42:58 -0000</lastBuildDate>
+  <item>
+    <title>哪些 GPU 云真的靠谱？ClusterMAX 3.0 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/dylanpatel-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dylanpatel-latentsp-2026/</guid>
+    <pubDate>Sat, 03 Oct 2026 01:42:58 -0000</pubDate>
+    <description>SemiAnalysis 的 Dylan 解读 ClusterMAX 3.0，这套 NeoCloud 评级从性能、安全、可靠性和定价等维度评测 GPU 云服务商。  要点: 新云安全普遍糟糕，客户任务、数据和存储暴露在外。 / 算力租赁空前困难，连单节点都租不到。 / OpenAI 和 Anthropic 的研发算力现已超过 DeepMind。</description>
+  </item>
+  <item>
+    <title>AI 与数学的未来：对话 Grant Sanderson — Numberphile2</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/grantsanderson-numberph-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/grantsanderson-numberph-2026/</guid>
+    <pubDate>Sat, 03 Oct 2026 01:42:58 -0000</pubDate>
+    <description>3Blue1Brown 的 Grant Sanderson 探讨 AI 如何重塑数学，从创作流程到学科未来。  要点: AI 对创作者是净收益，但需选择性使用，不能用于核心创意工作。 / AI 的数学成果常缺乏归属，这关乎真相和职业发展。 / 数学家应因有动机的解释获得学术认可，而不仅仅是证明。</description>
+  </item>
+  <item>
+    <title>27 岁如何在 21 个月内打造出 56 亿美元 AI 公司 — Jessica Neal</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/maxjunestrand-jessican-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/maxjunestrand-jessican-2026/</guid>
+    <pubDate>Sat, 03 Oct 2026 01:42:58 -0000</pubDate>
+    <description>Legora 创始人 Max 分享其 AI 法律科技公司如何在 21 个月内成为史上最快从 100 万美元增长到 1.5 亿美元 ARR 的企业。  要点: 为 3-6 个月后的 AI 模型能力而构建，而非当下。 / 招聘是特权而非义务；领导者必须面试每一位总监及以上级别的新人。 / 法律 AI 需要技术娴熟的驾驶员；凭感觉起草不像凭感觉编程那样可行。</description>
+  </item>
   <item>
     <title>递归语言模型——MIT 博士 Alex Zhang — Latent Space</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/alexzhang-latentsp-2026</link>
@@ -195,27 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/richardsocher-latentsp-2026/</guid>
     <pubDate>Sun, 27 Sep 2026 01:37:59 -0000</pubDate>
     <description>Richard Socher 探讨尤里卡机器、从自动研究到超级智能的路径，以及为何应监管 AI 应用而非智能本身。  要点: 应监管 AI 的具体应用，而非智能或 GPU；后者等于监管思想。 / 慢起飞是真实的：硬件、物理和经济约束限制了 AI 的变革速度。 / 下一个自动化前沿是 AI 研究本身，使 AI 按定义自我改进。</description>
-  </item>
-  <item>
-    <title>黄仁勋：AI 恐慌论已经过头了 — The Ezra Klein Show</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/jensen-theezrak-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jensen-theezrak-2026/</guid>
-    <pubDate>Sat, 26 Sep 2026 10:44:16 -0000</pubDate>
-    <description>英伟达 CEO 黄仁勋认为 AI 安全是可解决的工程问题，并警告恐慌论可能拖慢技术带来的益处。  要点: AI 是五层蛋糕：能源、芯片、工厂、模型、应用。 / AI 改变每份工作但净增新岗位，工作的意义依然存在。 / 末日论调不科学；加速 AI 发展（含安全技术）才是最佳路径。</description>
-  </item>
-  <item>
-    <title>Geoff Teehan：设计师如何在变革中前行 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/geoffteehan-diveclub-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/geoffteehan-diveclub-2026/</guid>
-    <pubDate>Sat, 26 Sep 2026 10:44:16 -0000</pubDate>
-    <description>Geoff Teehan 分享他从联合创办传奇设计机构，到在 Facebook 和 Lightspark 担任设计负责人的历程，以及他打造爆款颜色游戏 Dialed 的幕后故事。  要点: 软件正进入丰裕时代，构建几乎免费，设计师必须持续交付才能保持竞争力。 / AI 工具加速构建，但也让复制变得免费，因此差异化和速度比以往更重要。 / 小而无私、直接反馈并痴迷原型的团队，能在这一转变中产出最佳作品。</description>
-  </item>
-  <item>
-    <title>生物安全是一场 AI 军备竞赛：Eric Nguyen 谈生成式基因组学 — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/ericnguyen-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ericnguyen-latentsp-2026/</guid>
-    <pubDate>Sat, 26 Sep 2026 10:44:16 -0000</pubDate>
-    <description>Radical Numerics 首席执行官 Eric Nguyen 解释，为何打造能编写 DNA 的 AI，也必须同时构建守护它的防御能力。  要点: DNA 是生命的基础语言；生成模型能够读写它。 / 防御性生物安全落后于进攻；需要功能感知的防御。 / 在原始 DNA 上无监督预训练在许多任务上胜过监督模型。</description>
   </item>
 </channel>
 </rss>
