@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sat, 03 Oct 2026 01:42:58 -0000</lastBuildDate>
+  <lastBuildDate>Sun, 04 Oct 2026 06:42:13 -0000</lastBuildDate>
+  <item>
+    <title>马克·扎克伯格的未来愿景：AI、智能眼镜与元宇宙 — The Next Big Thing</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/zuckerberg-thenextb-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/zuckerberg-thenextb-2026/</guid>
+    <pubDate>Sun, 04 Oct 2026 06:42:13 -0000</pubDate>
+    <description>马克·扎克伯格揭示 Meta 在 AI、智能眼镜与元宇宙上的押注如何汇聚成一种全新的超级智能。  要点: 个人 AI 代理将覆盖数十亿人，每个代理都需要自己的安全计算机。 / 扩展算力可能就足以实现 AGI，架构突破并非严格必需。 / AI 结合虚拟细胞模型，可能在本世纪末之前治愈所有疾病。</description>
+  </item>
   <item>
     <title>哪些 GPU 云真的靠谱？ClusterMAX 3.0 — Latent Space</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/dylanpatel-latentsp-2026</link>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/harrisonchase-browserb-2026/</guid>
     <pubDate>Sun, 27 Sep 2026 01:37:59 -0000</pubDate>
     <description>LangChain 联合创始人兼 CEO Harrison Chase 回顾框架的起源、构建它的社区，以及他希望更早下注的基础设施。  要点: 构建智能体的难点在于可靠性，而非能力。 / 智能体框架正围绕文件系统、代码执行等原语趋于稳定。 / 智能体的身份与凭证是下一个关键基础设施问题。</description>
-  </item>
-  <item>
-    <title>递归自我改进：从自动研究到超级智能——Richard Socher — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/richardsocher-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/richardsocher-latentsp-2026/</guid>
-    <pubDate>Sun, 27 Sep 2026 01:37:59 -0000</pubDate>
-    <description>Richard Socher 探讨尤里卡机器、从自动研究到超级智能的路径，以及为何应监管 AI 应用而非智能本身。  要点: 应监管 AI 的具体应用，而非智能或 GPU；后者等于监管思想。 / 慢起飞是真实的：硬件、物理和经济约束限制了 AI 的变革速度。 / 下一个自动化前沿是 AI 研究本身，使 AI 按定义自我改进。</description>
   </item>
 </channel>
 </rss>
