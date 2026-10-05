@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 302 位人物 / 695 期访谈
+规模: 302 位人物 / 696 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -76,6 +76,7 @@
 - [Yejin Choi / 崔艺珍](https://aipodcast.jasonlin.tech/pp/yejin/): Professor, Stanford (prev. NVIDIA, AI2); commonsense reasoning — 3 期
 - [Noam Shazeer / 诺姆·沙泽尔](https://aipodcast.jasonlin.tech/pp/shazeer/): Co-lead, Google Gemini — 3 期
 - [Jan Leike / 扬·莱克](https://aipodcast.jasonlin.tech/pp/leike/): Alignment Lead, Anthropic — 3 期
+- [Sam Stephenson / 萨姆·斯蒂芬森](https://aipodcast.jasonlin.tech/pp/samstephenson/): Co-founder and Designer, Granola — 2 期
 - [Grant Sanderson / 格兰特·桑德森](https://aipodcast.jasonlin.tech/pp/grantsanderson/): Creator of 3Blue1Brown; math educator — 2 期
 - [Aaron Levie / 亚伦·莱维](https://aipodcast.jasonlin.tech/pp/aaronlevie/): Cofounder and CEO, Box — 2 期
 - [Parag Agrawal / 帕拉格·阿格拉瓦尔](https://aipodcast.jasonlin.tech/pp/paragagrawal/): Founder & CEO, Parallel Web Systems — 2 期
@@ -296,7 +297,6 @@
 - [Isa Fulford / 伊莎·富尔福德](https://aipodcast.jasonlin.tech/pp/fulford/): Research Scientist, OpenAI — 1 期
 - [Murray Shanahan / 默里·沙纳汉](https://aipodcast.jasonlin.tech/pp/shanahan/): Principal Scientist · Google DeepMind; Professor, Imperial College — 1 期
 - [Tuhin Kumar / 图欣·库马尔](https://aipodcast.jasonlin.tech/pp/tuhinkumar/): Product Designer; former Head of Design at Luma AI — 1 期
-- [Sam Stephenson / 萨姆·斯蒂芬森](https://aipodcast.jasonlin.tech/pp/samstephenson/): Co-founder and Designer, Granola — 1 期
 - [Alejandro Matamala Ortiz / 亚历杭德罗·马塔马拉·奥尔蒂斯](https://aipodcast.jasonlin.tech/pp/alejandromatamala/): Co-founder & Chief Design Officer, Runway — 1 期
 - [Ammaar Reshi / 阿玛尔·雷希](https://aipodcast.jasonlin.tech/pp/ammaarreshi/): Product & Design Lead, Google AI Studio — 1 期
 - [Ioannis Antonoglou / 扬尼斯·安东诺格鲁](https://aipodcast.jasonlin.tech/pp/antonoglou/): Co-founder & CTO, Reflection AI — 1 期
@@ -311,6 +311,7 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
+- [How Granola's Co-Founder Uses AI to Survive Meetings](https://aipodcast.jasonlin.tech/e/samstephenson-peteryan-2026/) — Sam Stephenson, Peter Yang, 2026-10-04
 - [Recursive Language Models — Alex Zhang, MIT PhD](https://aipodcast.jasonlin.tech/e/alexzhang-latentsp-2026/) — Alex Zhang, Latent Space, 2026-10-02
 - [Which GPU Clouds Are Actually Good? ClusterMAX 3.0](https://aipodcast.jasonlin.tech/e/dylanpatel-latentsp-2026/) — Dylan Patel, Latent Space, 2026-10-02
 - [From Deepfakes to DNA: The Science of Watermarking AI](https://aipodcast.jasonlin.tech/e/kohli-googlede-2026b/) — Pushmeet Kohli, Google DeepMind, 2026-10-01
@@ -350,7 +351,6 @@
 - [Why Diffusion Will Win AI Inference: Stefano Ermon on Challenging the Big Labs](https://aipodcast.jasonlin.tech/e/ermon-nopriors-2026/) — Stefano Ermon, No Priors, 2026-09-18
 - [Why Would AI Companies Want to Slow Down? Ali on Pacing the Frontier](https://aipodcast.jasonlin.tech/e/alighodsi-thea16zp-2026/) — Ali Ghodsi, The a16z Podcast, 2026-09-18
 - [Gabe Pereyra on Building Harvey: Full-Stack AI for the Legal Industry](https://aipodcast.jasonlin.tech/e/gabepereyra-mercor-2026/) — Gabe Pereyra, Mercor, 2026-09-18
-- [OpenAI's Noam Brown on Agent Swarms and Recursive Self-Improvement](https://aipodcast.jasonlin.tech/e/noambrown-dwarkesh-2026/) — Noam Brown, Dwarkesh Podcast, 2026-09-17
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-10-05</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/samstephenson/</loc><lastmod>2026-10-05</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/alexzhang/</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/dylanpatel/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/kohli/</loc><lastmod>2026-10-02</lastmod></url>
@@ -287,7 +288,6 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/fulford/</loc><lastmod>2026-07-05</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/shanahan/</loc><lastmod>2026-06-27</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/tuhinkumar/</loc><lastmod>2026-07-15</lastmod></url>
-  <url><loc>https://aipodcast.jasonlin.tech/pp/samstephenson/</loc><lastmod>2026-07-15</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/shazeer/</loc><lastmod>2026-07-03</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/alejandromatamala/</loc><lastmod>2026-07-15</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/ammaarreshi/</loc><lastmod>2026-07-15</lastmod></url>
@@ -303,6 +303,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/hugobarra/</loc><lastmod>2026-08-14</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/albertgu/</loc><lastmod>2026-06-27</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/abbeel/</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/samstephenson-peteryan-2026/</loc><lastmod>2026-10-05</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/alexzhang-latentsp-2026/</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/dylanpatel-latentsp-2026/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/kohli-googlede-2026b/</loc><lastmod>2026-10-02</lastmod></url>
