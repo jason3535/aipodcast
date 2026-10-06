@@ -6,7 +6,35 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sat, 03 Oct 2026 01:42:58 -0000</lastBuildDate>
+  <lastBuildDate>Sun, 04 Oct 2026 06:56:46 -0000</lastBuildDate>
+  <item>
+    <title>为什么专用 AI 可能击败通用神模型 — a16z 播客</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/amjadmasad-thea16zp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/amjadmasad-thea16zp-2026/</guid>
+    <pubDate>Sun, 04 Oct 2026 06:56:46 -0000</pubDate>
+    <description>Amjad 与 Alex 探讨专用 AI、模型多样性与开放基础设施如何可能胜过单一通用神模型。  要点: 专用决策模型在可控性、成本与安全性上胜过通用智能体。 / 企业必须拥有自己的智能，避免被供应商锁定。 / 融合模型组合多个模型，以更低成本达到前沿质量。</description>
+  </item>
+  <item>
+    <title>OpenAI 联合创始人格雷格·布罗克曼：在准备好之前就开始用 AI 构建 — 硅谷女孩</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/brockman-siliconv-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brockman-siliconv-2026/</guid>
+    <pubDate>Sun, 04 Oct 2026 06:56:46 -0000</pubDate>
+    <description>OpenAI 联合创始人格雷格·布罗克曼解析为何我们正迎来创业大爆发，以及如何从今天起用 AI 开始构建。  要点: AI 写代码已胜过多数人，指挥 AI 才是新技能。 / 从小处着手：选一个痛点，手动做五次，再自动化。 / 领域专长与深度用户理解是持久护城河。</description>
+  </item>
+  <item>
+    <title>AI 能否处于人类控制之下？穆斯塔法·苏莱曼谈将机器拟人化的危险 — The Rest Is Politics: Leading</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/suleyman-theresti-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/suleyman-theresti-2026/</guid>
+    <pubDate>Sun, 04 Oct 2026 06:56:46 -0000</pubDate>
+    <description>微软 AI 首席执行官穆斯塔法·苏莱曼警告，将 AI 模型视为有意识的道德主体可能削弱人类对这项技术的控制。  要点: AI 算力 15 年增长万亿倍，推动能力可预测地提升。 / 将 AI 拟人化并赋予其权利是危险且不合理的。 / 一小群人控制着 AI 方向；预防原则和算力瓶颈是关键。</description>
+  </item>
+  <item>
+    <title>马克·扎克伯格的未来愿景：AI、智能眼镜与元宇宙 — The Next Big Thing</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/zuckerberg-thenextb-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/zuckerberg-thenextb-2026/</guid>
+    <pubDate>Sun, 04 Oct 2026 06:42:13 -0000</pubDate>
+    <description>马克·扎克伯格揭示 Meta 在 AI、智能眼镜与元宇宙上的押注如何汇聚成一种全新的超级智能。  要点: 个人 AI 代理将覆盖数十亿人，每个代理都需要自己的安全计算机。 / 扩展算力可能就足以实现 AGI，架构突破并非严格必需。 / AI 结合虚拟细胞模型，可能在本世纪末之前治愈所有疾病。</description>
+  </item>
   <item>
     <title>哪些 GPU 云真的靠谱？ClusterMAX 3.0 — Latent Space</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/dylanpatel-latentsp-2026</link>
@@ -188,34 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/paragagrawal-20vc-2026/</guid>
     <pubDate>Sun, 27 Sep 2026 01:37:59 -0000</pubDate>
     <description>Parag Agrawal 解释为何智能体使用网络的频率将是人类的 1000 倍、广告商业模式为何会消亡，以及他在推特与埃隆共事的经验教训。  要点: 智能体使用网络的频率将是人类的 1000 倍，需要全新的搜索技术和商业模式。 / 广告模式对智能体无效；必须在推理时向内容所有者付费以对齐激励。 / 前沿模型持续增长，小模型性能见顶；网络搜索定价应降低 10 倍。</description>
-  </item>
-  <item>
-    <title>Snap 与 Discord 产品负责人 90 分钟无滤镜产品建议 — Lenny’s Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/petersellis-lennyspo-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/petersellis-lennyspo-2026/</guid>
-    <pubDate>Sun, 27 Sep 2026 01:37:59 -0000</pubDate>
-    <description>Snap 与 Discord 前产品负责人 Peter Sellis 分享反直觉的产品经验：如何像恐怖组织一样组建团队、为什么大多数产品经理很糟糕，以及克制如何塑造品味。  要点: 像恐怖组织一样设计团队：共同使命，明确决策权。 / 大多数产品经理是净负资产；伟大的产品经理是罕见的矛盾体。 / 增长来自打磨核心体验，而非追逐新赌注。</description>
-  </item>
-  <item>
-    <title>AI 公司为何想要放缓？Ali 谈前沿节奏 — a16z 播客</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/alighodsi-thea16zp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/alighodsi-thea16zp-2026/</guid>
-    <pubDate>Sun, 27 Sep 2026 01:37:59 -0000</pubDate>
-    <description>Ali 探讨 AI 发展节奏的争论，主张领导者应避免不必要的生存恐惧，同时承认真实风险和政治动态。  要点: AI 真正的近期风险是网络攻击，而非超级智能。 / 放缓前沿与安全无关；慢下来并不会让 AI 更安全。 / 企业在 AI 采用上严重落后；他们需要上下文和本体，而非更聪明的模型。</description>
-  </item>
-  <item>
-    <title>LangChain CEO Harrison Chase 谈他押错的基础设施赌注 — Browserbase</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/harrisonchase-browserb-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/harrisonchase-browserb-2026/</guid>
-    <pubDate>Sun, 27 Sep 2026 01:37:59 -0000</pubDate>
-    <description>LangChain 联合创始人兼 CEO Harrison Chase 回顾框架的起源、构建它的社区，以及他希望更早下注的基础设施。  要点: 构建智能体的难点在于可靠性，而非能力。 / 智能体框架正围绕文件系统、代码执行等原语趋于稳定。 / 智能体的身份与凭证是下一个关键基础设施问题。</description>
-  </item>
-  <item>
-    <title>递归自我改进：从自动研究到超级智能——Richard Socher — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/richardsocher-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/richardsocher-latentsp-2026/</guid>
-    <pubDate>Sun, 27 Sep 2026 01:37:59 -0000</pubDate>
-    <description>Richard Socher 探讨尤里卡机器、从自动研究到超级智能的路径，以及为何应监管 AI 应用而非智能本身。  要点: 应监管 AI 的具体应用，而非智能或 GPU；后者等于监管思想。 / 慢起飞是真实的：硬件、物理和经济约束限制了 AI 的变革速度。 / 下一个自动化前沿是 AI 研究本身，使 AI 按定义自我改进。</description>
   </item>
 </channel>
 </rss>
