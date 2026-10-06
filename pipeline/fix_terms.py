@@ -62,6 +62,7 @@ RULES = [
     # Waymo → 自动字幕常听成 Whimo(全站曾攒 58 处,散布在 6 期);"way mo" 只匹配全小写,
     # 防误伤 "the way Mo Gawdat…" 这类句中人名(Mo 大写)与 "way more"(\b 挡住)。
     (re.compile(BL+r"Wh[iy]mo"+BR, re.I), "Waymo"),
+    (re.compile(BL+r"Replet"+BR), "Replit"),                                  # 2026-10-06 Amjad×Times 期 ×22,另 4 期残留;Replit=Amjad Masad 的公司
     (re.compile(BL+r"way mo"+BR), "Waymo"),
     # Carl Pei(Nothing 创始人)→ 自动字幕听成 Carl Pay / Pie / Pay-e(2026-08-15 用户报,
     # 该期正确写法有 23 处、误写 4 处,英文与中文正文里都有)。只匹配这几个确定的误写,
