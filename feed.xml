@@ -6,7 +6,49 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sun, 04 Oct 2026 06:56:46 -0000</lastBuildDate>
+  <lastBuildDate>Mon, 05 Oct 2026 01:38:15 -0000</lastBuildDate>
+  <item>
+    <title>Granola 联合创始人如何用 AI 驾驭会议 — Peter Yang</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/samstephenson-peteryan-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/samstephenson-peteryan-2026/</guid>
+    <pubDate>Mon, 05 Oct 2026 01:38:15 -0000</pubDate>
+    <description>Granola 联合创始人 Sam 分享他如何用 AI 会议简报、配方和智能体，在连轴转的会议间隙保持从容与准备。  要点: Granola 是一款冷静的会议助手，隐藏转录并优先提供会前简报。 / 会议蕴含最有价值的公司上下文，因此 Granola 演变为上下文平台。 / 工作与生活的平衡以及发布后对细节的关注提升质量，而不仅仅是速度。</description>
+  </item>
+  <item>
+    <title>Meta CTO 安德鲁·博斯沃思谈 AI 转型、智能眼镜与员工追踪 — Nicholas Thompson</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/bosworth-nicholas-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/bosworth-nicholas-2026/</guid>
+    <pubDate>Sun, 04 Oct 2026 14:47:17 -0000</pubDate>
+    <description>Meta CTO 安德鲁·博斯沃思探讨公司的 AI 转型、智能眼镜的未来以及备受争议的员工追踪计划。  要点: AI 是我们职业生涯中最大的转变，但近期前景却最不明朗。 / 随着缩放定律持续，独特的长尾数据成为新的石油。 / 能源是最上游的矢量；应投资安全核能。</description>
+  </item>
+  <item>
+    <title>Meta CTO 安德鲁·博斯沃思：我们的前沿 AI 之路、租用模型与消费级 AI 的困境 — Alex Kantrowitz</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/bosworth-alexkant-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/bosworth-alexkant-2026/</guid>
+    <pubDate>Sun, 04 Oct 2026 14:47:17 -0000</pubDate>
+    <description>Meta CTO 安德鲁·博斯沃思解释 Meta 为何要自研前沿 AI 模型与 AI 眼镜，以及为何模型本身并非真正的价值所在。  要点: AI 模型是基础，但产品和用户价值才是关键。 / 单体模型时代已结束；消费者关心功能，而非模型选择。 / AI 眼镜是个人超级智能的关键形态。</description>
+  </item>
+  <item>
+    <title>移动之后是什么？Meta 的 Andrew Bosworth 谈 AI 与消费科技 — a16z 播客</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/bosworth-thea16zp-2025</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/bosworth-thea16zp-2025/</guid>
+    <pubDate>Sun, 04 Oct 2026 14:47:17 -0000</pubDate>
+    <description>Meta 首席技术官 Andrew Bosworth 解读 AI 如何重塑每一种交互界面，以及智能手机之后的下一个时代。  要点: AI 是一种广泛的能力，而非小众浪潮，将重塑消费科技。 / 智能眼镜将进化为 AI 眼镜，开启后手机时代。 / AI 颠覆应用模式：用户表达意图，AI 编排服务。</description>
+  </item>
+  <item>
+    <title>用 AI 和 AR 赋予人类超能力 — 雷德·霍夫曼</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/bosworth-reidhoff-2025</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/bosworth-reidhoff-2025/</guid>
+    <pubDate>Sun, 04 Oct 2026 14:47:17 -0000</pubDate>
+    <description>Meta CTO Andrew "Boz" Bosworth 讲述 AI 与 AR 可穿戴设备如何赋予每个人超人的视觉、听觉、记忆与认知能力。  要点: AI 是词语计算器，不是类人智能，但将极大提升人类能力。 / 超越缩放定律，需要具备常识和因果关系的世界模型。 / 像 Llama 这样的开源 AI 加速进步，并以不对称方式惠及所有人。</description>
+  </item>
+  <item>
+    <title>打造 Meta：安德鲁·博斯沃思谈构建信息流、AR/VR 以及 Facebook 早期的经验教训 — Lenny’s Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/bosworth-lennyspo-2024</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/bosworth-lennyspo-2024/</guid>
+    <pubDate>Sun, 04 Oct 2026 14:47:17 -0000</pubDate>
+    <description>Meta 首席技术官安德鲁·博斯沃思分享了 Facebook 早期的故事、信息流的创建过程，以及他目前领导 AR/VR 和消费硬件的工作。  要点: 沟通就是工作本身；只有清晰沟通才能产生影响力。 / 自下而上的文化是神话；大想法来自领导层自上而下。 / 相信自己，对自己的愿景有信念，即使他人怀疑。</description>
+  </item>
   <item>
     <title>为什么专用 AI 可能击败通用神模型 — a16z 播客</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/amjadmasad-thea16zp-2026</link>
@@ -174,48 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brettadcock-robostra-2026/</guid>
     <pubDate>Mon, 28 Sep 2026 01:33:34 -0000</pubDate>
     <description>Brett Adcock 阐释为何让人形机器人泛化到未见过的家庭环境是机器人技术的圣杯，以及 Helix 2.5 与 Figure 4 如何为此铺路。  要点: 泛化到未见过的家庭是机器人学的圣杯，真实人类数据是唯一路径。 / 机器人学正处于数据匮乏的 GPT-1 阶段，扩大数据与算力是前进方向。 / Figure 4 会让 Figure 3 看起来像原始人，这是有史以来最大的跨越。</description>
-  </item>
-  <item>
-    <title>DHH 回应 Omarchy 的批评者（包括我） — Mischa van den Burg</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/dhh-mischava-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dhh-mischava-2026/</guid>
-    <pubDate>Sun, 27 Sep 2026 02:31:42 -0000</pubDate>
-    <description>DHH 做客节目，畅谈他为何打造 Omarchy、围绕它爆发的创造力与插件热潮，以及他如何在桌面 Linux 中弥合艺术与工程的鸿沟。  要点: Linux 天生适合 AI 代理，因为一切皆 CLI、配置文件和脚本。 / Omarchy 将安全视为第一要务，组建专门团队并坚持负责任披露。 / AI 代理现在写代码比大多数专业程序员（包括 DHH）更好。</description>
-  </item>
-  <item>
-    <title>安德鲁·费尔德曼谈打造 Cerebras 与芯片的未来 — Uncapped with Jack Altman</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/feldman-uncapped-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/feldman-uncapped-2026/</guid>
-    <pubDate>Sun, 27 Sep 2026 02:31:42 -0000</pubDate>
-    <description>Cerebras 首席执行官兼创始人安德鲁·费尔德曼探讨了如何通过激进创新打造出比英伟达快 10 到 500 倍的芯片。  要点: 要击败行业巨头，你需要做到 100 倍好，而不是便宜 10%。 / 彻底的创新需要控制芯片、板卡、系统、软件和 API。 / 数据中心和芯片的供应紧张至少还会持续五年。</description>
-  </item>
-  <item>
-    <title>德米斯·哈萨比斯爵士论 AI 革命、AI 的未来与人类创造力 — 英国皇家艺术学会</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/demis-royalsoc-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/demis-royalsoc-2026/</guid>
-    <pubDate>Sun, 27 Sep 2026 02:31:42 -0000</pubDate>
-    <description>诺贝尔奖得主德米斯·哈萨比斯爵士与汉娜·弗莱对话，探讨 AI 革命、人工智能的未来与人类创造力。  要点: AI 将像电力一样具有变革性，十年内带来十倍于工业革命的影响。 / AI 最重要的应用是改善人类健康，AlphaFold 已解析 2.62 亿个蛋白质结构。 / 教育必须彻底变革，让孩子成为 AI 原住民，翻转课堂实现个性化学习。</description>
-  </item>
-  <item>
-    <title>AI 史上最伟大：Jürgen Schmidhuber 谈欧洲的 AI 遗产 — Europe on Edge</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/schmidhuber-europeon-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/schmidhuber-europeon-2026/</guid>
-    <pubDate>Sun, 27 Sep 2026 02:31:42 -0000</pubDate>
-    <description>Jürgen Schmidhuber 讲述欧洲如何开创现代 AI 的核心算法，以及为何当下的 GPU 投资可能是一场泡沫。  要点: 90%的基础 AI 算法源自欧洲，1991 年的慕尼黑是关键节点。 / 大模型只会预测；AGI 需要独立控制器并掌握物理世界。 / 最优通用 AI 理论可行但计算不可行，需要实用近似。</description>
-  </item>
-  <item>
-    <title>为什么 AI 的下一个突破可能来自大实验室之外 — a16z 播客</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/aaronlevie-thea16zp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/aaronlevie-thea16zp-2026/</guid>
-    <pubDate>Sun, 27 Sep 2026 01:37:59 -0000</pubDate>
-    <description>Aaron 做客播客，探讨 AI 节奏、监管，以及为什么下一个突破可能来自大实验室之外。  要点: 如果前沿实验室真担心生存风险，就该将 AI 国有化，而不是控制节奏。 / 智能体集群将冲垮现有安全模型，需要新的细粒度访问控制。 / 创新正从模型层转向应用层，开启安全设计的复兴。</description>
-  </item>
-  <item>
-    <title>广告商业模式将消亡，与埃隆在推特共事的经验教训 | Parag Agrawal — 20VC</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/paragagrawal-20vc-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/paragagrawal-20vc-2026/</guid>
-    <pubDate>Sun, 27 Sep 2026 01:37:59 -0000</pubDate>
-    <description>Parag Agrawal 解释为何智能体使用网络的频率将是人类的 1000 倍、广告商业模式为何会消亡，以及他在推特与埃隆共事的经验教训。  要点: 智能体使用网络的频率将是人类的 1000 倍，需要全新的搜索技术和商业模式。 / 广告模式对智能体无效；必须在推理时向内容所有者付费以对齐激励。 / 前沿模型持续增长，小模型性能见顶；网络搜索定价应降低 10 倍。</description>
   </item>
 </channel>
 </rss>
