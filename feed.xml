@@ -6,7 +6,42 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Tue, 06 Oct 2026 06:43:58 -0000</lastBuildDate>
+  <lastBuildDate>Wed, 07 Oct 2026 02:37:23 -0000</lastBuildDate>
+  <item>
+    <title>山姆·奥特曼谈埃隆·马斯克、《人造》与人类未来（上） — Fair Game by Vanity Fair</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/altman-fairgame-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/altman-fairgame-2026/</guid>
+    <pubDate>Wed, 07 Oct 2026 02:37:23 -0000</pubDate>
+    <description>OpenAI 首席执行官山姆·奥特曼在《名利场》坦诚访谈中，探讨 AI 的转折点、他的公众形象与人类未来。  要点: AGI 即将到来；在安全跟上之前，我们必须放缓能力发展。 / 即使 IPO 之后，OpenAI 也会将使命置于利润之上。 / 奥特曼不持有 OpenAI 股权，称这是个错误，并对 AI 感到乐观。</description>
+  </item>
+  <item>
+    <title>谷歌如何为大规模 AI 进行设计 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/rhiannonbell-diveclub-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/rhiannonbell-diveclub-2026/</guid>
+    <pubDate>Wed, 07 Oct 2026 02:37:23 -0000</pubDate>
+    <description>谷歌搜索用户体验副总裁里安农·贝尔讲述如何在谷歌的规模下设计 AI，以及 AI 模式背后的设计决策。  要点: AI 让设计师做出最好的作品，而非取代他们。 / 设计应主导 AI 产品决策，如谷歌 AI 模式所示。 / 掌握一两个 AI 工具；系统思维和手艺依然重要。</description>
+  </item>
+  <item>
+    <title>谷歌 AI 基础设施负责人谈前沿 AI 的物理与经济学 — Training Data</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/aminvahdat-training-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/aminvahdat-training-2026/</guid>
+    <pubDate>Wed, 07 Oct 2026 02:37:23 -0000</pubDate>
+    <description>谷歌 AI 基础设施负责人 Amin Vahdat 阐释 AI 数据中心如何与硬件协同定制设计，以及为何 FLOPS 只是虚荣指标。  要点: 衡量 AI 基础设施的关键指标是每瓦有效算力，而非峰值 FLOPS。 / 每瓦智能的提升主要来自模型和软件优化，而非单纯硬件升级。 / 电力是长期根本约束，轨道数据中心是一个严肃的登月计划。</description>
+  </item>
+  <item>
+    <title>Applied Compute CEO Yash 谈强化学习的边界、新型 AI 超大规模服务商，以及为何后训练决定推理胜负 — Unsupervised Learning</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/yashpatil-unsuperv-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/yashpatil-unsuperv-2026/</guid>
+    <pubDate>Wed, 07 Oct 2026 02:37:23 -0000</pubDate>
+    <description>Applied Compute CEO Yash 阐释为何“拥有自己的智能”关乎灵活性与控制权，以及后训练如何成为赢得推理的关键。  要点: 后训练推动帕累托前沿，在推理规模上取胜。 / 强化学习是爬山，定义山才是难点。 / 多数公司需要优化工具链，而非预训练自己的模型。</description>
+  </item>
+  <item>
+    <title>Jev 为何正在改变我们构建 AI 的方式 — The TWIML AI Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/diogoalmeida-thetwiml-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/diogoalmeida-thetwiml-2026/</guid>
+    <pubDate>Wed, 07 Oct 2026 02:37:23 -0000</pubDate>
+    <description>Typesafe 联合创始人兼 CEO Diogo Almeida 解释，Jev 的真正突破在于为机器原生决策而非人类可读字符串优化 AI。  要点: AI 在某些任务上超越人类，却因优化目标错位而无法胜任基础自动化。 / RLHF 破坏了模型校准；RLCD 通过概率旋钮恢复校准决策。 / Jev 是早期决策模型，优化可靠性而非速度或成本。</description>
+  </item>
   <item>
     <title>山姆·奥特曼：AI 的益处值得付出“一些糟糕的代价” — POLITICO</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/altman-politico-2026</link>
@@ -181,41 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/mollygraham-lennyspo-2026/</guid>
     <pubDate>Thu, 01 Oct 2026 01:39:02 -0000</pubDate>
     <description>Molly Graham 再次做客，重新审视她经典的“交出你的乐高”职业建议在 AI 时代的适用性——哪些该放手、哪些该保留，以及如何面对变革中的悲伤与机遇。  要点: AI 转型带来悲伤和倦怠，但也为学习者带来机遇。 / 把 AI 当作初级实习生：提供背景、指导和迭代。 / 管理者是职场幸福的关键；削减管理层是个错误。</description>
-  </item>
-  <item>
-    <title>Claude Code 的未来：Mods、可变软件与多智能体协作 — Thariq Shihipar，Anthropic — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/thariq-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/thariq-latentsp-2026/</guid>
-    <pubDate>Tue, 29 Sep 2026 01:34:00 -0000</pubDate>
-    <description>Anthropic 的 Thariq Shihipar 探讨 Claude Code 如何通过 Mods、可变软件与多智能体协作演进，以及如何跟上前沿节奏。  要点: 提示词是元技能：在脑中建模 Claude，像向高管汇报一样交代任务。 / 前期多花上下文和算力；在坏输出上反复迭代只会浪费 token。 / 前沿节奏是每个工程师都该理解并为之发声的技术问题。</description>
-  </item>
-  <item>
-    <title>Jev 如何让 AI 变成真正能做事的软件 — The a16z Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/diogoalmeida-thea16zp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/diogoalmeida-thea16zp-2026/</guid>
-    <pubDate>Tue, 29 Sep 2026 01:34:00 -0000</pubDate>
-    <description>TypeSafe 创始人 Diogo 讲述 Jev 如何把 AI 变成真正能自动完成工作的智能软件，而不只是更快地写代码。  要点: AI 很聪明但对自动化无用；我们需要智能软件，而非更快的编码。 / Jev 将自然语言与状态机结合，扩展软件能力。 / SaaS 公司会因 AI 而繁荣而非消亡；可靠性是核心挑战。</description>
-  </item>
-  <item>
-    <title>Max Junestrand：你需要比任何人都更快学习的意愿 — Y Combinator</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/maxjunestrand-ycombina-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/maxjunestrand-ycombina-2026/</guid>
-    <pubDate>Tue, 29 Sep 2026 01:34:00 -0000</pubDate>
-    <description>Max Junestrand 分享 Legora 如何从被 YC 拒绝成长为服务全球超过 3% 律师的法律 AI 平台。  要点: 为市场构建产品时，学习意愿比领域专业知识更重要。 / 押注模型进步，不要微调；专注于交付价值。 / 文化、招聘成长型人才和讲故事对规模化至关重要。</description>
-  </item>
-  <item>
-    <title>TabPFN：取代数小时模型调优的表格数据 AI — 机器学习街谈</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/frankhutter-machinel-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/frankhutter-machinel-2026/</guid>
-    <pubDate>Mon, 28 Sep 2026 03:09:53 -0000</pubDate>
-    <description>Frank Hutter 解释 TabPFN 如何将上下文学习引入表格数据，使深度学习最终超越 CatBoost 和 XGBoost。  要点: TabPFN 用一次前向传播替代超参数调优，在表格数据上超越 XGBoost。 / 带因果先验的合成数据使训练无需担心泄漏或记忆问题。 / 因果基础模型能从观察数据预测干预效果，减少对随机对照试验的需求。</description>
-  </item>
-  <item>
-    <title>Replit CEO Amjad Masad：AI 时代年轻人应该学什么 — a16z 播客</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/amjadmasad-a16zpodc-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/amjadmasad-a16zpodc-2026/</guid>
-    <pubDate>Mon, 28 Sep 2026 03:09:53 -0000</pubDate>
-    <description>Replit CEO Amjad Masad 认为，年轻人的真正价值在于质疑根深蒂固的观念、成为异端，大学应培养第一性原理思维，而非规定学习内容。  要点: 年轻人的价值在于质疑根深蒂固的观念，做异端者。 / 大学应允许探索，而非规定僵化路径；AI 能实现兴趣驱动的学习。 / 信任学生走自己的路，哪怕疯狂，才能构建未来。</description>
   </item>
 </channel>
 </rss>
