@@ -49,11 +49,16 @@ def main():
     for item in pending:
         pid = item.get("pid")
         src = src_of.get(pid)
+        if item.get("auto"):
+            left.append(item); continue                    # 已自动裁过,等人工核验,别重复处理
         if not src or (ROOT / "assets" / "people" / f"{pid}.jpg").exists():
             (done if (ROOT / "assets" / "people" / f"{pid}.jpg").exists() else left).append(item)
             continue
         r = subprocess.run([sys.executable, str(BASE / "fetch_avatar.py"),
-                            "--pid", pid, "--youtube", src],
+                            "--pid", pid, "--youtube", src,
+                            # 默认 zoom 2.6 在播客封面上会把标题字/台标/吉祥物一起裁进来
+                            # (2026-10-06/07 tibosottiaux、rhiannonbell、aminvahdat、yashpatil 四张全中),收紧到 1.2(1.5 实测 3/4 仍带字;脸贴边时 1.2 也可能残留,所以留 pending 待人工核)
+                            "--zoom", "1.2"],
                            capture_output=True, text=True, timeout=120)
         if (ROOT / "assets" / "people" / f"{pid}.jpg").exists():
             done.append(item)
@@ -73,8 +78,13 @@ def main():
             s = s[:pm.start(1)] + "[" + ",".join(f"'{x}'" for x in new) + "]" + s[pm.end(1):]
             APP.write_text(s, encoding="utf-8")
 
+    # 自动裁的封面头像只是「比字母好」的临时件,**不从 pending 移除**,标 auto 留给人工核验/换真照
+    # (2026-10-07:以前成功即删,pending 变空 → 带字封面头像悄悄上线没人再看)。
+    # 人工处理完由 avatar-hunting 流程删条目;已标 auto 的不再重复裁。
+    for i in done: i["auto"] = True
+    left = left + done
     PENDING.write_text(json.dumps(left, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"fill_pending_avatars: 补上 {len(done)},仍待补 {len(left)}")
+    print(f"fill_pending_avatars: 自动裁 {len(done)}(待人工核验),pending 共 {len(left)}")
 
 
 if __name__ == "__main__":

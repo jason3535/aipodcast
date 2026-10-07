@@ -44,6 +44,8 @@ REPOST_CHANNELS = {"TechXOps", "philia", "DRM News", "Startup TM", "Motiversity"
                    # 2026-10-04 补扫时抓到的搬运号(Pet circle 重传 Dwarkesh/No Priors/Cadence 整期,其余是讲座/CNBC 片段搬运)
                    "Pet circle", "UninformedInvestors", "Vampyre Drakul", "LufSec Cyber Security", "BetterDailyLabs"}
 
+MIN_SUBS = 1000   # 人物维度候选频道的最低订阅数,见 discover() 里的注释
+
 def log(msg):
     line = f"[{datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M')}Z] {msg}"
     print(line, flush=True)
@@ -118,6 +120,7 @@ def meta(vid):
         return {"vid": vid, "date": d.get("upload_date") or "", "ch": (d.get("channel") or "").strip(),
                 "dur": d.get("duration") or 0, "t": d.get("title") or "",
                 "desc": (d.get("description") or "")[:700],
+                "subs": d.get("channel_follower_count"),
                 "cap": "en" in ac,
                 "origlang": orig_lang(d, ac)}
     except Exception: return None
@@ -500,6 +503,11 @@ def discover(people, vids, days, per_person_cap=1):
             if not m or not m["cap"] or not latin_title(m["t"]): continue
             if m.get("ch") in REPOST_CHANNELS:
                 log(f"  {pid:12} {m['date']} {m['t'][:44]} → 弃(搬运号 {m['ch']})"); continue
+            # 黑名单只能事后补、永远慢一拍。2026-10-07 The Mukuls(113 订阅)把 Karpathy 2025-02 的
+            # 《How I use LLMs》讲座改标题成「on Agents, Loops…」按 8/25 重传,过了闸门被收。
+            # 人物维度搜到的小频道几乎都是搬运/剪辑号:订阅 <MIN_SUBS 一律不收(取不到订阅数则放行)。
+            if m.get("subs") is not None and m["subs"] < MIN_SUBS:
+                log(f"  {pid:12} {m['date']} {m['t'][:44]} → 弃(小频道 {m['ch']} {m['subs']} 订阅,疑似搬运)"); continue
             if not english_audio(m):
                 log(f"  {pid:12} {m['date']} {m['t'][:44]} → 弃(原声 {m['origlang']},en 字幕是机翻)")
                 continue
