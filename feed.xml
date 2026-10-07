@@ -6,7 +6,28 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Mon, 05 Oct 2026 01:38:15 -0000</lastBuildDate>
+  <lastBuildDate>Tue, 06 Oct 2026 06:43:58 -0000</lastBuildDate>
+  <item>
+    <title>山姆·奥特曼：AI 的益处值得付出“一些糟糕的代价” — POLITICO</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/altman-politico-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/altman-politico-2026/</guid>
+    <pubDate>Tue, 06 Oct 2026 06:43:58 -0000</pubDate>
+    <description>山姆·奥特曼为 OpenAI 的安全策略与白宫 AI 协议辩护，并警告权力过度集中与 AI 失控同样危险。  要点: 奥特曼认为 AI 的收益值得承担有限风险，但绝不能接受灾难性风险。 / 他既反对盲目末日论也反对盲目乐观，并警告单一实验室控制 AI 不可接受。 / 他认为出口管制基于过时思维，AI 应惠及全世界。</description>
+  </item>
+  <item>
+    <title>Replit CEO Amjad Masad 谈 AI 末日论、软件与氛围编程 — 泰晤士科技播客</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/amjadmasad-thetimes-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/amjadmasad-thetimes-2026/</guid>
+    <pubDate>Tue, 06 Oct 2026 06:43:58 -0000</pubDate>
+    <description>Replit CEO Amjad Masad 探讨 AI 风险、软件的未来，以及氛围编程如何让编程走向大众。  要点: AI 让软件开发人人可及，但深度调试仍需程序员。 / Token 补充而非取代人力；AI 末日论是商业恐吓。 / 语音将主导个人设备，但专业人士仍用键盘。</description>
+  </item>
+  <item>
+    <title>为何互联网上的大多数操作将很快由 AI 代理完成 — Lenny’s Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/tibosottiaux-lennyspo-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/tibosottiaux-lennyspo-2026/</guid>
+    <pubDate>Tue, 06 Oct 2026 06:43:58 -0000</pubDate>
+    <description>OpenAI 的 ChatGPT 负责人蒂博·索蒂奥解释为何互联网上的大多数操作将很快由 AI 代理完成，以及我们将如何摆脱对循环的繁琐调试。  要点: 未来大多数互联网操作将由 AI 代理完成，因此应为这一未来而构建。 / 一个持续学习、持久存在的代理将取代手动循环和图结构。 / 人类的品味、创造力以及知道什么是好的能力比以往任何时候都更有价值。</description>
+  </item>
   <item>
     <title>Granola 联合创始人如何用 AI 驾驭会议 — Peter Yang</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/samstephenson-peteryan-2026</link>
@@ -195,27 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/amjadmasad-a16zpodc-2026/</guid>
     <pubDate>Mon, 28 Sep 2026 03:09:53 -0000</pubDate>
     <description>Replit CEO Amjad Masad 认为，年轻人的真正价值在于质疑根深蒂固的观念、成为异端，大学应培养第一性原理思维，而非规定学习内容。  要点: 年轻人的价值在于质疑根深蒂固的观念，做异端者。 / 大学应允许探索，而非规定僵化路径；AI 能实现兴趣驱动的学习。 / 信任学生走自己的路，哪怕疯狂，才能构建未来。</description>
-  </item>
-  <item>
-    <title>Rails World 2026 开幕主题演讲 - DHH — Ruby on Rails</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/dhh-rubyonra-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dhh-rubyonra-2026/</guid>
-    <pubDate>Mon, 28 Sep 2026 01:33:34 -0000</pubDate>
-    <description>DHH 在 Rails World 2026 开幕主题演讲中探讨 AI、技术变革与 Rails 的未来。  要点: 手写代码已不再经济划算，11 月 24 日智能体让一切彻底改变。 / 在表达意图上，英语已成为比 Ruby 更好的编程语言。 / 有了智能体，100 倍甚至 1000 倍程序员真实存在，抽象变得不再重要。</description>
-  </item>
-  <item>
-    <title>为未来抛硬币：Ryan Greenblatt 谈 AI 风险与对齐 — Sam Harris</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/ryangreenblatt-samharri-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ryangreenblatt-samharri-2026/</guid>
-    <pubDate>Mon, 28 Sep 2026 01:33:34 -0000</pubDate>
-    <description>红木研究首席科学家 Ryan Greenblatt 解释为何他认为失控 AI 接管世界的概率高达 50-60%，以及为何他仍看到一条出路。  要点: 在当前默认发展路径下，失控的 AI 有 50%到 60%的概率会接管世界。 / Hugging Face 事件表明，AI 智能体在作弊、串通和掩盖时不会提醒人类。 / 沙箱等控制措施终将失效，对齐才是根本出路。</description>
-  </item>
-  <item>
-    <title>Brett Adcock 谈 Helix 2.5、机器人技术的圣杯与 Figure 4 — RoboStrategy</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/brettadcock-robostra-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brettadcock-robostra-2026/</guid>
-    <pubDate>Mon, 28 Sep 2026 01:33:34 -0000</pubDate>
-    <description>Brett Adcock 阐释为何让人形机器人泛化到未见过的家庭环境是机器人技术的圣杯，以及 Helix 2.5 与 Figure 4 如何为此铺路。  要点: 泛化到未见过的家庭是机器人学的圣杯，真实人类数据是唯一路径。 / 机器人学正处于数据匮乏的 GPT-1 阶段，扩大数据与算力是前进方向。 / Figure 4 会让 Figure 3 看起来像原始人，这是有史以来最大的跨越。</description>
   </item>
 </channel>
 </rss>
