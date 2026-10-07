@@ -119,7 +119,8 @@ def main():
         print(f"  · data/views.json 删掉 {pid} 整条(gen_views 会按剩余期重算)")
 
     # ---- 4. 全文 + 静态页 ----
-    for p in [ROOT / "mcp-data" / "ep" / f"{a.eid}.json"]:
+    # og 分享卡(gen_og_cards 产物)也要删,否则成孤儿文件 —— 2026-10-07 karpathy-themukul 残留过
+    for p in [ROOT / "mcp-data" / "ep" / f"{a.eid}.json", ROOT / "og" / "e" / f"{a.eid}.jpg"]:
         if p.exists():
             p.unlink(); print(f"  · 删 {p.relative_to(ROOT)}")
     for dpath in [ROOT / "e" / a.eid, ROOT / "pp" / pid if pid_orphan else None]:
