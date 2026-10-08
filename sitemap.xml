@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-10-08</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/fedus/</loc><lastmod>2026-10-08</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/altman/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/rhiannonbell/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/aminvahdat/</loc><lastmod>2026-10-07</lastmod></url>
@@ -221,7 +222,6 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/brianlovin/</loc><lastmod>2026-08-01</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/pachocki/</loc><lastmod>2026-07-07</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/amolavasare/</loc><lastmod>2026-07-14</lastmod></url>
-  <url><loc>https://aipodcast.jasonlin.tech/pp/fedus/</loc><lastmod>2026-06-23</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/marvinschwaibold/</loc><lastmod>2026-07-21</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/simonwillison/</loc><lastmod>2026-07-14</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/edwinchen/</loc><lastmod>2026-08-02</lastmod></url>
@@ -308,6 +308,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/hugobarra/</loc><lastmod>2026-08-14</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/albertgu/</loc><lastmod>2026-06-27</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/abbeel/</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/fedus-latentsp-2026/</loc><lastmod>2026-10-08</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/altman-fairgame-2026/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/rhiannonbell-diveclub-2026/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/aminvahdat-training-2026/</loc><lastmod>2026-10-07</lastmod></url>
