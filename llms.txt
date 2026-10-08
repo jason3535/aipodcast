@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 307 位人物 / 713 期访谈
+规模: 307 位人物 / 714 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -78,6 +78,7 @@
 - [Yejin Choi / 崔艺珍](https://aipodcast.jasonlin.tech/pp/yejin/): Professor, Stanford (prev. NVIDIA, AI2); commonsense reasoning — 3 期
 - [Noam Shazeer / 诺姆·沙泽尔](https://aipodcast.jasonlin.tech/pp/shazeer/): Co-lead, Google Gemini — 3 期
 - [Jan Leike / 扬·莱克](https://aipodcast.jasonlin.tech/pp/leike/): Alignment Lead, Anthropic — 3 期
+- [Liam Fedus / 利亚姆·费杜斯](https://aipodcast.jasonlin.tech/pp/fedus/): Co-founder, Periodic Labs (ex-OpenAI) — 2 期
 - [Sam Stephenson / 萨姆·斯蒂芬森](https://aipodcast.jasonlin.tech/pp/samstephenson/): Co-founder and Designer, Granola — 2 期
 - [Grant Sanderson / 格兰特·桑德森](https://aipodcast.jasonlin.tech/pp/grantsanderson/): Creator of 3Blue1Brown; math educator — 2 期
 - [Aaron Levie / 亚伦·莱维](https://aipodcast.jasonlin.tech/pp/aaronlevie/): Cofounder and CEO, Box — 2 期
@@ -240,7 +241,6 @@
 - [Aidan Gomez / 艾丹·戈麦斯](https://aipodcast.jasonlin.tech/pp/gomez/): Co-founder & CEO, Cohere — 1 期
 - [Brian Lovin / 布莱恩·洛文](https://aipodcast.jasonlin.tech/pp/brianlovin/): Designer & Founder, Campsite — 1 期
 - [Amol Avasare / 阿莫尔·阿瓦萨雷](https://aipodcast.jasonlin.tech/pp/amolavasare/): Head of Growth at Anthropic — 1 期
-- [Liam Fedus / 利亚姆·费杜斯](https://aipodcast.jasonlin.tech/pp/fedus/): Co-founder, Periodic Labs (ex-OpenAI) — 1 期
 - [Marvin Schwaibold / 马文·施瓦博尔德](https://aipodcast.jasonlin.tech/pp/marvinschwaibold/): Product design leader at Shopify — 1 期
 - [Simon Willison / 西蒙·威利森](https://aipodcast.jasonlin.tech/pp/simonwillison/): Independent software developer and AI blogger (simonwillison.net); creator of Datasette and the LLM CLI — 1 期
 - [Flora Guo / 弗洛拉·郭](https://aipodcast.jasonlin.tech/pp/floraguo/): AI-Native Product Designer — 1 期
@@ -316,6 +316,7 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
+- [AI Scientists Are Here: Autonomous Labs & Synthesis Superintelligence — Periodic Labs](https://aipodcast.jasonlin.tech/e/fedus-latentsp-2026/) — Liam Fedus, Latent Space, 2026-10-08
 - [Sam Altman on Elon Musk, 'Artificial,' and the Future of Humanity (Part One)](https://aipodcast.jasonlin.tech/e/altman-fairgame-2026/) — Sam Altman, Fair Game by Vanity Fair, 2026-10-06
 - [How Google Designs for AI at Scale](https://aipodcast.jasonlin.tech/e/rhiannonbell-diveclub-2026/) — Rhiannon Bell, Dive Club, 2026-10-06
 - [Google's AI Infrastructure Chief on the Physics and Economics of Frontier AI](https://aipodcast.jasonlin.tech/e/aminvahdat-training-2026/) — Amin Vahdat, Training Data, 2026-10-06
@@ -355,7 +356,6 @@
 - [Jensen Huang: AI Alarmism Has Gone Too Far](https://aipodcast.jasonlin.tech/e/jensen-theezrak-2026/) — Jensen Huang, The Ezra Klein Show, 2026-09-23
 - [Geoff Teehan on Navigating Change as a Designer](https://aipodcast.jasonlin.tech/e/geoffteehan-diveclub-2026/) — Geoff Teehan, Dive Club, 2026-09-23
 - [Bio-security Is an AI Arms Race: Eric Nguyen on Generative Genomics](https://aipodcast.jasonlin.tech/e/ericnguyen-latentsp-2026/) — Eric Nguyen, Latent Space, 2026-09-23
-- [DHH Responds to Omarchy's Critics (Including Me)](https://aipodcast.jasonlin.tech/e/dhh-mischava-2026/) — DHH, Mischa van den Burg, 2026-09-23
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
