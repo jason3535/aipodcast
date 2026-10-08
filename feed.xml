@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Wed, 07 Oct 2026 02:37:23 -0000</lastBuildDate>
+  <lastBuildDate>Thu, 08 Oct 2026 01:45:25 -0000</lastBuildDate>
+  <item>
+    <title>AI 科学家已至：自主实验室与合成超级智能——Periodic Labs — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/fedus-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/fedus-latentsp-2026/</guid>
+    <pubDate>Thu, 08 Oct 2026 01:45:25 -0000</pubDate>
+    <description>Periodic Labs 的 Liam 阐释为何仅有智能还不够，以及自主物理实验室如何闭合假设与现实之间的循环。  要点: 智能本身不足以发现新科学，想法必须在物理现实中检验。 / 自动化表征是最大瓶颈，用模拟闭环是关键。 / 高质量、低噪声的实验数据比额外算力更能推动物理发现。</description>
+  </item>
   <item>
     <title>山姆·奥特曼谈埃隆·马斯克、《人造》与人类未来（上） — Fair Game by Vanity Fair</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/altman-fairgame-2026</link>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dannymartinez-diveclub-2026/</guid>
     <pubDate>Thu, 01 Oct 2026 01:39:02 -0000</pubDate>
     <description>Decimals 首席执行官 Danny Martinez 解析设计就业市场的变革，以及设计师和招聘经理需要了解的关键趋势。  要点: 设计岗位正在融合，会用新工具动手做的人比名校背景更吃香。 / 作品集要有人味：独特、用心、个人化，不能是套路化生成。 / 顶尖设计工程师年薪超 30 万美元，自由品牌设计师可达 75 万。</description>
-  </item>
-  <item>
-    <title>Molly Graham：AI 转型中隐藏的悲伤、倦怠与机遇 — Lenny’s Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/mollygraham-lennyspo-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/mollygraham-lennyspo-2026/</guid>
-    <pubDate>Thu, 01 Oct 2026 01:39:02 -0000</pubDate>
-    <description>Molly Graham 再次做客，重新审视她经典的“交出你的乐高”职业建议在 AI 时代的适用性——哪些该放手、哪些该保留，以及如何面对变革中的悲伤与机遇。  要点: AI 转型带来悲伤和倦怠，但也为学习者带来机遇。 / 把 AI 当作初级实习生：提供背景、指导和迭代。 / 管理者是职场幸福的关键；削减管理层是个错误。</description>
   </item>
 </channel>
 </rss>
