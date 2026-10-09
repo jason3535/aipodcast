@@ -2,14 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/fedus/</loc><lastmod>2026-10-08</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/jeetupatel/</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/lucaferrari/</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/tibosottiaux/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/altman/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/rhiannonbell/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/aminvahdat/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/yashpatil/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/diogoalmeida/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/hinton/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/samstephenson/</loc><lastmod>2026-10-05</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/amjadmasad/</loc><lastmod>2026-10-06</lastmod></url>
-  <url><loc>https://aipodcast.jasonlin.tech/pp/tibosottiaux/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/alexzhang/</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/dylanpatel/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/kohli/</loc><lastmod>2026-10-02</lastmod></url>
@@ -164,7 +167,6 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/dylanfield/</loc><lastmod>2026-08-18</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/aravind/</loc><lastmod>2026-07-07</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/edunov/</loc><lastmod>2026-07-12</lastmod></url>
-  <url><loc>https://aipodcast.jasonlin.tech/pp/hinton/</loc><lastmod>2026-07-05</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/ajambrosino/</loc><lastmod>2026-07-03</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/thomasahle/</loc><lastmod>2026-08-07</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/markchen/</loc><lastmod>2026-07-05</lastmod></url>
@@ -310,11 +312,15 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/albertgu/</loc><lastmod>2026-06-27</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/abbeel/</loc><lastmod>2026-08-17</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/fedus-latentsp-2026/</loc><lastmod>2026-10-08</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/jeetupatel-ycombina-2026/</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/lucaferrari-training-2026/</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/tibosottiaux-pioneers-2026/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/altman-fairgame-2026/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/rhiannonbell-diveclub-2026/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/aminvahdat-training-2026/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/yashpatil-unsuperv-2026/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/diogoalmeida-thetwiml-2026/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/hinton-nayeemar-2026/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/altman-politico-2026/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/samstephenson-peteryan-2026/</loc><lastmod>2026-10-05</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/amjadmasad-thetimes-2026/</loc><lastmod>2026-10-06</lastmod></url>
