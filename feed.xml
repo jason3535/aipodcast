@@ -6,7 +6,21 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Thu, 08 Oct 2026 01:45:25 -0000</lastBuildDate>
+  <lastBuildDate>Thu, 08 Oct 2026 03:25:43 -0000</lastBuildDate>
+  <item>
+    <title>OpenAI ChatGPT 负责人谈 AI 智能体的新时代 — Lenny’s Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/sottiaux-lennyspo-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/sottiaux-lennyspo-2026/</guid>
+    <pubDate>Thu, 08 Oct 2026 03:25:43 -0000</pubDate>
+    <description>Tibo Sottiaux 阐释 AI 的未来是一种持续学习、随模型进步而扩展或收缩智能体团队的常驻智能。  要点: 未来大多数互联网操作将由智能体完成，因此应面向这一未来进行构建。 / 一个持久学习型智能体将取代手动循环和图表。 / 人类的品味、创造力以及知道什么是好的能力比以往任何时候都更有价值。</description>
+  </item>
+  <item>
+    <title>OpenAI Dots 负责人谈 ChatGPT 与个人智能体的未来 — Sources Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/embiricos-sourcesp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/embiricos-sourcesp-2026/</guid>
+    <pubDate>Thu, 08 Oct 2026 03:25:43 -0000</pubDate>
+    <description>OpenAI Dots 负责人 Alexander 解读为何主动式个人智能体是继聊天与编程智能体之后的 AI 新篇章。  要点: 持久主动型智能体是继聊天和编程智能体之后的第三章。 / 大多数人只会拥有一个个人智能体，而不是多个。 / 聊天仍是消费者界面，智能体能力将融入其中。</description>
+  </item>
   <item>
     <title>AI 科学家已至：自主实验室与合成超级智能——Periodic Labs — Latent Space</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/fedus-latentsp-2026</link>
@@ -202,20 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ariweinstein-latentsp-2026/</guid>
     <pubDate>Thu, 01 Oct 2026 01:39:02 -0000</pubDate>
     <description>OpenAI 的 Ari 深度解读 DevDay 重磅发布：从超人级计算机使用、决策 API 到 AI 云。  要点: 电脑操作现已超越普通人，下一个前沿是超人速度。 / 无障碍树和 DOM 访问优于截图滚动循环。 / 决策 API 是 Luna 权重加结构化输出和并行推理。</description>
-  </item>
-  <item>
-    <title>OpenRouter 创始人 Alex Atallah：以 70 亿美元出售给 Stripe，以及正在展开的 AI 经济 — Sabrina Halper Show</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/alexatallah-sabrinah-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/alexatallah-sabrinah-2026/</guid>
-    <pubDate>Thu, 01 Oct 2026 01:39:02 -0000</pubDate>
-    <description>OpenRouter 创始人 Alex Atallah 畅谈以 70 多亿美元出售给 Stripe、服务 1000 万开发者和每日处理 10 万亿 token，以及为何 AI 经济必须保持多元异构。  要点: OpenRouter 每天为 1000 万开发者路由 10 万亿 token，如今以 70 多亿美元卖给 Stripe。 / 开发者用脚投票的偏好，比静态基准更能反映模型优劣。 / 智能体将推动大部分 GDP 增长，稳定币更适合智能体支付。</description>
-  </item>
-  <item>
-    <title>Danny Martinez：在当今设计就业市场中脱颖而出 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/dannymartinez-diveclub-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dannymartinez-diveclub-2026/</guid>
-    <pubDate>Thu, 01 Oct 2026 01:39:02 -0000</pubDate>
-    <description>Decimals 首席执行官 Danny Martinez 解析设计就业市场的变革，以及设计师和招聘经理需要了解的关键趋势。  要点: 设计岗位正在融合，会用新工具动手做的人比名校背景更吃香。 / 作品集要有人味：独特、用心、个人化，不能是套路化生成。 / 顶尖设计工程师年薪超 30 万美元，自由品牌设计师可达 75 万。</description>
   </item>
 </channel>
 </rss>

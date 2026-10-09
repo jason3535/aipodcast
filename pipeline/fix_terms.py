@@ -22,6 +22,8 @@ BL, BR = r"(?<![A-Za-z])", r"(?![A-Za-z])"
 # Grock 分流用:命中这些词说明在聊推理芯片,那个 Grock 指的是 Groq 而不是 xAI 的 Grok。
 _CHIPCTX = re.compile(r"Cerebr|LPU|chip|芯片|wafer|NVLink|推理芯片", re.I)
 
+_CODEXCTX = re.compile(r"OpenAI|Claude Code|Cowork|co-work|agents?|ChatGPT|Grok Bot|Rockbot|coding|GPT-", re.I)
+_CODECCTX = re.compile(r"MP3|FFmpeg|video|audio|compression|编解码|视频|音频|decod|encod", re.I)
 RULES = [
     (re.compile(BL+r"clockcode"+BR, re.I), "Claude Code"),
     (re.compile(BL+rf"{VAR}\s?(codes)"+BR, re.I), "Claude Codes"),
@@ -40,6 +42,16 @@ RULES = [
     (re.compile(BL+r"(?:claw|clawed|cloth|clock|clod|klaude|klaud|glaude)\s?(agents?)"+BR, re.I), "Claude agent"),
     (re.compile(BL+r"(?:claw|clawed|cloth|clock|clod|klaude|klaud|glaude)\s?(skills?)"+BR, re.I), "Claude Skill"),
     (re.compile(r"云代码"), "Claude Code"),                                       # 中文侧:译者把 Cloud Code 直译成「云代码」
+    # ---- ChatGPT(2026-10-09 用户报 embiricos 期:chatbt) ----
+    (re.compile(BL+r"chat\s?(?:bt|gbt|gtp|jpt|g\.p\.t\.?)"+BR, re.I), "ChatGPT"),
+    (re.compile(BL+r"chat\s?(?:bt|gbt|gtp|jpt)s"+BR, re.I), "ChatGPTs"),
+    # ---- OpenAI Codex(2026-10-09 用户报 embiricos 期) ----
+    # 自动字幕把 Codex 听成 Codeex/codeex,全站 51 处(10 期)。"codecs" 不动:多数真指音视频编解码。
+    (re.compile(BL+r"Codeex"+BR, re.I), "Codex"),
+    # "codecs" 两可:MP3/FFmpeg/视频编解码是真的;挨着 OpenAI/Claude Code/Cowork/agent/ChatGPT 的才是 Codex 误听。
+    (re.compile(BL+r"codecs"+BR, re.I),
+     lambda m: "Codex" if (_CODEXCTX.search(m.string[max(0, m.start()-160):m.start()+160])
+                           and not _CODECCTX.search(m.string[max(0, m.start()-160):m.start()+160])) else m.group(0)),
     # ---- Grok / Groq / Cerebras(2026-09-14 用户报) ----
     # ⚠️ Grok(xAI 的模型)与 Groq(做 LPU 的推理芯片公司)是**两家**,自动字幕都听成 "Grock",
     # 一律替换必然改错一半。全站扫出 54 处 Grock:50 处指 xAI,4 处指芯片公司
@@ -172,10 +184,13 @@ def fix_text(s):
             if ctx and ctx.search(s):
                 return m.group(0)
             # 原文若是 "Claude Code" 本身不会进来(变体表里没有 claude)
-            n += 1
             # good 允许是函数:需要保留原文片段(如版本号)时用,普通规则仍是字符串。
             # 注意不能用 r"\1" 反向引用 —— 这里是函数式替换,sub 不会展开它。
-            return good(m) if callable(good) else good
+            out = good(m) if callable(good) else good
+            # 函数式规则可能判定"不改"而原样返回(如真 codecs):不算一处待修,否则 --check 永远红
+            if out != m.group(0):
+                n += 1
+            return out
         s = pat.sub(rep, s)
     return s, n
 
