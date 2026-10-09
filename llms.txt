@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 309 位人物 / 716 期访谈
+规模: 308 位人物 / 715 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -133,8 +133,7 @@
 - [Rhiannon Bell / 里安农·贝尔](https://aipodcast.jasonlin.tech/pp/rhiannonbell/): VP of UX, Google Search — 1 期
 - [Amin Vahdat / 阿明·瓦赫达特](https://aipodcast.jasonlin.tech/pp/aminvahdat/): Chief Technologist for AI Infrastructure, Google — 1 期
 - [Yash Patil / 亚什·帕蒂尔](https://aipodcast.jasonlin.tech/pp/yashpatil/): CEO, Applied Compute; ex-OpenAI Researcher — 1 期
-- [Tibo Sottiaux / 蒂博·索蒂奥](https://aipodcast.jasonlin.tech/pp/tibosottiaux/): Head of ChatGPT, OpenAI — 1 期
-- [Tibo Sottiaux / 蒂博·索蒂奥](https://aipodcast.jasonlin.tech/pp/sottiaux/): Head of ChatGPT & Codex (Core Products), OpenAI — 1 期
+- [Tibo Sottiaux / 蒂博·索蒂奥](https://aipodcast.jasonlin.tech/pp/tibosottiaux/): Head of ChatGPT & Codex (Core Products), OpenAI — 1 期
 - [Alex Zhang / 亚历克斯·张](https://aipodcast.jasonlin.tech/pp/alexzhang/): PhD Researcher, MIT — 1 期
 - [Alexander Embiricos / 亚历山大·恩比里科斯](https://aipodcast.jasonlin.tech/pp/embiricos/): Product Lead, Dots, OpenAI — 1 期
 - [Ari Weinstein / 阿里·温斯坦](https://aipodcast.jasonlin.tech/pp/ariweinstein/): Product & Engineering Lead, Computer Use, OpenAI — 1 期
@@ -328,7 +327,6 @@
 - [How Granola's Co-Founder Uses AI to Survive Meetings](https://aipodcast.jasonlin.tech/e/samstephenson-peteryan-2026/) — Sam Stephenson, Peter Yang, 2026-10-04
 - [Replit CEO Amjad Masad on AI Doom, Software, and Vibe-Coding](https://aipodcast.jasonlin.tech/e/amjadmasad-thetimes-2026/) — Amjad Masad, The Times Tech Podcast, 2026-10-04
 - [Why Most Internet Actions Will Soon Be Taken by AI Agents](https://aipodcast.jasonlin.tech/e/tibosottiaux-lennyspo-2026/) — Tibo Sottiaux, Lenny’s Podcast, 2026-10-04
-- [OpenAI's Head of ChatGPT on the Next Era of AI Agents](https://aipodcast.jasonlin.tech/e/sottiaux-lennyspo-2026/) — Tibo Sottiaux, Lenny’s Podcast, 2026-10-04
 - [Why Specialized AI Could Beat the God Model](https://aipodcast.jasonlin.tech/e/amjadmasad-thea16zp-2026/) — Amjad Masad, The a16z Podcast, 2026-10-03
 - [Recursive Language Models — Alex Zhang, MIT PhD](https://aipodcast.jasonlin.tech/e/alexzhang-latentsp-2026/) — Alex Zhang, Latent Space, 2026-10-02
 - [Which GPU Clouds Are Actually Good? ClusterMAX 3.0](https://aipodcast.jasonlin.tech/e/dylanpatel-latentsp-2026/) — Dylan Patel, Latent Space, 2026-10-02
@@ -358,6 +356,7 @@
 - [Mark Zuckerberg's Vision for the Future: AI, Smart Glasses, and the Metaverse](https://aipodcast.jasonlin.tech/e/zuckerberg-thenextb-2026/) — Mark Zuckerberg, The Next Big Thing, 2026-09-24
 - [Proven, Better, New: Mark Pincus on Control and Betting on Yourself](https://aipodcast.jasonlin.tech/e/pincus-harvardb-2026/) — Mark Pincus, Harvard Business School, 2026-09-23
 - [Jensen Huang: AI Alarmism Has Gone Too Far](https://aipodcast.jasonlin.tech/e/jensen-theezrak-2026/) — Jensen Huang, The Ezra Klein Show, 2026-09-23
+- [Geoff Teehan on Navigating Change as a Designer](https://aipodcast.jasonlin.tech/e/geoffteehan-diveclub-2026/) — Geoff Teehan, Dive Club, 2026-09-23
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
