@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 308 位人物 / 715 期访谈
+规模: 308 位人物 / 717 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -22,12 +22,12 @@
 - [Yann LeCun / 杨立昆](https://aipodcast.jasonlin.tech/pp/lecun/): Chief AI Scientist, Meta — 10 期
 - [Tony Fadell / 托尼·法德尔](https://aipodcast.jasonlin.tech/pp/fadell/): Principal at Future Shape (Build Collective); creator of the iPod, co-creator of the iPhone, founder of Nest — 9 期
 - [Mustafa Suleyman / 穆斯塔法·苏莱曼](https://aipodcast.jasonlin.tech/pp/suleyman/): CEO, Microsoft AI — 9 期
+- [Geoffrey Hinton / 杰弗里·辛顿](https://aipodcast.jasonlin.tech/pp/hinton/): Professor Emeritus, U of Toronto — 8 期
 - [Evan Spiegel / 埃文·斯皮格尔](https://aipodcast.jasonlin.tech/pp/evanspiegel/): Co-founder & CEO, Snap — 8 期
 - [Alexandr Wang / 亚历山大·王](https://aipodcast.jasonlin.tech/pp/awang/): Founder, Scale AI · Meta Superintelligence — 8 期
 - [Daniel Kokotajlo / 丹尼尔·科科塔伊洛](https://aipodcast.jasonlin.tech/pp/kokotajlo/): Author, AI 2027 · ex-OpenAI — 7 期
 - [Noam Brown / 诺姆·布朗](https://aipodcast.jasonlin.tech/pp/noambrown/): Research Scientist, OpenAI — 7 期
 - [Richard Sutton / 理查德·萨顿](https://aipodcast.jasonlin.tech/pp/sutton/): Professor, U of Alberta — 7 期
-- [Geoffrey Hinton / 杰弗里·辛顿](https://aipodcast.jasonlin.tech/pp/hinton/): Professor Emeritus, U of Toronto — 7 期
 - [Nathan Lambert / 内森·兰伯特](https://aipodcast.jasonlin.tech/pp/lambert/): Research Scientist, Ai2 — 7 期
 - [Dylan Patel / 迪伦·帕特尔](https://aipodcast.jasonlin.tech/pp/dylanpatel/): Founder & Chief Analyst, SemiAnalysis — 6 期
 - [Andrew Feldman / 安德鲁·费尔德曼](https://aipodcast.jasonlin.tech/pp/feldman/): Co-founder & CEO, Cerebras Systems — 6 期
@@ -78,6 +78,7 @@
 - [Yejin Choi / 崔艺珍](https://aipodcast.jasonlin.tech/pp/yejin/): Professor, Stanford (prev. NVIDIA, AI2); commonsense reasoning — 3 期
 - [Noam Shazeer / 诺姆·沙泽尔](https://aipodcast.jasonlin.tech/pp/shazeer/): Co-lead, Google Gemini — 3 期
 - [Jan Leike / 扬·莱克](https://aipodcast.jasonlin.tech/pp/leike/): Alignment Lead, Anthropic — 3 期
+- [Misha Laskin / 米沙·拉斯金](https://aipodcast.jasonlin.tech/pp/laskin/): Co-founder & CEO, Reflection AI (prev. DeepMind) — 2 期
 - [Liam Fedus / 利亚姆·费杜斯](https://aipodcast.jasonlin.tech/pp/fedus/): Co-founder, Periodic Labs (ex-OpenAI) — 2 期
 - [Sam Stephenson / 萨姆·斯蒂芬森](https://aipodcast.jasonlin.tech/pp/samstephenson/): Co-founder and Designer, Granola — 2 期
 - [Grant Sanderson / 格兰特·桑德森](https://aipodcast.jasonlin.tech/pp/grantsanderson/): Creator of 3Blue1Brown; math educator — 2 期
@@ -293,7 +294,6 @@
 - [Ben Mann / 本·曼恩](https://aipodcast.jasonlin.tech/pp/benmann/): Co-founder, Anthropic — 1 期
 - [Gunnar Gray / 冈纳·格雷](https://aipodcast.jasonlin.tech/pp/gunnargray/): Product Design Lead at Perplexity — 1 期
 - [Ryo Lu / 陆瑞（Ryo Lu）](https://aipodcast.jasonlin.tech/pp/ryolu/): Head of Design at Cursor (Anysphere) — 1 期
-- [Misha Laskin / 米沙·拉斯金](https://aipodcast.jasonlin.tech/pp/laskin/): Co-founder & CEO, Reflection AI (prev. DeepMind) — 1 期
 - [Guillaume Lample / 纪尧姆·朗普勒](https://aipodcast.jasonlin.tech/pp/lample/): Co-founder & Chief Scientist, Mistral AI — 1 期
 - [Josh Batson / 乔什·巴特森](https://aipodcast.jasonlin.tech/pp/batson/): Interpretability Researcher, Anthropic — 1 期
 - [Varun Mohan / 瓦伦·莫汉](https://aipodcast.jasonlin.tech/pp/varun/): Co-founder & CEO, Windsurf — 1 期
@@ -317,6 +317,7 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
+- [Beam: Building America's Frontier Open Model with Reflection AI's Misha Laskin](https://aipodcast.jasonlin.tech/e/laskin-nopriors-2026/) — Misha Laskin, No Priors, 2026-10-09
 - [AI Scientists Are Here: Autonomous Labs & Synthesis Superintelligence — Periodic Labs](https://aipodcast.jasonlin.tech/e/fedus-latentsp-2026/) — Liam Fedus, Latent Space, 2026-10-08
 - [How Jeetu Patel Runs Cisco Like the World's Largest Startup](https://aipodcast.jasonlin.tech/e/jeetupatel-ycombina-2026/) — Jeetu Patel, Y Combinator, 2026-10-08
 - [Sam Altman on Elon Musk, 'Artificial,' and the Future of Humanity (Part One)](https://aipodcast.jasonlin.tech/e/altman-fairgame-2026/) — Sam Altman, Fair Game by Vanity Fair, 2026-10-06
@@ -324,6 +325,7 @@
 - [Google's AI Infrastructure Chief on the Physics and Economics of Frontier AI](https://aipodcast.jasonlin.tech/e/aminvahdat-training-2026/) — Amin Vahdat, Training Data, 2026-10-06
 - [Applied Compute CEO Yash on the Limits of RL, the New AI Hyperscaler, and Why Post-Training Wins Inference](https://aipodcast.jasonlin.tech/e/yashpatil-unsuperv-2026/) — Yash Patil, Unsupervised Learning, 2026-10-06
 - [Why Jev Is Changing How We Build With AI](https://aipodcast.jasonlin.tech/e/diogoalmeida-thetwiml-2026/) — Diogo Almeida, The TWIML AI Podcast, 2026-10-06
+- [Geoffrey Hinton on AI Risks: Regulation, Jobs, and What One Person Can Do](https://aipodcast.jasonlin.tech/e/hinton-nayeemar-2026/) — Geoffrey Hinton, Nayeema Raza, 2026-10-06
 - [Sam Altman: AI's Benefits Are Worth 'Some Bad Things'](https://aipodcast.jasonlin.tech/e/altman-politico-2026/) — Sam Altman, POLITICO, 2026-10-05
 - [How Granola's Co-Founder Uses AI to Survive Meetings](https://aipodcast.jasonlin.tech/e/samstephenson-peteryan-2026/) — Sam Stephenson, Peter Yang, 2026-10-04
 - [Replit CEO Amjad Masad on AI Doom, Software, and Vibe-Coding](https://aipodcast.jasonlin.tech/e/amjadmasad-thetimes-2026/) — Amjad Masad, The Times Tech Podcast, 2026-10-04
@@ -355,8 +357,6 @@
 - [Coin Toss for the Future: Ryan Greenblatt on AI Risk and Alignment](https://aipodcast.jasonlin.tech/e/ryangreenblatt-samharri-2026/) — Ryan Greenblatt, Sam Harris, 2026-09-24
 - [Mark Zuckerberg's Vision for the Future: AI, Smart Glasses, and the Metaverse](https://aipodcast.jasonlin.tech/e/zuckerberg-thenextb-2026/) — Mark Zuckerberg, The Next Big Thing, 2026-09-24
 - [Proven, Better, New: Mark Pincus on Control and Betting on Yourself](https://aipodcast.jasonlin.tech/e/pincus-harvardb-2026/) — Mark Pincus, Harvard Business School, 2026-09-23
-- [Jensen Huang: AI Alarmism Has Gone Too Far](https://aipodcast.jasonlin.tech/e/jensen-theezrak-2026/) — Jensen Huang, The Ezra Klein Show, 2026-09-23
-- [Geoff Teehan on Navigating Change as a Designer](https://aipodcast.jasonlin.tech/e/geoffteehan-diveclub-2026/) — Geoff Teehan, Dive Club, 2026-09-23
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml

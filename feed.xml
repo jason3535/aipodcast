@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Thu, 08 Oct 2026 01:45:25 -0000</lastBuildDate>
+  <lastBuildDate>Fri, 09 Oct 2026 01:35:47 -0000</lastBuildDate>
+  <item>
+    <title>Jeetu Patel 如何像运营全球最大初创公司一样运营思科 — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/jeetupatel-ycombina-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jeetupatel-ycombina-2026/</guid>
+    <pubDate>Fri, 09 Oct 2026 01:35:47 -0000</pubDate>
+    <description>思科总裁兼首席产品官 Jeetu Patel 讲述如何将创始人思维注入 AI 基础设施巨头，押注更多工程师与战时领导力。  要点: AI 应用应创造新洞察而非只降本，工程师需求反而会增加。 / 思科是从芯片到软件的全栈 AI 基础设施卖铲人。 / 数据中心建设并非过度，供应瞬间被消化，我们仍受产能限制。</description>
+  </item>
   <item>
     <title>AI 科学家已至：自主实验室与合成超级智能——Periodic Labs — Latent Space</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/fedus-latentsp-2026</link>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/alexatallah-sabrinah-2026/</guid>
     <pubDate>Thu, 01 Oct 2026 01:39:02 -0000</pubDate>
     <description>OpenRouter 创始人 Alex Atallah 畅谈以 70 多亿美元出售给 Stripe、服务 1000 万开发者和每日处理 10 万亿 token，以及为何 AI 经济必须保持多元异构。  要点: OpenRouter 每天为 1000 万开发者路由 10 万亿 token，如今以 70 多亿美元卖给 Stripe。 / 开发者用脚投票的偏好，比静态基准更能反映模型优劣。 / 智能体将推动大部分 GDP 增长，稳定币更适合智能体支付。</description>
-  </item>
-  <item>
-    <title>Danny Martinez：在当今设计就业市场中脱颖而出 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/dannymartinez-diveclub-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dannymartinez-diveclub-2026/</guid>
-    <pubDate>Thu, 01 Oct 2026 01:39:02 -0000</pubDate>
-    <description>Decimals 首席执行官 Danny Martinez 解析设计就业市场的变革，以及设计师和招聘经理需要了解的关键趋势。  要点: 设计岗位正在融合，会用新工具动手做的人比名校背景更吃香。 / 作品集要有人味：独特、用心、个人化，不能是套路化生成。 / 顶尖设计工程师年薪超 30 万美元，自由品牌设计师可达 75 万。</description>
   </item>
 </channel>
 </rss>
