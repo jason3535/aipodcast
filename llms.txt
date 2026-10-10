@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 310 位人物 / 719 期访谈
+规模: 310 位人物 / 720 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -78,6 +78,7 @@
 - [Yejin Choi / 崔艺珍](https://aipodcast.jasonlin.tech/pp/yejin/): Professor, Stanford (prev. NVIDIA, AI2); commonsense reasoning — 3 期
 - [Noam Shazeer / 诺姆·沙泽尔](https://aipodcast.jasonlin.tech/pp/shazeer/): Co-lead, Google Gemini — 3 期
 - [Jan Leike / 扬·莱克](https://aipodcast.jasonlin.tech/pp/leike/): Alignment Lead, Anthropic — 3 期
+- [Misha Laskin / 米沙·拉斯金](https://aipodcast.jasonlin.tech/pp/laskin/): Co-founder & CEO, Reflection AI (prev. DeepMind) — 2 期
 - [Liam Fedus / 利亚姆·费杜斯](https://aipodcast.jasonlin.tech/pp/fedus/): Co-founder, Periodic Labs (ex-OpenAI) — 2 期
 - [Tibo Sottiaux / 蒂博·索蒂奥](https://aipodcast.jasonlin.tech/pp/tibosottiaux/): Head of ChatGPT & Codex (Core Products), OpenAI — 2 期
 - [Sam Stephenson / 萨姆·斯蒂芬森](https://aipodcast.jasonlin.tech/pp/samstephenson/): Co-founder and Designer, Granola — 2 期
@@ -295,7 +296,6 @@
 - [Ben Mann / 本·曼恩](https://aipodcast.jasonlin.tech/pp/benmann/): Co-founder, Anthropic — 1 期
 - [Gunnar Gray / 冈纳·格雷](https://aipodcast.jasonlin.tech/pp/gunnargray/): Product Design Lead at Perplexity — 1 期
 - [Ryo Lu / 陆瑞（Ryo Lu）](https://aipodcast.jasonlin.tech/pp/ryolu/): Head of Design at Cursor (Anysphere) — 1 期
-- [Misha Laskin / 米沙·拉斯金](https://aipodcast.jasonlin.tech/pp/laskin/): Co-founder & CEO, Reflection AI (prev. DeepMind) — 1 期
 - [Guillaume Lample / 纪尧姆·朗普勒](https://aipodcast.jasonlin.tech/pp/lample/): Co-founder & Chief Scientist, Mistral AI — 1 期
 - [Josh Batson / 乔什·巴特森](https://aipodcast.jasonlin.tech/pp/batson/): Interpretability Researcher, Anthropic — 1 期
 - [Varun Mohan / 瓦伦·莫汉](https://aipodcast.jasonlin.tech/pp/varun/): Co-founder & CEO, Windsurf — 1 期
@@ -319,6 +319,7 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
+- [Beam: Building America's Open Frontier Model with Reflection AI's Misha Laskin](https://aipodcast.jasonlin.tech/e/laskin-nopriors-2026/) — Misha Laskin, No Priors, 2026-10-09
 - [AI Scientists Are Here: Autonomous Labs & Synthesis Superintelligence — Periodic Labs](https://aipodcast.jasonlin.tech/e/fedus-latentsp-2026/) — Liam Fedus, Latent Space, 2026-10-08
 - [How Jeetu Patel Runs Cisco Like the World's Largest Startup](https://aipodcast.jasonlin.tech/e/jeetupatel-ycombina-2026/) — Jeetu Patel, Y Combinator, 2026-10-08
 - [Luca Ferrari: The Operating System Behind Bending Spoons](https://aipodcast.jasonlin.tech/e/lucaferrari-training-2026/) — Luca Ferrari, Training Data, 2026-10-08
@@ -358,7 +359,6 @@
 - [How AI Swarms Are Already Going Rogue | Daniel Kokotajlo](https://aipodcast.jasonlin.tech/e/kokotajlo-american-2026/) — Daniel Kokotajlo, American Thought Leaders - The Epoch Times, 2026-09-25
 - [Zuckerberg on Meta's AI Glasses, Muse, and the Trust Question](https://aipodcast.jasonlin.tech/e/zuckerberg-joannast-2026/) — Mark Zuckerberg, Joanna Stern, 2026-09-24
 - [Rails World 2026 Opening Keynote - DHH](https://aipodcast.jasonlin.tech/e/dhh-rubyonra-2026/) — DHH, Ruby on Rails, 2026-09-24
-- [Coin Toss for the Future: Ryan Greenblatt on AI Risk and Alignment](https://aipodcast.jasonlin.tech/e/ryangreenblatt-samharri-2026/) — Ryan Greenblatt, Sam Harris, 2026-09-24
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
