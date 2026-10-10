@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/laskin/</loc><lastmod>2026-10-10</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/fedus/</loc><lastmod>2026-10-08</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/jeetupatel/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/lucaferrari/</loc><lastmod>2026-10-09</lastmod></url>
@@ -285,7 +286,6 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/benmann/</loc><lastmod>2026-07-04</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/gunnargray/</loc><lastmod>2026-07-15</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/ryolu/</loc><lastmod>2026-07-15</lastmod></url>
-  <url><loc>https://aipodcast.jasonlin.tech/pp/laskin/</loc><lastmod>2026-06-27</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/lample/</loc><lastmod>2026-06-27</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/batson/</loc><lastmod>2026-07-05</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/varun/</loc><lastmod>2026-06-23</lastmod></url>
@@ -311,6 +311,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/hugobarra/</loc><lastmod>2026-08-14</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/albertgu/</loc><lastmod>2026-06-27</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/abbeel/</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/laskin-nopriors-2026/</loc><lastmod>2026-10-10</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/fedus-latentsp-2026/</loc><lastmod>2026-10-08</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/jeetupatel-ycombina-2026/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/lucaferrari-training-2026/</loc><lastmod>2026-10-09</lastmod></url>

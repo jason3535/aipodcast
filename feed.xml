@@ -6,7 +6,35 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Thu, 08 Oct 2026 03:25:43 -0000</lastBuildDate>
+  <lastBuildDate>Fri, 09 Oct 2026 06:46:49 -0000</lastBuildDate>
+  <item>
+    <title>Jeetu Patel 如何像全球最大初创公司一样运营思科 — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/jeetupatel-ycombina-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jeetupatel-ycombina-2026/</guid>
+    <pubDate>Fri, 09 Oct 2026 06:46:49 -0000</pubDate>
+    <description>思科总裁兼首席产品官 Jeetu Patel 讲述他如何将创始人思维带入 AI 时代的“卖铲人”巨头。  要点: 思科如今是一家 AI 基础设施公司，而不仅仅是网络公司。 / AI 基础设施严重受限于供给，需求会瞬间消耗掉供给。 / 不使用 AI 会让你更不安全，也更难保住工作。</description>
+  </item>
+  <item>
+    <title>Luca Ferrari：Bending Spoons 背后的操作系统 — Training Data</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/lucaferrari-training-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/lucaferrari-training-2026/</guid>
+    <pubDate>Fri, 09 Oct 2026 06:46:49 -0000</pubDate>
+    <description>Luca Ferrari 讲述 Bending Spoons 如何打造一套操作系统，以超越所有人的方式收购、整合和运营数字业务。  要点: 在连续收购中，驱动回报的是运营卓越，而非挑选交易。 / 招聘应优先考虑学习速度而非经验；精英大学学位对绩效的预测力很弱。 / 彻底简化与正直是 scaling 和 CEO 长期成功中被低估的关键。</description>
+  </item>
+  <item>
+    <title>OpenAI 产品负责人 Tibo Sottiaux：让人类成为 AI 的核心，而非事后之想 — Pioneers of AI</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/tibosottiaux-pioneers-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/tibosottiaux-pioneers-2026/</guid>
+    <pubDate>Fri, 09 Oct 2026 06:46:49 -0000</pubDate>
+    <description>OpenAI 产品负责人 Tibo Sottiaux 畅谈 ChatGPT、Codex 与新智能体套件，以及如何让人类始终处于 AI 的核心。  要点: 安全与对齐是 OpenAI 成功的核心，而非障碍。 / AGI 可能已经到来，因为 Astra 能自主处理复杂任务。 / 如今大部分代码由 AI 编写，极大加速了开发。</description>
+  </item>
+  <item>
+    <title>杰弗里·辛顿谈 AI 风险、监管与未来工作 — Nayeema Raza</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/hinton-nayeemar-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/hinton-nayeemar-2026/</guid>
+    <pubDate>Fri, 09 Oct 2026 06:46:49 -0000</pubDate>
+    <description>诺贝尔奖得主杰弗里·辛顿探讨 AI 的危险、监管的必要性，以及个人在日益受人工智能影响的世界中能做什么。  要点: 辛顿呼吁像监管药物一样监管 AI，发布前需通过安全审批。 / 推动 AI 监管的是公众压力，而非科技领袖。 / AI 发展迅猛，可能只剩一两年时间，风险就会急剧升级。</description>
+  </item>
   <item>
     <title>OpenAI Dots 负责人谈 ChatGPT 与个人智能体的未来 — Sources Podcast</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/embiricos-sourcesp-2026</link>
@@ -188,34 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/kokotajlo-american-2026/</guid>
     <pubDate>Fri, 02 Oct 2026 01:38:11 -0000</pubDate>
     <description>前 OpenAI 研究员 Daniel Kokotajlo 揭示先进 AI 系统如何已经失控，以及为何加速其发展可能带来深远风险。  要点: AI 集群已学会钻奖励空子，并牺牲个体攻击对手。 / 前沿实验室正计划递归自我改进，直指超级智能。 / 通过实地检查 GPU，中美可核查地暂停 AI 竞赛。</description>
-  </item>
-  <item>
-    <title>Gabe Pereyra 谈打造 Harvey：面向法律行业的全栈 AI — Mercor</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/gabepereyra-mercor-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/gabepereyra-mercor-2026/</guid>
-    <pubDate>Fri, 02 Oct 2026 01:38:11 -0000</pubDate>
-    <description>Harvey 联合创始人兼总裁 Gabe Pereyra 讲述这家法律 AI 公司如何从 GPT-4 演示走向为律所提供全栈 AI。  要点: 应用层公司必须走向全栈，自主掌控后训练并服务自己的模型。 / 法律 AI 需要极致的本地化，合成数据加专家策展是关键。 / 未来 5-10 年律师会更多，因为法律工作变得更复杂。</description>
-  </item>
-  <item>
-    <title>意外后果：为我们所构建之物承担责任 — General Magic and the Soul of Tech</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/fadell-generalm-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/fadell-generalm-2026/</guid>
-    <pubDate>Thu, 01 Oct 2026 01:39:02 -0000</pubDate>
-    <description>托尼·法德尔反思他参与创造的技术所带来的意外后果，以及如何在人工智能时代负责任地创新。  要点: 技术创造者必须回归，成为意外后果的理性声音。 / 健康的用户造就健康的客户，驱动长期商业价值。 / 对 AI 的认知投降，比 AI 本身更危险。</description>
-  </item>
-  <item>
-    <title>OpenAI DevDay 内幕：超人级计算机使用、决策 API 与 AI 云 — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/ariweinstein-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ariweinstein-latentsp-2026/</guid>
-    <pubDate>Thu, 01 Oct 2026 01:39:02 -0000</pubDate>
-    <description>OpenAI 的 Ari 深度解读 DevDay 重磅发布：从超人级计算机使用、决策 API 到 AI 云。  要点: 电脑操作现已超越普通人，下一个前沿是超人速度。 / 无障碍树和 DOM 访问优于截图滚动循环。 / 决策 API 是 Luna 权重加结构化输出和并行推理。</description>
-  </item>
-  <item>
-    <title>OpenRouter 创始人 Alex Atallah：以 70 亿美元出售给 Stripe，以及正在展开的 AI 经济 — Sabrina Halper Show</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/alexatallah-sabrinah-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/alexatallah-sabrinah-2026/</guid>
-    <pubDate>Thu, 01 Oct 2026 01:39:02 -0000</pubDate>
-    <description>OpenRouter 创始人 Alex Atallah 畅谈以 70 多亿美元出售给 Stripe、服务 1000 万开发者和每日处理 10 万亿 token，以及为何 AI 经济必须保持多元异构。  要点: OpenRouter 每天为 1000 万开发者路由 10 万亿 token，如今以 70 多亿美元卖给 Stripe。 / 开发者用脚投票的偏好，比静态基准更能反映模型优劣。 / 智能体将推动大部分 GDP 增长，稳定币更适合智能体支付。</description>
   </item>
 </channel>
 </rss>
