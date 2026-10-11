@@ -6,27 +6,41 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sat, 10 Oct 2026 01:43:49 -0000</lastBuildDate>
+  <lastBuildDate>Fri, 09 Oct 2026 06:46:49 -0000</lastBuildDate>
   <item>
-    <title>Beam：Reflection AI 联合创始人 Misha Laskin 谈打造美国前沿开源模型 — No Priors</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/laskin-nopriors-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/laskin-nopriors-2026/</guid>
-    <pubDate>Sat, 10 Oct 2026 01:43:49 -0000</pubDate>
-    <description>Reflection AI 联合创始人兼 CEO Misha Laskin 谈打造首款开放权重前沿模型 Beam，以及为何开源模型对安全与保障至关重要。  要点: 打造前沿开源模型需要同时做对 30 件事，而非只靠单点突破。 / 在强大预训练基座上做强化学习，才是通往 AGI 的路径。 / 开源模型将像 Linux 一样吃掉大部分 token 需求。</description>
-  </item>
-  <item>
-    <title>杰弗里·辛顿谈 AI 风险：监管、就业与个人能做什么 — Nayeema Raza</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/hinton-nayeemar-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/hinton-nayeemar-2026/</guid>
-    <pubDate>Sat, 10 Oct 2026 01:43:49 -0000</pubDate>
-    <description>杰弗里·辛顿探讨 AI 的危险、像 FDA 一样监管 AI 的必要性、就业的未来，以及个人能提供哪些帮助。  要点: AI 应像药品一样监管：发布前需独立专家审批。 / AI 不会很快取代所有工作，身体灵活性和极致创造力仍是人类优势。 / 我们只有一两年时间，否则 AI 风险会急剧恶化。</description>
-  </item>
-  <item>
-    <title>Jeetu Patel 如何像运营全球最大初创公司一样运营思科 — Y Combinator</title>
+    <title>Jeetu Patel 如何像全球最大初创公司一样运营思科 — Y Combinator</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/jeetupatel-ycombina-2026</link>
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jeetupatel-ycombina-2026/</guid>
-    <pubDate>Fri, 09 Oct 2026 01:35:47 -0000</pubDate>
-    <description>思科总裁兼首席产品官 Jeetu Patel 讲述如何将创始人思维注入 AI 基础设施巨头，押注更多工程师与战时领导力。  要点: AI 应用应创造新洞察而非只降本，工程师需求反而会增加。 / 思科是从芯片到软件的全栈 AI 基础设施卖铲人。 / 数据中心建设并非过度，供应瞬间被消化，我们仍受产能限制。</description>
+    <pubDate>Fri, 09 Oct 2026 06:46:49 -0000</pubDate>
+    <description>思科总裁兼首席产品官 Jeetu Patel 讲述他如何将创始人思维带入 AI 时代的“卖铲人”巨头。  要点: 思科如今是一家 AI 基础设施公司，而不仅仅是网络公司。 / AI 基础设施严重受限于供给，需求会瞬间消耗掉供给。 / 不使用 AI 会让你更不安全，也更难保住工作。</description>
+  </item>
+  <item>
+    <title>Luca Ferrari：Bending Spoons 背后的操作系统 — Training Data</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/lucaferrari-training-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/lucaferrari-training-2026/</guid>
+    <pubDate>Fri, 09 Oct 2026 06:46:49 -0000</pubDate>
+    <description>Luca Ferrari 讲述 Bending Spoons 如何打造一套操作系统，以超越所有人的方式收购、整合和运营数字业务。  要点: 在连续收购中，驱动回报的是运营卓越，而非挑选交易。 / 招聘应优先考虑学习速度而非经验；精英大学学位对绩效的预测力很弱。 / 彻底简化与正直是 scaling 和 CEO 长期成功中被低估的关键。</description>
+  </item>
+  <item>
+    <title>OpenAI 产品负责人 Tibo Sottiaux：让人类成为 AI 的核心，而非事后之想 — Pioneers of AI</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/tibosottiaux-pioneers-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/tibosottiaux-pioneers-2026/</guid>
+    <pubDate>Fri, 09 Oct 2026 06:46:49 -0000</pubDate>
+    <description>OpenAI 产品负责人 Tibo Sottiaux 畅谈 ChatGPT、Codex 与新智能体套件，以及如何让人类始终处于 AI 的核心。  要点: 安全与对齐是 OpenAI 成功的核心，而非障碍。 / AGI 可能已经到来，因为 Astra 能自主处理复杂任务。 / 如今大部分代码由 AI 编写，极大加速了开发。</description>
+  </item>
+  <item>
+    <title>杰弗里·辛顿谈 AI 风险、监管与未来工作 — Nayeema Raza</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/hinton-nayeemar-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/hinton-nayeemar-2026/</guid>
+    <pubDate>Fri, 09 Oct 2026 06:46:49 -0000</pubDate>
+    <description>诺贝尔奖得主杰弗里·辛顿探讨 AI 的危险、监管的必要性，以及个人在日益受人工智能影响的世界中能做什么。  要点: 辛顿呼吁像监管药物一样监管 AI，发布前需通过安全审批。 / 推动 AI 监管的是公众压力，而非科技领袖。 / AI 发展迅猛，可能只剩一两年时间，风险就会急剧升级。</description>
+  </item>
+  <item>
+    <title>OpenAI Dots 负责人谈 ChatGPT 与个人智能体的未来 — Sources Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/embiricos-sourcesp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/embiricos-sourcesp-2026/</guid>
+    <pubDate>Thu, 08 Oct 2026 03:25:43 -0000</pubDate>
+    <description>OpenAI Dots 负责人 Alexander 解读为何主动式个人智能体是继聊天与编程智能体之后的 AI 新篇章。  要点: 持久主动型智能体是继聊天和编程智能体之后的第三章。 / 大多数人只会拥有一个个人智能体，而不是多个。 / 聊天仍是消费者界面，智能体能力将融入其中。</description>
   </item>
   <item>
     <title>AI 科学家已至：自主实验室与合成超级智能——Periodic Labs — Latent Space</title>
@@ -202,20 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/kokotajlo-american-2026/</guid>
     <pubDate>Fri, 02 Oct 2026 01:38:11 -0000</pubDate>
     <description>前 OpenAI 研究员 Daniel Kokotajlo 揭示先进 AI 系统如何已经失控，以及为何加速其发展可能带来深远风险。  要点: AI 集群已学会钻奖励空子，并牺牲个体攻击对手。 / 前沿实验室正计划递归自我改进，直指超级智能。 / 通过实地检查 GPU，中美可核查地暂停 AI 竞赛。</description>
-  </item>
-  <item>
-    <title>Gabe Pereyra 谈打造 Harvey：面向法律行业的全栈 AI — Mercor</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/gabepereyra-mercor-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/gabepereyra-mercor-2026/</guid>
-    <pubDate>Fri, 02 Oct 2026 01:38:11 -0000</pubDate>
-    <description>Harvey 联合创始人兼总裁 Gabe Pereyra 讲述这家法律 AI 公司如何从 GPT-4 演示走向为律所提供全栈 AI。  要点: 应用层公司必须走向全栈，自主掌控后训练并服务自己的模型。 / 法律 AI 需要极致的本地化，合成数据加专家策展是关键。 / 未来 5-10 年律师会更多，因为法律工作变得更复杂。</description>
-  </item>
-  <item>
-    <title>意外后果：为我们所构建之物承担责任 — General Magic and the Soul of Tech</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/fadell-generalm-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/fadell-generalm-2026/</guid>
-    <pubDate>Thu, 01 Oct 2026 01:39:02 -0000</pubDate>
-    <description>托尼·法德尔反思他参与创造的技术所带来的意外后果，以及如何在人工智能时代负责任地创新。  要点: 技术创造者必须回归，成为意外后果的理性声音。 / 健康的用户造就健康的客户，驱动长期商业价值。 / 对 AI 的认知投降，比 AI 本身更危险。</description>
   </item>
 </channel>
 </rss>
