@@ -6,7 +6,21 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Fri, 09 Oct 2026 01:35:47 -0000</lastBuildDate>
+  <lastBuildDate>Sat, 10 Oct 2026 01:43:49 -0000</lastBuildDate>
+  <item>
+    <title>Beam：Reflection AI 联合创始人 Misha Laskin 谈打造美国前沿开源模型 — No Priors</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/laskin-nopriors-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/laskin-nopriors-2026/</guid>
+    <pubDate>Sat, 10 Oct 2026 01:43:49 -0000</pubDate>
+    <description>Reflection AI 联合创始人兼 CEO Misha Laskin 谈打造首款开放权重前沿模型 Beam，以及为何开源模型对安全与保障至关重要。  要点: 打造前沿开源模型需要同时做对 30 件事，而非只靠单点突破。 / 在强大预训练基座上做强化学习，才是通往 AGI 的路径。 / 开源模型将像 Linux 一样吃掉大部分 token 需求。</description>
+  </item>
+  <item>
+    <title>杰弗里·辛顿谈 AI 风险：监管、就业与个人能做什么 — Nayeema Raza</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/hinton-nayeemar-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/hinton-nayeemar-2026/</guid>
+    <pubDate>Sat, 10 Oct 2026 01:43:49 -0000</pubDate>
+    <description>杰弗里·辛顿探讨 AI 的危险、像 FDA 一样监管 AI 的必要性、就业的未来，以及个人能提供哪些帮助。  要点: AI 应像药品一样监管：发布前需独立专家审批。 / AI 不会很快取代所有工作，身体灵活性和极致创造力仍是人类优势。 / 我们只有一两年时间，否则 AI 风险会急剧恶化。</description>
+  </item>
   <item>
     <title>Jeetu Patel 如何像运营全球最大初创公司一样运营思科 — Y Combinator</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/jeetupatel-ycombina-2026</link>
@@ -202,20 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/fadell-generalm-2026/</guid>
     <pubDate>Thu, 01 Oct 2026 01:39:02 -0000</pubDate>
     <description>托尼·法德尔反思他参与创造的技术所带来的意外后果，以及如何在人工智能时代负责任地创新。  要点: 技术创造者必须回归，成为意外后果的理性声音。 / 健康的用户造就健康的客户，驱动长期商业价值。 / 对 AI 的认知投降，比 AI 本身更危险。</description>
-  </item>
-  <item>
-    <title>OpenAI DevDay 内幕：超人级计算机使用、决策 API 与 AI 云 — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/ariweinstein-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ariweinstein-latentsp-2026/</guid>
-    <pubDate>Thu, 01 Oct 2026 01:39:02 -0000</pubDate>
-    <description>OpenAI 的 Ari 深度解读 DevDay 重磅发布：从超人级计算机使用、决策 API 到 AI 云。  要点: 电脑操作现已超越普通人，下一个前沿是超人速度。 / 无障碍树和 DOM 访问优于截图滚动循环。 / 决策 API 是 Luna 权重加结构化输出和并行推理。</description>
-  </item>
-  <item>
-    <title>OpenRouter 创始人 Alex Atallah：以 70 亿美元出售给 Stripe，以及正在展开的 AI 经济 — Sabrina Halper Show</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/alexatallah-sabrinah-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/alexatallah-sabrinah-2026/</guid>
-    <pubDate>Thu, 01 Oct 2026 01:39:02 -0000</pubDate>
-    <description>OpenRouter 创始人 Alex Atallah 畅谈以 70 多亿美元出售给 Stripe、服务 1000 万开发者和每日处理 10 万亿 token，以及为何 AI 经济必须保持多元异构。  要点: OpenRouter 每天为 1000 万开发者路由 10 万亿 token，如今以 70 多亿美元卖给 Stripe。 / 开发者用脚投票的偏好，比静态基准更能反映模型优劣。 / 智能体将推动大部分 GDP 增长，稳定币更适合智能体支付。</description>
   </item>
 </channel>
 </rss>

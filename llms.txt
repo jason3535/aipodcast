@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 308 位人物 / 717 期访谈
+规模: 308 位人物 / 718 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -15,13 +15,13 @@
 - [Demis Hassabis / 杰米斯·哈萨比斯](https://aipodcast.jasonlin.tech/pp/demis/): CEO, Google DeepMind — 13 期
 - [Greg Brockman / 格雷格·布罗克曼](https://aipodcast.jasonlin.tech/pp/brockman/): President & Co-founder, OpenAI — 12 期
 - [Boris Cherny / 鲍里斯·切尔尼](https://aipodcast.jasonlin.tech/pp/boris/): Creator of Claude Code, Anthropic — 12 期
+- [Mustafa Suleyman / 穆斯塔法·苏莱曼](https://aipodcast.jasonlin.tech/pp/suleyman/): CEO, Microsoft AI — 10 期
 - [Mark Zuckerberg / 马克·扎克伯格](https://aipodcast.jasonlin.tech/pp/zuckerberg/): Founder, Chairman & CEO, Meta Platforms — 10 期
 - [Fei-Fei Li / 李飞飞](https://aipodcast.jasonlin.tech/pp/feifei/): Co-founder, World Labs — 10 期
 - [Andrew Ng / 吴恩达](https://aipodcast.jasonlin.tech/pp/andrewng/): Founder, DeepLearning.AI — 10 期
 - [Yoshua Bengio / 约书亚·本吉奥](https://aipodcast.jasonlin.tech/pp/bengio/): Professor, Mila — 10 期
 - [Yann LeCun / 杨立昆](https://aipodcast.jasonlin.tech/pp/lecun/): Chief AI Scientist, Meta — 10 期
 - [Tony Fadell / 托尼·法德尔](https://aipodcast.jasonlin.tech/pp/fadell/): Principal at Future Shape (Build Collective); creator of the iPod, co-creator of the iPhone, founder of Nest — 9 期
-- [Mustafa Suleyman / 穆斯塔法·苏莱曼](https://aipodcast.jasonlin.tech/pp/suleyman/): CEO, Microsoft AI — 9 期
 - [Geoffrey Hinton / 杰弗里·辛顿](https://aipodcast.jasonlin.tech/pp/hinton/): Professor Emeritus, U of Toronto — 8 期
 - [Evan Spiegel / 埃文·斯皮格尔](https://aipodcast.jasonlin.tech/pp/evanspiegel/): Co-founder & CEO, Snap — 8 期
 - [Alexandr Wang / 亚历山大·王](https://aipodcast.jasonlin.tech/pp/awang/): Founder, Scale AI · Meta Superintelligence — 8 期
@@ -330,6 +330,7 @@
 - [How Granola's Co-Founder Uses AI to Survive Meetings](https://aipodcast.jasonlin.tech/e/samstephenson-peteryan-2026/) — Sam Stephenson, Peter Yang, 2026-10-04
 - [Replit CEO Amjad Masad on AI Doom, Software, and Vibe-Coding](https://aipodcast.jasonlin.tech/e/amjadmasad-thetimes-2026/) — Amjad Masad, The Times Tech Podcast, 2026-10-04
 - [Why Most Internet Actions Will Soon Be Taken by AI Agents](https://aipodcast.jasonlin.tech/e/tibosottiaux-lennyspo-2026/) — Tibo Sottiaux, Lenny’s Podcast, 2026-10-04
+- [AGI, the AI Revolution, and the Future of Human Work | Mustafa Suleyman](https://aipodcast.jasonlin.tech/e/suleyman-youngand-2026/) — Mustafa Suleyman, Young and Profiting, 2026-10-04
 - [Why Specialized AI Could Beat the God Model](https://aipodcast.jasonlin.tech/e/amjadmasad-thea16zp-2026/) — Amjad Masad, The a16z Podcast, 2026-10-03
 - [Recursive Language Models — Alex Zhang, MIT PhD](https://aipodcast.jasonlin.tech/e/alexzhang-latentsp-2026/) — Alex Zhang, Latent Space, 2026-10-02
 - [Which GPU Clouds Are Actually Good? ClusterMAX 3.0](https://aipodcast.jasonlin.tech/e/dylanpatel-latentsp-2026/) — Dylan Patel, Latent Space, 2026-10-02
@@ -356,7 +357,6 @@
 - [Rails World 2026 Opening Keynote - DHH](https://aipodcast.jasonlin.tech/e/dhh-rubyonra-2026/) — DHH, Ruby on Rails, 2026-09-24
 - [Coin Toss for the Future: Ryan Greenblatt on AI Risk and Alignment](https://aipodcast.jasonlin.tech/e/ryangreenblatt-samharri-2026/) — Ryan Greenblatt, Sam Harris, 2026-09-24
 - [Mark Zuckerberg's Vision for the Future: AI, Smart Glasses, and the Metaverse](https://aipodcast.jasonlin.tech/e/zuckerberg-thenextb-2026/) — Mark Zuckerberg, The Next Big Thing, 2026-09-24
-- [Proven, Better, New: Mark Pincus on Control and Betting on Yourself](https://aipodcast.jasonlin.tech/e/pincus-harvardb-2026/) — Mark Pincus, Harvard Business School, 2026-09-23
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
