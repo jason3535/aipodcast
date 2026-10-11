@@ -3,12 +3,12 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 310 位人物 / 721 期访谈
+规模: 310 位人物 / 722 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
 - [Sam Altman / 萨姆·奥尔特曼](https://aipodcast.jasonlin.tech/pp/altman/): CEO, OpenAI — 23 期
-- [Elon Musk / 埃隆·马斯克](https://aipodcast.jasonlin.tech/pp/elon/): Founder, xAI — 17 期
+- [Elon Musk / 埃隆·马斯克](https://aipodcast.jasonlin.tech/pp/elon/): Founder, xAI — 18 期
 - [Dario Amodei / 达里奥·阿莫迪](https://aipodcast.jasonlin.tech/pp/dario/): CEO, Anthropic — 17 期
 - [Jensen Huang / 黄仁勋](https://aipodcast.jasonlin.tech/pp/jensen/): Founder & CEO, NVIDIA — 14 期
 - [Naval Ravikant / 纳瓦尔·拉维坎特](https://aipodcast.jasonlin.tech/pp/naval/): Co-founder, AngelList; angel investor & philosopher — 14 期
@@ -319,6 +319,7 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
+- [Elon Musk on Starship, AI, Chips, Optimus and Cybercab at X Takeover](https://aipodcast.jasonlin.tech/e/elon-xtakeove-2026/) — Elon Musk, X Takeover, 2026-10-10
 - [Beam: Building America's Open Frontier Model with Reflection AI's Misha Laskin](https://aipodcast.jasonlin.tech/e/laskin-nopriors-2026/) — Misha Laskin, No Priors, 2026-10-09
 - [AI Scientists Are Here: Autonomous Labs & Synthesis Superintelligence — Periodic Labs](https://aipodcast.jasonlin.tech/e/fedus-latentsp-2026/) — Liam Fedus, Latent Space, 2026-10-08
 - [How Jeetu Patel Runs Cisco Like the World's Largest Startup](https://aipodcast.jasonlin.tech/e/jeetupatel-ycombina-2026/) — Jeetu Patel, Y Combinator, 2026-10-08
@@ -358,7 +359,6 @@
 - [The $10 Trillion Token Economy — Alex Atallah, OpenRouter](https://aipodcast.jasonlin.tech/e/alexatallah-latentsp-2026/) — Alex Atallah, Latent Space, 2026-09-25
 - [Runway's Bet Beyond Video: World Models, Robotics, and the Neural OS — Anastasis Germanidis](https://aipodcast.jasonlin.tech/e/anastasisgermanidis-latentsp-2026/) — Anastasis Germanidis, Latent Space, 2026-09-25
 - [How AI Swarms Are Already Going Rogue | Daniel Kokotajlo](https://aipodcast.jasonlin.tech/e/kokotajlo-american-2026/) — Daniel Kokotajlo, American Thought Leaders - The Epoch Times, 2026-09-25
-- [Zuckerberg on Meta's AI Glasses, Muse, and the Trust Question](https://aipodcast.jasonlin.tech/e/zuckerberg-joannast-2026/) — Mark Zuckerberg, Joanna Stern, 2026-09-24
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
