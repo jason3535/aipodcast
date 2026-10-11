@@ -45,6 +45,9 @@ REPOST_CHANNELS = {"TechXOps", "philia", "DRM News", "Startup TM", "Motiversity"
                    "Pet circle", "UninformedInvestors", "Vampyre Drakul", "LufSec Cyber Security", "BetterDailyLabs"}
 
 MIN_SUBS = 1000   # 人物维度候选频道的最低订阅数,见 discover() 里的注释
+# YouTube 订阅少但本身是正规原创节目(主要在音频平台)的白名单 —— 误杀一次加一条。
+# 2026-10-09 Pioneers of AI(Rana el Kaliouby 主持,314 订阅)的 Tibo Sottiaux 期被拦 3 天,云端会话手动收了。
+SMALL_OK = {"Pioneers of AI", "HR Heretics with Nolan Church and Kelli Dragovich"}
 
 def log(msg):
     line = f"[{datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M')}Z] {msg}"
@@ -506,12 +509,13 @@ def discover(people, vids, days, per_person_cap=1):
             # 黑名单只能事后补、永远慢一拍。2026-10-07 The Mukuls(113 订阅)把 Karpathy 2025-02 的
             # 《How I use LLMs》讲座改标题成「on Agents, Loops…」按 8/25 重传,过了闸门被收。
             # 人物维度搜到的小频道几乎都是搬运/剪辑号:订阅 <MIN_SUBS 一律不收(取不到订阅数则放行)。
-            if m.get("subs") is not None and m["subs"] < MIN_SUBS:
-                log(f"  {pid:12} {m['date']} {m['t'][:44]} → 弃(小频道 {m['ch']} {m['subs']} 订阅,疑似搬运)"); continue
             if not english_audio(m):
                 log(f"  {pid:12} {m['date']} {m['t'][:44]} → 弃(原声 {m['origlang']},en 字幕是机翻)")
                 continue
             if not (floor <= m["date"] <= cutoff): continue
+            # 订阅门槛放在日期之后:否则每天把 2020-2024 的旧视频「弃(小频道)」刷满日志(2026-10-08~11)
+            if m.get("subs") is not None and m["subs"] < MIN_SUBS and m.get("ch") not in SMALL_OK:
+                log(f"  {pid:12} {m['date']} {m['t'][:44]} → 弃(小频道 {m['ch']} {m['subs']} 订阅,疑似搬运)"); continue
             on = p["latest"].replace("-", "")
             # 只挡**比在站最新更旧**的;同日放行 —— 2026-09-24 扎克伯格同日两期(Joanna Stern + The Next Big Thing),
             # 原来的 <= 把第二期静默挡了 10 天,人工补扫才发现。同日已收的那期靠 exist(vid)去重,不会重收。

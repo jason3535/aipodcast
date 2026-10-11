@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-10-11</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/laskin/</loc><lastmod>2026-10-10</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/fedus/</loc><lastmod>2026-10-08</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/jeetupatel/</loc><lastmod>2026-10-09</lastmod></url>
@@ -12,6 +12,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/yashpatil/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/diogoalmeida/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/hinton/</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/suleyman/</loc><lastmod>2026-10-11</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/samstephenson/</loc><lastmod>2026-10-05</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/amjadmasad/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/alexzhang/</loc><lastmod>2026-10-02</lastmod></url>
@@ -25,7 +26,6 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/alexatallah/</loc><lastmod>2026-10-01</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/dannymartinez/</loc><lastmod>2026-10-01</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/grantsanderson/</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://aipodcast.jasonlin.tech/pp/suleyman/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/mollygraham/</loc><lastmod>2026-10-01</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/aaronlevie/</loc><lastmod>2026-09-27</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/paragagrawal/</loc><lastmod>2026-09-27</lastmod></url>
@@ -323,6 +323,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/e/diogoalmeida-thetwiml-2026/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/hinton-nayeemar-2026/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/altman-politico-2026/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/suleyman-youngand-2026/</loc><lastmod>2026-10-11</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/samstephenson-peteryan-2026/</loc><lastmod>2026-10-05</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/amjadmasad-thetimes-2026/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/tibosottiaux-lennyspo-2026/</loc><lastmod>2026-10-06</lastmod></url>
