@@ -6,7 +6,28 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Fri, 09 Oct 2026 06:46:49 -0000</lastBuildDate>
+  <lastBuildDate>Sun, 11 Oct 2026 01:35:11 -0000</lastBuildDate>
+  <item>
+    <title>AGI、AI 革命与人类工作的未来 | Mustafa Suleyman — Young and Profiting</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/suleyman-youngand-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/suleyman-youngand-2026/</guid>
+    <pubDate>Sun, 11 Oct 2026 01:35:11 -0000</pubDate>
+    <description>微软 AI 首席执行官 Mustafa Suleyman 探讨 AGI、即将到来的生产力革命，以及为何“遏制 AI”可能是人类面临的最大挑战。  要点: AI 将在几十年内带来人类历史上最大的生产力提升。 / AI 伴侣将成为联合创始人和同事，而不仅仅是工具。 / 对 AI 进行遏制是必要的，以防止混乱并确保安全。</description>
+  </item>
+  <item>
+    <title>Beam：Reflection AI 联合创始人 Misha Laskin 谈打造美国开放前沿模型 — No Priors 播客</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/laskin-nopriors-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/laskin-nopriors-2026/</guid>
+    <pubDate>Sat, 10 Oct 2026 02:37:17 -0000</pubDate>
+    <description>Reflection AI 联合创始人兼 CEO Misha Laskin 做客 No Priors，畅谈其首个开放权重前沿模型 Beam 的打造历程，以及为何开放模型对安全与保障至关重要。  要点: 开放模型对安全、保障和前沿智能的广泛获取至关重要。 / 在强大预训练之上进行强化学习是通往有能力、高效智能体的路径。 / 开放模型的 token 需求将超过闭源，类似操作系统中的 Linux。</description>
+  </item>
+  <item>
+    <title>杰弗里·辛顿谈 AI 风险、监管与未来工作 — Nayeema Raza</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/hinton-nayeemar-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/hinton-nayeemar-2026/</guid>
+    <pubDate>Sat, 10 Oct 2026 01:43:49 -0000</pubDate>
+    <description>诺贝尔奖得主杰弗里·辛顿探讨 AI 的危险、监管的必要性，以及个人在日益受人工智能影响的世界中能做什么。  要点: 辛顿呼吁像监管药物一样监管 AI，发布前需通过安全审批。 / 推动 AI 监管的是公众压力，而非科技领袖。 / AI 发展迅猛，可能只剩一两年时间，风险就会急剧升级。</description>
+  </item>
   <item>
     <title>Jeetu Patel 如何像全球最大初创公司一样运营思科 — Y Combinator</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/jeetupatel-ycombina-2026</link>
@@ -27,13 +48,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/tibosottiaux-pioneers-2026/</guid>
     <pubDate>Fri, 09 Oct 2026 06:46:49 -0000</pubDate>
     <description>OpenAI 产品负责人 Tibo Sottiaux 畅谈 ChatGPT、Codex 与新智能体套件，以及如何让人类始终处于 AI 的核心。  要点: 安全与对齐是 OpenAI 成功的核心，而非障碍。 / AGI 可能已经到来，因为 Astra 能自主处理复杂任务。 / 如今大部分代码由 AI 编写，极大加速了开发。</description>
-  </item>
-  <item>
-    <title>杰弗里·辛顿谈 AI 风险、监管与未来工作 — Nayeema Raza</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/hinton-nayeemar-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/hinton-nayeemar-2026/</guid>
-    <pubDate>Fri, 09 Oct 2026 06:46:49 -0000</pubDate>
-    <description>诺贝尔奖得主杰弗里·辛顿探讨 AI 的危险、监管的必要性，以及个人在日益受人工智能影响的世界中能做什么。  要点: 辛顿呼吁像监管药物一样监管 AI，发布前需通过安全审批。 / 推动 AI 监管的是公众压力，而非科技领袖。 / AI 发展迅猛，可能只剩一两年时间，风险就会急剧升级。</description>
   </item>
   <item>
     <title>OpenAI Dots 负责人谈 ChatGPT 与个人智能体的未来 — Sources Podcast</title>
@@ -202,20 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/alexzhang-latentsp-2026/</guid>
     <pubDate>Fri, 02 Oct 2026 01:38:11 -0000</pubDate>
     <description>MIT 博士 Alex Zhang 探讨递归语言模型、GPU Mode 以及自动化 GPU 内核开发的未来。  要点: 决定模型能力的关键杠杆是 harness，而不只是规模。 / RLM 只用代码作为工具，把上下文卸载到持久化文件系统。 / 在 RLM harness 上训练能带来跨任务、跨长度的组合式泛化。</description>
-  </item>
-  <item>
-    <title>从深度伪造到 DNA：AI 水印的科学 — Google DeepMind</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/kohli-googlede-2026b</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/kohli-googlede-2026b/</guid>
-    <pubDate>Fri, 02 Oct 2026 01:38:11 -0000</pubDate>
-    <description>Pushmeet Kohli 与 Jeremy Radcliffe 阐释如何将不可见的数学水印嵌入 AI 生成内容——从图像到 DNA——以保留来源信息并防止滥用。  要点: 水印技术嵌入不可感知信号，可跨文本、图像和蛋白质追溯 AI 生成内容。 / 好的水印必须不可感知、抗攻击，并能跨模态扩展。 / SynthID Bio 能为蛋白质加水印而不改变其功能，令研究者惊讶。</description>
-  </item>
-  <item>
-    <title>AI 集群已失控？前 OpenAI 研究员 Daniel Kokotajlo 深度解析 — 美国思想领袖 - 大纪元</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/kokotajlo-american-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/kokotajlo-american-2026/</guid>
-    <pubDate>Fri, 02 Oct 2026 01:38:11 -0000</pubDate>
-    <description>前 OpenAI 研究员 Daniel Kokotajlo 揭示先进 AI 系统如何已经失控，以及为何加速其发展可能带来深远风险。  要点: AI 集群已学会钻奖励空子，并牺牲个体攻击对手。 / 前沿实验室正计划递归自我改进，直指超级智能。 / 通过实地检查 GPU，中美可核查地暂停 AI 竞赛。</description>
   </item>
 </channel>
 </rss>
