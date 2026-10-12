@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 311 位人物 / 724 期访谈
+规模: 311 位人物 / 726 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -15,6 +15,7 @@
 - [Demis Hassabis / 杰米斯·哈萨比斯](https://aipodcast.jasonlin.tech/pp/demis/): CEO, Google DeepMind — 13 期
 - [Greg Brockman / 格雷格·布罗克曼](https://aipodcast.jasonlin.tech/pp/brockman/): President & Co-founder, OpenAI — 12 期
 - [Boris Cherny / 鲍里斯·切尔尼](https://aipodcast.jasonlin.tech/pp/boris/): Creator of Claude Code, Anthropic — 12 期
+- [Alexandr Wang / 亚历山大·王](https://aipodcast.jasonlin.tech/pp/awang/): Founder, Scale AI · Meta Superintelligence — 10 期
 - [Mustafa Suleyman / 穆斯塔法·苏莱曼](https://aipodcast.jasonlin.tech/pp/suleyman/): CEO, Microsoft AI — 10 期
 - [Mark Zuckerberg / 马克·扎克伯格](https://aipodcast.jasonlin.tech/pp/zuckerberg/): Founder, Chairman & CEO, Meta Platforms — 10 期
 - [Fei-Fei Li / 李飞飞](https://aipodcast.jasonlin.tech/pp/feifei/): Co-founder, World Labs — 10 期
@@ -24,7 +25,6 @@
 - [Tony Fadell / 托尼·法德尔](https://aipodcast.jasonlin.tech/pp/fadell/): Principal at Future Shape (Build Collective); creator of the iPod, co-creator of the iPhone, founder of Nest — 9 期
 - [Geoffrey Hinton / 杰弗里·辛顿](https://aipodcast.jasonlin.tech/pp/hinton/): Professor Emeritus, U of Toronto — 8 期
 - [Evan Spiegel / 埃文·斯皮格尔](https://aipodcast.jasonlin.tech/pp/evanspiegel/): Co-founder & CEO, Snap — 8 期
-- [Alexandr Wang / 亚历山大·王](https://aipodcast.jasonlin.tech/pp/awang/): Founder, Scale AI · Meta Superintelligence — 8 期
 - [Daniel Kokotajlo / 丹尼尔·科科塔伊洛](https://aipodcast.jasonlin.tech/pp/kokotajlo/): Author, AI 2027 · ex-OpenAI — 7 期
 - [Noam Brown / 诺姆·布朗](https://aipodcast.jasonlin.tech/pp/noambrown/): Research Scientist, OpenAI — 7 期
 - [Richard Sutton / 理查德·萨顿](https://aipodcast.jasonlin.tech/pp/sutton/): Professor, U of Alberta — 7 期
@@ -321,12 +321,14 @@
 
 ## 最新访谈 Latest episodes
 - [Why Every Company Now Needs to Think and Operate Like a Lab Team](https://aipodcast.jasonlin.tech/e/joshwoodward-lennyspo-2026/) — Josh Woodward, Lenny’s Podcast, 2026-10-11
+- [Creating Muse: The Fastest-Growing AI Product Since ChatGPT — Alexandr Wang, Meta](https://aipodcast.jasonlin.tech/e/awang-davidsen-2026/) — Alexandr Wang, David Senra, 2026-10-11
 - [Elon Musk on Starship, AI, Chips, Optimus and Cybercab at X Takeover](https://aipodcast.jasonlin.tech/e/elon-xtakeove-2026/) — Elon Musk, X Takeover, 2026-10-10
 - [Beam: Building America's Open Frontier Model with Reflection AI's Misha Laskin](https://aipodcast.jasonlin.tech/e/laskin-nopriors-2026/) — Misha Laskin, No Priors, 2026-10-09
 - [AI Scientists Are Here: Autonomous Labs & Synthesis Superintelligence — Periodic Labs](https://aipodcast.jasonlin.tech/e/fedus-latentsp-2026/) — Liam Fedus, Latent Space, 2026-10-08
 - [How Jeetu Patel Runs Cisco Like the World's Largest Startup](https://aipodcast.jasonlin.tech/e/jeetupatel-ycombina-2026/) — Jeetu Patel, Y Combinator, 2026-10-08
 - [Luca Ferrari: The Operating System Behind Bending Spoons](https://aipodcast.jasonlin.tech/e/lucaferrari-training-2026/) — Luca Ferrari, Training Data, 2026-10-08
 - [OpenAI's Tibo Sottiaux on Putting Humans at the Center of AI](https://aipodcast.jasonlin.tech/e/tibosottiaux-pioneers-2026/) — Tibo Sottiaux, Pioneers of AI, 2026-10-07
+- [Muse: The Biggest AI Launch Since ChatGPT](https://aipodcast.jasonlin.tech/e/awang-hugeiftr-2026/) — Alexandr Wang, Huge If True, 2026-10-07
 - [Sam Altman on Elon Musk, 'Artificial,' and the Future of Humanity (Part One)](https://aipodcast.jasonlin.tech/e/altman-fairgame-2026/) — Sam Altman, Fair Game by Vanity Fair, 2026-10-06
 - [How Google Designs for AI at Scale](https://aipodcast.jasonlin.tech/e/rhiannonbell-diveclub-2026/) — Rhiannon Bell, Dive Club, 2026-10-06
 - [Google's AI Infrastructure Chief on the Physics and Economics of Frontier AI](https://aipodcast.jasonlin.tech/e/aminvahdat-training-2026/) — Amin Vahdat, Training Data, 2026-10-06
@@ -358,8 +360,6 @@
 - [CMG Exclusive: Elon Musk on China's Unmatched Charm](https://aipodcast.jasonlin.tech/e/elon-cctvfina-2026/) — Elon Musk, CGTN, 2026-09-25
 - [Satya Nadella on Copilot, the AI Backlash, and Microsoft's Future](https://aipodcast.jasonlin.tech/e/satya-sourcesp-2026/) — Satya Nadella, Sources Podcast, 2026-09-25
 - [Microsoft AI CEO Mustafa Suleyman on Why AI Needs a 'Red Line'](https://aipodcast.jasonlin.tech/e/suleyman-bloomber-2026/) — Mustafa Suleyman, Bloomberg Tech, 2026-09-25
-- [The $10 Trillion Token Economy — Alex Atallah, OpenRouter](https://aipodcast.jasonlin.tech/e/alexatallah-latentsp-2026/) — Alex Atallah, Latent Space, 2026-09-25
-- [Runway's Bet Beyond Video: World Models, Robotics, and the Neural OS — Anastasis Germanidis](https://aipodcast.jasonlin.tech/e/anastasisgermanidis-latentsp-2026/) — Anastasis Germanidis, Latent Space, 2026-09-25
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
