@@ -6,7 +6,21 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sun, 11 Oct 2026 09:46:10 -0000</lastBuildDate>
+  <lastBuildDate>Mon, 12 Oct 2026 01:36:20 -0000</lastBuildDate>
+  <item>
+    <title>为什么每家公司现在都需要像实验室团队一样思考和运作 — Lenny’s Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/joshwoodward-lennyspo-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/joshwoodward-lennyspo-2026/</guid>
+    <pubDate>Mon, 12 Oct 2026 01:36:20 -0000</pubDate>
+    <description>谷歌实验室负责人乔什·伍德沃德解释为什么每家公司都必须像实验室团队一样运作，用 AI 做实验，在竞争对手之前发现可能性。  要点: 每家公司都必须像实验室团队一样运作，才能保持在最前沿。 / 好想法源于好奇的副业项目，而非安排好的头脑风暴。 / 产品市场契合是艺术：观察用户的眼睛是否发亮。</description>
+  </item>
+  <item>
+    <title>明年量产 5 万台人形机器人 | 1X 创始人 Bernt Børnich 访谈 — Relentless</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/berntbornich-relentle-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/berntbornich-relentle-2026/</guid>
+    <pubDate>Mon, 12 Oct 2026 01:36:20 -0000</pubDate>
+    <description>1X 创始人兼 CEO Bernt Børnich 详解公司如何从研发阶段跨越到 12 个月内交付 5 万台人形机器人，以及如何在家用场景中建立信任。  要点: 1X 计划明年量产 5 万台人形机器人，押注通用模型而非逐个任务自动化。 / 人形机器人约 1000 个零件，远少于汽车的 5 万个，但部署环境复杂得多。 / 数据多样性而非数据量才是瓶颈；模型应学习世界动态，而非克隆人类行为。</description>
+  </item>
   <item>
     <title>马斯克在 X Takeover 谈星舰、AI、芯片、Optimus 与 Cybercab — X Takeover 大会</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/elon-xtakeove-2026</link>
@@ -202,20 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dylanpatel-latentsp-2026/</guid>
     <pubDate>Sat, 03 Oct 2026 01:42:58 -0000</pubDate>
     <description>SemiAnalysis 的 Dylan 解读 ClusterMAX 3.0，这套 NeoCloud 评级从性能、安全、可靠性和定价等维度评测 GPU 云服务商。  要点: 新云安全普遍糟糕，客户任务、数据和存储暴露在外。 / 算力租赁空前困难，连单节点都租不到。 / OpenAI 和 Anthropic 的研发算力现已超过 DeepMind。</description>
-  </item>
-  <item>
-    <title>AI 与数学的未来：对话 Grant Sanderson — Numberphile2</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/grantsanderson-numberph-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/grantsanderson-numberph-2026/</guid>
-    <pubDate>Sat, 03 Oct 2026 01:42:58 -0000</pubDate>
-    <description>3Blue1Brown 的 Grant Sanderson 探讨 AI 如何重塑数学，从创作流程到学科未来。  要点: AI 对创作者是净收益，但需选择性使用，不能用于核心创意工作。 / AI 的数学成果常缺乏归属，这关乎真相和职业发展。 / 数学家应因有动机的解释获得学术认可，而不仅仅是证明。</description>
-  </item>
-  <item>
-    <title>27 岁如何在 21 个月内打造出 56 亿美元 AI 公司 — Jessica Neal</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/maxjunestrand-jessican-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/maxjunestrand-jessican-2026/</guid>
-    <pubDate>Sat, 03 Oct 2026 01:42:58 -0000</pubDate>
-    <description>Legora 创始人 Max 分享其 AI 法律科技公司如何在 21 个月内成为史上最快从 100 万美元增长到 1.5 亿美元 ARR 的企业。  要点: 为 3-6 个月后的 AI 模型能力而构建，而非当下。 / 招聘是特权而非义务；领导者必须面试每一位总监及以上级别的新人。 / 法律 AI 需要技术娴熟的驾驶员；凭感觉起草不像凭感觉编程那样可行。</description>
   </item>
 </channel>
 </rss>
