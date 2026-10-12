@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 310 位人物 / 722 期访谈
+规模: 311 位人物 / 724 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -88,6 +88,7 @@
 - [Max Junestrand / 马克斯·尤内斯特兰德](https://aipodcast.jasonlin.tech/pp/maxjunestrand/): Co-founder & CEO, Legora — 2 期
 - [Stefano Ermon / 斯特凡诺·埃尔蒙](https://aipodcast.jasonlin.tech/pp/ermon/): Associate Professor of Computer Science, Stanford University; Co-founder & CEO of Inception Labs — 2 期
 - [Ali Ghodsi / 阿里·戈德西](https://aipodcast.jasonlin.tech/pp/alighodsi/): CEO and Co-Founder, Databricks — 2 期
+- [Bernt Børnich / 伯恩特·伯尼克](https://aipodcast.jasonlin.tech/pp/berntbornich/): Founder & CEO, 1X Technologies — 2 期
 - [Harrison Chase / 哈里森·蔡斯](https://aipodcast.jasonlin.tech/pp/harrisonchase/): Co-founder & CEO, LangChain — 2 期
 - [Joel Lewenstein / 乔尔·卢文斯坦](https://aipodcast.jasonlin.tech/pp/joellewenstein/): Head of Product Design at Anthropic — 2 期
 - [Anima Anandkumar / 阿尼玛·阿南德库马尔](https://aipodcast.jasonlin.tech/pp/animaanandkumar/): Professor at Caltech, Co-founder of Accelerated Understanding — 2 期
@@ -132,6 +133,7 @@
 - [Nad Chishtie / 纳德·奇什蒂](https://aipodcast.jasonlin.tech/pp/nadchishtie/): Founding Designer & Head of Design, Lovable — 2 期
 - [Michael Truell / 迈克尔·特鲁埃尔](https://aipodcast.jasonlin.tech/pp/truell/): Co-founder & CEO, Cursor — 2 期
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 2 期
+- [Josh Woodward / 乔什·伍德沃德](https://aipodcast.jasonlin.tech/pp/joshwoodward/): VP, Google Labs & Gemini App — 1 期
 - [Jeetu Patel / 吉图·帕特尔](https://aipodcast.jasonlin.tech/pp/jeetupatel/): President and Chief Product Officer, Cisco — 1 期
 - [Luca Ferrari / 卢卡·法拉利](https://aipodcast.jasonlin.tech/pp/lucaferrari/): Co-founder & CEO, Bending Spoons — 1 期
 - [Rhiannon Bell / 里安农·贝尔](https://aipodcast.jasonlin.tech/pp/rhiannonbell/): VP of UX, Google Search — 1 期
@@ -281,7 +283,6 @@
 - [Bill Peebles / 比尔·皮布尔斯](https://aipodcast.jasonlin.tech/pp/billpeebles/): AI researcher; former head of OpenAI's Sora, co-inventor of Diffusion Transformers (DiT) — 1 期
 - [Jason Wei / 杰森·魏](https://aipodcast.jasonlin.tech/pp/jasonwei/): AI Researcher (ex-OpenAI) — 1 期
 - [Rooz Mahdavian / 鲁兹·马哈达维安](https://aipodcast.jasonlin.tech/pp/roozmahdavian/): Designer at Neuralink — 1 期
-- [Bernt Børnich / 伯恩特·伯尼克](https://aipodcast.jasonlin.tech/pp/berntbornich/): Founder & CEO, 1X Technologies — 1 期
 - [Escha Vera / 埃莎·维拉](https://aipodcast.jasonlin.tech/pp/eschavera/): Product Designer at Perplexity — 1 期
 - [Carl Rivera / 卡尔·里维拉](https://aipodcast.jasonlin.tech/pp/carlrivera/): VP of Design and GM of Shop at Shopify — 1 期
 - [Neel Nanda / 尼尔·南达](https://aipodcast.jasonlin.tech/pp/nanda/): Mechanistic Interpretability Lead, Google DeepMind — 1 期
@@ -319,6 +320,7 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
+- [Why Every Company Now Needs to Think and Operate Like a Lab Team](https://aipodcast.jasonlin.tech/e/joshwoodward-lennyspo-2026/) — Josh Woodward, Lenny’s Podcast, 2026-10-11
 - [Elon Musk on Starship, AI, Chips, Optimus and Cybercab at X Takeover](https://aipodcast.jasonlin.tech/e/elon-xtakeove-2026/) — Elon Musk, X Takeover, 2026-10-10
 - [Beam: Building America's Open Frontier Model with Reflection AI's Misha Laskin](https://aipodcast.jasonlin.tech/e/laskin-nopriors-2026/) — Misha Laskin, No Priors, 2026-10-09
 - [AI Scientists Are Here: Autonomous Labs & Synthesis Superintelligence — Periodic Labs](https://aipodcast.jasonlin.tech/e/fedus-latentsp-2026/) — Liam Fedus, Latent Space, 2026-10-08
@@ -358,7 +360,6 @@
 - [Microsoft AI CEO Mustafa Suleyman on Why AI Needs a 'Red Line'](https://aipodcast.jasonlin.tech/e/suleyman-bloomber-2026/) — Mustafa Suleyman, Bloomberg Tech, 2026-09-25
 - [The $10 Trillion Token Economy — Alex Atallah, OpenRouter](https://aipodcast.jasonlin.tech/e/alexatallah-latentsp-2026/) — Alex Atallah, Latent Space, 2026-09-25
 - [Runway's Bet Beyond Video: World Models, Robotics, and the Neural OS — Anastasis Germanidis](https://aipodcast.jasonlin.tech/e/anastasisgermanidis-latentsp-2026/) — Anastasis Germanidis, Latent Space, 2026-09-25
-- [How AI Swarms Are Already Going Rogue | Daniel Kokotajlo](https://aipodcast.jasonlin.tech/e/kokotajlo-american-2026/) — Daniel Kokotajlo, American Thought Leaders - The Epoch Times, 2026-09-25
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml

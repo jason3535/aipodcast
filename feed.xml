@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sun, 11 Oct 2026 01:35:11 -0000</lastBuildDate>
+  <lastBuildDate>Sun, 11 Oct 2026 09:46:10 -0000</lastBuildDate>
+  <item>
+    <title>马斯克在 X Takeover 谈星舰、AI、芯片、Optimus 与 Cybercab — X Takeover 大会</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/elon-xtakeove-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/elon-xtakeove-2026/</guid>
+    <pubDate>Sun, 11 Oct 2026 09:46:10 -0000</pubDate>
+    <description>马斯克做客 Giga Texas 的 X Takeover，畅谈星舰、AI、芯片、Optimus 与 Cybercab，并回顾特斯拉数次濒临破产的生死时刻。  要点: 星舰的下一个里程碑是回收助推器，然后让两级都能重复飞行。 / AI 进步太快，连专家都因接连突破而患上“AI 精神病”。 / 具备精细运动能力的人形机器人手，造起来难到惊人。</description>
+  </item>
   <item>
     <title>AGI、AI 革命与人类工作的未来 | Mustafa Suleyman — Young and Profiting</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/suleyman-youngand-2026</link>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/maxjunestrand-jessican-2026/</guid>
     <pubDate>Sat, 03 Oct 2026 01:42:58 -0000</pubDate>
     <description>Legora 创始人 Max 分享其 AI 法律科技公司如何在 21 个月内成为史上最快从 100 万美元增长到 1.5 亿美元 ARR 的企业。  要点: 为 3-6 个月后的 AI 模型能力而构建，而非当下。 / 招聘是特权而非义务；领导者必须面试每一位总监及以上级别的新人。 / 法律 AI 需要技术娴熟的驾驶员；凭感觉起草不像凭感觉编程那样可行。</description>
-  </item>
-  <item>
-    <title>递归语言模型——MIT 博士 Alex Zhang — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/alexzhang-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/alexzhang-latentsp-2026/</guid>
-    <pubDate>Fri, 02 Oct 2026 01:38:11 -0000</pubDate>
-    <description>MIT 博士 Alex Zhang 探讨递归语言模型、GPU Mode 以及自动化 GPU 内核开发的未来。  要点: 决定模型能力的关键杠杆是 harness，而不只是规模。 / RLM 只用代码作为工具，把上下文卸载到持久化文件系统。 / 在 RLM harness 上训练能带来跨任务、跨长度的组合式泛化。</description>
   </item>
 </channel>
 </rss>
