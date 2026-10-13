@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 311 位人物 / 726 期访谈
+规模: 311 位人物 / 727 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -89,6 +89,7 @@
 - [Stefano Ermon / 斯特凡诺·埃尔蒙](https://aipodcast.jasonlin.tech/pp/ermon/): Associate Professor of Computer Science, Stanford University; Co-founder & CEO of Inception Labs — 2 期
 - [Ali Ghodsi / 阿里·戈德西](https://aipodcast.jasonlin.tech/pp/alighodsi/): CEO and Co-Founder, Databricks — 2 期
 - [Bernt Børnich / 伯恩特·伯尼克](https://aipodcast.jasonlin.tech/pp/berntbornich/): Founder & CEO, 1X Technologies — 2 期
+- [Zvi Mowshowitz / 兹维·莫肖维茨](https://aipodcast.jasonlin.tech/pp/zvi/): Writer, Don't Worry About the Vase — 2 期
 - [Harrison Chase / 哈里森·蔡斯](https://aipodcast.jasonlin.tech/pp/harrisonchase/): Co-founder & CEO, LangChain — 2 期
 - [Joel Lewenstein / 乔尔·卢文斯坦](https://aipodcast.jasonlin.tech/pp/joellewenstein/): Head of Product Design at Anthropic — 2 期
 - [Anima Anandkumar / 阿尼玛·阿南德库马尔](https://aipodcast.jasonlin.tech/pp/animaanandkumar/): Professor at Caltech, Co-founder of Accelerated Understanding — 2 期
@@ -176,7 +177,6 @@
 - [Dan Balsam / 丹·巴尔萨姆](https://aipodcast.jasonlin.tech/pp/danbalsam/): Co-founder & CTO, Goodfire — 1 期
 - [Stephen Haney / 斯蒂芬·哈尼](https://aipodcast.jasonlin.tech/pp/stephenhaney/): Founder of Paper, AI-native design tool — 1 期
 - [Philip Johnston / 菲利普·约翰斯顿](https://aipodcast.jasonlin.tech/pp/philipjohnston/): Co-founder & CEO, Starcloud — 1 期
-- [Zvi Mowshowitz / 兹维·莫肖维茨](https://aipodcast.jasonlin.tech/pp/zvi/): Writer, Don't Worry About the Vase — 1 期
 - [Josh Meier / 乔什·迈尔](https://aipodcast.jasonlin.tech/pp/joshmeier/): Co-founder, Chai Discovery — 1 期
 - [Dmitri Dolgov / 德米特里·多尔戈夫](https://aipodcast.jasonlin.tech/pp/dmitridolgov/): Co-CEO, Waymo — 1 期
 - [Tom Verrilli / 汤姆·维里利](https://aipodcast.jasonlin.tech/pp/tomverrilli/): Chief Product Officer, Whatnot — 1 期
