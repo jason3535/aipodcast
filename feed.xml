@@ -6,7 +6,21 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Mon, 12 Oct 2026 01:36:20 -0000</lastBuildDate>
+  <lastBuildDate>Mon, 12 Oct 2026 12:40:17 -0000</lastBuildDate>
+  <item>
+    <title>打造 Muse：自 ChatGPT 以来增长最快的 AI 产品——Meta 的 Alexandr Wang — David Senra</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/awang-davidsen-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/awang-davidsen-2026/</guid>
+    <pubDate>Mon, 12 Oct 2026 12:40:17 -0000</pubDate>
+    <description>Meta 的 Alexandr Wang 讲述 Muse 如何从 Meta 超级智能实验室的“个人超级智能”愿景中诞生，以及个人智能体实验如何让他确信这就是消费级产品的终极形态。  要点: Muse 成为增长最快的 AI 产品，靠的是对消费级产品细节的极致打磨，而非仅靠模型质量。 / 一支小而扁平、人才密度高的团队，在 AI 领域能跑赢大型官僚组织。 / 个人超级智能是使命：AI 应当为每个人放大能动性。</description>
+  </item>
+  <item>
+    <title>Muse：自 ChatGPT 以来最大的 AI 发布 — Huge If True</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/awang-hugeiftr-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/awang-hugeiftr-2026/</guid>
+    <pubDate>Mon, 12 Oct 2026 12:40:17 -0000</pubDate>
+    <description>Alexandr 讲述 Muse 如何成为自 ChatGPT 以来增长最快的消费级 AI 智能体，以及它的崛起对 AI 未来意味着什么。  要点: Muse 让 AI 智能体惠及所有人，而不仅是程序员。 / 对消费级 AI 而言，信任与隐私比原始能力更重要。 / AI 的未来应由集体对话而非自上而下的监管来引导。</description>
+  </item>
   <item>
     <title>为什么每家公司现在都需要像实验室团队一样思考和运作 — Lenny’s Podcast</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/joshwoodward-lennyspo-2026</link>
@@ -202,20 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/suleyman-theresti-2026/</guid>
     <pubDate>Sun, 04 Oct 2026 06:56:46 -0000</pubDate>
     <description>微软 AI 首席执行官穆斯塔法·苏莱曼警告，将 AI 模型视为有意识的道德主体可能削弱人类对这项技术的控制。  要点: AI 算力 15 年增长万亿倍，推动能力可预测地提升。 / 将 AI 拟人化并赋予其权利是危险且不合理的。 / 一小群人控制着 AI 方向；预防原则和算力瓶颈是关键。</description>
-  </item>
-  <item>
-    <title>马克·扎克伯格的未来愿景：AI、智能眼镜与元宇宙 — The Next Big Thing</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/zuckerberg-thenextb-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/zuckerberg-thenextb-2026/</guid>
-    <pubDate>Sun, 04 Oct 2026 06:42:13 -0000</pubDate>
-    <description>马克·扎克伯格揭示 Meta 在 AI、智能眼镜与元宇宙上的押注如何汇聚成一种全新的超级智能。  要点: 个人 AI 代理将覆盖数十亿人，每个代理都需要自己的安全计算机。 / 扩展算力可能就足以实现 AGI，架构突破并非严格必需。 / AI 结合虚拟细胞模型，可能在本世纪末之前治愈所有疾病。</description>
-  </item>
-  <item>
-    <title>哪些 GPU 云真的靠谱？ClusterMAX 3.0 — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/dylanpatel-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dylanpatel-latentsp-2026/</guid>
-    <pubDate>Sat, 03 Oct 2026 01:42:58 -0000</pubDate>
-    <description>SemiAnalysis 的 Dylan 解读 ClusterMAX 3.0，这套 NeoCloud 评级从性能、安全、可靠性和定价等维度评测 GPU 云服务商。  要点: 新云安全普遍糟糕，客户任务、数据和存储暴露在外。 / 算力租赁空前困难，连单节点都租不到。 / OpenAI 和 Anthropic 的研发算力现已超过 DeepMind。</description>
   </item>
 </channel>
 </rss>
