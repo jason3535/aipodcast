@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Thu, 15 Oct 2026 05:05:03 -0000</lastBuildDate>
+  <lastBuildDate>Thu, 15 Oct 2026 12:43:00 -0000</lastBuildDate>
+  <item>
+    <title>黄仁勋谈 AI 资本支出、2027 年瓶颈与奇点 — Bg2 Pod</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/jensen-bg2pod-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jensen-bg2pod-2026/</guid>
+    <pubDate>Thu, 15 Oct 2026 12:43:00 -0000</pubDate>
+    <description>黄仁勋探讨 AI 收入能否支撑资本支出、2027 年将出现的瓶颈、奇点以及开源与闭源 AI 之争。  要点: 推理需要海量算力，计算需求将增长十亿倍。 / 完美对齐不可能，安全靠围堵与监控。 / 摩尔定律已终结，晶体管翻倍成本也翻倍。</description>
+  </item>
   <item>
     <title>从湿实验室到强化学习环境：一个周末完成一万次药物发现——Ian Quigley，Leash Bio — Latent Space</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/ianquigley-latentsp-2026</link>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/bosworth-alexkant-2026/</guid>
     <pubDate>Sun, 04 Oct 2026 14:47:17 -0000</pubDate>
     <description>Meta CTO 安德鲁·博斯沃思解释 Meta 为何要自研前沿 AI 模型与 AI 眼镜，以及为何模型本身并非真正的价值所在。  要点: AI 模型是基础，但产品和用户价值才是关键。 / 单体模型时代已结束；消费者关心功能，而非模型选择。 / AI 眼镜是个人超级智能的关键形态。</description>
-  </item>
-  <item>
-    <title>移动之后是什么？Meta 的 Andrew Bosworth 谈 AI 与消费科技 — a16z 播客</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/bosworth-thea16zp-2025</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/bosworth-thea16zp-2025/</guid>
-    <pubDate>Sun, 04 Oct 2026 14:47:17 -0000</pubDate>
-    <description>Meta 首席技术官 Andrew Bosworth 解读 AI 如何重塑每一种交互界面，以及智能手机之后的下一个时代。  要点: AI 是一种广泛的能力，而非小众浪潮，将重塑消费科技。 / 智能眼镜将进化为 AI 眼镜，开启后手机时代。 / AI 颠覆应用模式：用户表达意图，AI 编排服务。</description>
   </item>
 </channel>
 </rss>
