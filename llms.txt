@@ -3,14 +3,14 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 313 位人物 / 731 期访谈
+规模: 313 位人物 / 732 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
 - [Sam Altman / 萨姆·奥尔特曼](https://aipodcast.jasonlin.tech/pp/altman/): CEO, OpenAI — 23 期
 - [Elon Musk / 埃隆·马斯克](https://aipodcast.jasonlin.tech/pp/elon/): Founder, xAI — 18 期
 - [Dario Amodei / 达里奥·阿莫迪](https://aipodcast.jasonlin.tech/pp/dario/): CEO, Anthropic — 17 期
-- [Jensen Huang / 黄仁勋](https://aipodcast.jasonlin.tech/pp/jensen/): Founder & CEO, NVIDIA — 14 期
+- [Jensen Huang / 黄仁勋](https://aipodcast.jasonlin.tech/pp/jensen/): Founder & CEO, NVIDIA — 15 期
 - [Naval Ravikant / 纳瓦尔·拉维坎特](https://aipodcast.jasonlin.tech/pp/naval/): Co-founder, AngelList; angel investor & philosopher — 14 期
 - [Demis Hassabis / 杰米斯·哈萨比斯](https://aipodcast.jasonlin.tech/pp/demis/): CEO, Google DeepMind — 13 期
 - [Greg Brockman / 格雷格·布罗克曼](https://aipodcast.jasonlin.tech/pp/brockman/): President & Co-founder, OpenAI — 12 期
@@ -322,6 +322,7 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
+- [Jensen Huang on AI Capex, 2027 Bottlenecks, and the Singularity](https://aipodcast.jasonlin.tech/e/jensen-bg2pod-2026/) — Jensen Huang, Bg2 Pod, 2026-10-15
 - [From Wet Lab to RL Env: 10,000 Drug-Discovery Campaigns in a Weekend — Ian Quigley, Leash Bio](https://aipodcast.jasonlin.tech/e/ianquigley-latentsp-2026/) — Ian Quigley, Latent Space, 2026-10-14
 - [Can Open Models Keep Up With OpenAI and Anthropic?](https://aipodcast.jasonlin.tech/e/lambert-thea16zp-2026/) — Nathan Lambert, The a16z Podcast, 2026-10-14
 - [Robots That Predict the Future: Dyna-2 and Physical AI with Jason Ma](https://aipodcast.jasonlin.tech/e/jasonma-latentsp-2026/) — Jason Ma, Latent Space, 2026-10-13
@@ -361,7 +362,6 @@
 - [AI and the Future of Mathematics: A Conversation with Grant Sanderson](https://aipodcast.jasonlin.tech/e/grantsanderson-numberph-2026/) — Grant Sanderson, Numberphile2, 2026-09-28
 - [Can AI Stay Under Human Control? Mustafa Suleyman on the Dangers of Anthropomorphizing Machines](https://aipodcast.jasonlin.tech/e/suleyman-theresti-2026/) — Mustafa Suleyman, The Rest Is Politics: Leading, 2026-09-28
 - [Molly Graham: The Grief, Burnout, and Opportunity Hiding Inside the AI Transition](https://aipodcast.jasonlin.tech/e/mollygraham-lennyspo-2026/) — Molly Graham, Lenny’s Podcast, 2026-09-27
-- [Why AI's Next Breakthroughs Could Come from Outside the Big Labs](https://aipodcast.jasonlin.tech/e/aaronlevie-thea16zp-2026/) — Aaron Levie, The a16z Podcast, 2026-09-26
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml

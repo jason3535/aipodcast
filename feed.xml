@@ -6,7 +6,35 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Tue, 13 Oct 2026 01:37:30 -0000</lastBuildDate>
+  <lastBuildDate>Thu, 15 Oct 2026 05:05:03 -0000</lastBuildDate>
+  <item>
+    <title>从湿实验室到强化学习环境：一个周末完成一万次药物发现——Ian Quigley，Leash Bio — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/ianquigley-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ianquigley-latentsp-2026/</guid>
+    <pubDate>Thu, 15 Oct 2026 05:05:03 -0000</pubDate>
+    <description>Leash Bio 联合创始人兼 CEO Ian Quigley 探讨 DNA 编码文库的规模化应用，以及用化学数据训练机器学习模型时可能学到社会学而非物理学的陷阱。  要点: DNA 编码化合物库使小分子结合的大规模测量成为可能。 / 公开数据教给模型的是社会学而非物理，必须用分布外数据评估。 / 结合强化学习的语言模型能对化学进行推理，并更好地抵抗记忆。</description>
+  </item>
+  <item>
+    <title>开源模型能跟上 OpenAI 和 Anthropic 吗？ — The a16z Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/lambert-thea16zp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/lambert-thea16zp-2026/</guid>
+    <pubDate>Thu, 15 Oct 2026 05:05:03 -0000</pubDate>
+    <description>Nathan Lambert 从算力、数据和人才三个维度拆解 AI 前沿，并探讨开源权重模型能否跟上 OpenAI 和 Anthropic 等闭源实验室的步伐。  要点: 开源模型能快速跟随前沿实验室；真正的差距在算力，而非人才。 / 后训练已从监督微调转向以强化学习为主的环境。 / 受人类瓶颈和指数级成本制约，递归自我改进不会导致快速起飞。</description>
+  </item>
+  <item>
+    <title>预测未来的机器人：Dyna-2 与物理 AI——对话 Jason Ma — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/jasonma-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jasonma-latentsp-2026/</guid>
+    <pubDate>Thu, 15 Oct 2026 05:05:03 -0000</pubDate>
+    <description>Dyna Robotics 联合创始人兼首席科学家 Jason Ma 解析 Dyna-2 世界动作模型如何通过预测未来视频与机器人动作，让物理 AI 更灵巧、更具泛化能力。  要点: 世界动作模型通过预测未来视频和动作，实现灵巧的机器人控制。 / 机器人领域缺乏互联网数据，扩展需要真实世界采集和合成生成。 / 带轮子的半人形机器人比全人形更实用，适合迭代部署。</description>
+  </item>
+  <item>
+    <title>David Silver 与 Lasse Espeholt：为经验时代打造超级学习者 — Training Data</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/dsilver-training-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dsilver-training-2026/</guid>
+    <pubDate>Thu, 15 Oct 2026 05:05:03 -0000</pubDate>
+    <description>Ineffable Intelligence 的 David Silver 与 Lasse Espeholt 探讨为何从经验中学习、而非大语言模型，才是通往超级智能的道路。  要点: 超级智能将诞生于从经验中自主学习的系统，而非依赖人类数据。 / 模拟是构建和理解超级智能最安全、最快速的场所。 / 放弃人类先验和数据能带来更快、更伟大的发现，AlphaZero 已证明。</description>
+  </item>
   <item>
     <title>AI 放缓是真是假？罗伯特·赖特与兹维·莫肖维茨谈 Anthropic 的放缓提案 — Nonzero</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/zvi-nonzero-2026</link>
@@ -188,34 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/bosworth-thea16zp-2025/</guid>
     <pubDate>Sun, 04 Oct 2026 14:47:17 -0000</pubDate>
     <description>Meta 首席技术官 Andrew Bosworth 解读 AI 如何重塑每一种交互界面，以及智能手机之后的下一个时代。  要点: AI 是一种广泛的能力，而非小众浪潮，将重塑消费科技。 / 智能眼镜将进化为 AI 眼镜，开启后手机时代。 / AI 颠覆应用模式：用户表达意图，AI 编排服务。</description>
-  </item>
-  <item>
-    <title>用 AI 和 AR 赋予人类超能力 — 雷德·霍夫曼</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/bosworth-reidhoff-2025</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/bosworth-reidhoff-2025/</guid>
-    <pubDate>Sun, 04 Oct 2026 14:47:17 -0000</pubDate>
-    <description>Meta CTO Andrew "Boz" Bosworth 讲述 AI 与 AR 可穿戴设备如何赋予每个人超人的视觉、听觉、记忆与认知能力。  要点: AI 是词语计算器，不是类人智能，但将极大提升人类能力。 / 超越缩放定律，需要具备常识和因果关系的世界模型。 / 像 Llama 这样的开源 AI 加速进步，并以不对称方式惠及所有人。</description>
-  </item>
-  <item>
-    <title>打造 Meta：安德鲁·博斯沃思谈构建信息流、AR/VR 以及 Facebook 早期的经验教训 — Lenny’s Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/bosworth-lennyspo-2024</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/bosworth-lennyspo-2024/</guid>
-    <pubDate>Sun, 04 Oct 2026 14:47:17 -0000</pubDate>
-    <description>Meta 首席技术官安德鲁·博斯沃思分享了 Facebook 早期的故事、信息流的创建过程，以及他目前领导 AR/VR 和消费硬件的工作。  要点: 沟通就是工作本身；只有清晰沟通才能产生影响力。 / 自下而上的文化是神话；大想法来自领导层自上而下。 / 相信自己，对自己的愿景有信念，即使他人怀疑。</description>
-  </item>
-  <item>
-    <title>为什么专用 AI 可能击败通用神模型 — a16z 播客</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/amjadmasad-thea16zp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/amjadmasad-thea16zp-2026/</guid>
-    <pubDate>Sun, 04 Oct 2026 06:56:46 -0000</pubDate>
-    <description>Amjad 与 Alex 探讨专用 AI、模型多样性与开放基础设施如何可能胜过单一通用神模型。  要点: 专用决策模型在可控性、成本与安全性上胜过通用智能体。 / 企业必须拥有自己的智能，避免被供应商锁定。 / 融合模型组合多个模型，以更低成本达到前沿质量。</description>
-  </item>
-  <item>
-    <title>OpenAI 联合创始人格雷格·布罗克曼：在准备好之前就开始用 AI 构建 — 硅谷女孩</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/brockman-siliconv-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brockman-siliconv-2026/</guid>
-    <pubDate>Sun, 04 Oct 2026 06:56:46 -0000</pubDate>
-    <description>OpenAI 联合创始人格雷格·布罗克曼解析为何我们正迎来创业大爆发，以及如何从今天起用 AI 开始构建。  要点: AI 写代码已胜过多数人，指挥 AI 才是新技能。 / 从小处着手：选一个痛点，手动做五次，再自动化。 / 领域专长与深度用户理解是持久护城河。</description>
   </item>
 </channel>
 </rss>

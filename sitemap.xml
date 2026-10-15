@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/jensen/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/ianquigley/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/lambert/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/jasonma/</loc><lastmod>2026-10-15</lastmod></url>
@@ -43,7 +44,6 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/dhh/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/ryangreenblatt/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/pincus/</loc><lastmod>2026-09-26</lastmod></url>
-  <url><loc>https://aipodcast.jasonlin.tech/pp/jensen/</loc><lastmod>2026-09-26</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/geoffteehan/</loc><lastmod>2026-09-26</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/ericnguyen/</loc><lastmod>2026-09-26</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/frankhutter/</loc><lastmod>2026-09-28</lastmod></url>
@@ -314,6 +314,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/hugobarra/</loc><lastmod>2026-08-14</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/albertgu/</loc><lastmod>2026-06-27</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/abbeel/</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/jensen-bg2pod-2026/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/ianquigley-latentsp-2026/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/lambert-thea16zp-2026/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/jasonma-latentsp-2026/</loc><lastmod>2026-10-15</lastmod></url>
