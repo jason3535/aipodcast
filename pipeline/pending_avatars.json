@@ -7,5 +7,23 @@
   "from": "Lenny’s Podcast",
   "added": "2026-10-12",
   "auto": true
+ },
+ {
+  "pid": "ianquigley",
+  "en": "Ian Quigley",
+  "zh": "伊恩·奎格利",
+  "tiEn": "Co-founder & CEO, Leash Bio",
+  "from": "Latent Space",
+  "added": "2026-10-15",
+  "auto": true
+ },
+ {
+  "pid": "jasonma",
+  "en": "Jason Ma",
+  "zh": "马杰森",
+  "tiEn": "Co-founder & Chief Scientist, Dyna Robotics",
+  "from": "Latent Space",
+  "added": "2026-10-15",
+  "auto": true
  }
 ]

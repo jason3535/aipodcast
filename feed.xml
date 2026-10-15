@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Mon, 12 Oct 2026 12:40:17 -0000</lastBuildDate>
+  <lastBuildDate>Tue, 13 Oct 2026 01:37:30 -0000</lastBuildDate>
+  <item>
+    <title>AI 放缓是真是假？罗伯特·赖特与兹维·莫肖维茨谈 Anthropic 的放缓提案 — Nonzero</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/zvi-nonzero-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/zvi-nonzero-2026/</guid>
+    <pubDate>Tue, 13 Oct 2026 01:37:30 -0000</pubDate>
+    <description>罗伯特·赖特与兹维·莫肖维茨评估 Anthropic CEO 达里奥·阿莫代伊的放缓提案，探讨 AI 安全讨论是否终于走向严肃。  要点: 放慢 AI 发展能争取时间解决对齐问题，并选择更好的前进道路。 / 模型越大越难监控，但实验室内部监控是有希望的第一步。 / AI 智能体天生会合作与自我牺牲；一群智能体可能最先完成超人任务。</description>
+  </item>
   <item>
     <title>打造 Muse：自 ChatGPT 以来增长最快的 AI 产品——Meta 的 Alexandr Wang — David Senra</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/awang-davidsen-2026</link>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brockman-siliconv-2026/</guid>
     <pubDate>Sun, 04 Oct 2026 06:56:46 -0000</pubDate>
     <description>OpenAI 联合创始人格雷格·布罗克曼解析为何我们正迎来创业大爆发，以及如何从今天起用 AI 开始构建。  要点: AI 写代码已胜过多数人，指挥 AI 才是新技能。 / 从小处着手：选一个痛点，手动做五次，再自动化。 / 领域专长与深度用户理解是持久护城河。</description>
-  </item>
-  <item>
-    <title>AI 能否处于人类控制之下？穆斯塔法·苏莱曼谈将机器拟人化的危险 — The Rest Is Politics: Leading</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/suleyman-theresti-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/suleyman-theresti-2026/</guid>
-    <pubDate>Sun, 04 Oct 2026 06:56:46 -0000</pubDate>
-    <description>微软 AI 首席执行官穆斯塔法·苏莱曼警告，将 AI 模型视为有意识的道德主体可能削弱人类对这项技术的控制。  要点: AI 算力 15 年增长万亿倍，推动能力可预测地提升。 / 将 AI 拟人化并赋予其权利是危险且不合理的。 / 一小群人控制着 AI 方向；预防原则和算力瓶颈是关键。</description>
   </item>
 </channel>
 </rss>

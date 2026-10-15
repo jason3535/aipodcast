@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 311 位人物 / 727 期访谈
+规模: 313 位人物 / 731 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -23,12 +23,12 @@
 - [Yoshua Bengio / 约书亚·本吉奥](https://aipodcast.jasonlin.tech/pp/bengio/): Professor, Mila — 10 期
 - [Yann LeCun / 杨立昆](https://aipodcast.jasonlin.tech/pp/lecun/): Chief AI Scientist, Meta — 10 期
 - [Tony Fadell / 托尼·法德尔](https://aipodcast.jasonlin.tech/pp/fadell/): Principal at Future Shape (Build Collective); creator of the iPod, co-creator of the iPhone, founder of Nest — 9 期
+- [Nathan Lambert / 内森·兰伯特](https://aipodcast.jasonlin.tech/pp/lambert/): Research Scientist, Ai2 — 8 期
 - [Geoffrey Hinton / 杰弗里·辛顿](https://aipodcast.jasonlin.tech/pp/hinton/): Professor Emeritus, U of Toronto — 8 期
 - [Evan Spiegel / 埃文·斯皮格尔](https://aipodcast.jasonlin.tech/pp/evanspiegel/): Co-founder & CEO, Snap — 8 期
 - [Daniel Kokotajlo / 丹尼尔·科科塔伊洛](https://aipodcast.jasonlin.tech/pp/kokotajlo/): Author, AI 2027 · ex-OpenAI — 7 期
 - [Noam Brown / 诺姆·布朗](https://aipodcast.jasonlin.tech/pp/noambrown/): Research Scientist, OpenAI — 7 期
 - [Richard Sutton / 理查德·萨顿](https://aipodcast.jasonlin.tech/pp/sutton/): Professor, U of Alberta — 7 期
-- [Nathan Lambert / 内森·兰伯特](https://aipodcast.jasonlin.tech/pp/lambert/): Research Scientist, Ai2 — 7 期
 - [Dylan Patel / 迪伦·帕特尔](https://aipodcast.jasonlin.tech/pp/dylanpatel/): Founder & Chief Analyst, SemiAnalysis — 6 期
 - [Andrew Feldman / 安德鲁·费尔德曼](https://aipodcast.jasonlin.tech/pp/feldman/): Co-founder & CEO, Cerebras Systems — 6 期
 - [Arthur Mensch / 阿瑟·门施](https://aipodcast.jasonlin.tech/pp/mensch/): Co-founder & CEO, Mistral AI — 6 期
@@ -78,6 +78,7 @@
 - [Yejin Choi / 崔艺珍](https://aipodcast.jasonlin.tech/pp/yejin/): Professor, Stanford (prev. NVIDIA, AI2); commonsense reasoning — 3 期
 - [Noam Shazeer / 诺姆·沙泽尔](https://aipodcast.jasonlin.tech/pp/shazeer/): Co-lead, Google Gemini — 3 期
 - [Jan Leike / 扬·莱克](https://aipodcast.jasonlin.tech/pp/leike/): Alignment Lead, Anthropic — 3 期
+- [David Silver / 大卫·西尔弗](https://aipodcast.jasonlin.tech/pp/dsilver/): Principal Research Scientist, DeepMind — 2 期
 - [Misha Laskin / 米沙·拉斯金](https://aipodcast.jasonlin.tech/pp/laskin/): Co-founder & CEO, Reflection AI (prev. DeepMind) — 2 期
 - [Liam Fedus / 利亚姆·费杜斯](https://aipodcast.jasonlin.tech/pp/fedus/): Co-founder, Periodic Labs (ex-OpenAI) — 2 期
 - [Tibo Sottiaux / 蒂博·索蒂奥](https://aipodcast.jasonlin.tech/pp/tibosottiaux/): Head of ChatGPT & Codex (Core Products), OpenAI — 2 期
@@ -134,6 +135,8 @@
 - [Nad Chishtie / 纳德·奇什蒂](https://aipodcast.jasonlin.tech/pp/nadchishtie/): Founding Designer & Head of Design, Lovable — 2 期
 - [Michael Truell / 迈克尔·特鲁埃尔](https://aipodcast.jasonlin.tech/pp/truell/): Co-founder & CEO, Cursor — 2 期
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 2 期
+- [Ian Quigley / 伊恩·奎格利](https://aipodcast.jasonlin.tech/pp/ianquigley/): Co-founder & CEO, Leash Bio — 1 期
+- [Jason Ma / 马杰森](https://aipodcast.jasonlin.tech/pp/jasonma/): Co-founder & Chief Scientist, Dyna Robotics — 1 期
 - [Josh Woodward / 乔什·伍德沃德](https://aipodcast.jasonlin.tech/pp/joshwoodward/): VP, Google Labs & Gemini App — 1 期
 - [Jeetu Patel / 吉图·帕特尔](https://aipodcast.jasonlin.tech/pp/jeetupatel/): President and Chief Product Officer, Cisco — 1 期
 - [Luca Ferrari / 卢卡·法拉利](https://aipodcast.jasonlin.tech/pp/lucaferrari/): Co-founder & CEO, Bending Spoons — 1 期
@@ -279,7 +282,6 @@
 - [Llion Jones / 利昂·琼斯](https://aipodcast.jasonlin.tech/pp/llion/): Co-founder & CTO, Sakana AI; Transformer co-author — 1 期
 - [Devi Parikh / 黛维·帕里克](https://aipodcast.jasonlin.tech/pp/deviparikh/): Co-founder & Co-CEO, Yutori — 1 期
 - [Geoffrey Litt / 杰弗里·利特](https://aipodcast.jasonlin.tech/pp/geoffreylitt/): Researcher at Ink & Switch — 1 期
-- [David Silver / 大卫·西尔弗](https://aipodcast.jasonlin.tech/pp/dsilver/): Principal Research Scientist, DeepMind — 1 期
 - [Bill Peebles / 比尔·皮布尔斯](https://aipodcast.jasonlin.tech/pp/billpeebles/): AI researcher; former head of OpenAI's Sora, co-inventor of Diffusion Transformers (DiT) — 1 期
 - [Jason Wei / 杰森·魏](https://aipodcast.jasonlin.tech/pp/jasonwei/): AI Researcher (ex-OpenAI) — 1 期
 - [Rooz Mahdavian / 鲁兹·马哈达维安](https://aipodcast.jasonlin.tech/pp/roozmahdavian/): Designer at Neuralink — 1 期
@@ -320,6 +322,10 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
+- [From Wet Lab to RL Env: 10,000 Drug-Discovery Campaigns in a Weekend — Ian Quigley, Leash Bio](https://aipodcast.jasonlin.tech/e/ianquigley-latentsp-2026/) — Ian Quigley, Latent Space, 2026-10-14
+- [Can Open Models Keep Up With OpenAI and Anthropic?](https://aipodcast.jasonlin.tech/e/lambert-thea16zp-2026/) — Nathan Lambert, The a16z Podcast, 2026-10-14
+- [Robots That Predict the Future: Dyna-2 and Physical AI with Jason Ma](https://aipodcast.jasonlin.tech/e/jasonma-latentsp-2026/) — Jason Ma, Latent Space, 2026-10-13
+- [David Silver & Lasse Espeholt on Building a Superlearner for the Age of Experience](https://aipodcast.jasonlin.tech/e/dsilver-training-2026/) — David Silver, Training Data, 2026-10-13
 - [Why Every Company Now Needs to Think and Operate Like a Lab Team](https://aipodcast.jasonlin.tech/e/joshwoodward-lennyspo-2026/) — Josh Woodward, Lenny’s Podcast, 2026-10-11
 - [Creating Muse: The Fastest-Growing AI Product Since ChatGPT — Alexandr Wang, Meta](https://aipodcast.jasonlin.tech/e/awang-davidsen-2026/) — Alexandr Wang, David Senra, 2026-10-11
 - [Elon Musk on Starship, AI, Chips, Optimus and Cybercab at X Takeover](https://aipodcast.jasonlin.tech/e/elon-xtakeove-2026/) — Elon Musk, X Takeover, 2026-10-10
@@ -356,10 +362,6 @@
 - [Can AI Stay Under Human Control? Mustafa Suleyman on the Dangers of Anthropomorphizing Machines](https://aipodcast.jasonlin.tech/e/suleyman-theresti-2026/) — Mustafa Suleyman, The Rest Is Politics: Leading, 2026-09-28
 - [Molly Graham: The Grief, Burnout, and Opportunity Hiding Inside the AI Transition](https://aipodcast.jasonlin.tech/e/mollygraham-lennyspo-2026/) — Molly Graham, Lenny’s Podcast, 2026-09-27
 - [Why AI's Next Breakthroughs Could Come from Outside the Big Labs](https://aipodcast.jasonlin.tech/e/aaronlevie-thea16zp-2026/) — Aaron Levie, The a16z Podcast, 2026-09-26
-- [The Ads Business Model Will Die & Lessons from Working with Elon at Twitter | Parag Agrawal](https://aipodcast.jasonlin.tech/e/paragagrawal-20vc-2026/) — Parag Agrawal, 20VC, 2026-09-26
-- [CMG Exclusive: Elon Musk on China's Unmatched Charm](https://aipodcast.jasonlin.tech/e/elon-cctvfina-2026/) — Elon Musk, CGTN, 2026-09-25
-- [Satya Nadella on Copilot, the AI Backlash, and Microsoft's Future](https://aipodcast.jasonlin.tech/e/satya-sourcesp-2026/) — Satya Nadella, Sources Podcast, 2026-09-25
-- [Microsoft AI CEO Mustafa Suleyman on Why AI Needs a 'Red Line'](https://aipodcast.jasonlin.tech/e/suleyman-bloomber-2026/) — Mustafa Suleyman, Bloomberg Tech, 2026-09-25
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
