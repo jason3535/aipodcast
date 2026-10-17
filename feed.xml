@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Thu, 15 Oct 2026 12:43:00 -0000</lastBuildDate>
+  <lastBuildDate>Thu, 15 Oct 2026 14:54:26 -0000</lastBuildDate>
+  <item>
+    <title>英伟达 CEO 黄仁勋：为何我不认同 AI 末日警告 — CBS 周日晨间</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/jensen-cbssunda-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jensen-cbssunda-2026/</guid>
+    <pubDate>Thu, 15 Oct 2026 14:54:26 -0000</pubDate>
+    <description>黄仁勋反驳 AI 灭绝警告，主张行业应执行现有法律，而非被末日叙事推动出台新监管。  要点: AI 已真正有用，行业正从实验室转向产品公司。 / 应先适用现有责任法，再考虑新增 AI 规则。 / 数据中心是新型制造业，能以蓝领岗位推动美国再工业化。</description>
+  </item>
   <item>
     <title>黄仁勋谈 AI 资本支出、2027 年瓶颈与奇点 — Bg2 Pod</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/jensen-bg2pod-2026</link>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/bosworth-nicholas-2026/</guid>
     <pubDate>Sun, 04 Oct 2026 14:47:17 -0000</pubDate>
     <description>Meta CTO 安德鲁·博斯沃思探讨公司的 AI 转型、智能眼镜的未来以及备受争议的员工追踪计划。  要点: AI 是我们职业生涯中最大的转变，但近期前景却最不明朗。 / 随着缩放定律持续，独特的长尾数据成为新的石油。 / 能源是最上游的矢量；应投资安全核能。</description>
-  </item>
-  <item>
-    <title>Meta CTO 安德鲁·博斯沃思：我们的前沿 AI 之路、租用模型与消费级 AI 的困境 — Alex Kantrowitz</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/bosworth-alexkant-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/bosworth-alexkant-2026/</guid>
-    <pubDate>Sun, 04 Oct 2026 14:47:17 -0000</pubDate>
-    <description>Meta CTO 安德鲁·博斯沃思解释 Meta 为何要自研前沿 AI 模型与 AI 眼镜，以及为何模型本身并非真正的价值所在。  要点: AI 模型是基础，但产品和用户价值才是关键。 / 单体模型时代已结束；消费者关心功能，而非模型选择。 / AI 眼镜是个人超级智能的关键形态。</description>
   </item>
 </channel>
 </rss>
