@@ -6,7 +6,42 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Thu, 15 Oct 2026 14:54:26 -0000</lastBuildDate>
+  <lastBuildDate>Sat, 17 Oct 2026 01:43:36 -0000</lastBuildDate>
+  <item>
+    <title>为何 AI 需要你公司的上下文 — TNW</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/arvindjain-tnw-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/arvindjain-tnw-2026/</guid>
+    <pubDate>Sat, 17 Oct 2026 01:43:36 -0000</pubDate>
+    <description>Glean CEO Arvind 阐释企业 AI 如何连接公司全部知识以提升生产力。  要点: 企业 AI 的成功关键在于上下文，而不仅仅是模型。 / 80-90%的企业知识是隐性的，未被文档化。 / Glean 利用多模型和确定性权限，每周节省 11 小时。</description>
+  </item>
+  <item>
+    <title>在 Metalab 打造定制 AI 设计工具 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/mylespalmer-diveclub-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/mylespalmer-diveclub-2026/</guid>
+    <pubDate>Sat, 17 Oct 2026 01:43:36 -0000</pubDate>
+    <description>Metalab 设计总监 Myles Palmer 分享他如何打造 Oodles——一套 AI 驱动的参数化设计系统，让设计师仅凭一句提示词即可生成定制工具。  要点: AI 是设计师的新工具而非替代品，它拓展了创意的可能性。 / 构建像 Oodles 这样的内部工具，能让设计团队的能力民主化。 / 伟大的设计仍始于视觉探索，而非仅靠文本提示。</description>
+  </item>
+  <item>
+    <title>网络安全与药物研发的物理法则之变 — No Priors</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/brockman-nopriors-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brockman-nopriors-2026/</guid>
+    <pubDate>Sat, 17 Oct 2026 01:43:36 -0000</pubDate>
+    <description>OpenAI 总裁 Greg Brockman 谈 AI 创造新知识、破解百年数学难题，以及为何安全支出应远超软件支出。  要点: AI 已能生成新知识，解决百年数学难题，但人类必须保持主导权。 / 药物发现是 AI 最明显的革命领域，但数据瓶颈仍在；生物学或可被神经网络攻克。 / 我们正处于防御者窗口期：网络安全支出应远超软件支出，以修复漏洞。</description>
+  </item>
+  <item>
+    <title>AlphaFold 为何未真正解决蛋白质折叠：数据、规模化与生物科学的未来 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/kohli-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/kohli-latentsp-2026/</guid>
+    <pubDate>Sat, 17 Oct 2026 01:43:36 -0000</pubDate>
+    <description>Pushmeet Kohli 与 Sal Candido 探讨蛋白质折叠为何尚未真正解决、数据的“苦涩教训”，以及开放社区驱动的数据如何推动生物科学突破。  要点: 蛋白质折叠并未解决，动力学、功能和设计仍是开放且资金不足的领域。 / 缩放定律并非普适，成功来自找到合适的数据-计算机制。 / 低质量宏基因组数据和生物物理归纳偏置提升了模型性能和数据效率。</description>
+  </item>
+  <item>
+    <title>AI 基础设施能否持续指数级增长？ — Alex Kantrowitz</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/dylanpatel-alexkant-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dylanpatel-alexkant-2026/</guid>
+    <pubDate>Sat, 17 Oct 2026 01:43:36 -0000</pubDate>
+    <description>SemiAnalysis 的 Dylan Patel 与 Jordan Nanos 探讨规模空前的 AI 基础设施建设能否持续其增长势头。  要点: AI 资本支出已占美国 GDP 的 5-6%，远超铁路等历史建设潮。 / 受资本和组织限制，增长最迟明年年底必须放缓，而非需求不足。 / Anthropic 等 AI 实验室毛利率约 75%，获客成本近零，优于 SaaS。</description>
+  </item>
   <item>
     <title>英伟达 CEO 黄仁勋：为何我不认同 AI 末日警告 — CBS 周日晨间</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/jensen-cbssunda-2026</link>
@@ -181,41 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/diogoalmeida-thetwiml-2026/</guid>
     <pubDate>Wed, 07 Oct 2026 02:37:23 -0000</pubDate>
     <description>Typesafe 联合创始人兼 CEO Diogo Almeida 解释，Jev 的真正突破在于为机器原生决策而非人类可读字符串优化 AI。  要点: AI 在某些任务上超越人类，却因优化目标错位而无法胜任基础自动化。 / RLHF 破坏了模型校准；RLCD 通过概率旋钮恢复校准决策。 / Jev 是早期决策模型，优化可靠性而非速度或成本。</description>
-  </item>
-  <item>
-    <title>山姆·奥特曼：AI 的益处值得付出“一些糟糕的代价” — POLITICO</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/altman-politico-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/altman-politico-2026/</guid>
-    <pubDate>Tue, 06 Oct 2026 06:43:58 -0000</pubDate>
-    <description>山姆·奥特曼为 OpenAI 的安全策略与白宫 AI 协议辩护，并警告权力过度集中与 AI 失控同样危险。  要点: 奥特曼认为 AI 的收益值得承担有限风险，但绝不能接受灾难性风险。 / 他既反对盲目末日论也反对盲目乐观，并警告单一实验室控制 AI 不可接受。 / 他认为出口管制基于过时思维，AI 应惠及全世界。</description>
-  </item>
-  <item>
-    <title>Replit CEO Amjad Masad 谈 AI 末日论、软件与氛围编程 — 泰晤士科技播客</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/amjadmasad-thetimes-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/amjadmasad-thetimes-2026/</guid>
-    <pubDate>Tue, 06 Oct 2026 06:43:58 -0000</pubDate>
-    <description>Replit CEO Amjad Masad 探讨 AI 风险、软件的未来，以及氛围编程如何让编程走向大众。  要点: AI 让软件开发人人可及，但深度调试仍需程序员。 / Token 补充而非取代人力；AI 末日论是商业恐吓。 / 语音将主导个人设备，但专业人士仍用键盘。</description>
-  </item>
-  <item>
-    <title>为何互联网上的大多数操作将很快由 AI 代理完成 — Lenny’s Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/tibosottiaux-lennyspo-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/tibosottiaux-lennyspo-2026/</guid>
-    <pubDate>Tue, 06 Oct 2026 06:43:58 -0000</pubDate>
-    <description>OpenAI 的 ChatGPT 负责人蒂博·索蒂奥解释为何互联网上的大多数操作将很快由 AI 代理完成，以及我们将如何摆脱对循环的繁琐调试。  要点: 未来大多数互联网操作将由 AI 代理完成，因此应为这一未来而构建。 / 一个持续学习、持久存在的代理将取代手动循环和图结构。 / 人类的品味、创造力以及知道什么是好的能力比以往任何时候都更有价值。</description>
-  </item>
-  <item>
-    <title>Granola 联合创始人如何用 AI 驾驭会议 — Peter Yang</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/samstephenson-peteryan-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/samstephenson-peteryan-2026/</guid>
-    <pubDate>Mon, 05 Oct 2026 01:38:15 -0000</pubDate>
-    <description>Granola 联合创始人 Sam 分享他如何用 AI 会议简报、配方和智能体，在连轴转的会议间隙保持从容与准备。  要点: Granola 是一款冷静的会议助手，隐藏转录并优先提供会前简报。 / 会议蕴含最有价值的公司上下文，因此 Granola 演变为上下文平台。 / 工作与生活的平衡以及发布后对细节的关注提升质量，而不仅仅是速度。</description>
-  </item>
-  <item>
-    <title>Meta CTO 安德鲁·博斯沃思谈 AI 转型、智能眼镜与员工追踪 — Nicholas Thompson</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/bosworth-nicholas-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/bosworth-nicholas-2026/</guid>
-    <pubDate>Sun, 04 Oct 2026 14:47:17 -0000</pubDate>
-    <description>Meta CTO 安德鲁·博斯沃思探讨公司的 AI 转型、智能眼镜的未来以及备受争议的员工追踪计划。  要点: AI 是我们职业生涯中最大的转变，但近期前景却最不明朗。 / 随着缩放定律持续，独特的长尾数据成为新的石油。 / 能源是最上游的矢量；应投资安全核能。</description>
   </item>
 </channel>
 </rss>
