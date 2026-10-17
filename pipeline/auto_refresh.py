@@ -70,6 +70,26 @@ def ds(system, user, mx=3000):
         except Exception as e: last = e; time.sleep(2 + a * 3)
     raise RuntimeError(str(last)[:80])
 
+# ---- 闸门拒收记忆 ----
+# 2026-10-17:YC Paper Club《What If We Stopped Using GPUs?》(多人分享)10/3~10/16 被闸门连拒 11 次,
+# 第 12 天 LLM 改口「新收」,建了人物档上线,Jason 发现后下架。根因:拒收结果不落盘,同一视频天天重抽一次签,
+# 任何边缘候选迟早被收。现在 LLM 闸门的「弃」持久化,之后不再重判。
+# 频道维度 key=vid(判断与人物无关);人物维度 key=vid|pid(同一视频对 A 弃不代表对 B 也弃)。
+# 只记 LLM 判断;搬运号/原声/时长这类确定性规则本来就稳定,不记。想人工捞回:删条目或直接 add_episode。
+import threading
+GATE_REJ_F = BASE / "gate_rejected.json"
+_gate_lock = threading.Lock()
+try:
+    GATE_REJ = json.loads(GATE_REJ_F.read_text(encoding="utf-8"))
+except Exception:
+    GATE_REJ = {}
+def gate_rejected(key):
+    return key in GATE_REJ
+def remember_reject(key, title, why):
+    with _gate_lock:
+        GATE_REJ[key] = {"t": title[:80], "why": str(why)[:80], "at": datetime.now(timezone.utc).strftime("%Y-%m-%d")}
+        GATE_REJ_F.write_text(json.dumps(GATE_REJ, ensure_ascii=False, indent=0), encoding="utf-8")
+
 def excluded_vids():
     """人工下架过的视频 id(pipeline/excluded.json,由 remove_episode.py 写入)。
 
@@ -444,6 +464,8 @@ def discover_channels(people, vids, days, per_channel_cap=2):
             if not english_audio(m):
                 log(f"  [频道] {pod_en[:20]:20} {m['date']} {m['t'][:44]} → 弃(原声 {m['origlang']},en 字幕是机翻)")
                 continue
+            if gate_rejected(vid):
+                continue                     # 闸门以前拒过,不再重抽签
             payload = (f"频道:{pod_en}\n标题:{m['t']}\n时长:{round(m['dur']/60)}分钟\n日期:{m['date']}\n"
                        f"视频简介(判断嘉宾身份主要靠它):\n{m.get('desc','')}\n\n"
                        f"站内人物名单(pid: 姓名):\n{roster}")
@@ -466,6 +488,8 @@ def discover_channels(people, vids, days, per_channel_cap=2):
                     r["reason"] = "新人物但人物档不全"
             ok = keep and (newp is not None or pid in pid_map)
 
+            if not ok and r.get("reason") != "新人物但人物档不全":
+                remember_reject(vid, m["t"], r.get("reason", ""))
             tag = ("新收:" + pid if newp else "收:" + pid) if ok else "弃"
             log(f"  [频道] {pod_en[:20]:20} {m['date']} [{round(m['dur']/60)}m] {m['t'][:44]} → {tag}({str(r.get('reason',''))[:26]})")
             if ok:
@@ -525,8 +549,13 @@ def discover(people, vids, days, per_person_cap=1):
         kept = []
         for m in picks:
             prof = "；".join(x for x in [p.get("ti", ""), p.get("bio", "")] if x)
+            rk = f"{m['vid']}|{pid}"
+            if gate_rejected(rk):
+                continue                     # 闸门以前对此人拒过这条,不再重抽签
             ok, why = gate(name, m, prof)
             log(f"  {pid:12} {m['date']} [{round(m['dur']/60)}m] {m['t'][:48]} → {'收' if ok else '弃'}({why[:30]})")
+            if not ok and not str(why).startswith(("gate","HTTP","Error")):
+                remember_reject(rk, m["t"], why)
             if ok:
                 kept.append({"pid": pid, "vid": m["vid"], "date": f"{m['date'][:4]}-{m['date'][4:6]}-{m['date'][6:]}",
                              "podEn": m["ch"], "min": round(m["dur"] / 60),

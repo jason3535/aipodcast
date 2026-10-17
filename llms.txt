@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 315 位人物 / 739 期访谈
+规模: 314 位人物 / 738 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -145,7 +145,6 @@
 - [Amin Vahdat / 阿明·瓦赫达特](https://aipodcast.jasonlin.tech/pp/aminvahdat/): Chief Technologist for AI Infrastructure, Google — 1 期
 - [Yash Patil / 亚什·帕蒂尔](https://aipodcast.jasonlin.tech/pp/yashpatil/): CEO, Applied Compute; ex-OpenAI Researcher — 1 期
 - [Alex Zhang / 亚历克斯·张](https://aipodcast.jasonlin.tech/pp/alexzhang/): PhD Researcher, MIT — 1 期
-- [Francois Chaubard / 弗朗索瓦·肖巴尔](https://aipodcast.jasonlin.tech/pp/francoischaubard/): Founder & CEO, Focal — 1 期
 - [Alexander Embiricos / 亚历山大·恩比里科斯](https://aipodcast.jasonlin.tech/pp/embiricos/): Product Lead, Dots, OpenAI — 1 期
 - [Ari Weinstein / 阿里·温斯坦](https://aipodcast.jasonlin.tech/pp/ariweinstein/): Product & Engineering Lead, Computer Use, OpenAI — 1 期
 - [Danny Martinez / 丹尼·马丁内斯](https://aipodcast.jasonlin.tech/pp/dannymartinez/): CEO, Decimals — 1 期
@@ -357,13 +356,13 @@
 - [Why Specialized AI Could Beat the God Model](https://aipodcast.jasonlin.tech/e/amjadmasad-thea16zp-2026/) — Amjad Masad, The a16z Podcast, 2026-10-03
 - [Recursive Language Models — Alex Zhang, MIT PhD](https://aipodcast.jasonlin.tech/e/alexzhang-latentsp-2026/) — Alex Zhang, Latent Space, 2026-10-02
 - [Which GPU Clouds Are Actually Good? ClusterMAX 3.0](https://aipodcast.jasonlin.tech/e/dylanpatel-latentsp-2026/) — Dylan Patel, Latent Space, 2026-10-02
-- [What If We Stopped Using GPUs? Rethinking Compute Beyond Backprop](https://aipodcast.jasonlin.tech/e/francoischaubard-ycombina-2026/) — Francois Chaubard, Y Combinator, 2026-10-02
 - [From Deepfakes to DNA: The Science of Watermarking AI](https://aipodcast.jasonlin.tech/e/kohli-googlede-2026b/) — Pushmeet Kohli, Google DeepMind, 2026-10-01
 - [OpenAI's Dots Lead on the Future of ChatGPT and Personal Agents](https://aipodcast.jasonlin.tech/e/embiricos-sourcesp-2026/) — Alexander Embiricos, Sources Podcast, 2026-10-01
 - [Unintended Consequences: Taking Responsibility for What We Build](https://aipodcast.jasonlin.tech/e/fadell-generalm-2026/) — Tony Fadell, General Magic and the Soul of Tech, 2026-09-30
 - [Inside OpenAI DevDay: Superhuman Computer Use, Decisions API, and the AI Cloud](https://aipodcast.jasonlin.tech/e/ariweinstein-latentsp-2026/) — Ari Weinstein, Latent Space, 2026-09-30
 - [OpenAI Co-Founder Greg Brockman: Start Building With AI Before You Feel Ready](https://aipodcast.jasonlin.tech/e/brockman-siliconv-2026/) — Greg Brockman, Silicon Valley Girl, 2026-09-30
 - [The Future of Claude Code: Mods, Mutable Software, and Multiplayer Agents — Thariq Shihipar, Anthropic](https://aipodcast.jasonlin.tech/e/thariq-latentsp-2026/) — Thariq Shihipar, Latent Space, 2026-09-29
+- [OpenRouter's Alex Atallah on Selling to Stripe for $7B+ and the Unfolding AI Economy](https://aipodcast.jasonlin.tech/e/alexatallah-sabrinah-2026/) — Alex Atallah, Sabrina Halper Show, 2026-09-29
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml

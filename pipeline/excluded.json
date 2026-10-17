@@ -22,5 +22,13 @@
   "pod": "The Mukuls",
   "reason": "搬运:The Mukuls(113 订阅)把 Karpathy 2025-02《How I use LLMs》讲座改标题重传",
   "removed": "2026-10-07"
+ },
+ {
+  "vid": "xc2FTBGRSJo",
+  "id": "francoischaubard-ycombina-2026",
+  "pid": "francoischaubard",
+  "pod": "Y Combinator",
+  "reason": "选题不符:YC Paper Club 多人分享,Chaubard 只讲开头约 15 分钟,非围绕单一嘉宾的完整访谈",
+  "removed": "2026-10-17"
  }
 ]
