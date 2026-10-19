@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 314 位人物 / 738 期访谈
+规模: 315 位人物 / 741 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -54,6 +54,7 @@
 - [Aravind Srinivas / 阿拉文德·斯里尼瓦斯](https://aipodcast.jasonlin.tech/pp/aravind/): Co-founder & CEO, Perplexity — 4 期
 - [Zico Kolter / 齐科·科尔特](https://aipodcast.jasonlin.tech/pp/kolter/): Professor, CMU · OpenAI board — 4 期
 - [Gustav Söderström / 古斯塔夫·瑟德斯特伦](https://aipodcast.jasonlin.tech/pp/gustav/): Co-President & CPTO, Spotify — 4 期
+- [Harrison Chase / 哈里森·蔡斯](https://aipodcast.jasonlin.tech/pp/harrisonchase/): Co-founder & CEO, LangChain — 3 期
 - [Arvind Jain / 阿尔温德·贾恩](https://aipodcast.jasonlin.tech/pp/arvindjain/): Founder & CEO, Glean — 3 期
 - [Amjad Masad / 阿姆贾德·马萨德](https://aipodcast.jasonlin.tech/pp/amjadmasad/): Founder & CEO, Replit — 3 期
 - [Thariq Shihipar / 塔里克·希希帕尔](https://aipodcast.jasonlin.tech/pp/thariq/): Engineer, Claude Code at Anthropic — 3 期
@@ -84,6 +85,7 @@
 - [Liam Fedus / 利亚姆·费杜斯](https://aipodcast.jasonlin.tech/pp/fedus/): Co-founder, Periodic Labs (ex-OpenAI) — 2 期
 - [Tibo Sottiaux / 蒂博·索蒂奥](https://aipodcast.jasonlin.tech/pp/tibosottiaux/): Head of ChatGPT & Codex (Core Products), OpenAI — 2 期
 - [Sam Stephenson / 萨姆·斯蒂芬森](https://aipodcast.jasonlin.tech/pp/samstephenson/): Co-founder and Designer, Granola — 2 期
+- [Tara Seshan / 塔拉·塞珊](https://aipodcast.jasonlin.tech/pp/taraseshan/): Product Lead, OpenAI — 2 期
 - [Grant Sanderson / 格兰特·桑德森](https://aipodcast.jasonlin.tech/pp/grantsanderson/): Creator of 3Blue1Brown; math educator — 2 期
 - [Aaron Levie / 亚伦·莱维](https://aipodcast.jasonlin.tech/pp/aaronlevie/): Cofounder and CEO, Box — 2 期
 - [Parag Agrawal / 帕拉格·阿格拉瓦尔](https://aipodcast.jasonlin.tech/pp/paragagrawal/): Founder & CEO, Parallel Web Systems — 2 期
@@ -92,7 +94,6 @@
 - [Ali Ghodsi / 阿里·戈德西](https://aipodcast.jasonlin.tech/pp/alighodsi/): CEO and Co-Founder, Databricks — 2 期
 - [Bernt Børnich / 伯恩特·伯尼克](https://aipodcast.jasonlin.tech/pp/berntbornich/): Founder & CEO, 1X Technologies — 2 期
 - [Zvi Mowshowitz / 兹维·莫肖维茨](https://aipodcast.jasonlin.tech/pp/zvi/): Writer, Don't Worry About the Vase — 2 期
-- [Harrison Chase / 哈里森·蔡斯](https://aipodcast.jasonlin.tech/pp/harrisonchase/): Co-founder & CEO, LangChain — 2 期
 - [Joel Lewenstein / 乔尔·卢文斯坦](https://aipodcast.jasonlin.tech/pp/joellewenstein/): Head of Product Design at Anthropic — 2 期
 - [Anima Anandkumar / 阿尼玛·阿南德库马尔](https://aipodcast.jasonlin.tech/pp/animaanandkumar/): Professor at Caltech, Co-founder of Accelerated Understanding — 2 期
 - [Tom McGrath / 汤姆·麦格拉思](https://aipodcast.jasonlin.tech/pp/tommcgrath/): Co-founder & Chief Scientist, Goodfire — 2 期
@@ -135,6 +136,7 @@
 - [Nad Chishtie / 纳德·奇什蒂](https://aipodcast.jasonlin.tech/pp/nadchishtie/): Founding Designer & Head of Design, Lovable — 2 期
 - [Michael Truell / 迈克尔·特鲁埃尔](https://aipodcast.jasonlin.tech/pp/truell/): Co-founder & CEO, Cursor — 2 期
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 2 期
+- [Emmanuel Ameisen / 埃马纽埃尔·阿梅森](https://aipodcast.jasonlin.tech/pp/emmanuelameisen/): Interpretability Researcher, Anthropic — 1 期
 - [Myles Palmer / 迈尔斯·帕尔默](https://aipodcast.jasonlin.tech/pp/mylespalmer/): Design Director, Metalab — 1 期
 - [Ian Quigley / 伊恩·奎格利](https://aipodcast.jasonlin.tech/pp/ianquigley/): Co-founder & CEO, Leash Bio — 1 期
 - [Jason Ma / 马杰森](https://aipodcast.jasonlin.tech/pp/jasonma/): Co-founder & Chief Scientist, Dyna Robotics — 1 期
@@ -166,7 +168,6 @@
 - [Evil Rabbit / Evil Rabbit](https://aipodcast.jasonlin.tech/pp/evilrabbit/): Founding Designer at Vercel — 1 期
 - [Sean Lie / 肖恩·利](https://aipodcast.jasonlin.tech/pp/seanlie/): Co-founder and CTO, Cerebras Systems — 1 期
 - [Ajeya Cotra / 阿杰亚·科特拉](https://aipodcast.jasonlin.tech/pp/ajeyacotra/): Researcher at METR — 1 期
-- [Tara Seshan / 塔拉·塞珊](https://aipodcast.jasonlin.tech/pp/taraseshan/): Product Lead, OpenAI — 1 期
 - [John Bai / John Bai](https://aipodcast.jasonlin.tech/pp/johnbai/): Design Lead for Grok Bot, Cursor — 1 期
 - [Patrick Morgan / 帕特里克·摩根](https://aipodcast.jasonlin.tech/pp/patrickmorgan/): Design Engineer, Sublime Security — 1 期
 - [Alex Krentsel / 亚历克斯·克伦塞尔](https://aipodcast.jasonlin.tech/pp/alexkrentsel/): Founder of Exo — 1 期
@@ -323,6 +324,8 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
+- [Inside the Mind of AI: An Anthropic Researcher on How Models Really Work](https://aipodcast.jasonlin.tech/e/emmanuelameisen-lennyspo-2026/) — Emmanuel Ameisen, Lenny’s Podcast, 2026-10-18
+- [The Future of Inference Market & Model Routing: Commodity or Increasing in Value?](https://aipodcast.jasonlin.tech/e/harrisonchase-20vc-2026/) — Harrison Chase, 20VC, 2026-10-17
 - [Jensen Huang on AI Capex, 2027 Bottlenecks, and the Singularity](https://aipodcast.jasonlin.tech/e/jensen-bg2pod-2026/) — Jensen Huang, Bg2 Pod, 2026-10-15
 - [Why AI Needs Your Company's Context](https://aipodcast.jasonlin.tech/e/arvindjain-tnw-2026/) — Arvind Jain, TNW, 2026-10-15
 - [Building Custom AI Design Tools at Metalab](https://aipodcast.jasonlin.tech/e/mylespalmer-diveclub-2026/) — Myles Palmer, Dive Club, 2026-10-15
@@ -361,8 +364,6 @@
 - [Unintended Consequences: Taking Responsibility for What We Build](https://aipodcast.jasonlin.tech/e/fadell-generalm-2026/) — Tony Fadell, General Magic and the Soul of Tech, 2026-09-30
 - [Inside OpenAI DevDay: Superhuman Computer Use, Decisions API, and the AI Cloud](https://aipodcast.jasonlin.tech/e/ariweinstein-latentsp-2026/) — Ari Weinstein, Latent Space, 2026-09-30
 - [OpenAI Co-Founder Greg Brockman: Start Building With AI Before You Feel Ready](https://aipodcast.jasonlin.tech/e/brockman-siliconv-2026/) — Greg Brockman, Silicon Valley Girl, 2026-09-30
-- [The Future of Claude Code: Mods, Mutable Software, and Multiplayer Agents — Thariq Shihipar, Anthropic](https://aipodcast.jasonlin.tech/e/thariq-latentsp-2026/) — Thariq Shihipar, Latent Space, 2026-09-29
-- [OpenRouter's Alex Atallah on Selling to Stripe for $7B+ and the Unfolding AI Economy](https://aipodcast.jasonlin.tech/e/alexatallah-sabrinah-2026/) — Alex Atallah, Sabrina Halper Show, 2026-09-29
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml

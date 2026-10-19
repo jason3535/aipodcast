@@ -1,1 +1,332 @@
-{}
+{
+"FGCP2F_7rQk|jasonma": {
+"t": "Visiting Taiwan w/ Jensen Huang | Lex Fridman",
+"why": "该视频是 Lex Fridman 与黄仁勋的台湾旅行 vlog，Jason Ma 并非嘉宾或主讲，且内容不属于实质性 AI 访谈。",
+"at": "2026-10-18"
+},
+"hdTwJktRWyI|nevflynn": {
+"t": "The “American Idol Murder” Trial: The FULL Backstory & Bombshell First Week | Ca",
+"why": "真实犯罪节目，与 ElevenLabs 设计负责人 Nev Flynn 无关，且非 AI 技术内容",
+"at": "2026-10-18"
+},
+"IkhmdTqSvJw|ariweinstein": {
+"t": "UFO Cover-Up Analyst: The Secret Alien Programs Nobody Is Talking About! | Eric ",
+"why": "视频嘉宾是 Eric Weinstein（数学家、物理学家、Thiel Capital 前董事总经理），并非 OpenAI Computer Use 负责人 A",
+"at": "2026-10-19"
+},
+"5T6-NAh486c|nateparrott": {
+"t": "THE GREEN SCENE: Parrott stuns Lille & Madrid | Coleman's comeback plans | Off T",
+"why": "视频讨论的是足球运动员 Troy Parrott（里尔/皇马/贝蒂斯），与 Anthropic 设计师 Nate Parrott 无关，属同名误搜。",
+"at": "2026-10-19"
+},
+"5HBw2Od2WFs|nateparrott": {
+"t": "Troy Parrott upsets Real Madrid, FAI Cup outcomes & Katie Taylor the footballer ",
+"why": "视频是RTÉ足球播客，讨论Troy Parrott等爱尔兰足球话题，与Anthropic设计师Nate Parrott无关，属同名误搜。",
+"at": "2026-10-19"
+},
+"IR5rTZMsdIE|timcook": {
+"t": "After Genius: The Tim Cook Era",
+"why": "标题为《After Genius: The Tim Cook Era》，频道为 HTX Studio，简介为空，无法确认 Tim Cook 本人是主要嘉宾或主讲",
+"at": "2026-10-19"
+},
+"GyShwh9z0gw|mengto": {
+"t": "How Much Water AI Data Centers Actually Use. And What Can Be Done About It. — Wi",
+"why": "视频嘉宾是 Ecolab CEO Christophe Beck，并非 Meng To（Design+Code 创始人），同名核验不通过。",
+"at": "2026-10-19"
+},
+"_qkN88el9IQ|mikekrieger": {
+"t": "Big Technology AI Summit (full): Greg Brockman, Mike Krieger, Aaron Levie & Frie",
+"why": "这是 Big Technology AI Summit 的多人圆桌/峰会合集，Mike Krieger 只是众多出场嘉宾之一，并非围绕他的完整单集，不符合收录标",
+"at": "2026-10-19"
+},
+"h-X3h9L4gU8|ethanhe": {
+"t": "He Dropped Out Making $750K/Yr… Now He’s an AI Billionaire on Paper | David Stou",
+"why": "视频嘉宾是David Stout（创业者/商业访谈），并非xAI的Ethan He，同名核验不通过。",
+"at": "2026-10-19"
+},
+"M9UnnUxeU8k|elon": {
+"t": "GRIMES Talks Elon Musk, AI, and the End of Humanity",
+"why": "嘉宾是Grimes而非Elon Musk，Musk只是被谈论的话题对象，不是本集主讲嘉宾。",
+"at": "2026-10-19"
+},
+"9BqsG_nPNsM|shanahan": {
+"t": "AI Consciousness and Dharma Ethics I Swami Sarvapriyananda, Prof. Murray Shanaha",
+"why": "多人圆桌讨论（Swami Sarvapriyananda、Murray Shanahan、Pinsent 等并列），Murray Shanahan 仅占其中一段",
+"at": "2026-10-19"
+},
+"0pfidFgk7G8": {
+"t": "The types of portfolios that get designers hired",
+"why": "这是多人圆桌/片段合集，没有单一主嘉宾，不符合收录标准。",
+"at": "2026-10-19"
+},
+"sEXdyK6woKU": {
+"t": "Why Claude can’t be your PM (yet) | Anthropic CPO Panel",
+"why": "多人圆桌（Anthropic CPO 与 Mike Krieger 同台），无单一主嘉宾，不符合收录标准。",
+"at": "2026-10-19"
+},
+"FGCP2F_7rQk": {
+"t": "Visiting Taiwan w/ Jensen Huang | Lex Fridman",
+"why": "视频为 Lex 与黄仁勋的台湾旅行 vlog，非实质性英文长访谈，不符合收录标准。",
+"at": "2026-10-19"
+},
+"s7d2d8FhevU": {
+"t": "Psychiatry, Insane Asylums, Mental Illness, ECT, Lobotomies, Freud & Jung | Lex ",
+"why": "嘉宾是精神病学史学家，属历史学者而非 AI/技术/产品设计从业者，不符合身份标准。",
+"at": "2026-10-19"
+},
+"l6USUAIKJls": {
+"t": "Khabib Nurmagomedov: Dagestan, MMA, UFC, Islam, Conor, Fedor & Football | Lex Fr",
+"why": "嘉宾为 MMA 运动员，非 AI/技术/产品设计从业者，不符合身份标准。",
+"at": "2026-10-19"
+},
+"XyXBwO5jYpw": {
+"t": "Gary Gallagher: American Civil War, Slavery, Lincoln, Grant & Lee | Lex Fridman ",
+"why": "嘉宾为美国内战历史学家，属非技术身份，不符合收录标准。",
+"at": "2026-10-19"
+},
+"pv1TUJSEM2k": {
+"t": "The Rise and Fall of the Roman Empire and the Byzantine Empire | Lex Fridman Pod",
+"why": "嘉宾为罗马/拜占庭历史学家，属非技术身份，不符合收录标准。",
+"at": "2026-10-19"
+},
+"LwQQ7nBCGSs": {
+"t": "How did a few hundred Spanish soldiers topple two empires? – Si Sheppard",
+"why": "嘉宾为军事历史学家，非 AI/技术/产品设计身份，不符合收录标准。",
+"at": "2026-10-19"
+},
+"f6cjAEr08qk": {
+"t": "Sarah Paine — Why wars are so difficult to end",
+"why": "嘉宾 Sarah Paine 是历史学家/地缘政治学者,非 AI/技术身份,不符合收录标准。",
+"at": "2026-10-19"
+},
+"PrSf7IOYu-I": {
+"t": "AI researchers debate how close we are to recursive self-improvement",
+"why": "多人圆桌对谈，无单一主嘉宾，不符合收录标准①",
+"at": "2026-10-19"
+},
+"ZOH8Q401vt0": {
+"t": "High Taste Testers: OpenAI Shipped Everything. What Actually Works?",
+"why": "多人圆桌对谈，无单一主嘉宾，不符合收录标准。",
+"at": "2026-10-19"
+},
+"zlD-CkLVKtU": {
+"t": "How to kill your SaaS: what we learned replacing a $43K/yr tool with AI agents",
+"why": "该视频为黑客松/竞赛结果复盘，无单一主嘉宾，且内容为多团队作品点评，不符合单一主嘉宾访谈标准。",
+"at": "2026-10-19"
+},
+"JWMF5EpP0KE": {
+"t": "Making Cities Awesome: Peregrine’s Nick Noone & Ben Rudolph",
+"why": "双嘉宾共同受访，无单一主嘉宾；且二人为公共安全数据公司联合创始人，偏商业/隐私治理，非 AI/技术/产品设计身份，不符合收录标准。",
+"at": "2026-10-19"
+},
+"X7oI4Umt3DU": {
+"t": "AI Safety Fact vs. Fiction | YC Paper Club",
+"why": "本期为两位嘉宾共同参与的圆桌讨论，没有单一主嘉宾，不符合收录标准。",
+"at": "2026-10-19"
+},
+"Jv5B5CEaPJI": {
+"t": "Robot-Use Agents: Why General-Purpose Models May Win in Robotics",
+"why": "本期为 Waddle Labs 与 RoboCurve 两家初创公司创始人的多人对谈，无单一主嘉宾，不符合收录标准。",
+"at": "2026-10-19"
+},
+"yslXlV2BP_Y": {
+"t": "The State of Startups in 2026",
+"why": "多人圆桌讨论（Garry、Jared、Diana、Harj），无单一主嘉宾，不符合收录标准。",
+"at": "2026-10-19"
+},
+"n9xKblqyQ28": {
+"t": "Why The Harness Matters More Than The Model | YC Paper Club",
+"why": "YC Paper Club 多人圆桌讨论，无单一主嘉宾，不符合收录标准。",
+"at": "2026-10-19"
+},
+"_GlSkJjRDMM": {
+"t": "AI Vibe Check: Unpacking Chinese Open Models, Cursor's Data Bet & Containment",
+"why": "多人圆桌讨论（Jacob、Ari、Rob），无单一主嘉宾，不符合收录标准。",
+"at": "2026-10-19"
+},
+"OpeCP4wCxkA": {
+"t": "Frontier Chips for Frontier AI Labs, with Walter Goodwin, Founder/CEO of Fractil",
+"why": "嘉宾Walter Goodwin不在站内名单中，且为芯片公司创始人访谈，非名单人物。",
+"at": "2026-10-19"
+},
+"TCpRwJBQvW0": {
+"t": "Re-Founding Incumbents for the AI Era with Sequence Holdings Co-Founder and CEO ",
+"why": "嘉宾Michael Lee不在站内人物名单中，且非名单匹配人物。",
+"at": "2026-10-19"
+},
+"uLDK4l_-gUE": {
+"t": "Coinbase’s Everything Exchange: Agentic Finance, Stablecoins & Tokenization with",
+"why": "Brian Armstrong不在站内人物名单中，且内容偏加密金融而非实质性AI技术访谈。",
+"at": "2026-10-19"
+},
+"85Y6h_jbRfs": {
+"t": "Redefining Chip Architecture with Arm CEO Rene Haas",
+"why": "Rene Haas 不在站内人物名单中，且该视频为 Arm CEO 的芯片架构访谈，嘉宾未匹配名单。",
+"at": "2026-10-19"
+},
+"YscDZpVF4CQ": {
+"t": "Rethinking Legacy Data Infrastructure with Eon Co-Founders Ofir Ehrlich and Gone",
+"why": "嘉宾Eon联合创始人不在站内名单中，且为双人访谈非单一主嘉宾。",
+"at": "2026-10-19"
+},
+"2Jj1SxI3r7Q": {
+"t": "How Nuclear Will Unlock Energy Abundance with Valar Atomics Founder Isaiah Taylo",
+"why": "嘉宾Isaiah Taylor不在站内名单中，且主题为核能而非实质性AI/技术访谈。",
+"at": "2026-10-19"
+},
+"615B5nyMFPk": {
+"t": "What Most People Get Wrong About Evolution | Akarsh Kumar",
+"why": "嘉宾Akarsh Kumar不在站内人物名单中，且为MIT博士生，非名单人物。",
+"at": "2026-10-19"
+},
+"VoAPg8Fj6-c": {
+"t": "How a Voice Agent Learns the Rhythm of Conversation — Shawn Wen",
+"why": "嘉宾Shawn Wen不在站内名单中，且为PolyAI CTO的技术访谈，但名单无匹配人物。",
+"at": "2026-10-19"
+},
+"ZpQFebTK75A": {
+"t": "The Programming Language That Referees Mathematics — Leo de Moura",
+"why": "嘉宾Leo de Moura不在站内名单中，且主题为Lean编程语言/形式化验证，非典型AI技术访谈。",
+"at": "2026-10-19"
+},
+"yB6_iFGTq9k": {
+"t": "Can Rewriting an AI Agent Bend the Intelligence Curve? - Zhengyao Jiang",
+"why": "嘉宾Zhengyao Jiang不在站内人物名单中，且为英文实质性AI技术访谈，但名单无匹配pid，故不保留。",
+"at": "2026-10-19"
+},
+"1S1B4XkFCD8": {
+"t": "Why More Data Cannot Replace Prior Structure - Alexander Mattick",
+"why": "Alexander Mattick 不在站内人物名单中，且为 Fraunhofer 的博士研究员，非名单人物。",
+"at": "2026-10-19"
+},
+"L6tLBApQN-g": {
+"t": "How Physical AI Learns Across Language, Video and Action — Ming-Yu Liu",
+"why": "嘉宾Ming-Yu Liu不在站内人物名单中，且为NVIDIA研究员，非名单匹配。",
+"at": "2026-10-19"
+},
+"ixu0H8bsCts": {
+"t": "Speech Recognition Is Not a Solved Problem — Pavan Kumar Reddy",
+"why": "嘉宾Pavan Kumar Reddy不在站内名单中，虽为实质性技术访谈但无匹配人物。",
+"at": "2026-10-19"
+},
+"P4bYjTJvD28": {
+"t": "What Building an AI Scientist Actually Requires Beyond Intelligence — Edward Hug",
+"why": "Edward Hughes 不在站内人物名单中，且该视频为 MLST 的英文实质性 AI 访谈，但主嘉宾未匹配名单，故不保留。",
+"at": "2026-10-19"
+},
+"O_EWbnkjXdk": {
+"t": "How AI is transforming weather prediction",
+"why": "主嘉宾Peter Battaglia不在站内人物名单中，且Hannah Fry仅为主持人。",
+"at": "2026-10-19"
+},
+"tBjgCj_dGZM": {
+"t": "The mathematics of AI uncertainty",
+"why": "嘉宾Zoubin Ghahramani不在站内人物名单中，无法匹配任何pid。",
+"at": "2026-10-19"
+},
+"blkIGLlZePg": {
+"t": "Why AI Can Write Code But Can’t Keep It Running (Yet)",
+"why": "主嘉宾 Jad Naous 不在站内人物名单中，Martin Casado 仅为对谈主持且名单亦无此人。",
+"at": "2026-10-19"
+},
+"q8cb1XL9sXA": {
+"t": "Agentic Commerce: Why Your Wallet Is About to Change",
+"why": "主嘉宾Terry Angelos不在站内名单中，Alex Rampell仅为对谈主持且同样不在名单。",
+"at": "2026-10-19"
+},
+"3Q1mdn5ZGvM": {
+"t": "Recursive Self-Improvement and the Future of AI",
+"why": "主嘉宾为MakerMaker.AI联合创始人Dhaval Adjodah和Owen He，均不在站内名单中；Martin Casado为主持人而非主嘉宾。",
+"at": "2026-10-19"
+},
+"1Q_7yU7FZ1k": {
+"t": "Former Intel CEO: Why This is the Best Time to Build Hardware",
+"why": "主嘉宾Pat Gelsinger不在站内人物名单中，且为半导体硬件访谈，非名单匹配。",
+"at": "2026-10-19"
+},
+"rn_afJaPldg": {
+"t": "Building the Cloud for AI Agents | AWS CEO Matt Garman",
+"why": "嘉宾AWS CEO Matt Garman不在站内人物名单中，且为云基础设施访谈而非名单人物主讲。",
+"at": "2026-10-19"
+},
+"cJsHel27Z6M": {
+"t": "The Biggest Shift in Cybersecurity in 30 Years",
+"why": "Kevin Mandia 不在站内人物名单中，且该访谈为 a16z 主持的网络安全主题访谈，并非名单人物的主要嘉宾访谈。",
+"at": "2026-10-19"
+},
+"aCvrzhwUxg0": {
+"t": "The Current State of Consumer AI",
+"why": "嘉宾Olivia Moore和Josh Elman均不在站内名单中，且为a16z投资合伙人圆桌讨论，非名单人物主访谈。",
+"at": "2026-10-19"
+},
+"OTQ-lFsq7zA": {
+"t": "Why Enterprise Software Is Being Rebuilt Around AI Agents",
+"why": "主嘉宾Vladimir Keil不在站内名单中，且为a16z主持的企业软件访谈，非名单人物主讲。",
+"at": "2026-10-19"
+},
+"MAABmDB51LY": {
+"t": "This Founder Raised $112M to Build Retail AI That Sells Like TikTok",
+"why": "嘉宾Zoe Weil不在站内人物名单中，且为初创公司创始人访谈，非名单匹配对象。",
+"at": "2026-10-19"
+},
+"lz9J-Dbj2zw": {
+"t": "From Math Olympiads to Navier-Stokes: How Fast Is AI Progressing?",
+"why": "嘉宾Greg Burnham不在站内人物名单中，且为单人访谈，非名单人物。",
+"at": "2026-10-19"
+},
+"SvJMvR4NOEM": {
+"t": "From Voice Agents to AI Avatars",
+"why": "主嘉宾 Alex Smola 不在站内人物名单中，且名单无匹配 pid。",
+"at": "2026-10-19"
+},
+"sybWcJPV324": {
+"t": "Do AI Tokenomics Matter More Than Model Benchmarks?",
+"why": "嘉宾Chris Potts不在站内人物名单中，且为学术研究者访谈，非名单匹配对象。",
+"at": "2026-10-19"
+},
+"wmP5PeMA62Q": {
+"t": "Why the Next AI Breakthrough May Come from Physics",
+"why": "TWIML 单集，Max Welling 为主嘉宾，深入讨论 AI 与物理/材料发现，属实质性技术访谈；但名单中无 Max Welling。",
+"at": "2026-10-19"
+},
+"B-QeGihxbFE": {
+"t": "Valar Atomics Sues Day One Ventures | Meta's Back to the AI Frontier | NVIDIA's ",
+"why": "20VC新闻评论节目，嘉宾为SaaS投资人，讨论融资与Meta/NVIDIA新闻，非实质性AI技术访谈，且嘉宾不在名单中。",
+"at": "2026-10-19"
+},
+"_qRv_CveLik": {
+"t": "Atlassian CEO: Why Agents Won't Replace Interfaces | Why Enterprises Won't Trust",
+"why": "嘉宾Mike Cannon-Brookes不在站内人物名单中，且为Atlassian CEO的商业访谈，非名单匹配的AI技术访谈。",
+"at": "2026-10-19"
+},
+"vxdMU4x2CIU": {
+"t": "How to Build a Sales Machine | Max Freeman, Ramp",
+"why": "嘉宾Max Freeman不在站内名单中，且内容为销售团队建设，非实质性AI/技术访谈。",
+"at": "2026-10-19"
+},
+"NAwiGfk_sCY": {
+"t": "Cognition vs Factory | Anthropic Under Threat | ElevenLabs Doubles Its Valuation",
+"why": "20VC 多人圆桌讨论，嘉宾 Dev Ittycheria、Jason Lemkin、Rory O'Driscoll 均不在名单中，且非单一主嘉宾访谈。",
+"at": "2026-10-19"
+},
+"EZWsOxpVWwU": {
+"t": "Menlo’s Venky Ganesan on Going All-In on AI, Anthropic & Why Venture Has Changed",
+"why": "嘉宾Venky Ganesan不在站内人物名单中，且为VC投资人访谈而非实质性AI/技术访谈。",
+"at": "2026-10-19"
+},
+"Ko7nU1Img40": {
+"t": "Crusoe CEO: Why Everyone Gets GPU Depreciation & AI Energy Costs Wrong",
+"why": "嘉宾Chase Lochmiller不在站内人物名单中，且为GPU/数据中心基础设施访谈，非名单匹配。",
+"at": "2026-10-19"
+},
+"UNH5YtuK5UE": {
+"t": "AMD Buys Fei-Fei Li's World Labs for $8.2B | Meta Poaches MongoDB's CEO | Bessem",
+"why": "标题为新闻综述，简介中嘉宾为Jack Altman、Jason Lemkin、Rory O'Driscoll，均非名单人物，且属多人新闻讨论而非单一主嘉宾实质性",
+"at": "2026-10-19"
+},
+"jszn8rFtxm4": {
+"t": "The Untold Story of Higgsfield | Burning $4M a Month on AI Models | CEO, Alex Ma",
+"why": "嘉宾Alex Mashrabov不在站内人物名单中，且为创始人访谈而非名单人物主讲。",
+"at": "2026-10-19"
+}
+}
