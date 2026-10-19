@@ -166,6 +166,10 @@ RULES = [
     # Cristiano Amon(高通 CEO)站内 PEOPLE 登记译名是「安蒙」(2026-10-19 人工定),
     # DeepSeek 默认译成「阿蒙」(批量收录 13 期时 78 处)。排除「阿蒙森」等别的人名。
     (re.compile(r"阿蒙(?!森)"), "安蒙"),
+    # 自动字幕把 Amon 听成 Aman(批量收录 13 期里 4 期共 10 处)。Aman 在别人的期里是真人名
+    # (davidad/satya/truell 期),所以只在前后 200 字符出现 Qualcomm/Cristiano/高通 的语境里才改。
+    (re.compile(BL+r"Aman"+BR),
+     lambda m: "Amon" if re.search(r"Qualcomm|Cristiano|高通|Snapdragon|骁龙", m.string[max(0, m.start()-200):m.start()+200]) else m.group(0)),
 ]
 # 这些上下文里的 "class code" 是 best-in-class code,不是误听
 GUARD = re.compile(r"(best|world)[- ]in[- ]?class\s*$|(best|world)-class\s*$", re.I)
