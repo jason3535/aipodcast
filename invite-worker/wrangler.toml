@@ -1,0 +1,20 @@
+name = "aipodcast-invite"
+main = "worker.js"
+compatibility_date = "2025-06-01"
+routes = [
+  { pattern = "invite.jasonlin.tech", custom_domain = true }
+]
+
+# 与统计/推送共用同一个 D1(表 inv_codes / inv_members 与 events / push_subs 互不干扰)
+[[d1_databases]]
+binding = "DB"
+database_name = "aipodcast-stats"
+database_id = "100dcc28-c90c-40e7-ab0b-e49484031a4c"
+
+# 兑换接口的限流桶(与 chat-worker 共用 RL 命名空间;只存 10 分钟滚动计数,键是 IP 的 SHA-256 前缀,不存 IP)
+[[kv_namespaces]]
+binding = "RL"
+id = "b23556a020c74d4dafbd147895e87745"
+
+# secrets(不在此文件,用 wrangler secret put 注入):
+#   ADMIN_KEY — 发起人(Jason)签发根邀请码 / 看统计用

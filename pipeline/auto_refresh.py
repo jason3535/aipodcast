@@ -643,6 +643,7 @@ def main():
     for cmd in [["node", "pipeline/build_person_org.js"],
                 ["python3", "pipeline/gen_views.py"], ["python3", "pipeline/gen_topics.py"],
                 ["python3", "pipeline/gen_brief.py"], ["python3", "pipeline/gen_sectitles.py"],
+                ["python3", "pipeline/mark_ads.py"],   # 赞助段标记(去广告用;只补没 ads 字段的新期)
                 ["python3", "pipeline/fix_spacing.py"], ["python3", "pipeline/fix_terms.py"],
                 ["python3", "pipeline/split_data.py"],
                 # 新人物补头像(用其单集封面人脸裁剪,消化 pending_avatars)+ 转 webp。
