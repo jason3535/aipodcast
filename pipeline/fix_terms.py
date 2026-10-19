@@ -163,6 +163,9 @@ RULES = [
     (re.compile(r"奥泽罗"), "Auth0"),
     # 他的名字是 Evil Rabbit(单数),自动字幕多听出一个 s(6 处);所有格 Rabbit's 不受影响
     (re.compile(BL+r"Evil Rabbits"+BR), "Evil Rabbit"),
+    # Cristiano Amon(高通 CEO)站内 PEOPLE 登记译名是「安蒙」(2026-10-19 人工定),
+    # DeepSeek 默认译成「阿蒙」(批量收录 13 期时 78 处)。排除「阿蒙森」等别的人名。
+    (re.compile(r"阿蒙(?!森)"), "安蒙"),
 ]
 # 这些上下文里的 "class code" 是 best-in-class code,不是误听
 GUARD = re.compile(r"(best|world)[- ]in[- ]?class\s*$|(best|world)-class\s*$", re.I)
