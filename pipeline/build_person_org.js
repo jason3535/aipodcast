@@ -42,7 +42,7 @@ const ALIASES = [
   [/Thinking\s*Machines/i, "Thinking Machines Lab"],
   [/Safe\s*Superintelligence|\bSSI\b/i, "SSI"], [/World\s*Labs/i, "World Labs"],
   [/\bLinkedIn\b/i, "LinkedIn"], [/\bSalesforce\b/i, "Salesforce"], [/\bIBM\b/i, "IBM"],
-  [/\bIntel\b/i, "Intel"], [/Y\s*Combinator/i, "Y Combinator"], [/\bNetflix\b/i, "Netflix"],
+  [/\bIntel\b/i, "Intel"], [/\bQualcomm\b/i, "Qualcomm"], [/Y\s*Combinator/i, "Y Combinator"], [/\bNetflix\b/i, "Netflix"],
   [/\bUber\b/i, "Uber"], [/\bAirbnb\b/i, "Airbnb"], [/\bSlack\b/i, "Slack"],
   [/Palantir/i, "Palantir"], [/Snowflake/i, "Snowflake"], [/Coinbase/i, "Coinbase"],
   [/\bDropbox\b/i, "Dropbox"], [/\bInstagram\b/i, "Instagram"], [/\bPinterest\b/i, "Pinterest"],
