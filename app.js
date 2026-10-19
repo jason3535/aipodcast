@@ -4100,20 +4100,20 @@ function afCopy(code,what,btn){
   if(btn){const t=btn.textContent;btn.textContent='已复制 ✓';setTimeout(()=>btn.textContent=t,1500);}}
 function afOff(){if(!confirm('仅在本机移除去广告凭证(你的邀请码不受影响,用同一同步码的设备可再同步回来)?'))return;
   localStorage.removeItem('afToken');localStorage.removeItem('afMe');localStorage.afOff='';afPanelRefresh();}
-function afPanelHtml(){setTimeout(()=>{if(afToken()&&Date.now()-(+localStorage.afMeT||0)>60000)afRefresh();},0);
+function afPanelHtml(){setTimeout(()=>{if(afToken()&&(!afState()||Date.now()-(+localStorage.afMeT||0)>60000))afRefresh();},0);
   return `<div class="push-row af-row" id="afPanel">${afPanelInner()}</div>`;}
 function afPanelInner(){
   const note=_afNote?`<div class="push-note af-note">${_afNote}</div>`:'';
   if(!afToken())return `<span class="push-ic" aria-hidden="true">⏭</span><div class="push-tx"><b>去广告</b><span>跳过各期逐字稿里的赞助口播，正文更干净。凭邀请码开通，开通后你也会得到 2 个邀请码送朋友。</span>
     <div class="af-form"><input id="afIn" class="af-in" placeholder="邀请码" maxlength="8" autocapitalize="characters" autocomplete="off" spellcheck="false" onkeydown="if(event.key==='Enter')afRedeemInput()"><button class="mcp-copy" onclick="afRedeemInput()" ${_afBusy?'disabled':''}>开通</button></div>${note}</div>`;
-  const st=afState()||{codes:[],invited:0};const sk=afSkipStat();const on=afOn();
+  const st=afState()||{codes:[],invited:0,pending:1};const sk=afSkipStat();const on=afOn();
   const codes=(st.codes||[]).map(c=>c.used
     ?`<span class="af-code used"><code>${afFmt(c.code)}</code><i>已被使用</i></span>`
     :`<span class="af-code"><code>${afFmt(c.code)}</code><button class="mcp-copy" onclick="afCopy('${c.code}','text',this)">复制邀请</button></span>`).join('');
   const sub=on?(sk.eps?`已开启 · 本机已为你跳过 ${sk.eps} 期里的赞助段，${afMins(sk.words)}`:'已开启 · 遇到有赞助口播的期会自动跳过'):'已暂停 · 赞助段照常显示,打开开关即恢复跳过';
   return `<span class="push-ic" aria-hidden="true">⏭</span><div class="push-tx"><b>去广告 · 已开通</b><span>${sub}</span>
     <div class="af-codes-h">你的邀请码 · 每人 2 个，送给会认真读的朋友</div>
-    <div class="af-codes">${codes||'<span class="af-code"><i>暂无可用邀请码</i></span>'}</div>
+    <div class="af-codes">${codes||`<span class="af-code"><i>${st.pending?'正在取你的邀请码…':'两个邀请码都已送出'}</i></span>`}</div>
     <div class="push-note">已邀请 ${st.invited||0} 人${st.inviter==='root'?' · 由站长直接邀请':''} · <a href="#" onclick="afOff();return false" style="color:var(--text-3)">本机移除</a></div>${note}</div>
     <button class="sw${on?' on':''}" role="switch" aria-checked="${on?'true':'false'}" aria-label="去广告" onclick="afToggle()"><i></i></button>`;}
 function afPanelRefresh(){const el=document.getElementById('afPanel');if(el)el.innerHTML=afPanelInner();}
