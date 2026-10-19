@@ -6,7 +6,35 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sat, 17 Oct 2026 01:43:36 -0000</lastBuildDate>
+  <lastBuildDate>Mon, 19 Oct 2026 10:02:08 -0000</lastBuildDate>
+  <item>
+    <title>高通 CEO 谈即将到来的 AI 手机超级周期 — Sources Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/cristianoamon-sourcesp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/cristianoamon-sourcesp-2026/</guid>
+    <pubDate>Mon, 19 Oct 2026 10:02:08 -0000</pubDate>
+    <description>克里斯蒂亚诺·安蒙说，前沿 AI 公司要求手机到 2028 年能一直跑着 1000 亿参数的模型，并解释手机、智能眼镜，以及 CUDA 的开放替代方案为何仍然重要。  要点: 到 2028 年，前沿实验室希望手机能一直跑着一个 1000 亿参数的模型。 / 手机握着智能体需要的上下文，所以云端虚拟机取代不了它。 / 眼镜是他最看好的可穿戴，而 6G 把网络变成给 AI 用的传感器。</description>
+  </item>
+  <item>
+    <title>走进 AI 的内心：Anthropic 研究员揭秘模型如何运作 — Lenny’s Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/emmanuelameisen-lennyspo-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/emmanuelameisen-lennyspo-2026/</guid>
+    <pubDate>Mon, 19 Oct 2026 01:46:20 -0000</pubDate>
+    <description>Anthropic 可解释性研究员 Emmanuel Ameisen 解释为何构建模型不等于理解模型，并分享其团队如何深入大语言模型内部，解码其中隐藏的计算过程。  要点: 模型是「长」出来的，不是「造」出来的；我们必须逆向工程其难以理解的内部计算。 / 大规模下一词预测迫使模型学习世界模型并提前规划。 / 可解释性对对齐至关重要，能揭示隐藏概念和可靠性阈值。</description>
+  </item>
+  <item>
+    <title>推理市场的未来与模型路由：商品化还是价值攀升？ — 20VC</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/harrisonchase-20vc-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/harrisonchase-20vc-2026/</guid>
+    <pubDate>Mon, 19 Oct 2026 01:46:20 -0000</pubDate>
+    <description>LangChain CEO Harrison Chase 谈构建可靠智能体为何如此困难、模型进步如何迫使产品重写，以及推理市场的未来走向。  要点: 推理需求被严重低估，市场足以容纳众多提供商。 / 垂直智能体应在自有框架内路由模型，而非网关，以避免锁定。 / 智能体记忆仍未解决，且将按领域定制，而非通用数据库。</description>
+  </item>
+  <item>
+    <title>别为 2027 做规划：OpenAI 如何以 90 天为周期打造产品 — Lenny’s Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/taraseshan-lennyspo-2026b</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/taraseshan-lennyspo-2026b/</guid>
+    <pubDate>Mon, 19 Oct 2026 01:46:20 -0000</pubDate>
+    <description>OpenAI 的 Tara Seshan 与 Nan Yu 谈如何快速交付不完美的 AI 产品、开关式方案的取舍，以及为何真正的瓶颈是用户吸收能力而非模型能力。  要点: 以 90 天为周期发布不完美的产品，获取实证证据并快速迭代。 / 为 2-3 个月后的模型能力构建产品，而非锚定当下或遥远未来。 / 到 2027 年，直接的用户关系和语音交互将定义产品领导力。</description>
+  </item>
   <item>
     <title>为何 AI 需要你公司的上下文 — TNW</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/arvindjain-tnw-2026</link>
@@ -188,34 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/altman-fairgame-2026/</guid>
     <pubDate>Wed, 07 Oct 2026 02:37:23 -0000</pubDate>
     <description>OpenAI 首席执行官山姆·奥特曼在《名利场》坦诚访谈中，探讨 AI 的转折点、他的公众形象与人类未来。  要点: AGI 即将到来；在安全跟上之前，我们必须放缓能力发展。 / 即使 IPO 之后，OpenAI 也会将使命置于利润之上。 / 奥特曼不持有 OpenAI 股权，称这是个错误，并对 AI 感到乐观。</description>
-  </item>
-  <item>
-    <title>谷歌如何为大规模 AI 进行设计 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/rhiannonbell-diveclub-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/rhiannonbell-diveclub-2026/</guid>
-    <pubDate>Wed, 07 Oct 2026 02:37:23 -0000</pubDate>
-    <description>谷歌搜索用户体验副总裁里安农·贝尔讲述如何在谷歌的规模下设计 AI，以及 AI 模式背后的设计决策。  要点: AI 让设计师做出最好的作品，而非取代他们。 / 设计应主导 AI 产品决策，如谷歌 AI 模式所示。 / 掌握一两个 AI 工具；系统思维和手艺依然重要。</description>
-  </item>
-  <item>
-    <title>谷歌 AI 基础设施负责人谈前沿 AI 的物理与经济学 — Training Data</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/aminvahdat-training-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/aminvahdat-training-2026/</guid>
-    <pubDate>Wed, 07 Oct 2026 02:37:23 -0000</pubDate>
-    <description>谷歌 AI 基础设施负责人 Amin Vahdat 阐释 AI 数据中心如何与硬件协同定制设计，以及为何 FLOPS 只是虚荣指标。  要点: 衡量 AI 基础设施的关键指标是每瓦有效算力，而非峰值 FLOPS。 / 每瓦智能的提升主要来自模型和软件优化，而非单纯硬件升级。 / 电力是长期根本约束，轨道数据中心是一个严肃的登月计划。</description>
-  </item>
-  <item>
-    <title>Applied Compute CEO Yash 谈强化学习的边界、新型 AI 超大规模服务商，以及为何后训练决定推理胜负 — Unsupervised Learning</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/yashpatil-unsuperv-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/yashpatil-unsuperv-2026/</guid>
-    <pubDate>Wed, 07 Oct 2026 02:37:23 -0000</pubDate>
-    <description>Applied Compute CEO Yash 阐释为何“拥有自己的智能”关乎灵活性与控制权，以及后训练如何成为赢得推理的关键。  要点: 后训练推动帕累托前沿，在推理规模上取胜。 / 强化学习是爬山，定义山才是难点。 / 多数公司需要优化工具链，而非预训练自己的模型。</description>
-  </item>
-  <item>
-    <title>Jev 为何正在改变我们构建 AI 的方式 — The TWIML AI Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/diogoalmeida-thetwiml-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/diogoalmeida-thetwiml-2026/</guid>
-    <pubDate>Wed, 07 Oct 2026 02:37:23 -0000</pubDate>
-    <description>Typesafe 联合创始人兼 CEO Diogo Almeida 解释，Jev 的真正突破在于为机器原生决策而非人类可读字符串优化 AI。  要点: AI 在某些任务上超越人类，却因优化目标错位而无法胜任基础自动化。 / RLHF 破坏了模型校准；RLCD 通过概率旋钮恢复校准决策。 / Jev 是早期决策模型，优化可靠性而非速度或成本。</description>
   </item>
 </channel>
 </rss>
