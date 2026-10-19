@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 315 位人物 / 741 期访谈
+规模: 316 位人物 / 742 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -143,6 +143,7 @@
 - [Josh Woodward / 乔什·伍德沃德](https://aipodcast.jasonlin.tech/pp/joshwoodward/): VP, Google Labs & Gemini App — 1 期
 - [Jeetu Patel / 吉图·帕特尔](https://aipodcast.jasonlin.tech/pp/jeetupatel/): President and Chief Product Officer, Cisco — 1 期
 - [Luca Ferrari / 卢卡·法拉利](https://aipodcast.jasonlin.tech/pp/lucaferrari/): Co-founder & CEO, Bending Spoons — 1 期
+- [Cristiano Amon / 克里斯蒂亚诺·安蒙](https://aipodcast.jasonlin.tech/pp/cristianoamon/): President & CEO, Qualcomm — 1 期
 - [Rhiannon Bell / 里安农·贝尔](https://aipodcast.jasonlin.tech/pp/rhiannonbell/): VP of UX, Google Search — 1 期
 - [Amin Vahdat / 阿明·瓦赫达特](https://aipodcast.jasonlin.tech/pp/aminvahdat/): Chief Technologist for AI Infrastructure, Google — 1 期
 - [Yash Patil / 亚什·帕蒂尔](https://aipodcast.jasonlin.tech/pp/yashpatil/): CEO, Applied Compute; ex-OpenAI Researcher — 1 期
@@ -343,6 +344,7 @@
 - [AI Scientists Are Here: Autonomous Labs & Synthesis Superintelligence — Periodic Labs](https://aipodcast.jasonlin.tech/e/fedus-latentsp-2026/) — Liam Fedus, Latent Space, 2026-10-08
 - [How Jeetu Patel Runs Cisco Like the World's Largest Startup](https://aipodcast.jasonlin.tech/e/jeetupatel-ycombina-2026/) — Jeetu Patel, Y Combinator, 2026-10-08
 - [Luca Ferrari: The Operating System Behind Bending Spoons](https://aipodcast.jasonlin.tech/e/lucaferrari-training-2026/) — Luca Ferrari, Training Data, 2026-10-08
+- [Qualcomm’s CEO on the Coming AI Phone Supercycle](https://aipodcast.jasonlin.tech/e/cristianoamon-sourcesp-2026/) — Cristiano Amon, Sources Podcast, 2026-10-08
 - [OpenAI's Tibo Sottiaux on Putting Humans at the Center of AI](https://aipodcast.jasonlin.tech/e/tibosottiaux-pioneers-2026/) — Tibo Sottiaux, Pioneers of AI, 2026-10-07
 - [Muse: The Biggest AI Launch Since ChatGPT](https://aipodcast.jasonlin.tech/e/awang-hugeiftr-2026/) — Alexandr Wang, Huge If True, 2026-10-07
 - [Sam Altman on Elon Musk, 'Artificial,' and the Future of Humanity (Part One)](https://aipodcast.jasonlin.tech/e/altman-fairgame-2026/) — Sam Altman, Fair Game by Vanity Fair, 2026-10-06
@@ -363,7 +365,6 @@
 - [OpenAI's Dots Lead on the Future of ChatGPT and Personal Agents](https://aipodcast.jasonlin.tech/e/embiricos-sourcesp-2026/) — Alexander Embiricos, Sources Podcast, 2026-10-01
 - [Unintended Consequences: Taking Responsibility for What We Build](https://aipodcast.jasonlin.tech/e/fadell-generalm-2026/) — Tony Fadell, General Magic and the Soul of Tech, 2026-09-30
 - [Inside OpenAI DevDay: Superhuman Computer Use, Decisions API, and the AI Cloud](https://aipodcast.jasonlin.tech/e/ariweinstein-latentsp-2026/) — Ari Weinstein, Latent Space, 2026-09-30
-- [OpenAI Co-Founder Greg Brockman: Start Building With AI Before You Feel Ready](https://aipodcast.jasonlin.tech/e/brockman-siliconv-2026/) — Greg Brockman, Silicon Valley Girl, 2026-09-30
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
