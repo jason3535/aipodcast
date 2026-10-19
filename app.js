@@ -2749,7 +2749,7 @@ function sharePromoHtml(st,hrs){
 function vStats(){
   rlogLocalMerge();setTimeout(rlogAutoPull,60);
   const st=readStats();
-  if(!st.eps.length)return `<div class="wrap"><section class="reveal" style="min-height:50vh"><div class="eyebrow">My Space · 我的</div><h2 class="title">我的</h2><div class="st-h2">我的数据</div><div class="st-empty">还没有已读的播客——打开一期读到底会自动标记已读，统计从此开始累计。</div>${pushPanelHtml()}${mineMarksHtml()}</section></div>`;
+  if(!st.eps.length)return `<div class="wrap"><section class="reveal" style="min-height:50vh"><div class="eyebrow">My Space · 我的</div><h2 class="title">我的</h2><div class="st-h2">我的数据</div><div class="st-empty">还没有已读的播客——打开一期读到底会自动标记已读，统计从此开始累计。</div>${pushPanelHtml()}${afPanelHtml()}${mineMarksHtml()}</section></div>`;
   const hrs=Math.round(st.totalMin/6)/10;
   const g=rlogGet();
   // 热力图:固定 6–10 月窗口(含未来 3 个月的空格),列=周,行=周日..周六
@@ -2790,6 +2790,7 @@ function vStats(){
     <div class="rk">${rows||'<div class="st-empty">暂无</div>'}</div>
     ${sharePromoHtml(st,hrs)}
     ${pushPanelHtml()}
+    ${afPanelHtml()}
     ${mineMarksHtml()}
   </section></div>`;
 }
@@ -3263,6 +3264,8 @@ function vEpisode(id){
   const ts=(e.ts&&e.ts.length)?e.ts:(TS_CACHE[id]||[]);
   const loading=!e.stub&&!loaded;                        // 按需加载逐字稿中
   if(loading)ensureTs(id);
+  const AD=afAdMap(id,ts);const afon=afOn()&&AD.n>0;   // 赞助段地图;去广告开启且本期有赞助段才进入跳过模式
+  if(afon)afNoteSkip(id,AD.words);
   const body=(loading&&TS_ERR[id])
     ? `<div class="ts-loading">双语全文加载失败（网络波动）。<a style="color:var(--accent);cursor:pointer;margin-left:6px" onclick="tsRetry('${id}')">点此重试</a></div>`
     :loading
@@ -3272,11 +3275,19 @@ function vEpisode(id){
         <div class="sk" style="width:${96-k%3*4}%"></div><div class="sk" style="width:${90-k%4*6}%"></div>
         <div class="sk" style="width:${84-k%3*8}%;opacity:.7"></div><div class="sk" style="width:${70-k%4*5}%;opacity:.7"></div>
       </div>`).join('')
-    : ts.map((s,i)=>`
-    <div class="sec-h" id="sec-${i}"><span class="se">${s.sec}</span><span class="sz">${s.secZh||s.sec}</span></div>
-    ${(s.turns||[]).map((t,ti)=>{const g=t.spk===p.en.split(' ')[0]||t.spk===e.pid||t.spk===p.en;return `<div class="turn" data-sec="${i}" data-ti="${ti}"><div class="spk" style="color:${g?FIELDS[e.fields[0]].c:'var(--text-3)'};font-weight:${g?700:600}">${t.spk||''}</div>
-      <div class="en">${t.en||''}</div><div class="zh">${t.zh||''}</div></div>`}).join('')}`).join('');
-  const tocItems=ts.map((s,i)=>`<a class="toc-i" data-sec="${i}" onclick="jumpSec(${i})"><span class="se">${s.sec}</span><span class="sz">${s.secZh||s.sec}</span></a>`).join('');
+    : (()=>{let lbl=false;const afLbl=()=>{const h=`<span class="ad-lbl">赞助内容${(!lbl&&!afToken())?' · <a href="#/mine" title="凭邀请码开通后可一键跳过">去广告 ›</a>':''}</span>`;lbl=true;return h;};
+      return ts.map((s,i)=>{
+      const allAd=AD.all[i];
+      let out=`<div class="sec-h${allAd&&afon?' hid':''}" id="sec-${i}"${allAd&&afon?` data-run="${i}-0"`:''}><span class="se">${s.sec}</span><span class="sz">${s.secZh||s.sec}</span>${allAd?'<span class="ad-tag">赞助</span>':''}</div>`;
+      let run=null;const flush=()=>{if(!run)return;out=out.replace('%%RUN'+run.k+'%%',`<div class="ad-skip" id="adrun-${run.k}"><span class="ad-ic" aria-hidden="true">⏭</span><b>已跳过赞助内容</b><span>${afMins(run.w)}</span><button onclick="afReveal('${run.k}')">显示</button></div>`);run=null;};
+      (s.turns||[]).forEach((t,ti)=>{const g=t.spk===p.en.split(' ')[0]||t.spk===e.pid||t.spk===p.en;const isAd=!!AD.map[i+'|'+ti];
+        if(isAd&&afon){if(!run){run={k:i+'-'+ti,w:0};out+='%%RUN'+run.k+'%%';}run.w+=(t.en||'').split(/\s+/).length;}
+        else if(run)flush();
+        out+=`<div class="turn${isAd?' ad':''}${isAd&&afon?' hid':''}"${isAd&&afon?` data-run="${run.k}"`:''} data-sec="${i}" data-ti="${ti}"><div class="spk" style="color:${g?FIELDS[e.fields[0]].c:'var(--text-3)'};font-weight:${g?700:600}">${t.spk||''}${isAd&&!afon?afLbl():''}</div>
+      <div class="en">${t.en||''}</div><div class="zh">${t.zh||''}</div></div>`;});
+      if(run)flush();
+      return out;}).join('');})();
+  const tocItems=ts.map((s,i)=>`<a class="toc-i${AD.all[i]&&afon?' hid':''}" data-sec="${i}" onclick="jumpSec(${i})"><span class="se">${s.sec}</span><span class="sz">${s.secZh||s.sec}</span>${AD.all[i]?'<span class="ad-tag">赞助</span>':''}</a>`).join('');
   const hasToc=ts.length>=3;
   const insRow=(arr)=>arr.map(x=>{const j=(typeof x.sec==='number'&&x.sec>=0);return `<li${j?` class="jmp" onclick="jumpSec(${x.sec})" title="跳到原文出处"`:''}><span class="ie">${x.en}</span><span class="iz">${x.zh}</span></li>`}).join('');
   const brief=e.brief?`<div class="brief reveal in">
@@ -3326,7 +3337,7 @@ function vEpisode(id){
         <span class="who" onclick="go('#/person/${e.pid}')">${av(e.pid)} ${p.en}</span>${POD2PAPER[e.pid]?`<span>·</span><a class="xsite-inline" href="https://aipaper.jasonlin.tech/#/person/${POD2PAPER[e.pid]}" target="_blank" rel="noopener" title="在 AI Paper 读 TA 的论文与长文"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H14l6 6v8.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-13Z"/><path d="M14 4v6h6" /></svg>读 TA 的论文</a>`:''}
         <span>·</span><span>${fmtDate(e.date)}</span><span>·</span><span>${fmtDur(e.min)}</span>
         <span>·</span>${e.fields.map(tag).join('')}
-        ${hasToc?`<span>·</span><span>${ts.length} 章</span>`:''}
+        ${hasToc?`<span>·</span><span>${afon?ts.length-AD.all.filter(Boolean).length:ts.length} 章</span>`:''}
         <span>·</span><a class="srclink" href="${e.src}" target="_blank" rel="noopener"><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-3"/><path d="M12 3h5v5"/><path d="M17 3l-8 8"/></svg>原节目</a>
       </div>
     </div>
@@ -3355,6 +3366,7 @@ function vEpisode(id){
       <button id="shareBtn" class="ordbtn" onclick="copyShare('${e.id}')" title="复制本期分享链接（预览显示该期标题）">分享</button>
       <button id="readBtn" class="ordbtn readbtn${readHas(e.id)?' on':''}" onclick="toggleRead('${e.id}')" title="标记本期为已读/未读"><span class="rl">${readHas(e.id)?'已读 ✓':'标记已读'}</span></button>
       <button id="laterBtn" class="ordbtn laterbtn${laterHas(e.id)?' on':''}" onclick="toggleLater('${e.id}')" title="加入/移出稍后读清单"><span class="ll">${laterHas(e.id)?'已加待读 ★':'稍后读 ☆'}</span></button>
+      ${afToken()?`<button id="afBtn" class="ordbtn afbtn${afOn()?' on':''}" onclick="afToggle()" title="${afOn()?'正在跳过赞助口播,点击恢复显示':'点击跳过各期里的赞助口播'}"><span class="al">去广告${afOn()?' ✓':''}</span></button>`:''}
       </div>
       <button class="rb-more" onclick="rbToggle(event)" aria-label="更多操作">⋯</button>
     </div>
@@ -3417,11 +3429,12 @@ function ensureExtra(){
 }
 const TS_CACHE={};let _tsLoading=null;
 const TS_ERR={};
+const TS_ADS={};                      // 每集的赞助段范围(随 ep/<id>.json 的 ads 字段来),供「去广告」跳过
 function ensureTs(id){
   if((id in TS_CACHE)||_tsLoading===id)return;
   _tsLoading=id;delete TS_ERR[id];
   fetch('mcp-data/ep/'+id+'.json').then(r=>r.ok?r.json():Promise.reject(r.status))
-    .then(j=>{TS_CACHE[id]=j.transcript||[];
+    .then(j=>{TS_CACHE[id]=j.transcript||[];TS_ADS[id]=Array.isArray(j.ads)?j.ads:[];
       /* 核心观点/速览就在这个文件里,顺手回填 —— 单集页因此不必再等 data/ep-extra.json 整包 */
       const e=EPISODES.find(x=>x.id===id);
       if(e){if(j.insights&&Object.keys(j.insights).length&&!e.insights)e.insights=j.insights;
@@ -3929,6 +3942,7 @@ function syncGen(){const a='ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';const b=new Uint8A
 function syncCollect(){return{
   read:[...readGet()],later:laterGet(),pos:readPosGet(),recent:recentGet(),recentT:recentTGet(),hl:hlGet(),rlog:rlogGet(),
   prefs:{size:localStorage.size||'',lang:localStorage.lang||'',order:localStorage.order||'',theme:localStorage.theme||'',t:+localStorage.prefsT||0},
+  af:{token:afToken(),t:+localStorage.afT||0},   // 「去广告」凭证:开通一台,其余设备配对后自动获得
   t:Date.now()};}
 function syncMerge(r){
   if(!r||typeof r!=='object')return false;
@@ -3971,6 +3985,8 @@ function syncMerge(r){
       (rh[id]||[]).forEach(x=>{const k=x.sec+'|'+x.ti+'|'+x.lang+'|'+x.s+'|'+x.e;if(!seen.has(k)){la.push(x);seen.add(k);hc=true;}});
       if(la.length)lh[id]=la;}
     if(hc){hlSave(lh);changed=true;}}
+  if(r.af&&typeof r.af.token==='string'&&/^[0-9a-f]{32}$/.test(r.af.token)&&!afToken()){
+    localStorage.afToken=r.af.token;localStorage.afT=r.af.t||Date.now();changed=true;afRefresh();}
   return changed;
 }
 let _syncTimer=null,_syncBusy=false,_syncLastPull=0;
@@ -4029,6 +4045,79 @@ function syncPanelHtml(){
     <span class="mcp-tools">另一台设备打开配对链接即完成；码即身份，勿公开分享。</span>`;
 }
 function syncPanelRefresh(){const el=document.getElementById('syncPanel');if(el)el.innerHTML=syncPanelHtml();}
+
+/* ============================ 去广告 · Ad-free(邀请码) ============================ */
+/* 机制:发起人(Jason)签发根邀请码 → 兑换者拿到凭证 token + 自己的 2 个邀请码 → 送朋友 → 朋友再各得 2 个。
+   凭证只存 localStorage(可随同步码跨设备);服务端只记匿名 mid / 码的签发与使用关系,无 IP、无个人信息。
+   跳过的是逐字稿里的「赞助口播」段(pipeline/mark_ads.py 标注在 ep/<id>.json 的 ads 字段)。 */
+const INVITE_URLS=['https://invite.jasonlin.tech','https://aipodcast-invite.992978142.workers.dev'];
+let _afPending='',_afNote='',_afBusy=false;
+async function afFetch(path,opts){let last;
+  for(const u of INVITE_URLS){try{const r=await fetch(u+path,opts);if(r.status<500)return r;last=r;}catch(e){last=e;}}
+  throw last instanceof Error?last:new Error('invite unreachable');}
+const afToken=()=>{try{return localStorage.afToken||''}catch(_){return ''}};
+const afOn=()=>!!afToken()&&localStorage.afOff!=='1';
+function afState(){try{return JSON.parse(localStorage.afMe||'null')}catch(_){return null}}
+const afFmt=c=>(c||'').replace(/^(.{3})(.{3})$/,'$1 $2');   // 展示用:K7M 3QX
+function afToggle(){if(!afToken())return;localStorage.afOff=afOn()?'1':'';track('af_toggle');
+  const y=scrollY;render();scrollTo(0,y);}
+/* 本集的赞助段地图:map["sec|ti"]=1、all[sec]=整节都是赞助、n=段数、words=英文词数 */
+function afAdMap(id,ts){const ads=TS_ADS[id]||[];const map={},all=[];let words=0;
+  for(const a of ads){for(let t=a.from;t<=a.to;t++)map[a.sec+'|'+t]=1;words+=a.words||0;}
+  ts.forEach((s,i)=>{const n=(s.turns||[]).length;let k=0;for(let t=0;t<n;t++)if(map[i+'|'+t])k++;all[i]=n>0&&k===n;});
+  return{map,all,n:ads.length,words};}
+function afMins(w){const m=w/150;return m<0.75?'约半分钟':'约 '+Math.round(m)+' 分钟';}
+function afReveal(k){document.querySelectorAll('[data-run="'+k+'"]').forEach(el=>el.classList.toggle('hid'));
+  const b=document.querySelector('#adrun-'+CSS.escape(k)+' button');if(b)b.textContent=b.textContent==='显示'?'收起':'显示';}
+/* 本机累计:跳过了哪些期、多少词(只为「我的」页那一行数字,不上报) */
+function afNoteSkip(id,words){try{const m=JSON.parse(localStorage.afSkip||'{}');if(m[id]===words)return;m[id]=words;localStorage.afSkip=JSON.stringify(m);}catch(_){}}
+function afSkipStat(){try{const m=JSON.parse(localStorage.afSkip||'{}');const ids=Object.keys(m);return{eps:ids.length,words:ids.reduce((a,k)=>a+(m[k]||0),0)};}catch(_){return{eps:0,words:0}}}
+async function afRefresh(){const t=afToken();if(!t)return null;
+  try{const r=await afFetch('/me',{headers:{Authorization:'Bearer '+t},cache:'no-store'});
+    if(r.status===401){localStorage.removeItem('afToken');localStorage.removeItem('afMe');afPanelRefresh();return null;}
+    if(r.ok){const j=await r.json();localStorage.afMe=JSON.stringify(j);localStorage.afMeT=Date.now();afPanelRefresh();return j;}
+  }catch(_){}
+  return afState();}
+async function afRedeem(code){
+  if(_afBusy)return;_afBusy=true;_afNote='正在兑换…';afPanelRefresh();
+  try{const r=await afFetch('/redeem',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({code})});
+    const j=await r.json().catch(()=>({}));
+    if(r.ok&&j.ok){localStorage.afToken=j.token;localStorage.afT=Date.now();localStorage.afOff='';
+      localStorage.afMe=JSON.stringify({ok:1,mid:j.mid,since:j.since,codes:(j.codes||[]).map(c=>({code:c,used:false})),invited:0,inviter:j.inviter});
+      _afNote='';track('af_redeem');syncTouch();}
+    else _afNote=j.msg||(r.status===429?'试得太频繁了,稍后再来':'兑换失败,稍后再试');
+  }catch(e){_afNote='连不上邀请服务器(部分网络屏蔽 workers.dev),稍后再试';}
+  _afBusy=false;afPanelRefresh();}
+function afRedeemInput(){const i=document.getElementById('afIn');const v=(i&&i.value||'').trim();
+  if(!v){_afNote='先输入邀请码';afPanelRefresh();return;}afRedeem(v);}
+function afAutoRedeem(code){
+  if(afToken()){_afNote='你已经开通了去广告,这个邀请码可以留给别人用。';afPanelRefresh();return;}
+  const i=document.getElementById('afIn');if(i)i.value=code;afRedeem(code);}
+function afCopy(code,what,btn){
+  const v=what==='link'?('https://aipodcast.jasonlin.tech/#/mine?invite='+code)
+    :('我在 AI Podcast 读 AI 人物播客的双语全文，送你一个「去广告」邀请码：'+code+'\n打开这个链接就能开通：https://aipodcast.jasonlin.tech/#/mine?invite='+code);
+  if(navigator.clipboard)navigator.clipboard.writeText(v);track('af_copy');
+  if(btn){const t=btn.textContent;btn.textContent='已复制 ✓';setTimeout(()=>btn.textContent=t,1500);}}
+function afOff(){if(!confirm('仅在本机移除去广告凭证(你的邀请码不受影响,用同一同步码的设备可再同步回来)?'))return;
+  localStorage.removeItem('afToken');localStorage.removeItem('afMe');localStorage.afOff='';afPanelRefresh();}
+function afPanelHtml(){setTimeout(()=>{if(afToken()&&Date.now()-(+localStorage.afMeT||0)>60000)afRefresh();},0);
+  return `<div class="push-row af-row" id="afPanel">${afPanelInner()}</div>`;}
+function afPanelInner(){
+  const note=_afNote?`<div class="push-note af-note">${_afNote}</div>`:'';
+  if(!afToken())return `<span class="push-ic" aria-hidden="true">⏭</span><div class="push-tx"><b>去广告</b><span>跳过各期逐字稿里的赞助口播，正文更干净。凭邀请码开通，开通后你也会得到 2 个邀请码送朋友。</span>
+    <div class="af-form"><input id="afIn" class="af-in" placeholder="邀请码" maxlength="8" autocapitalize="characters" autocomplete="off" spellcheck="false" onkeydown="if(event.key==='Enter')afRedeemInput()"><button class="mcp-copy" onclick="afRedeemInput()" ${_afBusy?'disabled':''}>开通</button></div>${note}</div>`;
+  const st=afState()||{codes:[],invited:0};const sk=afSkipStat();const on=afOn();
+  const codes=(st.codes||[]).map(c=>c.used
+    ?`<span class="af-code used"><code>${afFmt(c.code)}</code><i>已被使用</i></span>`
+    :`<span class="af-code"><code>${afFmt(c.code)}</code><button class="mcp-copy" onclick="afCopy('${c.code}','text',this)">复制邀请</button></span>`).join('');
+  const sub=on?(sk.eps?`已开启 · 本机已为你跳过 ${sk.eps} 期里的赞助段，${afMins(sk.words)}`:'已开启 · 遇到有赞助口播的期会自动跳过'):'已暂停 · 赞助段照常显示,打开开关即恢复跳过';
+  return `<span class="push-ic" aria-hidden="true">⏭</span><div class="push-tx"><b>去广告 · 已开通</b><span>${sub}</span>
+    <div class="af-codes-h">你的邀请码 · 每人 2 个，送给会认真读的朋友</div>
+    <div class="af-codes">${codes||'<span class="af-code"><i>暂无可用邀请码</i></span>'}</div>
+    <div class="push-note">已邀请 ${st.invited||0} 人${st.inviter==='root'?' · 由站长直接邀请':''} · <a href="#" onclick="afOff();return false" style="color:var(--text-3)">本机移除</a></div>${note}</div>
+    <button class="sw${on?' on':''}" role="switch" aria-checked="${on?'true':'false'}" aria-label="去广告" onclick="afToggle()"><i></i></button>`;}
+function afPanelRefresh(){const el=document.getElementById('afPanel');if(el)el.innerHTML=afPanelInner();}
+
 addEventListener('visibilitychange',()=>{
   if(document.visibilityState==='visible'&&syncCode()&&Date.now()-_syncLastPull>60000)syncPull();
 });
@@ -4276,7 +4365,8 @@ function render(){
       if(parts[0]==='browse')history.replaceState(null,'','#/browse');}   // 应用一次即剥离,避免每次 render 重置筛选
     if(qp.get('org')){bf={person:'',org:qp.get('org'),year:'',pod:'',field:'',read:''};
       if(parts[0]==='browse')history.replaceState(null,'','#/browse');}
-    if(parts[0]==='episode'&&(qp.get('at')!=null||qp.get('hl')))pendingLocate={id:parts[1],at:qp.get('at'),hl:qp.get('hl')};}
+    if(parts[0]==='episode'&&(qp.get('at')!=null||qp.get('hl')))pendingLocate={id:parts[1],at:qp.get('at'),hl:qp.get('hl')};
+    if(qp.get('invite')){_afPending=qp.get('invite');history.replaceState(null,'','#/mine');parts.splice(0,parts.length,'mine');}}   // 邀请链接:任何页带 ?invite= 都落到「我的」并自动兑换
   if(!parts.length)html=vHome();
   else if(parts[0]==='people')html=vPeople();
   else if(parts[0]==='ask')html=vAsk();
@@ -4306,6 +4396,7 @@ function render(){
   if(parts[0]==='episode'&&!pendingLocate){const rp=readPosGet()[parts[1]];if(rp&&rp.s>0&&!readHas(parts[1]))pendingLocate={id:parts[1],at:rp.s,hl:''};}
   applyLocate();
   trackView();
+  if(_afPending){const c=_afPending;_afPending='';setTimeout(()=>afAutoRedeem(c),80);}
   // 页脚的站点地图在骨架屏阶段不该露出来(它排在 #app 之后,加载动画期间会先冒出一行)
   document.body.dataset.ready='1';
 }

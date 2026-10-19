@@ -222,6 +222,35 @@ if(m)m.content=document.documentElement.dataset.theme==='dark'?'#0e0e10':'#fcfcf
   .site-index a{color:var(--text-2);text-decoration:underline;text-underline-offset:2px}
   .site-index a:hover{color:var(--accent)}
   .read-prog{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--accent);transition:width .15s linear;pointer-events:none;z-index:1}
+  /* ---------- 去广告(赞助段跳过 + 邀请码面板) ---------- */
+  .ad-tag{display:inline-block;margin-left:8px;padding:1px 6px;border-radius:5px;font-size:10.5px;font-weight:600;letter-spacing:.04em;
+    color:var(--text-3);border:1px solid var(--line);vertical-align:middle;text-transform:none;font-family:var(--ui);line-height:1.5}
+  .toc-i .ad-tag{margin-left:6px;font-size:10px;padding:0 5px}
+  .turn .spk .ad-lbl{margin-left:10px;font-size:11px;font-weight:500;letter-spacing:.02em;color:var(--text-3);text-transform:none;font-family:var(--ui)}
+  .turn .spk .ad-lbl a{color:var(--accent);font-weight:600}
+  .turn.ad .en,.turn.ad .zh{color:var(--text-3)}
+  .ad-skip{display:flex;align-items:center;gap:9px;margin:0 0 22px;padding:9px 14px;border-radius:12px;background:var(--surface-2);
+    border:1px dashed var(--line);font-family:var(--ui);font-size:12.5px;color:var(--text-3);scroll-margin-top:104px}
+  .ad-skip .ad-ic{font-size:12px;opacity:.8}
+  .ad-skip b{font-weight:600;color:var(--text-2)}
+  .ad-skip button{margin-left:auto;font-family:var(--ui);font-size:12px;color:var(--accent);background:transparent;border:none;cursor:pointer;padding:2px 4px}
+  .turn.hid,.sec-h.hid,.toc-i.hid{display:none}
+  .afbtn.on{background:rgba(0,102,204,.10);color:var(--accent);border-color:rgba(0,102,204,.35)}
+  [data-theme="dark"] .afbtn.on{background:rgba(41,151,255,.16);border-color:rgba(41,151,255,.4)}
+  .af-form{display:flex;gap:8px;margin-top:9px;align-items:center;flex-wrap:wrap}
+  .af-in{font-family:var(--mono,ui-monospace,SFMono-Regular,Menlo,monospace);font-size:15px;letter-spacing:.16em;text-transform:uppercase;
+    padding:6px 10px;width:132px;border:1px solid var(--line);border-radius:9px;background:var(--surface);color:var(--text);outline:none}
+  .af-in::placeholder{letter-spacing:0;text-transform:none;font-family:var(--ui);color:var(--text-3)}
+  .af-in:focus{border-color:var(--accent)}
+  .af-codes-h{margin-top:10px;font-size:12px;color:var(--text-3)}
+  .af-codes{display:flex;flex-direction:column;gap:6px;margin-top:6px}
+  .af-code{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .af-code code{font-family:var(--mono,ui-monospace,SFMono-Regular,Menlo,monospace);font-size:14px;letter-spacing:.16em;padding:4px 10px;
+    border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--text)}
+  .af-code.used code{color:var(--text-3);text-decoration:line-through;letter-spacing:.1em}
+  .af-code i{font-style:normal;font-size:12px;color:var(--text-3)}
+  .af-note{color:var(--text-2)}
+  @media(max-width:560px){.af-in{min-height:38px}.ordbtn .al{display:inline}}
   .readbtn.on{background:rgba(20,140,90,.14);color:#0a7d4a;border-color:rgba(20,140,90,.4)}
   [data-theme="dark"] .readbtn.on{background:rgba(46,190,120,.18);color:#3ec77f}
   .laterbtn.on{background:rgba(255,159,10,.15);color:#c77700;border-color:rgba(255,159,10,.45)}
@@ -905,7 +934,7 @@ if(m)m.content=document.documentElement.dataset.theme==='dark'?'#0e0e10':'#fcfcf
 <button class="totop" id="toTop" title="回到顶部" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l6-6 6 6"/></svg></button>
 <script>addEventListener('scroll',()=>{const t=document.getElementById('toTop');if(t)t.classList.toggle('on',scrollY>700);},{passive:true});</script>
 
-<script src="app.js?v=1430ccdbbb" defer></script>
+<script src="app.js?v=4e38ebbc20" defer></script>
 <script>/* SW 只在生产域名注册:本地预览(http/127.0.0.1)不注册,避免把 localhost 缓存搞混 */
 if('serviceWorker' in navigator&&/jasonlin\.tech$/.test(location.hostname))addEventListener('load',function(){navigator.serviceWorker.register('/sw.js')});</script>
 <!--SITE_INDEX_START--><details class="site-index"><summary>站点地图 · Sitemap（316 位人物 · 755 期）</summary>

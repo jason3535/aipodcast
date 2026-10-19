@@ -86,6 +86,15 @@ python add_episode.py --url <youtube> --pid <人物id> --guest <嘉宾名> \
 
 > 本地脚本用 `urllib ProxyHandler({})` 绕系统代理;`wrangler` 命令需关代理(`HTTPS_PROXY= HTTP_PROXY=`)。密钥放 `pipeline/.env` 与 Worker secret,不入库。yt-dlp 需住宅 IP(云端会被 YouTube 挡),所以定时任务跑在本地 Mac。
 
+## 去广告 · 邀请码
+
+逐字稿里的「赞助口播」(sponsor read)由 `pipeline/mark_ads.py` 标在 `mcp-data/ep/<id>.json` 的 `ads` 字段(节标题就是 Sponsor 的整节直接标;混在正文节里的交给 DeepSeek 圈 turn 范围,混合边界的长发言不藏、宁可露出广告尾巴)。前端:
+
+- 未开通:赞助段照常显示,只在章节/目录加「赞助」小标签,第一处带「去广告 ›」入口。
+- 已开通(浏览器里有凭证 `localStorage.afToken`):赞助段折叠成一行「已跳过赞助内容 · 约 N 分钟 · 显示」,整节赞助的章节从目录里隐去,章数相应减少;阅读栏多一个「去广告」开关。凭证随同步码跨设备。
+- 开通方式只有邀请码:「我的」页输入,或打开邀请链接 `#/mine?invite=<码>` 自动兑换。每个开通者得到 2 个一次性邀请码送人,发起人(Jason)用 `pipeline/invite_admin.py issue [n]` 签发根码、`stats` 看以自己为根的邀请树。
+- 服务端 `invite-worker/`(invite.jasonlin.tech,D1 表 `inv_codes` / `inv_members`):无 IP、无个人信息,只记匿名成员与码的签发/使用关系;兑换接口按 IP 哈希 10 分钟限 20 次。
+
 ## 版权与使用
 
 仅作**学习 / 评论用途**,版权归原播客 / 权利人;译文由 AI 生成、仅供参考,以原文为准。**应权利人要求即下架**(linzheng3535@gmail.com),不商业化。
