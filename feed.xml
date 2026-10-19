@@ -6,12 +6,12 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Mon, 19 Oct 2026 10:02:08 -0000</lastBuildDate>
+  <lastBuildDate>Mon, 19 Oct 2026 10:05:24 -0000</lastBuildDate>
   <item>
     <title>高通 CEO 谈即将到来的 AI 手机超级周期 — Sources Podcast</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/cristianoamon-sourcesp-2026</link>
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/cristianoamon-sourcesp-2026/</guid>
-    <pubDate>Mon, 19 Oct 2026 10:02:08 -0000</pubDate>
+    <pubDate>Mon, 19 Oct 2026 10:05:24 -0000</pubDate>
     <description>克里斯蒂亚诺·安蒙说，前沿 AI 公司要求手机到 2028 年能一直跑着 1000 亿参数的模型，并解释手机、智能眼镜，以及 CUDA 的开放替代方案为何仍然重要。  要点: 到 2028 年，前沿实验室希望手机能一直跑着一个 1000 亿参数的模型。 / 手机握着智能体需要的上下文，所以云端虚拟机取代不了它。 / 眼镜是他最看好的可穿戴，而 6G 把网络变成给 AI 用的传感器。</description>
   </item>
   <item>
