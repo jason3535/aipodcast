@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/emmanuelameisen/</loc><lastmod>2026-10-19</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/harrisonchase/</loc><lastmod>2026-10-19</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/jensen/</loc><lastmod>2026-10-15</lastmod></url>
@@ -9,6 +9,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/brockman/</loc><lastmod>2026-10-17</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/ianquigley/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/lambert/</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/vladtenev/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/jasonma/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/dsilver/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/joshwoodward/</loc><lastmod>2026-10-12</lastmod></url>
@@ -325,6 +326,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/e/brockman-nopriors-2026/</loc><lastmod>2026-10-17</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/ianquigley-latentsp-2026/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/lambert-thea16zp-2026/</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/vladtenev-sourcesp-2026/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/jasonma-latentsp-2026/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/dsilver-training-2026/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/joshwoodward-lennyspo-2026/</loc><lastmod>2026-10-12</lastmod></url>
