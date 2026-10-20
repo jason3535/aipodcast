@@ -36,7 +36,7 @@ const ALIASES = [
   [/Character\.?AI/i, "Character.AI"], [/\bInflection\b/i, "Inflection AI"],
   [/Stability\s*AI/i, "Stability AI"], [/Together\s*AI/i, "Together AI"],
   [/\bReplit\b/i, "Replit"], [/\bVercel\b/i, "Vercel"], [/\bFigma\b/i, "Figma"],
-  [/\bStripe\b/i, "Stripe"], [/\bSpotify\b/i, "Spotify"], [/\bZipline\b/i, "Zipline"],
+  [/\bStripe\b/i, "Stripe"], [/\bSpotify\b/i, "Spotify"], [/Robinhood/i, "Robinhood"], [/\bZipline\b/i, "Zipline"],
   [/Science\s*Corp/i, "Science Corp"], [/\bTwitch\b/i, "Twitch"], [/\bWhatnot\b/i, "Whatnot"],
   [/\bDoorDash\b/i, "DoorDash"], [/\bNotion\b/i, "Notion"],
   [/Thinking\s*Machines/i, "Thinking Machines Lab"],
