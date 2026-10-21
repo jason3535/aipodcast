@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-10-20</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/pp/elon/</loc><lastmod>2026-10-21</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/emmanuelameisen/</loc><lastmod>2026-10-19</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/harrisonchase/</loc><lastmod>2026-10-19</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/jensen/</loc><lastmod>2026-10-15</lastmod></url>
@@ -14,7 +15,6 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/dsilver/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/joshwoodward/</loc><lastmod>2026-10-12</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/awang/</loc><lastmod>2026-10-12</lastmod></url>
-  <url><loc>https://aipodcast.jasonlin.tech/pp/elon/</loc><lastmod>2026-10-11</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/kohli/</loc><lastmod>2026-10-17</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/laskin/</loc><lastmod>2026-10-10</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/dylanpatel/</loc><lastmod>2026-10-17</lastmod></url>
@@ -318,6 +318,7 @@
   <url><loc>https://aipodcast.jasonlin.tech/pp/hugobarra/</loc><lastmod>2026-08-14</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/albertgu/</loc><lastmod>2026-06-27</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/pp/abbeel/</loc><lastmod>2026-08-17</lastmod></url>
+  <url><loc>https://aipodcast.jasonlin.tech/e/elon-spacexq3-2026/</loc><lastmod>2026-10-21</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/emmanuelameisen-lennyspo-2026/</loc><lastmod>2026-10-19</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/harrisonchase-20vc-2026/</loc><lastmod>2026-10-19</lastmod></url>
   <url><loc>https://aipodcast.jasonlin.tech/e/jensen-bg2pod-2026/</loc><lastmod>2026-10-15</lastmod></url>
