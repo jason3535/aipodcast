@@ -6,13 +6,20 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Wed, 21 Oct 2026 00:20:05 -0000</lastBuildDate>
+  <lastBuildDate>Wed, 21 Oct 2026 00:54:54 -0000</lastBuildDate>
   <item>
     <title>埃隆·马斯克：当 AI 比我们更聪明，人类将不再掌舵 — The Builders</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/elon-builders-2026</link>
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/elon-builders-2026/</guid>
-    <pubDate>Wed, 21 Oct 2026 00:20:05 -0000</pubDate>
+    <pubDate>Wed, 21 Oct 2026 00:54:54 -0000</pubDate>
     <description>沃尔特·艾萨克森问埃隆·马斯克：超级智能到来后人类还能否掌舵，为什么他把求真与好奇当作安全赌注，以及他对从政那一年有何遗憾。  要点: 马斯克对艾萨克森说，他阻止不了 AI，所以宁可去塑造它：最大限度地追求真理，并且好奇到希望人类继续存在。 / 他说从政那一年太长，国债省不掉，并把宝押在 AI 和机器人是唯一的出路。 / 数字超级智能是较小的那份奖赏。能动手摆弄原子，加上太空里的工业，才是他认为会改变经济规模的东西。</description>
+  </item>
+  <item>
+    <title>SpaceX 2026 年第三季度财报电话会议：星舰、星链与超级智能 — SpaceX Q3 2026 财报电话会议</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/elon-spacexq3-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/elon-spacexq3-2026/</guid>
+    <pubDate>Wed, 21 Oct 2026 00:39:04 -0000</pubDate>
+    <description>SpaceX 公布第三季度营收 146 亿美元、净利润 44 亿美元，Starship 第 14 次飞行入轨，超级智能成为增长引擎。  要点: 第三季度营收达到 146 亿美元，增长 161%，净利润 44 亿美元。 / Starship 第 14 次飞行入轨；下个月的第 15 次将尝试接住助推器和飞船。 / 超级智能是增长引擎，他说到 2027 年底年度经常性收入大概在 1000 亿到 1 万亿美元之间。</description>
   </item>
   <item>
     <title>Robinhood CEO 谈让 AI 替你交易 — Sources Podcast</title>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jasonma-latentsp-2026/</guid>
     <pubDate>Thu, 15 Oct 2026 05:05:03 -0000</pubDate>
     <description>Dyna Robotics 联合创始人兼首席科学家 Jason Ma 解析 Dyna-2 世界动作模型如何通过预测未来视频与机器人动作，让物理 AI 更灵巧、更具泛化能力。  要点: 世界动作模型通过预测未来视频和动作，实现灵巧的机器人控制。 / 机器人领域缺乏互联网数据，扩展需要真实世界采集和合成生成。 / 带轮子的半人形机器人比全人形更实用，适合迭代部署。</description>
-  </item>
-  <item>
-    <title>David Silver 与 Lasse Espeholt：为经验时代打造超级学习者 — Training Data</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/dsilver-training-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dsilver-training-2026/</guid>
-    <pubDate>Thu, 15 Oct 2026 05:05:03 -0000</pubDate>
-    <description>Ineffable Intelligence 的 David Silver 与 Lasse Espeholt 探讨为何从经验中学习、而非大语言模型，才是通往超级智能的道路。  要点: 超级智能将诞生于从经验中自主学习的系统，而非依赖人类数据。 / 模拟是构建和理解超级智能最安全、最快速的场所。 / 放弃人类先验和数据能带来更快、更伟大的发现，AlphaZero 已证明。</description>
   </item>
 </channel>
 </rss>
