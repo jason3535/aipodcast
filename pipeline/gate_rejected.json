@@ -328,5 +328,75 @@
 "t": "The Untold Story of Higgsfield | Burning $4M a Month on AI Models | CEO, Alex Ma",
 "why": "嘉宾Alex Mashrabov不在站内人物名单中，且为创始人访谈而非名单人物主讲。",
 "at": "2026-10-19"
+},
+"wKN5_eX4nY0|mylespalmer": {
+"t": "THIS IS A BIG MOVE (WITH SCOTT PALMER FROM THE BASS TANK)",
+"why": "钓鱼播客，嘉宾是Scott Palmer，与Metalab设计总监Myles Palmer无关，且非AI技术内容。",
+"at": "2026-10-20"
+},
+"Ysfud07dXa4|nateparrott": {
+"t": "Un Parrott Andaluz, Hoops at KuPS, Cup semis and John Egan excels | RTÉ Soccer P",
+"why": "这是RTÉ足球播客，讨论Troy Parrott等足球话题，与Anthropic设计师Nate Parrott无关，属同名误搜。",
+"at": "2026-10-20"
+},
+"cdLeJU_1UH8|timcook": {
+"t": "WE'RE BACK: Meta Addiction, Jalapeño, Tim Cook's Last Day, Flocked",
+"why": "TBPN 多人新闻圆桌/日播节目，Tim Cook 仅作为其中一个话题段落（“Tim Cook's Last Day”）被讨论，并非本人出镜的完整单集访谈。",
+"at": "2026-10-20"
+},
+"R_p2ixNlqQ0|mengto": {
+"t": "Berkeley Alumni Panel: How to Get Hired at DeepMind, Cursor & Thinking Machines ",
+"why": "多人圆桌/校友座谈，Meng To 未出现在标题与简介中，非该集主要嘉宾；且主题为求职经验分享，非围绕该人物的完整 AI 技术访谈。",
+"at": "2026-10-20"
+},
+"IkhmdTqSvJw|alexwei": {
+"t": "UFO Cover-Up Analyst: The Secret Alien Programs Nobody Is Talking About! | Eric ",
+"why": "视频嘉宾是 Eric Weinstein（数学家/物理学家、前 Thiel Capital 董事总经理），并非 OpenAI 推理团队的 Alexander W",
+"at": "2026-10-20"
+},
+"020ZvO0FbMM|andrewng": {
+"t": "AI Realist vs 20 AI Optimists (ft. Andrew Yang) | Surrounded",
+"why": "标题嘉宾是 Andrew Yang（政治人物），非 Andrew Ng；且为 Jubilee 多人辩论节目，非围绕 Andrew Ng 的完整单集。",
+"at": "2026-10-20"
+},
+"o_5f4N6Nq80": {
+"t": "Why a $1M Startup Wasn’t Worth Building in the Age of AI",
+"why": "嘉宾Jean-Denis Greze不在站内人物名单中，且为单人访谈但名单无匹配。",
+"at": "2026-10-20"
+},
+"-r2_5LboWL8": {
+"t": "Who Wins in the Next Decade of VC | Margin and Price Matter Less in a World of A",
+"why": "嘉宾Sameer Dholakia不在站内人物名单中，且内容为VC投资话题而非实质性AI技术访谈。",
+"at": "2026-10-20"
+},
+"2tAywoHiIpo|akshaynathan": {
+"t": "Billy Evans Speaks Out: Elizabeth Holmes' Trial, Prison & Nathan Fielder’s Docum",
+"why": "视频是 All-In Podcast 关于 Elizabeth Holmes 的访谈，嘉宾为 Billy Evans，与 OpenAI ChatGPT 产品负责",
+"at": "2026-10-21"
+},
+"9n0MI4D7TCM": {
+"t": "Should You Trust ChatGPT With Your Health?",
+"why": "主嘉宾Karan Singhal不在站内人物名单中，且为OpenAI健康方向访谈，非名单人物主讲。",
+"at": "2026-10-21"
+},
+"gEYUgfANlW8|ethanhe": {
+"t": "Wharton AI Researcher: If AI Froze Today, It Would Still Rewrite Work",
+"why": "视频嘉宾是沃顿商学院教授 Ethan Mollick，并非站内档案中的 xAI Grok Imagine 工程师 Ethan He，属同名误搜。",
+"at": "2026-10-22"
+},
+"IkhmdTqSvJw|jasonwei": {
+"t": "UFO Cover-Up Analyst: The Secret Alien Programs Nobody Is Talking About! | Eric ",
+"why": "视频嘉宾是 Eric Weinstein（数学家/物理学家），并非 Jason Wei，属同名/搜名误配，且主题为 UFO 与地缘政治，非 Jason Wei ",
+"at": "2026-10-22"
+},
+"Vki6cklFqxo": {
+"t": "AI in NYC: How Tenex Builds an AI-Native Engineering Team — Alex Lieberman & CJ ",
+"why": "双嘉宾对谈，无单一主嘉宾，不符合收录标准①",
+"at": "2026-10-22"
+},
+"Dqn4sK4DWTI": {
+"t": "Airbnb Is Building a ‘Company Brain’ for AI Agents",
+"why": "嘉宾Ahmad Al-Dahle不在站内人物名单中，且为Airbnb CTO，非名单匹配人物。",
+"at": "2026-10-22"
 }
 }

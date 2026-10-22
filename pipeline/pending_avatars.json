@@ -7,5 +7,32 @@
   "from": "Lenny’s Podcast",
   "added": "2026-10-19",
   "auto": true
+ },
+ {
+  "pid": "kylebarber",
+  "en": "Kyle Barber",
+  "zh": "凯尔·巴伯",
+  "tiEn": "Co-founder, Inflight; Product Designer",
+  "from": "Dive Club",
+  "added": "2026-10-22",
+  "auto": true
+ },
+ {
+  "pid": "evanconrad",
+  "en": "Evan Conrad",
+  "zh": "埃文·康拉德",
+  "tiEn": "Co-founder, SF Compute",
+  "from": "Latent Space",
+  "added": "2026-10-22",
+  "auto": true
+ },
+ {
+  "pid": "joshgao",
+  "en": "Josh Gao",
+  "zh": "乔什·高",
+  "tiEn": "Founder & CEO, Mecka AI",
+  "from": "Training Data",
+  "added": "2026-10-22",
+  "auto": true
  }
 ]
