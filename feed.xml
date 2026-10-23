@@ -6,7 +6,49 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Mon, 19 Oct 2026 01:46:20 -0000</lastBuildDate>
+  <lastBuildDate>Thu, 22 Oct 2026 01:48:39 -0000</lastBuildDate>
+  <item>
+    <title>在扩展超级智能的同时保持人性 — Stanford Graduate School of Business</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/altman-stanford-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/altman-stanford-2026/</guid>
+    <pubDate>Thu, 22 Oct 2026 01:48:39 -0000</pubDate>
+    <description>OpenAI 首席执行官 Sam Altman 回顾从斯坦福辍学到执掌 Y Combinator 的历程，以及塑造其领导力的快速学习经历。  要点: 深度学习具备可扩展性，其惊人效果值得持续投入。 / 人类必须保持控制权，权力应分散而非集中于 AI 或少数行为体。 / AI 不会导致就业末日；任务会变，但人类价值和工作依然存在。</description>
+  </item>
+  <item>
+    <title>桑达尔·皮查伊谈 AI 前沿、算力分配与未来交互界面 — Alex Kantrowitz</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/sundarpichai-alexkant-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/sundarpichai-alexkant-2026/</guid>
+    <pubDate>Thu, 22 Oct 2026 01:48:39 -0000</pubDate>
+    <description>Alphabet CEO 桑达尔·皮查伊畅谈谷歌凭借 Gemini 坚守 AI 前沿的决心、算力分配的困境，以及未来 AI 交互界面的样貌。  要点: 谷歌优先投入前沿 AI 研究，甚至牺牲云业务短期收入，以尽早揭示新兴能力。 / 安全需要纵深防御：对齐、实时监控、沙箱以及由独立评估者参与的行业标准。 / 算力需求远超供给；可能过度建设，但长期需求证明扩建合理。</description>
+  </item>
+  <item>
+    <title>设计 Inflight：设计师从 0 到 1 的创业幕后 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/kylebarber-diveclub-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/kylebarber-diveclub-2026/</guid>
+    <pubDate>Thu, 22 Oct 2026 01:48:39 -0000</pubDate>
+    <description>Kyle Barber 讲述设计 Inflight 的真实幕后：从临时拼凑的副业项目，到由设计师亲手打造的创业公司。  要点: 设计思维不仅用于界面，更适用于产品、文化、融资和品牌。 / AI 让设计师能掌控代码和数据，成为完整的产品构建者。 / 对初创公司而言，时机比团队、市场规模或产品更重要。</description>
+  </item>
+  <item>
+    <title>可编程数据中心：对话 SF Compute 的 Evan Conrad — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/evanconrad-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/evanconrad-latentsp-2026/</guid>
+    <pubDate>Thu, 22 Oct 2026 01:48:39 -0000</pubDate>
+    <description>SF Compute 的 Evan Conrad 讲述如何通过实物交割与专用订单簿，把算力变成可交易的市场。  要点: 算力市场必须先实现实物交割，金融化应随后进行。 / 算力并非同质化，芯片代际、存储和中断条款都重要。 / SF Compute 保持独立，以避免操纵远期市场。</description>
+  </item>
+  <item>
+    <title>走进机器人数据工厂：Mecka 创始人 Josh Gao 谈用人类传感数据训练机器人 — Training Data</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/joshgao-training-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/joshgao-training-2026/</guid>
+    <pubDate>Thu, 22 Oct 2026 01:48:39 -0000</pubDate>
+    <description>Mecka 创始人兼 CEO Josh Gao 讲述公司如何采集、处理并授权训练机器人基础模型所需的像素、动作与逻辑数据。  要点: 机器人受限于数据；第一人称人类数据是扩展物理 AI 的关键。 / 第一人称、遥操作和领域内数据混合正趋同于机器人基础模型。 / 力和触觉数据对于弥合机器人操作差距至关重要。</description>
+  </item>
+  <item>
+    <title>Reflection AI 的 Ioannis 谈开放权重模型与 AI 智能体的未来 — Semafor</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/antonoglou-semafor-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/antonoglou-semafor-2026/</guid>
+    <pubDate>Thu, 22 Oct 2026 01:48:39 -0000</pubDate>
+    <description>Reflection AI 首席技术官 Ioannis Antonoglou 谈开放权重模型 Beam 的发布、token 效率，以及为何智能的部署正成为真正的瓶颈。  要点: 真正的瓶颈在于部署智能，而非创造智能。 / 开放权重模型更安全，因为更多研究者能探查并修复它们。 / 企业想要 AI 主权：对数据、模型、成本和安全的控制权。</description>
+  </item>
   <item>
     <title>走进 AI 的内心：Anthropic 研究员揭秘模型如何运作 — Lenny’s Podcast</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/emmanuelameisen-lennyspo-2026</link>
@@ -174,48 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jeetupatel-ycombina-2026/</guid>
     <pubDate>Fri, 09 Oct 2026 06:46:49 -0000</pubDate>
     <description>思科总裁兼首席产品官 Jeetu Patel 讲述他如何将创始人思维带入 AI 时代的“卖铲人”巨头。  要点: 思科如今是一家 AI 基础设施公司，而不仅仅是网络公司。 / AI 基础设施严重受限于供给，需求会瞬间消耗掉供给。 / 不使用 AI 会让你更不安全，也更难保住工作。</description>
-  </item>
-  <item>
-    <title>Luca Ferrari：Bending Spoons 背后的操作系统 — Training Data</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/lucaferrari-training-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/lucaferrari-training-2026/</guid>
-    <pubDate>Fri, 09 Oct 2026 06:46:49 -0000</pubDate>
-    <description>Luca Ferrari 讲述 Bending Spoons 如何打造一套操作系统，以超越所有人的方式收购、整合和运营数字业务。  要点: 在连续收购中，驱动回报的是运营卓越，而非挑选交易。 / 招聘应优先考虑学习速度而非经验；精英大学学位对绩效的预测力很弱。 / 彻底简化与正直是 scaling 和 CEO 长期成功中被低估的关键。</description>
-  </item>
-  <item>
-    <title>OpenAI 产品负责人 Tibo Sottiaux：让人类成为 AI 的核心，而非事后之想 — Pioneers of AI</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/tibosottiaux-pioneers-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/tibosottiaux-pioneers-2026/</guid>
-    <pubDate>Fri, 09 Oct 2026 06:46:49 -0000</pubDate>
-    <description>OpenAI 产品负责人 Tibo Sottiaux 畅谈 ChatGPT、Codex 与新智能体套件，以及如何让人类始终处于 AI 的核心。  要点: 安全与对齐是 OpenAI 成功的核心，而非障碍。 / AGI 可能已经到来，因为 Astra 能自主处理复杂任务。 / 如今大部分代码由 AI 编写，极大加速了开发。</description>
-  </item>
-  <item>
-    <title>OpenAI Dots 负责人谈 ChatGPT 与个人智能体的未来 — Sources Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/embiricos-sourcesp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/embiricos-sourcesp-2026/</guid>
-    <pubDate>Thu, 08 Oct 2026 03:25:43 -0000</pubDate>
-    <description>OpenAI Dots 负责人 Alexander 解读为何主动式个人智能体是继聊天与编程智能体之后的 AI 新篇章。  要点: 持久主动型智能体是继聊天和编程智能体之后的第三章。 / 大多数人只会拥有一个个人智能体，而不是多个。 / 聊天仍是消费者界面，智能体能力将融入其中。</description>
-  </item>
-  <item>
-    <title>AI 科学家已至：自主实验室与合成超级智能——Periodic Labs — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/fedus-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/fedus-latentsp-2026/</guid>
-    <pubDate>Thu, 08 Oct 2026 01:45:25 -0000</pubDate>
-    <description>Periodic Labs 的 Liam 阐释为何仅有智能还不够，以及自主物理实验室如何闭合假设与现实之间的循环。  要点: 智能本身不足以发现新科学，想法必须在物理现实中检验。 / 自动化表征是最大瓶颈，用模拟闭环是关键。 / 高质量、低噪声的实验数据比额外算力更能推动物理发现。</description>
-  </item>
-  <item>
-    <title>山姆·奥特曼谈埃隆·马斯克、《人造》与人类未来（上） — Fair Game by Vanity Fair</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/altman-fairgame-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/altman-fairgame-2026/</guid>
-    <pubDate>Wed, 07 Oct 2026 02:37:23 -0000</pubDate>
-    <description>OpenAI 首席执行官山姆·奥特曼在《名利场》坦诚访谈中，探讨 AI 的转折点、他的公众形象与人类未来。  要点: AGI 即将到来；在安全跟上之前，我们必须放缓能力发展。 / 即使 IPO 之后，OpenAI 也会将使命置于利润之上。 / 奥特曼不持有 OpenAI 股权，称这是个错误，并对 AI 感到乐观。</description>
-  </item>
-  <item>
-    <title>谷歌如何为大规模 AI 进行设计 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/rhiannonbell-diveclub-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/rhiannonbell-diveclub-2026/</guid>
-    <pubDate>Wed, 07 Oct 2026 02:37:23 -0000</pubDate>
-    <description>谷歌搜索用户体验副总裁里安农·贝尔讲述如何在谷歌的规模下设计 AI，以及 AI 模式背后的设计决策。  要点: AI 让设计师做出最好的作品，而非取代他们。 / 设计应主导 AI 产品决策，如谷歌 AI 模式所示。 / 掌握一两个 AI 工具；系统思维和手艺依然重要。</description>
   </item>
 </channel>
 </rss>
