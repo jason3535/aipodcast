@@ -398,5 +398,25 @@
 "t": "Airbnb Is Building a ‘Company Brain’ for AI Agents",
 "why": "嘉宾Ahmad Al-Dahle不在站内人物名单中，且为Airbnb CTO，非名单匹配人物。",
 "at": "2026-10-22"
+},
+"HDFKX3B-oQI|ethanhe": {
+"t": "AI Agents Could Break the Banking System  — With Ethan Mollick",
+"why": "视频嘉宾是沃顿教授Ethan Mollick（《Coexistence》作者），并非站内档案中的xAI Grok Imagine/Ethan He，属同名误搜，",
+"at": "2026-10-23"
+},
+"frYSOKvNiiE": {
+"t": "What will computer chips look like in 2045?",
+"why": "该视频为 Dwarkesh 参观 Intel 工厂并采访其技术领导层，无单一主嘉宾，属多人/机构访谈，不符合单一主嘉宾标准。",
+"at": "2026-10-23"
+},
+"PST8yesYOSo": {
+"t": "The New Apex Predator: CrowdStrike CEO George Kurtz on Adversaries Armed With AI",
+"why": "嘉宾George Kurtz不在站内人物名单中，且为安全公司CEO访谈，非名单匹配对象。",
+"at": "2026-10-23"
+},
+"OJX2L21e4fA": {
+"t": "The New VC Game | CoreWeave Sell-Off Creates Panic | Revenue Multiples Out of Co",
+"why": "两位嘉宾均为VC投资人，不在站内名单中；且内容为VC市场讨论，非实质性AI/技术访谈。",
+"at": "2026-10-23"
 }
 }

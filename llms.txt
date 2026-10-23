@@ -3,14 +3,14 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 318 位人物 / 747 期访谈
+规模: 321 位人物 / 753 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
 - [Sam Altman / 萨姆·奥尔特曼](https://aipodcast.jasonlin.tech/pp/altman/): CEO, OpenAI — 24 期
 - [Elon Musk / 埃隆·马斯克](https://aipodcast.jasonlin.tech/pp/elon/): Founder, xAI — 18 期
+- [Jensen Huang / 黄仁勋](https://aipodcast.jasonlin.tech/pp/jensen/): Founder & CEO, NVIDIA — 17 期
 - [Dario Amodei / 达里奥·阿莫迪](https://aipodcast.jasonlin.tech/pp/dario/): CEO, Anthropic — 17 期
-- [Jensen Huang / 黄仁勋](https://aipodcast.jasonlin.tech/pp/jensen/): Founder & CEO, NVIDIA — 16 期
 - [Naval Ravikant / 纳瓦尔·拉维坎特](https://aipodcast.jasonlin.tech/pp/naval/): Co-founder, AngelList; angel investor & philosopher — 14 期
 - [Greg Brockman / 格雷格·布罗克曼](https://aipodcast.jasonlin.tech/pp/brockman/): President & Co-founder, OpenAI — 13 期
 - [Demis Hassabis / 杰米斯·哈萨比斯](https://aipodcast.jasonlin.tech/pp/demis/): CEO, Google DeepMind — 13 期
@@ -33,6 +33,7 @@
 - [Andrew Feldman / 安德鲁·费尔德曼](https://aipodcast.jasonlin.tech/pp/feldman/): Co-founder & CEO, Cerebras Systems — 6 期
 - [Arthur Mensch / 阿瑟·门施](https://aipodcast.jasonlin.tech/pp/mensch/): Co-founder & CEO, Mistral AI — 6 期
 - [Andrej Karpathy / 安德烈·卡帕西](https://aipodcast.jasonlin.tech/pp/karpathy/): Founder, Eureka Labs — 6 期
+- [Marc Andreessen / 马克·安德森](https://aipodcast.jasonlin.tech/pp/andreessen/): Co-founder & General Partner, Andreessen Horowitz (a16z) — 5 期
 - [Mark Pincus / 马克·平卡斯](https://aipodcast.jasonlin.tech/pp/pincus/): Founder, Zynga — 5 期
 - [Garry Tan / 陈嘉兴](https://aipodcast.jasonlin.tech/pp/garrytan/): President & CEO, Y Combinator — 5 期
 - [Andrew Bosworth / 安德鲁·博斯沃思](https://aipodcast.jasonlin.tech/pp/bosworth/): CTO, Meta Platforms; Head of Reality Labs — 5 期
@@ -50,10 +51,10 @@
 - [Bret Taylor / 布雷特·泰勒](https://aipodcast.jasonlin.tech/pp/brettaylor/): Co-founder & CEO of Sierra; Chairman of the Board, OpenAI — 4 期
 - [Benedict Evans / 本尼迪克特·埃文斯](https://aipodcast.jasonlin.tech/pp/benedictevans/): Independent technology analyst; former partner at Andreessen Horowitz (a16z) — 4 期
 - [Ilya Sutskever / 伊利亚·苏茨克维尔](https://aipodcast.jasonlin.tech/pp/ilya/): Co-founder, Safe Superintelligence — 4 期
-- [Marc Andreessen / 马克·安德森](https://aipodcast.jasonlin.tech/pp/andreessen/): Co-founder & General Partner, Andreessen Horowitz (a16z) — 4 期
 - [Aravind Srinivas / 阿拉文德·斯里尼瓦斯](https://aipodcast.jasonlin.tech/pp/aravind/): Co-founder & CEO, Perplexity — 4 期
 - [Zico Kolter / 齐科·科尔特](https://aipodcast.jasonlin.tech/pp/kolter/): Professor, CMU · OpenAI board — 4 期
 - [Gustav Söderström / 古斯塔夫·瑟德斯特伦](https://aipodcast.jasonlin.tech/pp/gustav/): Co-President & CPTO, Spotify — 4 期
+- [Ethan Mollick / 伊桑·莫利克](https://aipodcast.jasonlin.tech/pp/ethanmollick/): Professor, Wharton School — 3 期
 - [Harrison Chase / 哈里森·蔡斯](https://aipodcast.jasonlin.tech/pp/harrisonchase/): Co-founder & CEO, LangChain — 3 期
 - [Arvind Jain / 阿尔温德·贾恩](https://aipodcast.jasonlin.tech/pp/arvindjain/): Founder & CEO, Glean — 3 期
 - [Amjad Masad / 阿姆贾德·马萨德](https://aipodcast.jasonlin.tech/pp/amjadmasad/): Founder & CEO, Replit — 3 期
@@ -119,7 +120,6 @@
 - [Cat Wu / 凯特·吴](https://aipodcast.jasonlin.tech/pp/catwu/): Product, Claude Code · Anthropic — 2 期
 - [Claire Vo / 克莱尔·沃](https://aipodcast.jasonlin.tech/pp/clairevo/): Founder & CEO of ChatPRD; host of the "How I AI" podcast — 2 期
 - [Dan Biderman / 丹·比德曼](https://aipodcast.jasonlin.tech/pp/danbiderman/): Co-founder, Engram; memory & continual learning — 2 期
-- [Ethan Mollick / 伊桑·莫利克](https://aipodcast.jasonlin.tech/pp/ethanmollick/): Professor, Wharton School — 2 期
 - [Andrew Ambrosino / 安德鲁·安布罗西诺](https://aipodcast.jasonlin.tech/pp/ajambrosino/): Codex App Lead, OpenAI — 2 期
 - [Mira Murati / 米拉·穆拉蒂](https://aipodcast.jasonlin.tech/pp/murati/): Founder & CEO, Thinking Machines Lab — 2 期
 - [Carina Hong / 洪乐潼](https://aipodcast.jasonlin.tech/pp/carinahong/): Founder & CEO, Axiom (AI for formal mathematical reasoning) — 2 期
@@ -138,6 +138,9 @@
 - [Nad Chishtie / 纳德·奇什蒂](https://aipodcast.jasonlin.tech/pp/nadchishtie/): Founding Designer & Head of Design, Lovable — 2 期
 - [Michael Truell / 迈克尔·特鲁埃尔](https://aipodcast.jasonlin.tech/pp/truell/): Co-founder & CEO, Cursor — 2 期
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 2 期
+- [Erik Bernhardsson / 埃里克·伯恩哈德松](https://aipodcast.jasonlin.tech/pp/erikbernhardsson/): CEO, Modal — 1 期
+- [Anekha Sokhal / 阿内卡·索卡尔](https://aipodcast.jasonlin.tech/pp/anekhasokhal/): Founder & CEO, Moshi — 1 期
+- [Alex Danilowicz / 亚历克斯·丹尼洛维奇](https://aipodcast.jasonlin.tech/pp/alexdanilowicz/): Co-founder & CEO, Magic Patterns — 1 期
 - [Kyle Barber / 凯尔·巴伯](https://aipodcast.jasonlin.tech/pp/kylebarber/): Co-founder, Inflight; Product Designer — 1 期
 - [Evan Conrad / 埃文·康拉德](https://aipodcast.jasonlin.tech/pp/evanconrad/): Co-founder, SF Compute — 1 期
 - [Josh Gao / 乔什·高](https://aipodcast.jasonlin.tech/pp/joshgao/): Founder & CEO, Mecka AI — 1 期
@@ -327,7 +330,13 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
+- [AI Agents Could Break the Banking System — With Ethan Mollick](https://aipodcast.jasonlin.tech/e/ethanmollick-theprofg-2026/) — Ethan Mollick, The Prof G Pod – Scott Galloway, 2026-10-22
+- [Why AI Compute Comes in Rectangles: Erik Bernhardsson on Building Modal](https://aipodcast.jasonlin.tech/e/erikbernhardsson-latentsp-2026/) — Erik Bernhardsson, Latent Space, 2026-10-22
+- [Building the Recommendation Engine for Commodity Traders](https://aipodcast.jasonlin.tech/e/anekhasokhal-latentsp-2026/) — Anekha Sokhal, Latent Space, 2026-10-22
+- [How to Stand Out in an AI Design World: Inside Magic Patterns](https://aipodcast.jasonlin.tech/e/alexdanilowicz-ycombina-2026/) — Alex Danilowicz, Y Combinator, 2026-10-22
+- [The Frontier Ideas a16z Wants to Fund Now](https://aipodcast.jasonlin.tech/e/andreessen-thea16zp-2026c/) — Marc Andreessen, The a16z Podcast, 2026-10-22
 - [Staying Human While Scaling Superintelligence](https://aipodcast.jasonlin.tech/e/altman-stanford-2026/) — Sam Altman, Stanford Graduate School of Business, 2026-10-21
+- [NVIDIA GTC Berlin 2026: Jensen Huang on the AI Industrial Revolution](https://aipodcast.jasonlin.tech/e/jensen-nvidia-2026/) — Jensen Huang, NVIDIA, 2026-10-21
 - [Sundar Pichai on the AI Frontier, Compute Allocation, and the Future of Interfaces](https://aipodcast.jasonlin.tech/e/sundarpichai-alexkant-2026/) — Sundar Pichai, Alex Kantrowitz, 2026-10-20
 - [Designing Inflight: A Designer's Raw 0-to-1 Startup Journey](https://aipodcast.jasonlin.tech/e/kylebarber-diveclub-2026/) — Kyle Barber, Dive Club, 2026-10-20
 - [The Programmable Data Center: Evan Conrad of SF Compute](https://aipodcast.jasonlin.tech/e/evanconrad-latentsp-2026/) — Evan Conrad, Latent Space, 2026-10-20
@@ -361,12 +370,6 @@
 - [Why Jev Is Changing How We Build With AI](https://aipodcast.jasonlin.tech/e/diogoalmeida-thetwiml-2026/) — Diogo Almeida, The TWIML AI Podcast, 2026-10-06
 - [Geoffrey Hinton on AI Dangers, Regulation, and the Future of Work](https://aipodcast.jasonlin.tech/e/hinton-nayeemar-2026/) — Geoffrey Hinton, Nayeema Raza, 2026-10-06
 - [Sam Altman: AI's Benefits Are Worth 'Some Bad Things'](https://aipodcast.jasonlin.tech/e/altman-politico-2026/) — Sam Altman, POLITICO, 2026-10-05
-- [AGI, the AI Revolution, and the Future of Human Work | Mustafa Suleyman](https://aipodcast.jasonlin.tech/e/suleyman-youngand-2026/) — Mustafa Suleyman, Young and Profiting, 2026-10-04
-- [How Granola's Co-Founder Uses AI to Survive Meetings](https://aipodcast.jasonlin.tech/e/samstephenson-peteryan-2026/) — Sam Stephenson, Peter Yang, 2026-10-04
-- [Replit CEO Amjad Masad on AI Doom, Software, and Vibe-Coding](https://aipodcast.jasonlin.tech/e/amjadmasad-thetimes-2026/) — Amjad Masad, The Times Tech Podcast, 2026-10-04
-- [Why Most Internet Actions Will Soon Be Taken by AI Agents](https://aipodcast.jasonlin.tech/e/tibosottiaux-lennyspo-2026/) — Tibo Sottiaux, Lenny’s Podcast, 2026-10-04
-- [Why Specialized AI Could Beat the God Model](https://aipodcast.jasonlin.tech/e/amjadmasad-thea16zp-2026/) — Amjad Masad, The a16z Podcast, 2026-10-03
-- [Recursive Language Models — Alex Zhang, MIT PhD](https://aipodcast.jasonlin.tech/e/alexzhang-latentsp-2026/) — Alex Zhang, Latent Space, 2026-10-02
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
