@@ -1,0 +1,16 @@
+# 本地 cron 与云端会话两个写入方的分叉自动合并(驱动见 pipeline/merge_driver.py,
+# 本机 git config 由 auto_refresh.py 启动时自动注册;没注册驱动的克隆会退回普通文本合并)
+app.js              merge=aipod-appjs
+index.html          merge=aipod-html
+data/*.json         merge=aipod-json
+mcp-data/ep/*.json  merge=aipod-json
+# 纯生成物:合并时取本地,合并后由生成链重跑覆盖
+mcp-data/index.json  merge=aipod-ours
+mcp-data/people.json merge=aipod-ours
+sitemap.xml          merge=aipod-ours
+feed.xml             merge=aipod-ours
+llms.txt             merge=aipod-ours
+push-latest.json     merge=aipod-ours
+e/**                 merge=aipod-ours
+pp/**                merge=aipod-ours
+og/**                merge=aipod-ours
