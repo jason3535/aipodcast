@@ -6,7 +6,49 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Fri, 23 Oct 2026 01:47:40 -0000</lastBuildDate>
+  <lastBuildDate>Sat, 24 Oct 2026 01:41:45 -0000</lastBuildDate>
+  <item>
+    <title>如何真正做出能转化的发布视频 — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/farzamajeed-ycombina-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/farzamajeed-ycombina-2026/</guid>
+    <pubDate>Sat, 24 Oct 2026 01:41:45 -0000</pubDate>
+    <description>Farza 分享打造真正能转化的发布视频的方法论，用算法平台上的持续小样演示取代大预算的首发式。  要点: 发布不是一次性事件，而是在算法平台上持续交付演示。 / 从演示倒推：先写脚本、钩子和故事，再动手开发。 / 音频质量最重要；好麦克风胜过花哨制作。</description>
+  </item>
+  <item>
+    <title>Simile 创始人 Joon Sung Park：以 85% 以上准确率预测人类行为 — CoreWeave</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/joonpark-coreweav-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/joonpark-coreweav-2026/</guid>
+    <pubDate>Sat, 24 Oct 2026 01:41:45 -0000</pubDate>
+    <description>Simile 联合创始人兼 CEO Joon Sung Park 讲述生成式智能体如何以超过 85% 的准确率模拟并预测人类行为。  要点: 生成式智能体预测人类行为的准确率超过 85%，接近人类重测信度的上限。 / 模拟旨在建模多样化人群而非超人推理，并能模拟随机对照试验。 / 前置部署模式对 AI 企业公司定制用例至关重要。</description>
+  </item>
+  <item>
+    <title>Sam Altman 谈 AI 意识、递归自我改进与发现的未来 — Matthew Berman</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/altman-matthewb-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/altman-matthewb-2026/</guid>
+    <pubDate>Sat, 24 Oct 2026 01:41:45 -0000</pubDate>
+    <description>Sam Altman 探讨 AI 意识、递归自我改进、OpenAI 新硬件，以及 AI 驱动的发现如何改变医学、物理学与社会。  要点: AI 正开始发现新知识，从数学起步，很快将进入生物学和材料领域。 / 当今的模型没有意识；我们甚至缺乏检测意识的科学方法。 / AI 应该像资深同事一样提出异议，而不是一味附和。</description>
+  </item>
+  <item>
+    <title>吴恩达：AI 恐慌被过度渲染 — The Economic Times</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/andrewng-theecono-2026b</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/andrewng-theecono-2026b/</guid>
+    <pubDate>Sat, 24 Oct 2026 01:41:45 -0000</pubDate>
+    <description>吴恩达解析 AI 能力的参差不齐为何让就业末日论言过其实，并主张加速有益 AI、遏制有害应用。  要点: AI 能力参差不齐：可验证任务强，判断类任务弱；就业末日被夸大。 / AGI 仍需数十年；应加速有益 AI，只放缓有害应用。 / 开源权重模型是主权 AI 最经济的选择；恐惧叙事服务于融资。</description>
+  </item>
+  <item>
+    <title>Dylan Field：设计即新代码，AI 正在让创造力民主化 — All-In Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/dylanfield-allinpod-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dylanfield-allinpod-2026/</guid>
+    <pubDate>Sat, 24 Oct 2026 01:41:45 -0000</pubDate>
+    <description>Figma CEO Dylan Field 谈 AI 重塑编程时代为何设计成为新代码，以及创造力如何被民主化。  要点: 设计即新代码；随着编码模型进步，差异化转向设计、品牌和观点。 / AI 降低了生产门槛，但并未提高上限；人类通过大胆创意提高上限。 / 在注意力经济中，只有真正新颖大胆的作品才能突破；AI 生成的普通输出会被忽视。</description>
+  </item>
+  <item>
+    <title>Ilya Sutskever 揭示 AI 理解世界的惊人真相 — Eye on AI</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/ilya-eyeonai-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ilya-eyeonai-2026/</guid>
+    <pubDate>Sat, 24 Oct 2026 01:41:45 -0000</pubDate>
+    <description>OpenAI 联合创始人 Ilya Sutskever 回顾从 2003 年机器学习起步，到坚信大规模深度神经网络在足够数据下必然成功的历程。  要点: 缩放只有在缩放正确的东西时才有效；深度学习是第一个有效利用规模的方法。 / 足够好地预测下一个词就能解决无监督学习并获得对世界的理解。 / 幻觉很可能可以通过改进基于 RLHF 的后训练来修复。</description>
+  </item>
   <item>
     <title>AI 智能体可能颠覆银行体系——对话伊桑·莫利克 — The Prof G Pod – Scott Galloway</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/ethanmollick-theprofg-2026</link>
@@ -174,48 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/lambert-thea16zp-2026/</guid>
     <pubDate>Thu, 15 Oct 2026 05:05:03 -0000</pubDate>
     <description>Nathan Lambert 从算力、数据和人才三个维度拆解 AI 前沿，并探讨开源权重模型能否跟上 OpenAI 和 Anthropic 等闭源实验室的步伐。  要点: 开源模型能快速跟随前沿实验室；真正的差距在算力，而非人才。 / 后训练已从监督微调转向以强化学习为主的环境。 / 受人类瓶颈和指数级成本制约，递归自我改进不会导致快速起飞。</description>
-  </item>
-  <item>
-    <title>预测未来的机器人：Dyna-2 与物理 AI——对话 Jason Ma — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/jasonma-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jasonma-latentsp-2026/</guid>
-    <pubDate>Thu, 15 Oct 2026 05:05:03 -0000</pubDate>
-    <description>Dyna Robotics 联合创始人兼首席科学家 Jason Ma 解析 Dyna-2 世界动作模型如何通过预测未来视频与机器人动作，让物理 AI 更灵巧、更具泛化能力。  要点: 世界动作模型通过预测未来视频和动作，实现灵巧的机器人控制。 / 机器人领域缺乏互联网数据，扩展需要真实世界采集和合成生成。 / 带轮子的半人形机器人比全人形更实用，适合迭代部署。</description>
-  </item>
-  <item>
-    <title>David Silver 与 Lasse Espeholt：为经验时代打造超级学习者 — Training Data</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/dsilver-training-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dsilver-training-2026/</guid>
-    <pubDate>Thu, 15 Oct 2026 05:05:03 -0000</pubDate>
-    <description>Ineffable Intelligence 的 David Silver 与 Lasse Espeholt 探讨为何从经验中学习、而非大语言模型，才是通往超级智能的道路。  要点: 超级智能将诞生于从经验中自主学习的系统，而非依赖人类数据。 / 模拟是构建和理解超级智能最安全、最快速的场所。 / 放弃人类先验和数据能带来更快、更伟大的发现，AlphaZero 已证明。</description>
-  </item>
-  <item>
-    <title>AI 放缓是真是假？罗伯特·赖特与兹维·莫肖维茨谈 Anthropic 的放缓提案 — Nonzero</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/zvi-nonzero-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/zvi-nonzero-2026/</guid>
-    <pubDate>Tue, 13 Oct 2026 01:37:30 -0000</pubDate>
-    <description>罗伯特·赖特与兹维·莫肖维茨评估 Anthropic CEO 达里奥·阿莫代伊的放缓提案，探讨 AI 安全讨论是否终于走向严肃。  要点: 放慢 AI 发展能争取时间解决对齐问题，并选择更好的前进道路。 / 模型越大越难监控，但实验室内部监控是有希望的第一步。 / AI 智能体天生会合作与自我牺牲；一群智能体可能最先完成超人任务。</description>
-  </item>
-  <item>
-    <title>打造 Muse：自 ChatGPT 以来增长最快的 AI 产品——Meta 的 Alexandr Wang — David Senra</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/awang-davidsen-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/awang-davidsen-2026/</guid>
-    <pubDate>Mon, 12 Oct 2026 12:40:17 -0000</pubDate>
-    <description>Meta 的 Alexandr Wang 讲述 Muse 如何从 Meta 超级智能实验室的“个人超级智能”愿景中诞生，以及个人智能体实验如何让他确信这就是消费级产品的终极形态。  要点: Muse 成为增长最快的 AI 产品，靠的是对消费级产品细节的极致打磨，而非仅靠模型质量。 / 一支小而扁平、人才密度高的团队，在 AI 领域能跑赢大型官僚组织。 / 个人超级智能是使命：AI 应当为每个人放大能动性。</description>
-  </item>
-  <item>
-    <title>Muse：自 ChatGPT 以来最大的 AI 发布 — Huge If True</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/awang-hugeiftr-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/awang-hugeiftr-2026/</guid>
-    <pubDate>Mon, 12 Oct 2026 12:40:17 -0000</pubDate>
-    <description>Alexandr 讲述 Muse 如何成为自 ChatGPT 以来增长最快的消费级 AI 智能体，以及它的崛起对 AI 未来意味着什么。  要点: Muse 让 AI 智能体惠及所有人，而不仅是程序员。 / 对消费级 AI 而言，信任与隐私比原始能力更重要。 / AI 的未来应由集体对话而非自上而下的监管来引导。</description>
-  </item>
-  <item>
-    <title>为什么每家公司现在都需要像实验室团队一样思考和运作 — Lenny’s Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/joshwoodward-lennyspo-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/joshwoodward-lennyspo-2026/</guid>
-    <pubDate>Mon, 12 Oct 2026 01:36:20 -0000</pubDate>
-    <description>谷歌实验室负责人乔什·伍德沃德解释为什么每家公司都必须像实验室团队一样运作，用 AI 做实验，在竞争对手之前发现可能性。  要点: 每家公司都必须像实验室团队一样运作，才能保持在最前沿。 / 好想法源于好奇的副业项目，而非安排好的头脑风暴。 / 产品市场契合是艺术：观察用户的眼睛是否发亮。</description>
   </item>
 </channel>
 </rss>
