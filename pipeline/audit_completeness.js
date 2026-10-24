@@ -12,6 +12,8 @@
  *   node pipeline/audit_completeness.js --json     # 机器可读
  */
 const fs = require("fs");
+// 单人演讲/讲座:只有一个说话人是对的,不报「说话人只有」(2026-10-24 逐期核对过)
+const SOLO = new Set(["elon-spacexal-2026", "garrytan-ycombina-2026", "hinton-theroyal-2025", "gustav-spotifyr-2023"]);
 const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
@@ -91,7 +93,7 @@ for (const e of targets) {
         warn.push(`对白过碎(turn 中位 ${medEn} 字符,全库常态 ~370;共 ${enLens.length} turn)——闲聊型节目?复查选题`);
       // turn 里 spk 只有一种 → 说话人没分开
       const spks = new Set(t.flatMap(s => (s.turns || []).map(x => x.spk)));
-      if (secs > 0 && spks.size < 2) warn.push(`说话人只有 ${[...spks].join("/") || "无"}`);
+      if (secs > 0 && spks.size < 2 && !SOLO.has(e.id)) warn.push(`说话人只有 ${[...spks].join("/") || "无"}`);
       // 中译缺失:零星缺是警告;大面积缺(>20%)= 翻译环节整段失败,必须拦——
       // 2026-08-09 故障演练发现整期 0 中文只报"警告(可上线)",空翻译能带病上线
       const allTurns = t.flatMap(s => (s.turns || []));
