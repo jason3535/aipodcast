@@ -6,7 +6,49 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Thu, 22 Oct 2026 01:48:39 -0000</lastBuildDate>
+  <lastBuildDate>Fri, 23 Oct 2026 01:47:40 -0000</lastBuildDate>
+  <item>
+    <title>AI 智能体可能颠覆银行体系——对话伊桑·莫利克 — The Prof G Pod – Scott Galloway</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/ethanmollick-theprofg-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ethanmollick-theprofg-2026/</guid>
+    <pubDate>Fri, 23 Oct 2026 01:47:40 -0000</pubDate>
+    <description>伊桑·莫利克解析 AI 的指数级增长、锯齿状能力边界与落地滞后，并探讨智能体系统为何可能给银行体系带来压力。  要点: 尽管 AI 呈指数级进步，其锯齿状前沿与采用滞后使人类仍不可或缺。 / 更多 AI 降低组织成本，反而创造更多人类工作而非减少。 / 把 AI 当挑战你的导师而非拐杖；感受学习之痛。</description>
+  </item>
+  <item>
+    <title>为什么 AI 算力是长方形的：Erik Bernhardsson 谈打造 Modal — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/erikbernhardsson-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/erikbernhardsson-latentsp-2026/</guid>
+    <pubDate>Fri, 23 Oct 2026 01:47:40 -0000</pubDate>
+    <description>Modal 首席执行官 Erik Bernhardsson 讲述他在 Spotify 构建推荐系统的经历如何促使他打造 AI 基础设施平台，并在两年内实现约 50 倍增长。  要点: AI 基础设施必须为 GPU 从零重建，而非在 Kubernetes/Docker 上包装。 / 聚合众多客户可平滑需求，从而提供灵活的按需容量，而非僵化的三年期合约。 / GPU 稀缺的真正痛点不是获取难度，而是容量以三年期“矩形”形式出售。</description>
+  </item>
+  <item>
+    <title>为大宗商品交易员打造推荐引擎 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/anekhasokhal-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/anekhasokhal-latentsp-2026/</guid>
+    <pubDate>Fri, 23 Oct 2026 01:47:40 -0000</pubDate>
+    <description>Moshi 创始人 Anekha Sokhal 讲述她如何凭借交易背景与数据科学专长，为大宗商品和能源交易员打造实时洞察平台。  要点: AI 应主动向交易员推送相关数据，而非等待查询。 / 推荐系统被低估，但对 AI 产品采用至关重要。 / 处理敏感用户数据时，自有文档处理模型很重要。</description>
+  </item>
+  <item>
+    <title>如何在 AI 设计时代脱颖而出：走进 Magic Patterns — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/alexdanilowicz-ycombina-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/alexdanilowicz-ycombina-2026/</guid>
+    <pubDate>Fri, 23 Oct 2026 01:47:40 -0000</pubDate>
+    <description>Magic Patterns 首席执行官 Alex Danilowicz 讲述如何为非设计师打造 AI 设计工具、在模型快速迭代中保持差异化，以及为何“客户就是信仰”。  要点: Magic Patterns 通过自愿内部试用和每日与客户交流来打造 AI 设计工具。 / 设计关乎用户体验，而非像素级细节；要抵制过度动画和渐变等 AI 默认效果。 / 落地页应面向用户而非投资者；滚动劫持永远不会带来转化。</description>
+  </item>
+  <item>
+    <title>a16z 当下最想投资的前沿构想 — The a16z Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/andreessen-thea16zp-2026c</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/andreessen-thea16zp-2026c/</guid>
+    <pubDate>Fri, 23 Oct 2026 01:47:40 -0000</pubDate>
+    <description>马克·安德森、本·霍洛维茨与克里斯·迪克森阐释 a16z 为何将加密基金扩展为 a16z Frontier，以押注最具野心的“外行星”创业者。  要点: AI 在企业间造成史上最大的采用鸿沟；个人采用快于机构，创业公司将激增。 / 宁早勿晚；前沿投资接受品类风险，因为好的技术想法终会成功。 / 开源 AI 对防止权力集中至关重要，AI 原生媒体将与电影有本质不同。</description>
+  </item>
+  <item>
+    <title>NVIDIA GTC 柏林 2026：黄仁勋谈 AI 工业革命 — NVIDIA</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/jensen-nvidia-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jensen-nvidia-2026/</guid>
+    <pubDate>Fri, 23 Oct 2026 01:47:40 -0000</pubDate>
+    <description>黄仁勋登上 GTC 柏林舞台，将 AI 定义为五层结构的制造业与一场正在欧洲落地的新工业革命。  要点: AI 是生产 token 的制造业，正像电力一样驱动新一轮工业革命。 / 欧洲可以构建从能源到应用的全栈 AI 经济，而不仅仅是消费 AI。 / 智能体需要模型、执行框架、安全沙箱、知识和工具，安全是第一位的。</description>
+  </item>
   <item>
     <title>在扩展超级智能的同时保持人性 — Stanford Graduate School of Business</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/altman-stanford-2026</link>
@@ -174,48 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/joshwoodward-lennyspo-2026/</guid>
     <pubDate>Mon, 12 Oct 2026 01:36:20 -0000</pubDate>
     <description>谷歌实验室负责人乔什·伍德沃德解释为什么每家公司都必须像实验室团队一样运作，用 AI 做实验，在竞争对手之前发现可能性。  要点: 每家公司都必须像实验室团队一样运作，才能保持在最前沿。 / 好想法源于好奇的副业项目，而非安排好的头脑风暴。 / 产品市场契合是艺术：观察用户的眼睛是否发亮。</description>
-  </item>
-  <item>
-    <title>明年量产 5 万台人形机器人 | 1X 创始人 Bernt Børnich 访谈 — Relentless</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/berntbornich-relentle-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/berntbornich-relentle-2026/</guid>
-    <pubDate>Mon, 12 Oct 2026 01:36:20 -0000</pubDate>
-    <description>1X 创始人兼 CEO Bernt Børnich 详解公司如何从研发阶段跨越到 12 个月内交付 5 万台人形机器人，以及如何在家用场景中建立信任。  要点: 1X 计划明年量产 5 万台人形机器人，押注通用模型而非逐个任务自动化。 / 人形机器人约 1000 个零件，远少于汽车的 5 万个，但部署环境复杂得多。 / 数据多样性而非数据量才是瓶颈；模型应学习世界动态，而非克隆人类行为。</description>
-  </item>
-  <item>
-    <title>马斯克在 X Takeover 谈星舰、AI、芯片、Optimus 与 Cybercab — X Takeover 大会</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/elon-xtakeove-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/elon-xtakeove-2026/</guid>
-    <pubDate>Sun, 11 Oct 2026 09:46:10 -0000</pubDate>
-    <description>马斯克做客 Giga Texas 的 X Takeover，畅谈星舰、AI、芯片、Optimus 与 Cybercab，并回顾特斯拉数次濒临破产的生死时刻。  要点: 星舰的下一个里程碑是回收助推器，然后让两级都能重复飞行。 / AI 进步太快，连专家都因接连突破而患上“AI 精神病”。 / 具备精细运动能力的人形机器人手，造起来难到惊人。</description>
-  </item>
-  <item>
-    <title>AGI、AI 革命与人类工作的未来 | Mustafa Suleyman — Young and Profiting</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/suleyman-youngand-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/suleyman-youngand-2026/</guid>
-    <pubDate>Sun, 11 Oct 2026 01:35:11 -0000</pubDate>
-    <description>微软 AI 首席执行官 Mustafa Suleyman 探讨 AGI、即将到来的生产力革命，以及为何“遏制 AI”可能是人类面临的最大挑战。  要点: AI 将在几十年内带来人类历史上最大的生产力提升。 / AI 伴侣将成为联合创始人和同事，而不仅仅是工具。 / 对 AI 进行遏制是必要的，以防止混乱并确保安全。</description>
-  </item>
-  <item>
-    <title>Beam：Reflection AI 联合创始人 Misha Laskin 谈打造美国开放前沿模型 — No Priors 播客</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/laskin-nopriors-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/laskin-nopriors-2026/</guid>
-    <pubDate>Sat, 10 Oct 2026 02:37:17 -0000</pubDate>
-    <description>Reflection AI 联合创始人兼 CEO Misha Laskin 做客 No Priors，畅谈其首个开放权重前沿模型 Beam 的打造历程，以及为何开放模型对安全与保障至关重要。  要点: 开放模型对安全、保障和前沿智能的广泛获取至关重要。 / 在强大预训练之上进行强化学习是通往有能力、高效智能体的路径。 / 开放模型的 token 需求将超过闭源，类似操作系统中的 Linux。</description>
-  </item>
-  <item>
-    <title>杰弗里·辛顿谈 AI 风险、监管与未来工作 — Nayeema Raza</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/hinton-nayeemar-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/hinton-nayeemar-2026/</guid>
-    <pubDate>Sat, 10 Oct 2026 01:43:49 -0000</pubDate>
-    <description>诺贝尔奖得主杰弗里·辛顿探讨 AI 的危险、监管的必要性，以及个人在日益受人工智能影响的世界中能做什么。  要点: 辛顿呼吁像监管药物一样监管 AI，发布前需通过安全审批。 / 推动 AI 监管的是公众压力，而非科技领袖。 / AI 发展迅猛，可能只剩一两年时间，风险就会急剧升级。</description>
-  </item>
-  <item>
-    <title>Jeetu Patel 如何像全球最大初创公司一样运营思科 — Y Combinator</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/jeetupatel-ycombina-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jeetupatel-ycombina-2026/</guid>
-    <pubDate>Fri, 09 Oct 2026 06:46:49 -0000</pubDate>
-    <description>思科总裁兼首席产品官 Jeetu Patel 讲述他如何将创始人思维带入 AI 时代的“卖铲人”巨头。  要点: 思科如今是一家 AI 基础设施公司，而不仅仅是网络公司。 / AI 基础设施严重受限于供给，需求会瞬间消耗掉供给。 / 不使用 AI 会让你更不安全，也更难保住工作。</description>
   </item>
 </channel>
 </rss>
