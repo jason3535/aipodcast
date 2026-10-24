@@ -51,7 +51,7 @@ SMALL_OK = {"Pioneers of AI", "HR Heretics with Nolan Church and Kelli Dragovich
 
 def log(msg):
     line = f"[{datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M')}Z] {msg}"
-    print(line, flush=True)
+    if sys.stdout.isatty(): print(line, flush=True)
     try: LOG.open("a", encoding="utf-8").write(line + "\n")
     except Exception: pass
 
@@ -574,6 +574,190 @@ def run_cmd(cmd):
     r = subprocess.run(cmd, capture_output=True, text=True, cwd=str(ROOT), env={**os.environ})
     return r.returncode, (r.stderr or "") + (r.stdout or "")
 
+# ---------------- 推送 / 合并 / 告警 ----------------
+# 2026-10-22~24:三天 push 全部失败、18 期滞留,日志里写了但没人看。两个原因叠加:
+#  ① launchd 环境没有 https_proxy,git(libcurl)不读 macOS 系统代理,直连 GitHub 经常超时
+#     ——yt-dlp/urllib 会读系统代理所以收录正常,只有 push 挂;
+#  ② 云端会话同时在往远端提交,app.js 那一行 EPISODES 必然文本冲突,rebase 只能 abort。
+# 对策:git 网络操作显式走 Clash + 退避重试;启动先同步远端;分叉用 merge_driver 按 key 合并
+# 后重跑生成链;任何「没上线」的结局都弹 macOS 通知,不再只写日志。
+CLASH = "http://127.0.0.1:7890"
+STATUS = BASE / ".push_status.json"
+
+def _clash_up():
+    import socket
+    try:
+        socket.create_connection(("127.0.0.1", 7890), timeout=1).close(); return True
+    except OSError: return False
+
+def git_net(args, tries=3):
+    """fetch/push/pull:有 Clash 就走代理;网络类错误退避重试(20s、60s)。"""
+    pre = ["git"] + (["-c", f"http.proxy={CLASH}"] if _clash_up() else [])
+    for i in range(tries):
+        rc, out = run_cmd(pre + args)
+        net_err = re.search(r"unable to access|无法访问|timed out|Empty reply|Could not resolve|Connection (reset|refused)|SSL", out)
+        if rc == 0 or not net_err or i == tries - 1: return rc, out
+        log(f"  git {args[0]} 网络失败({out.strip().splitlines()[-1][-80:]}),{(20, 60)[i]}s 后重试…")
+        time.sleep((20, 60)[i])
+    return rc, out
+
+def fail(msg):
+    """门禁类失败:写日志 + 弹通知(改动留在工作区供人工检查)。"""
+    log(msg); notify("本轮未提交", msg.splitlines()[0][:120])
+
+def notify(title, msg):
+    """macOS 通知中心弹窗 + 状态文件(cron 无人值守,失败必须让人看见)。"""
+    log(f"🔔 {title}:{msg}")
+    try:
+        STATUS.write_text(json.dumps({"ts": datetime.now().isoformat(timespec="seconds"),
+                                      "title": title, "msg": msg}, ensure_ascii=False), encoding="utf-8")
+    except Exception: pass
+    esc = lambda x: x.replace("\\", "\\\\").replace('"', '\\"')
+    subprocess.run(["osascript", "-e", f'display notification "{esc(msg[:200])}" with title "AI Podcast" '
+                    f'subtitle "{esc(title)}" sound name "Basso"'], capture_output=True)
+
+def ensure_merge_drivers():
+    """注册 .gitattributes 里用到的合并驱动(本机 git config,幂等)。"""
+    py = sys.executable or "python3"
+    for k, v in [("merge.aipod-appjs.name", "AI Podcast app.js 按 key 合并"),
+                 ("merge.aipod-appjs.driver", f"{py} pipeline/merge_driver.py appjs %O %A %B"),
+                 ("merge.aipod-html.name", "index.html 生成段取本地"),
+                 ("merge.aipod-html.driver", f"{py} pipeline/merge_driver.py html %O %A %B"),
+                 ("merge.aipod-json.name", "AI Podcast JSON 按 key 合并"),
+                 ("merge.aipod-json.driver", f"{py} pipeline/merge_driver.py json %O %A %B"),
+                 ("merge.aipod-ours.name", "生成物取本地(合并后重跑生成)"),
+                 ("merge.aipod-ours.driver", "true")]:
+        run_cmd(["git", "config", k, v])
+
+def ahead_behind():
+    rc, out = run_cmd(["git", "rev-list", "--left-right", "--count", "HEAD...origin/master"])
+    a, b = (int(x) for x in out.split()) if rc == 0 else (0, 0)
+    return a, b
+
+def merge_remote():
+    """把 origin/master 合进来;成功返回 True,冲突则 abort 返回 False。"""
+    rc, out = run_cmd(["git", "merge", "--no-edit", "-m", "merge: 自动合并远端(云端会话)提交", "origin/master"])
+    if rc == 0: return True
+    run_cmd(["git", "merge", "--abort"])
+    log("  合并冲突,已 abort:" + out.strip()[-300:])
+    return False
+
+def sync_start():
+    """启动时先跟远端对齐:把云端会话的新提交合进来,并补推上次滞留的本地提交。"""
+    ensure_merge_drivers()
+    rc, out = git_net(["fetch", "-q", "origin", "master"])
+    if rc != 0:
+        notify("fetch 失败", "连不上 GitHub,本轮照常收录,推送时再试:" + out.strip()[-100:]); return
+    ahead, behind = ahead_behind()
+    rc_d, dirty = run_cmd(["git", "status", "--porcelain", "--untracked-files=no"])
+    if behind and dirty.strip():
+        notify("工作区有未提交改动", "远端有新提交但本地有未提交改动,跳过启动同步(可能是上次门禁拦下的半成品)")
+    elif behind:
+        if merge_remote(): log(f"  启动同步:合入远端 {behind} 个提交")
+        else: notify("启动同步冲突", "本地与远端冲突,需人工合并;本轮仍收录,推送大概率失败")
+    ahead, behind = ahead_behind()
+    if ahead and not behind:
+        rc, out = git_net(["push", "-q", "origin", "master"])
+        log(f"  补推上次滞留的 {ahead} 个提交:{'✓' if rc == 0 else '✗ ' + out.strip()[-100:]}")
+
+def push_with_merge(regen):
+    """推送;被拒(远端有新提交)则合并 → 重跑生成链 → 再推。返回 (ok, 说明)。"""
+    rc, out = git_net(["push", "-q", "origin", "master"])
+    if rc == 0: return True, ""
+    if not re.search(r"rejected|non-fast-forward|fetch first|更新被拒绝", out):
+        return False, out.strip()[-150:]
+    log("  push 被拒(远端有新提交),fetch + 按 key 合并…")
+    rc, out = git_net(["fetch", "-q", "origin", "master"])
+    if rc != 0: return False, "fetch 失败:" + out.strip()[-120:]
+    if not merge_remote(): return False, "合并冲突,需人工处理"
+    regen()                                    # 生成物在合并里取的本地,按合并后的数据重跑
+    if not gates_ok([]): 
+        run_cmd(["git", "reset", "--hard", "-q", "HEAD"]); return False, "合并后门禁未通过"
+    run_cmd(["git", "add", "-A"])
+    run_cmd(["git", "commit", "-q", "-m", "chore: 合并远端后重跑生成链"])
+    rc, out = git_net(["push", "-q", "origin", "master"])
+    return rc == 0, out.strip()[-150:]
+
+def regen_chain(new_ids):
+    """收录后的整条生成链;合并远端后也重跑一遍(此时 new_ids=[],跳过推送提醒)。"""
+    log("重生成 公司归属 / 观点演变 / 议题 / MCP 索引 / 分享页 …")
+    for cmd in [["node", "pipeline/build_person_org.js"],
+                ["python3", "pipeline/gen_views.py"], ["python3", "pipeline/gen_topics.py"],
+                ["python3", "pipeline/gen_brief.py"], ["python3", "pipeline/gen_sectitles.py"],
+                ["python3", "pipeline/mark_ads.py"],   # 赞助段标记(去广告用;只补没 ads 字段的新期)
+                ["python3", "pipeline/fix_spacing.py"], ["python3", "pipeline/fix_terms.py"],
+                ["python3", "pipeline/split_data.py"],
+                # 新人物补头像(用其单集封面人脸裁剪,消化 pending_avatars)+ 转 webp。
+                # 个人 Mac 若没装 cv2,fill 会安全落空、条目留在 pending,不影响链路。
+                ["python3", "pipeline/fill_pending_avatars.py"], ["python3", "pipeline/webp_avatars.py"],
+                ["node", "pipeline/build_mcp_data.js"],
+                # 嘉宾名误听:自动字幕把冷门姓氏音译错(Carl Pei→Carl Pay、Liam Fedus→Liam Fetus),
+                # 以站内登记名为权威改回去;只动「名+近似姓」的组合,不碰单独出现的词。
+                # **必须排在 build_mcp_data 之后**:检测读的是 mcp-data/index.json + ep/*.json,
+                # 本轮新收那期在此之前还不存在 —— 放在前面等于对每一期新集永远空跑。
+                # 2026-08-31 Tara Seshan 全期被写成 Tara Sash/Sean/Station 发到线上,
+                # 就是这个顺序错误;人工链路 postingest.sh 顺序本来是对的,所以从没暴露。
+                # 改完再跑一次 build_mcp_data,把 index.json 里的标题也带正。
+                ["python3", "pipeline/check_guest_names.py", "--apply"],
+                ["node", "pipeline/build_mcp_data.js"],
+                ["python3", "pipeline/gen_og_cards.py", "--site", "aipodcast"],   # 新收单集/人物的分享卡(幂等)
+                ["node", "pipeline/build_share_pages.js"],
+                # RSS:2026-08-13 才发现这一步从没进过任何链条,feed.xml 停更两周半
+                ["python3", "pipeline/gen_feed.py"],
+                # 站群互链:只写本仓库 app.js 的 map(新收人物若已在图谱/纸站,当天就挂上互链按钮);
+                # 其他仓库的缺口只进日志,由人工会话跑 --apply 收口(cron 不跨仓库留未提交改动)
+                ["python3", "pipeline/build_crosslinks.py", "--apply", "--write-pod-only"],
+                # 更新提醒:只对本轮收录成功的集发(new_ids 是 add_episode 回报的真实 id,
+                # 不是 added 那个计数器 —— 别拿计数器当列表)
+                ["python3", "pipeline/push_notify.py", "--site", "aipodcast", "--ids"] + new_ids]:
+        if not new_ids and cmd[1].endswith("push_notify.py"): continue   # 合并后重跑:不重复发提醒
+        rc, outp = run_cmd(cmd)
+        log(f"  {'✓' if rc == 0 else '✗'} {cmd[1].split('/')[-1]} {('' if rc==0 else outp[-120:])}")
+
+def gates_ok(new_ids):
+    """提交前门禁,任何一道没过都不提交并告警。"""
+    # JS 校验,过了才提交
+    chk = subprocess.run(["node", "-e",
+        "const fs=require('fs');const h=fs.readFileSync('app.js','utf8');"
+        "new Function(h);"
+        # 数据校验:领域 key 必须已登记(2026-07-02 曾因 efficiency 白屏)、id 不重复
+        "const eps=JSON.parse(h.match(/const EPISODES = (\\[[\\s\\S]*?\\]);/)[1]);"
+        "const fk=new Set([...h.match(/const FIELDS = \\{([\\s\\S]*?)\\n\\};/)[1].matchAll(/'([a-z-]+)':\\{en:/g)].map(m=>m[1]));"
+        "const badf=eps.filter(e=>(e.fields||[]).some(f=>!fk.has(f)));"
+        "if(badf.length)throw new Error('未登记领域:'+badf.map(e=>e.id).join(','));"
+        "const ids=eps.map(e=>e.id);if(new Set(ids).size!==ids.length)throw new Error('重复 id');"
+        "console.log('ok')"], capture_output=True, text=True, cwd=str(ROOT))
+    if "ok" not in chk.stdout:
+        fail("⚠️ JS 校验失败,放弃提交(保留改动供人工检查):" + chk.stderr[:150]); return False
+
+    # 完整性审计门禁:只审本轮新收的集(全库有存量损坏,不能让它挡住每次自动运行)。
+    # 2026-08-01 那批"空壳"集就是缺这道闸门才上线的 —— 语法是对的,内容是空的。
+    if new_ids:
+        rc_a, out_a = run_cmd(["node", "pipeline/audit_completeness.js"] + new_ids)
+        if rc_a != 0:
+            fail("⚠️ 完整性审计不通过,放弃提交(保留改动供人工检查):\n" + out_a[-600:]); return False
+        log(f"  ✓ 完整性审计 {len(new_ids)} 期通过")
+
+    # 术语门禁:fix_terms 跑过之后不该再有 Claude 误听残留(自动字幕把 Claude 听成
+    # Cloud/Claw/Cloth/Clock 是常态,漏网就会一路发到线上)。
+    rc_t, out_t = run_cmd(["python3", "pipeline/fix_terms.py", "--check"])
+    if rc_t != 0:
+        fail("⚠️ 术语检查未通过(仍有 Claude 误听残留),放弃提交:\n" + out_t[-300:]); return False
+
+    # 嘉宾名门禁:与 postingest.sh 对齐。上面的 --apply 之后不该再有残留;还有残留说明
+    # 登记名本身可能就是错的(--apply 拿登记名当权威,改不动这种),必须人工看一眼。
+    rc_g, out_g = run_cmd(["python3", "pipeline/check_guest_names.py", "--check"])
+    if rc_g != 0:
+        fail("⚠️ 嘉宾名检查未通过(误听残留或登记名有误),放弃提交:\n" + out_g[-300:]); return False
+
+    # index/ep 一致性门禁:与 postingest.sh 对齐。列表页读 index、详情页读 ep/<id>.json,
+    # 标题存两份;build_mcp_data 对已剥离逐字稿的 ep 文件曾长期不回写,导致两处标题打架
+    # (2026-09-04 查出 24 处,altman-davidsen-2026 详情页挂错标题十天)。
+    rc_s, out_s = run_cmd(["node", "pipeline/check_index_ep_sync.js"])
+    if rc_s != 0:
+        fail("⚠️ index/ep 一致性未通过,放弃提交:\n" + out_s[-600:]); return False
+    return True
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
@@ -585,6 +769,7 @@ def main():
     if not KEY: sys.exit("需要 DEEPSEEK_API_KEY")
     log(f"=== auto_refresh 启动 (days={a.days} max={a.max} dry={a.dry_run}) ===")
 
+    if not a.dry_run: sync_start()
     st = load_state()
     log(f"在站:{len(st['people'])} 人 / {len(st['vids'])} 期")
     if a.channels_only:
@@ -639,80 +824,8 @@ def main():
     if not added:
         log("无成功收录,不提交。"); return
 
-    log("重生成 公司归属 / 观点演变 / 议题 / MCP 索引 / 分享页 …")
-    for cmd in [["node", "pipeline/build_person_org.js"],
-                ["python3", "pipeline/gen_views.py"], ["python3", "pipeline/gen_topics.py"],
-                ["python3", "pipeline/gen_brief.py"], ["python3", "pipeline/gen_sectitles.py"],
-                ["python3", "pipeline/mark_ads.py"],   # 赞助段标记(去广告用;只补没 ads 字段的新期)
-                ["python3", "pipeline/fix_spacing.py"], ["python3", "pipeline/fix_terms.py"],
-                ["python3", "pipeline/split_data.py"],
-                # 新人物补头像(用其单集封面人脸裁剪,消化 pending_avatars)+ 转 webp。
-                # 个人 Mac 若没装 cv2,fill 会安全落空、条目留在 pending,不影响链路。
-                ["python3", "pipeline/fill_pending_avatars.py"], ["python3", "pipeline/webp_avatars.py"],
-                ["node", "pipeline/build_mcp_data.js"],
-                # 嘉宾名误听:自动字幕把冷门姓氏音译错(Carl Pei→Carl Pay、Liam Fedus→Liam Fetus),
-                # 以站内登记名为权威改回去;只动「名+近似姓」的组合,不碰单独出现的词。
-                # **必须排在 build_mcp_data 之后**:检测读的是 mcp-data/index.json + ep/*.json,
-                # 本轮新收那期在此之前还不存在 —— 放在前面等于对每一期新集永远空跑。
-                # 2026-08-31 Tara Seshan 全期被写成 Tara Sash/Sean/Station 发到线上,
-                # 就是这个顺序错误;人工链路 postingest.sh 顺序本来是对的,所以从没暴露。
-                # 改完再跑一次 build_mcp_data,把 index.json 里的标题也带正。
-                ["python3", "pipeline/check_guest_names.py", "--apply"],
-                ["node", "pipeline/build_mcp_data.js"],
-                ["python3", "pipeline/gen_og_cards.py", "--site", "aipodcast"],   # 新收单集/人物的分享卡(幂等)
-                ["node", "pipeline/build_share_pages.js"],
-                # RSS:2026-08-13 才发现这一步从没进过任何链条,feed.xml 停更两周半
-                ["python3", "pipeline/gen_feed.py"],
-                # 站群互链:只写本仓库 app.js 的 map(新收人物若已在图谱/纸站,当天就挂上互链按钮);
-                # 其他仓库的缺口只进日志,由人工会话跑 --apply 收口(cron 不跨仓库留未提交改动)
-                ["python3", "pipeline/build_crosslinks.py", "--apply", "--write-pod-only"],
-                # 更新提醒:只对本轮收录成功的集发(new_ids 是 add_episode 回报的真实 id,
-                # 不是 added 那个计数器 —— 别拿计数器当列表)
-                ["python3", "pipeline/push_notify.py", "--site", "aipodcast", "--ids"] + new_ids]:
-        rc, outp = run_cmd(cmd)
-        log(f"  {'✓' if rc == 0 else '✗'} {cmd[1].split('/')[-1]} {('' if rc==0 else outp[-120:])}")
-
-    # JS 校验,过了才提交
-    rc, _ = run_cmd(["node", "--check", "/dev/stdin"]) if False else (0, "")
-    chk = subprocess.run(["node", "-e",
-        "const fs=require('fs');const h=fs.readFileSync('app.js','utf8');"
-        "new Function(h);"
-        # 数据校验:领域 key 必须已登记(2026-07-02 曾因 efficiency 白屏)、id 不重复
-        "const eps=JSON.parse(h.match(/const EPISODES = (\\[[\\s\\S]*?\\]);/)[1]);"
-        "const fk=new Set([...h.match(/const FIELDS = \\{([\\s\\S]*?)\\n\\};/)[1].matchAll(/'([a-z-]+)':\\{en:/g)].map(m=>m[1]));"
-        "const badf=eps.filter(e=>(e.fields||[]).some(f=>!fk.has(f)));"
-        "if(badf.length)throw new Error('未登记领域:'+badf.map(e=>e.id).join(','));"
-        "const ids=eps.map(e=>e.id);if(new Set(ids).size!==ids.length)throw new Error('重复 id');"
-        "console.log('ok')"], capture_output=True, text=True, cwd=str(ROOT))
-    if "ok" not in chk.stdout:
-        log("⚠️ JS 校验失败,放弃提交(保留改动供人工检查):" + chk.stderr[:150]); return
-
-    # 完整性审计门禁:只审本轮新收的集(全库有存量损坏,不能让它挡住每次自动运行)。
-    # 2026-08-01 那批"空壳"集就是缺这道闸门才上线的 —— 语法是对的,内容是空的。
-    if new_ids:
-        rc_a, out_a = run_cmd(["node", "pipeline/audit_completeness.js"] + new_ids)
-        if rc_a != 0:
-            log("⚠️ 完整性审计不通过,放弃提交(保留改动供人工检查):\n" + out_a[-600:]); return
-        log(f"  ✓ 完整性审计 {len(new_ids)} 期通过")
-
-    # 术语门禁:fix_terms 跑过之后不该再有 Claude 误听残留(自动字幕把 Claude 听成
-    # Cloud/Claw/Cloth/Clock 是常态,漏网就会一路发到线上)。
-    rc_t, out_t = run_cmd(["python3", "pipeline/fix_terms.py", "--check"])
-    if rc_t != 0:
-        log("⚠️ 术语检查未通过(仍有 Claude 误听残留),放弃提交:\n" + out_t[-300:]); return
-
-    # 嘉宾名门禁:与 postingest.sh 对齐。上面的 --apply 之后不该再有残留;还有残留说明
-    # 登记名本身可能就是错的(--apply 拿登记名当权威,改不动这种),必须人工看一眼。
-    rc_g, out_g = run_cmd(["python3", "pipeline/check_guest_names.py", "--check"])
-    if rc_g != 0:
-        log("⚠️ 嘉宾名检查未通过(误听残留或登记名有误),放弃提交:\n" + out_g[-300:]); return
-
-    # index/ep 一致性门禁:与 postingest.sh 对齐。列表页读 index、详情页读 ep/<id>.json,
-    # 标题存两份;build_mcp_data 对已剥离逐字稿的 ep 文件曾长期不回写,导致两处标题打架
-    # (2026-09-04 查出 24 处,altman-davidsen-2026 详情页挂错标题十天)。
-    rc_s, out_s = run_cmd(["node", "pipeline/check_index_ep_sync.js"])
-    if rc_s != 0:
-        log("⚠️ index/ep 一致性未通过,放弃提交:\n" + out_s[-600:]); return
+    regen_chain(new_ids)
+    if not gates_ok(new_ids): return
 
     run_cmd(["git", "add", "-A"])
     # 2026-09-09:此前按 plan 前 added 位拼人名,单集中途失败回滚时会把失败的人写进标题(romanugarte 失败却上了 commit)
@@ -721,19 +834,11 @@ def main():
         msg += f" +{len(new_people)} 新人物"
         log(f"本轮新建人物 {len(new_people)} 位（头像待补）:{', '.join(new_people)}")
     rc, outp = run_cmd(["git", "commit", "-q", "-m", msg,
-        "-m", "由 pipeline/auto_refresh.py 自动收录\n\nCo-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"])
-    rc2, outp2 = run_cmd(["git", "push", "-q", "origin", "master"])
-    if rc2 != 0:
-        # push 失败的两大常因:远端有新提交(分叉) / 网络抖动。先 rebase 重试一次;
-        # rebase 冲突则 abort 留待人工(2026-08-18/19 连续两天分叉的教训——
-        # 之前失败就放着,本地越积越多,人工 merge 成本远高于这里自动 rebase)
-        log("  push 失败,尝试 pull --rebase 后重试…")
-        rc_rb, out_rb = run_cmd(["git", "pull", "--rebase", "origin", "master"])
-        if rc_rb == 0:
-            rc2, outp2 = run_cmd(["git", "push", "-q", "origin", "master"])
-        else:
-            run_cmd(["git", "rebase", "--abort"])
-            log("  rebase 冲突,已 abort,保留本地提交待人工合并:" + out_rb[-150:])
+        "-m", "由 pipeline/auto_refresh.py 自动收录\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"])
+    ok, why = push_with_merge(lambda: regen_chain([]))
+    rc2, outp2 = (0, "") if ok else (1, why)
+    if not ok:
+        notify(f"{added} 期已收录但没上线", f"push 失败:{why[-100:]}。本地已提交,下次 cron 启动会自动补推")
     # 新收录 URL 即时推给 Bing 系(失败不影响主流程)。2026-09-05 前这里没传 --site,脚本直接报
     # 「需要 --site 或 --all」退出,cron 日志里的 ✗ indexnow 其实一天都没成功过。
     ix_cmd = ["python3", "pipeline/indexnow.py", "--site", "aipodcast"]
