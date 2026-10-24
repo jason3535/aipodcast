@@ -137,9 +137,10 @@ def main():
     ea = s.index("const EPISODES = ")
     eb = s.index("/* ====== REAL ASSETS")
     eps = json.loads(s[ea + len("const EPISODES = "):eb].rstrip().rstrip(";").rstrip())
-    # 最新 3 期(与 vHome 选 feat 的排序一致:addedAt 优先,再 date)保留内联
+    # 最新 3 期(与 vHome 选 feat 的排序一致:date 优先,再 addedAt,跳过 stub)保留内联
     keep = {e["id"] for e in sorted(
-        eps, key=lambda e: ((e.get("addedAt") or ""), (e.get("date") or "")), reverse=True)[:FEAT_KEEP]}
+        (e for e in eps if not e.get("stub")),
+        key=lambda e: ((e.get("date") or ""), (e.get("addedAt") or "")), reverse=True)[:FEAT_KEEP]}
     extra = json.loads(EP_EXTRA.read_text(encoding="utf-8")) if EP_EXTRA.exists() else {}
     moved = 0
     for e in eps:
@@ -149,6 +150,11 @@ def main():
                 extra.setdefault(e["id"], {})[k] = v      # 空串不写,免得把 ep-extra 里的好值盖没
             if v is not None and e["id"] not in keep:
                 del e[k]
+                moved += 1
+            elif v is None and e["id"] in keep and extra.get(e["id"], {}).get(k):
+                # 反向:新进保留集的期(排序口径变了 / 新收的期日期更早)导语早被移出过,补回内联。
+                # 2026-10-24 hero 改按 date 排后首期导语缺失,首页卡片只能退回用标题
+                e[k] = extra[e["id"]][k]
                 moved += 1
     if moved:
         EP_EXTRA.write_text(dump(extra), encoding="utf-8")

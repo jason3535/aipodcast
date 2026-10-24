@@ -58,8 +58,9 @@ if (noS.length) bad.push(`mcp-data/ep 缺导语:${noS.join("、")} → build_mcp
 // 5) 首页大卡片要用的导语必须还在内联(vHome 是同步渲染,等不到异步数据)
 const app = fs.readFileSync(path.join(ROOT, "app.js"), "utf8");
 const eps = JSON.parse(app.match(/const EPISODES = (\[[\s\S]*?\]);\n\n\/\* ====== REAL/)[1]);
-const feat = eps.slice().sort((a, b) =>
-  (b.addedAt || "").localeCompare(a.addedAt || "") || (b.date || "").localeCompare(a.date || ""))[0];
+// 口径与 vHome 一致:date 优先,再 addedAt,跳过 stub(2026-10-24 由 addedAt 优先改来)
+const feat = eps.filter(e => !e.stub).sort((a, b) =>
+  (b.date || "").localeCompare(a.date || "") || (b.addedAt || "").localeCompare(a.addedAt || ""))[0];
 if (!(feat && feat.sZh)) bad.push(`首页大卡片这一期(${feat && feat.id})的导语没留在内联 → split_data.py 的 FEAT_KEEP 口径与 vHome 不一致`);
 
 // 6) 静态页埋点:两条流都得在。read 是唯一能把分布式抓取和真人分开的信号(见 pipeline/beacon.js),
@@ -94,7 +95,9 @@ if (realHash !== idxHash)
   const has = (pid, ext) => fs.existsSync(path.join(AV, pid + ext));
 
   const unreg = pids.filter(p => !photos.has(p) && (has(p, ".webp") || has(p, ".jpg")));
-  const noface = pids.filter(p => !photos.has(p) && !has(p, ".webp") && !has(p, ".jpg"));
+  // 有意用字母头像的人(本人只用 logo / 全网只有认不出的小图),见 avatar-hunting skill 无解名单
+  const LETTER_OK = new Set(["evilrabbit", "springenberg"]);
+  const noface = pids.filter(p => !photos.has(p) && !has(p, ".webp") && !has(p, ".jpg") && !LETTER_OK.has(p));
   const broken = pids.filter(p => photos.has(p) && !has(p, ".webp") && !has(p, ".jpg"));
   const nowebp = pids.filter(p => photos.has(p) && !has(p, ".webp") && has(p, ".jpg"));
 
