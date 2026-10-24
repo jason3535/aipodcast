@@ -16,6 +16,7 @@ echo "── 2/11 观点演变(gen_views)";        python3 pipeline/gen_views.py
 echo "── 3/11 议题(gen_topics)";           python3 pipeline/gen_topics.py | tail -1
 echo "── 4/11 首页速览(gen_brief)";        python3 pipeline/gen_brief.py | tail -1
 echo "── 5/11 章节标题(gen_sectitles)";    python3 pipeline/gen_sectitles.py | tail -1
+echo "── 5.5/11 赞助段标记(mark_ads,供「去广告」跳过;只处理没 ads 字段的新期)"; python3 pipeline/mark_ads.py | tail -1
 echo "── 6/11 盘古之白(fix_spacing,必须在分享页之前)"; python3 pipeline/fix_spacing.py | tail -1
 echo "── 7/11 术语归一(fix_terms)";        python3 pipeline/fix_terms.py 2>&1 | tail -1
 echo "── 8/11 首屏拆分(split_data)";       python3 pipeline/split_data.py | tail -1
