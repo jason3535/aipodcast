@@ -25,12 +25,22 @@ const COVER = {
   'safety':['#e5433e','#961d1a'],
   'robotics':['#a24fe0','#6320a0'],
   'bio':['#128f9e','#08505c'],
+  'world-model':['#c93d93','#6e1b52'],
 };
-function coverBg(fields){
+// 同领域卡片按「台名」做 ±10° 色相微调:同领域仍认得出,一排不再是复制粘贴
+function hueShift(hex,deg){
+  let r=parseInt(hex.slice(1,3),16)/255,g=parseInt(hex.slice(3,5),16)/255,b=parseInt(hex.slice(5,7),16)/255;
+  const mx=Math.max(r,g,b),mn=Math.min(r,g,b),l=(mx+mn)/2,d=mx-mn;let h=0,sa=0;
+  if(d){sa=d/(1-Math.abs(2*l-1));h=mx===r?((g-b)/d)%6:mx===g?(b-r)/d+2:(r-g)/d+4;h=(h*60+360)%360;}
+  h=(h+deg+360)%360;const c=(1-Math.abs(2*l-1))*sa,x=c*(1-Math.abs((h/60)%2-1)),m=l-c/2;
+  let [R,G,B]=h<60?[c,x,0]:h<120?[x,c,0]:h<180?[0,c,x]:h<240?[0,x,c]:h<300?[x,0,c]:[c,0,x];
+  return '#'+[R,G,B].map(v=>Math.round((v+m)*255).toString(16).padStart(2,'0')).join('');}
+function coverBg(fields,seed){
   const f=(fields&&fields.length?fields:['deep-learning']);
   const a=COVER[f[0]]||COVER['deep-learning'];
   const b=f.length>1?(COVER[f[1]]||a):a;
-  return `linear-gradient(140deg,${a[0]},${b[1]})`;
+  let deg=0;if(seed){let h=0;for(const ch of String(seed))h=(h*31+ch.charCodeAt(0))&0xffff;deg=(h%21)-10;}
+  return `linear-gradient(140deg,${deg?hueShift(a[0],deg):a[0]},${deg?hueShift(b[1],deg):b[1]})`;
 }
 const PEOPLE = {
   'farzamajeed':{en:'Farza Majeed',zh:'法尔扎·马吉德',init:'FM',tiEn:'Founder, Hey Clicky; Buildspace',tiZh:'Hey Clicky 创始人, Buildspace 创始人',fields:["product"],bioEn:'Founder of Hey Clicky and previously Buildspace, one of the largest online schools for people building their own ideas. He has made videos for over a decade, with posts regularly reaching millions of views.',bioZh:'Hey Clicky 创始人, 此前创办 Buildspace——最大的在线创意建造学校之一。他做视频已超过十年, 作品常获数百万播放。'},
@@ -2561,7 +2571,7 @@ function av(pid,cls=''){const p=PEOPLE[pid];const cs=(p.fields.length?p.fields:[
   const bg=cs.length>1?`linear-gradient(135deg,${cs[0]},${cs[1]})`:`linear-gradient(135deg,${cs[0]},${cs[0]})`;
   const img=PHOTOS.has(pid)?`<img src="assets/people/${pid}.webp" alt="${p.en}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/people/${pid}.jpg'">`:'';
   return `<div class="av ${cls}" style="background:${bg}">${p.init}${img}</div>`;}
-function epCover(e){const p=PEOPLE[e.pid];const bg=coverBg(p.fields);
+function epCover(e){const p=PEOPLE[e.pid];const bg=coverBg(p.fields,e.pod.en);
   return `<div class="ep-cover" style="background:${bg}">
     <div class="pod" onclick="goPod('${e.pod.en}')" style="cursor:pointer">${podLogo(e)}${e.pod.en}</div>${av(e.pid)}
     <div class="ct"><b>${p.en}</b><span>${fmtDate(e.date)} · ${fmtDur(e.min)}</span></div></div>`;}
@@ -2941,7 +2951,7 @@ function vHome(){
   <div class="site-tag">海外一线最新 AI 人物播客 · 中英对照全文<span class="st-n">${EPISODES.length} 期 · ${Object.keys(PEOPLE).length} 位</span></div>
   <div class="wrap hero">
     <div class="hero-card reveal">
-      <div class="hero-art" style="background:${(()=>{const cs=fp.fields.map(fcolor);return cs.length>1?`linear-gradient(150deg,${cs.join(',')})`:(cs[0]||'var(--accent)');})()}"><div class="hero-cov"><span class="hc-pod">${(()=>{const s=POD_LOGO[feat.pod.en]||POD_LOGO[feat.pod.zh];return s?`<img src="assets/pods/${s}.webp" alt="" decoding="async" onerror="this.onerror=null;this.src='assets/pods/${s}.jpg'">`:'';})()}${feat.pod.zh}</span><span class="hc-ct"><b>${fp.en}</b><span>${(feat.date||'').replace(/-/g,'.')}${feat.min?' · '+feat.min+'m':''}</span></span></div>${av(feat.pid)}</div>
+      <div class="hero-art" style="background:${coverBg(fp.fields,feat.pod.en)};--pimg:${PHOTOS.has(feat.pid)?`url(assets/people/${feat.pid}.webp)`:'none'}"><div class="hero-cov"><span class="hc-pod">${(()=>{const s=POD_LOGO[feat.pod.en]||POD_LOGO[feat.pod.zh];return s?`<img src="assets/pods/${s}.webp" alt="" decoding="async" onerror="this.onerror=null;this.src='assets/pods/${s}.jpg'">`:'';})()}${feat.pod.zh}</span><span class="hc-ct"><b>${fp.en}</b><span>${(feat.date||'').replace(/-/g,'.')}${feat.min?' · '+feat.min+'m':''}</span></span></div>${av(feat.pid)}</div>
       <div class="hero-body">
         <div class="eyebrow">最新上线 · Latest</div>
         <h1>${feat.tZh||feat.tEn}</h1>
