@@ -704,6 +704,8 @@ def regen_chain(new_ids):
                 ["node", "pipeline/build_share_pages.js"],
                 # RSS:2026-08-13 才发现这一步从没进过任何链条,feed.xml 停更两周半
                 ["python3", "pipeline/gen_feed.py"],
+                # Kindle 上 SimpleUI 插件的「播客」列表(kindle/api/*,读 mcp-data,须在 build_mcp_data 之后)
+                ["python3", "pipeline/gen_kindle_api.py"],
                 # 站群互链:只写本仓库 app.js 的 map(新收人物若已在图谱/纸站,当天就挂上互链按钮);
                 # 其他仓库的缺口只进日志,由人工会话跑 --apply 收口(cron 不跨仓库留未提交改动)
                 ["python3", "pipeline/build_crosslinks.py", "--apply", "--write-pod-only"],
