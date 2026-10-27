@@ -291,6 +291,9 @@ CHANNELS = [
     ("The a16z Podcast", "https://www.youtube.com/@a16z/videos", False),
     ("The TWIML AI Podcast", "https://www.youtube.com/@twimlai/videos", False),
     ("20VC", "https://www.youtube.com/@20VC/videos", False),
+    # 2026-10-27 加:Craig Smith(前 NYT)的 Eye on AI,企业 AI 厂商访谈居多,偶有 Koch/Sejnowski 这类学者。
+    # 只作非核心:站内已有人物才收,新面孔人工挑。
+    ("Eye on AI", "https://www.youtube.com/channel/UC-o9u9QL4zXzBwjvT1gmzNg/videos", False),
 ]
 # 电视台的深度专访通常 20-28 分钟(CBS Sunday Morning 的 Dario 那期 24 分钟),被 30 分钟的
 # 通用下限一刀切掉;新闻切片才是要挡的东西,而这些台的 20 分钟以上就是完整访谈了。
