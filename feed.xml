@@ -6,7 +6,42 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sat, 24 Oct 2026 01:41:45 -0000</lastBuildDate>
+  <lastBuildDate>Tue, 27 Oct 2026 01:39:32 -0000</lastBuildDate>
+  <item>
+    <title>全栈设计师新范式：AI、编辑思维与产品设计的未来 — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/marvinschwaibold-ycombina-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/marvinschwaibold-ycombina-2026/</guid>
+    <pubDate>Tue, 27 Oct 2026 01:39:32 -0000</pubDate>
+    <description>Shopify 产品设计负责人 Marvin Schwaibold 分享 Codex、Claude Code 等 AI 工具如何重塑其迭代工作流，让设计师从手工创作者转变为把控品质的编辑者。  要点: 设计师转型为编辑：AI 负责执行，人类负责筛选和设定标准。 / AI 原型比 PRD 更有说服力；将任务拆解为子任务进行迭代。 / 暴露参数以微调 AI 设计；渐进披露和清晰层级仍是关键。</description>
+  </item>
+  <item>
+    <title>OpenAI 为何竞相让电脑操作超越人类 — The a16z Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/ariweinstein-thea16zp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ariweinstein-thea16zp-2026/</guid>
+    <pubDate>Tue, 27 Oct 2026 01:39:32 -0000</pubDate>
+    <description>OpenAI 的 Ari Weinstein 与 James Sun 解析 GPT-5 Astra 如何让电脑操作智能体在速度上超越普通人、可靠性逼近超人水平，以及这对消费级与企业级应用意味着什么。  要点: 电脑使用速度已超普通人，接近超人水平，交互方式正发生巨变。 / 通用电脑使用能像人一样操作任何应用，不同于 API 集成，实现广泛自动化。 / 企业采用的关键在于确定性控制、沙箱和人工介入以建立信任。</description>
+  </item>
+  <item>
+    <title>86 分钟找到产品市场契合度的指南 — Lenny’s Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/robsnyder-lennyspo-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/robsnyder-lennyspo-2026/</guid>
+    <pubDate>Tue, 27 Oct 2026 01:39:32 -0000</pubDate>
+    <description>《拉力的力量》作者 Rob 分享了一套寻找产品市场契合度、从 0 到 1 的实用框架。  要点: Pull 是个人属性：向有具体项目的个人销售，而非公司。 / 如果存在 Pull，客户会立即尝试购买；否则就放弃。 / 避免设计合作伙伴；他们表明缺乏 Pull。直接销售。</description>
+  </item>
+  <item>
+    <title>萨提亚·纳德拉谈 AI 安全、对齐局限与微软接班 — Semafor</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/satya-semafor-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/satya-semafor-2026/</guid>
+    <pubDate>Tue, 27 Oct 2026 01:39:32 -0000</pubDate>
+    <description>微软 CEO 萨提亚·纳德拉解释为何必须将 AI 模型视为内部威胁，并探讨微软的未来与接班问题。  要点: 把强大 AI 视为内部威胁，在模型之外构建控制与保障层。 / 模型是商品；产品形态、分发、定价和品牌更重要。 / 没有公司天生就该存在，必须不断自我更新。</description>
+  </item>
+  <item>
+    <title>Mercor 的 Brendan Foody 谈数据、评估与人类最后的工作 — South Park Commons</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/brendanfoody-southpar-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brendanfoody-southpar-2026/</guid>
+    <pubDate>Tue, 27 Oct 2026 01:39:32 -0000</pubDate>
+    <description>Mercor CEO Brendan Foody 解析为何数据决定模型 80% 至 100% 的差异化，以及评估如何界定人类工作的前沿。  要点: 模型差异化来自数据而非算法，瓶颈在于为一切构建评估。 / 带高质量验证器的 RL 任务比原始公司数据价值高几个数量级。 / 创造数据训练 AI 将是人类最后的工作，人类转向训练智能体。</description>
+  </item>
   <item>
     <title>如何真正做出能转化的发布视频 — Y Combinator</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/farzamajeed-ycombina-2026</link>
@@ -181,41 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/cristianoamon-cnbc-2026/</guid>
     <pubDate>Mon, 19 Oct 2026 16:52:51 -0000</pubDate>
     <description>高通 CEO 克里斯蒂亚诺·安蒙解读智能体 AI 与端侧处理如何重塑智能手机，并催生全新的可穿戴个人 AI 设备。  要点: 智能体将成为数字生活的新中心，设备围绕其运转。 / 2026 年将是智能体之年，每个操作系统厂商都在构建编排器。 / AI 算力将在边缘与云之间形成无缝连续体，而非二元选择。</description>
-  </item>
-  <item>
-    <title>高通 CEO 克里斯蒂亚诺·安蒙谈 6G 时代与下一代 AI 设备 — 《财富》杂志</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/cristianoamon-fortunem-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/cristianoamon-fortunem-2026/</guid>
-    <pubDate>Mon, 19 Oct 2026 16:52:51 -0000</pubDate>
-    <description>高通 CEO 克里斯蒂亚诺·安蒙讲述公司如何押注 6G、AI 设备与自我重塑，以引领下一轮无线变革。  要点: AI 智能体将取代智能手机成为主要接口，但手机本身不会消失。 / 眼镜是最自然的个人 AI 设备，但多种形态将共存。 / 6G 将把网络转变为 AI 驱动的传感器和数字孪生，带来巨大变革。</description>
-  </item>
-  <item>
-    <title>超越智能手机：克里斯蒂亚诺·安蒙谈高通的 AI 革命与全球桥梁 — A Bit Personal · Jodi Shelton</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/cristianoamon-abitpers-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/cristianoamon-abitpers-2026/</guid>
-    <pubDate>Mon, 19 Oct 2026 16:52:51 -0000</pubDate>
-    <description>高通 CEO 克里斯蒂亚诺·安蒙畅谈如何带领公司超越智能手机、迈向边缘 AI，分享巴西成长经历赋予的韧性，以及他对无处不在的智能计算的愿景。  要点: AI 正从云端转向边缘，高通押注高能效的终端计算。 / 6G 将原生支持 AI，让每台设备都成为具有海量上行能力的传感摄像头。 / 智能体将取代应用成为移动体验的核心，融合时尚与科技。</description>
-  </item>
-  <item>
-    <title>高通 CEO 克里斯蒂亚诺·安蒙谈个人 AI 设备与移动智能体的未来 — 华尔街日报 · Bold Names</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/cristianoamon-wsjboldn-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/cristianoamon-wsjboldn-2026/</guid>
-    <pubDate>Mon, 19 Oct 2026 16:52:51 -0000</pubDate>
-    <description>高通 CEO 克里斯蒂亚诺·安蒙阐释 AI 智能体将如何取代应用，让智能手机与智能眼镜成为个人 AI 设备。  要点: AI 是新的交互界面；智能体将取代应用并捕获生态价值。 / 眼镜、耳机等个人 AI 设备将与手机协同，而非取代手机。 / 数据中心推理将走向后 GPU 与解耦架构；成本与能效决定赢家。</description>
-  </item>
-  <item>
-    <title>高通 CEO 谈机器人、芯片与对华竞争 — 华盛顿邮报直播</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/cristianoamon-washingt-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/cristianoamon-washingt-2026/</guid>
-    <pubDate>Mon, 19 Oct 2026 16:52:51 -0000</pubDate>
-    <description>高通 CEO 克里斯蒂亚诺畅谈未来五年公司重点研发方向，涵盖 6G、汽车、个人 AI 设备与机器人等领域。  要点: 高通从 5 瓦耳机芯片到 500 瓦数据中心芯片全覆盖，押注解耦的 AI 基础设施。 / 6G 将于 2028-29 年到来，高通作为标准制定者提前多年布局，而非跟随。 / 美国能在芯片制造前沿竞争；来自中国的竞争让高通更强，而非更弱。</description>
-  </item>
-  <item>
-    <title>高通 CEO 克里斯蒂亚诺·安蒙谈 AI 设备的未来 — Big Technology 播客</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/cristianoamon-bigtechn-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/cristianoamon-bigtechn-2026/</guid>
-    <pubDate>Mon, 19 Oct 2026 16:52:51 -0000</pubDate>
-    <description>高通 CEO 克里斯蒂亚诺·安蒙解析 AI 设备为何有望达到百亿规模，以及可穿戴设备、PC 和数据中心将如何重塑计算。  要点: AI 设备将达 100 亿台，超越手机，可穿戴设备与智能体是主要驱动力。 / 边缘将赢得 AI 竞赛，因为设备捕获的个人上下文至关重要。 / AI 推理将超越训练，能效和总拥有成本成为关键。</description>
   </item>
 </channel>
 </rss>
