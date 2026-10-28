@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 335 位人物 / 795 期访谈
+规模: 336 位人物 / 797 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -84,6 +84,7 @@
 - [Jan Leike / 扬·莱克](https://aipodcast.jasonlin.tech/pp/leike/): Alignment Lead, Anthropic — 3 期
 - [Marvin Schwaibold / 马文·施瓦博尔德](https://aipodcast.jasonlin.tech/pp/marvinschwaibold/): Product design leader at Shopify — 2 期
 - [Ari Weinstein / 阿里·温斯坦](https://aipodcast.jasonlin.tech/pp/ariweinstein/): Product & Engineering Lead, Computer Use, OpenAI — 2 期
+- [Rob Snyder / 罗布·斯奈德](https://aipodcast.jasonlin.tech/pp/robsnyder/): Startup Advisor, Author of The Power of Pull — 2 期
 - [Sundar Pichai / 桑达尔·皮查伊](https://aipodcast.jasonlin.tech/pp/sundarpichai/): CEO, Google & Alphabet — 2 期
 - [Brendan Foody / 布伦丹·富迪](https://aipodcast.jasonlin.tech/pp/brendanfoody/): CEO, Mercor — 2 期
 - [Ioannis Antonoglou / 扬尼斯·安东诺格鲁](https://aipodcast.jasonlin.tech/pp/antonoglou/): Co-founder & CTO, Reflection AI — 2 期
@@ -144,8 +145,8 @@
 - [Nad Chishtie / 纳德·奇什蒂](https://aipodcast.jasonlin.tech/pp/nadchishtie/): Founding Designer & Head of Design, Lovable — 2 期
 - [Michael Truell / 迈克尔·特鲁埃尔](https://aipodcast.jasonlin.tech/pp/truell/): Co-founder & CEO, Cursor — 2 期
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 2 期
+- [Katelyn Lesse / 凯特琳·莱斯](https://aipodcast.jasonlin.tech/pp/katelynlessea/): Head of Engineering, Anthropic — 1 期
 - [Ankur Moitra / 安库尔·莫伊特拉](https://aipodcast.jasonlin.tech/pp/ankurmoitra/): Professor of Mathematics, MIT — 1 期
-- [Rob Snyder / 罗布·斯奈德](https://aipodcast.jasonlin.tech/pp/robsnyder/): Startup Advisor, Author of The Power of Pull — 1 期
 - [Naveen Rao / 纳文·拉奥](https://aipodcast.jasonlin.tech/pp/naveenrao/): Founder & CEO, Unconventional AI — 1 期
 - [Farza Majeed / 法尔扎·马吉德](https://aipodcast.jasonlin.tech/pp/farzamajeed/): Founder, Hey Clicky; Buildspace — 1 期
 - [Rujul Zaparde / 鲁朱尔·扎帕德](https://aipodcast.jasonlin.tech/pp/rujulzaparde/): Co-founder & CEO, Zip — 1 期
@@ -344,9 +345,11 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
+- [How Anthropic Ships the World's #1 LLM: Inside the Claude Platform](https://aipodcast.jasonlin.tech/e/katelynlessea-latentsp-2026/) — Katelyn Lesse, Latent Space, 2026-10-27
 - [The New Full-Stack Designer: AI, Editing, and the Future of Product Design](https://aipodcast.jasonlin.tech/e/marvinschwaibold-ycombina-2026/) — Marvin Schwaibold, Y Combinator, 2026-10-26
 - [Why OpenAI Is Racing to Make Computer Use Superhuman](https://aipodcast.jasonlin.tech/e/ariweinstein-thea16zp-2026/) — Ari Weinstein, The a16z Podcast, 2026-10-26
 - [AI Crisis in Mathematics: Navier-Stokes, Riemann Hypothesis, and Complexity Theory — Ankur Moitra, Steven Brunton, and Alex Kontorovich on the Future of Math](https://aipodcast.jasonlin.tech/e/ankurmoitra-lexfridm-2026/) — Ankur Moitra, Lex Fridman Podcast, 2026-10-26
+- [The Power of Pull: Why Customer Demand Beats Pain Points](https://aipodcast.jasonlin.tech/e/robsnyder-techlead-2026/) — Rob Snyder, Tech Lead Journal, 2026-10-26
 - [An 86-Minute Guide to Finding Product-Market Fit](https://aipodcast.jasonlin.tech/e/robsnyder-lennyspo-2026/) — Rob Snyder, Lenny’s Podcast, 2026-10-25
 - [Inference Will Be a $10 Trillion Market: Naveen Rao on Energy, Hardware, and the AI Buildout](https://aipodcast.jasonlin.tech/e/naveenrao-20vc-2026/) — Naveen Rao, 20VC, 2026-10-24
 - [How to Actually Make Launch Videos That Convert](https://aipodcast.jasonlin.tech/e/farzamajeed-ycombina-2026/) — Farza Majeed, Y Combinator, 2026-10-23
@@ -382,8 +385,6 @@
 - [From Wet Lab to RL Env: 10,000 Drug-Discovery Campaigns in a Weekend — Ian Quigley, Leash Bio](https://aipodcast.jasonlin.tech/e/ianquigley-latentsp-2026/) — Ian Quigley, Latent Space, 2026-10-14
 - [Can Open Models Keep Up With OpenAI and Anthropic?](https://aipodcast.jasonlin.tech/e/lambert-thea16zp-2026/) — Nathan Lambert, The a16z Podcast, 2026-10-14
 - [Robinhood’s CEO on Letting AI Trade Your Money](https://aipodcast.jasonlin.tech/e/vladtenev-sourcesp-2026/) — Vlad Tenev, Sources Podcast, 2026-10-13
-- [Robots That Predict the Future: Dyna-2 and Physical AI with Jason Ma](https://aipodcast.jasonlin.tech/e/jasonma-latentsp-2026/) — Jason Ma, Latent Space, 2026-10-13
-- [David Silver & Lasse Espeholt on Building a Superlearner for the Age of Experience](https://aipodcast.jasonlin.tech/e/dsilver-training-2026/) — David Silver, Training Data, 2026-10-13
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml

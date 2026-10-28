@@ -15,6 +15,8 @@ const ALLOW=new Set(['https://aipodcast.jasonlin.tech','https://aipaper.jasonlin
   'https://ai.jasonlin.tech','https://hardware.jasonlin.tech','https://investor.jasonlin.tech','https://design.jasonlin.tech',
   // 个人主页 2026-08-23 接入,path 前缀 home:
   'https://jasonlin.tech','https://www.jasonlin.tech',
+  // 好设计两百年 2026-10-27 接入,path 前缀 gooddesign:
+  'https://gooddesign.jasonlin.tech',
   'http://localhost:8000','http://127.0.0.1:8000','http://localhost:8931','http://localhost:8932','null']);
 const cors=o=>({'Access-Control-Allow-Origin':ALLOW.has(o)?o:'https://aipodcast.jasonlin.tech',
   'Access-Control-Allow-Methods':'POST, GET, OPTIONS','Access-Control-Allow-Headers':'Content-Type','Vary':'Origin'});

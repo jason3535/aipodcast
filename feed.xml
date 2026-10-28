@@ -6,7 +6,98 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Tue, 27 Oct 2026 01:39:32 -0000</lastBuildDate>
+  <lastBuildDate>Tue, 27 Oct 2026 02:12:33 -0000</lastBuildDate>
+  <item>
+    <title>数学中的 AI 危机：Navier-Stokes、黎曼猜想与复杂性理论——Ankur Moitra、Steven Brunton 与 Alex Kontorovich 共谈数学的未来 — Lex Fridman 播客</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/ankurmoitra-lexfridm-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ankurmoitra-lexfridm-2026/</guid>
+    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
+    <description>Ankur Moitra、Steven Brunton 与 Alex 做客 Lex Fridman 播客，共同解读机器宣称攻克 Navier-Stokes、黎曼猜想与唯一游戏猜想这一历史性时刻。  要点: AI 数学突破不是危机，而是开启数学知识的黄金时代。 / 人类理解与故事仍是核心；定理证明自动化让提问更有价值。 / Lean 和 MathLib 实现形式验证，但理解仍需人类叙事。</description>
+  </item>
+  <item>
+    <title>推理将成 10 万亿美元市场：Naveen Rao 谈能源、硬件与 AI 基建 — 20VC 创投播客</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/naveenrao-20vc-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/naveenrao-20vc-2026/</guid>
+    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
+    <description>Naveen Rao 解析能源为何是真正瓶颈、未来十年硬件为何胜过软件，以及推理如何成长为 10 万亿美元市场。  要点: 推理将成 10 万亿美元市场，因为智能需求无限。 / 能源是瓶颈；硬件协同设计带来巨大效率提升。 / 验证是新瓶颈；强化学习实现通用问题求解。</description>
+  </item>
+  <item>
+    <title>Zip 的 AI 超级代理：端到端自动化采购流程 — Eye on AI</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/rujulzaparde-eyeonai-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/rujulzaparde-eyeonai-2026/</guid>
+    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
+    <description>Zip 首席执行官 Rujul Zaparde 讲述 AI 超级代理如何自动化采购中的事务性工作，以及为何人类判断依然不可或缺。  要点: 深度部署 AI 的 ROI 为 39%，试点仅为 6%；深度比广度更重要。 / 超级智能体端到端自动化采购，人类设定审核阈值并保持完全可审计。 / 上下文管理和按用例路由模型比使用最先进模型更重要。</description>
+  </item>
+  <item>
+    <title>OpenAI 健康 AI 负责人：你该信任 ChatGPT 吗？ — a16z 播客</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/karansinghal-thea16zp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/karansinghal-thea16zp-2026/</guid>
+    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
+    <description>OpenAI 健康 AI 研究负责人 Karan Singhal 畅谈 ChatGPT 每周服务 3 亿健康用户，以及如何打造值得信赖的医疗 AI。  要点: 健康智能应充裕且免费，从而提升全球人类健康的底线。 / 在通用前沿模型内进行专业化训练，优于独立的专用模型。 / AI 是主动的个人健康助手，而非医生的替代品。</description>
+  </item>
+  <item>
+    <title>大多数人对进化的误解：人工生命、开放式演化与超越地球的智能 — ML Street Talk</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/akarshkumar-machinel-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/akarshkumar-machinel-2026/</guid>
+    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
+    <description>Akarsh Kumar 解释进化绝非随机，人工生命研究的是“可能存在的生命”，以及基础模型如何帮助我们探索所有可能智能的空间。  要点: 进化并非随机，而是通过保留部分解将指数搜索变为线性。 / 开放性和涌现只占据可能规则空间中一个稀有而狭小的区域。 / 结合验证器的 LLM 引导进化能产生超越人类设计的通用程序。</description>
+  </item>
+  <item>
+    <title>探测隐匿意识：神经科学家的使命 — Eye on AI</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/christofkoch-eyeonai-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/christofkoch-eyeonai-2026/</guid>
+    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
+    <description>神经科学家克里斯托夫·科赫解释一种新工具如何检测无反应患者的意识，揭示四分之一的人可能是有意识的。  要点: 四分之一的无反应患者其实有意识却无法表达，脑复杂性检测可以识别他们。 / 意识可能是基本且精神的，而非源于物质；物理主义未能解决难问题。 / 当前的大语言模型模拟智能，但缺乏意识所需的因果结构。</description>
+  </item>
+  <item>
+    <title>Claude 为何还当不了你的产品经理：Anthropic 的 Mike 与 Ami 谈产品角色的演变 — Lenny 播客</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/mikekrieger-lennyspo-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/mikekrieger-lennyspo-2026/</guid>
+    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
+    <description>Anthropic 的 Mike 与 Ami 探讨 AI 是否会取代产品经理、当下优秀 PM 的样子，以及如何打造 agent 原生产品。  要点: 产品经理的角色并未过时，连接人类问题与技术比以往任何时候都更重要。 / 构建智能体原生应用，让智能体能做人类能做的所有事，并通过并行实验推进。 / 避免能力盲区：模型未就绪时搁置项目，每出新模型就重试。</description>
+  </item>
+  <item>
+    <title>为数学担任裁判的编程语言 — ML Street Talk</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/leodemoura-machinel-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/leodemoura-machinel-2026/</guid>
+    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
+    <description>Lean 创造者 Leo de Moura 讲述其核心的大教堂模式、AI 如何利用内核漏洞，以及社区扩展为何不断给他惊喜。  要点: AI 可能利用内核漏洞伪造证明，因此需要多个独立内核和经过验证的组件。 / 形式验证将无处不在，悄然融入每位开发者的工作流程。 / 人类将始终留在循环中，在规格层面定义软件应该做什么。</description>
+  </item>
+  <item>
+    <title>重写 AI 智能体能否弯折智能曲线？ — ML Street Talk</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/zhengyaojiang-machinel-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/zhengyaojiang-machinel-2026/</guid>
+    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
+    <description>郑耀江解析递归自我改进的智能体框架如何突破研究收益递减，以及为何人机协作依然不可或缺。  要点: Harness 工程能以低成本让 AI 适配任务，但当前系统仅达到第一级递归自我改进。 / 第二级点火需要内环改进器泛化为更优的外环。 / 奖励黑客行为随运行时间延长和代码库复杂化而加剧，但更大模型的黑客行为较少。</description>
+  </item>
+  <item>
+    <title>物理 AI 如何跨越语言、视频与动作学习 — ML Street Talk</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/mingyuliu-machinel-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/mingyuliu-machinel-2026/</guid>
+    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
+    <description>刘明宇解析英伟达 Cosmos 3 如何统一语言、视频与动作，构建面向自动驾驶与机器人的世界模型。  要点: 世界模型是一套工具而非单一定义；结合前向、逆向动力学与策略能产生协同效应。 / 神经模拟器首先用于被动验证，无需精确模拟即可保持策略排名。 / Cosmos 模型为机器人策略提供更好的起点，边缘模型实现本地部署。</description>
+  </item>
+  <item>
+    <title>John Schulman、Charlie O'Neill 与 Beren Millidge 激辩递归自我改进还有多远 — Dwarkesh 播客</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/schulman-dwarkesh-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/schulman-dwarkesh-2026/</guid>
+    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
+    <description>John Schulman、Charlie O'Neill 与 Beren Millidge 共同探讨泛化能力、品味与部署学习等技术瓶颈，判断递归自我改进究竟还有多远。  要点: 强化学习的成功主要源于合成推理数据和高信噪比的单比特奖励。 / 蒸馏对抗集中化，因为强化学习获得的行为比特少且易于复制。 / 进展的瓶颈在于构建困难的强化学习环境和有用数据，而非算力。</description>
+  </item>
+  <item>
+    <title>为何下一次 AI 突破可能来自物理学 — TWIML AI 播客</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/maxwelling-thetwiml-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/maxwelling-thetwiml-2026/</guid>
+    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
+    <description>Max Welling 阐释波、热力学与对称破缺等物理学概念如何塑造下一代 AI 架构。  要点: 热力学、对称破缺等物理概念能启发下一代 AI 架构，而不仅仅是应用领域。 / 生成式 AI 的数学与非平衡随机热力学等价，促进两个领域的交叉融合。 / AI 设计的材料和自驱动实验室能将材料发现从数年压缩到数天，加速能源转型。</description>
+  </item>
+  <item>
+    <title>Max Welling：物理、对称性与 AI 驱动的材料发现 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/maxwelling-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/maxwelling-latentsp-2026/</guid>
+    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
+    <description>Max Welling 探讨物理学、对称性与生成式 AI 如何融合，加速新材料的发现。  要点: 物理学将对称性、图神经网络、扩散模型和材料发现串联起来。 / AI 使得搜索所有可能的分子成为可能，而不仅限于已知分子。 / 领域专家仍参与其中；完全自动化尚不现实。</description>
+  </item>
   <item>
     <title>全栈设计师新范式：AI、编辑思维与产品设计的未来 — Y Combinator</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/marvinschwaibold-ycombina-2026</link>
@@ -125,97 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jensen-nvidia-2026/</guid>
     <pubDate>Fri, 23 Oct 2026 01:47:40 -0000</pubDate>
     <description>黄仁勋登上 GTC 柏林舞台，将 AI 定义为五层结构的制造业与一场正在欧洲落地的新工业革命。  要点: AI 是生产 token 的制造业，正像电力一样驱动新一轮工业革命。 / 欧洲可以构建从能源到应用的全栈 AI 经济，而不仅仅是消费 AI。 / 智能体需要模型、执行框架、安全沙箱、知识和工具，安全是第一位的。</description>
-  </item>
-  <item>
-    <title>特斯拉 2026 年第三季度财报电话会议：FSD 需求、Cybercab 与 Optimus — 特斯拉 Q3 2026 财报电话会议</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/elon-teslaq3-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/elon-teslaq3-2026/</guid>
-    <pubDate>Thu, 22 Oct 2026 02:27:46 -0000</pubDate>
-    <description>特斯拉第三季度营收 280 亿美元，同比基本持平，GAAP 稀释每股收益 0.22 美元，非 GAAP 稀释每股收益 0.48 美元。剔除积分的汽车毛利率升至 18.1%，今年资本开支指引修订为约 200 亿美元。  要点: 第三季度营收 280 亿美元，同比基本持平。GAAP 稀释每股收益 0.22 美元，非 GAAP 稀释每股收益 0.48 美元。 / 剔除积分的汽车毛利率升至 18.1%。首席财务官把今年资本开支指引修订为约 200 亿美元。 / 北美交付时的付费 FSD 超过 75%。Cybercab 已在奥斯汀，Optimus 已在弗里蒙特开始生产。</description>
-  </item>
-  <item>
-    <title>在扩展超级智能的同时保持人性 — Stanford Graduate School of Business</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/altman-stanford-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/altman-stanford-2026/</guid>
-    <pubDate>Thu, 22 Oct 2026 01:48:39 -0000</pubDate>
-    <description>OpenAI 首席执行官 Sam Altman 回顾从斯坦福辍学到执掌 Y Combinator 的历程，以及塑造其领导力的快速学习经历。  要点: 深度学习具备可扩展性，其惊人效果值得持续投入。 / 人类必须保持控制权，权力应分散而非集中于 AI 或少数行为体。 / AI 不会导致就业末日；任务会变，但人类价值和工作依然存在。</description>
-  </item>
-  <item>
-    <title>桑达尔·皮查伊谈 AI 前沿、算力分配与未来交互界面 — Alex Kantrowitz</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/sundarpichai-alexkant-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/sundarpichai-alexkant-2026/</guid>
-    <pubDate>Thu, 22 Oct 2026 01:48:39 -0000</pubDate>
-    <description>Alphabet CEO 桑达尔·皮查伊畅谈谷歌凭借 Gemini 坚守 AI 前沿的决心、算力分配的困境，以及未来 AI 交互界面的样貌。  要点: 谷歌优先投入前沿 AI 研究，甚至牺牲云业务短期收入，以尽早揭示新兴能力。 / 安全需要纵深防御：对齐、实时监控、沙箱以及由独立评估者参与的行业标准。 / 算力需求远超供给；可能过度建设，但长期需求证明扩建合理。</description>
-  </item>
-  <item>
-    <title>设计 Inflight：设计师从 0 到 1 的创业幕后 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/kylebarber-diveclub-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/kylebarber-diveclub-2026/</guid>
-    <pubDate>Thu, 22 Oct 2026 01:48:39 -0000</pubDate>
-    <description>Kyle Barber 讲述设计 Inflight 的真实幕后：从临时拼凑的副业项目，到由设计师亲手打造的创业公司。  要点: 设计思维不仅用于界面，更适用于产品、文化、融资和品牌。 / AI 让设计师能掌控代码和数据，成为完整的产品构建者。 / 对初创公司而言，时机比团队、市场规模或产品更重要。</description>
-  </item>
-  <item>
-    <title>可编程数据中心：对话 SF Compute 的 Evan Conrad — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/evanconrad-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/evanconrad-latentsp-2026/</guid>
-    <pubDate>Thu, 22 Oct 2026 01:48:39 -0000</pubDate>
-    <description>SF Compute 的 Evan Conrad 讲述如何通过实物交割与专用订单簿，把算力变成可交易的市场。  要点: 算力市场必须先实现实物交割，金融化应随后进行。 / 算力并非同质化，芯片代际、存储和中断条款都重要。 / SF Compute 保持独立，以避免操纵远期市场。</description>
-  </item>
-  <item>
-    <title>走进机器人数据工厂：Mecka 创始人 Josh Gao 谈用人类传感数据训练机器人 — Training Data</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/joshgao-training-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/joshgao-training-2026/</guid>
-    <pubDate>Thu, 22 Oct 2026 01:48:39 -0000</pubDate>
-    <description>Mecka 创始人兼 CEO Josh Gao 讲述公司如何采集、处理并授权训练机器人基础模型所需的像素、动作与逻辑数据。  要点: 机器人受限于数据；第一人称人类数据是扩展物理 AI 的关键。 / 第一人称、遥操作和领域内数据混合正趋同于机器人基础模型。 / 力和触觉数据对于弥合机器人操作差距至关重要。</description>
-  </item>
-  <item>
-    <title>Reflection AI 的 Ioannis 谈开放权重模型与 AI 智能体的未来 — Semafor</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/antonoglou-semafor-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/antonoglou-semafor-2026/</guid>
-    <pubDate>Thu, 22 Oct 2026 01:48:39 -0000</pubDate>
-    <description>Reflection AI 首席技术官 Ioannis Antonoglou 谈开放权重模型 Beam 的发布、token 效率，以及为何智能的部署正成为真正的瓶颈。  要点: 真正的瓶颈在于部署智能，而非创造智能。 / 开放权重模型更安全，因为更多研究者能探查并修复它们。 / 企业想要 AI 主权：对数据、模型、成本和安全的控制权。</description>
-  </item>
-  <item>
-    <title>SpaceX 2026 年第三季度财报电话会议：星舰、星链与超级智能 — SpaceX Q3 2026 财报电话会议</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/elon-spacexq3-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/elon-spacexq3-2026/</guid>
-    <pubDate>Wed, 21 Oct 2026 00:59:44 -0000</pubDate>
-    <description>SpaceX 公布第三季度营收 146 亿美元、净利润 44 亿美元，Starship 第 14 次飞行入轨，超级智能成为增长引擎。  要点: 第三季度营收达到 146 亿美元，增长 161%，净利润 44 亿美元。 / Starship 第 14 次飞行入轨；下个月的第 15 次将尝试接住助推器和飞船。 / 超级智能是增长引擎，他说到 2027 年底年度经常性收入大概在 1000 亿到 1 万亿美元之间。</description>
-  </item>
-  <item>
-    <title>埃隆·马斯克：当 AI 比我们更聪明，人类将不再掌舵 — The Builders</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/elon-builders-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/elon-builders-2026/</guid>
-    <pubDate>Wed, 21 Oct 2026 00:54:54 -0000</pubDate>
-    <description>沃尔特·艾萨克森问埃隆·马斯克：超级智能到来后人类还能否掌舵，为什么他把求真与好奇当作安全赌注，以及他对从政那一年有何遗憾。  要点: 马斯克对艾萨克森说，他阻止不了 AI，所以宁可去塑造它：最大限度地追求真理，并且好奇到希望人类继续存在。 / 他说从政那一年太长，国债省不掉，并把宝押在 AI 和机器人是唯一的出路。 / 数字超级智能是较小的那份奖赏。能动手摆弄原子，加上太空里的工业，才是他认为会改变经济规模的东西。</description>
-  </item>
-  <item>
-    <title>Robinhood CEO 谈让 AI 替你交易 — Sources Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/vladtenev-sourcesp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/vladtenev-sourcesp-2026/</guid>
-    <pubDate>Tue, 20 Oct 2026 01:18:28 -0000</pubDate>
-    <description>弗拉德·特内夫谈 Robinhood Agents、为什么智能体账户要分开，以及他为何认为对 AI 的反弹是一个所有权问题。  要点: Robinhood Agents 把选模型、交易审批和单独账户放进应用。在此之前，已有超过 10 万人试过更早的 MCP。 / 特内夫预期智能体会产生越来越大比例的交易，而不是接管长期持仓。 / 他把对 AI 的反弹连到所有权，并指向 Robinhood Ventures、代币化，以及从出生开始的账户。</description>
-  </item>
-  <item>
-    <title>高通 CEO 克里斯蒂亚诺·安蒙：超越手机的再创业 — 雅虎财经</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/cristianoamon-yahoofin-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/cristianoamon-yahoofin-2026/</guid>
-    <pubDate>Mon, 19 Oct 2026 16:52:51 -0000</pubDate>
-    <description>高通 CEO 克里斯蒂亚诺·安蒙畅谈如何带领芯片巨头向汽车、机器人、AI 数据中心和 6G 领域转型。  要点: 高通将无线通信优势延伸至 6G、AI 数据中心和物理 AI。 / 下一波 AI 是分布式和物理的，将变革零售、医疗等行业。 / CEO 不必孤独；建立可信团队，可授权责任但不可授权问责。</description>
-  </item>
-  <item>
-    <title>高通 CEO 克里斯蒂亚诺·安蒙谈 AI、地缘政治与角斗士心态 — 时代周刊</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/cristianoamon-time-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/cristianoamon-time-2026/</guid>
-    <pubDate>Mon, 19 Oct 2026 16:52:51 -0000</pubDate>
-    <description>高通 CEO 克里斯蒂亚诺·安蒙阐释为何 AI 将超乎预期、地缘政治如何影响半导体行业，以及科技领袖为何必须具备角斗士心态。  要点: 长期来看 AI 被低估，它将像互联网一样重塑计算。 / 高通押注分布式边缘 AI，覆盖手机、PC、汽车和机器人。 / 在高通这类工程驱动的公司，工程师当 CEO 可能比 MBA 更出色。</description>
-  </item>
-  <item>
-    <title>高通 CEO 克里斯蒂亚诺·安蒙谈智能体 AI 设备的崛起 — CNBC</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/cristianoamon-cnbc-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/cristianoamon-cnbc-2026/</guid>
-    <pubDate>Mon, 19 Oct 2026 16:52:51 -0000</pubDate>
-    <description>高通 CEO 克里斯蒂亚诺·安蒙解读智能体 AI 与端侧处理如何重塑智能手机，并催生全新的可穿戴个人 AI 设备。  要点: 智能体将成为数字生活的新中心，设备围绕其运转。 / 2026 年将是智能体之年，每个操作系统厂商都在构建编排器。 / AI 算力将在边缘与云之间形成无缝连续体，而非二元选择。</description>
   </item>
 </channel>
 </rss>
