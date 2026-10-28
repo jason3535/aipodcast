@@ -6,7 +6,21 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Tue, 27 Oct 2026 02:12:33 -0000</lastBuildDate>
+  <lastBuildDate>Wed, 28 Oct 2026 01:38:35 -0000</lastBuildDate>
+  <item>
+    <title>Anthropic 如何打造全球第一的大模型：深入 Claude 平台 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/katelynlessea-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/katelynlessea-latentsp-2026/</guid>
+    <pubDate>Wed, 28 Oct 2026 01:38:35 -0000</pubDate>
+    <description>Katelyn Lesse 与 Angela Jiang 解析 Anthropic 如何高效打造全球顶尖模型，从 Claude 平台、智能体工作流到驱动其业务的增长飞轮。  要点: Anthropic 的飞轮：更好的模型驱动更多使用，更多使用又资助能力投资。 / 将智能体的“大脑”（执行框架）与“手”（沙箱）分离，以提升安全、延迟和可靠性。 / CPU 算力如今和 GPU 一样紧张，需要 Rust 重写和容量规划。</description>
+  </item>
+  <item>
+    <title>拉动力法则：为何客户需求比痛点更重要 — Tech Lead Journal</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/robsnyder-techlead-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/robsnyder-techlead-2026/</guid>
+    <pubDate>Wed, 28 Oct 2026 01:38:35 -0000</pubDate>
+    <description>Rob Snyder 解析为何追逐痛点会失败，并分享拉动力框架中促使客户购买的四个必要条件。  要点: 需求是用户当下优先推进的项目，而非痛点；先找到一个非买不可的客户。 / 别做用户访谈；去现场观察，用真实销售检验需求。 / 先以服务形式销售，之后再自动化；让产品显得小巧以减少异议。</description>
+  </item>
   <item>
     <title>数学中的 AI 危机：Navier-Stokes、黎曼猜想与复杂性理论——Ankur Moitra、Steven Brunton 与 Alex Kontorovich 共谈数学的未来 — Lex Fridman 播客</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/ankurmoitra-lexfridm-2026</link>
@@ -202,20 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/alexdanilowicz-ycombina-2026/</guid>
     <pubDate>Fri, 23 Oct 2026 01:47:40 -0000</pubDate>
     <description>Magic Patterns 首席执行官 Alex Danilowicz 讲述如何为非设计师打造 AI 设计工具、在模型快速迭代中保持差异化，以及为何“客户就是信仰”。  要点: Magic Patterns 通过自愿内部试用和每日与客户交流来打造 AI 设计工具。 / 设计关乎用户体验，而非像素级细节；要抵制过度动画和渐变等 AI 默认效果。 / 落地页应面向用户而非投资者；滚动劫持永远不会带来转化。</description>
-  </item>
-  <item>
-    <title>a16z 当下最想投资的前沿构想 — The a16z Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/andreessen-thea16zp-2026c</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/andreessen-thea16zp-2026c/</guid>
-    <pubDate>Fri, 23 Oct 2026 01:47:40 -0000</pubDate>
-    <description>马克·安德森、本·霍洛维茨与克里斯·迪克森阐释 a16z 为何将加密基金扩展为 a16z Frontier，以押注最具野心的“外行星”创业者。  要点: AI 在企业间造成史上最大的采用鸿沟；个人采用快于机构，创业公司将激增。 / 宁早勿晚；前沿投资接受品类风险，因为好的技术想法终会成功。 / 开源 AI 对防止权力集中至关重要，AI 原生媒体将与电影有本质不同。</description>
-  </item>
-  <item>
-    <title>NVIDIA GTC 柏林 2026：黄仁勋谈 AI 工业革命 — NVIDIA</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/jensen-nvidia-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jensen-nvidia-2026/</guid>
-    <pubDate>Fri, 23 Oct 2026 01:47:40 -0000</pubDate>
-    <description>黄仁勋登上 GTC 柏林舞台，将 AI 定义为五层结构的制造业与一场正在欧洲落地的新工业革命。  要点: AI 是生产 token 的制造业，正像电力一样驱动新一轮工业革命。 / 欧洲可以构建从能源到应用的全栈 AI 经济，而不仅仅是消费 AI。 / 智能体需要模型、执行框架、安全沙箱、知识和工具，安全是第一位的。</description>
   </item>
 </channel>
 </rss>

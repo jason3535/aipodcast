@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 336 位人物 / 797 期访谈
+规模: 337 位人物 / 798 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -169,6 +169,7 @@
 - [Rhiannon Bell / 里安农·贝尔](https://aipodcast.jasonlin.tech/pp/rhiannonbell/): VP of UX, Google Search — 1 期
 - [Amin Vahdat / 阿明·瓦赫达特](https://aipodcast.jasonlin.tech/pp/aminvahdat/): Chief Technologist for AI Infrastructure, Google — 1 期
 - [Yash Patil / 亚什·帕蒂尔](https://aipodcast.jasonlin.tech/pp/yashpatil/): CEO, Applied Compute; ex-OpenAI Researcher — 1 期
+- [Lauren Tan / 劳伦·谭](https://aipodcast.jasonlin.tech/pp/laurentan/): Principal Engineer, SpaceXAI (Grok Bot) — 1 期
 - [Alex Zhang / 亚历克斯·张](https://aipodcast.jasonlin.tech/pp/alexzhang/): PhD Researcher, MIT — 1 期
 - [Alexander Embiricos / 亚历山大·恩比里科斯](https://aipodcast.jasonlin.tech/pp/embiricos/): Product Lead, Dots, OpenAI — 1 期
 - [Christof Koch / 克里斯托夫·科赫](https://aipodcast.jasonlin.tech/pp/christofkoch/): Meritorious Investigator, Allen Institute — 1 期
