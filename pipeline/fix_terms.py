@@ -59,8 +59,8 @@ RULES = [
     # 所以 bare Grock 用函数式替换,看前后 160 字符有没有芯片语境词再决定。
     # "Grok Bot" 是准确写法;自动字幕把它听成 Grockpot / Grockbot,这两条必须排在 bare 规则前。
     (re.compile(BL+r"Grockpots?"+BR), "Grok Bot"),
-    (re.compile(BL+r"Gro[ck]{1,2}kbots"+BR, re.I), "Grok Bots"),
-    (re.compile(BL+r"Gro[ck]{1,2}kbot"+BR, re.I), "Grok Bot"),
+    (re.compile(BL+r"Gro(?:[ck]{1,2}k|g)bots"+BR, re.I), "Grok Bots"),  # 2026-10-28 Lauren Tan×Pocock 期听成 Grogbot ×8
+    (re.compile(BL+r"Gro(?:[ck]{1,2}k|g)bot"+BR, re.I), "Grok Bot"),
     (re.compile(BL+r"Grock模型"), "Grok 模型"),
     (re.compile(BL+r"grock"+BR, re.I),
      lambda m: "Groq" if _CHIPCTX.search(m.string[max(0, m.start()-160):m.start()+160]) else "Grok"),
