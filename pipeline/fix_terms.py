@@ -61,6 +61,8 @@ RULES = [
     (re.compile(BL+r"Grockpots?"+BR), "Grok Bot"),
     (re.compile(BL+r"Gro(?:[ck]{1,2}k|g)bots"+BR, re.I), "Grok Bots"),  # 2026-10-28 Lauren Tan×Pocock 期听成 Grogbot ×8
     (re.compile(BL+r"Gro(?:[ck]{1,2}k|g)bot"+BR, re.I), "Grok Bot"),
+    (re.compile(BL+r"Graph ?bots"+BR), "Grok Bots"),  # 2026-10-28 同期另一种误听 Graphbot ×13(Grok Bot 产品名,没有叫 Graphbot 的东西)
+    (re.compile(BL+r"Graph ?bot"+BR), "Grok Bot"),
     (re.compile(BL+r"Grock模型"), "Grok 模型"),
     (re.compile(BL+r"grock"+BR, re.I),
      lambda m: "Groq" if _CHIPCTX.search(m.string[max(0, m.start()-160):m.start()+160]) else "Grok"),
