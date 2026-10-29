@@ -12,7 +12,7 @@
     <link>https://aipodcast.jasonlin.tech/#/episode/laurentan-mattpoco-2026</link>
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/laurentan-mattpoco-2026/</guid>
     <pubDate>Wed, 28 Oct 2026 08:31:03 -0000</pubDate>
-    <description>Lauren 分享如何攀登智能体信任阶梯，在 SpaceX 实现每月交付数千个 PR。</description>
+    <description>Lauren 分享如何攀登智能体信任阶梯，在 SpaceX 实现每月交付数千个 PR。  要点: 验证是攀登智能体信任阶梯的最重要技能。 / 工程师的新工作是构建环境——技能、约束、代码检查，而不仅仅是写代码。 / 当失败模式反复出现时，抽样检查 PR 并修复环境，而非针对单个智能体。</description>
   </item>
   <item>
     <title>Anthropic 如何打造全球第一的大模型：深入 Claude 平台 — Latent Space</title>

@@ -171,7 +171,9 @@ def fetch_transcript(url):
         #   `**Jensen Huang**— President and Chief Executive Officer`  紧跟破折号、头衔裸文本
         # 2026-08-28 只写了第一种,结果 Jensen 的 8 段回答全被并进上一位分析师的 turn ——
         # 正是站点最忌讳的「把两个人的话合并」。加新来源前务必把该稿所有 ** 开头行打印一遍。
-        m = re.match(r"^\*\*([A-Z][A-Za-z .'’\-]{2,40})\*\*\s*[—–-]?\s*_?[^_\n]{0,80}_?\s*$", ln)
+        #   `**Sundar Pichai (CEO)**`  2026-10-29 Benzinga 新版式:头衔放括号里、在 ** 内 —— 不放行的话
+        #   整场只剩 OPERATOR 一个发言人,CEO/CFO/分析师全并进接线员的 turn。
+        m = re.match(r"^\*\*([A-Z][A-Za-z .'’\-]{2,40})(?:\s*\([^)\n]{1,70}\))?\*\*\s*[—–-]?\s*_?[^_\n]{0,80}_?\s*$", ln)
         if m:
             cur = m.group(1).strip()
             out.append(f"\n[{cur}]: ")
