@@ -3,14 +3,14 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 337 位人物 / 798 期访谈
+规模: 337 位人物 / 800 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
 - [Sam Altman / 萨姆·奥尔特曼](https://aipodcast.jasonlin.tech/pp/altman/): CEO, OpenAI — 25 期
 - [Elon Musk / 埃隆·马斯克](https://aipodcast.jasonlin.tech/pp/elon/): Founder, xAI — 21 期
+- [Dario Amodei / 达里奥·阿莫迪](https://aipodcast.jasonlin.tech/pp/dario/): CEO, Anthropic — 18 期
 - [Jensen Huang / 黄仁勋](https://aipodcast.jasonlin.tech/pp/jensen/): Founder & CEO, NVIDIA — 17 期
-- [Dario Amodei / 达里奥·阿莫迪](https://aipodcast.jasonlin.tech/pp/dario/): CEO, Anthropic — 17 期
 - [Cristiano Amon / 克里斯蒂亚诺·安蒙](https://aipodcast.jasonlin.tech/pp/cristianoamon/): President & CEO, Qualcomm — 14 期
 - [Naval Ravikant / 纳瓦尔·拉维坎特](https://aipodcast.jasonlin.tech/pp/naval/): Co-founder, AngelList; angel investor & philosopher — 14 期
 - [Greg Brockman / 格雷格·布罗克曼](https://aipodcast.jasonlin.tech/pp/brockman/): President & Co-founder, OpenAI — 13 期
@@ -57,6 +57,7 @@
 - [Aravind Srinivas / 阿拉文德·斯里尼瓦斯](https://aipodcast.jasonlin.tech/pp/aravind/): Co-founder & CEO, Perplexity — 4 期
 - [Zico Kolter / 齐科·科尔特](https://aipodcast.jasonlin.tech/pp/kolter/): Professor, CMU · OpenAI board — 4 期
 - [Gustav Söderström / 古斯塔夫·瑟德斯特伦](https://aipodcast.jasonlin.tech/pp/gustav/): Co-President & CPTO, Spotify — 4 期
+- [Sundar Pichai / 桑达尔·皮查伊](https://aipodcast.jasonlin.tech/pp/sundarpichai/): CEO, Google & Alphabet — 3 期
 - [Ethan Mollick / 伊桑·莫利克](https://aipodcast.jasonlin.tech/pp/ethanmollick/): Professor, Wharton School — 3 期
 - [Harrison Chase / 哈里森·蔡斯](https://aipodcast.jasonlin.tech/pp/harrisonchase/): Co-founder & CEO, LangChain — 3 期
 - [Arvind Jain / 阿尔温德·贾恩](https://aipodcast.jasonlin.tech/pp/arvindjain/): Founder & CEO, Glean — 3 期
@@ -85,7 +86,6 @@
 - [Marvin Schwaibold / 马文·施瓦博尔德](https://aipodcast.jasonlin.tech/pp/marvinschwaibold/): Product design leader at Shopify — 2 期
 - [Ari Weinstein / 阿里·温斯坦](https://aipodcast.jasonlin.tech/pp/ariweinstein/): Product & Engineering Lead, Computer Use, OpenAI — 2 期
 - [Rob Snyder / 罗布·斯奈德](https://aipodcast.jasonlin.tech/pp/robsnyder/): Startup Advisor, Author of The Power of Pull — 2 期
-- [Sundar Pichai / 桑达尔·皮查伊](https://aipodcast.jasonlin.tech/pp/sundarpichai/): CEO, Google & Alphabet — 2 期
 - [Brendan Foody / 布伦丹·富迪](https://aipodcast.jasonlin.tech/pp/brendanfoody/): CEO, Mercor — 2 期
 - [Ioannis Antonoglou / 扬尼斯·安东诺格鲁](https://aipodcast.jasonlin.tech/pp/antonoglou/): Co-founder & CTO, Reflection AI — 2 期
 - [David Silver / 大卫·西尔弗](https://aipodcast.jasonlin.tech/pp/dsilver/): Principal Research Scientist, DeepMind — 2 期
@@ -346,7 +346,9 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
+- [Alphabet Q3 2026 Earnings: AI Momentum and Gemini 4](https://aipodcast.jasonlin.tech/e/sundarpichai-alphabet-2026b/) — Sundar Pichai, Alphabet Q3 2026 Earnings Call, 2026-10-28
 - [How Anthropic Ships the World's #1 LLM: Inside the Claude Platform](https://aipodcast.jasonlin.tech/e/katelynlessea-latentsp-2026/) — Katelyn Lesse, Latent Space, 2026-10-27
+- [Dario & Daniela Amodei: Superintelligent AI and Humanity's Fate](https://aipodcast.jasonlin.tech/e/dario-thebuild-2026/) — Dario Amodei, The Builders, 2026-10-27
 - [The New Full-Stack Designer: AI, Editing, and the Future of Product Design](https://aipodcast.jasonlin.tech/e/marvinschwaibold-ycombina-2026/) — Marvin Schwaibold, Y Combinator, 2026-10-26
 - [Why OpenAI Is Racing to Make Computer Use Superhuman](https://aipodcast.jasonlin.tech/e/ariweinstein-thea16zp-2026/) — Ari Weinstein, The a16z Podcast, 2026-10-26
 - [AI Crisis in Mathematics: Navier-Stokes, Riemann Hypothesis, and Complexity Theory — Ankur Moitra, Steven Brunton, and Alex Kontorovich on the Future of Math](https://aipodcast.jasonlin.tech/e/ankurmoitra-lexfridm-2026/) — Ankur Moitra, Lex Fridman Podcast, 2026-10-26
@@ -384,8 +386,6 @@
 - [Mercor's Brendan Foody on Data, Evals & the Last Human Job](https://aipodcast.jasonlin.tech/e/brendanfoody-southpar-2026/) — Brendan Foody, South Park Commons, 2026-10-15
 - [Reflection AI's Ioannis on Open-Weight Models and the Future of AI Agents](https://aipodcast.jasonlin.tech/e/antonoglou-semafor-2026/) — Ioannis Antonoglou, Semafor, 2026-10-14
 - [From Wet Lab to RL Env: 10,000 Drug-Discovery Campaigns in a Weekend — Ian Quigley, Leash Bio](https://aipodcast.jasonlin.tech/e/ianquigley-latentsp-2026/) — Ian Quigley, Latent Space, 2026-10-14
-- [Can Open Models Keep Up With OpenAI and Anthropic?](https://aipodcast.jasonlin.tech/e/lambert-thea16zp-2026/) — Nathan Lambert, The a16z Podcast, 2026-10-14
-- [Robinhood’s CEO on Letting AI Trade Your Money](https://aipodcast.jasonlin.tech/e/vladtenev-sourcesp-2026/) — Vlad Tenev, Sources Podcast, 2026-10-13
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
