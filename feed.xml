@@ -6,7 +6,21 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Wed, 28 Oct 2026 08:31:03 -0000</lastBuildDate>
+  <lastBuildDate>Thu, 29 Oct 2026 03:01:11 -0000</lastBuildDate>
+  <item>
+    <title>Alphabet 2026 年第三季度财报：AI 势头与 Gemini 4 — Alphabet Q3 2026 财报电话会议</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/sundarpichai-alphabet-2026b</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/sundarpichai-alphabet-2026b/</guid>
+    <pubDate>Thu, 29 Oct 2026 03:01:11 -0000</pubDate>
+    <description>Sundar 强调 Alphabet 营收增长 25%、云业务增长 103%，以及 Gemini 4 系列模型推动使用量创下新高。  要点: AI 投入推动云收入创纪录，查询量增速创五年新高。 / Gemini 4 系列（Argon、Carbon）领跑前沿并提升内部生产力。 / 智能体 AI 对广告和搜索是增量，不会蚕食变现。</description>
+  </item>
+  <item>
+    <title>Dario 与 Daniela Amodei：超级智能 AI 与人类命运 — The Builders</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/dario-thebuild-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dario-thebuild-2026/</guid>
+    <pubDate>Thu, 29 Oct 2026 03:01:11 -0000</pubDate>
+    <description>Dario 与 Daniela Amodei 探讨超级智能 AI 的崛起、人类控制的终结及其对人类未来的意义。  要点: GPT-2 验证了缩放定律：模型越大，越连贯、越有能力。 / 教 AI 原则而非死板规则，能带来更好的泛化和稳健的道德。 / AI 应提供物质丰裕，让人追求多元的美好生活愿景。</description>
+  </item>
   <item>
     <title>每月交付 2500 个 PR：Lauren 谈智能体信任阶梯 — Matt Pocock</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/laurentan-mattpoco-2026</link>
@@ -202,20 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ethanmollick-theprofg-2026/</guid>
     <pubDate>Fri, 23 Oct 2026 01:47:40 -0000</pubDate>
     <description>伊桑·莫利克解析 AI 的指数级增长、锯齿状能力边界与落地滞后，并探讨智能体系统为何可能给银行体系带来压力。  要点: 尽管 AI 呈指数级进步，其锯齿状前沿与采用滞后使人类仍不可或缺。 / 更多 AI 降低组织成本，反而创造更多人类工作而非减少。 / 把 AI 当挑战你的导师而非拐杖；感受学习之痛。</description>
-  </item>
-  <item>
-    <title>为什么 AI 算力是长方形的：Erik Bernhardsson 谈打造 Modal — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/erikbernhardsson-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/erikbernhardsson-latentsp-2026/</guid>
-    <pubDate>Fri, 23 Oct 2026 01:47:40 -0000</pubDate>
-    <description>Modal 首席执行官 Erik Bernhardsson 讲述他在 Spotify 构建推荐系统的经历如何促使他打造 AI 基础设施平台，并在两年内实现约 50 倍增长。  要点: AI 基础设施必须为 GPU 从零重建，而非在 Kubernetes/Docker 上包装。 / 聚合众多客户可平滑需求，从而提供灵活的按需容量，而非僵化的三年期合约。 / GPU 稀缺的真正痛点不是获取难度，而是容量以三年期“矩形”形式出售。</description>
-  </item>
-  <item>
-    <title>为大宗商品交易员打造推荐引擎 — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/anekhasokhal-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/anekhasokhal-latentsp-2026/</guid>
-    <pubDate>Fri, 23 Oct 2026 01:47:40 -0000</pubDate>
-    <description>Moshi 创始人 Anekha Sokhal 讲述她如何凭借交易背景与数据科学专长，为大宗商品和能源交易员打造实时洞察平台。  要点: AI 应主动向交易员推送相关数据，而非等待查询。 / 推荐系统被低估，但对 AI 产品采用至关重要。 / 处理敏感用户数据时，自有文档处理模型很重要。</description>
   </item>
 </channel>
 </rss>

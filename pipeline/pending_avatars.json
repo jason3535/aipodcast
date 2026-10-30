@@ -7,5 +7,32 @@
   "from": "Latent Space",
   "added": "2026-10-28",
   "auto": true
+ },
+ {
+  "pid": "chaselochmiller",
+  "en": "Chase Lochmiller",
+  "zh": "蔡斯·洛克米勒",
+  "tiEn": "CEO and Co-founder, Crusoe",
+  "from": "Training Data",
+  "added": "2026-10-30",
+  "auto": true
+ },
+ {
+  "pid": "jamesmcdonald",
+  "en": "James McDonald",
+  "zh": "詹姆斯·麦克唐纳",
+  "tiEn": "Visual Designer and Creative Developer",
+  "from": "Dive Club",
+  "added": "2026-10-30",
+  "auto": true
+ },
+ {
+  "pid": "uwehorstmann",
+  "en": "Uwe Horstmann",
+  "zh": "乌韦·霍斯特曼",
+  "tiEn": "CEO, Stark",
+  "from": "Training Data",
+  "added": "2026-10-30",
+  "auto": true
  }
 ]
