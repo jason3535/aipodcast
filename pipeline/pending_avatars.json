@@ -34,5 +34,14 @@
   "from": "Training Data",
   "added": "2026-10-30",
   "auto": true
+ },
+ {
+  "pid": "paulcopplestone",
+  "en": "Paul Copplestone",
+  "zh": "保罗·科普尔斯通",
+  "tiEn": "Co-founder & CEO, Supabase",
+  "from": "Y Combinator",
+  "added": "2026-10-31",
+  "auto": true
  }
 ]

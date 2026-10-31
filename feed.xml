@@ -6,7 +6,49 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Thu, 29 Oct 2026 03:01:11 -0000</lastBuildDate>
+  <lastBuildDate>Fri, 30 Oct 2026 01:45:13 -0000</lastBuildDate>
+  <item>
+    <title>AI 的未来与商业：与 Kevin Roose 和 Ethan Mollick 的对话 — 斯坦福法学院</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/ethanmollick-stanford-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ethanmollick-stanford-2026/</guid>
+    <pubDate>Fri, 30 Oct 2026 01:45:13 -0000</pubDate>
+    <description>Kevin Roose 与 Ethan Mollick 探讨 AI 的未来与商业，从人类判断力与共存，到通往超级智能的竞赛。  要点: AI 已从聊天机器人时代进入智能体时代，模型能独立处理长达数小时的任务。 / 把 AI 当导师而非答案机器；开箱即用的方式会损害学习。 / AI 实验室的安全承诺是真实的，但被合理化成了抢先到达的竞赛。</description>
+  </item>
+  <item>
+    <title>Crusoe CEO Chase Lochmiller：将搁浅能源转化为智能 — Training Data</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/chaselochmiller-training-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/chaselochmiller-training-2026/</guid>
+    <pubDate>Fri, 30 Oct 2026 01:45:13 -0000</pubDate>
+    <description>Crusoe CEO Chase Lochmiller 讲述如何将垂直整合的 AI 基础设施平台从两人初创公司发展为估值 310 亿美元的企业。  要点: AI 是像电力一样的元科学，能改变所有行业，而不仅是一个领域。 / 算力基础设施不是赢家通吃，会出现多个赢家。 / 大多数初创公司死于自杀而非他杀，执行力比竞争更重要。</description>
+  </item>
+  <item>
+    <title>用 Claude 打造精美网站：James McDonald 的设计流程 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/jamesmcdonald-diveclub-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jamesmcdonald-diveclub-2026/</guid>
+    <pubDate>Fri, 30 Oct 2026 01:45:13 -0000</pubDate>
+    <description>James McDonald 分享他如何借助 Claude 与 MCP 打造带动效、重叙事的网站，并提升视觉设计功力。  要点: AI 让设计师无需工程背景就能构建动画和应用。 / Figma 负责布局，Claude 处理动画和交互细节。 / 定制小工具和随机性激发意想不到的创意突破。</description>
+  </item>
+  <item>
+    <title>欧洲防务主权始于工厂：Stark 的 Uwe Horstmann 与 Johannes Schaback — Training Data</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/uwehorstmann-training-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/uwehorstmann-training-2026/</guid>
+    <pubDate>Fri, 30 Oct 2026 01:45:13 -0000</pubDate>
+    <description>Stark 联合创始人 Uwe Horstmann 与 Johannes Schaback 讲述如何凭借贴近战场的创新、风险投资、可用性设计与工业化量产，在 18 个月内赢得数十亿美元防务合同。  要点: 欧洲必须自主防御，威慑是持续和平之道。 / 把士兵当客户，他们的反馈驱动创新。 / 设计之初就考虑大规模量产，生产本身就是威慑。</description>
+  </item>
+  <item>
+    <title>Modal CEO Erik 谈 Agent Maxxing、推理的未来与 GPU 市场的混沌 — Unsupervised Learning</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/erikbernhardsson-unsuperv-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/erikbernhardsson-unsuperv-2026/</guid>
+    <pubDate>Fri, 30 Oct 2026 01:45:13 -0000</pubDate>
+    <description>Modal 创始人兼 CEO Erik 做客 Unsupervised Learning，聊 GPU 市场的“西部荒野”、跨 25 家云厂商聚合算力，以及推理的未来走向。  要点: 算力稀缺但可获得，接受更高价格和更长合约即可。 / Modal 聚合 25 家以上云，客户无需为容量拼抢。 / 持久差异化来自多产品平台，而非廉价 token 服务。</description>
+  </item>
+  <item>
+    <title>打造 21+智能体 Grok Bot 团队：信任、验证与工程师即管理者 — Ai insider</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/laurentan-aiinside-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/laurentan-aiinside-2026/</guid>
+    <pubDate>Fri, 30 Oct 2026 01:45:13 -0000</pubDate>
+    <description>Lauren 分享如何通过验证建立信任、把智能体当作同事，并转型为工程管理者，从而扩展到 21+智能体协作。  要点: 验证是智能体最重要的技能；它建立信任并形成闭环。 / 工程师必须将约束编码到 CI、lints 和架构中，而不是依赖代码审查。 / 具备验证技能的云智能体可扩展生产力，并让非工程师也能贡献代码。</description>
+  </item>
   <item>
     <title>Alphabet 2026 年第三季度财报：AI 势头与 Gemini 4 — Alphabet Q3 2026 财报电话会议</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/sundarpichai-alphabet-2026b</link>
@@ -174,48 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/farzamajeed-ycombina-2026/</guid>
     <pubDate>Sat, 24 Oct 2026 01:41:45 -0000</pubDate>
     <description>Farza 分享打造真正能转化的发布视频的方法论，用算法平台上的持续小样演示取代大预算的首发式。  要点: 发布不是一次性事件，而是在算法平台上持续交付演示。 / 从演示倒推：先写脚本、钩子和故事，再动手开发。 / 音频质量最重要；好麦克风胜过花哨制作。</description>
-  </item>
-  <item>
-    <title>Simile 创始人 Joon Sung Park：以 85% 以上准确率预测人类行为 — CoreWeave</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/joonpark-coreweav-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/joonpark-coreweav-2026/</guid>
-    <pubDate>Sat, 24 Oct 2026 01:41:45 -0000</pubDate>
-    <description>Simile 联合创始人兼 CEO Joon Sung Park 讲述生成式智能体如何以超过 85% 的准确率模拟并预测人类行为。  要点: 生成式智能体预测人类行为的准确率超过 85%，接近人类重测信度的上限。 / 模拟旨在建模多样化人群而非超人推理，并能模拟随机对照试验。 / 前置部署模式对 AI 企业公司定制用例至关重要。</description>
-  </item>
-  <item>
-    <title>Sam Altman 谈 AI 意识、递归自我改进与发现的未来 — Matthew Berman</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/altman-matthewb-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/altman-matthewb-2026/</guid>
-    <pubDate>Sat, 24 Oct 2026 01:41:45 -0000</pubDate>
-    <description>Sam Altman 探讨 AI 意识、递归自我改进、OpenAI 新硬件，以及 AI 驱动的发现如何改变医学、物理学与社会。  要点: AI 正开始发现新知识，从数学起步，很快将进入生物学和材料领域。 / 当今的模型没有意识；我们甚至缺乏检测意识的科学方法。 / AI 应该像资深同事一样提出异议，而不是一味附和。</description>
-  </item>
-  <item>
-    <title>吴恩达：AI 恐慌被过度渲染 — The Economic Times</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/andrewng-theecono-2026b</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/andrewng-theecono-2026b/</guid>
-    <pubDate>Sat, 24 Oct 2026 01:41:45 -0000</pubDate>
-    <description>吴恩达解析 AI 能力的参差不齐为何让就业末日论言过其实，并主张加速有益 AI、遏制有害应用。  要点: AI 能力参差不齐：可验证任务强，判断类任务弱；就业末日被夸大。 / AGI 仍需数十年；应加速有益 AI，只放缓有害应用。 / 开源权重模型是主权 AI 最经济的选择；恐惧叙事服务于融资。</description>
-  </item>
-  <item>
-    <title>Dylan Field：设计即新代码，AI 正在让创造力民主化 — All-In Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/dylanfield-allinpod-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dylanfield-allinpod-2026/</guid>
-    <pubDate>Sat, 24 Oct 2026 01:41:45 -0000</pubDate>
-    <description>Figma CEO Dylan Field 谈 AI 重塑编程时代为何设计成为新代码，以及创造力如何被民主化。  要点: 设计即新代码；随着编码模型进步，差异化转向设计、品牌和观点。 / AI 降低了生产门槛，但并未提高上限；人类通过大胆创意提高上限。 / 在注意力经济中，只有真正新颖大胆的作品才能突破；AI 生成的普通输出会被忽视。</description>
-  </item>
-  <item>
-    <title>Ilya Sutskever 揭示 AI 理解世界的惊人真相 — Eye on AI</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/ilya-eyeonai-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ilya-eyeonai-2026/</guid>
-    <pubDate>Sat, 24 Oct 2026 01:41:45 -0000</pubDate>
-    <description>OpenAI 联合创始人 Ilya Sutskever 回顾从 2003 年机器学习起步，到坚信大规模深度神经网络在足够数据下必然成功的历程。  要点: 缩放只有在缩放正确的东西时才有效；深度学习是第一个有效利用规模的方法。 / 足够好地预测下一个词就能解决无监督学习并获得对世界的理解。 / 幻觉很可能可以通过改进基于 RLHF 的后训练来修复。</description>
-  </item>
-  <item>
-    <title>AI 智能体可能颠覆银行体系——对话伊桑·莫利克 — The Prof G Pod – Scott Galloway</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/ethanmollick-theprofg-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ethanmollick-theprofg-2026/</guid>
-    <pubDate>Fri, 23 Oct 2026 01:47:40 -0000</pubDate>
-    <description>伊桑·莫利克解析 AI 的指数级增长、锯齿状能力边界与落地滞后，并探讨智能体系统为何可能给银行体系带来压力。  要点: 尽管 AI 呈指数级进步，其锯齿状前沿与采用滞后使人类仍不可或缺。 / 更多 AI 降低组织成本，反而创造更多人类工作而非减少。 / 把 AI 当挑战你的导师而非拐杖；感受学习之痛。</description>
   </item>
 </channel>
 </rss>

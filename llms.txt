@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 340 位人物 / 806 期访谈
+规模: 341 位人物 / 809 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -68,6 +68,7 @@
 - [Ryan Greenblatt / 瑞安·格林布拉特](https://aipodcast.jasonlin.tech/pp/ryangreenblatt/): Chief Scientist, Redwood Research — 3 期
 - [Ramin Hasani / 拉明·哈萨尼](https://aipodcast.jasonlin.tech/pp/hasani/): Co-founder & CEO, Liquid AI; liquid neural networks (ex-MIT) — 3 期
 - [Gabe Pereyra / 加布·佩雷拉](https://aipodcast.jasonlin.tech/pp/gabepereyra/): President & Co-founder, Harvey — 3 期
+- [Felix Rieseberg / 菲利克斯·里泽伯格](https://aipodcast.jasonlin.tech/pp/felixrieseberg/): Claude Cowork Lead, Anthropic · ex-Slack — 3 期
 - [Travis Kalanick / 特拉维斯·卡兰尼克](https://aipodcast.jasonlin.tech/pp/traviskalanick/): Founder of Uber, CEO of CloudKitchens — 3 期
 - [Peter Steinberger / 彼得·施泰因贝格尔](https://aipodcast.jasonlin.tech/pp/steinberger/): Creator of OpenClaw; founder of PSPDFKit — 3 期
 - [Dan Shipper / 丹·希珀](https://aipodcast.jasonlin.tech/pp/danshipper/): Co-founder & CEO, Every — 3 期
@@ -83,6 +84,7 @@
 - [Yejin Choi / 崔艺珍](https://aipodcast.jasonlin.tech/pp/yejin/): Professor, Stanford (prev. NVIDIA, AI2); commonsense reasoning — 3 期
 - [Noam Shazeer / 诺姆·沙泽尔](https://aipodcast.jasonlin.tech/pp/shazeer/): Co-lead, Google Gemini — 3 期
 - [Jan Leike / 扬·莱克](https://aipodcast.jasonlin.tech/pp/leike/): Alignment Lead, Anthropic — 3 期
+- [Jeetu Patel / 吉图·帕特尔](https://aipodcast.jasonlin.tech/pp/jeetupatel/): President and Chief Product Officer, Cisco — 2 期
 - [Erik Bernhardsson / 埃里克·伯恩哈德松](https://aipodcast.jasonlin.tech/pp/erikbernhardsson/): CEO, Modal — 2 期
 - [Marvin Schwaibold / 马文·施瓦博尔德](https://aipodcast.jasonlin.tech/pp/marvinschwaibold/): Product design leader at Shopify — 2 期
 - [Ari Weinstein / 阿里·温斯坦](https://aipodcast.jasonlin.tech/pp/ariweinstein/): Product & Engineering Lead, Computer Use, OpenAI — 2 期
@@ -133,7 +135,6 @@
 - [Mira Murati / 米拉·穆拉蒂](https://aipodcast.jasonlin.tech/pp/murati/): Founder & CEO, Thinking Machines Lab — 2 期
 - [Carina Hong / 洪乐潼](https://aipodcast.jasonlin.tech/pp/carinahong/): Founder & CEO, Axiom (AI for formal mathematical reasoning) — 2 期
 - [Łukasz Kaiser / 武卡什·凯泽](https://aipodcast.jasonlin.tech/pp/kaiser/): Researcher, OpenAI — 2 期
-- [Felix Rieseberg / 菲利克斯·里泽伯格](https://aipodcast.jasonlin.tech/pp/felixrieseberg/): Claude Cowork Lead, Anthropic · ex-Slack — 2 期
 - [Reiner Pope / 赖纳·波普](https://aipodcast.jasonlin.tech/pp/reinerpope/): Co-founder & CEO, MatX; ex-Google (LLM serving) — 2 期
 - [Oriol Vinyals / 奥里奥尔·维尼亚尔斯](https://aipodcast.jasonlin.tech/pp/oriol/): VP of Research & Gemini Co-lead · Google DeepMind — 2 期
 - [Deepak Pathak / 迪帕克·帕塔克](https://aipodcast.jasonlin.tech/pp/pathak/): Assistant Professor, CMU; Co-founder, Skild AI — 2 期
@@ -147,6 +148,7 @@
 - [Nad Chishtie / 纳德·奇什蒂](https://aipodcast.jasonlin.tech/pp/nadchishtie/): Founding Designer & Head of Design, Lovable — 2 期
 - [Michael Truell / 迈克尔·特鲁埃尔](https://aipodcast.jasonlin.tech/pp/truell/): Co-founder & CEO, Cursor — 2 期
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 2 期
+- [Paul Copplestone / 保罗·科普尔斯通](https://aipodcast.jasonlin.tech/pp/paulcopplestone/): Co-founder & CEO, Supabase — 1 期
 - [Chase Lochmiller / 蔡斯·洛克米勒](https://aipodcast.jasonlin.tech/pp/chaselochmiller/): CEO and Co-founder, Crusoe — 1 期
 - [James McDonald / 詹姆斯·麦克唐纳](https://aipodcast.jasonlin.tech/pp/jamesmcdonald/): Visual Designer and Creative Developer — 1 期
 - [Uwe Horstmann / 乌韦·霍斯特曼](https://aipodcast.jasonlin.tech/pp/uwehorstmann/): CEO, Stark — 1 期
@@ -168,7 +170,6 @@
 - [Jason Ma / 马杰森](https://aipodcast.jasonlin.tech/pp/jasonma/): Co-founder & Chief Scientist, Dyna Robotics — 1 期
 - [Josh Woodward / 乔什·伍德沃德](https://aipodcast.jasonlin.tech/pp/joshwoodward/): VP, Google Labs & Gemini App — 1 期
 - [Akarsh Kumar / 阿卡什·库马尔](https://aipodcast.jasonlin.tech/pp/akarshkumar/): PhD Student, MIT; Sakana AI — 1 期
-- [Jeetu Patel / 吉图·帕特尔](https://aipodcast.jasonlin.tech/pp/jeetupatel/): President and Chief Product Officer, Cisco — 1 期
 - [Luca Ferrari / 卢卡·法拉利](https://aipodcast.jasonlin.tech/pp/lucaferrari/): Co-founder & CEO, Bending Spoons — 1 期
 - [Rhiannon Bell / 里安农·贝尔](https://aipodcast.jasonlin.tech/pp/rhiannonbell/): VP of UX, Google Search — 1 期
 - [Amin Vahdat / 阿明·瓦赫达特](https://aipodcast.jasonlin.tech/pp/aminvahdat/): Chief Technologist for AI Infrastructure, Google — 1 期
@@ -349,8 +350,10 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
+- [When Everyone Can Build Software: Supabase's Agent-Driven Future](https://aipodcast.jasonlin.tech/e/paulcopplestone-ycombina-2026/) — Paul Copplestone, Y Combinator, 2026-10-30
 - [The Future and Business of AI: A Conversation with Kevin Roose and Ethan Mollick](https://aipodcast.jasonlin.tech/e/ethanmollick-stanford-2026/) — Ethan Mollick, Stanford Law School, 2026-10-29
 - [Crusoe CEO Chase Lochmiller: Turning Stranded Energy Into Intelligence](https://aipodcast.jasonlin.tech/e/chaselochmiller-training-2026/) — Chase Lochmiller, Training Data, 2026-10-29
+- [Jeetu Patel: Building Products for the AI Era](https://aipodcast.jasonlin.tech/e/jeetupatel-abitpers-2026/) — Jeetu Patel, A Bit Personal with Jodi Shelton, 2026-10-29
 - [Alphabet Q3 2026 Earnings: AI Momentum and Gemini 4](https://aipodcast.jasonlin.tech/e/sundarpichai-alphabet-2026b/) — Sundar Pichai, Alphabet Q3 2026 Earnings Call, 2026-10-28
 - [Building Beautiful Websites with Claude: James McDonald's Process](https://aipodcast.jasonlin.tech/e/jamesmcdonald-diveclub-2026/) — James McDonald, Dive Club, 2026-10-28
 - [European Defense Sovereignty Starts in the Factory: Stark's Uwe Horstmann and Johannes Schaback](https://aipodcast.jasonlin.tech/e/uwehorstmann-training-2026/) — Uwe Horstmann, Training Data, 2026-10-28
@@ -387,8 +390,6 @@
 - [Dylan Field: Design Is the New Code and AI Is Democratizing Creativity](https://aipodcast.jasonlin.tech/e/dylanfield-allinpod-2026/) — Dylan Field, All-In Podcast, 2026-10-19
 - [Inside the Mind of AI: An Anthropic Researcher on How Models Really Work](https://aipodcast.jasonlin.tech/e/emmanuelameisen-lennyspo-2026/) — Emmanuel Ameisen, Lenny’s Podcast, 2026-10-18
 - [The Future of Inference Market & Model Routing: Commodity or Increasing in Value?](https://aipodcast.jasonlin.tech/e/harrisonchase-20vc-2026/) — Harrison Chase, 20VC, 2026-10-17
-- [Building a 21+ Agent Grok Bot Team: Trust, Verification, and the Engineer as Manager](https://aipodcast.jasonlin.tech/e/laurentan-aiinside-2026/) — Lauren Tan, Ai insider, 2026-10-17
-- [Jensen Huang on AI Capex, 2027 Bottlenecks, and the Singularity](https://aipodcast.jasonlin.tech/e/jensen-bg2pod-2026/) — Jensen Huang, Bg2 Pod, 2026-10-15
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
