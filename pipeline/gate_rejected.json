@@ -578,5 +578,40 @@
 "t": "Instinct Worth 30BN? | Microsoft Cuts 27,000 Jobs While Meta Taps Equity Markets",
 "why": "两位嘉宾均不在站内名单中，且为多人对谈节目，非单一主嘉宾的实质性AI技术访谈。",
 "at": "2026-10-30"
+},
+"uHf-gKuyp_w|paragagrawal": {
+"t": "Fully Connected 2026 Day 2: Mike Intrator on Hot Ones, Parag Agrawal, Dylan Pate",
+"why": "这是 CoreWeave 大会 Day 2 的多嘉宾混合场次，Parag Agrawal 只是其中一位演讲者，并非围绕他的完整单集；且内容为大会串场，不符合单集",
+"at": "2026-10-31"
+},
+"kxGujQvvd_g|karlkoch": {
+"t": "Together for the First Time: Kochie & Karl on 20 Years of Breakfast TV",
+"why": "视频中的Karl是澳大利亚早餐电视主持人Karl Stefanovic，与站内DuckDuckGo设计工程师Karl Koch同名不同人，且内容为电视行业闲聊，",
+"at": "2026-10-31"
+},
+"DjBhmH8um2A|lipbutan": {
+"t": "Fal.Con 2026: Securing AI | George Kurtz, Jensen Huang, Lip-Bu Tan & Greg Brockm",
+"why": "这是 CrowdStrike Fal.Con 大会的多位嘉宾联合主题演讲（George Kurtz、Jensen Huang、Lip-Bu Tan、Greg B",
+"at": "2026-10-31"
+},
+"YC2yFCD5uJM|catwu": {
+"t": "The future of software engineering | Cat Wu, Dax Raax, Swyx, Runtime 2026",
+"why": "多人圆桌对谈（Cat Wu、Dax Raad、Swyx 等并列），Cat Wu 仅占其中一段，非围绕其个人的完整单集。",
+"at": "2026-10-31"
+},
+"f0J_EeW42Lo": {
+"t": "What Robert Caro learned about power after studying it for 50 years",
+"why": "嘉宾是传记作家/历史写作者，非 AI/技术/产品设计从业者，不符合身份标准。",
+"at": "2026-10-31"
+},
+"iRMmPjunm3Q": {
+"t": "Why AI Could Turn Small Law Firms Into Billion-Dollar Businesses",
+"why": "嘉宾Jay Madheswaran不在名单中；且为a16z商业访谈，非名单人物主讲。",
+"at": "2026-10-31"
+},
+"wWSMPb22aro": {
+"t": "AI Agents Will Take 50% of Your Traffic — Is Your Data Ready? | Jeff Lunsford, C",
+"why": "嘉宾Jeff Lunsford不在站内名单中，且为数据公司CEO访谈，非名单人物主讲。",
+"at": "2026-10-31"
 }
 }
