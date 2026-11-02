@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 341 位人物 / 809 期访谈
+规模: 344 位人物 / 814 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -35,6 +35,7 @@
 - [Andrew Feldman / 安德鲁·费尔德曼](https://aipodcast.jasonlin.tech/pp/feldman/): Co-founder & CEO, Cerebras Systems — 6 期
 - [Arthur Mensch / 阿瑟·门施](https://aipodcast.jasonlin.tech/pp/mensch/): Co-founder & CEO, Mistral AI — 6 期
 - [Andrej Karpathy / 安德烈·卡帕西](https://aipodcast.jasonlin.tech/pp/karpathy/): Founder, Eureka Labs — 6 期
+- [Jerry Tworek / 杰里·特沃雷克](https://aipodcast.jasonlin.tech/pp/tworek/): Co-founder & CEO, Core Automation — 5 期
 - [Marc Andreessen / 马克·安德森](https://aipodcast.jasonlin.tech/pp/andreessen/): Co-founder & General Partner, Andreessen Horowitz (a16z) — 5 期
 - [Joon Sung Park / 朴俊成](https://aipodcast.jasonlin.tech/pp/joonpark/): Co-founder, Simile; creator of Generative Agents (Stanford) — 5 期
 - [Mark Pincus / 马克·平卡斯](https://aipodcast.jasonlin.tech/pp/pincus/): Founder, Zynga — 5 期
@@ -50,7 +51,6 @@
 - [Diogo Almeida / 迪奥戈·阿尔梅达](https://aipodcast.jasonlin.tech/pp/diogoalmeida/): Co-founder & CEO, TypeSafe AI — 4 期
 - [Brett Adcock / 布雷特·阿德科克](https://aipodcast.jasonlin.tech/pp/brettadcock/): Founder & CEO, Figure — 4 期
 - [Jürgen Schmidhuber / 于尔根·施密德胡伯](https://aipodcast.jasonlin.tech/pp/schmidhuber/): Director, KAUST AI — 4 期
-- [Jerry Tworek / 杰里·特沃雷克](https://aipodcast.jasonlin.tech/pp/tworek/): Co-founder & CEO, Core Automation — 4 期
 - [Jeff Dean / 杰夫·迪恩](https://aipodcast.jasonlin.tech/pp/jeffdean/): Chief Scientist, Google — 4 期
 - [Lip-Bu Tan / 陈立武](https://aipodcast.jasonlin.tech/pp/lipbutan/): CEO, Intel — 4 期
 - [Bret Taylor / 布雷特·泰勒](https://aipodcast.jasonlin.tech/pp/brettaylor/): Co-founder & CEO of Sierra; Chairman of the Board, OpenAI — 4 期
@@ -61,6 +61,7 @@
 - [Sundar Pichai / 桑达尔·皮查伊](https://aipodcast.jasonlin.tech/pp/sundarpichai/): CEO, Google & Alphabet — 3 期
 - [Harrison Chase / 哈里森·蔡斯](https://aipodcast.jasonlin.tech/pp/harrisonchase/): Co-founder & CEO, LangChain — 3 期
 - [Arvind Jain / 阿尔温德·贾恩](https://aipodcast.jasonlin.tech/pp/arvindjain/): Founder & CEO, Glean — 3 期
+- [Lin Qiao / 乔琳](https://aipodcast.jasonlin.tech/pp/linqiao/): Co-founder & CEO, Fireworks AI — 3 期
 - [Amjad Masad / 阿姆贾德·马萨德](https://aipodcast.jasonlin.tech/pp/amjadmasad/): Founder & CEO, Replit — 3 期
 - [Thariq Shihipar / 塔里克·希希帕尔](https://aipodcast.jasonlin.tech/pp/thariq/): Engineer, Claude Code at Anthropic — 3 期
 - [Alex Atallah / 亚历克斯·阿塔拉](https://aipodcast.jasonlin.tech/pp/alexatallah/): Co-founder & CEO, OpenRouter; Co-founder, OpenSea — 3 期
@@ -117,7 +118,6 @@
 - [Max Hodak / 马克斯·霍达克](https://aipodcast.jasonlin.tech/pp/maxhodak/): CEO of Science — 2 期
 - [Ian Silber / 伊恩·西尔伯](https://aipodcast.jasonlin.tech/pp/iansilber/): Head of Product Design, OpenAI — 2 期
 - [Chelsea Finn / 切尔西·芬恩](https://aipodcast.jasonlin.tech/pp/finn/): Assistant Professor, Stanford; co-founder, Physical Intelligence — 2 期
-- [Lin Qiao / 乔琳](https://aipodcast.jasonlin.tech/pp/linqiao/): Co-founder & CEO, Fireworks AI — 2 期
 - [Jason Yuan / Jason Yuan](https://aipodcast.jasonlin.tech/pp/jasonyuan/): Founder & CEO, Hivemind; ex-New Computer, ex-Apple — 2 期
 - [Thomas Wolf / 托马斯·沃尔夫](https://aipodcast.jasonlin.tech/pp/thomaswolf/): Co-founder & Chief Science Officer, Hugging Face — 2 期
 - [Nate Parrott / 内特·帕罗特](https://aipodcast.jasonlin.tech/pp/nateparrott/): Designer at Anthropic — 2 期
@@ -148,6 +148,9 @@
 - [Nad Chishtie / 纳德·奇什蒂](https://aipodcast.jasonlin.tech/pp/nadchishtie/): Founding Designer & Head of Design, Lovable — 2 期
 - [Michael Truell / 迈克尔·特鲁埃尔](https://aipodcast.jasonlin.tech/pp/truell/): Co-founder & CEO, Cursor — 2 期
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 2 期
+- [Hector Serrano / 赫克托·塞拉诺](https://aipodcast.jasonlin.tech/pp/hectorserrano/): Head of Content, Wispr Flow — 1 期
+- [Aman Singh / 阿曼·辛格](https://aipodcast.jasonlin.tech/pp/amansingh/): Head of AI, Arca — 1 期
+- [Joseph Kim / 约瑟夫·金](https://aipodcast.jasonlin.tech/pp/josephkim/): Head of Financial Services, OpenAI — 1 期
 - [Paul Copplestone / 保罗·科普尔斯通](https://aipodcast.jasonlin.tech/pp/paulcopplestone/): Co-founder & CEO, Supabase — 1 期
 - [Chase Lochmiller / 蔡斯·洛克米勒](https://aipodcast.jasonlin.tech/pp/chaselochmiller/): CEO and Co-founder, Crusoe — 1 期
 - [James McDonald / 詹姆斯·麦克唐纳](https://aipodcast.jasonlin.tech/pp/jamesmcdonald/): Visual Designer and Creative Developer — 1 期
@@ -350,6 +353,10 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
+- [Paid-Growth Alpha: Hector Serrano on Scaling WhisperFlow with UGC](https://aipodcast.jasonlin.tech/e/hectorserrano-lennyspo-2026/) — Hector Serrano, Lenny’s Podcast, 2026-11-01
+- [Jerry Tworek on Building AI That Learns On the Fly and Challenging Transformers](https://aipodcast.jasonlin.tech/e/tworek-gracegon-2026/) — Jerry Tworek, Grace Gong, 2026-10-31
+- [Using AI Agents for Long-Horizon Financial Work](https://aipodcast.jasonlin.tech/e/amansingh-latentsp-2026/) — Aman Singh, Latent Space, 2026-10-31
+- [Building ChatGPT for Finance: OpenAI's Enterprise Playbook](https://aipodcast.jasonlin.tech/e/josephkim-latentsp-2026/) — Joseph Kim, Latent Space, 2026-10-31
 - [When Everyone Can Build Software: Supabase's Agent-Driven Future](https://aipodcast.jasonlin.tech/e/paulcopplestone-ycombina-2026/) — Paul Copplestone, Y Combinator, 2026-10-30
 - [The Future and Business of AI: A Conversation with Kevin Roose and Ethan Mollick](https://aipodcast.jasonlin.tech/e/ethanmollick-stanford-2026/) — Ethan Mollick, Stanford Law School, 2026-10-29
 - [Crusoe CEO Chase Lochmiller: Turning Stranded Energy Into Intelligence](https://aipodcast.jasonlin.tech/e/chaselochmiller-training-2026/) — Chase Lochmiller, Training Data, 2026-10-29
@@ -386,10 +393,6 @@
 - [Inside the Robot Data Factory: Mecka's Josh Gao on Sensorizing Humans to Train Robots](https://aipodcast.jasonlin.tech/e/joshgao-training-2026/) — Josh Gao, Training Data, 2026-10-20
 - [SpaceX Q3 2026 Earnings Call: Starship, Starlink, and Superintelligence](https://aipodcast.jasonlin.tech/e/elon-spacexq3-2026/) — Elon Musk, SpaceX Q3 2026 Earnings Call, 2026-10-20
 - [Elon Musk: “Humans Won’t Be in Control” When AI Becomes Smarter Than Us](https://aipodcast.jasonlin.tech/e/elon-builders-2026/) — Elon Musk, The Builders, 2026-10-20
-- [OpenAI's Head of Health AI on Trusting ChatGPT with Your Health](https://aipodcast.jasonlin.tech/e/karansinghal-thea16zp-2026/) — Karan Singhal, The a16z Podcast, 2026-10-20
-- [Dylan Field: Design Is the New Code and AI Is Democratizing Creativity](https://aipodcast.jasonlin.tech/e/dylanfield-allinpod-2026/) — Dylan Field, All-In Podcast, 2026-10-19
-- [Inside the Mind of AI: An Anthropic Researcher on How Models Really Work](https://aipodcast.jasonlin.tech/e/emmanuelameisen-lennyspo-2026/) — Emmanuel Ameisen, Lenny’s Podcast, 2026-10-18
-- [The Future of Inference Market & Model Routing: Commodity or Increasing in Value?](https://aipodcast.jasonlin.tech/e/harrisonchase-20vc-2026/) — Harrison Chase, 20VC, 2026-10-17
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml

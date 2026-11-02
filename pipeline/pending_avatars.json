@@ -43,5 +43,31 @@
   "from": "Y Combinator",
   "added": "2026-10-31",
   "auto": true
+ },
+ {
+  "pid": "josephkim",
+  "en": "Joseph Kim",
+  "zh": "约瑟夫·金",
+  "tiEn": "Head of Financial Services, OpenAI",
+  "from": "Latent Space",
+  "added": "2026-11-02"
+ },
+ {
+  "pid": "hectorserrano",
+  "en": "Hector Serrano",
+  "zh": "赫克托·塞拉诺",
+  "tiEn": "Head of Content, Wispr Flow",
+  "from": "Lenny’s Podcast",
+  "added": "2026-11-02",
+  "auto": true
+ },
+ {
+  "pid": "amansingh",
+  "en": "Aman Singh",
+  "zh": "阿曼·辛格",
+  "tiEn": "Head of AI, Arca",
+  "from": "Latent Space",
+  "added": "2026-11-02",
+  "auto": true
  }
 ]
