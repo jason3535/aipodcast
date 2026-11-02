@@ -6,7 +6,28 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Fri, 30 Oct 2026 01:45:13 -0000</lastBuildDate>
+  <lastBuildDate>Sat, 31 Oct 2026 01:41:05 -0000</lastBuildDate>
+  <item>
+    <title>当人人都能构建软件：Supabase 的智能体驱动未来 — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/paulcopplestone-ycombina-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/paulcopplestone-ycombina-2026/</guid>
+    <pubDate>Sat, 31 Oct 2026 01:41:05 -0000</pubDate>
+    <description>Supabase CEO Paul Copplestone 谈 AI 智能体与开源如何让人人都成为构建者。  要点: AI 让领域专家成为构建者，产品必须代码优先并对智能体友好。 / 开源让智能体能够检查和修复问题，从而推动采用与信任。 / 个人数据库曾显得荒谬，如今却是对每个人最有价值的一层。</description>
+  </item>
+  <item>
+    <title>吉图·帕特尔：为 AI 时代打造产品 — A Bit Personal with Jodi Shelton</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/jeetupatel-abitpers-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jeetupatel-abitpers-2026/</guid>
+    <pubDate>Sat, 31 Oct 2026 01:41:05 -0000</pubDate>
+    <description>思科总裁兼首席产品官吉图·帕特尔畅谈 AI 驱动的变革及其背后的基础设施，以及塑造其领导力的移民历程。  要点: 人才无处不在，但机会并非如此；平台能释放潜力。 / 用 AI 加速学习，而非跳过本能培养。 / AI 转型中，领导者应保持警惕但不必恐慌。</description>
+  </item>
+  <item>
+    <title>与 Felix Rieseberg 一起从零构建语言模型 — Scott Hanselman</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/felixrieseberg-scotthan-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/felixrieseberg-scotthan-2026/</guid>
+    <pubDate>Sat, 31 Oct 2026 01:41:05 -0000</pubDate>
+    <description>Felix Rieseberg 做客节目，畅谈他让 AI 变得平易近人的教育性语言模型构建器，让任何人都能亲手构建并理解语言模型。  要点: 语言模型的核心思想很简单，亲手搭建一个就能揭开 AI 的神秘面纱。 / 微调能快速引导模型行为，不像预训练那样耗时漫长。 / 模型是无状态的；持续对话只是上下文窗口制造的幻觉。</description>
+  </item>
   <item>
     <title>AI 的未来与商业：与 Kevin Roose 和 Ethan Mollick 的对话 — 斯坦福法学院</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/ethanmollick-stanford-2026</link>
@@ -195,27 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/robsnyder-lennyspo-2026/</guid>
     <pubDate>Tue, 27 Oct 2026 01:39:32 -0000</pubDate>
     <description>《拉力的力量》作者 Rob 分享了一套寻找产品市场契合度、从 0 到 1 的实用框架。  要点: Pull 是个人属性：向有具体项目的个人销售，而非公司。 / 如果存在 Pull，客户会立即尝试购买；否则就放弃。 / 避免设计合作伙伴；他们表明缺乏 Pull。直接销售。</description>
-  </item>
-  <item>
-    <title>萨提亚·纳德拉谈 AI 安全、对齐局限与微软接班 — Semafor</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/satya-semafor-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/satya-semafor-2026/</guid>
-    <pubDate>Tue, 27 Oct 2026 01:39:32 -0000</pubDate>
-    <description>微软 CEO 萨提亚·纳德拉解释为何必须将 AI 模型视为内部威胁，并探讨微软的未来与接班问题。  要点: 把强大 AI 视为内部威胁，在模型之外构建控制与保障层。 / 模型是商品；产品形态、分发、定价和品牌更重要。 / 没有公司天生就该存在，必须不断自我更新。</description>
-  </item>
-  <item>
-    <title>Mercor 的 Brendan Foody 谈数据、评估与人类最后的工作 — South Park Commons</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/brendanfoody-southpar-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brendanfoody-southpar-2026/</guid>
-    <pubDate>Tue, 27 Oct 2026 01:39:32 -0000</pubDate>
-    <description>Mercor CEO Brendan Foody 解析为何数据决定模型 80% 至 100% 的差异化，以及评估如何界定人类工作的前沿。  要点: 模型差异化来自数据而非算法，瓶颈在于为一切构建评估。 / 带高质量验证器的 RL 任务比原始公司数据价值高几个数量级。 / 创造数据训练 AI 将是人类最后的工作，人类转向训练智能体。</description>
-  </item>
-  <item>
-    <title>如何真正做出能转化的发布视频 — Y Combinator</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/farzamajeed-ycombina-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/farzamajeed-ycombina-2026/</guid>
-    <pubDate>Sat, 24 Oct 2026 01:41:45 -0000</pubDate>
-    <description>Farza 分享打造真正能转化的发布视频的方法论，用算法平台上的持续小样演示取代大预算的首发式。  要点: 发布不是一次性事件，而是在算法平台上持续交付演示。 / 从演示倒推：先写脚本、钩子和故事，再动手开发。 / 音频质量最重要；好麦克风胜过花哨制作。</description>
   </item>
 </channel>
 </rss>
