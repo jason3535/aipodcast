@@ -69,5 +69,23 @@
   "from": "Latent Space",
   "added": "2026-11-02",
   "auto": true
+ },
+ {
+  "pid": "jacoblauritzen",
+  "en": "Jacob Lauritzen",
+  "zh": "雅各布·劳里岑",
+  "tiEn": "CTO, Legora",
+  "from": "Latent Space",
+  "added": "2026-11-03",
+  "auto": true
+ },
+ {
+  "pid": "danilashtan",
+  "en": "Danila Shtan",
+  "zh": "丹尼拉·什坦",
+  "tiEn": "CTO, Nebius",
+  "from": "Unsupervised Learning",
+  "added": "2026-11-03",
+  "auto": true
  }
 ]
