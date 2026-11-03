@@ -49,7 +49,11 @@ document.querySelectorAll('a.cta').forEach(function(a){a.href=h});
    放在埋点脚本之前,跳走的这一次不记 view,由 SPA 自己记,UV 口径不重复。
    要看静态页本身(排版/OG/SEO)加 ?static=1 绕过跳转。*/
 var UA=navigator.userAgent||'';
-if(!/[?&]static=1/.test(location.search)&&!/bot|crawl|spider|slurp|headless|lighthouse|bingpreview|facebookexternalhit/i.test(UA))location.replace(h);})()</script>
+/* 2026-11-03:跳转会丢掉原始来源(SPA 只看到本站域名),Bing/Google/微信点进来全被记成站内。
+   跳走前把外部来源域名放进 sessionStorage(同标签页、同源,replace 后仍在),SPA 埋点优先取它。*/
+if(!/[?&]static=1/.test(location.search)&&!/bot|crawl|spider|slurp|headless|lighthouse|bingpreview|facebookexternalhit/i.test(UA)){
+try{var r=document.referrer?new URL(document.referrer).host:'';if(r&&r!==location.host)sessionStorage.eref=r;}catch(_){}
+location.replace(h);}})()</script>
 <footer>© AI Podcast · <a href="https://aipodcast.jasonlin.tech/">aipodcast.jasonlin.tech</a> — 双语播客全文阅读。转录/翻译仅供学习评论，版权归原播客与权利人，应要求即下架(linzheng3535@gmail.com)。</footer>
 </div><script>function shareThis(b){var u=document.querySelector('link[rel=canonical]').href,t=document.title,d=(document.querySelector('meta[name=description]')||{}).content||'';
 if(navigator.share){navigator.share({title:t,text:d,url:u}).catch(function(){});return;}

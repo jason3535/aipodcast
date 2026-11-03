@@ -148,7 +148,11 @@ document.querySelectorAll('a.cta').forEach(function(a){a.href=h});
    放在埋点脚本之前,跳走的这一次不记 view,由 SPA 自己记,UV 口径不重复。
    要看静态页本身(排版/OG/SEO)加 ?static=1 绕过跳转。*/
 var UA=navigator.userAgent||'';
-if(!/[?&]static=1/.test(location.search)&&!/bot|crawl|spider|slurp|headless|lighthouse|bingpreview|facebookexternalhit/i.test(UA))location.replace(h);})()</script>`;
+/* 2026-11-03:跳转会丢掉原始来源(SPA 只看到本站域名),Bing/Google/微信点进来全被记成站内。
+   跳走前把外部来源域名放进 sessionStorage(同标签页、同源,replace 后仍在),SPA 埋点优先取它。*/
+if(!/[?&]static=1/.test(location.search)&&!/bot|crawl|spider|slurp|headless|lighthouse|bingpreview|facebookexternalhit/i.test(UA)){
+try{var r=document.referrer?new URL(document.referrer).host:'';if(r&&r!==location.host)sessionStorage.eref=r;}catch(_){}
+location.replace(h);}})()</script>`;
   const ld=[{"@context":"https://schema.org","@type":"PodcastEpisode",name:e.tEn,alternateName:e.tZh,url,datePublished:e.date,timeRequired:e.min?`PT${e.min}M`:undefined,inLanguage:["en","zh"],description:e.sEn||e.sZh,abstract:cons.map(c=>c.en).filter(Boolean).slice(0,5).join(' '),partOfSeries:{"@type":"PodcastSeries",name:(e.pod&&e.pod.en)||''},isPartOf:{"@type":"WebSite",name:"AI Podcast",url:SITE},actor:{"@type":"Person",name:p.en,jobTitle:p.tiEn,url:person},...(vid(e.src)?{associatedMedia:{"@type":"VideoObject",name:e.tEn,embedUrl:`https://www.youtube.com/embed/${vid(e.src)}`,uploadDate:e.date}}:{})},
     {"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"AI Podcast",item:SITE+"/"},{"@type":"ListItem",position:2,name:p.zh||p.en||'',item:person},{"@type":"ListItem",position:3,name:e.tZh||e.tEn,item:url}]}];
   fs.mkdirSync(path.join(EDIR,e.id),{recursive:true});

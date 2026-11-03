@@ -4461,7 +4461,9 @@ addEventListener('hashchange',()=>setTimeout(pushNudgeTick,300));
 /* ====== 匿名访问统计（无 Cookie / 不收集个人信息；数据进自有 D1，可在 Claude Code 直接查） ====== */
 const STATS_URL='https://stats.jasonlin.tech';
 const _dev=/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)?'mobile':'desktop';
-const _ref=(()=>{try{return document.referrer?new URL(document.referrer).host:'';}catch(_){return '';}})();
+/* /e/ 静态页跳转进来时,真实外部来源存在 sessionStorage.eref(见 build_share_pages.js),取一次即删 */
+const _ref=(()=>{try{const e=sessionStorage.eref;if(e){sessionStorage.removeItem('eref');return e;}}catch(_){}
+  try{return document.referrer?new URL(document.referrer).host:'';}catch(_){return '';}})();
 let _lastView=null;
 /* 匿名访客 ID(2026-08-09 加):此前 UV 只有服务端的「每日哈希」vid = SHA256(盐+当天日期+IP+UA),
    日期在哈希输入里 → 同一人隔天必然换 ID,**跨天/跨周留存在结构上不可测**(190 人里"只有 1 人回访",
