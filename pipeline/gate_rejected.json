@@ -623,5 +623,25 @@
 "t": "David Tisch: Why No Manager Wants to Stay Small & Why Competing with Mega Platfo",
 "why": "嘉宾David Tisch不在站内人物名单中，且内容为VC/投资话题访谈，非实质性AI/技术访谈。",
 "at": "2026-11-01"
+},
+"yasFle0Fnjg|nevflynn": {
+"t": "How to Write Thrilling Stories (Gillian Flynn Interview)",
+"why": "视频嘉宾是作家 Gillian Flynn（《消失的爱人》作者），与 ElevenLabs 设计负责人 Nev Flynn 仅姓氏相同，身份完全不符，属同名误搜",
+"at": "2026-11-03"
+},
+"cvmgnpxr-Lk|scottwu": {
+"t": "How Mark Zuckerberg, Palmer Luckey, Josh Kushner & Scott Wu Think | Jeremy Stern",
+"why": "这是对Colossus主编Jeremy Stern的访谈，Scott Wu仅作为其报道对象之一被提及，并非本集主要嘉宾，且为多人并列的圆桌式讨论。",
+"at": "2026-11-03"
+},
+"yW_ngvMFlYs": {
+"t": "Why Consciousness Might Not Be Hard At All (Joscha Bach)",
+"why": "嘉宾Joscha Bach不在站内人物名单中，无法匹配pid。",
+"at": "2026-11-03"
+},
+"lXkjXSul6yg": {
+"t": "What iPhone Packaging Reveals About the Robotics Opportunity",
+"why": "主嘉宾Josh Gruenstein不在站内名单中，且为a16z对谈节目，非名单人物主讲。",
+"at": "2026-11-03"
 }
 }

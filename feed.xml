@@ -6,7 +6,42 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sat, 31 Oct 2026 01:41:05 -0000</lastBuildDate>
+  <lastBuildDate>Mon, 02 Nov 2026 01:45:59 -0000</lastBuildDate>
+  <item>
+    <title>付费增长秘籍：Hector Serrano 谈如何用 UGC 规模化 WhisperFlow — Lenny’s Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/hectorserrano-lennyspo-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/hectorserrano-lennyspo-2026/</guid>
+    <pubDate>Mon, 02 Nov 2026 01:45:59 -0000</pubDate>
+    <description>Hector Serrano 分享 WhisperFlow 实现 30 倍营收增长背后的战术手册，涵盖付费 UGC、创作者计划以及如何在 B2B SaaS 营销中脱颖而出。  要点: 产品市场契合是唯一的增长黑客，付费和自然渠道放大需求而非创造需求。 / 基于绩效的 UGC 配合智能底薪，能建立忠诚创作者团队并扩大广告产出。 / 雇佣有社交增长证明的年轻创作者，给予实验自由。</description>
+  </item>
+  <item>
+    <title>Jerry Tworek：打造随用户实时学习的 AI，挑战 Transformer 架构 — Grace Gong</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/tworek-gracegon-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/tworek-gracegon-2026/</guid>
+    <pubDate>Mon, 02 Nov 2026 01:45:59 -0000</pubDate>
+    <description>Core Automation CEO Jerry Tworek 解析为何 Transformer 并非终点，以及模型如何随用户数据实时学习。  要点: Transformer 并非终点，更好的架构将带来更智能、更稳健的学习系统。 / 微调效率低下，模型应实时从用户数据中学习。 / 未来的公司将由 AI 运营，人类负责设定目标和引导。</description>
+  </item>
+  <item>
+    <title>用 AI 智能体处理长周期金融工作 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/amansingh-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/amansingh-latentsp-2026/</guid>
+    <pubDate>Mon, 02 Nov 2026 01:45:59 -0000</pubDate>
+    <description>Arca 的 Aman Singh 讲述这家 AI 原生财富管理公司如何用模型无关的智能体框架，在人类顾问背后完成长周期金融工作。  要点: AI 替代的是顾问的后台工作而非顾问本身，共情仍由人提供。 / 掌控自己的执行框架和运营知识，别把智能外包给托管代理。 / 代理会 24/7 主动提醒人，颠覆了通常的人对代理的交互模式。</description>
+  </item>
+  <item>
+    <title>为金融业打造 ChatGPT：OpenAI 的企业级实践 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/josephkim-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/josephkim-latentsp-2026/</guid>
+    <pubDate>Mon, 02 Nov 2026 01:45:59 -0000</pubDate>
+    <description>OpenAI 金融服务负责人 Joseph Kim 详解 ChatGPT 金融版的构建思路与模型智能的未来走向。  要点: 基于 ChatGPT 插件架构加上专有数据，可以打造十亿美元级的金融产品。 / 模型最大的差距在于人类判断力和品味，而非事实准确性。 / 评估体系难以构建且容易被钻空子，高分可能具有误导性。</description>
+  </item>
+  <item>
+    <title>为何定制 AI 模型将取代基础模型——对话 Fireworks AI 创始人 Lin Qiao — Canva</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/linqiao-canva-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/linqiao-canva-2026/</guid>
+    <pubDate>Mon, 02 Nov 2026 01:45:59 -0000</pubDate>
+    <description>Fireworks AI 创始人 Lin Qiao 讲述为何基于专有用户数据打造的定制模型将超越基础模型，以及她在 Meta 开发 PyTorch 的经历如何塑造了这一判断。  要点: 推理质量是 AI 产品的首要因素，前沿质量是门槛。 / 私有数据是解锁下一代智能的关键，而前沿实验室缺乏私有数据。 / 未来是定制模型主导，而非少数基础模型；拥有自己的模型至关重要。</description>
+  </item>
   <item>
     <title>当人人都能构建软件：Supabase 的智能体驱动未来 — Y Combinator</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/paulcopplestone-ycombina-2026</link>
@@ -181,41 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/schulman-dwarkesh-2026/</guid>
     <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
     <description>John Schulman、Charlie O'Neill 与 Beren Millidge 共同探讨泛化能力、品味与部署学习等技术瓶颈，判断递归自我改进究竟还有多远。  要点: 强化学习的成功主要源于合成推理数据和高信噪比的单比特奖励。 / 蒸馏对抗集中化，因为强化学习获得的行为比特少且易于复制。 / 进展的瓶颈在于构建困难的强化学习环境和有用数据，而非算力。</description>
-  </item>
-  <item>
-    <title>为何下一次 AI 突破可能来自物理学 — TWIML AI 播客</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/maxwelling-thetwiml-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/maxwelling-thetwiml-2026/</guid>
-    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
-    <description>Max Welling 阐释波、热力学与对称破缺等物理学概念如何塑造下一代 AI 架构。  要点: 热力学、对称破缺等物理概念能启发下一代 AI 架构，而不仅仅是应用领域。 / 生成式 AI 的数学与非平衡随机热力学等价，促进两个领域的交叉融合。 / AI 设计的材料和自驱动实验室能将材料发现从数年压缩到数天，加速能源转型。</description>
-  </item>
-  <item>
-    <title>Max Welling：物理、对称性与 AI 驱动的材料发现 — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/maxwelling-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/maxwelling-latentsp-2026/</guid>
-    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
-    <description>Max Welling 探讨物理学、对称性与生成式 AI 如何融合，加速新材料的发现。  要点: 物理学将对称性、图神经网络、扩散模型和材料发现串联起来。 / AI 使得搜索所有可能的分子成为可能，而不仅限于已知分子。 / 领域专家仍参与其中；完全自动化尚不现实。</description>
-  </item>
-  <item>
-    <title>全栈设计师新范式：AI、编辑思维与产品设计的未来 — Y Combinator</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/marvinschwaibold-ycombina-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/marvinschwaibold-ycombina-2026/</guid>
-    <pubDate>Tue, 27 Oct 2026 01:39:32 -0000</pubDate>
-    <description>Shopify 产品设计负责人 Marvin Schwaibold 分享 Codex、Claude Code 等 AI 工具如何重塑其迭代工作流，让设计师从手工创作者转变为把控品质的编辑者。  要点: 设计师转型为编辑：AI 负责执行，人类负责筛选和设定标准。 / AI 原型比 PRD 更有说服力；将任务拆解为子任务进行迭代。 / 暴露参数以微调 AI 设计；渐进披露和清晰层级仍是关键。</description>
-  </item>
-  <item>
-    <title>OpenAI 为何竞相让电脑操作超越人类 — The a16z Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/ariweinstein-thea16zp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ariweinstein-thea16zp-2026/</guid>
-    <pubDate>Tue, 27 Oct 2026 01:39:32 -0000</pubDate>
-    <description>OpenAI 的 Ari Weinstein 与 James Sun 解析 GPT-5 Astra 如何让电脑操作智能体在速度上超越普通人、可靠性逼近超人水平，以及这对消费级与企业级应用意味着什么。  要点: 电脑使用速度已超普通人，接近超人水平，交互方式正发生巨变。 / 通用电脑使用能像人一样操作任何应用，不同于 API 集成，实现广泛自动化。 / 企业采用的关键在于确定性控制、沙箱和人工介入以建立信任。</description>
-  </item>
-  <item>
-    <title>86 分钟找到产品市场契合度的指南 — Lenny’s Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/robsnyder-lennyspo-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/robsnyder-lennyspo-2026/</guid>
-    <pubDate>Tue, 27 Oct 2026 01:39:32 -0000</pubDate>
-    <description>《拉力的力量》作者 Rob 分享了一套寻找产品市场契合度、从 0 到 1 的实用框架。  要点: Pull 是个人属性：向有具体项目的个人销售，而非公司。 / 如果存在 Pull，客户会立即尝试购买；否则就放弃。 / 避免设计合作伙伴；他们表明缺乏 Pull。直接销售。</description>
   </item>
 </channel>
 </rss>
