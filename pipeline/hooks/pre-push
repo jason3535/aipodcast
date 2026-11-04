@@ -1,0 +1,32 @@
+#!/bin/bash
+# git pre-push 钩子(两站同一份)。由 pipeline/install_hooks.sh 软链到 .git/hooks/pre-push。
+# 算出这次推送新增的提交改了哪些文件,交给 pipeline/gate_prepush.sh 验证;门禁不过 git 就不推。
+# 绕过:SKIP_SITE_GATE=1 git push(只跳这道门禁)或 git push --no-verify(跳过全部钩子)。
+if [ -n "${SKIP_SITE_GATE:-}" ]; then
+  echo "⚠ SKIP_SITE_GATE=1:已跳过站点门禁(页面未验证就推送)"
+  exit 0
+fi
+cd "$(git rev-parse --show-toplevel)" || exit 2
+ZERO=0000000000000000000000000000000000000000
+files=""
+while read -r lref lsha rref rsha; do
+  [ "$lsha" = "$ZERO" ] && continue                       # 删远端分支,不用验
+  if [ "$rsha" != "$ZERO" ] && git cat-file -e "$rsha^{commit}" 2>/dev/null; then
+    base=$rsha
+  else                                                     # 新分支:和远端主干比
+    base=$(git merge-base "$lsha" refs/remotes/origin/HEAD 2>/dev/null || git merge-base "$lsha" refs/remotes/origin/master 2>/dev/null)
+  fi
+  [ -z "$base" ] && { echo "⚠ 站点门禁:找不到比较基准,按全站冒烟处理"; files="$files"$'\n'"app.js"; continue; }
+  changed=$(git diff --name-only "$base" "$lsha")
+  files="$files"$'\n'"$changed"
+  # 门禁读的是工作区文件;推的不是当前 HEAD、或这些文件还有没提交的改动时,验的就不是要推的那一版 ——
+  # 只提示不拦的话等于没验(11/4 测试:检出 master 时推坏分支,门禁验的是 master,坏分支照样推了上去),所以直接拒绝
+  if [ "$lsha" != "$(git rev-parse HEAD)" ]; then
+    echo "✗ 站点门禁:要推的 $lref 不是当前检出的提交,没法验证它。先 git checkout ${lref#refs/heads/} 再推(或 SKIP_SITE_GATE=1 跳过)"
+    exit 1
+  elif [ -n "$changed" ] && ! git diff --quiet HEAD -- $changed 2>/dev/null; then
+    echo "✗ 站点门禁:这次要推的文件里还有没提交的改动,工作区和要推的版本不一致。先提交或 git stash 再推(或 SKIP_SITE_GATE=1 跳过)"
+    exit 1
+  fi
+done
+printf '%s\n' "$files" | awk 'NF' | sort -u | pipeline/gate_prepush.sh

@@ -1,0 +1,17 @@
+{
+  "_说明": "转写专有名词对照表,给 check_transcript.py 用。variants 是误写形态(正则片段,不区分大小写,前后不能紧贴英文字母);命中即 ✗(门禁拦)。pids 留空=全库生效,填了只查这些人物的单集。新发现一个误听就往这里加一条,别只改那一期 —— 它会在下一期又出现。",
+  "terms": [
+    {
+      "canonical": "pstack",
+      "variants": ["P[ -]?Sack", "P[ -]Stack"],
+      "pids": [],
+      "note": "Lauren Tan 的开源 agent 工具包(名字戏仿 Garry Tan 的 gstack)。2026-11-03 laurentan-aiinside-2026 被听成 P Sack ×8 / P Stack ×3,中文章节名也跟着错"
+    },
+    {
+      "canonical": "gstack",
+      "variants": ["G[ -]Stack", "G[ -]?Sack"],
+      "pids": [],
+      "note": "Garry Tan 的 Claude Code 技能包"
+    }
+  ]
+}
