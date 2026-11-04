@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 348 位人物 / 822 期访谈
+规模: 349 位人物 / 823 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -153,6 +153,7 @@
 - [Zach Lloyd / 扎克·劳埃德](https://aipodcast.jasonlin.tech/pp/zachlloyd/): Founder and CEO, Warp — 1 期
 - [Jacob Lauritzen / 雅各布·劳里岑](https://aipodcast.jasonlin.tech/pp/jacoblauritzen/): CTO, Legora — 1 期
 - [Danila Shtan / 丹尼拉·什坦](https://aipodcast.jasonlin.tech/pp/danilashtan/): CTO, Nebius — 1 期
+- [John Ternus / 约翰·特努斯](https://aipodcast.jasonlin.tech/pp/johnternus/): CEO, Apple — 1 期
 - [Hector Serrano / 赫克托·塞拉诺](https://aipodcast.jasonlin.tech/pp/hectorserrano/): Head of Content, Wispr Flow — 1 期
 - [Aman Singh / 阿曼·辛格](https://aipodcast.jasonlin.tech/pp/amansingh/): Head of AI, Arca — 1 期
 - [Joseph Kim / 约瑟夫·金](https://aipodcast.jasonlin.tech/pp/josephkim/): Head of Financial Services, OpenAI — 1 期
@@ -364,6 +365,7 @@
 - [Building Legal Agents When You Can't See the Data: Jacob Lauritzen, CTO of Legora](https://aipodcast.jasonlin.tech/e/jacoblauritzen-latentsp-2026/) — Jacob Lauritzen, Latent Space, 2026-11-02
 - [The Window Before AWS Wakes Up: Nebius CTO on Racing the Hyperscalers](https://aipodcast.jasonlin.tech/e/danilashtan-unsuperv-2026/) — Danila Shtan, Unsupervised Learning, 2026-11-02
 - [Modal CEO Erik: The $100B Inference Opportunity and Why Open-Source LLM Inference Hasn't Peaked](https://aipodcast.jasonlin.tech/e/erikbernhardsson-20vc-2026/) — Erik Bernhardsson, 20VC, 2026-11-02
+- [John Ternus's First Apple Earnings Call as CEO: Record September Quarter Revenue of $114.5B](https://aipodcast.jasonlin.tech/e/johnternus-appleq4-2026/) — John Ternus, Apple Q4 2026 Earnings Call, 2026-11-02
 - [Paid-Growth Alpha: Hector Serrano on Scaling WhisperFlow with UGC](https://aipodcast.jasonlin.tech/e/hectorserrano-lennyspo-2026/) — Hector Serrano, Lenny’s Podcast, 2026-11-01
 - [Jerry Tworek on Building AI That Learns On the Fly and Challenging Transformers](https://aipodcast.jasonlin.tech/e/tworek-gracegon-2026/) — Jerry Tworek, Grace Gong, 2026-10-31
 - [Using AI Agents for Long-Horizon Financial Work](https://aipodcast.jasonlin.tech/e/amansingh-latentsp-2026/) — Aman Singh, Latent Space, 2026-10-31
@@ -396,7 +398,6 @@
 - [NVIDIA GTC Berlin 2026: Jensen Huang on the AI Industrial Revolution](https://aipodcast.jasonlin.tech/e/jensen-nvidia-2026/) — Jensen Huang, NVIDIA, 2026-10-21
 - [Sam Altman on AI Consciousness, RSI, and the Future of Discovery](https://aipodcast.jasonlin.tech/e/altman-matthewb-2026/) — Sam Altman, Matthew Berman, 2026-10-21
 - [Andrew Ng: Why AI Fearmongering Is Overhyped](https://aipodcast.jasonlin.tech/e/andrewng-theecono-2026b/) — Andrew Ng, The Economic Times, 2026-10-21
-- [Tesla Q3 2026 Earnings Call: FSD Demand, Cybercab, and Optimus](https://aipodcast.jasonlin.tech/e/elon-teslaq3-2026/) — Elon Musk, Tesla Q3 2026 Earnings Call, 2026-10-21
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml

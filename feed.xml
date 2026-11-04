@@ -6,7 +6,49 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Tue, 03 Nov 2026 01:44:50 -0000</lastBuildDate>
+  <lastBuildDate>Wed, 04 Nov 2026 03:34:46 -0000</lastBuildDate>
+  <item>
+    <title>特努斯首次以 CEO 身份主持财报电话会：苹果九月季度营收 1145 亿美元创纪录 — 苹果 2026 Q4 财报电话会</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/johnternus-appleq4-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/johnternus-appleq4-2026/</guid>
+    <pubDate>Wed, 04 Nov 2026 03:34:46 -0000</pubDate>
+    <description>特努斯首次以苹果 CEO 身份主持财报电话会：九月季度营收 1145 亿美元，同比增长 12% 创纪录；iPhone Duo、Siri AI 与首款触控 Mac 登场，新任 COO 萨比·汗回应供应链与内存成本问题。  要点: 九月季度营收创纪录达 1145 亿美元，25 亿活跃设备推动服务业务增长。 / Siri AI 基于请求、注重隐私且深度集成，并非代理式；服务器功能将推出付费层级。 / 前所未有的内存定价成为日益增长的成本阻力；苹果不情愿地上调了部分产品价格。</description>
+  </item>
+  <item>
+    <title>Sam Altman 谈 AI、超级智能与人类未来 — Raj Shamani</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/altman-rajshama-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/altman-rajshama-2026/</guid>
+    <pubDate>Wed, 04 Nov 2026 01:43:24 -0000</pubDate>
+    <description>Sam Altman 坦陈打造超级智能的代价、身处疯狂生活的感受，以及为何印度对 AI 最为乐观。  要点: 扩展神经网络带来超线性回报，这一直觉驱动了 OpenAI 的算力豪赌。 / 尽早发布产品，哪怕难堪；少数热情用户胜过大量不温不火的用户。 / 雄心可以通过同辈群体和连续挑战来培养，并非天生。</description>
+  </item>
+  <item>
+    <title>在 Shopify 规模化打磨工艺：Derek Briggs 谈设计作为差异化优势 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/derekbriggs-diveclub-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/derekbriggs-diveclub-2026/</guid>
+    <pubDate>Wed, 04 Nov 2026 01:43:24 -0000</pubDate>
+    <description>Derek Briggs 分享他如何在 Shopify 提升工艺标准，从 shop.com 的自定义缓动曲线到通过设计系统在 300 人设计团队中放大影响力。  要点: 当任何人都能实现想法时，设计工艺才是差异化因素。 / 使用更长的缓动时长，同时保持 200 毫秒的视觉运动以带来愉悦感。 / AI 应该让设计师好 10 倍，而不仅仅是效率高 10 倍。</description>
+  </item>
+  <item>
+    <title>2026 软件工厂基础设施栈 — Zach Lloyd，Warp.dev — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/zachlloyd-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/zachlloyd-latentsp-2026/</guid>
+    <pubDate>Wed, 04 Nov 2026 01:43:24 -0000</pubDate>
+    <description>Warp.dev 的 Zach Lloyd 解析软件工厂的真正含义、为何应以代码定义，以及团队构建软件工厂所需的基础设施。  要点: 软件工厂是可度量、声明式的智能体系统，而非临时拼凑的自动化。 / 集中管理智能体轨迹，用在线评估以工程严谨性取代感觉。 / 完整技术栈适合 5-10 人以上工程团队；小团队用订阅即可。</description>
+  </item>
+  <item>
+    <title>AI 能否成为“尤里卡机器”？Richard Socher 谈 AI 驱动的科学发现 — The TWIML AI Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/richardsocher-thetwiml-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/richardsocher-thetwiml-2026/</guid>
+    <pubDate>Wed, 04 Nov 2026 01:43:24 -0000</pubDate>
+    <description>Richard Socher 探讨 AI 如何从辅助科学家走向自主提出想法、运行实验并验证发现，加速生物学、化学、物理学等领域的科学突破。  要点: AI 已开始小规模生成并验证科学发现，但尚未成为尤里卡机器。 / 尤里卡机器依赖四大支柱：世界知识、测量数据、模拟和机器人实验。 / 应监管 AI 应用和用户责任，而非抽象智能；放缓 AI 不现实。</description>
+  </item>
+  <item>
+    <title>与 Jeff Dean 炉边对话：TPU 的演进与 AI 基础设施 — OpenXLA</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/jeffdean-openxla-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jeffdean-openxla-2026/</guid>
+    <pubDate>Wed, 04 Nov 2026 01:43:24 -0000</pubDate>
+    <description>谷歌第 30 号员工 Jeff Dean 回顾从早期搜索扩展到 TPU 诞生的历程，并展望 AI 基础设施的未来。  要点: TPU 通过模型、硬件、编译器和基础设施的全栈协同设计，实现了显著的每瓦性能提升。 / 十万芯片规模的可靠性是一种系统属性，需要稳健的软件和运维实践。 / 开源 JAX 并拥抱 PyTorch，防止 AI 基础设施被少数公司垄断。</description>
+  </item>
   <item>
     <title>看不见数据时如何构建法律智能体：Legora CTO Jacob Lauritzen — Latent Space</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/jacoblauritzen-latentsp-2026</link>
@@ -174,48 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/naveenrao-20vc-2026/</guid>
     <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
     <description>Naveen Rao 解析能源为何是真正瓶颈、未来十年硬件为何胜过软件，以及推理如何成长为 10 万亿美元市场。  要点: 推理将成 10 万亿美元市场，因为智能需求无限。 / 能源是瓶颈；硬件协同设计带来巨大效率提升。 / 验证是新瓶颈；强化学习实现通用问题求解。</description>
-  </item>
-  <item>
-    <title>Zip 的 AI 超级代理：端到端自动化采购流程 — Eye on AI</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/rujulzaparde-eyeonai-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/rujulzaparde-eyeonai-2026/</guid>
-    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
-    <description>Zip 首席执行官 Rujul Zaparde 讲述 AI 超级代理如何自动化采购中的事务性工作，以及为何人类判断依然不可或缺。  要点: 深度部署 AI 的 ROI 为 39%，试点仅为 6%；深度比广度更重要。 / 超级智能体端到端自动化采购，人类设定审核阈值并保持完全可审计。 / 上下文管理和按用例路由模型比使用最先进模型更重要。</description>
-  </item>
-  <item>
-    <title>OpenAI 健康 AI 负责人：你该信任 ChatGPT 吗？ — a16z 播客</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/karansinghal-thea16zp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/karansinghal-thea16zp-2026/</guid>
-    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
-    <description>OpenAI 健康 AI 研究负责人 Karan Singhal 畅谈 ChatGPT 每周服务 3 亿健康用户，以及如何打造值得信赖的医疗 AI。  要点: 健康智能应充裕且免费，从而提升全球人类健康的底线。 / 在通用前沿模型内进行专业化训练，优于独立的专用模型。 / AI 是主动的个人健康助手，而非医生的替代品。</description>
-  </item>
-  <item>
-    <title>大多数人对进化的误解：人工生命、开放式演化与超越地球的智能 — ML Street Talk</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/akarshkumar-machinel-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/akarshkumar-machinel-2026/</guid>
-    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
-    <description>Akarsh Kumar 解释进化绝非随机，人工生命研究的是“可能存在的生命”，以及基础模型如何帮助我们探索所有可能智能的空间。  要点: 进化并非随机，而是通过保留部分解将指数搜索变为线性。 / 开放性和涌现只占据可能规则空间中一个稀有而狭小的区域。 / 结合验证器的 LLM 引导进化能产生超越人类设计的通用程序。</description>
-  </item>
-  <item>
-    <title>探测隐匿意识：神经科学家的使命 — Eye on AI</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/christofkoch-eyeonai-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/christofkoch-eyeonai-2026/</guid>
-    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
-    <description>神经科学家克里斯托夫·科赫解释一种新工具如何检测无反应患者的意识，揭示四分之一的人可能是有意识的。  要点: 四分之一的无反应患者其实有意识却无法表达，脑复杂性检测可以识别他们。 / 意识可能是基本且精神的，而非源于物质；物理主义未能解决难问题。 / 当前的大语言模型模拟智能，但缺乏意识所需的因果结构。</description>
-  </item>
-  <item>
-    <title>Claude 为何还当不了你的产品经理：Anthropic 的 Mike 与 Ami 谈产品角色的演变 — Lenny 播客</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/mikekrieger-lennyspo-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/mikekrieger-lennyspo-2026/</guid>
-    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
-    <description>Anthropic 的 Mike 与 Ami 探讨 AI 是否会取代产品经理、当下优秀 PM 的样子，以及如何打造 agent 原生产品。  要点: 产品经理的角色并未过时，连接人类问题与技术比以往任何时候都更重要。 / 构建智能体原生应用，让智能体能做人类能做的所有事，并通过并行实验推进。 / 避免能力盲区：模型未就绪时搁置项目，每出新模型就重试。</description>
-  </item>
-  <item>
-    <title>为数学担任裁判的编程语言 — ML Street Talk</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/leodemoura-machinel-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/leodemoura-machinel-2026/</guid>
-    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
-    <description>Lean 创造者 Leo de Moura 讲述其核心的大教堂模式、AI 如何利用内核漏洞，以及社区扩展为何不断给他惊喜。  要点: AI 可能利用内核漏洞伪造证明，因此需要多个独立内核和经过验证的组件。 / 形式验证将无处不在，悄然融入每位开发者的工作流程。 / 人类将始终留在循环中，在规格层面定义软件应该做什么。</description>
   </item>
 </channel>
 </rss>
