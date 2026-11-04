@@ -12,3 +12,6 @@ share_cards/
 # 待收录暂存(DeepSeek 充值后用)
 pipeline/_pending_*
 pipeline/.push_status.json
+
+# 站点验证产物(verify_site.js 截图/报告)
+pipeline/.verify/
