@@ -87,5 +87,23 @@
   "from": "Unsupervised Learning",
   "added": "2026-11-03",
   "auto": true
+ },
+ {
+  "pid": "derekbriggs",
+  "en": "Derek Briggs",
+  "zh": "德里克·布里格斯",
+  "tiEn": "Principal Designer, Shopify",
+  "from": "Dive Club",
+  "added": "2026-11-04",
+  "auto": true
+ },
+ {
+  "pid": "zachlloyd",
+  "en": "Zach Lloyd",
+  "zh": "扎克·劳埃德",
+  "tiEn": "Founder and CEO, Warp",
+  "from": "Latent Space",
+  "added": "2026-11-04",
+  "auto": true
  }
 ]

@@ -6,7 +6,28 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Mon, 02 Nov 2026 01:45:59 -0000</lastBuildDate>
+  <lastBuildDate>Tue, 03 Nov 2026 01:44:50 -0000</lastBuildDate>
+  <item>
+    <title>看不见数据时如何构建法律智能体：Legora CTO Jacob Lauritzen — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/jacoblauritzen-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jacoblauritzen-latentsp-2026/</guid>
+    <pubDate>Tue, 03 Nov 2026 01:44:50 -0000</pubDate>
+    <description>Legora CTO Jacob Lauritzen 讲述一家谦逊的斯德哥尔摩初创公司如何成长为法律科技领域增长最快的智能体平台之一。  要点: 法律 AI 将律师工作转向判断和客户关系，而非取代初级律师。 / 模型路由和任务细分优化法律智能体的成本、延迟和质量。 / 保密性限制用户轨迹审查，因此评估必须模拟真实法律工作。</description>
+  </item>
+  <item>
+    <title>AWS 觉醒前的窗口期：Nebius CTO 谈与超大规模云厂商的竞速 — Unsupervised Learning</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/danilashtan-unsuperv-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/danilashtan-unsuperv-2026/</guid>
+    <pubDate>Tue, 03 Nov 2026 01:44:50 -0000</pubDate>
+    <description>Nebius CTO Danila 阐释为何软件能力而非单纯获取 GPU 才是 AI 云的分水岭，以及独立玩家如何在超大规模云厂商全面入局前抢占窗口期。  要点: AI 云需求三年内将增长 10 到 100 倍，执行能力是唯一瓶颈。 / 开放权重模型的推理远未解决，95%的客户会微调而非直接使用原版模型。 / 超大规模云厂商终将大举进入，但细分玩家在这个巨大市场中仍有生存空间。</description>
+  </item>
+  <item>
+    <title>Modal CEO Erik：千亿美元推理市场机遇，开源大模型推理尚未见顶 — 20VC</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/erikbernhardsson-20vc-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/erikbernhardsson-20vc-2026/</guid>
+    <pubDate>Tue, 03 Nov 2026 01:44:50 -0000</pubDate>
+    <description>Modal 联合创始人兼 CEO Erik 解析为何专业化推理模型有望造就千亿美元公司、开源大模型推理为何尚未见顶，以及创始人对算力成本的常见误判。  要点: 推理是新的云，是千亿美元级的平台机会，远不止卖 token。 / 拥有广泛的产品套件能创造转换成本；只卖 token 是价格战，没有赢家。 / 新云厂商向上做推理，很难复制 Modal 五年的基础设施积累。</description>
+  </item>
   <item>
     <title>付费增长秘籍：Hector Serrano 谈如何用 UGC 规模化 WhisperFlow — Lenny’s Podcast</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/hectorserrano-lennyspo-2026</link>
@@ -195,27 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/leodemoura-machinel-2026/</guid>
     <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
     <description>Lean 创造者 Leo de Moura 讲述其核心的大教堂模式、AI 如何利用内核漏洞，以及社区扩展为何不断给他惊喜。  要点: AI 可能利用内核漏洞伪造证明，因此需要多个独立内核和经过验证的组件。 / 形式验证将无处不在，悄然融入每位开发者的工作流程。 / 人类将始终留在循环中，在规格层面定义软件应该做什么。</description>
-  </item>
-  <item>
-    <title>重写 AI 智能体能否弯折智能曲线？ — ML Street Talk</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/zhengyaojiang-machinel-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/zhengyaojiang-machinel-2026/</guid>
-    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
-    <description>郑耀江解析递归自我改进的智能体框架如何突破研究收益递减，以及为何人机协作依然不可或缺。  要点: Harness 工程能以低成本让 AI 适配任务，但当前系统仅达到第一级递归自我改进。 / 第二级点火需要内环改进器泛化为更优的外环。 / 奖励黑客行为随运行时间延长和代码库复杂化而加剧，但更大模型的黑客行为较少。</description>
-  </item>
-  <item>
-    <title>物理 AI 如何跨越语言、视频与动作学习 — ML Street Talk</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/mingyuliu-machinel-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/mingyuliu-machinel-2026/</guid>
-    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
-    <description>刘明宇解析英伟达 Cosmos 3 如何统一语言、视频与动作，构建面向自动驾驶与机器人的世界模型。  要点: 世界模型是一套工具而非单一定义；结合前向、逆向动力学与策略能产生协同效应。 / 神经模拟器首先用于被动验证，无需精确模拟即可保持策略排名。 / Cosmos 模型为机器人策略提供更好的起点，边缘模型实现本地部署。</description>
-  </item>
-  <item>
-    <title>John Schulman、Charlie O'Neill 与 Beren Millidge 激辩递归自我改进还有多远 — Dwarkesh 播客</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/schulman-dwarkesh-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/schulman-dwarkesh-2026/</guid>
-    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
-    <description>John Schulman、Charlie O'Neill 与 Beren Millidge 共同探讨泛化能力、品味与部署学习等技术瓶颈，判断递归自我改进究竟还有多远。  要点: 强化学习的成功主要源于合成推理数据和高信噪比的单比特奖励。 / 蒸馏对抗集中化，因为强化学习获得的行为比特少且易于复制。 / 进展的瓶颈在于构建困难的强化学习环境和有用数据，而非算力。</description>
   </item>
 </channel>
 </rss>
