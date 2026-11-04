@@ -84,7 +84,7 @@ function olRuns(md){
 // 中英序号一致性用:中文常写全角「1）」「1．」,前端不当列表渲染,但读者看到的编号是一样的,不算不一致
 // 半角要求后跟空白(「3.4 [__]」是条款号不是编号)
 function numSeq(md){return String(md||'').split('\n').map(l=>(l.match(/^\s*(\d+)(?:[.)]\s|\s*[．）、])/)||[])[1]).filter(Boolean).join(',');}
-const isTbl=t=>{if(!t||t.indexOf(' · ')<0)return false;const ls=String(t).split('\n');return ls.length>1||ls[0].split(' · ').length>=3;};
+const isTbl=t=>{/* 与 app.js isTblPara 一致:含公式定界符的段不算表格 */if(!t||t.indexOf(' · ')<0||/\\[[(]/.test(t))return false;const ls=String(t).split('\n');return ls.length>1||ls[0].split(' · ').length>=3;};
 const seqStr=r=>r.nums.join(',');
 
 // ── 数据层检查(不开浏览器)────────────────────────────────
