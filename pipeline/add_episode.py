@@ -164,8 +164,25 @@ def fetch_transcript(url):
         # 广告位/导航/免责声明:插在正文里,不剔除会被当成发言内容翻译。命中后 cur 置空,
         # 免得它后面的推荐文章标题被挂到最后一位发言人名下。
         if re.match(r"^\*{0,2}(Advertisement|Discover more|Sponsored|Related|Share this|Disclaimer|"
-                    r"Latest posts|Recommended|Categories|Search this site|Follow us|Follow on X)\b", ln, re.I):
+                    r"Latest posts|Recommended|Categories|Search this site|Follow us|Follow on X|"
+                    r"If you appreciate)\b", ln, re.I):
             cur = None; continue
+        if re.match(r"^[*\-]\s*Report a typo\b", ln, re.I):   # Six Colors 文末链接
+            cur = None; continue
+        # Six Colors 版式(2026-11-04 Apple Q4 加):开场白是 `## John Ternus’s opening remarks` 小标题,
+        # 问答是发言人与正文同一行 `**Michael Ng, Goldman Sachs**: 正文` → 记成 `Michael Ng (Goldman Sachs)`,
+        # 与 Q3 那期手工稿的分析师写法一致。
+        m = re.match(r"^#{2,3}\s+([A-Z][A-Za-z .'\-]{2,40}?)[’']s? (?:opening|prepared) remarks\s*$", ln, re.I)
+        if m:
+            cur = m.group(1).strip()
+            out.append(f"\n[{cur}]: ")
+            continue
+        m = re.match(r"^\*\*([A-Z][A-Za-z .'’\-]{2,40})(?:,\s*([^*\n]{2,50}))?\*\*\s*:\s*(.+)$", ln)
+        if m:
+            cur = m.group(1).strip() + (f" ({m.group(2).strip()})" if m.group(2) else "")
+            body_ln = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", m.group(3)).replace("**", "").replace("__", "")
+            out.append(f"\n[{cur}]: {body_ln} ")
+            continue
         # 发言人行的两种变体(同一份稿里混用):
         #   `**Colette Kress** — _Executive Vice President..._`  破折号前有空格、头衔带下划线
         #   `**Jensen Huang**— President and Chief Executive Officer`  紧跟破折号、头衔裸文本
@@ -472,7 +489,8 @@ def main():
     bad = [f for f in fields if f not in valid_fields]
     if bad:
         sys.exit(f"--fields 含未登记领域 {bad},可用: {sorted(valid_fields)}")
-    src = f"https://youtu.be/{vid}"
+    # 速记稿模式没有视频 id(vid 是 pid+台名拼的),来源必须用 --url,否则会生成不存在的 youtu.be 链接
+    src = a.url if scripted else f"https://youtu.be/{vid}"
 
     # 逐字稿权威源:写 mcp-data/ep/<id>.json(网页懒加载 + MCP 都用它);内联只存元数据,首屏才不臃肿
     epdir = BASE.parent / "mcp-data" / "ep"; epdir.mkdir(parents=True, exist_ok=True)

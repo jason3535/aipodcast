@@ -663,23 +663,67 @@ def sync_start():
         rc, out = git_net(["push", "-q", "origin", "master"])
         log(f"  补推上次滞留的 {ahead} 个提交:{'✓' if rc == 0 else '✗ ' + out.strip()[-100:]}")
 
-def push_with_merge(regen):
-    """推送;被拒(远端有新提交)则合并 → 重跑生成链 → 再推。返回 (ok, 说明)。"""
+def site_verify(ids):
+    """站点验证:与工作 Mac 的 pre-push 门禁(gate_prepush.sh)同一套检查,只验本轮新收的集。
+    Mac mini 不装 pre-push 钩子(无人值守被拦会停摆),所以由这里自己把关:没过就不进 master。
+    返回 (ok, 原因)。找不到 Playwright 等环境问题也算没过(宁可不推,也不推没验过的)。"""
+    if not ids: return True, ""
+    bad = []
+    rc, out = run_cmd(["node", "pipeline/verify_site.js", "--quiet", "--smoke", ","] + ids)
+    if rc != 0:
+        bad.append(f"verify_site rc={rc}")
+        log("  ✗ verify_site.js:\n" + out.strip()[-600:])
+    else: log(f"  ✓ verify_site.js {len(ids)} 期通过")
+    rc, out = run_cmd(["python3", "pipeline/check_transcript.py", "--check", "--quiet"] + ids)
+    if rc != 0:
+        bad.append(f"check_transcript rc={rc}")
+        log("  ✗ check_transcript.py:\n" + out.strip()[-600:])
+    else: log(f"  ✓ check_transcript.py {len(ids)} 期通过")
+    return (not bad), ", ".join(bad)
+
+def divert_to_fix_branch(base, why, msg, ids):
+    """站点验证没过:把本轮成果(含未提交改动/本地新提交)提交到 fix/auto-<日期> 分支,
+    master 退回本轮开始前的提交 base,不推送任何东西;写一行失败记录到日志 + 弹通知。
+    下次 cron 仍从干净的 master 起跑;修好后人工在工作 Mac 上把分支合进 master 再推(走 pre-push 门禁)。"""
+    rc, cur = run_cmd(["git", "rev-parse", "--abbrev-ref", "HEAD"])
+    cur = cur.strip() if rc == 0 else "master"
+    br = "fix/auto-" + datetime.now().strftime("%Y%m%d")
+    if run_cmd(["git", "rev-parse", "--verify", "-q", "refs/heads/" + br])[0] == 0:
+        br += datetime.now().strftime("-%H%M%S")   # 同一天第二次失败
+    rc, out = run_cmd(["git", "checkout", "-q", "-b", br])
+    if rc != 0:
+        fail(f"⚠️ 站点验证未通过,且建分支 {br} 失败(改动留在工作区):{out.strip()[-120:]}"); return
+    run_cmd(["git", "add", "-A"])
+    if run_cmd(["git", "diff", "--cached", "--quiet"])[0] != 0:
+        run_cmd(["git", "commit", "-q", "-m", msg + "(站点验证未通过,待人工修)",
+                 "-m", f"失败项:{why}\n由 pipeline/auto_refresh.py 自动提交到修复分支,未推送 master\n\n"
+                       "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"])
+    run_cmd(["git", "checkout", "-q", cur])
+    run_cmd(["git", "reset", "--hard", "-q", base])
+    one = re.sub(r"\s+", " ", why)[:200]
+    log(f"✗ GATE-FAIL branch={br} ids={','.join(ids) or '-'} why={one} (master 未推送,已退回 {base[:8]})")
+    notify("站点验证未通过,没上线", f"本轮成果在本地分支 {br}:{one[:80]}")
+
+def push_with_merge(regen, verify=lambda: (True, "")):
+    """推送;被拒(远端有新提交)则合并 → 重跑生成链 → 门禁 + 站点验证 → 再推。
+    返回 (ok, 说明, 是否站点验证失败)——第三项为 True 时调用方要把成果转去 fix 分支。"""
     rc, out = git_net(["push", "-q", "origin", "master"])
-    if rc == 0: return True, ""
+    if rc == 0: return True, "", False
     if not re.search(r"rejected|non-fast-forward|fetch first|更新被拒绝", out):
-        return False, out.strip()[-150:]
+        return False, out.strip()[-150:], False
     log("  push 被拒(远端有新提交),fetch + 按 key 合并…")
     rc, out = git_net(["fetch", "-q", "origin", "master"])
-    if rc != 0: return False, "fetch 失败:" + out.strip()[-120:]
-    if not merge_remote(): return False, "合并冲突,需人工处理"
+    if rc != 0: return False, "fetch 失败:" + out.strip()[-120:], False
+    if not merge_remote(): return False, "合并冲突,需人工处理", False
     regen()                                    # 生成物在合并里取的本地,按合并后的数据重跑
-    if not gates_ok([]): 
-        run_cmd(["git", "reset", "--hard", "-q", "HEAD"]); return False, "合并后门禁未通过"
+    if not gates_ok([]):
+        run_cmd(["git", "reset", "--hard", "-q", "HEAD"]); return False, "合并后门禁未通过", False
+    ok_v, why_v = verify()                     # 合并后重跑过生成链,页面要再验一次
+    if not ok_v: return False, "合并后站点验证未通过:" + why_v, True
     run_cmd(["git", "add", "-A"])
     run_cmd(["git", "commit", "-q", "-m", "chore: 合并远端后重跑生成链"])
     rc, out = git_net(["push", "-q", "origin", "master"])
-    return rc == 0, out.strip()[-150:]
+    return rc == 0, out.strip()[-150:], False
 
 def regen_chain(new_ids):
     """收录后的整条生成链;合并远端后也重跑一遍(此时 new_ids=[],跳过推送提醒)。"""
@@ -775,6 +819,7 @@ def main():
     log(f"=== auto_refresh 启动 (days={a.days} max={a.max} dry={a.dry_run}) ===")
 
     if not a.dry_run: sync_start()
+    base = run_cmd(["git", "rev-parse", "HEAD"])[1].strip()   # 站点验证失败时 master 退回这里
     st = load_state()
     log(f"在站:{len(st['people'])} 人 / {len(st['vids'])} 期")
     if a.channels_only:
@@ -832,15 +877,23 @@ def main():
     regen_chain(new_ids)
     if not gates_ok(new_ids): return
 
-    run_cmd(["git", "add", "-A"])
     # 2026-09-09:此前按 plan 前 added 位拼人名,单集中途失败回滚时会把失败的人写进标题(romanugarte 失败却上了 commit)
     msg = f"chore: 自动保鲜 +{added} 期（{', '.join(i.split('-')[0] for i in new_ids) if new_ids else ''}）"
     if new_people:
         msg += f" +{len(new_people)} 新人物"
         log(f"本轮新建人物 {len(new_people)} 位（头像待补）:{', '.join(new_people)}")
+
+    # 站点验证(verify_site.js + check_transcript.py):过了才进 master;没过 → fix/auto-<日期> 分支,不推
+    ok_v, why_v = site_verify(new_ids)
+    if not ok_v:
+        divert_to_fix_branch(base, why_v, msg, new_ids); return
+
+    run_cmd(["git", "add", "-A"])
     rc, outp = run_cmd(["git", "commit", "-q", "-m", msg,
         "-m", "由 pipeline/auto_refresh.py 自动收录\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"])
-    ok, why = push_with_merge(lambda: regen_chain([]))
+    ok, why, bad_verify = push_with_merge(lambda: regen_chain([]), lambda: site_verify(new_ids))
+    if bad_verify:
+        divert_to_fix_branch(base, why, msg, new_ids); return
     rc2, outp2 = (0, "") if ok else (1, why)
     if not ok:
         notify(f"{added} 期已收录但没上线", f"push 失败:{why[-100:]}。本地已提交,下次 cron 启动会自动补推")
