@@ -45,14 +45,6 @@
   "auto": true
  },
  {
-  "pid": "josephkim",
-  "en": "Joseph Kim",
-  "zh": "约瑟夫·金",
-  "tiEn": "Head of Financial Services, OpenAI",
-  "from": "Latent Space",
-  "added": "2026-11-02"
- },
- {
   "pid": "hectorserrano",
   "en": "Hector Serrano",
   "zh": "赫克托·塞拉诺",
@@ -104,6 +96,15 @@
   "tiEn": "Founder and CEO, Warp",
   "from": "Latent Space",
   "added": "2026-11-04",
+  "auto": true
+ },
+ {
+  "pid": "josephkim",
+  "en": "Joseph Kim",
+  "zh": "约瑟夫·金",
+  "tiEn": "Head of Financial Services, OpenAI",
+  "from": "Latent Space",
+  "added": "2026-11-02",
   "auto": true
  }
 ]
