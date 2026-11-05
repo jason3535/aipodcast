@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 349 位人物 / 823 期访谈
+规模: 349 位人物 / 824 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -86,6 +86,7 @@
 - [Yejin Choi / 崔艺珍](https://aipodcast.jasonlin.tech/pp/yejin/): Professor, Stanford (prev. NVIDIA, AI2); commonsense reasoning — 3 期
 - [Noam Shazeer / 诺姆·沙泽尔](https://aipodcast.jasonlin.tech/pp/shazeer/): Co-lead, Google Gemini — 3 期
 - [Jan Leike / 扬·莱克](https://aipodcast.jasonlin.tech/pp/leike/): Alignment Lead, Anthropic — 3 期
+- [Shawn Wang / 王绍恩](https://aipodcast.jasonlin.tech/pp/shawnwang/): AI Engineer, Podcaster, Operator at Cognition — 2 期
 - [Richard Socher / 理查德·索赫尔](https://aipodcast.jasonlin.tech/pp/richardsocher/): Founder, Recursive; former Chief Scientist, Salesforce — 2 期
 - [Jeetu Patel / 吉图·帕特尔](https://aipodcast.jasonlin.tech/pp/jeetupatel/): President and Chief Product Officer, Cisco — 2 期
 - [Marvin Schwaibold / 马文·施瓦博尔德](https://aipodcast.jasonlin.tech/pp/marvinschwaibold/): Product design leader at Shopify — 2 期
@@ -284,7 +285,6 @@
 - [Rafa Conde / 拉法·孔德](https://aipodcast.jasonlin.tech/pp/rafaconde/): Product Designer & Visual Design Specialist — 1 期
 - [Beth Barnes / 贝丝·巴恩斯](https://aipodcast.jasonlin.tech/pp/bethbarnes/): Founder & CEO, METR — 1 期
 - [Polly D'Arcy / 波莉·达西](https://aipodcast.jasonlin.tech/pp/pollydarcy/): VP of Design, Wealthsimple — 1 期
-- [Shawn Wang / 王绍恩](https://aipodcast.jasonlin.tech/pp/shawnwang/): AI Engineer, Podcaster, Operator at Cognition — 1 期
 - [Brandon Jacoby / 布兰登·雅各比](https://aipodcast.jasonlin.tech/pp/brandonjacoby/): Designer — 1 期
 - [Aidan Gomez / 艾丹·戈麦斯](https://aipodcast.jasonlin.tech/pp/gomez/): Co-founder & CEO, Cohere — 1 期
 - [Brian Lovin / 布莱恩·洛文](https://aipodcast.jasonlin.tech/pp/brianlovin/): Designer & Founder, Campsite — 1 期
@@ -358,6 +358,7 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
+- [Behind Latent Space: Kill My SaaS, Jev & AI in 2026 at AIE Shanghai](https://aipodcast.jasonlin.tech/e/shawnwang-latentsp-2026/) — Shawn Wang, Latent Space, 2026-11-04
 - [Sam Altman on AI, Superintelligence & the Future of Humanity](https://aipodcast.jasonlin.tech/e/altman-rajshama-2026/) — Sam Altman, Raj Shamani, 2026-11-03
 - [Scaling Craft at Shopify: Derek Briggs on Design as the Differentiator](https://aipodcast.jasonlin.tech/e/derekbriggs-diveclub-2026/) — Derek Briggs, Dive Club, 2026-11-03
 - [The 2026 Software Factory Infra Stack — Zach Lloyd, Warp.dev](https://aipodcast.jasonlin.tech/e/zachlloyd-latentsp-2026/) — Zach Lloyd, Latent Space, 2026-11-03
@@ -397,7 +398,6 @@
 - [Staying Human While Scaling Superintelligence](https://aipodcast.jasonlin.tech/e/altman-stanford-2026/) — Sam Altman, Stanford Graduate School of Business, 2026-10-21
 - [NVIDIA GTC Berlin 2026: Jensen Huang on the AI Industrial Revolution](https://aipodcast.jasonlin.tech/e/jensen-nvidia-2026/) — Jensen Huang, NVIDIA, 2026-10-21
 - [Sam Altman on AI Consciousness, RSI, and the Future of Discovery](https://aipodcast.jasonlin.tech/e/altman-matthewb-2026/) — Sam Altman, Matthew Berman, 2026-10-21
-- [Andrew Ng: Why AI Fearmongering Is Overhyped](https://aipodcast.jasonlin.tech/e/andrewng-theecono-2026b/) — Andrew Ng, The Economic Times, 2026-10-21
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
