@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Wed, 04 Nov 2026 03:34:46 -0000</lastBuildDate>
+  <lastBuildDate>Thu, 05 Nov 2026 01:50:54 -0000</lastBuildDate>
+  <item>
+    <title>潜空间幕后：杀死我的 SaaS、Jev 与 2026 年的 AI——AIE 上海特别节目 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/shawnwang-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/shawnwang-latentsp-2026/</guid>
+    <pubDate>Thu, 05 Nov 2026 01:50:54 -0000</pubDate>
+    <description>Shawn 做客潜空间，畅谈 AIE 落地上海、中国 AI 创业文化，以及 2026 年 AI 走向何方。  要点: AI 工程师是围绕模型构建工具链的人，而非仅训练模型的研究者。 / 中型 SaaS 面临消亡，因为编码智能体让中小企业能克隆并定制软件。 / 更小的系统一模型可能比大模型更有胜算。</description>
+  </item>
   <item>
     <title>特努斯首次以 CEO 身份主持财报电话会：苹果九月季度营收 1145 亿美元创纪录 — 苹果 2026 Q4 财报电话会</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/johnternus-appleq4-2026</link>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ankurmoitra-lexfridm-2026/</guid>
     <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
     <description>Ankur Moitra、Steven Brunton 与 Alex 做客 Lex Fridman 播客，共同解读机器宣称攻克 Navier-Stokes、黎曼猜想与唯一游戏猜想这一历史性时刻。  要点: AI 数学突破不是危机，而是开启数学知识的黄金时代。 / 人类理解与故事仍是核心；定理证明自动化让提问更有价值。 / Lean 和 MathLib 实现形式验证，但理解仍需人类叙事。</description>
-  </item>
-  <item>
-    <title>推理将成 10 万亿美元市场：Naveen Rao 谈能源、硬件与 AI 基建 — 20VC 创投播客</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/naveenrao-20vc-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/naveenrao-20vc-2026/</guid>
-    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
-    <description>Naveen Rao 解析能源为何是真正瓶颈、未来十年硬件为何胜过软件，以及推理如何成长为 10 万亿美元市场。  要点: 推理将成 10 万亿美元市场，因为智能需求无限。 / 能源是瓶颈；硬件协同设计带来巨大效率提升。 / 验证是新瓶颈；强化学习实现通用问题求解。</description>
   </item>
 </channel>
 </rss>
