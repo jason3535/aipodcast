@@ -106,5 +106,14 @@
   "from": "Latent Space",
   "added": "2026-11-02",
   "auto": true
+ },
+ {
+  "pid": "ronakmalde",
+  "en": "Ronak Malde",
+  "zh": "罗纳克·马尔德",
+  "tiEn": "Co-founder, Trajectory",
+  "from": "Training Data",
+  "added": "2026-11-06",
+  "auto": true
  }
 ]
