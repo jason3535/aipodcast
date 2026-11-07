@@ -6,7 +6,35 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Thu, 05 Nov 2026 01:50:54 -0000</lastBuildDate>
+  <lastBuildDate>Fri, 06 Nov 2026 01:43:51 -0000</lastBuildDate>
+  <item>
+    <title>为人人构建持续学习产品：对话 Trajectory 创始人 Ronak — Training Data</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/ronakmalde-training-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ronakmalde-training-2026/</guid>
+    <pubDate>Fri, 06 Nov 2026 01:43:51 -0000</pubDate>
+    <description>Trajectory 创始人 Ronak 解析为何当下 AI 仍处于“伪持续学习”阶段，以及他的公司如何让人人都能轻松完成训练、评估与部署。  要点: 持续学习是下一个范式，让模型像人一样从真实轨迹中持续改进。 / 瓶颈在于将研究与真实世界部署连接起来，而非架构突破。 / 产品构建者变成园丁，搭好支架让产品自主改进。</description>
+  </item>
+  <item>
+    <title>爆红一个月后：Jev 创作者谈编程智能体、基准测试与 AI 可靠性鸿沟 — Unsupervised Learning</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/diogoalmeida-unsuperv-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/diogoalmeida-unsuperv-2026/</guid>
+    <pubDate>Fri, 06 Nov 2026 01:43:51 -0000</pubDate>
+    <description>Typescape CEO Diogo 回顾 Jev 爆红一个月后的思考，探讨 AI 模型的可靠性鸿沟，以及打造机器原生智能所需的条件。  要点: AI 代理的真正瓶颈是可靠性，而非基准分数。 / 模型应像 SQL 一样与供应商无关，以避免锁定。 / 编码代理提升生产力 20-40%，但用例间差异巨大。</description>
+  </item>
+  <item>
+    <title>Robinhood CEO Vlad Tenev：代币化、智能体交易与扩大所有权 — No Priors</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/vladtenev-nopriors-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/vladtenev-nopriors-2026/</guid>
+    <pubDate>Fri, 06 Nov 2026 01:43:51 -0000</pubDate>
+    <description>Robinhood CEO Vlad Tenev 讲述代币化、预测市场与 AI 智能体交易如何让全球更多人拥有资产。  要点: 广泛的股权让民众成为体系的捍卫者，从而保障社会稳定。 / 代币化和代理交易能让全球用户民主化地进入美国市场和私营公司。 / AI 应赋能个人而非仅大实验室；垄断数学发现是反乌托邦的。</description>
+  </item>
+  <item>
+    <title>AI 是否像我们，AI 会像我们吗：Geoffrey Hinton 2026 年哥德尔讲座 — 维也纳工业大学信息学</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/hinton-tuwienin-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/hinton-tuwienin-2026/</guid>
+    <pubDate>Fri, 06 Nov 2026 01:43:51 -0000</pubDate>
+    <description>Geoffrey Hinton 梳理 AI 两大范式——逻辑启发的符号主义与生物启发的神经网络学习——并追问 AI 是否像我们、未来是否会像我们。  要点: 大语言模型通过寻找兼容的特征向量来理解语言，这与人类非常相似。 / 数字智能可以通过权重共享以比人类快数十亿倍的速度分享知识。 / 我们应该设计 AI 像母亲对待婴儿一样，关心人类胜过关心自己。</description>
+  </item>
   <item>
     <title>潜空间幕后：杀死我的 SaaS、Jev 与 2026 年的 AI——AIE 上海特别节目 — Latent Space</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/shawnwang-latentsp-2026</link>
@@ -188,34 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dario-thebuild-2026/</guid>
     <pubDate>Thu, 29 Oct 2026 03:01:11 -0000</pubDate>
     <description>Dario 与 Daniela Amodei 探讨超级智能 AI 的崛起、人类控制的终结及其对人类未来的意义。  要点: GPT-2 验证了缩放定律：模型越大，越连贯、越有能力。 / 教 AI 原则而非死板规则，能带来更好的泛化和稳健的道德。 / AI 应提供物质丰裕，让人追求多元的美好生活愿景。</description>
-  </item>
-  <item>
-    <title>每月交付 2500 个 PR：Lauren 谈智能体信任阶梯 — Matt Pocock</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/laurentan-mattpoco-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/laurentan-mattpoco-2026/</guid>
-    <pubDate>Wed, 28 Oct 2026 08:31:03 -0000</pubDate>
-    <description>Lauren 分享如何攀登智能体信任阶梯，在 SpaceX 实现每月交付数千个 PR。  要点: 验证是攀登智能体信任阶梯的最重要技能。 / 工程师的新工作是构建环境——技能、约束、代码检查，而不仅仅是写代码。 / 当失败模式反复出现时，抽样检查 PR 并修复环境，而非针对单个智能体。</description>
-  </item>
-  <item>
-    <title>Anthropic 如何打造全球第一的大模型：深入 Claude 平台 — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/katelynlessea-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/katelynlessea-latentsp-2026/</guid>
-    <pubDate>Wed, 28 Oct 2026 01:38:35 -0000</pubDate>
-    <description>Katelyn Lesse 与 Angela Jiang 解析 Anthropic 如何高效打造全球顶尖模型，从 Claude 平台、智能体工作流到驱动其业务的增长飞轮。  要点: Anthropic 的飞轮：更好的模型驱动更多使用，更多使用又资助能力投资。 / 将智能体的“大脑”（执行框架）与“手”（沙箱）分离，以提升安全、延迟和可靠性。 / CPU 算力如今和 GPU 一样紧张，需要 Rust 重写和容量规划。</description>
-  </item>
-  <item>
-    <title>拉动力法则：为何客户需求比痛点更重要 — Tech Lead Journal</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/robsnyder-techlead-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/robsnyder-techlead-2026/</guid>
-    <pubDate>Wed, 28 Oct 2026 01:38:35 -0000</pubDate>
-    <description>Rob Snyder 解析为何追逐痛点会失败，并分享拉动力框架中促使客户购买的四个必要条件。  要点: 需求是用户当下优先推进的项目，而非痛点；先找到一个非买不可的客户。 / 别做用户访谈；去现场观察，用真实销售检验需求。 / 先以服务形式销售，之后再自动化；让产品显得小巧以减少异议。</description>
-  </item>
-  <item>
-    <title>数学中的 AI 危机：Navier-Stokes、黎曼猜想与复杂性理论——Ankur Moitra、Steven Brunton 与 Alex Kontorovich 共谈数学的未来 — Lex Fridman 播客</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/ankurmoitra-lexfridm-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ankurmoitra-lexfridm-2026/</guid>
-    <pubDate>Tue, 27 Oct 2026 02:12:33 -0000</pubDate>
-    <description>Ankur Moitra、Steven Brunton 与 Alex 做客 Lex Fridman 播客，共同解读机器宣称攻克 Navier-Stokes、黎曼猜想与唯一游戏猜想这一历史性时刻。  要点: AI 数学突破不是危机，而是开启数学知识的黄金时代。 / 人类理解与故事仍是核心；定理证明自动化让提问更有价值。 / Lean 和 MathLib 实现形式验证，但理解仍需人类叙事。</description>
   </item>
 </channel>
 </rss>

@@ -115,5 +115,23 @@
   "from": "Training Data",
   "added": "2026-11-06",
   "auto": true
+ },
+ {
+  "pid": "aditabraham",
+  "en": "Adit Abraham",
+  "zh": "阿迪特·亚伯拉罕",
+  "tiEn": "Co-founder & CEO, Reducto",
+  "from": "Latent Space",
+  "added": "2026-11-07",
+  "auto": true
+ },
+ {
+  "pid": "fabiantheis",
+  "en": "Fabian Theis",
+  "zh": "法比安·泰斯",
+  "tiEn": "Director, Computational Health Center, Helmholtz Munich",
+  "from": "Latent Space",
+  "added": "2026-11-07",
+  "auto": true
  }
 ]
