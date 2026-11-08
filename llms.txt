@@ -3,12 +3,12 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 352 位人物 / 831 期访谈
+规模: 352 位人物 / 833 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
 - [Sam Altman / 萨姆·奥尔特曼](https://aipodcast.jasonlin.tech/pp/altman/): CEO, OpenAI — 26 期
-- [Elon Musk / 埃隆·马斯克](https://aipodcast.jasonlin.tech/pp/elon/): Founder, xAI — 21 期
+- [Elon Musk / 埃隆·马斯克](https://aipodcast.jasonlin.tech/pp/elon/): Founder, xAI — 22 期
 - [Dario Amodei / 达里奥·阿莫迪](https://aipodcast.jasonlin.tech/pp/dario/): CEO, Anthropic — 18 期
 - [Jensen Huang / 黄仁勋](https://aipodcast.jasonlin.tech/pp/jensen/): Founder & CEO, NVIDIA — 17 期
 - [Cristiano Amon / 克里斯蒂亚诺·安蒙](https://aipodcast.jasonlin.tech/pp/cristianoamon/): President & CEO, Qualcomm — 14 期
@@ -46,6 +46,7 @@
 - [Ilya Sutskever / 伊利亚·苏茨克维尔](https://aipodcast.jasonlin.tech/pp/ilya/): Co-founder, Safe Superintelligence — 5 期
 - [Carl Pei / 裴宇](https://aipodcast.jasonlin.tech/pp/carlpei/): Founder & CEO, Nothing; co-founder of OnePlus — 5 期
 - [Sholto Douglas / 肖尔托·道格拉斯](https://aipodcast.jasonlin.tech/pp/sholto/): Researcher, Anthropic — 5 期
+- [Amjad Masad / 阿姆贾德·马萨德](https://aipodcast.jasonlin.tech/pp/amjadmasad/): Founder & CEO, Replit — 4 期
 - [Ethan Mollick / 伊桑·莫利克](https://aipodcast.jasonlin.tech/pp/ethanmollick/): Professor, Wharton School — 4 期
 - [Satya Nadella / 萨提亚·纳德拉](https://aipodcast.jasonlin.tech/pp/satya/): Chairman & CEO, Microsoft — 4 期
 - [Dylan Field / 迪伦·菲尔德](https://aipodcast.jasonlin.tech/pp/dylanfield/): Co-founder & CEO of Figma — 4 期
@@ -63,7 +64,6 @@
 - [Harrison Chase / 哈里森·蔡斯](https://aipodcast.jasonlin.tech/pp/harrisonchase/): Co-founder & CEO, LangChain — 3 期
 - [Arvind Jain / 阿尔温德·贾恩](https://aipodcast.jasonlin.tech/pp/arvindjain/): Founder & CEO, Glean — 3 期
 - [Lin Qiao / 乔琳](https://aipodcast.jasonlin.tech/pp/linqiao/): Co-founder & CEO, Fireworks AI — 3 期
-- [Amjad Masad / 阿姆贾德·马萨德](https://aipodcast.jasonlin.tech/pp/amjadmasad/): Founder & CEO, Replit — 3 期
 - [Thariq Shihipar / 塔里克·希希帕尔](https://aipodcast.jasonlin.tech/pp/thariq/): Engineer, Claude Code at Anthropic — 3 期
 - [Alex Atallah / 亚历克斯·阿塔拉](https://aipodcast.jasonlin.tech/pp/alexatallah/): Co-founder & CEO, OpenRouter; Co-founder, OpenSea — 3 期
 - [DHH / DHH](https://aipodcast.jasonlin.tech/pp/dhh/): Creator of Ruby on Rails, CTO of 37signals — 3 期
@@ -361,8 +361,10 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
+- [Building the Future: Paul Graham & Amjad Masad on Vibe Coding and AI Agents](https://aipodcast.jasonlin.tech/e/amjadmasad-ycombina-2026/) — Amjad Masad, Y Combinator, 2026-11-07
 - [Why PDFs Still Break AI: Reducto CEO Adit on Document Parsing](https://aipodcast.jasonlin.tech/e/aditabraham-latentsp-2026/) — Adit Abraham, Latent Space, 2026-11-06
 - [Virtual Cells to Lab Compass: AI That Predicts and Steers Organoid Experiments](https://aipodcast.jasonlin.tech/e/fabiantheis-latentsp-2026/) — Fabian Theis, Latent Space, 2026-11-06
+- [Elon Musk on Terafab, US Chip Production, and the AI Compute Race](https://aipodcast.jasonlin.tech/e/elon-mattpoci-2026/) — Elon Musk, Matt Pocius on Tesla Stock & Money, 2026-11-06
 - [Building Continual Learning Products for Everyone: Ronak of Trajectory](https://aipodcast.jasonlin.tech/e/ronakmalde-training-2026/) — Ronak Malde, Training Data, 2026-11-05
 - [A Month After Going Viral: Jev's Creator on Coding Agents, Benchmarks & AI's Reliability Gap](https://aipodcast.jasonlin.tech/e/diogoalmeida-unsuperv-2026/) — Diogo Almeida, Unsupervised Learning, 2026-11-05
 - [Robinhood CEO Vlad Tenev on Tokenization, Agentic Trading, and Expanding Ownership](https://aipodcast.jasonlin.tech/e/vladtenev-nopriors-2026/) — Vlad Tenev, No Priors, 2026-11-05
@@ -399,8 +401,6 @@
 - [How to Actually Make Launch Videos That Convert](https://aipodcast.jasonlin.tech/e/farzamajeed-ycombina-2026/) — Farza Majeed, Y Combinator, 2026-10-23
 - [Zip's AI Superagents: Automating Procurement End-to-End](https://aipodcast.jasonlin.tech/e/rujulzaparde-eyeonai-2026/) — Rujul Zaparde, Eye on AI, 2026-10-23
 - [AI Agents Could Break the Banking System — With Ethan Mollick](https://aipodcast.jasonlin.tech/e/ethanmollick-theprofg-2026/) — Ethan Mollick, The Prof G Pod – Scott Galloway, 2026-10-22
-- [Why AI Compute Comes in Rectangles: Erik Bernhardsson on Building Modal](https://aipodcast.jasonlin.tech/e/erikbernhardsson-latentsp-2026/) — Erik Bernhardsson, Latent Space, 2026-10-22
-- [Building the Recommendation Engine for Commodity Traders](https://aipodcast.jasonlin.tech/e/anekhasokhal-latentsp-2026/) — Anekha Sokhal, Latent Space, 2026-10-22
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml
