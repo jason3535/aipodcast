@@ -364,7 +364,7 @@
 - [Building the Future: Paul Graham & Amjad Masad on Vibe Coding and AI Agents](https://aipodcast.jasonlin.tech/e/amjadmasad-ycombina-2026/) — Amjad Masad, Y Combinator, 2026-11-07
 - [Why PDFs Still Break AI: Reducto CEO Adit on Document Parsing](https://aipodcast.jasonlin.tech/e/aditabraham-latentsp-2026/) — Adit Abraham, Latent Space, 2026-11-06
 - [Virtual Cells to Lab Compass: AI That Predicts and Steers Organoid Experiments](https://aipodcast.jasonlin.tech/e/fabiantheis-latentsp-2026/) — Fabian Theis, Latent Space, 2026-11-06
-- [Elon Musk on Terafab, US Chip Production, and the AI Compute Race](https://aipodcast.jasonlin.tech/e/elon-mattpoci-2026/) — Elon Musk, Matt Pocius on Tesla Stock & Money, 2026-11-06
+- [Elon Musk on Terafab, US Chip Production, and the AI Compute Race](https://aipodcast.jasonlin.tech/e/elon-mattpoci-2026/) — Elon Musk, Baron Investment Conference, 2026-11-06
 - [Building Continual Learning Products for Everyone: Ronak of Trajectory](https://aipodcast.jasonlin.tech/e/ronakmalde-training-2026/) — Ronak Malde, Training Data, 2026-11-05
 - [A Month After Going Viral: Jev's Creator on Coding Agents, Benchmarks & AI's Reliability Gap](https://aipodcast.jasonlin.tech/e/diogoalmeida-unsuperv-2026/) — Diogo Almeida, Unsupervised Learning, 2026-11-05
 - [Robinhood CEO Vlad Tenev on Tokenization, Agentic Trading, and Expanding Ownership](https://aipodcast.jasonlin.tech/e/vladtenev-nopriors-2026/) — Vlad Tenev, No Priors, 2026-11-05

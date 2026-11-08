@@ -12,6 +12,18 @@
       "variants": ["G[ -]Stack", "G[ -]?Sack"],
       "pids": [],
       "note": "Garry Tan 的 Claude Code 技能包"
+    },
+    {
+      "canonical": "Terafab",
+      "variants": ["Terra[ -]?Fab"],
+      "pids": [],
+      "note": "马斯克的太瓦级芯片厂(tera = 太瓦的「太」,他本人强调不是 terra)。2026-11-08 elon-mattpoci-2026 听成 TerraFab ×3;elon-spacexal/elon-allinpod/jensen-allinpod-2026b/aravind-20vcwith 存量也有 Terra Fab/TerraFab"
+    },
+    {
+      "canonical": "StarMind",
+      "variants": ["Star[ -]Mind"],
+      "pids": [],
+      "note": "SpaceX 与 NVIDIA 合研的太空算力卫星/计算机。2026-11-08 elon-mattpoci-2026 听成 Star Mind ×2"
     }
   ]
 }
