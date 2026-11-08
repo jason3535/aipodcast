@@ -6,7 +6,28 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Fri, 06 Nov 2026 01:43:51 -0000</lastBuildDate>
+  <lastBuildDate>Sat, 07 Nov 2026 01:39:15 -0000</lastBuildDate>
+  <item>
+    <title>PDF 为何仍让 AI 失灵：Reducto CEO Adit 谈文档解析 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/aditabraham-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/aditabraham-latentsp-2026/</guid>
+    <pubDate>Sat, 07 Nov 2026 01:39:15 -0000</pubDate>
+    <description>Reducto CEO Adit 解析 PDF 为何仍是 AI 的难题，以及公司如何打造人类水平的文档解析能力。  要点: 文档解析必须达到人类级别的保真度，智能体才能处理关键的企业工作。 / 经过后训练的专用模型在文档任务上比前沿模型更准确、成本更低、延迟更小。 / 持续评估和失败追踪是扩展长尾文档处理的关键。</description>
+  </item>
+  <item>
+    <title>从虚拟细胞到实验室指南针：预测并引导类器官实验的 AI — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/fabiantheis-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/fabiantheis-latentsp-2026/</guid>
+    <pubDate>Sat, 07 Nov 2026 01:39:15 -0000</pubDate>
+    <description>Fabian Theis 讲述虚拟细胞模型如何从图谱构建走向预测，并进一步引导实验，包括用于抵达目标细胞状态的逆向生成模型 Lab Compass。  要点: 虚拟细胞模型正从预测转向主动指导实验，扰动预测是其核心。 / 在扰动预测中，线性基线常胜过深度学习；灵活模型配合事后解释更有效。 / 规模定律和独特数据生成是 AI 生物学获得信任与商业成功的关键。</description>
+  </item>
+  <item>
+    <title>吴恩达谈 AI 恐慌、就业焦虑与智能的参差边界 — ET Digital</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/andrewng-etdigita-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/andrewng-etdigita-2026/</guid>
+    <pubDate>Sat, 07 Nov 2026 01:39:15 -0000</pubDate>
+    <description>吴恩达解析 AI 为何擅长可验证任务却在判断类任务上失手，并主张加速有益 AI 应用、遏制有害用途。  要点: AI 擅长可验证任务但缺乏判断力，因此就业末日论被夸大。 / 应加速有益的通用 AI，仅放缓有害应用而非技术本身。 / 开源权重模型是印度等国家实现主权 AI 访问的最经济途径。</description>
+  </item>
   <item>
     <title>为人人构建持续学习产品：对话 Trajectory 创始人 Ronak — Training Data</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/ronakmalde-training-2026</link>
@@ -195,27 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/erikbernhardsson-unsuperv-2026/</guid>
     <pubDate>Fri, 30 Oct 2026 01:45:13 -0000</pubDate>
     <description>Modal 创始人兼 CEO Erik 做客 Unsupervised Learning，聊 GPU 市场的“西部荒野”、跨 25 家云厂商聚合算力，以及推理的未来走向。  要点: 算力稀缺但可获得，接受更高价格和更长合约即可。 / Modal 聚合 25 家以上云，客户无需为容量拼抢。 / 持久差异化来自多产品平台，而非廉价 token 服务。</description>
-  </item>
-  <item>
-    <title>打造 21+智能体 Grok Bot 团队：信任、验证与工程师即管理者 — Ai insider</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/laurentan-aiinside-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/laurentan-aiinside-2026/</guid>
-    <pubDate>Fri, 30 Oct 2026 01:45:13 -0000</pubDate>
-    <description>Lauren 分享如何通过验证建立信任、把智能体当作同事，并转型为工程管理者，从而扩展到 21+智能体协作。  要点: 验证是智能体最重要的技能；它建立信任并形成闭环。 / 工程师必须将约束编码到 CI、lints 和架构中，而不是依赖代码审查。 / 具备验证技能的云智能体可扩展生产力，并让非工程师也能贡献代码。</description>
-  </item>
-  <item>
-    <title>Alphabet 2026 年第三季度财报：AI 势头与 Gemini 4 — Alphabet Q3 2026 财报电话会议</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/sundarpichai-alphabet-2026b</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/sundarpichai-alphabet-2026b/</guid>
-    <pubDate>Thu, 29 Oct 2026 03:01:11 -0000</pubDate>
-    <description>Sundar 强调 Alphabet 营收增长 25%、云业务增长 103%，以及 Gemini 4 系列模型推动使用量创下新高。  要点: AI 投入推动云收入创纪录，查询量增速创五年新高。 / Gemini 4 系列（Argon、Carbon）领跑前沿并提升内部生产力。 / 智能体 AI 对广告和搜索是增量，不会蚕食变现。</description>
-  </item>
-  <item>
-    <title>Dario 与 Daniela Amodei：超级智能 AI 与人类命运 — The Builders</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/dario-thebuild-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dario-thebuild-2026/</guid>
-    <pubDate>Thu, 29 Oct 2026 03:01:11 -0000</pubDate>
-    <description>Dario 与 Daniela Amodei 探讨超级智能 AI 的崛起、人类控制的终结及其对人类未来的意义。  要点: GPT-2 验证了缩放定律：模型越大，越连贯、越有能力。 / 教 AI 原则而非死板规则，能带来更好的泛化和稳健的道德。 / AI 应提供物质丰裕，让人追求多元的美好生活愿景。</description>
   </item>
 </channel>
 </rss>
