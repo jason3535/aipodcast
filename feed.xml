@@ -6,7 +6,21 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sat, 07 Nov 2026 01:39:15 -0000</lastBuildDate>
+  <lastBuildDate>Sun, 08 Nov 2026 01:39:50 -0000</lastBuildDate>
+  <item>
+    <title>构建未来：Paul Graham 与 Amjad Masad 谈氛围编程与 AI 智能体 — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/amjadmasad-ycombina-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/amjadmasad-ycombina-2026/</guid>
+    <pubDate>Sun, 08 Nov 2026 01:39:50 -0000</pubDate>
+    <description>Amjad Masad 与 Paul Graham 对谈，回顾 Replit 如何把用户手动复制粘贴 ChatGPT 代码的流程，变成能自主编写、调试并部署代码的 AI 智能体。  要点: AI 编程会让人经历否认、沮丧到接受，适应力是关键。 / Replit 的护城河是深度系统工程：沙盒、部署和事务性文件系统。 / 下一个愿景是自驱动公司，Replit 成为 AI 驱动组织转型的平台。</description>
+  </item>
+  <item>
+    <title>埃隆·马斯克谈 Terafab、美国芯片制造与 AI 算力竞赛 — 巴伦投资大会</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/elon-mattpoci-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/elon-mattpoci-2026/</guid>
+    <pubDate>Sun, 08 Nov 2026 01:39:50 -0000</pubDate>
+    <description>埃隆·马斯克解释美国芯片产能仅占全球约 10%的原因，披露太瓦级 Terafab 计划，并警示亚洲地缘政治风险。  要点: 星舰完全可复用将使发射成本降低 100 倍，从而支撑太空数据中心。 / 要突破地球电网限制、达到太瓦级算力，必须把 AI 计算搬到太空。 / 数字超级智能可能推动全球 GDP 增长 20-30%，并让白领生产力翻倍。</description>
+  </item>
   <item>
     <title>PDF 为何仍让 AI 失灵：Reducto CEO Adit 谈文档解析 — Latent Space</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/aditabraham-latentsp-2026</link>
@@ -202,20 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jamesmcdonald-diveclub-2026/</guid>
     <pubDate>Fri, 30 Oct 2026 01:45:13 -0000</pubDate>
     <description>James McDonald 分享他如何借助 Claude 与 MCP 打造带动效、重叙事的网站，并提升视觉设计功力。  要点: AI 让设计师无需工程背景就能构建动画和应用。 / Figma 负责布局，Claude 处理动画和交互细节。 / 定制小工具和随机性激发意想不到的创意突破。</description>
-  </item>
-  <item>
-    <title>欧洲防务主权始于工厂：Stark 的 Uwe Horstmann 与 Johannes Schaback — Training Data</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/uwehorstmann-training-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/uwehorstmann-training-2026/</guid>
-    <pubDate>Fri, 30 Oct 2026 01:45:13 -0000</pubDate>
-    <description>Stark 联合创始人 Uwe Horstmann 与 Johannes Schaback 讲述如何凭借贴近战场的创新、风险投资、可用性设计与工业化量产，在 18 个月内赢得数十亿美元防务合同。  要点: 欧洲必须自主防御，威慑是持续和平之道。 / 把士兵当客户，他们的反馈驱动创新。 / 设计之初就考虑大规模量产，生产本身就是威慑。</description>
-  </item>
-  <item>
-    <title>Modal CEO Erik 谈 Agent Maxxing、推理的未来与 GPU 市场的混沌 — Unsupervised Learning</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/erikbernhardsson-unsuperv-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/erikbernhardsson-unsuperv-2026/</guid>
-    <pubDate>Fri, 30 Oct 2026 01:45:13 -0000</pubDate>
-    <description>Modal 创始人兼 CEO Erik 做客 Unsupervised Learning，聊 GPU 市场的“西部荒野”、跨 25 家云厂商聚合算力，以及推理的未来走向。  要点: 算力稀缺但可获得，接受更高价格和更长合约即可。 / Modal 聚合 25 家以上云，客户无需为容量拼抢。 / 持久差异化来自多产品平台，而非廉价 token 服务。</description>
   </item>
 </channel>
 </rss>
