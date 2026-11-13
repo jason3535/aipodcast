@@ -133,5 +133,23 @@
   "from": "Latent Space",
   "added": "2026-11-07",
   "auto": true
+ },
+ {
+  "pid": "tomjohnson",
+  "en": "Tom Johnson",
+  "zh": "汤姆·约翰逊",
+  "tiEn": "Staff Designer, Vercel",
+  "from": "Dive Club",
+  "added": "2026-11-13",
+  "auto": true
+ },
+ {
+  "pid": "zenorocha",
+  "en": "Zeno Rocha",
+  "zh": "泽诺·罗查",
+  "tiEn": "Co-founder & CEO, Resend",
+  "from": "Latent Space",
+  "added": "2026-11-13",
+  "auto": true
  }
 ]
