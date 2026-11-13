@@ -3,27 +3,84 @@
   "terms": [
     {
       "canonical": "pstack",
-      "variants": ["P[ -]?Sack", "P[ -]Stack"],
+      "variants": [
+        "P[ -]?Sack",
+        "P[ -]Stack",
+        "PP[ -]?stack"
+      ],
       "pids": [],
-      "note": "Lauren Tan 的开源 agent 工具包(名字戏仿 Garry Tan 的 gstack)。2026-11-03 laurentan-aiinside-2026 被听成 P Sack ×8 / P Stack ×3,中文章节名也跟着错"
+      "note": "Lauren Tan 的开源 agent 工具包(名字戏仿 Garry Tan 的 gstack)。2026-11-03 laurentan-aiinside-2026 被听成 P Sack ×8 / P Stack ×3,中文章节名也跟着错;2026-11-13 Grok Bot 团队补收又见 PP stack(pengzheng-peteryan-2026)"
     },
     {
       "canonical": "gstack",
-      "variants": ["G[ -]Stack", "G[ -]?Sack"],
+      "variants": [
+        "G[ -]Stack",
+        "G[ -]?Sack"
+      ],
       "pids": [],
       "note": "Garry Tan 的 Claude Code 技能包"
     },
     {
       "canonical": "Terafab",
-      "variants": ["Terra[ -]?Fab"],
+      "variants": [
+        "Terra[ -]?Fab"
+      ],
       "pids": [],
       "note": "马斯克的太瓦级芯片厂(tera = 太瓦的「太」,他本人强调不是 terra)。2026-11-08 elon-mattpoci-2026 听成 TerraFab ×3;elon-spacexal/elon-allinpod/jensen-allinpod-2026b/aravind-20vcwith 存量也有 Terra Fab/TerraFab"
     },
     {
       "canonical": "StarMind",
-      "variants": ["Star[ -]Mind"],
+      "variants": [
+        "Star[ -]Mind"
+      ],
       "pids": [],
       "note": "SpaceX 与 NVIDIA 合研的太空算力卫星/计算机。2026-11-08 elon-mattpoci-2026 听成 Star Mind ×2"
+    },
+    {
+      "canonical": "pstack",
+      "variants": [
+        "PAC(?: stack)?",
+        "PAC 栈"
+      ],
+      "pids": [
+        "laurentan",
+        "pengzheng",
+        "johnbai",
+        "roshansadanani",
+        "romanugarte"
+      ],
+      "note": "2026-11-13 pengzheng-peteryan-2026 / laurentan-potetoon-2026 把 pstack 听成 PAC ×9(中文也跟着写 PAC 栈)。PAC 是常见词,只查 Grok Bot 团队人物"
+    },
+    {
+      "canonical": "Grok Bot",
+      "variants": [
+        "Rock ?bots?",
+        "Gro(?:th)?bots?",
+        "Grog bots?",
+        "Graph ?bots?"
+      ],
+      "pids": [
+        "laurentan",
+        "pengzheng",
+        "johnbai",
+        "roshansadanani",
+        "romanugarte"
+      ],
+      "note": "2026-11-13 Grok Bot 团队补收 6 期:Rockbot ×4、Grobot ×8、Grothbot、Grog bots、小写 graphbot。fix_terms 已补 Grobot/Grothbot/Grog bots 规则"
+    },
+    {
+      "canonical": "poteto",
+      "variants": [
+        "potato[ -]mode"
+      ],
+      "pids": [
+        "laurentan",
+        "pengzheng",
+        "johnbai",
+        "roshansadanani",
+        "romanugarte"
+      ],
+      "note": "Lauren Tan 的 X 账号 @poteto 与 pstack 的 /poteto-mode;自动字幕写成 potato(2026-11-13 pengzheng-peteryan-2026 ×7)。potato 本身是正常词,只拦 potato mode"
     }
   ]
 }

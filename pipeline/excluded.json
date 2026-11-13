@@ -30,5 +30,13 @@
   "pod": "Y Combinator",
   "reason": "选题不符:YC Paper Club 多人分享,Chaubard 只讲开头约 15 分钟,非围绕单一嘉宾的完整访谈",
   "removed": "2026-10-17"
+ },
+ {
+  "vid": "A63sedG-p5Q",
+  "id": "laurentan-mts-2026",
+  "pid": "laurentan",
+  "pod": "MTS",
+  "reason": "MTS 官方 28 分钟剪辑版,内容 73% 包含在完整版 roshansadanani-devdocse-2026(56 分钟,同场 MTS 节目)中,保留完整版",
+  "removed": "2026-11-13"
  }
 ]
