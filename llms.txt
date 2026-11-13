@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 352 位人物 / 833 期访谈
+规模: 354 位人物 / 838 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -62,6 +62,7 @@
 - [Erik Bernhardsson / 埃里克·伯恩哈德松](https://aipodcast.jasonlin.tech/pp/erikbernhardsson/): CEO, Modal — 3 期
 - [Sundar Pichai / 桑达尔·皮查伊](https://aipodcast.jasonlin.tech/pp/sundarpichai/): CEO, Google & Alphabet — 3 期
 - [Harrison Chase / 哈里森·蔡斯](https://aipodcast.jasonlin.tech/pp/harrisonchase/): Co-founder & CEO, LangChain — 3 期
+- [Lauren Tan / 劳伦·谭](https://aipodcast.jasonlin.tech/pp/laurentan/): Principal Engineer, SpaceXAI (Grok Bot) — 3 期
 - [Arvind Jain / 阿尔温德·贾恩](https://aipodcast.jasonlin.tech/pp/arvindjain/): Founder & CEO, Glean — 3 期
 - [Lin Qiao / 乔琳](https://aipodcast.jasonlin.tech/pp/linqiao/): Co-founder & CEO, Fireworks AI — 3 期
 - [Thariq Shihipar / 塔里克·希希帕尔](https://aipodcast.jasonlin.tech/pp/thariq/): Engineer, Claude Code at Anthropic — 3 期
@@ -93,7 +94,6 @@
 - [Marvin Schwaibold / 马文·施瓦博尔德](https://aipodcast.jasonlin.tech/pp/marvinschwaibold/): Product design leader at Shopify — 2 期
 - [Ari Weinstein / 阿里·温斯坦](https://aipodcast.jasonlin.tech/pp/ariweinstein/): Product & Engineering Lead, Computer Use, OpenAI — 2 期
 - [Rob Snyder / 罗布·斯奈德](https://aipodcast.jasonlin.tech/pp/robsnyder/): Startup Advisor, Author of The Power of Pull — 2 期
-- [Lauren Tan / 劳伦·谭](https://aipodcast.jasonlin.tech/pp/laurentan/): Principal Engineer, SpaceXAI (Grok Bot) — 2 期
 - [Brendan Foody / 布伦丹·富迪](https://aipodcast.jasonlin.tech/pp/brendanfoody/): CEO, Mercor — 2 期
 - [Ioannis Antonoglou / 扬尼斯·安东诺格鲁](https://aipodcast.jasonlin.tech/pp/antonoglou/): Co-founder & CTO, Reflection AI — 2 期
 - [David Silver / 大卫·西尔弗](https://aipodcast.jasonlin.tech/pp/dsilver/): Principal Research Scientist, DeepMind — 2 期
@@ -102,6 +102,7 @@
 - [Tibo Sottiaux / 蒂博·索蒂奥](https://aipodcast.jasonlin.tech/pp/tibosottiaux/): Head of ChatGPT & Codex (Core Products), OpenAI — 2 期
 - [Sam Stephenson / 萨姆·斯蒂芬森](https://aipodcast.jasonlin.tech/pp/samstephenson/): Co-founder and Designer, Granola — 2 期
 - [Tara Seshan / 塔拉·塞珊](https://aipodcast.jasonlin.tech/pp/taraseshan/): Product Lead, OpenAI — 2 期
+- [Roshan Sadanani / 罗山·萨达纳尼](https://aipodcast.jasonlin.tech/pp/roshansadanani/): Product & Eng Lead, Grok Bot (SpaceXAI) — 2 期
 - [Grant Sanderson / 格兰特·桑德森](https://aipodcast.jasonlin.tech/pp/grantsanderson/): Creator of 3Blue1Brown; math educator — 2 期
 - [Aaron Levie / 亚伦·莱维](https://aipodcast.jasonlin.tech/pp/aaronlevie/): Cofounder and CEO, Box — 2 期
 - [Parag Agrawal / 帕拉格·阿格拉瓦尔](https://aipodcast.jasonlin.tech/pp/paragagrawal/): Founder & CEO, Parallel Web Systems — 2 期
@@ -110,6 +111,7 @@
 - [Ali Ghodsi / 阿里·戈德西](https://aipodcast.jasonlin.tech/pp/alighodsi/): CEO and Co-Founder, Databricks — 2 期
 - [Bernt Børnich / 伯恩特·伯尼克](https://aipodcast.jasonlin.tech/pp/berntbornich/): Founder & CEO, 1X Technologies — 2 期
 - [Zvi Mowshowitz / 兹维·莫肖维茨](https://aipodcast.jasonlin.tech/pp/zvi/): Writer, Don't Worry About the Vase — 2 期
+- [John Bai / John Bai](https://aipodcast.jasonlin.tech/pp/johnbai/): Design Lead for Grok Bot, Cursor — 2 期
 - [John Schulman / 约翰·舒尔曼](https://aipodcast.jasonlin.tech/pp/schulman/): Co-founder, OpenAI — 2 期
 - [Joel Lewenstein / 乔尔·卢文斯坦](https://aipodcast.jasonlin.tech/pp/joellewenstein/): Head of Product Design at Anthropic — 2 期
 - [Anima Anandkumar / 阿尼玛·阿南德库马尔](https://aipodcast.jasonlin.tech/pp/animaanandkumar/): Professor at Caltech, Co-founder of Accelerated Understanding — 2 期
@@ -193,6 +195,7 @@
 - [Danny Martinez / 丹尼·马丁内斯](https://aipodcast.jasonlin.tech/pp/dannymartinez/): CEO, Decimals — 1 期
 - [Leo de Moura / 莱奥·德莫拉](https://aipodcast.jasonlin.tech/pp/leodemoura/): Creator of Lean; Co-creator of Z3 — 1 期
 - [Molly Graham / 莫莉·格雷厄姆](https://aipodcast.jasonlin.tech/pp/mollygraham/): Leadership Coach, Former Google/Facebook Exec — 1 期
+- [Peng Zheng / Peng Zheng](https://aipodcast.jasonlin.tech/pp/pengzheng/): Lead Designer, Grok Bot (SpaceXAI) — 1 期
 - [Zhengyao Jiang / Zhengyao Jiang](https://aipodcast.jasonlin.tech/pp/zhengyaojiang/): Co-founder, Weco — 1 期
 - [Anastasis Germanidis / 阿纳斯塔西斯·杰尔马尼迪斯](https://aipodcast.jasonlin.tech/pp/anastasisgermanidis/): Co-founder & CTO, Runway — 1 期
 - [Geoff Teehan / 杰夫·蒂汉](https://aipodcast.jasonlin.tech/pp/geoffteehan/): Chief Design Officer, Lightspark — 1 期
@@ -211,7 +214,6 @@
 - [Evil Rabbit / Evil Rabbit](https://aipodcast.jasonlin.tech/pp/evilrabbit/): Founding Designer at Vercel — 1 期
 - [Sean Lie / 肖恩·利](https://aipodcast.jasonlin.tech/pp/seanlie/): Co-founder and CTO, Cerebras Systems — 1 期
 - [Ajeya Cotra / 阿杰亚·科特拉](https://aipodcast.jasonlin.tech/pp/ajeyacotra/): Researcher at METR — 1 期
-- [John Bai / John Bai](https://aipodcast.jasonlin.tech/pp/johnbai/): Design Lead for Grok Bot, Cursor — 1 期
 - [Patrick Morgan / 帕特里克·摩根](https://aipodcast.jasonlin.tech/pp/patrickmorgan/): Design Engineer, Sublime Security — 1 期
 - [Alex Krentsel / 亚历克斯·克伦塞尔](https://aipodcast.jasonlin.tech/pp/alexkrentsel/): Founder of Exo — 1 期
 - [Susan Kare / 苏珊·凯尔](https://aipodcast.jasonlin.tech/pp/susankare/): Icon Designer, Original Mac Team — 1 期
