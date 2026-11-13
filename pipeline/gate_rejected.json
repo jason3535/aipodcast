@@ -708,5 +708,60 @@
 "t": "Inside WashU's Endowment Fund | SpaceX Made Up 20% of Out AUM | Scott Wilson",
 "why": "嘉宾为WashU捐赠基金CIO，内容属金融/投资访谈，非AI/技术实质性访谈，且不在名单中。",
 "at": "2026-11-08"
+},
+"vz9YzwvhxwQ|mengto": {
+"t": "Books Billionaires Use to Build Wealth and Make Better Decisions",
+"why": "该视频是 Evan Carmichael 的读书/财富类节目，主题为亿万富翁读物，并非 Meng To（Design+Code 创始人）的 AI 技术访谈；标题",
+"at": "2026-11-13"
+},
+"sHHYVvG_C4Q|ethanhe": {
+"t": "Wharton’s Top AI Professor: Stop Starting Software Companies — The Real AI Money",
+"why": "视频嘉宾是沃顿教授 Ethan Mollick，与站内 xAI 的 Ethan He 并非同一人，属于同名误搜。",
+"at": "2026-11-13"
+},
+"JW5s9Md4U2U|jensen": {
+"t": "The Rise and Reckoning of Jensen Huang | The Circuit with Emily Chang",
+"why": "简介为虚构/新闻性叙事(婚外情、间谍疑云、辞职),非实质性AI技术访谈;且内容明显是新闻专题而非围绕黄仁勋的技术对谈,不符合收录标准。",
+"at": "2026-11-13"
+},
+"2hJkprFnzhY": {
+"t": "Russia-Ukraine War: Putin, Zelenskyy, Trump and the Future of Warfare | Lex Frid",
+"why": "两位嘉宾均为军事/地缘分析人士(退役军官、军事分析师),非 AI/技术/产品设计身份,且为双嘉宾对谈,不符合收录标准。",
+"at": "2026-11-13"
+},
+"iXWSYlAX5Lg": {
+"t": "Inside Theranos with ex-Employee Tyler Shultz",
+"why": "嘉宾 Tyler Shultz 是 Theranos 前员工，身份为举报人/生物科技从业者，不属于 AI/ML 研究者、技术工程师或 AI 产品设计从业者，不符",
+"at": "2026-11-13"
+},
+"uND6iY2qp_c": {
+"t": "AlphaGenome 2: Teaching AI to read the entire human genome",
+"why": "主要嘉宾 Žiga Avsec 和 Adam Gayoso 均不在站内人物名单中，且为多人对谈形式。",
+"at": "2026-11-13"
+},
+"HDRy6XmE2RQ": {
+"t": "How AI Could Bring Halo and Other Classic Games Back to Life",
+"why": "嘉宾为a16z内部GP，不在站内人物名单中，且属多人对谈而非单一主嘉宾。",
+"at": "2026-11-13"
+},
+"LI3lxzHfRrU": {
+"t": "Mike Volpi on Why AI Infrastructure Will Outlast the Hype Cycle",
+"why": "Mike Volpi 不在站内人物名单中，且为多人对谈嘉宾之一，非名单主嘉宾。",
+"at": "2026-11-13"
+},
+"s4lXP9IuHjk": {
+"t": "Why HubSpot’s Co-Founder Is Betting Against the SaaSpocalypse",
+"why": "主嘉宾 Dharmesh Shah 不在站内人物名单中，且该访谈偏 SaaS 创业与商业，非实质性 AI/技术访谈。",
+"at": "2026-11-13"
+},
+"heE80uxOmus": {
+"t": "AI Design Still Feels Like a Slot Machine",
+"why": "嘉宾Stefano Corazza不在站内人物名单中，虽为实质性AI访谈但无匹配pid。",
+"at": "2026-11-13"
+},
+"ffh7fdwfrWU": {
+"t": "Sequoia Leaves London, Close Scout Program & End Evergreen Fund | NASDAQ Loses $",
+"why": "嘉宾为SaaS投资人Jason Lemkin与Rory O'Driscoll，均不在名单中；且内容为Sequoia重组等VC新闻讨论，非实质性AI/技术访谈。",
+"at": "2026-11-13"
 }
 }
