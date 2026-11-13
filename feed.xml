@@ -6,7 +6,42 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sun, 08 Nov 2026 01:39:50 -0000</lastBuildDate>
+  <lastBuildDate>Fri, 13 Nov 2026 04:03:30 -0000</lastBuildDate>
+  <item>
+    <title>Grok Bot 14 个最佳机器人：Peng 与 Lauren 谈智能体集群与信任 — Peter Yang</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/pengzheng-peteryan-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/pengzheng-peteryan-2026/</guid>
+    <pubDate>Fri, 13 Nov 2026 04:03:30 -0000</pubDate>
+    <description>Grok Bot 团队的 Peng 和 Lauren 分享各自的机器人配置——从幕僚长机器人到工程师集群，并探讨信任如何影响把工作交给智能体。  要点: 机器人应是有身份、记忆和工具的持久命名代理，而非临时聊天。 / 编排代理集群：幕僚长委派给负责人，负责人再生成云端代理。 / 逐步建立信任：观察、纠正，再将工作流转化为可复用技能。</description>
+  </item>
+  <item>
+    <title>我如何借助可信智能体一个月向生产环境提交 2500 个 PR — poteto（X）</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/laurentan-potetoon-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/laurentan-potetoon-2026/</guid>
+    <pubDate>Fri, 13 Nov 2026 04:03:30 -0000</pubDate>
+    <description>Lauren 分享如何通过验证技能建立对 AI 智能体的信任，从而以一人之力像软件工厂一样提交数千个 PR。  要点: 信任是瓶颈：打造让智能体自然做对事的环境。 / 验证技能让智能体运行应用、获取追踪并实证自检。 / 设计对智能体友好的框架，让简单路径默认就是正确路径。</description>
+  </item>
+  <item>
+    <title>SpaceXAI 设计师如何用 Grok Bot 与 Figma MCP 加速交付 — How I AI</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/johnbai-howiai-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/johnbai-howiai-2026/</guid>
+    <pubDate>Fri, 13 Nov 2026 04:03:30 -0000</pubDate>
+    <description>Grok Bot 设计团队的 John 与 Peng 演示如何借助 Figma MCP 在健身房完成设计交付，并打造符合设计师标准的个人网站。  要点: AI 应通过自动化任务让你离开电脑，而非把你拴在电脑前。 / 设计师应聚焦品味与愉悦感，把生产性工作交给 AI。 / 从随机想法开始，跳过规格文档，让 AI 引导快速原型制作。</description>
+  </item>
+  <item>
+    <title>Grok Bot 工作坊：注意力列表、智能体团队与云端智能体——Roshan 与 Kevin 分享 — koba</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/roshansadanani-koba-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/roshansadanani-koba-2026/</guid>
+    <pubDate>Fri, 13 Nov 2026 04:03:30 -0000</pubDate>
+    <description>SpaceX AI 产品团队的 Roshan 与 Kevin 演示 Grok Bot 的注意力列表、智能体团队与云端智能体如何服务产品工作流。  要点: 智能体需要独立的电脑和长期记忆，才能像同事一样工作，而非聊天框。 / 多个拥有限定记忆的专用智能体胜过单个通用智能体。 / 影子式注意力清单比传统待办清单更高效。</description>
+  </item>
+  <item>
+    <title>AI 智能体如何在你睡觉时工作：Lauren Tan 与 Roshan Sadanani 谈 Grok Bot 与 Grok 4.6 — MTS</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/roshansadanani-devdocse-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/roshansadanani-devdocse-2026/</guid>
+    <pubDate>Fri, 13 Nov 2026 04:03:30 -0000</pubDate>
+    <description>来自 Cursor 的 Lauren Tan 与 Roshan Sadanani 做客 MTS，现场演示 Grok Bot，讲解拥有独立电脑的持久化智能体如何在你睡觉时自动完成任务，并探讨 Grok 4.6 带来的能力变化。  要点: Grok Bot 让你像和同事聊天一样与智能体协作，而不是微管理工具调用。 / Grok 4.6 在 Cursor Bench 上媲美顶级模型，成本却低得多。 / React 编译器自动记忆化比人工更细粒度，让性能优化自动化。</description>
+  </item>
   <item>
     <title>构建未来：Paul Graham 与 Amjad Masad 谈氛围编程与 AI 智能体 — Y Combinator</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/amjadmasad-ycombina-2026</link>
@@ -181,41 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/paulcopplestone-ycombina-2026/</guid>
     <pubDate>Sat, 31 Oct 2026 01:41:05 -0000</pubDate>
     <description>Supabase CEO Paul Copplestone 谈 AI 智能体与开源如何让人人都成为构建者。  要点: AI 让领域专家成为构建者，产品必须代码优先并对智能体友好。 / 开源让智能体能够检查和修复问题，从而推动采用与信任。 / 个人数据库曾显得荒谬，如今却是对每个人最有价值的一层。</description>
-  </item>
-  <item>
-    <title>吉图·帕特尔：为 AI 时代打造产品 — A Bit Personal with Jodi Shelton</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/jeetupatel-abitpers-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jeetupatel-abitpers-2026/</guid>
-    <pubDate>Sat, 31 Oct 2026 01:41:05 -0000</pubDate>
-    <description>思科总裁兼首席产品官吉图·帕特尔畅谈 AI 驱动的变革及其背后的基础设施，以及塑造其领导力的移民历程。  要点: 人才无处不在，但机会并非如此；平台能释放潜力。 / 用 AI 加速学习，而非跳过本能培养。 / AI 转型中，领导者应保持警惕但不必恐慌。</description>
-  </item>
-  <item>
-    <title>与 Felix Rieseberg 一起从零构建语言模型 — Scott Hanselman</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/felixrieseberg-scotthan-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/felixrieseberg-scotthan-2026/</guid>
-    <pubDate>Sat, 31 Oct 2026 01:41:05 -0000</pubDate>
-    <description>Felix Rieseberg 做客节目，畅谈他让 AI 变得平易近人的教育性语言模型构建器，让任何人都能亲手构建并理解语言模型。  要点: 语言模型的核心思想很简单，亲手搭建一个就能揭开 AI 的神秘面纱。 / 微调能快速引导模型行为，不像预训练那样耗时漫长。 / 模型是无状态的；持续对话只是上下文窗口制造的幻觉。</description>
-  </item>
-  <item>
-    <title>AI 的未来与商业：与 Kevin Roose 和 Ethan Mollick 的对话 — 斯坦福法学院</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/ethanmollick-stanford-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ethanmollick-stanford-2026/</guid>
-    <pubDate>Fri, 30 Oct 2026 01:45:13 -0000</pubDate>
-    <description>Kevin Roose 与 Ethan Mollick 探讨 AI 的未来与商业，从人类判断力与共存，到通往超级智能的竞赛。  要点: AI 已从聊天机器人时代进入智能体时代，模型能独立处理长达数小时的任务。 / 把 AI 当导师而非答案机器；开箱即用的方式会损害学习。 / AI 实验室的安全承诺是真实的，但被合理化成了抢先到达的竞赛。</description>
-  </item>
-  <item>
-    <title>Crusoe CEO Chase Lochmiller：将搁浅能源转化为智能 — Training Data</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/chaselochmiller-training-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/chaselochmiller-training-2026/</guid>
-    <pubDate>Fri, 30 Oct 2026 01:45:13 -0000</pubDate>
-    <description>Crusoe CEO Chase Lochmiller 讲述如何将垂直整合的 AI 基础设施平台从两人初创公司发展为估值 310 亿美元的企业。  要点: AI 是像电力一样的元科学，能改变所有行业，而不仅是一个领域。 / 算力基础设施不是赢家通吃，会出现多个赢家。 / 大多数初创公司死于自杀而非他杀，执行力比竞争更重要。</description>
-  </item>
-  <item>
-    <title>用 Claude 打造精美网站：James McDonald 的设计流程 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/jamesmcdonald-diveclub-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jamesmcdonald-diveclub-2026/</guid>
-    <pubDate>Fri, 30 Oct 2026 01:45:13 -0000</pubDate>
-    <description>James McDonald 分享他如何借助 Claude 与 MCP 打造带动效、重叙事的网站，并提升视觉设计功力。  要点: AI 让设计师无需工程背景就能构建动画和应用。 / Figma 负责布局，Claude 处理动画和交互细节。 / 定制小工具和随机性激发意想不到的创意突破。</description>
   </item>
 </channel>
 </rss>
