@@ -145,20 +145,22 @@ export default {
     let b; try { b = await req.json(); } catch { return jerr('bad json', 400, co); }
     const question = (b.question || '').toString().slice(0, MAX_Q).trim();
     const mode = b.mode === 'all' ? 'all' : 'episode';
+    const en = b.lang === 'en';   // 站点切到英文模式:回答与报错都用英文
+    const M = (zh, e) => en ? e : zh;
     const history = (Array.isArray(b.history) ? b.history.slice(-4) : [])
       .filter(m => m && m.role && m.content).map(m => ({ role: m.role === 'assistant' ? 'assistant' : 'user', content: ('' + m.content).slice(0, 1500) }));
-    if (!question) return jerr('缺少 question', 400, co);
+    if (!question) return jerr(M('缺少 question', 'Missing question'), 400, co);
 
     const over = await quota(env, 'ask', req.headers.get('CF-Connecting-IP'), 1,
       +env.ASK_IP_DAY || ASK_IP_DAY, +env.ASK_DAY || ASK_DAY);
-    if (over) return jerr(over === 'ip' ? '今天的提问次数已用完，明天再来吧。'
-      : '本站今日问答额度已用完，明天再来吧。', 429, co);
+    if (over) return jerr(over === 'ip' ? M('今天的提问次数已用完，明天再来吧。', "You've used today's questions. Please come back tomorrow.")
+      : M('本站今日问答额度已用完，明天再来吧。', "The site's daily Q&A quota is used up. Please come back tomorrow."), 429, co);
 
     const hasSearch = !!env.SEARCH_KEY;
     let sys, ctxTitle = '';
     if (mode === 'episode') {
       const ep = await getJSON(`ep/${(b.id || '').replace(/[^a-z0-9-]/gi, '')}.json`);
-      if (!ep || !(ep.transcript || []).length) return jerr('该期暂无转录', 404, co);
+      if (!ep || !(ep.transcript || []).length) return jerr(M('该期暂无转录', 'No transcript for this episode yet'), 404, co);
       ctxTitle = ep.tEn || '';
       sys = `你是「AI Podcast」单期问答助手。下面是《${ep.tEn || ''}》(嘉宾 ${ep.person || ''})的转录,每节前有 [#序号]。
 优先规则:能用这份转录回答的,就据转录回答,关键论断后用 [#序号] 标注出处(可多个);简洁,先给结论,用用户提问的语言。` +
@@ -168,7 +170,7 @@ export default {
       `\n转录:\n${epContext(ep.transcript)}`;
     } else {
       const idx = await getJSON('index.json');
-      if (!idx) return jerr('目录不可用', 503, co);
+      if (!idx) return jerr(M('目录不可用', 'Catalog unavailable'), 503, co);
       const eps = idx.episodes || [];
       const catalog = eps.map(e => `${e.id} | ${e.person} | ${e.tEn} | ${e.sEn || ''}`).join('\n');
       let picked = [];
@@ -192,6 +194,7 @@ export default {
       `\n材料:\n${ctx}`;
     }
 
+    if (en) sys += '\n语言:用户在英文模式,无论提问语言如何,一律用英文回答。Always answer in English.';
     const tools = hasSearch ? [SEARCH_TOOL] : undefined;
     const msgs = [{ role: 'system', content: sys }, ...history, { role: 'user', content: question }];
     const { readable, writable } = new TransformStream();
@@ -208,10 +211,10 @@ export default {
 规则:综合这些结果回答;关键事实后用 markdown 链接标注来源,格式 [简短标题](链接);结果不足或彼此矛盾就如实说明;用用户提问的语言,先给结论。` +
           (ctxTitle ? `\n(当前播客:《${ctxTitle}》,若搜索内容与之相关可点明联系。)` : '') +
           `\n网络搜索结果:\n${results || '(未获取到搜索结果)'}`;
-          const msgs2 = [{ role: 'system', content: sysWeb }, ...history, { role: 'user', content: question }];
+          const msgs2 = [{ role: 'system', content: sysWeb + (en ? '\nAlways answer in English.' : '') }, ...history, { role: 'user', content: question }];
           await dsStream(env, msgs2, write);
         }
-      } catch (e) { try { await write('（出错:' + (e.message || e) + '）'); } catch (_) {} }
+      } catch (e) { try { await write(M('（出错:', '(Error: ') + (e.message || e) + M('）', ')')); } catch (_) {} }
       finally { try { w.close(); } catch (_) {} }
     })();
     return new Response(readable, { headers: { ...co, 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store' } });

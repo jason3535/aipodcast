@@ -2703,7 +2703,13 @@ const epsOf=pid=>EPISODES.filter(e=>e.pid===pid);
 /* 未登记的领域 key 一律跳过/灰色兜底，避免脏数据把整页渲染搞挂（auto_refresh 无人值守，必须容错） */
 const fcolor=f=>(FIELDS[f]||{}).c||'#9aa4b2';
 const fdot=f=>FIELDS[f]?`<span class="fdot" style="background:${FIELDS[f].c}"></span>`:'';
-const tag=f=>FIELDS[f]?`<span class="tag">${fdot(f)}${FIELDS[f].zh}</span>`:'';
+/* 英文模式(2026-11-14):EN 不只切逐字稿,整个阅读页的界面文字(读栏/速览/本期回答/核心观点/问答/目录/接着读)也全英文。
+   静态模板用 L(中,英) 生成成对 span,切换时纯 CSS 显隐不用重渲染;动态写入的文字(输入框占位、按钮状态、问答提示)用 T(中,英)
+   并在 setLang 里 i18nRefresh。中 / 双语模式保持原样。 */
+const L=(zh,en)=>`<span class="l-zh">${zh}</span><span class="l-en">${en}</span>`;
+const isEN=()=>document.body.dataset.lang==='en';
+const T=(zh,en)=>isEN()?en:zh;
+const tag=f=>FIELDS[f]?`<span class="tag">${fdot(f)}${L(FIELDS[f].zh,FIELDS[f].en)}</span>`:'';
 const fmtDate=d=>{const[y,m,dd]=(d||'').split('-');return dd?`${y}.${m}.${dd}`:`${y}.${m}`};
 const fmtDur=m=>m>=60?`${Math.floor(m/60)}h${String(m%60).padStart(2,'0')}m`:`${m}m`;
 function av(pid,cls=''){const p=PEOPLE[pid];const cs=(p.fields.length?p.fields:['deep-learning']).map(fcolor);
@@ -2716,12 +2722,12 @@ function epCover(e){const p=PEOPLE[e.pid];const bg=coverBg(p.fields,e.pod.en);
     <div class="ct"><b>${p.en}</b><span>${fmtDate(e.date)} · ${fmtDur(e.min)}</span></div></div>`;}
 function epCard(e){
   const rp=!readHas(e.id)&&readPosGet()[e.id];
-  const prog=(rp&&rp.s>0&&rp.n)?`<span class="prog-badge">读到 ${Math.min(rp.s+1,rp.n)}/${rp.n} 章</span>`:'';
+  const prog=(rp&&rp.s>0&&rp.n)?`<span class="prog-badge">${L('读到 '+Math.min(rp.s+1,rp.n)+'/'+rp.n+' 章','Ch. '+Math.min(rp.s+1,rp.n)+'/'+rp.n)}</span>`:'';
   return `<div class="ep-card${readHas(e.id)?' read':''}" data-id="${e.id}" onclick="go('#/episode/${e.id}')">
   ${epCover(e)}<span class="cover-badges">${(()=>{   // 单徽标:已读 > 读到N章 > 待读 > NEW,不叠加
-    if(readHas(e.id))return '<span class="read-badge" style="display:inline-flex">✓ 已读</span>';
+    if(readHas(e.id))return '<span class="read-badge" style="display:inline-flex">✓ '+L('已读','Read')+'</span>';
     if(prog)return prog;
-    if(laterHas(e.id))return '<span class="later-badge" style="display:inline-flex">★ 待读</span>';
+    if(laterHas(e.id))return '<span class="later-badge" style="display:inline-flex">★ '+L('待读','Saved')+'</span>';
     if(isNew(e))return '<span class="new-badge">NEW</span>';
     return '';})()}</span>
   <div class="ep-meta"><div class="t">${e.tEn}</div><div class="tz">${e.tZh}</div>
@@ -3031,7 +3037,7 @@ function readMark(id,on){const s=readGet();const had=s.has(id);if(on===false)s.d
   if(on!==false)laterRemove(id);}   // 读完自动移出「稍后读」
 function toggleRead(id){readMark(id,!readHas(id));}
 function syncReadUI(id){const on=readHas(id);
-  const b=document.getElementById('readBtn');if(b){b.classList.toggle('on',on);const l=b.querySelector('.rl');if(l)l.textContent=on?'已读 ✓':'标记已读';}
+  const b=document.getElementById('readBtn');if(b){b.classList.toggle('on',on);const l=b.querySelector('.rl');if(l)l.innerHTML=readLbl(on);}
   document.querySelectorAll('.ep-card[data-id="'+id+'"]').forEach(c=>c.classList.toggle('read',on));}
 /* 稍后读（想读清单）:localStorage.laterEpisodes;标记已读时自动移出 */
 function laterGet(){try{const r=JSON.parse(localStorage.laterEpisodes||'[]');return Array.isArray(r)?r:[]}catch(e){return[]}}
@@ -3042,7 +3048,7 @@ function toggleLater(id){
 }
 function laterRemove(id){const r=laterGet();if(r.includes(id)){localStorage.laterEpisodes=JSON.stringify(r.filter(x=>x!==id));syncLaterUI(id);syncTouch();}}
 function syncLaterUI(id){const on=laterHas(id);
-  const b=document.getElementById('laterBtn');if(b){b.classList.toggle('on',on);const l=b.querySelector('.ll');if(l)l.textContent=on?'已加待读 ★':'稍后读 ☆';}
+  const b=document.getElementById('laterBtn');if(b){b.classList.toggle('on',on);const l=b.querySelector('.ll');if(l)l.innerHTML=laterLbl(on);}
   document.querySelectorAll('.ep-card[data-id="'+id+'"] .later-badge').forEach(x=>x.style.display=on?'inline-flex':'none');}
 /* 上新徽标：上次来访之后收录、且 14 天内的期打 NEW(首次来访不打，避免满屏 NEW) */
 const LAST_VISIT=localStorage.lastVisit||'';
@@ -3246,14 +3252,14 @@ function setPpl(f){pplFilter=f;render();}
 function vAsk(){
   chatMode='all';
   return `<div class="wrap"><section class="reveal" style="padding-bottom:0">
-    <div class="eyebrow">Ask · 问全站</div>
-    <h2 class="title">向 ${Object.keys(PEOPLE).length} 位 AI 人物提问</h2>
-    <div class="sub">基于全站 ${EPISODES.length} 期播客的核心观点综合回答，对比不同人的看法；出处可点击直达原期。</div>
+    <div class="eyebrow">${L('Ask · 问全站','Ask AI')}</div>
+    <h2 class="title">${L('向 '+Object.keys(PEOPLE).length+' 位 AI 人物提问','Ask '+Object.keys(PEOPLE).length+' AI leaders')}</h2>
+    <div class="sub">${L('基于全站 '+EPISODES.length+' 期播客的核心观点综合回答，对比不同人的看法；出处可点击直达原期。','Answers synthesize the key points of all '+EPISODES.length+' episodes and compare what different people think; click a source to jump to the episode.')}</div>
     <div class="chat askpage" style="margin-top:24px">
       <div class="chat-thread" id="chatThread">${renderThread('__all__')}</div>
       <div class="chat-sugg-row" id="chatSugg">${chatSuggHtml(null)}</div>
-      <div class="chat-inp"><input id="chatInput" placeholder="问关于全站任何 AI 人物 / 议题…" onkeydown="if(event.key==='Enter')askEp()"><button onclick="askEp()">问</button></div>
-      <div class="chat-note" id="chatNote">综合全站要点，必要时自动联网 · AI 生成可能有误，出处可点核对</div>
+      <div class="chat-inp"><input id="chatInput" placeholder="${chatPh()}" onkeydown="if(event.key==='Enter')askEp()"><button onclick="askEp()">${L('问','Ask')}</button></div>
+      <div class="chat-note" id="chatNote">${chatNoteTxt()}</div>
     </div>
   </section></div>${footer()}`;
 }
@@ -3516,22 +3522,22 @@ function vEpisode(id){
       <div class="en">${t.en||''}</div><div class="zh">${t.zh||''}</div></div>`;});
       if(run)flush();
       return out;}).join('');})();
-  const tocItems=ts.map((s,i)=>`<a class="toc-i${AD.all[i]&&afon?' hid':''}" data-sec="${i}" onclick="jumpSec(${i})"><span class="se">${s.sec}</span><span class="sz">${s.secZh||s.sec}</span>${AD.all[i]?'<span class="ad-tag">赞助</span>':''}</a>`).join('');
+  const tocItems=ts.map((s,i)=>`<a class="toc-i${AD.all[i]&&afon?' hid':''}" data-sec="${i}" onclick="jumpSec(${i})"><span class="se">${s.sec}</span><span class="sz">${s.secZh||s.sec}</span>${AD.all[i]?'<span class="ad-tag">'+L('赞助','Sponsor')+'</span>':''}</a>`).join('');
   const hasToc=ts.length>=3;
-  const insRow=(arr)=>arr.map(x=>{const j=(typeof x.sec==='number'&&x.sec>=0);return `<li${j?` class="jmp" onclick="jumpSec(${x.sec})" title="跳到原文出处"`:''}><span class="ie">${x.en}</span><span class="iz">${x.zh}</span></li>`}).join('');
+  const insRow=(arr)=>arr.map(x=>{const j=(typeof x.sec==='number'&&x.sec>=0);return `<li${j?` class="jmp" onclick="jumpSec(${x.sec})" title="${T('跳到原文出处','Jump to source')}"`:''}><span class="ie">${x.en}</span><span class="iz">${x.zh}</span></li>`}).join('');
   const brief=e.brief?`<div class="brief reveal in">
-      <div class="br-h">速览 · TL;DR</div>
+      <div class="br-h">${L('速览 · TL;DR','TL;DR')}</div>
       <ul class="br-tldr">${(e.brief.tldr||[]).map(x=>`<li><span class="ie">${x.en}</span><span class="iz">${x.zh}</span></li>`).join('')}</ul>
-      <div class="br-h br-h2">本期回答 · Answers</div>
+      <div class="br-h br-h2">${L('本期回答 · Answers','This episode answers')}</div>
       <ul class="br-qs">${(e.brief.qs||[]).map(x=>`<li><span class="ie">${x.en}</span><span class="iz">${x.zh}</span></li>`).join('')}</ul>
-      <div class="br-meta">原音频 ${fmtDur(e.min)}${e.brief.words?` · 全文约 ${Math.max(1,Math.round(e.brief.words/220))} 分钟阅读`:''}</div>
+      <div class="br-meta">${L('原音频 '+fmtDur(e.min)+(e.brief.words?' · 全文约 '+Math.max(1,Math.round(e.brief.words/220))+' 分钟阅读':''),'Audio '+fmtDur(e.min)+(e.brief.words?' · ~'+Math.max(1,Math.round(e.brief.words/220))+' min read':''))}</div>
     </div>`:(!EP_EXTRA_OK[e.id]?`<div class="sk-card reveal in">
       <div class="sk" style="width:110px;height:13px;margin-bottom:14px"></div>
       <div class="sk" style="width:92%;height:15px;margin-bottom:9px"></div><div class="sk" style="width:85%;height:15px;margin-bottom:9px"></div><div class="sk" style="width:88%;height:15px"></div>
     </div>`:'');
   const insights=e.insights?`<div class="insights reveal in">
-      <div class="ins-col consensus"><div class="ins-h">核心观点 · Key points</div><ul>${insRow(e.insights.consensus||[])}</ul></div>
-      <div class="ins-col contrarian"><div class="ins-h">反共识 · Contrarian</div><ul>${insRow(e.insights.contrarian||[])}</ul></div>
+      <div class="ins-col consensus"><div class="ins-h">${L('核心观点 · Key points','Key points')}</div><ul>${insRow(e.insights.consensus||[])}</ul></div>
+      <div class="ins-col contrarian"><div class="ins-h">${L('反共识 · Contrarian','Contrarian')}</div><ul>${insRow(e.insights.contrarian||[])}</ul></div>
     </div>`:(!EP_EXTRA_OK[e.id]?`<div class="sk-card reveal in" style="min-height:180px">
       <div class="sk" style="width:150px;height:13px;margin-bottom:14px"></div>
       <div class="sk" style="width:90%;height:14px;margin-bottom:8px"></div><div class="sk" style="width:86%;height:14px;margin-bottom:8px"></div>
@@ -3544,18 +3550,18 @@ function vEpisode(id){
          <a class="btn" href="${e.src}" target="_blank">收听 / 观看原节目</a>
        </div>`
     : loading ? ''
-    : `<div class="note"><b>真实转录</b> · 来自 ${e.pod.en}（${fmtDate(e.date)}），字幕轨提取 + 带术语表的 AI 双语校对，左侧目录可跳转章节。完整音视频见 <a href="${e.src}" target="_blank" style="color:var(--accent)">原节目</a>。版权归原播客所有。译文为 AI 生成，个别词偶有瑕疵。</div>`;
+    : `<div class="note">${L(`<b>真实转录</b> · 来自 ${e.pod.en}（${fmtDate(e.date)}），字幕轨提取 + 带术语表的 AI 双语校对，左侧目录可跳转章节。完整音视频见 <a href="${e.src}" target="_blank" style="color:var(--accent)">原节目</a>。版权归原播客所有。译文为 AI 生成，个别词偶有瑕疵。`,`<b>Real transcript</b> · From ${e.pod.en} (${fmtDate(e.date)}), extracted from the caption track and proofread by AI with a glossary; use the contents on the left to jump between chapters. Full audio/video at the <a href="${e.src}" target="_blank" style="color:var(--accent)">original episode</a>. Copyright belongs to the original podcast. The Chinese translation is AI-generated and may contain minor errors.`)}</div>`;
   if(chatEpId!==id){chatEpId=id;chatMode='episode';}
   const ckey=chatMode==='all'?'__all__':id;
   const chat=e.stub?'':`<div class="chat reveal in">
-      <div class="chat-top"><div class="chat-h">问答 · Ask</div>
+      <div class="chat-top"><div class="chat-h">${L('问答 · Ask','Ask AI')}</div>
         <div class="seg chat-seg" id="chatModeSeg">
-          <button data-m="episode" class="${chatMode==='episode'?'on':''}" onclick="setChatMode('episode')">问这期</button>
-          <button data-m="all" class="${chatMode==='all'?'on':''}" onclick="setChatMode('all')">问全站</button></div></div>
+          <button data-m="episode" class="${chatMode==='episode'?'on':''}" onclick="setChatMode('episode')">${L('问这期','This episode')}</button>
+          <button data-m="all" class="${chatMode==='all'?'on':''}" onclick="setChatMode('all')">${L('问全站','All episodes')}</button></div></div>
       <div class="chat-thread" id="chatThread">${renderThread(ckey)}</div>
       <div class="chat-sugg-row" id="chatSugg">${chatSuggHtml(e)}</div>
-      <div class="chat-inp"><input id="chatInput" placeholder="${chatMode==='all'?'问关于全站任何 AI 人物/议题…':'问关于本期的任何问题…'}" onkeydown="if(event.key==='Enter')askEp()"><button onclick="askEp()">问</button></div>
-      <div class="chat-note" id="chatNote">${chatMode==='all'?'综合全站要点，必要时自动联网':'优先本期内容，必要时自动联网'} · AI 生成可能有误，出处可点核对</div>
+      <div class="chat-inp"><input id="chatInput" placeholder="${chatPh()}" onkeydown="if(event.key==='Enter')askEp()"><button onclick="askEp()">${L('问','Ask')}</button></div>
+      <div class="chat-note" id="chatNote">${chatNoteTxt()}</div>
     </div>`;
   const reader=`
   <div class="reader">
@@ -3563,11 +3569,11 @@ function vEpisode(id){
       <div class="pod" onclick="goPod('${e.pod.en}')" style="color:${fcolor(e.fields[0])};display:flex;align-items:center;gap:9px;cursor:pointer">${podLogo(e)}<span>${e.pod.en}${e.pod.zh&&e.pod.zh!==e.pod.en?' · '+e.pod.zh:''}</span></div>
       <h1>${e.tEn}</h1><div class="hz">${e.tZh}</div>
       <div class="info">
-        <span class="who" onclick="go('#/person/${e.pid}')">${av(e.pid)} ${p.en}</span>${POD2PAPER[e.pid]?`<span>·</span><a class="xsite-inline" href="https://aipaper.jasonlin.tech/#/person/${POD2PAPER[e.pid]}" target="_blank" rel="noopener" title="在 AI Paper 读 TA 的论文与长文"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H14l6 6v8.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-13Z"/><path d="M14 4v6h6" /></svg>读 TA 的论文</a>`:''}
+        <span class="who" onclick="go('#/person/${e.pid}')">${av(e.pid)} ${p.en}</span>${POD2PAPER[e.pid]?`<span>·</span><a class="xsite-inline" href="https://aipaper.jasonlin.tech/#/person/${POD2PAPER[e.pid]}" target="_blank" rel="noopener" title="${T('在 AI Paper 读 TA 的论文与长文','Read their papers on AI Paper')}"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H14l6 6v8.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-13Z"/><path d="M14 4v6h6" /></svg>${L('读 TA 的论文','Papers')}</a>`:''}
         <span>·</span><span>${fmtDate(e.date)}</span><span>·</span><span>${fmtDur(e.min)}</span>
         <span>·</span>${e.fields.map(tag).join('')}
-        ${hasToc?`<span>·</span><span>${afon?ts.length-AD.all.filter(Boolean).length:ts.length} 章</span>`:''}
-        <span>·</span><a class="srclink" href="${e.src}" target="_blank" rel="noopener"><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-3"/><path d="M12 3h5v5"/><path d="M17 3l-8 8"/></svg>原节目</a>
+        ${hasToc?`<span>·</span><span>${(n=>L(n+' 章',n+' chapters'))(afon?ts.length-AD.all.filter(Boolean).length:ts.length)}</span>`:''}
+        <span>·</span><a class="srclink" href="${e.src}" target="_blank" rel="noopener"><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-3"/><path d="M12 3h5v5"/><path d="M17 3l-8 8"/></svg>${L('原节目','Source')}</a>
       </div>
     </div>
     ${brief}
@@ -3575,7 +3581,7 @@ function vEpisode(id){
     <div id="askInline">${chat}</div>
     ${body}
     ${(!e.stub&&!loading)?(()=>{const ns=nextReads(e);return ns.length?`
-    <div class="eyebrow" style="margin-top:56px">Up next · 接着读</div>
+    <div class="eyebrow" style="margin-top:56px">${L('Up next · 接着读','Up next')}</div>
     <div class="ep-grid" style="margin-top:16px">${ns.map(epCard).join('')}</div>`:'';})():''}
     ${note}
     <div id="readEnd" aria-hidden="true"></div>
@@ -3584,30 +3590,30 @@ function vEpisode(id){
   return `
   <div class="read-bar">
     <div class="read-prog" id="readProg"></div>
-    <div class="back" onclick="goBack('${e.pid}')">‹ <b>${p.zh} · ${e.pod.zh}</b></div>
+    <div class="back" onclick="goBack('${e.pid}')">‹ <b>${L(p.zh+' · '+e.pod.zh,p.en+' · '+e.pod.en)}</b></div>
     <div class="tools">
       <div class="seg" id="langSeg">
-        <button onclick="setLang('en')">EN</button><button onclick="setLang('zh')">中</button><button onclick="setLang('both')">双语</button></div>
+        <button onclick="setLang('en')">EN</button><button onclick="setLang('zh')">中</button><button onclick="setLang('both')">${L('双语','Both')}</button></div>
       <div class="rb-drop" id="rbDrop">
       <div class="seg" id="sizeSeg">
-        <button onclick="setSize('s')">小</button><button onclick="setSize('m')">中</button><button onclick="setSize('l')">大</button></div>
+        <button onclick="setSize('s')">${L('小','S')}</button><button onclick="setSize('m')">${L('中','M')}</button><button onclick="setSize('l')">${L('大','L')}</button></div>
       <button id="orderBtn" class="ordbtn" onclick="toggleOrder()" title="切换原文/译文在前"><span class="ol">原文在前</span></button>
-      <button id="shareBtn" class="ordbtn" onclick="copyShare('${e.id}')" title="复制本期分享链接（预览显示该期标题）">分享</button>
-      <button id="readBtn" class="ordbtn readbtn${readHas(e.id)?' on':''}" onclick="toggleRead('${e.id}')" title="标记本期为已读/未读"><span class="rl">${readHas(e.id)?'已读 ✓':'标记已读'}</span></button>
-      <button id="laterBtn" class="ordbtn laterbtn${laterHas(e.id)?' on':''}" onclick="toggleLater('${e.id}')" title="加入/移出稍后读清单"><span class="ll">${laterHas(e.id)?'已加待读 ★':'稍后读 ☆'}</span></button>
-      ${afToken()?`<button id="afBtn" class="ordbtn afbtn${afOn()?' on':''}" onclick="afToggle()" title="${afOn()?'正在跳过赞助口播,点击恢复显示':'点击跳过各期里的赞助口播'}"><span class="al">去广告${afOn()?' ✓':''}</span></button>`:''}
+      <button id="shareBtn" class="ordbtn" onclick="copyShare('${e.id}')" title="复制本期分享链接（预览显示该期标题）">${L('分享','Share')}</button>
+      <button id="readBtn" class="ordbtn readbtn${readHas(e.id)?' on':''}" onclick="toggleRead('${e.id}')" title="标记本期为已读/未读"><span class="rl">${readLbl(readHas(e.id))}</span></button>
+      <button id="laterBtn" class="ordbtn laterbtn${laterHas(e.id)?' on':''}" onclick="toggleLater('${e.id}')" title="加入/移出稍后读清单"><span class="ll">${laterLbl(laterHas(e.id))}</span></button>
+      ${afToken()?`<button id="afBtn" class="ordbtn afbtn${afOn()?' on':''}" onclick="afToggle()" title="${afOn()?'正在跳过赞助口播,点击恢复显示':'点击跳过各期里的赞助口播'}"><span class="al">${L('去广告','Skip ads')}${afOn()?' ✓':''}</span></button>`:''}
       </div>
       <button class="rb-more" onclick="rbToggle(event)" aria-label="更多操作">⋯</button>
     </div>
   </div>
   ${hasToc ? `<div class="read-wrap">
-    <nav class="toc"><div class="toc-h">目录 · Contents</div>${tocItems}</nav>
+    <nav class="toc"><div class="toc-h">${L('目录 · Contents','Contents')}</div>${tocItems}</nav>
     ${reader}
     ${aside}
   </div>
-  <button class="toc-fab" onclick="toggleTocSheet()">目录</button>
+  <button class="toc-fab" onclick="toggleTocSheet()">${L('目录','Contents')}</button>
   <div class="toc-sheet" id="tocSheet" onclick="if(event.target===this)toggleTocSheet()">
-    <div class="panel"><div class="sh-h">目录 · Contents</div>${tocItems}</div>
+    <div class="panel"><div class="sh-h">${L('目录 · Contents','Contents')}</div>${tocItems}</div>
   </div>` : (aside?`<div class="read-wrap read-wrap-notoc">${reader}${aside}</div>`:reader)}`;
 }
 
@@ -3950,10 +3956,23 @@ const CHAT_PROXY='https://ask.jasonlin.tech';
 const CHAT={};   // key('__all__' 或 epId)-> [{role,content}](内存态，导航后重置)
 let chatMode='episode', chatEpId=null;
 const ALL_SUGG=['不同的人怎么看 AGI 的时间表？','开源还是闭源，大家怎么站队？','关于 AI 安全/对齐有哪些不同观点？','规模化（scaling）还能走多远？'];
+const ALL_SUGG_EN=['How do different people see AGI timelines?','Open vs closed source: who stands where?','What are the competing views on AI safety and alignment?','How far can scaling go?'];
+const readLbl=on=>on?L('已读 ✓','Read ✓'):L('标记已读','Mark read');
+const laterLbl=on=>on?L('已加待读 ★','Saved ★'):L('稍后读 ☆','Read later ☆');
+const chatPh=()=>chatMode==='all'?T('问关于全站任何 AI 人物/议题…','Ask about any AI person or topic across the site…'):T('问关于本期的任何问题…','Ask anything about this episode…');
+const chatNoteTxt=()=>chatMode==='all'?T('综合全站要点，必要时自动联网 · AI 生成可能有误，出处可点核对','Synthesizes key points across all episodes, searches the web when needed · AI answers may be wrong, click sources to verify'):T('优先本期内容，必要时自动联网 · AI 生成可能有误，出处可点核对','Answers from this episode first, searches the web when needed · AI answers may be wrong, click sources to verify');
+/* 切语言时把 JS 写进去的动态文字刷一遍(静态部分靠 .l-zh/.l-en 的 CSS 显隐) */
+function i18nRefresh(){
+  document.documentElement.lang=isEN()?'en':'zh-CN';
+  const inp=$('#chatInput');if(inp)inp.placeholder=chatPh();
+  const nt=$('#chatNote');if(nt)nt.textContent=chatNoteTxt();
+  const sg=$('#chatSugg');if(sg)sg.innerHTML=chatSuggHtml(EPISODES.find(x=>x.id===chatEpId));
+  const t=$('#chatThread');if(t)t.innerHTML=renderThread(chatKey());
+}
 const escH=s=>(''+s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 const chatKey=()=>chatMode==='all'?'__all__':chatEpId;
 function chatSuggHtml(e){
-  const qs=chatMode==='all'?ALL_SUGG:((e&&e.brief&&e.brief.qs||[]).map(x=>x.zh||x.en));
+  const qs=chatMode==='all'?(isEN()?ALL_SUGG_EN:ALL_SUGG):((e&&e.brief&&e.brief.qs||[]).map(x=>isEN()?(x.en||x.zh):(x.zh||x.en)));
   return qs.map(q=>`<button class="chat-sugg" onclick="askEp(this.textContent)">${q}</button>`).join('');
 }
 // 轻量 Markdown → HTML(无依赖):代码块/行内码/标题/列表/引用/分割线/加粗斜体/链接。
@@ -3989,15 +4008,15 @@ function citeHtml(text){
 function renderThread(key){
   return (CHAT[key]||[]).map(m=>m.role==='user'
     ? `<div class="cmsg cu">${escH(m.content)}</div>`
-    : `<div class="cmsg ca">${(!m.content||m.content==='…')?'<span class="cdots">思考中…</span>':citeHtml(m.content)}</div>`).join('');
+    : `<div class="cmsg ca">${(!m.content||m.content==='…')?'<span class="cdots">'+T('思考中…','Thinking…')+'</span>':citeHtml(m.content)}</div>`).join('');
 }
 function setChatMode(m){
   chatMode=m;
   document.querySelectorAll('#chatModeSeg button').forEach(b=>b.classList.toggle('on',b.dataset.m===m));
   const t=$('#chatThread');if(t)t.innerHTML=renderThread(chatKey());
   const s=$('#chatSugg');if(s)s.innerHTML=chatSuggHtml(EPISODES.find(x=>x.id===chatEpId));
-  const inp=$('#chatInput');if(inp)inp.placeholder=m==='all'?'问关于全站任何 AI 人物/议题…':'问关于本期的任何问题…';
-  const nt=$('#chatNote');if(nt)nt.textContent=(m==='all'?'综合全站要点，必要时自动联网':'优先本期内容，必要时自动联网')+' · AI 生成可能有误，出处可点核对';
+  const inp=$('#chatInput');if(inp)inp.placeholder=chatPh();
+  const nt=$('#chatNote');if(nt)nt.textContent=chatNoteTxt();
 }
 async function askEp(preset){
   const inp=$('#chatInput');const q=(preset||(inp?inp.value:'')||'').trim();if(!q)return;
@@ -4009,14 +4028,14 @@ async function askEp(preset){
   const refresh=()=>{const t=$('#chatThread');if(t){t.innerHTML=renderThread(key);t.scrollTop=t.scrollHeight;}};
   refresh();
   try{
-    const payload={mode:chatMode,question:q.slice(0,500),history:hist};
+    const payload={mode:chatMode,question:q.slice(0,500),history:hist,lang:isEN()?'en':'zh'};
     if(chatMode==='episode')payload.id=chatEpId;
     const r=await fetch(CHAT_PROXY,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
-    if(!r.ok||!r.body){let msg=r.status;try{msg=(await r.json()).error||msg}catch(_){}CHAT[key][ai]={role:'assistant',content:'（出错：'+msg+'）'};refresh();return;}
+    if(!r.ok||!r.body){let msg=r.status;try{msg=(await r.json()).error||msg}catch(_){}CHAT[key][ai]={role:'assistant',content:T('（出错：'+msg+'）','(Error: '+msg+')')};refresh();return;}
     const reader=r.body.getReader(),dec=new TextDecoder();let acc='';CHAT[key][ai].content='';
     for(;;){const {done,value}=await reader.read();if(done)break;acc+=dec.decode(value,{stream:true});CHAT[key][ai].content=acc;refresh();}
-    if(!acc){CHAT[key][ai].content='（没有返回内容）';refresh();}
-  }catch(e){CHAT[key][ai]={role:'assistant',content:'（网络错误，请重试）'};refresh();}
+    if(!acc){CHAT[key][ai].content=T('（没有返回内容）','(No response)');refresh();}
+  }catch(e){CHAT[key][ai]={role:'assistant',content:T('（网络错误，请重试）','(Network error, please retry)')};refresh();}
 }
 // 宽屏（≥1400px）把 Ask 面板移到右侧 sticky 侧栏，窄屏留在正文内平铺（同一节点，保留会话）
 const askMQ=window.matchMedia('(min-width:1400px)');
@@ -4033,7 +4052,7 @@ function askSel(){
   try{const sel=window.getSelection();sel&&sel.removeAllRanges&&sel.removeAllRanges();}catch(_){}
   if(chatMode!=='episode')setChatMode('episode');
   const chat=document.querySelector('.chat');if(chat&&chat.scrollIntoView)chat.scrollIntoView({behavior:'smooth',block:'center'});
-  askEp('请解释这段话：“'+(t.length>140?t.slice(0,140)+'…':t)+'”');
+  askEp(T('请解释这段话：“','Explain this passage: “')+(t.length>140?t.slice(0,140)+'…':t)+'”');
 }
 
 /* 点空白处清掉文字选区。浏览器原生并不总会清(移动端 Safari 尤其明显),会出现
@@ -4058,7 +4077,7 @@ function ttsInit(){
 
 /* ============================ CONTROLS ============================ */
 function setSize(s){keepAnchor(()=>{document.body.dataset.size=s;});syncSeg();localStorage.size=s;localStorage.prefsT=Date.now();syncTouch();}
-function setLang(l){keepAnchor(()=>{document.body.dataset.lang=l;});syncSeg();localStorage.lang=l;localStorage.prefsT=Date.now();syncTouch();}
+function setLang(l){keepAnchor(()=>{document.body.dataset.lang=l;});syncSeg();localStorage.lang=l;localStorage.prefsT=Date.now();syncTouch();i18nRefresh();}
 function toggleOrder(){keepAnchor(()=>{const o=document.body.dataset.order==='zh'?'en':'zh';document.body.dataset.order=o;localStorage.order=o;});syncSeg();localStorage.prefsT=Date.now();syncTouch();}
 function syncSeg(){
   const sz=document.body.dataset.size,lg=document.body.dataset.lang;
@@ -4265,17 +4284,17 @@ function syncAgo(){const t=+localStorage.syncT||0;if(!t)return '尚未同步';
   const m=Math.round((Date.now()-t)/60000);return m<1?'刚刚已同步':m<60?`${m} 分钟前同步`:`${Math.round(m/60)} 小时前同步`;}
 function syncPanelHtml(){
   const c=syncCode();
-  if(!c)return `<b style="color:var(--text-2)">多设备同步</b> — 一个匿名同步码，跨设备同步已读、稍后读与阅读进度。无账号、无 Cookie。同一个码也可在姊妹站 AI Paper 使用。<br>
-    <button class="mcp-copy" onclick="syncStart()">开启同步</button>
-    <span style="margin:0 6px;color:var(--text-3)">或</span>
-    <input id="syncIn" placeholder="输入同步码" style="font-family:var(--ui);font-size:16px;padding:5px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--text);width:220px" onkeydown="if(event.key==='Enter')syncJoinInput()">
-    <button class="mcp-copy" onclick="syncJoinInput()">加入</button>`;
-  return `<b style="color:var(--text-2)">多设备同步 · 已开启</b> — <span style="color:${_syncErr?'#c0392b':'var(--text-3)'}">${_syncErr||syncAgo()}</span><br>
-    同步码 <code class="mcp-url">${c.replace(/(.{4})(?=.)/g,'$1-')}</code>
-    <button id="syncCpC" class="mcp-copy" onclick="syncCopy('code')">复制码</button>
-    <button id="syncCpL" class="mcp-copy" onclick="syncCopy('link')">复制配对链接</button>
-    <button id="syncNowBtn" class="mcp-copy" onclick="syncNow(this)">立即同步</button>
-    <button class="mcp-copy" onclick="syncOff()" title="仅本机停用，云端数据保留">关闭</button><br>
+  if(!c)return `<b style="color:var(--text-2)">${L('多设备同步','Sync across devices')}</b> — ${L('一个匿名同步码，跨设备同步已读、稍后读与阅读进度。无账号、无 Cookie。同一个码也可在姊妹站 AI Paper 使用。','One anonymous code syncs read history, read-later and progress across devices. No account, no cookies. The same code works on AI Paper.')}<br>
+    <button class="mcp-copy" onclick="syncStart()">${L('开启同步','Turn on sync')}</button>
+    <span style="margin:0 6px;color:var(--text-3)">${L('或','or')}</span>
+    <input id="syncIn" placeholder="${T('输入同步码','Enter sync code')}" style="font-family:var(--ui);font-size:16px;padding:5px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--text);width:220px" onkeydown="if(event.key==='Enter')syncJoinInput()">
+    <button class="mcp-copy" onclick="syncJoinInput()">${L('加入','Join')}</button>`;
+  return `<b style="color:var(--text-2)">${L('多设备同步 · 已开启','Sync · on')}</b> — <span style="color:${_syncErr?'#c0392b':'var(--text-3)'}">${_syncErr||syncAgo()}</span><br>
+    ${L('同步码','Code')} <code class="mcp-url">${c.replace(/(.{4})(?=.)/g,'$1-')}</code>
+    <button id="syncCpC" class="mcp-copy" onclick="syncCopy('code')">${L('复制码','Copy code')}</button>
+    <button id="syncCpL" class="mcp-copy" onclick="syncCopy('link')">${L('复制配对链接','Copy pairing link')}</button>
+    <button id="syncNowBtn" class="mcp-copy" onclick="syncNow(this)">${L('立即同步','Sync now')}</button>
+    <button class="mcp-copy" onclick="syncOff()" title="仅本机停用，云端数据保留">${L('关闭','Turn off')}</button><br>
     <span class="mcp-tools">另一台设备打开配对链接即完成；码即身份，勿公开分享。</span>`;
 }
 function syncPanelRefresh(){const el=document.getElementById('syncPanel');if(el)el.innerHTML=syncPanelHtml();}
@@ -4693,14 +4712,16 @@ async function copyShare(id){const u='https://aipodcast.jasonlin.tech/e/'+id+'/'
   try{await navigator.clipboard.writeText(u);if(b){b.textContent='已复制链接';setTimeout(()=>b.textContent='分享',1600);}}catch(_){if(b)b.textContent='复制失败';}}
 function footer(){return `<footer class="footer"><div class="wrap">
   <div class="mcp-note">
-    <b style="color:var(--text-2)">接入 AI 助手 · MCP</b> — 全站 ${EPISODES.length} 期双语全文，可接入 Claude、Cursor 等做问答。只读、免费、无需 key。<br>
-    <code class="mcp-url">${MCP_URL}</code><button id="mcpCopy" class="mcp-copy" onclick="copyMcp()">复制</button>
+    <b style="color:var(--text-2)">${L('接入 AI 助手 · MCP','Use with AI assistants · MCP')}</b> — ${L('全站 '+EPISODES.length+' 期双语全文，可接入 Claude、Cursor 等做问答。只读、免费、无需 key。','All '+EPISODES.length+' bilingual transcripts, usable from Claude, Cursor and other assistants. Read-only, free, no key needed.')}<br>
+    <code class="mcp-url">${MCP_URL}</code><button id="mcpCopy" class="mcp-copy" onclick="copyMcp()">${L('复制','Copy')}</button>
   </div>
-  <div class="mcp-note" id="syncPanel"><div class="legal-note" style="margin-bottom:14px"><b>姊妹站</b> — 同一批人物，三种读法：<a href="https://aipaper.jasonlin.tech" target="_blank" rel="noopener" style="color:var(--accent)">AI Paper</a>（他们的论文与长文，双语全文）· <a href="https://ai.jasonlin.tech" target="_blank" rel="noopener" style="color:var(--accent)">AI 学者图谱</a>（谁和谁共事、师承、合创）。另有 <a href="https://hardware.jasonlin.tech" target="_blank" rel="noopener" style="color:var(--accent)">硬件</a>、<a href="https://investor.jasonlin.tech" target="_blank" rel="noopener" style="color:var(--accent)">投资</a>、<a href="https://design.jasonlin.tech" target="_blank" rel="noopener" style="color:var(--accent)">设计</a>三个姊妹图谱。阅读记录用同一个同步码互通。</div>
+  <div class="mcp-note" id="syncPanel"><div class="legal-note" style="margin-bottom:14px">${L(`<b>姊妹站</b> — 同一批人物，三种读法：<a href="https://aipaper.jasonlin.tech" target="_blank" rel="noopener" style="color:var(--accent)">AI Paper</a>（他们的论文与长文，双语全文）· <a href="https://ai.jasonlin.tech" target="_blank" rel="noopener" style="color:var(--accent)">AI 学者图谱</a>（谁和谁共事、师承、合创）。另有 <a href="https://hardware.jasonlin.tech" target="_blank" rel="noopener" style="color:var(--accent)">硬件</a>、<a href="https://investor.jasonlin.tech" target="_blank" rel="noopener" style="color:var(--accent)">投资</a>、<a href="https://design.jasonlin.tech" target="_blank" rel="noopener" style="color:var(--accent)">设计</a>三个姊妹图谱。阅读记录用同一个同步码互通。`,`<b>Sister sites</b> — the same people, three ways to read: <a href="https://aipaper.jasonlin.tech" target="_blank" rel="noopener" style="color:var(--accent)">AI Paper</a> (their papers and essays, bilingual) · <a href="https://ai.jasonlin.tech" target="_blank" rel="noopener" style="color:var(--accent)">AI Researcher Graph</a> (who worked with, trained and co-founded with whom). Plus three more graphs: <a href="https://hardware.jasonlin.tech" target="_blank" rel="noopener" style="color:var(--accent)">hardware</a>, <a href="https://investor.jasonlin.tech" target="_blank" rel="noopener" style="color:var(--accent)">investors</a> and <a href="https://design.jasonlin.tech" target="_blank" rel="noopener" style="color:var(--accent)">design</a>. Reading history syncs across all of them with one code.`)}</div>
     ${syncPanelHtml()}</div>
-  <b style="color:var(--text-2)">AI Podcast · AI 播客</b> — 知名 AI 人物播客，双语阅读。<a href="https://feed.jasonlin.tech/aipodcast.xml" style="color:var(--accent)">📡 RSS 订阅</a><br>
+  ${L(`<b style="color:var(--text-2)">AI Podcast · AI 播客</b> — 知名 AI 人物播客，双语阅读。<a href="https://feed.jasonlin.tech/aipodcast.xml" style="color:var(--accent)">📡 RSS 订阅</a><br>
   内容版权归原播客方；双语全文为 AI 转录翻译，仅供学习，以原节目为准。权利人如需下架：<a href="mailto:linzheng3535@gmail.com?subject=AI%20Podcast%20Takedown%20Request">linzheng3535@gmail.com</a>，即刻处理。<br>
-  译文 AI 生成，偶有瑕疵；照片来自 <a href="https://commons.wikimedia.org" target="_blank">Wikimedia</a> 及本人公开主页、封面来自 Apple Podcasts，仅作识别；匿名统计，无 Cookie。分类法来自 <a href="https://ai.jasonlin.tech" target="_blank">AI 人物图谱</a>。
+  译文 AI 生成，偶有瑕疵；照片来自 <a href="https://commons.wikimedia.org" target="_blank">Wikimedia</a> 及本人公开主页、封面来自 Apple Podcasts，仅作识别；匿名统计，无 Cookie。分类法来自 <a href="https://ai.jasonlin.tech" target="_blank">AI 人物图谱</a>。`,`<b style="color:var(--text-2)">AI Podcast</b> — podcasts with leading AI figures, read bilingually. <a href="https://feed.jasonlin.tech/aipodcast.xml" style="color:var(--accent)">📡 RSS</a><br>
+  Content copyright belongs to the original podcasts; transcripts and translations are AI-generated for learning only, and the original episode is authoritative. Rights holders can request removal at <a href="mailto:linzheng3535@gmail.com?subject=AI%20Podcast%20Takedown%20Request">linzheng3535@gmail.com</a> and it will be handled promptly.<br>
+  AI translations may contain errors. Photos from <a href="https://commons.wikimedia.org" target="_blank">Wikimedia</a> and public profiles, cover art from Apple Podcasts, used for identification only. Anonymous analytics, no cookies. Taxonomy from the <a href="https://ai.jasonlin.tech" target="_blank">AI people graph</a>.`)}
 </div></footer>`;}
 
 /* init */
@@ -4733,6 +4754,7 @@ if(localStorage.theme)document.documentElement.dataset.theme=localStorage.theme;
   new MutationObserver(upd).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
   upd();})();
 if(localStorage.lang)document.body.dataset.lang=localStorage.lang;
+if(document.body.dataset.lang==='en')document.documentElement.lang='en';
 if(localStorage.size)document.body.dataset.size=localStorage.size;
 document.body.dataset.order=localStorage.order||'en';
 window.addEventListener('hashchange',render);
