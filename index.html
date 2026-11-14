@@ -912,16 +912,22 @@ if(m)m.content=document.documentElement.dataset.theme==='dark'?'#0e0e10':'#fcfcf
 .me-set .push-row:first-child{margin-top:0}
 .push-ic{color:var(--text-2);display:inline-flex}
 
+/* 英文模式:界面文字成对 span 显隐;阅读页里的中文副行(速览/本期回答/观点/标题副题/接着读卡片)一并隐藏 */
+body[data-lang="en"] .l-zh{display:none!important}
+body:not([data-lang="en"]) .l-en{display:none!important}
+body[data-lang="en"] .brief .iz,body[data-lang="en"] .insights .iz,body[data-lang="en"] .ep-head .hz,body[data-lang="en"] .reader .ep-card .tz{display:none}
+body[data-lang="en"] .toc-i .sz{display:none}
+
 </style>
 </head>
 <body>
 <nav class="nav">
   <div class="brand" onclick="go('#/')"><span class="dot"></span>AI&nbsp;Podcast</div>
   <div class="links">
-    <a onclick="go('#/people')" data-route="people">人物</a>
-    <a onclick="go('#/browse')" data-route="browse">播客</a>
-    <a onclick="go('#/pods')" data-route="pods">节目</a>
-    <a onclick="go('#/mine')" data-route="mine" id="navMarks">我的</a>
+    <a onclick="go('#/people')" data-route="people"><span class="l-zh">人物</span><span class="l-en">People</span></a>
+    <a onclick="go('#/browse')" data-route="browse"><span class="l-zh">播客</span><span class="l-en">Episodes</span></a>
+    <a onclick="go('#/pods')" data-route="pods"><span class="l-zh">节目</span><span class="l-en">Shows</span></a>
+    <a onclick="go('#/mine')" data-route="mine" id="navMarks"><span class="l-zh">我的</span><span class="l-en">Me</span></a>
   </div>
   <div class="spacer"></div>
   <button class="icon" title="搜索 (/)" aria-label="搜索" onclick="toggleSearch()">
@@ -980,7 +986,7 @@ if(m)m.content=document.documentElement.dataset.theme==='dark'?'#0e0e10':'#fcfcf
 <button class="totop" id="toTop" title="回到顶部" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l6-6 6 6"/></svg></button>
 <script>addEventListener('scroll',()=>{const t=document.getElementById('toTop');if(t)t.classList.toggle('on',scrollY>700);},{passive:true});</script>
 
-<script src="app.js?v=d288511dbb" defer></script>
+<script src="app.js?v=4c64412f66" defer></script>
 <script>/* SW 只在生产域名注册:本地预览(http/127.0.0.1)不注册,避免把 localhost 缓存搞混 */
 if('serviceWorker' in navigator&&/jasonlin\.tech$/.test(location.hostname))addEventListener('load',function(){navigator.serviceWorker.register('/sw.js')});</script>
 <!--SITE_INDEX_START--><details class="site-index"><summary>站点地图 · Sitemap（356 位人物 · 844 期）</summary>
