@@ -2891,13 +2891,42 @@ function readStats(){
   return {eps,totalMin,ppl:new Set(eps.map(e=>e.pid)).size,pods,streak:rlogStreak()};
 }
 
+/* 「我的」页空状态(2026-11-14):不写一段灰字,而是给一张「读起来以后会长这样」的预览卡 + 3 期入门 + 标记示例;
+   桌面两栏(左:预览/入门,右:标记/设置),手机单栏。已读 ≥1 期后走 vStats 原有布局。 */
+const IC_BELL='<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>';
+const IC_SKIP='<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5l9 7-9 7z"/><path d="M19 5v14"/></svg>';
+function mineMarkDemo(){
+  return `<div class="me-demo"><span class="me-chip">示例</span>
+    <div class="mk-q">“The hottest new programming language is English.”<span class="me-zh">最热门的新编程语言是英语。</span></div>
+    <div class="me-demo-s">阅读单集时选中一句话，点弹出的「标记」，它就会收进这里，并随同步码跨设备同步。</div></div>`;}
+function mineEmptyHtml(){
+  const d=new Date();const COLS=22,todayIdx=(COLS-1)*7+d.getDay();
+  let cells='';for(let k=0;k<COLS*7;k++)cells+=k>todayIdx?'<i class="fut"></i>':k===todayIdx?'<i class="on"></i>':'<i></i>';
+  const st=STARTERS.map(id=>EPISODES.find(e=>e.id===id)).filter(Boolean).slice(0,3);
+  const rows=st.map(e=>{const p=PEOPLE[e.pid];return `<a class="me-ep" href="#/episode/${e.id}">${av(e.pid)}<div class="me-ep-t"><b>${e.tZh||e.tEn}</b><span>${p?p.zh||p.en:''} · ${(e.pod&&e.pod.zh)||''}${e.min?' · '+e.min+' 分钟':''}</span></div><span class="me-go" aria-hidden="true">›</span></a>`;}).join('');
+  return `<div class="wrap me-wrap"><section class="reveal">
+    <div class="eyebrow">My Space · 我的</div><h2 class="title">我的</h2>
+    <div class="me-grid">
+      <div class="me-col">
+        <div class="me-card">
+          <div class="me-tiles"><div><b>0</b><span>已读期数</span></div><div><b>0</b><span>累计小时</span></div><div><b>0</b><span>连续天数</span></div><div><b>0</b><span>覆盖人物</span></div></div>
+          <div class="me-hm" aria-hidden="true">${cells}</div>
+          <div class="me-foot"><div class="me-avs" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><span>读完第一期，今天这格就会亮起</span></div>
+        </div>
+        ${rows?`<div class="st-h3 me-h3">从这里开始</div><div class="me-list">${rows}</div>`:''}
+      </div>
+      <div class="me-col">
+        <div class="st-h3 me-h3 me-h3-top">我的标记</div>${mineMarkDemo()}
+        <div class="st-h3 me-h3">设置</div><div class="me-set">${pushPanelHtml()}${afPanelHtml()}</div>
+      </div>
+    </div></section></div>`;}
 /* 「我的」页:划线标记区块(复用 vMarks 逻辑) */
 function mineMarksHtml(){
   const hm=hlGet();const eps=Object.keys(hm).filter(id=>hm[id]&&hm[id].length).map(id=>({id,e:EPISODES.find(x=>x.id===id),items:hm[id]})).filter(x=>x.e);
   eps.forEach(x=>x.last=Math.max.apply(null,x.items.map(i=>i.ts||0)));eps.sort((a,b)=>b.last-a.last);
   const total=eps.reduce((n,x)=>n+x.items.length,0);
   const body=total?eps.map(x=>`<div class="mk-ep"><div class="mk-eph" onclick="go('#/episode/${x.id}')"><b>${x.e.tZh}</b><span>${PEOPLE[x.e.pid]?PEOPLE[x.e.pid].zh:''} · ${x.items.length} 条</span></div>${x.items.map((it,idx)=>`<div class="mk-item"><span class="mk-q" onclick="hlJump('${x.id}',${it.sec},${idx})">${(it.text||'').replace(/</g,'&lt;')}</span><button class="mk-del" title="删除这条标记" onclick="hlRemove('${x.id}',${idx})">×</button></div>`).join('')}</div>`).join('')
-    :'<div class="st-empty">还没有划线标记。阅读单集时选中文字，点弹出的「标记」即可收藏到这里。</div>';
+    :mineMarkDemo();
   return `<div class="st-h2" style="margin-top:52px">我的标记${total?' · '+total:''}</div>`+body;
 }
 /* 历史阅读记录自动找回(静默):本地 recentT 同步合并;云端(按同步身份 sid)每天最多拉一次 */
@@ -2948,7 +2977,7 @@ function sharePromoHtml(st,hrs){
 function vStats(){
   rlogLocalMerge();setTimeout(rlogAutoPull,60);
   const st=readStats();
-  if(!st.eps.length)return `<div class="wrap"><section class="reveal" style="min-height:50vh"><div class="eyebrow">My Space · 我的</div><h2 class="title">我的</h2><div class="st-h2">我的数据</div><div class="st-empty">还没有已读的播客——打开一期读到底会自动标记已读，统计从此开始累计。</div>${pushPanelHtml()}${afPanelHtml()}${mineMarksHtml()}</section></div>`;
+  if(!st.eps.length)return mineEmptyHtml();
   const hrs=Math.round(st.totalMin/6)/10;
   const g=rlogGet();
   // 热力图:固定 6–10 月窗口(含未来 3 个月的空格),列=周,行=周日..周六
@@ -4309,14 +4338,14 @@ function afPanelHtml(){setTimeout(()=>{if(afToken()&&(!afState()||Date.now()-(+l
   return `<div class="push-row af-row" id="afPanel">${afPanelInner()}</div>`;}
 function afPanelInner(){
   const note=_afNote?`<div class="push-note af-note">${_afNote}</div>`:'';
-  if(!afToken())return `<span class="push-ic" aria-hidden="true">⏭</span><div class="push-tx"><b>去广告</b><span>跳过各期逐字稿里的赞助口播，正文更干净。凭邀请码开通，开通后你也会得到 2 个邀请码送朋友。</span>
+  if(!afToken())return `<span class="push-ic" aria-hidden="true">${IC_SKIP}</span><div class="push-tx"><b>去广告</b><span>跳过各期逐字稿里的赞助口播，正文更干净。凭邀请码开通，开通后你也会得到 2 个邀请码送朋友。</span>
     <div class="af-form"><input id="afIn" class="af-in" placeholder="邀请码" maxlength="8" autocapitalize="characters" autocomplete="off" spellcheck="false" onkeydown="if(event.key==='Enter')afRedeemInput()"><button class="mcp-copy" onclick="afRedeemInput()" ${_afBusy?'disabled':''}>开通</button></div>${note}</div>`;
   const st=afState()||{codes:[],invited:0,pending:1};const sk=afSkipStat();const on=afOn();
   const codes=(st.codes||[]).map(c=>c.used
     ?`<span class="af-code used"><code>${afFmt(c.code)}</code><i>已被使用</i></span>`
     :`<span class="af-code"><code>${afFmt(c.code)}</code><button class="mcp-copy" onclick="afCopy('${c.code}','text',this)">复制邀请</button></span>`).join('');
   const sub=on?(sk.eps?`已开启 · 本机已为你跳过 ${sk.eps} 期里的赞助段，${afMins(sk.words)}`:'已开启 · 遇到有赞助口播的期会自动跳过'):'已暂停 · 赞助段照常显示,打开开关即恢复跳过';
-  return `<span class="push-ic" aria-hidden="true">⏭</span><div class="push-tx"><b>去广告 · 已开通</b><span>${sub}</span>
+  return `<span class="push-ic" aria-hidden="true">${IC_SKIP}</span><div class="push-tx"><b>去广告 · 已开通</b><span>${sub}</span>
     <div class="af-codes-h">你的邀请码 · 每人 2 个，送给会认真读的朋友</div>
     <div class="af-codes">${codes||`<span class="af-code"><i>${st.pending?'正在取你的邀请码…':'两个邀请码都已送出'}</i></span>`}</div>
     <div class="push-note">已邀请 ${st.invited||0} 人${st.inviter==='root'?' · 由站长直接邀请':''} · <a href="#" onclick="afOff();return false" style="color:var(--text-3)">本机移除</a></div>${note}</div>
@@ -4387,7 +4416,7 @@ const RSS_TIP='<a href="https://feed.jasonlin.tech/aipodcast.xml" style="color:v
    视觉上像一块突兀的公告。现在收成一行「设置行」:铃铛 + 标题/一句状态 + 右侧开关,贴在分享卡下方,
    宽度与分享卡对齐(560px)。不可用的状态(iOS 未加主屏/被屏蔽/不支持)开关置灰,状态句里给 RSS 出口。 */
 function pushPanelHtml(){setTimeout(pushPanelRefresh,0);
-  return `<div class="push-row" id="pushPanel"><span class="push-ic" aria-hidden="true">🔔</span><div class="push-tx"><b>更新提醒</b><span id="pushSub">检查中…</span></div></div>`;}
+  return `<div class="push-row" id="pushPanel"><span class="push-ic" aria-hidden="true">${IC_BELL}</span><div class="push-tx"><b>更新提醒</b><span id="pushSub">检查中…</span></div></div>`;}
 async function pushPanelRefresh(){
   const el=document.getElementById('pushPanel');if(!el)return;
   const st=await pushState();
@@ -4400,7 +4429,7 @@ async function pushPanelRefresh(){
   else if(st==='unsynced'){sub=`浏览器已订阅，但没登记到提醒服务器（多半是网络）· <a href="#" onclick="pushSubscribe();return false" style="color:var(--accent)">重试</a>`;ctl=sw(false,'pushSubscribe()',false);}
   else if(st==='on'){sub='已开启 · 有新一期时通知，多期合并成一条';ctl=sw(true,'pushUnsubscribe()',false);}
   else {sub='有新访谈时发一条浏览器通知 · 无账号、不收集个人信息';ctl=sw(false,'pushSubscribe()',false);}
-  el.innerHTML=`<span class="push-ic" aria-hidden="true">🔔</span><div class="push-tx"><b>更新提醒</b><span id="pushSub">${sub}</span>${note}</div>${ctl}`;}
+  el.innerHTML=`<span class="push-ic" aria-hidden="true">${IC_BELL}</span><div class="push-tx"><b>更新提醒</b><span id="pushSub">${sub}</span>${note}</div>${ctl}`;}
 function pushDiagnose(e){
   const m=''+((e&&e.message)||e);
   const safari=/Safari/.test(navigator.userAgent)&&!/Chrome|Chromium|Edg|CriOS|FxiOS/.test(navigator.userAgent);

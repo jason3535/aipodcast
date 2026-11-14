@@ -873,6 +873,45 @@ if(m)m.content=document.documentElement.dataset.theme==='dark'?'#0e0e10':'#fcfcf
 .totop.on{opacity:1;pointer-events:auto}
 .totop:hover{color:var(--accent)}
 @media(max-width:760px){.totop{right:12px;bottom:76px;width:38px;height:38px}}
+/* 「我的」空状态 */
+.me-wrap{padding-bottom:96px}
+.me-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:44px;margin-top:30px;align-items:start}
+@media(max-width:860px){.me-grid{grid-template-columns:1fr;gap:0}.me-h3-top{margin-top:34px!important}}
+.me-card{border:1px solid var(--line);border-radius:20px;background:var(--surface-2);padding:22px 22px 18px}
+.me-tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.me-tiles div{display:flex;flex-direction:column;gap:4px}
+.me-tiles b{font-size:30px;font-weight:700;line-height:1.05;color:var(--text-3);opacity:.45;font-variant-numeric:tabular-nums}
+.me-tiles span{font-size:12px;color:var(--text-3)}
+.me-hm{display:grid;grid-auto-flow:column;grid-template-rows:repeat(7,1fr);grid-template-columns:repeat(22,1fr);gap:3px;margin-top:22px;max-width:420px}
+.me-hm i{aspect-ratio:1;border-radius:3px;border:1px solid var(--line);box-sizing:border-box;display:block}
+.me-hm i.fut{border-style:dashed;opacity:.5}
+.me-hm i.on{border:none;background:var(--accent);animation:mePulse 2.4s ease-in-out infinite}
+@keyframes mePulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(41,151,255,.45)}50%{opacity:.55;box-shadow:0 0 0 4px rgba(41,151,255,0)}}
+@media(prefers-reduced-motion:reduce){.me-hm i.on{animation:none}}
+.me-foot{display:flex;align-items:center;gap:12px;margin-top:18px;font-size:13px;color:var(--text-2)}
+.me-avs{display:flex;flex:none}
+.me-avs i{width:24px;height:24px;border-radius:50%;border:1.5px dashed var(--line);background:var(--surface-2);margin-left:-7px;box-sizing:border-box}
+.me-avs i:first-child{margin-left:0}
+.me-h3{margin:30px 0 6px}
+.me-col>.me-h3:first-child{margin-top:0}
+.me-list{display:flex;flex-direction:column}
+.me-ep{display:flex;align-items:center;gap:14px;padding:13px 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
+.me-ep .av{width:44px;height:44px;font-size:14px}
+.me-ep-t{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.me-ep-t b{font-family:var(--han);font-size:15px;font-weight:600;line-height:1.4;color:var(--text);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.me-ep-t span{font-size:12px;color:var(--text-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.me-go{color:var(--text-3);font-size:22px;line-height:1;transition:transform .2s}
+.me-ep:hover .me-go{transform:translateX(3px);color:var(--accent)}
+.me-ep:hover b{color:var(--accent)}
+.me-demo{position:relative;border:1px dashed var(--line);border-radius:16px;padding:30px 18px 16px}
+.me-demo .mk-q{display:block;font-family:var(--serif);font-size:16px;line-height:1.6;color:var(--text);border-left:2px solid var(--accent);padding-left:12px;cursor:default}
+.me-zh{display:block;font-family:var(--han);font-size:14px;color:var(--text-2);margin-top:4px}
+.me-demo-s{font-size:13px;color:var(--text-2);margin-top:12px;line-height:1.6}
+.me-chip{position:absolute;top:10px;left:18px;font-size:11px;letter-spacing:.06em;color:var(--text-3)}
+.me-set .push-row{max-width:none;margin-top:10px}
+.me-set .push-row:first-child{margin-top:0}
+.push-ic{color:var(--text-2);display:inline-flex}
+
 </style>
 </head>
 <body>
@@ -941,7 +980,7 @@ if(m)m.content=document.documentElement.dataset.theme==='dark'?'#0e0e10':'#fcfcf
 <button class="totop" id="toTop" title="回到顶部" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l6-6 6 6"/></svg></button>
 <script>addEventListener('scroll',()=>{const t=document.getElementById('toTop');if(t)t.classList.toggle('on',scrollY>700);},{passive:true});</script>
 
-<script src="app.js?v=6288ff3bbe" defer></script>
+<script src="app.js?v=aa814aec0e" defer></script>
 <script>/* SW 只在生产域名注册:本地预览(http/127.0.0.1)不注册,避免把 localhost 缓存搞混 */
 if('serviceWorker' in navigator&&/jasonlin\.tech$/.test(location.hostname))addEventListener('load',function(){navigator.serviceWorker.register('/sw.js')});</script>
 <!--SITE_INDEX_START--><details class="site-index"><summary>站点地图 · Sitemap（356 位人物 · 844 期）</summary>
