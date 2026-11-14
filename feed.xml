@@ -43,6 +43,48 @@
     <description>来自 Cursor 的 Lauren Tan 与 Roshan Sadanani 做客 MTS，现场演示 Grok Bot，讲解拥有独立电脑的持久化智能体如何在你睡觉时自动完成任务，并探讨 Grok 4.6 带来的能力变化。  要点: Grok Bot 让你像和同事聊天一样与智能体协作，而不是微管理工具调用。 / Grok 4.6 在 Cursor Bench 上媲美顶级模型，成本却低得多。 / React 编译器自动记忆化比人工更细粒度，让性能优化自动化。</description>
   </item>
   <item>
+    <title>黄仁勋的离场或将永久改变 AI 行业 — TBPN</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/dylanpatel-tbpn-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dylanpatel-tbpn-2026/</guid>
+    <pubDate>Fri, 13 Nov 2026 01:43:57 -0000</pubDate>
+    <description>Dylan 做客本期，探讨黄仁勋若突然离场将如何颠覆英伟达、AI 融资与整个行业的权力格局。  要点: 黄仁勋的退出将拖慢英伟达的交易管道，并损害开源生态。 / 中国实验室正从英伟达芯片转向多元化，DeepSeek 与华为关系密切。 / 真正的黑天鹅是 AI 在编程之外的进展停滞，而非技术突破。</description>
+  </item>
+  <item>
+    <title>AI 与药物发现的未来：对话 Isomorphic Labs 总裁 Max Jaderberg — No Priors</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/jaderberg-nopriors-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jaderberg-nopriors-2026/</guid>
+    <pubDate>Fri, 13 Nov 2026 01:43:57 -0000</pubDate>
+    <description>Isomorphic Labs 总裁 Max Jaderberg 探讨如何利用 AI 在临床试验前将生物学理解搬上计算机，从而变革药物发现。  要点: AI 能将药物发现从经验试错转变为预测性的计算机驱动设计。 / 在患者之前建模人体毒性是最大机会，而不仅仅是靶点结合。 / 通用的疾病无关模型能跨药物积累学习，而定制项目做不到。</description>
+  </item>
+  <item>
+    <title>Tom Johnson：2026 年最疯狂的 portfolio — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/tomjohnson-diveclub-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/tomjohnson-diveclub-2026/</guid>
+    <pubDate>Fri, 13 Nov 2026 01:43:57 -0000</pubDate>
+    <description>Tom Johnson 拆解他那个游戏般的疯狂个人网站，重新定义设计师作品集的可能性。  要点: 作品集应是展示个性的游乐场，而非极简的商标墙。 / AI 擅长生成素材和连接控件，却不擅长简化用户体验。 / 提示词是发现与迭代的设计练习，而非追求完美语法。</description>
+  </item>
+  <item>
+    <title>Mercor 以 200 亿美元估值完成 7.5 亿美元融资：CEO Brendan Foody 谈重塑人类工作方式 — Sourcery with Molly O'Shea</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/brendanfoody-sourcery-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brendanfoody-sourcery-2026/</guid>
+    <pubDate>Fri, 13 Nov 2026 01:43:57 -0000</pubDate>
+    <description>Brendan Foody 讲述 Mercor 如何打造强化学习环境与 AI 项目经理，重新定义人类参与经济的方式。  要点: 人类将通过训练 AI 代理而非重复性工作来贡献经济，RL 环境将推动经济自动化。 / 每家财富 500 强都将成为新实验室，用专有数据和主权 AI 栈训练模型。 / 数据定价错误因投资者低估人类反馈；API 业务转换成本低，收入质量被高估。</description>
+  </item>
+  <item>
+    <title>AI 的下一个万亿美元市场不是软件 — Silicon Valley Girl</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/jaderberg-siliconv-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jaderberg-siliconv-2026/</guid>
+    <pubDate>Fri, 13 Nov 2026 01:43:57 -0000</pubDate>
+    <description>Isomorphic Labs 总裁 Max Jaderberg 讲述 AlphaFold 的概念验证如何推动用 AI 设计药物、攻克所有疾病的使命。  要点: AI 的下一个万亿美元市场是药物发现而非软件，由 AlphaFold 式的突破驱动。 / 在 AI 驱动的药物发现中，真正的瓶颈是数据，而非算法或算力。 / AI 让研究者定义设计空间、由智能体运行实验，从而实现个性化医疗。</description>
+  </item>
+  <item>
+    <title>为智能体而设计：Zeno Rocha 谈打造 Resend — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/zenorocha-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/zenorocha-latentsp-2026/</guid>
+    <pubDate>Fri, 13 Nov 2026 01:43:57 -0000</pubDate>
+    <description>Resend 创始人 Zeno Rocha 讲述开发者优先的邮件平台如何做到 430 万用户和 1000 万美元 ARR。  要点: Resend 通过默认信任用户和自建全栈，达到 430 万用户和 12 万付费客户。 / 送达率是艺术与科学：批处理、IP 池、基于互动的限流和域名声誉。 / API 优先和无表单设计让 Resend 服务 SDK、CLI、MCP 和智能体收件箱。</description>
+  </item>
+  <item>
     <title>构建未来：Paul Graham 与 Amjad Masad 谈氛围编程与 AI 智能体 — Y Combinator</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/amjadmasad-ycombina-2026</link>
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/amjadmasad-ycombina-2026/</guid>
@@ -174,48 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/erikbernhardsson-20vc-2026/</guid>
     <pubDate>Tue, 03 Nov 2026 01:44:50 -0000</pubDate>
     <description>Modal 联合创始人兼 CEO Erik 解析为何专业化推理模型有望造就千亿美元公司、开源大模型推理为何尚未见顶，以及创始人对算力成本的常见误判。  要点: 推理是新的云，是千亿美元级的平台机会，远不止卖 token。 / 拥有广泛的产品套件能创造转换成本；只卖 token 是价格战，没有赢家。 / 新云厂商向上做推理，很难复制 Modal 五年的基础设施积累。</description>
-  </item>
-  <item>
-    <title>付费增长秘籍：Hector Serrano 谈如何用 UGC 规模化 WhisperFlow — Lenny’s Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/hectorserrano-lennyspo-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/hectorserrano-lennyspo-2026/</guid>
-    <pubDate>Mon, 02 Nov 2026 01:45:59 -0000</pubDate>
-    <description>Hector Serrano 分享 WhisperFlow 实现 30 倍营收增长背后的战术手册，涵盖付费 UGC、创作者计划以及如何在 B2B SaaS 营销中脱颖而出。  要点: 产品市场契合是唯一的增长黑客，付费和自然渠道放大需求而非创造需求。 / 基于绩效的 UGC 配合智能底薪，能建立忠诚创作者团队并扩大广告产出。 / 雇佣有社交增长证明的年轻创作者，给予实验自由。</description>
-  </item>
-  <item>
-    <title>Jerry Tworek：打造随用户实时学习的 AI，挑战 Transformer 架构 — Grace Gong</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/tworek-gracegon-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/tworek-gracegon-2026/</guid>
-    <pubDate>Mon, 02 Nov 2026 01:45:59 -0000</pubDate>
-    <description>Core Automation CEO Jerry Tworek 解析为何 Transformer 并非终点，以及模型如何随用户数据实时学习。  要点: Transformer 并非终点，更好的架构将带来更智能、更稳健的学习系统。 / 微调效率低下，模型应实时从用户数据中学习。 / 未来的公司将由 AI 运营，人类负责设定目标和引导。</description>
-  </item>
-  <item>
-    <title>用 AI 智能体处理长周期金融工作 — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/amansingh-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/amansingh-latentsp-2026/</guid>
-    <pubDate>Mon, 02 Nov 2026 01:45:59 -0000</pubDate>
-    <description>Arca 的 Aman Singh 讲述这家 AI 原生财富管理公司如何用模型无关的智能体框架，在人类顾问背后完成长周期金融工作。  要点: AI 替代的是顾问的后台工作而非顾问本身，共情仍由人提供。 / 掌控自己的执行框架和运营知识，别把智能外包给托管代理。 / 代理会 24/7 主动提醒人，颠覆了通常的人对代理的交互模式。</description>
-  </item>
-  <item>
-    <title>为金融业打造 ChatGPT：OpenAI 的企业级实践 — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/josephkim-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/josephkim-latentsp-2026/</guid>
-    <pubDate>Mon, 02 Nov 2026 01:45:59 -0000</pubDate>
-    <description>OpenAI 金融服务负责人 Joseph Kim 详解 ChatGPT 金融版的构建思路与模型智能的未来走向。  要点: 基于 ChatGPT 插件架构加上专有数据，可以打造十亿美元级的金融产品。 / 模型最大的差距在于人类判断力和品味，而非事实准确性。 / 评估体系难以构建且容易被钻空子，高分可能具有误导性。</description>
-  </item>
-  <item>
-    <title>为何定制 AI 模型将取代基础模型——对话 Fireworks AI 创始人 Lin Qiao — Canva</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/linqiao-canva-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/linqiao-canva-2026/</guid>
-    <pubDate>Mon, 02 Nov 2026 01:45:59 -0000</pubDate>
-    <description>Fireworks AI 创始人 Lin Qiao 讲述为何基于专有用户数据打造的定制模型将超越基础模型，以及她在 Meta 开发 PyTorch 的经历如何塑造了这一判断。  要点: 推理质量是 AI 产品的首要因素，前沿质量是门槛。 / 私有数据是解锁下一代智能的关键，而前沿实验室缺乏私有数据。 / 未来是定制模型主导，而非少数基础模型；拥有自己的模型至关重要。</description>
-  </item>
-  <item>
-    <title>当人人都能构建软件：Supabase 的智能体驱动未来 — Y Combinator</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/paulcopplestone-ycombina-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/paulcopplestone-ycombina-2026/</guid>
-    <pubDate>Sat, 31 Oct 2026 01:41:05 -0000</pubDate>
-    <description>Supabase CEO Paul Copplestone 谈 AI 智能体与开源如何让人人都成为构建者。  要点: AI 让领域专家成为构建者，产品必须代码优先并对智能体友好。 / 开源让智能体能够检查和修复问题，从而推动采用与信任。 / 个人数据库曾显得荒谬，如今却是对每个人最有价值的一层。</description>
   </item>
 </channel>
 </rss>
