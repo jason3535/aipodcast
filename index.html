@@ -918,6 +918,15 @@ body:not([data-lang="en"]) .l-en{display:none!important}
 body[data-lang="en"] .brief .iz,body[data-lang="en"] .insights .iz,body[data-lang="en"] .ep-head .hz,body[data-lang="en"] .reader .ep-card .tz{display:none}
 body[data-lang="en"] .toc-i .sz{display:none}
 
+/* 全站语言开关(导航栏) */
+.langbtn{font:600 12.5px/1 var(--ui);letter-spacing:.02em;color:var(--text-2);background:none;border:1px solid var(--line);border-radius:980px;padding:6px 11px;cursor:pointer;margin-right:6px;flex:none}
+.langbtn:hover{color:var(--text);border-color:var(--text-3)}
+body[data-lang="en"] .lb-en,body:not([data-lang="en"]) .lb-zh{display:none}
+@media(max-width:600px){.langbtn{padding:4px 8px;font-size:11.5px;margin-right:2px}}
+
+/* 手机:导航链接横向可滑,品牌/语言/图标按钮固定不被挤出(英文标签更长) */
+@media(max-width:640px){.nav .brand,.nav .icon,.langbtn{flex:none}.nav .links{flex:1 1 auto;min-width:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}.nav .links::-webkit-scrollbar{display:none}.nav .spacer{display:none}}
+
 </style>
 </head>
 <body>
@@ -930,6 +939,7 @@ body[data-lang="en"] .toc-i .sz{display:none}
     <a onclick="go('#/mine')" data-route="mine" id="navMarks"><span class="l-zh">我的</span><span class="l-en">Me</span></a>
   </div>
   <div class="spacer"></div>
+  <button class="langbtn" id="langBtn" data-noi18n onclick="toggleSiteLang()" title="Switch language / 切换语言"><span class="lb-en">EN</span><span class="lb-zh">中文</span></button>
   <button class="icon" title="搜索 (/)" aria-label="搜索" onclick="toggleSearch()">
     <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8" cy="8" r="5"/><line x1="11.7" y1="11.7" x2="15.5" y2="15.5"/></svg></button>
   <button class="icon" title="深色 / 浅色" aria-label="主题" onclick="toggleTheme()" id="themeBtn">
@@ -986,7 +996,7 @@ body[data-lang="en"] .toc-i .sz{display:none}
 <button class="totop" id="toTop" title="回到顶部" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l6-6 6 6"/></svg></button>
 <script>addEventListener('scroll',()=>{const t=document.getElementById('toTop');if(t)t.classList.toggle('on',scrollY>700);},{passive:true});</script>
 
-<script src="app.js?v=4c64412f66" defer></script>
+<script src="app.js?v=eecd12ee37" defer></script>
 <script>/* SW 只在生产域名注册:本地预览(http/127.0.0.1)不注册,避免把 localhost 缓存搞混 */
 if('serviceWorker' in navigator&&/jasonlin\.tech$/.test(location.hostname))addEventListener('load',function(){navigator.serviceWorker.register('/sw.js')});</script>
 <!--SITE_INDEX_START--><details class="site-index"><summary>站点地图 · Sitemap（356 位人物 · 844 期）</summary>

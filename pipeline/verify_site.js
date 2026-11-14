@@ -175,7 +175,7 @@ function localFile(p){
   try{if(fs.statSync(f).isDirectory())f=path.join(f,'index.html');return {body:fs.readFileSync(f),type:MIME[path.extname(f).toLowerCase()]||'application/octet-stream'};}catch(_){return null;}
 }
 async function newCtx(browser,base){
-  const ctx=await browser.newContext({viewport:{width:1280,height:900},userAgent:UA,serviceWorkers:'block'});
+  const ctx=await browser.newContext({viewport:{width:1280,height:900},userAgent:UA,serviceWorkers:'block',locale:'zh-CN'})   /* 2026-11-14 起首访按浏览器语言选界面语言;本校验的预期(中文标题等)按中文/双语模式写,固定中文 locale */;
   const prod='https://'+CNAME;
   await ctx.route('**/*',r=>{const u=r.request().url();
     if(u.startsWith(base))return r.continue();
