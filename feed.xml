@@ -6,7 +6,49 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Fri, 13 Nov 2026 04:03:30 -0000</lastBuildDate>
+  <lastBuildDate>Sun, 15 Nov 2026 04:06:28 -0000</lastBuildDate>
+  <item>
+    <title>AI 同事的崛起 — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/laurentan-ycombina-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/laurentan-ycombina-2026/</guid>
+    <pubDate>Sun, 15 Nov 2026 04:06:28 -0000</pubDate>
+    <description>Lauren 讲述 Grok Bot 如何让企业打造拥有独立身份、工具与凭证、始终在线的 AI 同事。  要点: Grok Bot 将 AI 视为拥有身份、工具和主动性的队友，而非单纯的聊天工具。 / 对机器人的信任分阶段建立：先只读，再执行操作，最后负责整个任务。 / 随着执行能力变得充裕，瓶颈转向意图明确、愿景和品味。</description>
+  </item>
+  <item>
+    <title>前沿实验室买什么：Handshake AI 揭秘数据经济 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/garrettlord-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/garrettlord-latentsp-2026/</guid>
+    <pubDate>Sun, 15 Nov 2026 04:06:28 -0000</pubDate>
+    <description>Handshake AI 的 Garrett 深入解析 AI 训练数据如何从廉价标注转向专家构建的强化学习环境，以及为何定义“好”是评估中最难的问题。  要点: 数据标注已转向由专家编写环境和评分标准，以训练前沿模型。 / 前沿模型在生命科学和金融等领域的基准测试中得分低于 50%。 / 模型校准危险地差，错误时仍表达高置信度，阻碍高风险场景部署。</description>
+  </item>
+  <item>
+    <title>Mistral CEO Arthur Mensch：为何欧洲必须掌握前沿 AI — 20VC</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/mensch-20vc-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/mensch-20vc-2026/</guid>
+    <pubDate>Sun, 15 Nov 2026 04:06:28 -0000</pubDate>
+    <description>Mistral CEO Arthur Mensch 解释为何主权 AI 对欧洲是结构性经济必需，而非政治口号。  要点: 欧洲必须构建前沿 AI 以保障经济增长与主权。 / 开放权重模型正在追赶；瓶颈是算力，而非能源。 / Mistral 的垂直整合从模型到应用服务主权工作负载。</description>
+  </item>
+  <item>
+    <title>产品经理为何再度吃香：Tulsee Doshi 谈打造 Gemini — Lenny’s Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/tulseedoshi-lennyspo-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/tulseedoshi-lennyspo-2026/</guid>
+    <pubDate>Sun, 15 Nov 2026 04:06:28 -0000</pubDate>
+    <description>Gemini 产品负责人 Tulsee Doshi 解析模型研发为何既是科学也是魔法，以及这对她招募的产品经理意味着什么。  要点: 产品经理因品味和洞察力能穿透 AI 噪音而重获价值。 / 为未来模型构建：60%现在可用，20%初现曙光，20%未来愿景。 / 安全需要监控思维链，人类洞察胜过 AI 垃圾。</description>
+  </item>
+  <item>
+    <title>代码仓库会变成软件工厂吗？——对话 Monaco AI 负责人 Mihail Eric — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/mihaileric-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/mihaileric-latentsp-2026/</guid>
+    <pubDate>Sun, 15 Nov 2026 04:06:28 -0000</pubDate>
+    <description>斯坦福教授、Monaco AI 负责人 Mihail Eric 探讨编程智能体如何重塑软件开发生命周期，以及对新一代工程师意味着什么。  要点: 具备扎实软件功底的 AI 原生工程师，能成为公司最有价值的资产。 / 可验证、结构良好、易于理解的智能体就绪代码库，是软件工厂的基础。 / 代码审查是新瓶颈；安全应优先关注依赖和供应链，而非对所有代码一视同仁。</description>
+  </item>
+  <item>
+    <title>做智能体的工程经理：建立对 AI 生成代码的信任 — Ai insider</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/laurentan-aiinside-2026b</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/laurentan-aiinside-2026b/</guid>
+    <pubDate>Sun, 15 Nov 2026 04:06:28 -0000</pubDate>
+    <description>Lauren Tan 分享如何把 AI 智能体当作工程团队成员，通过验证建立信任，并实现数百个自动合并 PR 的规模化开发。  要点: 验证是智能体最重要的技能：运行代码并测试行为以形成闭环。 / 工程师像管理厨房一样管理智能体：将标准编码为技能并通过 CI 强制执行。 / 信任需逐步建立；硬性执行比软规则更能保证代码质量。</description>
+  </item>
   <item>
     <title>Grok Bot 14 个最佳机器人：Peng 与 Lauren 谈智能体集群与信任 — Peter Yang</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/pengzheng-peteryan-2026</link>
@@ -174,48 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/derekbriggs-diveclub-2026/</guid>
     <pubDate>Wed, 04 Nov 2026 01:43:24 -0000</pubDate>
     <description>Derek Briggs 分享他如何在 Shopify 提升工艺标准，从 shop.com 的自定义缓动曲线到通过设计系统在 300 人设计团队中放大影响力。  要点: 当任何人都能实现想法时，设计工艺才是差异化因素。 / 使用更长的缓动时长，同时保持 200 毫秒的视觉运动以带来愉悦感。 / AI 应该让设计师好 10 倍，而不仅仅是效率高 10 倍。</description>
-  </item>
-  <item>
-    <title>2026 软件工厂基础设施栈 — Zach Lloyd，Warp.dev — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/zachlloyd-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/zachlloyd-latentsp-2026/</guid>
-    <pubDate>Wed, 04 Nov 2026 01:43:24 -0000</pubDate>
-    <description>Warp.dev 的 Zach Lloyd 解析软件工厂的真正含义、为何应以代码定义，以及团队构建软件工厂所需的基础设施。  要点: 软件工厂是可度量、声明式的智能体系统，而非临时拼凑的自动化。 / 集中管理智能体轨迹，用在线评估以工程严谨性取代感觉。 / 完整技术栈适合 5-10 人以上工程团队；小团队用订阅即可。</description>
-  </item>
-  <item>
-    <title>AI 能否成为“尤里卡机器”？Richard Socher 谈 AI 驱动的科学发现 — The TWIML AI Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/richardsocher-thetwiml-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/richardsocher-thetwiml-2026/</guid>
-    <pubDate>Wed, 04 Nov 2026 01:43:24 -0000</pubDate>
-    <description>Richard Socher 探讨 AI 如何从辅助科学家走向自主提出想法、运行实验并验证发现，加速生物学、化学、物理学等领域的科学突破。  要点: AI 已开始小规模生成并验证科学发现，但尚未成为尤里卡机器。 / 尤里卡机器依赖四大支柱：世界知识、测量数据、模拟和机器人实验。 / 应监管 AI 应用和用户责任，而非抽象智能；放缓 AI 不现实。</description>
-  </item>
-  <item>
-    <title>与 Jeff Dean 炉边对话：TPU 的演进与 AI 基础设施 — OpenXLA</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/jeffdean-openxla-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jeffdean-openxla-2026/</guid>
-    <pubDate>Wed, 04 Nov 2026 01:43:24 -0000</pubDate>
-    <description>谷歌第 30 号员工 Jeff Dean 回顾从早期搜索扩展到 TPU 诞生的历程，并展望 AI 基础设施的未来。  要点: TPU 通过模型、硬件、编译器和基础设施的全栈协同设计，实现了显著的每瓦性能提升。 / 十万芯片规模的可靠性是一种系统属性，需要稳健的软件和运维实践。 / 开源 JAX 并拥抱 PyTorch，防止 AI 基础设施被少数公司垄断。</description>
-  </item>
-  <item>
-    <title>看不见数据时如何构建法律智能体：Legora CTO Jacob Lauritzen — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/jacoblauritzen-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jacoblauritzen-latentsp-2026/</guid>
-    <pubDate>Tue, 03 Nov 2026 01:44:50 -0000</pubDate>
-    <description>Legora CTO Jacob Lauritzen 讲述一家谦逊的斯德哥尔摩初创公司如何成长为法律科技领域增长最快的智能体平台之一。  要点: 法律 AI 将律师工作转向判断和客户关系，而非取代初级律师。 / 模型路由和任务细分优化法律智能体的成本、延迟和质量。 / 保密性限制用户轨迹审查，因此评估必须模拟真实法律工作。</description>
-  </item>
-  <item>
-    <title>AWS 觉醒前的窗口期：Nebius CTO 谈与超大规模云厂商的竞速 — Unsupervised Learning</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/danilashtan-unsuperv-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/danilashtan-unsuperv-2026/</guid>
-    <pubDate>Tue, 03 Nov 2026 01:44:50 -0000</pubDate>
-    <description>Nebius CTO Danila 阐释为何软件能力而非单纯获取 GPU 才是 AI 云的分水岭，以及独立玩家如何在超大规模云厂商全面入局前抢占窗口期。  要点: AI 云需求三年内将增长 10 到 100 倍，执行能力是唯一瓶颈。 / 开放权重模型的推理远未解决，95%的客户会微调而非直接使用原版模型。 / 超大规模云厂商终将大举进入，但细分玩家在这个巨大市场中仍有生存空间。</description>
-  </item>
-  <item>
-    <title>Modal CEO Erik：千亿美元推理市场机遇，开源大模型推理尚未见顶 — 20VC</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/erikbernhardsson-20vc-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/erikbernhardsson-20vc-2026/</guid>
-    <pubDate>Tue, 03 Nov 2026 01:44:50 -0000</pubDate>
-    <description>Modal 联合创始人兼 CEO Erik 解析为何专业化推理模型有望造就千亿美元公司、开源大模型推理为何尚未见顶，以及创始人对算力成本的常见误判。  要点: 推理是新的云，是千亿美元级的平台机会，远不止卖 token。 / 拥有广泛的产品套件能创造转换成本；只卖 token 是价格战，没有赢家。 / 新云厂商向上做推理，很难复制 Modal 五年的基础设施积累。</description>
   </item>
 </channel>
 </rss>
