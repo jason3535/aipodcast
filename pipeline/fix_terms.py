@@ -75,7 +75,8 @@ RULES = [
     (re.compile(BL+r"rock ?bots"+BR, re.I), "Grok Bots"),
     (re.compile(BL+r"rock ?bot"+BR, re.I), "Grok Bot"),
     (re.compile(BL+r"(?:P[ -]?Sack|PSAC|Pystack)"+BR), "pstack"),
-    (re.compile(BL+r"GSAC"+BR), "gstack"),   # 同期 Garry Tan 的 gstack 听成 GSAC
+    (re.compile(BL+r"GSAC"+BR), "gstack"),
+    (re.compile(BL+r"Grob ?ots?"+BR), "Grok Bot"),   # 2026-11-15 laurentan-ycombina-2026 中文译文把 Grok Bot 拆成「Grob ot」   # 同期 Garry Tan 的 gstack 听成 GSAC
     (re.compile(BL+r"potato[ -]mode"+BR, re.I), "poteto-mode"),
     (re.compile(r"potato ?模式", re.I), "poteto-mode"),
     (re.compile(BL+r"grock"+BR, re.I),

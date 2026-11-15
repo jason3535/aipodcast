@@ -81,6 +81,14 @@
         "romanugarte"
       ],
       "note": "Lauren Tan 的 X 账号 @poteto 与 pstack 的 /poteto-mode;自动字幕写成 potato(2026-11-13 pengzheng-peteryan-2026 ×7)。potato 本身是正常词,只拦 potato mode"
+    },
+    {
+      "canonical": "Grok Bot",
+      "variants": [
+        "Grob ?ots?"
+      ],
+      "pids": [],
+      "note": "2026-11-15 laurentan-ycombina-2026 中文译文把 Grok Bot 拆成「Grob ot」(英文是对的)。Grob ot 不是任何正常词,全库查"
     }
   ]
 }
