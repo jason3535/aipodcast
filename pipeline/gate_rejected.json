@@ -773,5 +773,45 @@
 "t": "Sequoia Leaves London, Close Scout Program & End Evergreen Fund | NASDAQ Loses $",
 "why": "嘉宾为SaaS投资人Jason Lemkin与Rory O'Driscoll，均不在名单中；且内容为Sequoia重组等VC新闻讨论，非实质性AI/技术访谈。",
 "at": "2026-11-13"
+},
+"BJUBPMCBGhI|nateparrott": {
+"t": "THE GREEN SCENE: Moylan's hat-trick, Coleman's Ireland future & Parrott’s UCL ex",
+"why": "足球节目，Nate Parrott 是爱尔兰球员，与 Anthropic 设计师同名不同人；且非 AI 内容。",
+"at": "2026-11-15"
+},
+"QUcGX0Ah55Y|mengto": {
+"t": "How to Turn Your Skills Into a Business That Builds Wealth",
+"why": "Evan Carmichael 频道的多人合辑/长时段商业励志内容，非围绕 Meng To 的完整单集 AI 技术访谈，且无法确认其为唯一主要嘉宾。",
+"at": "2026-11-15"
+},
+"ZpQWFE7E7tI|jensen": {
+"t": "Jensen Huang Nvidia situation is rapidly becoming the biggest political scandal ",
+"why": "该视频是 Tom Bilyeu 的评论/阴谋论解读节目，并非 Jensen Huang 本人的访谈或演讲；标题与简介内容（辞职、绯闻、间谍指控）明显是虚构或传闻",
+"at": "2026-11-15"
+},
+"1NHPDzpfR6Y": {
+"t": "Recursive self-improvement has started",
+"why": "该视频为 Dwarkesh Patel 本人的独白式观点更新，无被访嘉宾，不符合单一主嘉宾访谈标准。",
+"at": "2026-11-15"
+},
+"-XL2gClQ2gg": {
+"t": "Is AI Now Good Enough To Cure Cancer? | YC Paper Club",
+"why": "YC Paper Club 为多人分享形式，含 Alfredo Gonzalez、Yusuf Roohani 等多位讲者，无单一主嘉宾，不符合收录标准。",
+"at": "2026-11-15"
+},
+"PbD9pVXxsYM": {
+"t": "Cyberattacks Used to Take Months. AI Can Do It in Minutes.",
+"why": "主嘉宾Ami Luttwak不在站内名单中，且为a16z圆桌访谈，非名单人物主讲。",
+"at": "2026-11-15"
+},
+"UZ8eYaAf08M": {
+"t": "The $7B Startup Building AI Chips to Challenge Nvidia | Fractile Founder & CEO, ",
+"why": "嘉宾Walter Goodwin不在站内人物名单中，且为芯片公司创始人访谈，非名单匹配。",
+"at": "2026-11-15"
+},
+"5htKF_kDWXU": {
+"t": "Why Enterprise AI Isn’t Delivering ROI | Ahmed Bashir, DevRev",
+"why": "嘉宾Ahmed Bashir不在站内名单中，且DevRev CTO的访谈虽为实质性AI访谈，但主嘉宾未匹配名单。",
+"at": "2026-11-15"
 }
 }

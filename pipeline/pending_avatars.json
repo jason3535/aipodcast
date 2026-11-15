@@ -151,5 +151,32 @@
   "from": "Latent Space",
   "added": "2026-11-13",
   "auto": true
+ },
+ {
+  "pid": "garrettlord",
+  "en": "Garrett Lord",
+  "zh": "加勒特·洛德",
+  "tiEn": "CEO, Handshake AI",
+  "from": "Latent Space",
+  "added": "2026-11-15",
+  "auto": true
+ },
+ {
+  "pid": "tulseedoshi",
+  "en": "Tulsee Doshi",
+  "zh": "塔尔西·多希",
+  "tiEn": "Head of Product, Gemini, Google",
+  "from": "Lenny’s Podcast",
+  "added": "2026-11-15",
+  "auto": true
+ },
+ {
+  "pid": "mihaileric",
+  "en": "Mihail Eric",
+  "zh": "米哈伊尔·埃里克",
+  "tiEn": "AI Lead at Monaco, Stanford Lecturer",
+  "from": "Latent Space",
+  "added": "2026-11-15",
+  "auto": true
  }
 ]

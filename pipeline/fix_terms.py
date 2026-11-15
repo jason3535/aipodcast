@@ -68,6 +68,16 @@ RULES = [
     (re.compile(BL+r"Gro(?:th)?bot"+BR), "Grok Bot"),
     (re.compile(BL+r"Gro[gk] bots"+BR), "Grok Bots"),
     (re.compile(BL+r"Grock模型"), "Grok 模型"),
+    # 2026-11-15 laurentan-ycombina/aiinside-2026b:大写 B 的 GraphBot、小写 rockbot 漏网(上面两条区分大小写);
+    # pstack 又被听成 P Sack / PSAC / Pystack;/poteto-mode 被听成 potato mode。都是连写专名,无正常词撞车。
+    (re.compile(BL+r"(?:Graph|graph)Bots"+BR), "Grok Bots"),
+    (re.compile(BL+r"(?:Graph|graph)Bot"+BR), "Grok Bot"),
+    (re.compile(BL+r"rock ?bots"+BR, re.I), "Grok Bots"),
+    (re.compile(BL+r"rock ?bot"+BR, re.I), "Grok Bot"),
+    (re.compile(BL+r"(?:P[ -]?Sack|PSAC|Pystack)"+BR), "pstack"),
+    (re.compile(BL+r"GSAC"+BR), "gstack"),   # 同期 Garry Tan 的 gstack 听成 GSAC
+    (re.compile(BL+r"potato[ -]mode"+BR, re.I), "poteto-mode"),
+    (re.compile(r"potato ?模式", re.I), "poteto-mode"),
     (re.compile(BL+r"grock"+BR, re.I),
      lambda m: "Groq" if _CHIPCTX.search(m.string[max(0, m.start()-160):m.start()+160]) else "Grok"),
     # 格洛克 是手枪 Glock 的标准译名,用在 xAI 的模型上会让人看岔(全站 4 处,都在

@@ -135,6 +135,22 @@ def flat(q):
         return [e for e in (d.get("entries") or []) if e]
     except Exception: return []
 
+def page_subs(vid):
+    """yt-dlp 订阅数复核。2026-11 YouTube 新版观看页把订阅写成「⁨5.79M subscribers⁩」(带 Unicode 隔离符),
+    yt-dlp(含 2026.10.26)解析成 579 —— Tucker Carlson/Ezra Klein/Decoder/Bloomberg 全被当成几百订阅的
+    搬运号丢掉(2026-11-15 日志)。低于门槛时自己抓页面文字再算一次;抓不到返回 None(调用方放行)。"""
+    try:
+        req = urllib.request.Request(f"https://www.youtube.com/watch?v={vid}",
+            headers={"Accept-Language": "en-US,en;q=0.9", "User-Agent": "Mozilla/5.0"})
+        html = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "ignore")
+        html = re.sub("[\u2066-\u2069\u200e\u200f]", "", html)
+        m = re.search(r'([\d.,]+)\s*([KMB])?\s*subscribers', html)
+        if not m: return None
+        n = float(m.group(1).replace(",", ""))
+        return int(n * {"K": 1e3, "M": 1e6, "B": 1e9}.get(m.group(2) or "", 1))
+    except Exception:
+        return None
+
 def meta(vid):
     try:
         d = json.loads(subprocess.run(["yt-dlp", "--skip-download", "--no-warnings", "-J",
@@ -541,6 +557,10 @@ def discover(people, vids, days, per_person_cap=1):
                 continue
             if not (floor <= m["date"] <= cutoff): continue
             # 订阅门槛放在日期之后:否则每天把 2020-2024 的旧视频「弃(小频道)」刷满日志(2026-10-08~11)
+            if m.get("subs") is not None and m["subs"] < MIN_SUBS and m.get("ch") not in SMALL_OK:
+                ps = page_subs(vid)
+                if ps is None or ps >= MIN_SUBS:   # yt-dlp 读错(或复核失败)→ 以页面为准/放行
+                    m["subs"] = ps
             if m.get("subs") is not None and m["subs"] < MIN_SUBS and m.get("ch") not in SMALL_OK:
                 log(f"  {pid:12} {m['date']} {m['t'][:44]} → 弃(小频道 {m['ch']} {m['subs']} 订阅,疑似搬运)"); continue
             on = p["latest"].replace("-", "")
