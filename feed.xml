@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sun, 15 Nov 2026 04:06:28 -0000</lastBuildDate>
+  <lastBuildDate>Mon, 16 Nov 2026 14:30:20 -0000</lastBuildDate>
+  <item>
+    <title>Meta 的 Muse：如何打造今年最成功的消费级 AI 产品 — Lenny’s Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/monasarantakos-lennyspo-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/monasarantakos-lennyspo-2026/</guid>
+    <pubDate>Mon, 16 Nov 2026 14:30:20 -0000</pubDate>
+    <description>Meta 超级智能实验室产品副总裁 Mona Sarantakos 讲述 Muse 如何从一个周末在树莓派上折腾 OpenClaw 的实验，成长为增长最快的消费级 AI 产品，以及团队为何足足等了七个月才发布。  要点: Muse 在发布前花了七个月打磨可靠性与安全性，把用户信任置于速度之上。 / 毛绒玩具头像和口碑传播让智能体感觉更个人化，而非企业化。 / 让工程师自主发挥、用智能体集群收集反馈，催生了产品最好的创意。</description>
+  </item>
   <item>
     <title>AI 同事的崛起 — Y Combinator</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/laurentan-ycombina-2026</link>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/altman-rajshama-2026/</guid>
     <pubDate>Wed, 04 Nov 2026 01:43:24 -0000</pubDate>
     <description>Sam Altman 坦陈打造超级智能的代价、身处疯狂生活的感受，以及为何印度对 AI 最为乐观。  要点: 扩展神经网络带来超线性回报，这一直觉驱动了 OpenAI 的算力豪赌。 / 尽早发布产品，哪怕难堪；少数热情用户胜过大量不温不火的用户。 / 雄心可以通过同辈群体和连续挑战来培养，并非天生。</description>
-  </item>
-  <item>
-    <title>在 Shopify 规模化打磨工艺：Derek Briggs 谈设计作为差异化优势 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/derekbriggs-diveclub-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/derekbriggs-diveclub-2026/</guid>
-    <pubDate>Wed, 04 Nov 2026 01:43:24 -0000</pubDate>
-    <description>Derek Briggs 分享他如何在 Shopify 提升工艺标准，从 shop.com 的自定义缓动曲线到通过设计系统在 300 人设计团队中放大影响力。  要点: 当任何人都能实现想法时，设计工艺才是差异化因素。 / 使用更长的缓动时长，同时保持 200 毫秒的视觉运动以带来愉悦感。 / AI 应该让设计师好 10 倍，而不仅仅是效率高 10 倍。</description>
   </item>
 </channel>
 </rss>

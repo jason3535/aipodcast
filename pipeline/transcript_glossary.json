@@ -89,6 +89,52 @@
       ],
       "pids": [],
       "note": "2026-11-15 laurentan-ycombina-2026 中文译文把 Grok Bot 拆成「Grob ot」(英文是对的)。Grob ot 不是任何正常词,全库查"
+    },
+    {
+      "canonical": "OpenClaw",
+      "variants": [
+        "Open[ -]?Clots?",
+        "Oculots?",
+        "Open[ -]?Claus?",
+        "Open[ -]?Claps?",
+        "Open[ -]?Claude"
+      ],
+      "pids": [],
+      "note": "Peter Steinberger 的开源个人智能体。2026-11-16 monasarantakos-lennyspo-2026 一期里被听成 Open Clot ×8 / Oculot ×2 / Open Clau / Open Clap ×2 / OpenCloud ×3,导语还被写成 OpenClaude。这几种都不是正常词,全库查(分写的 Open Claw 存量 300+ 处、可读,不拦)。存量另有 open clot ×2、Open Claus ×4、OpenClaude ×8 未改"
+    },
+    {
+      "canonical": "OpenClaw",
+      "variants": [
+        "Open[ -]?Cloud"
+      ],
+      "pids": [
+        "monasarantakos"
+      ],
+      "note": "同上。Open Cloud / OpenCloud 可能是正常词组,只查 Muse 团队人物(存量其他期有 Open Cloud ×8 / OpenCloud ×3,未逐条核实)"
+    },
+    {
+      "canonical": "Grok Bot",
+      "variants": [
+        "Groq[ -]?Bots?"
+      ],
+      "pids": [],
+      "note": "2026-11-16 monasarantakos-lennyspo-2026 把 xAI 的 Grok Bot 写成 Groq Bot(Groq 是芯片公司,没有 Groq Bot 这个产品)"
+    },
+    {
+      "canonical": "Meta Superintelligence Labs",
+      "variants": [
+        "Meta Super Intelligence Labs?"
+      ],
+      "pids": [],
+      "note": "MSL 官方写法 Superintelligence 连写。2026-11-16 monasarantakos-lennyspo-2026 ×1;存量 9 处未改"
+    },
+    {
+      "canonical": "Christine Awad",
+      "variants": [
+        "Christina W[oa]dd?"
+      ],
+      "pids": [],
+      "note": "Muse 工程经理 Christine Awad(Lenny 节目 shownotes 有她的 X 链接)。2026-11-16 monasarantakos-lennyspo-2026 听成 Christina Wod,官方文字稿也写成 Christina Wadd"
     }
   ]
 }
