@@ -3,7 +3,7 @@
 > 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.
 
 站点: https://aipodcast.jasonlin.tech/
-规模: 360 位人物 / 851 期访谈
+规模: 361 位人物 / 852 期访谈
 每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
 
 ## 人物 People
@@ -154,6 +154,7 @@
 - [Nad Chishtie / 纳德·奇什蒂](https://aipodcast.jasonlin.tech/pp/nadchishtie/): Founding Designer & Head of Design, Lovable — 2 期
 - [Michael Truell / 迈克尔·特鲁埃尔](https://aipodcast.jasonlin.tech/pp/truell/): Co-founder & CEO, Cursor — 2 期
 - [Pieter Abbeel / 彼得·阿贝尔](https://aipodcast.jasonlin.tech/pp/abbeel/): Professor, UC Berkeley — 2 期
+- [Colette Kress / 科莱特·克雷斯](https://aipodcast.jasonlin.tech/pp/colettekress/): Interim CEO, EVP and CFO, NVIDIA — 1 期
 - [Mona Sarantakos / 莫娜·萨兰塔科斯](https://aipodcast.jasonlin.tech/pp/monasarantakos/): VP of Product, Meta Superintelligence Labs; product lead for Muse — 1 期
 - [Tom Johnson / 汤姆·约翰逊](https://aipodcast.jasonlin.tech/pp/tomjohnson/): Staff Designer, Vercel — 1 期
 - [Zeno Rocha / 泽诺·罗查](https://aipodcast.jasonlin.tech/pp/zenorocha/): Co-founder & CEO, Resend — 1 期
@@ -369,6 +370,7 @@
 - [Albert Gu / 阿尔伯特·顾](https://aipodcast.jasonlin.tech/pp/albertgu/): Assistant Professor, CMU; Co-founder, Cartesia — 1 期
 
 ## 最新访谈 Latest episodes
+- [NVIDIA Q3 FY2027 Earnings Call: Bilingual Recap](https://aipodcast.jasonlin.tech/e/colettekress-nvidiaq3-2026/) — Colette Kress, NVIDIA Q3 FY2027 Earnings Call, 2026-11-17
 - [Meta's Muse: Building the Fastest-Growing AI Consumer Product](https://aipodcast.jasonlin.tech/e/monasarantakos-lennyspo-2026/) — Mona Sarantakos, Lenny’s Podcast, 2026-11-15
 - [The Rise of AI Coworkers](https://aipodcast.jasonlin.tech/e/laurentan-ycombina-2026/) — Lauren Tan, Y Combinator, 2026-11-14
 - [Jensen Huang's Exit Could Reshape the AI Industry Forever](https://aipodcast.jasonlin.tech/e/dylanpatel-tbpn-2026/) — Dylan Patel, TBPN, 2026-11-12
@@ -408,7 +410,6 @@
 - [Jeetu Patel: Building Products for the AI Era](https://aipodcast.jasonlin.tech/e/jeetupatel-abitpers-2026/) — Jeetu Patel, A Bit Personal with Jodi Shelton, 2026-10-29
 - [Alphabet Q3 2026 Earnings: AI Momentum and Gemini 4](https://aipodcast.jasonlin.tech/e/sundarpichai-alphabet-2026b/) — Sundar Pichai, Alphabet Q3 2026 Earnings Call, 2026-10-28
 - [Building Beautiful Websites with Claude: James McDonald's Process](https://aipodcast.jasonlin.tech/e/jamesmcdonald-diveclub-2026/) — James McDonald, Dive Club, 2026-10-28
-- [European Defense Sovereignty Starts in the Factory: Stark's Uwe Horstmann and Johannes Schaback](https://aipodcast.jasonlin.tech/e/uwehorstmann-training-2026/) — Uwe Horstmann, Training Data, 2026-10-28
 
 ## 数据接口
 - sitemap: https://aipodcast.jasonlin.tech/sitemap.xml

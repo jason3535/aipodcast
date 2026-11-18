@@ -6,7 +6,14 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Mon, 16 Nov 2026 14:30:20 -0000</lastBuildDate>
+  <lastBuildDate>Wed, 18 Nov 2026 08:36:58 -0000</lastBuildDate>
+  <item>
+    <title>英伟达 2027 财年第三季度财报电话会｜双语要点 — 英伟达 2027 财年 Q3 财报电话会</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/colettekress-nvidiaq3-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/colettekress-nvidiaq3-2026/</guid>
+    <pubDate>Wed, 18 Nov 2026 08:36:58 -0000</pubDate>
+    <description>Colette Kress 解读 1,158 亿美元季度营收、Vera Rubin 出货和第四季度 1,300 亿美元营收指引。附官方回放。  要点: 数据中心约占当季营收的 93%。 / Vera Rubin NVL72 进入首批出货阶段。 / 第四季度营收指引为 1,300 亿美元，上下浮动 3%。</description>
+  </item>
   <item>
     <title>Meta 的 Muse：如何打造今年最成功的消费级 AI 产品 — Lenny’s Podcast</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/monasarantakos-lennyspo-2026</link>
@@ -209,13 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/johnternus-appleq4-2026/</guid>
     <pubDate>Wed, 04 Nov 2026 03:34:46 -0000</pubDate>
     <description>特努斯首次以苹果 CEO 身份主持财报电话会：九月季度营收 1145 亿美元，同比增长 12% 创纪录；iPhone Duo、Siri AI 与首款触控 Mac 登场，新任 COO 萨比·汗回应供应链与内存成本问题。  要点: 九月季度营收创纪录达 1145 亿美元，25 亿活跃设备推动服务业务增长。 / Siri AI 基于请求、注重隐私且深度集成，并非代理式；服务器功能将推出付费层级。 / 前所未有的内存定价成为日益增长的成本阻力；苹果不情愿地上调了部分产品价格。</description>
-  </item>
-  <item>
-    <title>Sam Altman 谈 AI、超级智能与人类未来 — Raj Shamani</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/altman-rajshama-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/altman-rajshama-2026/</guid>
-    <pubDate>Wed, 04 Nov 2026 01:43:24 -0000</pubDate>
-    <description>Sam Altman 坦陈打造超级智能的代价、身处疯狂生活的感受，以及为何印度对 AI 最为乐观。  要点: 扩展神经网络带来超线性回报，这一直觉驱动了 OpenAI 的算力豪赌。 / 尽早发布产品，哪怕难堪；少数热情用户胜过大量不温不火的用户。 / 雄心可以通过同辈群体和连续挑战来培养，并非天生。</description>
   </item>
 </channel>
 </rss>

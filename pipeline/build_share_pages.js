@@ -129,8 +129,8 @@ EPISODES.forEach(e=>{
   const li=(arr,f)=>arr.map(x=>`<li><span class="zh">${esc(f(x).zh)}</span><br><span class="en">${esc(f(x).en)}</span></li>`).join('');
   const body=`<nav class="bc"><a href="${SITE}/">AI Podcast</a> › <a href="${person}">${esc(p.zh||p.en||'')}</a> › 本期</nav>
 <h1>${esc(e.tZh||e.tEn)}</h1><p class="en-t">${esc(e.tEn)}</p>
-<p class="meta"><a href="${person}">${esc(p.zh||'')} ${esc(p.en||'')}</a> · ${esc((e.pod&&e.pod.zh)||(e.pod&&e.pod.en)||'')} · ${esc(e.date||'')} · 约 ${e.min||''} 分钟${vid(e.src)?` · <a href="${esc(e.src)}" rel="nofollow">原视频 ↗</a>`:''}</p>
-<a class="cta" href="${hash}">打开互动全文版（中英对照 + 朗读 + 问答）→</a><button class="cta cta-2" onclick="shareThis(this)">分享本期</button>
+<p class="meta"><a href="${person}">${esc(p.zh||'')} ${esc(p.en||'')}</a> · ${esc((e.pod&&e.pod.zh)||(e.pod&&e.pod.en)||'')} · ${esc(e.date||'')} · 约 ${e.min||''} 分钟${e.editorialRecap?` · <a href="${esc(e.src)}" rel="nofollow noopener">官方完整回放 ↗</a>`:vid(e.src)?` · <a href="${esc(e.src)}" rel="nofollow">原视频 ↗</a>`:''}</p>
+<a class="cta" href="${hash}">${e.editorialRecap?'打开双语要点 →':'打开互动全文版（中英对照 + 朗读 + 问答）→'}</a><button class="cta cta-2" onclick="shareThis(this)">分享本期</button>
 ${(e.sZh||e.sEn)?`<h2>本期速览 · Overview</h2><p class="zh">${esc(e.sZh||'')}</p><p class="en">${esc(e.sEn||'')}</p>`:''}
 ${tldr.length?`<h2>要点 · TL;DR</h2><ul>${li(tldr,x=>x)}</ul>`:''}
 ${cons.length?`<h2>核心观点 · Key points</h2><ul>${li(cons,x=>x)}</ul>`:''}

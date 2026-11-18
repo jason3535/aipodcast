@@ -2,6 +2,7 @@
 """gen_feed.py — 生成 RSS(/feed.xml):按「收录时间」(git 首次提交该期 ep json)倒序取最近 30 条。
 与 build_share_pages.js 同批跑;纯静态，零后端。用法: python3 gen_feed.py"""
 import json, re, subprocess, io
+from datetime import datetime
 from email.utils import formatdate
 from pathlib import Path
 
@@ -37,7 +38,18 @@ for line in out.splitlines():
         added.setdefault(eid, ts)   # git log 新→旧，首个即最新;setdefault 留…其实要最早的提交
 # 上面 setdefault 留下的是「最新一次 A」;对 add 而言每文件只 A 一次，等价。
 
-rows = sorted(((added.get(e["id"], 0), e) for e in eps if e["id"] in added),
+# postingest runs before the new episode is committed. Use its recorded ingestion
+# timestamp when the detail file exists and Git has no timestamp for it yet.
+for e in eps:
+    eid = e["id"]
+    if eid in added or not e.get("addedAt") or not (ROOT / "mcp-data" / "ep" / f"{eid}.json").is_file():
+        continue
+    try:
+        added[eid] = int(datetime.fromisoformat(e["addedAt"]).timestamp())
+    except ValueError:
+        continue
+
+rows = sorted(((added[e["id"]], e) for e in eps if e["id"] in added),
               key=lambda x: -x[0])[:30]
 
 def esc(s):

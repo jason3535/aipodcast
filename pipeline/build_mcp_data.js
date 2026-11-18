@@ -38,6 +38,7 @@ const index=EPISODES.map(e=>{
     secs:tsOf(e).map(s=>s.sec),
     keyPoints:(ins.consensus||[]).map(x=>({en:x.en,zh:x.zh})),
     contrarian:(ins.contrarian||[]).map(x=>({en:x.en,zh:x.zh})),
+    ...(e.editorialRecap===true?{editorialRecap:true}:{}),
     src:e.src};
 });
 fs.writeFileSync(path.join(OUT,'index.json'),JSON.stringify({
