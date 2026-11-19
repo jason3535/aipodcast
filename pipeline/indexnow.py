@@ -37,7 +37,7 @@ def site_root(key, *candidates):
 SITES = {
     "aipodcast": (site_root("aipodcast", "/Users/jason/CascadeProjects/aipodcast",
                             "/Users/jason.lin/aipodcast"), "aipodcast.jasonlin.tech"),
-    "aipaper":   (site_root("aipaper", "/Users/jason/Downloads/ai-paper-prototype",
+    "aipaper":   (site_root("aipaper", "/Users/jason/CascadeProjects/ai-paper-prototype", "/Users/jason/Downloads/ai-paper-prototype",
                             "/Users/jason.lin/aipaper"), "aipaper.jasonlin.tech"),
     "ai":        (site_root("ai", "/Users/jason/ai-scholar-graph",
                             "/Users/jason.lin/ai-scholar-graph"), "ai.jasonlin.tech"),

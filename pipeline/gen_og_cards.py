@@ -30,7 +30,7 @@ def _root(key, *cands):
 SITES = {
   "aipodcast": dict(root=_root("aipodcast", "/Users/jason/CascadeProjects/aipodcast", "/Users/jason.lin/aipodcast"), label="AI PODCAST  ·  AI 播客", domain="aipodcast.jasonlin.tech",
                     cta="读双语全文  →", item_dir="e", accent=(10, 132, 255)),
-  "aipaper":   dict(root=_root("aipaper", "/Users/jason/Downloads/ai-paper-prototype", "/Users/jason.lin/aipaper"), label="AI PAPER  ·  双语论文", domain="aipaper.jasonlin.tech",
+  "aipaper":   dict(root=_root("aipaper", "/Users/jason/CascadeProjects/ai-paper-prototype", "/Users/jason/Downloads/ai-paper-prototype", "/Users/jason.lin/aipaper"), label="AI PAPER  ·  双语论文", domain="aipaper.jasonlin.tech",
                     cta="读双语全文  →", item_dir="p", accent=(94, 92, 230)),
 }
 W, H = 1200, 630

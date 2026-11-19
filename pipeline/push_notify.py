@@ -37,7 +37,7 @@ SITES = {
         data="mcp-data/index.json", key="episodes", url="/#/episode/{id}",
     ),
     "aipaper": dict(
-        root=_root("aipaper", "/Users/jason/Downloads/ai-paper-prototype", "/Users/jason.lin/aipaper"),
+        root=_root("aipaper", "/Users/jason/CascadeProjects/ai-paper-prototype", "/Users/jason/Downloads/ai-paper-prototype", "/Users/jason.lin/aipaper"),
         data="data/index.json", key="papers", url="/#/paper/{id}",
     ),
 }

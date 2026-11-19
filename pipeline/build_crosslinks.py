@@ -35,7 +35,7 @@ def repo_file(key, rel, *roots):
 
 POD = repo_file("aipodcast", "app.js", "/Users/jason/CascadeProjects/aipodcast",
                 "/Users/jason.lin/aipodcast")
-PAPER = repo_file("aipaper", "app.js", "/Users/jason/Downloads/ai-paper-prototype",
+PAPER = repo_file("aipaper", "app.js", "/Users/jason/CascadeProjects/ai-paper-prototype", "/Users/jason/Downloads/ai-paper-prototype",
                   "/Users/jason.lin/aipaper")
 GRAPHS = {
     "ai": repo_file("ai", "index.html", "/Users/jason/ai-scholar-graph",
