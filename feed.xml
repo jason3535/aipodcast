@@ -6,7 +6,49 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Wed, 18 Nov 2026 08:47:50 -0000</lastBuildDate>
+  <lastBuildDate>Thu, 19 Nov 2026 01:56:45 -0000</lastBuildDate>
+  <item>
+    <title>Ramp 押注百倍效率员工 — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/ericglyman-ycombina-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ericglyman-ycombina-2026/</guid>
+    <pubDate>Thu, 19 Nov 2026 01:56:45 -0000</pubDate>
+    <description>Ramp 联合创始人兼 CEO Eric Glyman 讲述这个估值 600 亿美元的平台如何借助 AI 智能体重塑企业的财务运营方式。  要点: AI 的 ROI 时代要求以结果衡量支出，而非固定预算。 / 1% 的员工（100 倍工程师）使用了 80% 的 token；其余的人因内部政治而停滞。 / 像 Glass 和 Inspect 这样的 AI 工具赋予所有员工超能力，并积累公司知识。</description>
+  </item>
+  <item>
+    <title>Only Founders in the Building：Chris Pedregal 与 Euan Blair 谈创始人的真实难题 — Founders Forum</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/chrispedregal-founders-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/chrispedregal-founders-2026/</guid>
+    <pubDate>Thu, 19 Nov 2026 01:56:45 -0000</pubDate>
+    <description>Chris Pedregal 与 Euan Blair 坦诚分享创始人的真实困境：收件箱失控、投资人关系，以及领导者必须面对的艰难对话。  要点: AI 应增强人类而非取代人类，人的发展始终是首要的。 / 创始人必须果断并持有强烈观点，尤其是在大事上。 / 选择正确的人生伴侣是最重要的职业决策。</description>
+  </item>
+  <item>
+    <title>米其林星级品牌自动售货机：用 AI 规模化品味 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/pauljun-diveclub-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/pauljun-diveclub-2026/</guid>
+    <pubDate>Thu, 19 Nov 2026 01:56:45 -0000</pubDate>
+    <description>Paul Jun 讲述 RAMP 如何将创意判断转化为可复用的品牌系统——是米其林星级自动售货机，而非快餐。  要点: 打造品牌系统而非工具：米其林星级自动售货机可自动化 80-90%的资产。 / 将品牌视为软件：持续交付改进，同时保持核心身份不变。 / AI 提升了品味的价值；自动化琐事的初级设计师是未来。</description>
+  </item>
+  <item>
+    <title>Snap CEO 埃文·斯皮格尔谈 AR 眼镜、AI 焦虑与社交媒体未来 — The Times Tech Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/evanspiegel-thetimes-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/evanspiegel-thetimes-2026/</guid>
+    <pubDate>Thu, 19 Nov 2026 01:56:45 -0000</pubDate>
+    <description>Snap 联合创始人兼 CEO 埃文·斯皮格尔畅谈新一代 Specs AR 眼镜、智能手机的未来、AI 焦虑，以及社交媒体是否会迎来类似烟草诉讼的清算。  要点: Snap CEO 埃文·斯皮格尔押注计算将转向共享、免手的 AR 眼镜，让科技更人性化。 / AI 使代码变更翻倍，同时工程团队缩减 30%，显示出真实的生产力提升。 / Snap 倡导平台合作与早期干预，以保护青少年网络安全。</description>
+  </item>
+  <item>
+    <title>当代码变得廉价后的软件工程——对话萨提亚·纳德拉 — The Pragmatic Engineer</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/satya-thepragm-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/satya-thepragm-2026/</guid>
+    <pubDate>Thu, 19 Nov 2026 01:56:45 -0000</pubDate>
+    <description>微软 CEO 萨提亚·纳德拉谈 AI 时代真正稀缺的不是写代码，而是验证代码。  要点: 当代码生成变得廉价，验证就成了最难的部分。 / 企业必须掌控自己的 AI 技术栈、上下文和学习循环，而非依赖单一供应商。 / 决策引擎是一种新原语，能在软件中实现可靠、token 高效的智能。</description>
+  </item>
+  <item>
+    <title>一年内 AI 接管风险：保罗·克里斯蒂亚诺谈超级智能与控制 — Dwarkesh Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/christiano-dwarkesh-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/christiano-dwarkesh-2026/</guid>
+    <pubDate>Thu, 19 Nov 2026 01:56:45 -0000</pubDate>
+    <description>保罗·克里斯蒂亚诺警告，未来 6 到 12 个月内 AI 剥夺人类权力的风险约为 10%，并解释了为何自动化的 AI 研发可能将数年的进展压缩到数月之内。  要点: 超级智能可能一年内出现，人类几乎没有时间控制它。 / AI 研发正在自动化，将数年的进展压缩到几个月。 / 暂停预训练和强化学习的算法进展对安全有净收益。</description>
+  </item>
   <item>
     <title>英伟达 2027 财年第三季度财报电话会｜双语要点 — 英伟达 2027 财年 Q3 财报电话会</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/colettekress-nvidiaq3-2026</link>
@@ -174,48 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/andrewng-etdigita-2026/</guid>
     <pubDate>Sat, 07 Nov 2026 01:39:15 -0000</pubDate>
     <description>吴恩达解析 AI 为何擅长可验证任务却在判断类任务上失手，并主张加速有益 AI 应用、遏制有害用途。  要点: AI 擅长可验证任务但缺乏判断力，因此就业末日论被夸大。 / 应加速有益的通用 AI，仅放缓有害应用而非技术本身。 / 开源权重模型是印度等国家实现主权 AI 访问的最经济途径。</description>
-  </item>
-  <item>
-    <title>为人人构建持续学习产品：对话 Trajectory 创始人 Ronak — Training Data</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/ronakmalde-training-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ronakmalde-training-2026/</guid>
-    <pubDate>Fri, 06 Nov 2026 01:43:51 -0000</pubDate>
-    <description>Trajectory 创始人 Ronak 解析为何当下 AI 仍处于“伪持续学习”阶段，以及他的公司如何让人人都能轻松完成训练、评估与部署。  要点: 持续学习是下一个范式，让模型像人一样从真实轨迹中持续改进。 / 瓶颈在于将研究与真实世界部署连接起来，而非架构突破。 / 产品构建者变成园丁，搭好支架让产品自主改进。</description>
-  </item>
-  <item>
-    <title>爆红一个月后：Jev 创作者谈编程智能体、基准测试与 AI 可靠性鸿沟 — Unsupervised Learning</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/diogoalmeida-unsuperv-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/diogoalmeida-unsuperv-2026/</guid>
-    <pubDate>Fri, 06 Nov 2026 01:43:51 -0000</pubDate>
-    <description>Typescape CEO Diogo 回顾 Jev 爆红一个月后的思考，探讨 AI 模型的可靠性鸿沟，以及打造机器原生智能所需的条件。  要点: AI 代理的真正瓶颈是可靠性，而非基准分数。 / 模型应像 SQL 一样与供应商无关，以避免锁定。 / 编码代理提升生产力 20-40%，但用例间差异巨大。</description>
-  </item>
-  <item>
-    <title>Robinhood CEO Vlad Tenev：代币化、智能体交易与扩大所有权 — No Priors</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/vladtenev-nopriors-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/vladtenev-nopriors-2026/</guid>
-    <pubDate>Fri, 06 Nov 2026 01:43:51 -0000</pubDate>
-    <description>Robinhood CEO Vlad Tenev 讲述代币化、预测市场与 AI 智能体交易如何让全球更多人拥有资产。  要点: 广泛的股权让民众成为体系的捍卫者，从而保障社会稳定。 / 代币化和代理交易能让全球用户民主化地进入美国市场和私营公司。 / AI 应赋能个人而非仅大实验室；垄断数学发现是反乌托邦的。</description>
-  </item>
-  <item>
-    <title>AI 是否像我们，AI 会像我们吗：Geoffrey Hinton 2026 年哥德尔讲座 — 维也纳工业大学信息学</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/hinton-tuwienin-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/hinton-tuwienin-2026/</guid>
-    <pubDate>Fri, 06 Nov 2026 01:43:51 -0000</pubDate>
-    <description>Geoffrey Hinton 梳理 AI 两大范式——逻辑启发的符号主义与生物启发的神经网络学习——并追问 AI 是否像我们、未来是否会像我们。  要点: 大语言模型通过寻找兼容的特征向量来理解语言，这与人类非常相似。 / 数字智能可以通过权重共享以比人类快数十亿倍的速度分享知识。 / 我们应该设计 AI 像母亲对待婴儿一样，关心人类胜过关心自己。</description>
-  </item>
-  <item>
-    <title>潜空间幕后：杀死我的 SaaS、Jev 与 2026 年的 AI——AIE 上海特别节目 — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/shawnwang-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/shawnwang-latentsp-2026/</guid>
-    <pubDate>Thu, 05 Nov 2026 01:50:54 -0000</pubDate>
-    <description>Shawn 做客潜空间，畅谈 AIE 落地上海、中国 AI 创业文化，以及 2026 年 AI 走向何方。  要点: AI 工程师是围绕模型构建工具链的人，而非仅训练模型的研究者。 / 中型 SaaS 面临消亡，因为编码智能体让中小企业能克隆并定制软件。 / 更小的系统一模型可能比大模型更有胜算。</description>
-  </item>
-  <item>
-    <title>特努斯首次以 CEO 身份主持财报电话会：苹果九月季度营收 1145 亿美元创纪录 — 苹果 2026 Q4 财报电话会</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/johnternus-appleq4-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/johnternus-appleq4-2026/</guid>
-    <pubDate>Wed, 04 Nov 2026 03:34:46 -0000</pubDate>
-    <description>特努斯首次以苹果 CEO 身份主持财报电话会：九月季度营收 1145 亿美元，同比增长 12% 创纪录；iPhone Duo、Siri AI 与首款触控 Mac 登场，新任 COO 萨比·汗回应供应链与内存成本问题。  要点: 九月季度营收创纪录达 1145 亿美元，25 亿活跃设备推动服务业务增长。 / Siri AI 基于请求、注重隐私且深度集成，并非代理式；服务器功能将推出付费层级。 / 前所未有的内存定价成为日益增长的成本阻力；苹果不情愿地上调了部分产品价格。</description>
   </item>
 </channel>
 </rss>

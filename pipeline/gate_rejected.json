@@ -813,5 +813,70 @@
 "t": "Why Enterprise AI Isn’t Delivering ROI | Ahmed Bashir, DevRev",
 "why": "嘉宾Ahmed Bashir不在站内名单中，且DevRev CTO的访谈虽为实质性AI访谈，但主嘉宾未匹配名单。",
 "at": "2026-11-15"
+},
+"Wj00YlDuWXc|mylespalmer": {
+"t": "Palmer Luckey: How Steve Jobs Ruined Everything, the $2B Oculus Sale & Getting F",
+"why": "视频主角是 Palmer Luckey（Oculus/Anduril 创始人），并非站内登记的 Myles Palmer（Metalab 设计总监），属同名误搜",
+"at": "2026-11-19"
+},
+"KeuxrG2hXW4|mylespalmer": {
+"t": "John “Goldfinger” Palmer, My Dad & Tenerife Timeshare Fraud | Chris Burton",
+"why": "视频讲述的是John \"Goldfinger\" Palmer相关的特内里费分时度假诈骗故事，与站内登记的Metalab设计总监Myles Palmer无关，属于",
+"at": "2026-11-19"
+},
+"98syxABbUPk|mengto": {
+"t": "AI Whistleblower: OpenAI Scandal, AI Cults, Neuralink & Our Last Chance to Stop ",
+"why": "视频嘉宾是MIRI的Nate Soares，并非Design+Code创始人Meng To，属同名误搜/身份不符。",
+"at": "2026-11-19"
+},
+"JIMXEuT_ZAU|danklein": {
+"t": "What This OpenAI Insider Saw That Made Him Quit | The Ezra Klein Show",
+"why": "视频嘉宾是 Ezra Klein 与 David Robinson，与 UC Berkeley 的 Dan Klein 无关，仅姓氏相同，属同名误搜。",
+"at": "2026-11-19"
+},
+"A_156w0aYtU|danklein": {
+"t": "Bill Gates: A.I. ‘Makes Nuclear Weapons Look Like Nothing’ | The Ezra Klein Show",
+"why": "视频是 Ezra Klein 主持、Bill Gates 为嘉宾的访谈，Dan Klein 并未出现，仅姓氏相同，属同名误搜。",
+"at": "2026-11-19"
+},
+"locKEKxG3os|danklein": {
+"t": "The A.I.s Are Already Out of Control | The Ezra Klein Show",
+"why": "标题与频道均为 Ezra Klein 的节目，视频里的人是《纽约时报》评论员 Ezra Klein，并非 UC Berkeley 的 Dan Klein，属于同",
+"at": "2026-11-19"
+},
+"0dfn2rDFu7A|mattwhite": {
+"t": "'Media is getting the NVIDIA spy story all wrong' - ex-White House intelligence ",
+"why": "视频嘉宾是前白宫情报主管谈NVIDIA间谍事件与中美科技地缘政治，并非Linux Foundation/PyTorch Foundation的Matt Whit",
+"at": "2026-11-19"
+},
+"lfGJz36gF8g|elon": {
+"t": "I Analyzed 50 Elon Musk Interviews: Here's What He Does Differently",
+"why": "这是Evan Carmichael对马斯克访谈的二次分析/剪辑合集，马斯克并非本集主要嘉宾，也非完整单集访谈，不符合收录标准。",
+"at": "2026-11-19"
+},
+"wX8nDtGIfYA": {
+"t": "⚡️Anthropic: Know Before You IPO — Tanay Jaipuria, Wing VC",
+"why": "嘉宾为风投合伙人，纯财经/投资身份，非 AI 技术或产品从业者，不符合身份标准。",
+"at": "2026-11-19"
+},
+"uMO3zS5FLoc": {
+"t": "The Boomerang CEO(s): With MongoDB’s Dev Ittycheria",
+"why": "嘉宾是 MongoDB CEO，属企业软件高管/商业管理者，非 AI/ML 研究者、工程师或 AI 产品设计从业者；访谈主题为 CEO 管理与战略，身份不符收录",
+"at": "2026-11-19"
+},
+"kBJe4H_WobA": {
+"t": "What It Takes to Build an AI That Actually Knows You",
+"why": "主嘉宾Ken Liu不在站内名单中，且为产品介绍类访谈，非名单人物主讲。",
+"at": "2026-11-19"
+},
+"g_67TmQ8lGY": {
+"t": "What History Tells Us About the AI Revolution | Tyler Cowen & Alex Imas",
+"why": "嘉宾Tyler Cowen和Alex Imas均不在站内人物名单中，且为双人对谈形式，非名单主嘉宾。",
+"at": "2026-11-19"
+},
+"WFXlWYCXiTk": {
+"t": "Buying Tokens vs Building an AI Factory",
+"why": "嘉宾Sadeepa Wijesekara不在站内人物名单中，虽为实质性AI技术访谈但主嘉宾未匹配。",
+"at": "2026-11-19"
 }
 }

@@ -178,5 +178,23 @@
   "from": "Latent Space",
   "added": "2026-11-15",
   "auto": true
+ },
+ {
+  "pid": "ericglyman",
+  "en": "Eric Glyman",
+  "zh": "埃里克·格莱曼",
+  "tiEn": "Co-founder & CEO, Ramp",
+  "from": "Y Combinator",
+  "added": "2026-11-19",
+  "auto": true
+ },
+ {
+  "pid": "pauljun",
+  "en": "Paul Jun",
+  "zh": "保罗·俊",
+  "tiEn": "Brand Design Lead, Ramp",
+  "from": "Dive Club",
+  "added": "2026-11-19",
+  "auto": true
  }
 ]
