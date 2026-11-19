@@ -107,7 +107,7 @@ const page=(title,desc,url,ogtype,bodyHtml,ld,og=`${SITE}/assets/og.png`)=>`<!do
 <meta name="twitter:image" content="${og}">
 ${ld.map(jl).join('\n')}
 <style>${CSS}</style></head><body><div class="wrap">${bodyHtml}
-<footer>© AI Podcast · <a href="${SITE}/">aipodcast.jasonlin.tech</a> — 双语播客全文阅读。转录/翻译仅供学习评论，版权归原播客与权利人，应要求即下架()。</footer>
+<footer>© AI Podcast · <a href="${SITE}/">aipodcast.jasonlin.tech</a> — 双语播客全文阅读。转录/翻译仅供学习评论，版权归原播客与权利人，应要求即下架。</footer>
 </div><script>function shareThis(b){var u=document.querySelector('link[rel=canonical]').href,t=document.title,d=(document.querySelector('meta[name=description]')||{}).content||'';
 if(navigator.share){navigator.share({title:t,text:d,url:u}).catch(function(){});return;}
 try{navigator.clipboard.writeText(u).then(function(){var o=b.textContent;b.textContent='已复制链接';setTimeout(function(){b.textContent=o},1600)})}catch(e){}}</script>${BEACON}</body></html>`;
