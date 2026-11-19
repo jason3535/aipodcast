@@ -4,7 +4,7 @@
 
 站点: https://aipodcast.jasonlin.tech/
 规模: 361 位人物 / 852 期访谈
-每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。
+每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 单期/全站问答。
 
 ## 人物 People
 - [Sam Altman / 萨姆·奥尔特曼](https://aipodcast.jasonlin.tech/pp/altman/): CEO, OpenAI — 26 期

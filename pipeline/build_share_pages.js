@@ -130,14 +130,14 @@ EPISODES.forEach(e=>{
   const body=`<nav class="bc"><a href="${SITE}/">AI Podcast</a> › <a href="${person}">${esc(p.zh||p.en||'')}</a> › 本期</nav>
 <h1>${esc(e.tZh||e.tEn)}</h1><p class="en-t">${esc(e.tEn)}</p>
 <p class="meta"><a href="${person}">${esc(p.zh||'')} ${esc(p.en||'')}</a> · ${esc((e.pod&&e.pod.zh)||(e.pod&&e.pod.en)||'')} · ${esc(e.date||'')} · 约 ${e.min||''} 分钟${e.editorialRecap?` · <a href="${esc(e.src)}" rel="nofollow noopener">官方完整回放 ↗</a>`:vid(e.src)?` · <a href="${esc(e.src)}" rel="nofollow">原视频 ↗</a>`:''}</p>
-<a class="cta" href="${hash}">${e.editorialRecap?'打开双语要点 →':'打开互动全文版（中英对照 + 朗读 + 问答）→'}</a><button class="cta cta-2" onclick="shareThis(this)">分享本期</button>
+<a class="cta" href="${hash}">${e.editorialRecap?'打开双语要点 →':'打开互动全文版（中英对照 + 问答）→'}</a><button class="cta cta-2" onclick="shareThis(this)">分享本期</button>
 ${(e.sZh||e.sEn)?`<h2>本期速览 · Overview</h2><p class="zh">${esc(e.sZh||'')}</p><p class="en">${esc(e.sEn||'')}</p>`:''}
 ${tldr.length?`<h2>要点 · TL;DR</h2><ul>${li(tldr,x=>x)}</ul>`:''}
 ${cons.length?`<h2>核心观点 · Key points</h2><ul>${li(cons,x=>x)}</ul>`:''}
 ${cont.length?`<h2>反共识 · Contrarian takes</h2><ul>${li(cont,x=>x)}</ul>`:''}
 ${chs.length?`<h2>本期章节 · Chapters（共 ${chs.length}）</h2><ul>${chs.map((c,i)=>`<li><a href="#s${i+1}"><span class="zh">${esc(c.zh)}</span> <span class="en">${esc(c.en)}</span></a></li>`).join('')}</ul>`:''}
 ${transcriptHtml(e.id)}
-<p style="margin-top:26px"><a class="cta" href="${hash}">互动版：逐字朗读 + 针对本期提问 →</a></p>
+<p style="margin-top:26px"><a class="cta" href="${hash}">互动版：中英对照全文 + 针对本期提问 →</a></p>
 <script>(function(){var q=location.search.replace(/^\\?/,'');var h=${JSON.stringify(hash)}+(q?'?'+q:'');
 document.querySelectorAll('a.cta').forEach(function(a){a.href=h});
 /* 这张静态页的职责是给爬虫看:OG 卡预览、全文索引、结构化数据都指着它。
@@ -191,7 +191,7 @@ fs.writeFileSync(path.join(ROOT,'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`+
   urls.map(([u,d])=>`  <url><loc>${u}</loc><lastmod>${d}</lastmod></url>`).join('\n')+`\n</urlset>\n`);
 // llms.txt (GEO 索引)
-const llms=`# AI Podcast · 双语播客全文阅读站\n\n> 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.\n\n站点: ${SITE}/\n规模: ${Object.keys(byPid).filter(p=>PEOPLE[p]).length} 位人物 / ${EPISODES.length} 期访谈\n每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 逐字朗读 + 单期/全站问答。\n\n## 人物 People\n${Object.keys(byPid).filter(pid=>PEOPLE[pid]).sort((a,b)=>byPid[b].length-byPid[a].length).map(pid=>{const p=PEOPLE[pid];return `- [${p.en}${p.zh?' / '+p.zh:''}](${SITE}/pp/${pid}/): ${(p.tiEn||'').replace(/\n/g,' ')} — ${byPid[pid].length} 期`;}).join('\n')}\n\n## 最新访谈 Latest episodes\n${EPISODES.slice().sort((a,b)=>(b.date||'').localeCompare(a.date||'')).slice(0,40).map(e=>{const p=PEOPLE[e.pid]||{};return `- [${e.tEn}](${SITE}/e/${e.id}/) — ${p.en||''}, ${(e.pod&&e.pod.en)||''}, ${e.date||''}`;}).join('\n')}\n\n## 数据接口\n- sitemap: ${SITE}/sitemap.xml\n- MCP server (只读内容，外部 AI 可接入): https://mcp.jasonlin.tech/mcp\n`;
+const llms=`# AI Podcast · 双语播客全文阅读站\n\n> 把知名 AI 人物(研究者、实验室建设者、创始人)的英文长访谈整理成中英对照全文，提炼核心观点与反共识，并可针对内容问答。A bilingual reading site of famous AI figures' podcast interviews — full English↔Chinese transcripts, key points, contrarian takes, and Q&A.\n\n站点: ${SITE}/\n规模: ${Object.keys(byPid).filter(p=>PEOPLE[p]).length} 位人物 / ${EPISODES.length} 期访谈\n每期静态页含: 双语速览、核心观点、反共识、章节;互动版含中英对照全文 + 单期/全站问答。\n\n## 人物 People\n${Object.keys(byPid).filter(pid=>PEOPLE[pid]).sort((a,b)=>byPid[b].length-byPid[a].length).map(pid=>{const p=PEOPLE[pid];return `- [${p.en}${p.zh?' / '+p.zh:''}](${SITE}/pp/${pid}/): ${(p.tiEn||'').replace(/\n/g,' ')} — ${byPid[pid].length} 期`;}).join('\n')}\n\n## 最新访谈 Latest episodes\n${EPISODES.slice().sort((a,b)=>(b.date||'').localeCompare(a.date||'')).slice(0,40).map(e=>{const p=PEOPLE[e.pid]||{};return `- [${e.tEn}](${SITE}/e/${e.id}/) — ${p.en||''}, ${(e.pod&&e.pod.en)||''}, ${e.date||''}`;}).join('\n')}\n\n## 数据接口\n- sitemap: ${SITE}/sitemap.xml\n- MCP server (只读内容，外部 AI 可接入): https://mcp.jasonlin.tech/mcp\n`;
 fs.writeFileSync(path.join(ROOT,'llms.txt'),llms);
 // app.js 内容哈希 → 回填根 index.html 的 <script src> 版本号,确保每次内容变化都触发浏览器重新拉取(否则老访客可能吃到缓存的旧 app.js)
 const appHash=crypto.createHash('md5').update(h).digest('hex').slice(0,10);

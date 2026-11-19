@@ -3711,6 +3711,8 @@ function tsRetry(id){delete TS_ERR[id];ensureTs(id);render();}
    若你的 workers.dev subdomain 不同，改这里为 wrangler deploy 输出的实际地址。 */
 addEventListener('scroll',()=>{const b=document.getElementById('selBar');if(!b||b.style.display==='none')return;if(b.classList.contains('dock'))return;const t=document.getElementById('ttsBtn');if(t&&t.classList.contains('loading'))return;b.style.display='none';},{passive:true});
 const TTS_PROXY='https://tts.jasonlin.tech';
+/* 2026-11-19 朗读下线(SRC-527:历史提交泄露 ElevenLabs key)。按钮由 index.html CSS 隐藏,ttsPlay 直接返回;恢复时改回 true 并去掉那条 CSS。 */
+const TTS_ENABLED=false;
 let ttsAudio=null;
 function inReader(node){const el=node&&node.nodeType===3?node.parentElement:node;return !!(el&&el.closest&&el.closest('.reader')&&!el.closest('.chat'));}
 let _selPeek=null,_peekHold=false,_selMark=null;
@@ -3872,6 +3874,7 @@ function ttsTick(){
 }
 const TTS_SILENT='data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA';
 async function ttsPlay(){
+  if(!TTS_ENABLED)return;
   const btn=$('#ttsBtn');const text=btn.dataset.text;if(!text)return;
   if(btn.classList.contains('loading'))return;                 // 处理中：忽略重复点击
   if(ttsAudio&&!ttsAudio.paused){ttsStop(false);return;}

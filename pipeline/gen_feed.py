@@ -81,7 +81,7 @@ feed = f"""<?xml version="1.0" encoding="UTF-8"?>
   <title>AI Podcast · 双语播客全文</title>
   <link>{SITE}/</link>
   <atom:link href="{SITE}/feed.xml" rel="self" type="application/rss+xml"/>
-  <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · 划词朗读 · AI 问答</description>
+  <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · AI 问答</description>
   <language>zh-cn</language>
   <lastBuildDate>{formatdate(rows[0][0] if rows else None)}</lastBuildDate>
 {chr(10).join(items)}

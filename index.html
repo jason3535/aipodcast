@@ -307,6 +307,7 @@ if(m)m.content=document.documentElement.dataset.theme==='dark'?'#0e0e10':'#fcfcf
     background:linear-gradient(135deg,var(--f-nlp),var(--f-dl))}
 
   /* ---------- TTS 选中朗读 ---------- */
+  #ttsBtn{display:none!important}  /* 2026-11-19 朗读下线(SRC-527) */
   .sel-bar{position:absolute;display:none;align-items:center;gap:7px;z-index:110;transform:translateX(-50%)}
   .hl{border-bottom:2px solid var(--accent);cursor:pointer;background:linear-gradient(transparent 62%,color-mix(in srgb,var(--accent) 15%,transparent) 0);border-radius:1px}
   [data-theme="dark"] .hl{background:linear-gradient(transparent 62%,color-mix(in srgb,var(--accent) 28%,transparent) 0)}
@@ -1004,7 +1005,7 @@ if(m&&window.fetch)window.__EP_PRE={id:decodeURIComponent(m[1]),p:fetch('mcp-dat
 <button class="totop" id="toTop" title="回到顶部" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l6-6 6 6"/></svg></button>
 <script>addEventListener('scroll',()=>{const t=document.getElementById('toTop');if(t)t.classList.toggle('on',scrollY>700);},{passive:true});</script>
 
-<script src="app.js?v=d4f3e3fb6f" defer></script>
+<script src="app.js?v=9c57c2f582" defer></script>
 <script>/* SW 只在生产域名注册:本地预览(http/127.0.0.1)不注册,避免把 localhost 缓存搞混 */
 if('serviceWorker' in navigator&&/jasonlin\.tech$/.test(location.hostname))addEventListener('load',function(){navigator.serviceWorker.register('/sw.js')});</script>
 <!--SITE_INDEX_START--><details class="site-index"><summary>站点地图 · Sitemap（361 位人物 · 852 期）</summary>
