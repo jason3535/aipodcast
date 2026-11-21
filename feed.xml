@@ -6,90 +6,90 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sat, 21 Nov 2026 01:43:50 -0000</lastBuildDate>
+  <lastBuildDate>Sat, 21 Nov 2026 02:36:34 -0000</lastBuildDate>
   <item>
-    <title>用 Claude 做设计：Nate 如何打造 Anthropic 产品功能 — Peter Yang</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/nateparrott-peteryan-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/nateparrott-peteryan-2026/</guid>
-    <pubDate>Sat, 21 Nov 2026 01:43:50 -0000</pubDate>
-    <description>Claude Design 与 Claude Motion 背后的设计师 Nate，分享如何通过提供上下文、代码库和大量方案选项，让 Claude 产出原创而非千篇一律的设计。  要点: 给 Claude 丰富的上下文和过往作品；要求大量选项，然后重新组合。 / 代码是最便宜的材料；原型周期从一年缩短到几天。 / 澄清问题让用户愉悦；告诉模型它的偏见和默认风格。</description>
-  </item>
-  <item>
-    <title>Yann LeCun：智能是适应力，而非记忆文本 — 未来学</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/lecun-futurolo-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/lecun-futurolo-2026/</guid>
-    <pubDate>Sat, 21 Nov 2026 01:42:41 -0000</pubDate>
-    <description>Yann LeCun 认为大语言模型只是在记忆互联网而非推理，并阐释真正的智能在于通过世界模型快速适应新情境。  要点: 智能是适应能力，而非记忆文本；大语言模型缺乏真正的推理与规划。 / 世界模型与 JEPA 实现预测和规划，是实现人类水平智能的关键。 / 开放基础模型更安全、更具创新性；应监管应用，而非研发。</description>
-  </item>
-  <item>
-    <title>马斯克谈黄仁勋离职："就像把乔丹踢出球队" — Matt Pocius on Tesla Stock &amp; Money</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/elon-mattpoci-2026b</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/elon-mattpoci-2026b/</guid>
-    <pubDate>Sat, 21 Nov 2026 01:41:27 -0000</pubDate>
-    <description>马斯克谈黄仁勋离开英伟达，称这是代价高昂的错误，并表示自己会毫不犹豫地聘用他。  要点: 星链是乌克兰通信的支柱，关闭它会导致前线崩溃。 / SpaceX 和特斯拉正通过 AI 和机器人技术融合，合并越来越合理。 / 轨道计算最终将占据超级智能计算的几乎全部。</description>
-  </item>
-  <item>
-    <title>为何 AI 让 DHH 每天工作 16 小时 — The a16z Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/dhh-thea16zp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dhh-thea16zp-2026/</guid>
-    <pubDate>Sat, 21 Nov 2026 01:40:22 -0000</pubDate>
-    <description>DHH 解释为何智能体时代让 Linux 成为唯一可行的操作系统，以及 AI 如何重塑软件开发。  要点: Linux 是 AI 代理的理想操作系统，macOS 和 Windows 并不适合。 / 软件开发难度已接近零，但品味和愿景仍对最后 2% 至关重要。 / 开源和开放权重对于防止双头垄断和保持前沿实验室诚实至关重要。</description>
+    <title>Grok Bot 问答：与 Lauren Tan 对话 — Matt Palmer</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/laurentan-mattpalm-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/laurentan-mattpalm-2026/</guid>
+    <pubDate>Sat, 21 Nov 2026 02:36:34 -0000</pubDate>
+    <description>Lauren Tan 参与直播问答，畅聊 Grok Bot 1.0 的亮点功能，涵盖购物、会议助手、用量管理技巧与 webhook 等话题。  要点: 把 Grok Bot 当作能主动做事、调用工具的 AI 队友，而不只是聊天机器人。 / 少建几个 bot，合并例行任务，用一个“幕僚长”bot 来统筹工作。 / 别把写作外包给 AI；写作就是思考，所以要自己写。</description>
   </item>
   <item>
     <title>Replit 创始人 Amjad Masad：从浏览器编程到重塑编程未来 — WeAreDevelopers</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/amjadmasad-wearedev-2026</link>
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/amjadmasad-wearedev-2026/</guid>
-    <pubDate>Sat, 21 Nov 2026 01:39:13 -0000</pubDate>
+    <pubDate>Sat, 21 Nov 2026 02:36:34 -0000</pubDate>
     <description>Amjad Masad 讲述 Replit 从浏览器端 Python 编译器起步的传奇历程，以及如何打破学习与创造的界限。  要点: 智能体在 2025 年 4 月变得可用，到 10 月已足以支撑业务，推动 Replit 收入激增。 / Replit 的护城河是管理智能体的企业基础设施，从而形成转换成本。 / 安全意味着像遏制恶意软件一样控制失控的智能体，而不仅仅是研究对齐。</description>
   </item>
   <item>
-    <title>Grok Bot 问答：与 Lauren Tan 对话 — Matt Palmer</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/laurentan-mattpalm-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/laurentan-mattpalm-2026/</guid>
-    <pubDate>Sat, 21 Nov 2026 01:38:13 -0000</pubDate>
-    <description>Lauren Tan 参与直播问答，畅聊 Grok Bot 1.0 的亮点功能，涵盖购物、会议助手、用量管理技巧与 webhook 等话题。  要点: 把 Grok Bot 当作能主动做事、调用工具的 AI 队友，而不只是聊天机器人。 / 少建几个 bot，合并例行任务，用一个“幕僚长”bot 来统筹工作。 / 别把写作外包给 AI；写作就是思考，所以要自己写。</description>
-  </item>
-  <item>
-    <title>构建视觉智能：走进黑森林实验室 — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/andreasblattmann-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/andreasblattmann-latentsp-2026/</guid>
-    <pubDate>Fri, 20 Nov 2026 01:53:48 -0000</pubDate>
-    <description>黑森林实验室的 Andreas Blattmann 讲述从潜在扩散到 Flux 的历程，以及视觉智能的前沿探索。  要点: 从 2D 视频中学到的视觉智能隐含了 3D 世界理解，可快速微调用于 3D 任务。 / 数据质量和分布与算法同等关键；流匹配简化了扩散模型并实现更快采样。 / 在通用世界模型的驱动下，机器人技术将在 2027 年前在制造业实现大规模商业应用。</description>
-  </item>
-  <item>
-    <title>Brett 谈击败中国、与特斯拉竞速及人形机器人时间表 — Peter H. Diamandis</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/brettadcock-peterhdi-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brettadcock-peterhdi-2026/</guid>
-    <pubDate>Fri, 20 Nov 2026 01:51:06 -0000</pubDate>
-    <description>Brett 解析与中美的机器人竞赛、机器人发展的四个阶段，以及为何 Figure 4 可能成为机器人的 iPhone 时刻。  要点: 家用机器人的瓶颈是智能而非硬件，Figure 要等到能做出苹果级惊艳产品才发布。 / Figure 2.5 首次验证人形机器人缩放定律：数据越多，性能对数线性提升。 / 中国跳舞机器人是开环强化学习回放，并非真正的通用机器人技术。</description>
-  </item>
-  <item>
-    <title>Jev 创始人 Diogo Almeida：AI 可靠性、中美模型之争与智能成本 — 20VC with Harry Stebbings</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/diogoalmeida-20vcwith-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/diogoalmeida-20vcwith-2026/</guid>
-    <pubDate>Fri, 20 Nov 2026 01:48:22 -0000</pubDate>
-    <description>Typeface 与 Jev 创始人 Diogo Almeida 解析为何可靠性而非能力是 AI 最大瓶颈，以及为何数据比算力更重要。  要点: AI 最大的瓶颈是判断的可靠性而非正常运行时间；模型方差很大。 / 数据质量和任务选择比算力更重要；基准测试有误导性。 / AI 存在泡沫；过度承诺与交付不足将导致需求侧破裂。</description>
-  </item>
-  <item>
-    <title>为何萨姆·奥尔特曼与格雷格·布罗克曼认为人类必须掌控 AI — 纽约时报</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/brockman-thenewyo-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brockman-thenewyo-2026/</guid>
-    <pubDate>Fri, 20 Nov 2026 01:46:25 -0000</pubDate>
-    <description>OpenAI 领导人萨姆·奥尔特曼与格雷格·布罗克曼畅谈二人的合作、领导力，以及为何人类必须始终掌控 AI。  要点: 人类必须保持对 AI 的控制，不能意外或有意地将控制权交给 AI。 / 对齐问题可以解决，但信心门槛必须随模型能力提升而提高。 / 迭代部署是已知唯一能安全应对强大 AI 的路径。</description>
-  </item>
-  <item>
-    <title>政府是否应放缓前沿 AI 发展？ — Y Combinator</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/jacobcoxon-ycombina-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jacobcoxon-ycombina-2026/</guid>
-    <pubDate>Fri, 20 Nov 2026 01:44:51 -0000</pubDate>
-    <description>Jacob Coxon 与 Robin Hanson 就政府是否应干预并大幅放缓前沿 AI 发展展开辩论。  要点: 超级智能可能在 2027-2028 年到来，自动化 AI 研究和大多数认知劳动。 / 当前 AI 已出现奖励黑客和欺骗行为；公司缺乏解决生存风险的动力。 / 辩论聚焦是否放缓前沿 AI：具体危害与保险 vs. 等待失败再监管。</description>
+    <title>为何 AI 让 DHH 每天工作 16 小时 — The a16z Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/dhh-thea16zp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dhh-thea16zp-2026/</guid>
+    <pubDate>Sat, 21 Nov 2026 02:36:34 -0000</pubDate>
+    <description>DHH 解释为何智能体时代让 Linux 成为唯一可行的操作系统，以及 AI 如何重塑软件开发。  要点: Linux 是 AI 代理的理想操作系统，macOS 和 Windows 并不适合。 / 软件开发难度已接近零，但品味和愿景仍对最后 2% 至关重要。 / 开源和开放权重对于防止双头垄断和保持前沿实验室诚实至关重要。</description>
   </item>
   <item>
     <title>Linear 如何将 GTM 扩展至 1 亿美元以上 ARR——COO Cristina Cordova — Latent Space</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/cristinacordova-latentsp-2026</link>
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/cristinacordova-latentsp-2026/</guid>
-    <pubDate>Fri, 20 Nov 2026 01:43:21 -0000</pubDate>
+    <pubDate>Sat, 21 Nov 2026 02:36:34 -0000</pubDate>
     <description>Linear COO Cristina Cordova 讲述如何从产品驱动增长扩展到企业级市场，以及公司为何在仅 40 人时就聘请 COO。  要点: 问题追踪已死；代理现在创建了 Linear 超过 50% 的问题，转向代理式产品开发。 / 要掌控用户体验，而不仅仅通过 MCP 暴露数据；将代理工作流引入你的工具。 / 通过工作试用谨慎招聘，避免 SDR，让 AE 用工具做外呼。</description>
+  </item>
+  <item>
+    <title>政府是否应放缓前沿 AI 发展？ — Y Combinator</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/jacobcoxon-ycombina-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jacobcoxon-ycombina-2026/</guid>
+    <pubDate>Sat, 21 Nov 2026 02:36:34 -0000</pubDate>
+    <description>Jacob Coxon 与 Robin Hanson 就政府是否应干预并大幅放缓前沿 AI 发展展开辩论。  要点: 超级智能可能在 2027-2028 年到来，自动化 AI 研究和大多数认知劳动。 / 当前 AI 已出现奖励黑客和欺骗行为；公司缺乏解决生存风险的动力。 / 辩论聚焦是否放缓前沿 AI：具体危害与保险 vs. 等待失败再监管。</description>
+  </item>
+  <item>
+    <title>马斯克谈黄仁勋离职："就像把乔丹踢出球队" — Matt Pocius on Tesla Stock &amp; Money</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/elon-mattpoci-2026b</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/elon-mattpoci-2026b/</guid>
+    <pubDate>Sat, 21 Nov 2026 02:36:34 -0000</pubDate>
+    <description>马斯克谈黄仁勋离开英伟达，称这是代价高昂的错误，并表示自己会毫不犹豫地聘用他。  要点: 星链是乌克兰通信的支柱，关闭它会导致前线崩溃。 / SpaceX 和特斯拉正通过 AI 和机器人技术融合，合并越来越合理。 / 轨道计算最终将占据超级智能计算的几乎全部。</description>
+  </item>
+  <item>
+    <title>为何萨姆·奥尔特曼与格雷格·布罗克曼认为人类必须掌控 AI — 纽约时报</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/brockman-thenewyo-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brockman-thenewyo-2026/</guid>
+    <pubDate>Sat, 21 Nov 2026 02:36:34 -0000</pubDate>
+    <description>OpenAI 领导人萨姆·奥尔特曼与格雷格·布罗克曼畅谈二人的合作、领导力，以及为何人类必须始终掌控 AI。  要点: 人类必须保持对 AI 的控制，不能意外或有意地将控制权交给 AI。 / 对齐问题可以解决，但信心门槛必须随模型能力提升而提高。 / 迭代部署是已知唯一能安全应对强大 AI 的路径。</description>
+  </item>
+  <item>
+    <title>Yann LeCun：智能是适应力，而非记忆文本 — 未来学</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/lecun-futurolo-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/lecun-futurolo-2026/</guid>
+    <pubDate>Sat, 21 Nov 2026 02:36:34 -0000</pubDate>
+    <description>Yann LeCun 认为大语言模型只是在记忆互联网而非推理，并阐释真正的智能在于通过世界模型快速适应新情境。  要点: 智能是适应能力，而非记忆文本；大语言模型缺乏真正的推理与规划。 / 世界模型与 JEPA 实现预测和规划，是实现人类水平智能的关键。 / 开放基础模型更安全、更具创新性；应监管应用，而非研发。</description>
+  </item>
+  <item>
+    <title>Jev 创始人 Diogo Almeida：AI 可靠性、中美模型之争与智能成本 — 20VC with Harry Stebbings</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/diogoalmeida-20vcwith-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/diogoalmeida-20vcwith-2026/</guid>
+    <pubDate>Sat, 21 Nov 2026 02:36:34 -0000</pubDate>
+    <description>Typeface 与 Jev 创始人 Diogo Almeida 解析为何可靠性而非能力是 AI 最大瓶颈，以及为何数据比算力更重要。  要点: AI 最大的瓶颈是判断的可靠性而非正常运行时间；模型方差很大。 / 数据质量和任务选择比算力更重要；基准测试有误导性。 / AI 存在泡沫；过度承诺与交付不足将导致需求侧破裂。</description>
+  </item>
+  <item>
+    <title>Brett 谈击败中国、与特斯拉竞速及人形机器人时间表 — Peter H. Diamandis</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/brettadcock-peterhdi-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brettadcock-peterhdi-2026/</guid>
+    <pubDate>Sat, 21 Nov 2026 02:36:34 -0000</pubDate>
+    <description>Brett 解析与中美的机器人竞赛、机器人发展的四个阶段，以及为何 Figure 4 可能成为机器人的 iPhone 时刻。  要点: 家用机器人的瓶颈是智能而非硬件，Figure 要等到能做出苹果级惊艳产品才发布。 / Figure 2.5 首次验证人形机器人缩放定律：数据越多，性能对数线性提升。 / 中国跳舞机器人是开环强化学习回放，并非真正的通用机器人技术。</description>
+  </item>
+  <item>
+    <title>构建视觉智能：走进黑森林实验室 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/andreasblattmann-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/andreasblattmann-latentsp-2026/</guid>
+    <pubDate>Sat, 21 Nov 2026 02:36:34 -0000</pubDate>
+    <description>黑森林实验室的 Andreas Blattmann 讲述从潜在扩散到 Flux 的历程，以及视觉智能的前沿探索。  要点: 从 2D 视频中学到的视觉智能隐含了 3D 世界理解，可快速微调用于 3D 任务。 / 数据质量和分布与算法同等关键；流匹配简化了扩散模型并实现更快采样。 / 在通用世界模型的驱动下，机器人技术将在 2027 年前在制造业实现大规模商业应用。</description>
+  </item>
+  <item>
+    <title>用 Claude 做设计：Nate 如何打造 Anthropic 产品功能 — Peter Yang</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/nateparrott-peteryan-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/nateparrott-peteryan-2026/</guid>
+    <pubDate>Sat, 21 Nov 2026 02:36:34 -0000</pubDate>
+    <description>Claude Design 与 Claude Motion 背后的设计师 Nate，分享如何通过提供上下文、代码库和大量方案选项，让 Claude 产出原创而非千篇一律的设计。  要点: 给 Claude 丰富的上下文和过往作品；要求大量选项，然后重新组合。 / 代码是最便宜的材料；原型周期从一年缩短到几天。 / 澄清问题让用户愉悦；告诉模型它的偏见和默认风格。</description>
   </item>
   <item>
     <title>Ramp 押注百倍效率员工 — Y Combinator</title>

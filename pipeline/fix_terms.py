@@ -72,6 +72,10 @@ RULES = [
     (re.compile(BL+r"Groq ?bot"+BR, re.I), "Grok Bot"),
     # 同日:Elon 的芯片厂 Terafab 被写成 TerraFab / Terra Fab / terrafab(brettadcock / elon ×2 / aravind)
     (re.compile(BL+r"Terra ?[Ff]ab"+BR, re.I), "Terafab"),
+    # 2026-11-21 用户报:Brett Adcock 的 AI 公司 Hark(产品 Hark Pro)被写成 HARQ(brettadcock-peterhdi 「HARQ Pro」),
+    # 另有 3 期全大写 HARK。HARQ 只区分大小写匹配(通信术语 HARQ 不会出现在这类节目;真出现也只会是全大写+上下文 ARQ)。
+    (re.compile(BL+r"HARQ"+BR), "Hark"),
+    (re.compile(BL+r"HARK"+BR), "Hark"),
     (re.compile(BL+r"Gro[gk] bots"+BR), "Grok Bots"),
     (re.compile(BL+r"Grock模型"), "Grok 模型"),
     # 2026-11-15 laurentan-ycombina/aiinside-2026b:大写 B 的 GraphBot、小写 rockbot 漏网(上面两条区分大小写);
