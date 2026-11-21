@@ -196,5 +196,32 @@
   "from": "Dive Club",
   "added": "2026-11-19",
   "auto": true
+ },
+ {
+  "pid": "cristinacordova",
+  "en": "Cristina Cordova",
+  "zh": "克里斯蒂娜·科尔多瓦",
+  "tiEn": "COO, Linear",
+  "from": "Latent Space",
+  "added": "2026-11-20",
+  "auto": true
+ },
+ {
+  "pid": "jacobcoxon",
+  "en": "Jacob Coxon",
+  "zh": "雅各布·考克森",
+  "tiEn": "Former AI Safety Researcher, Anthropic & OpenAI",
+  "from": "Y Combinator",
+  "added": "2026-11-20",
+  "auto": true
+ },
+ {
+  "pid": "andreasblattmann",
+  "en": "Andreas Blattmann",
+  "zh": "安德烈亚斯·布拉特曼",
+  "tiEn": "Co-founder, Black Forest Labs",
+  "from": "Latent Space",
+  "added": "2026-11-20",
+  "auto": true
  }
 ]
