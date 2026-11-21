@@ -75,8 +75,17 @@ def main():
     ap.add_argument("--site", required=True, choices=list(SITES))
     ap.add_argument("--ids", nargs="*", default=[])
     ap.add_argument("--dry-run", action="store_true")
+    # 2026-11-21:cron 拆成两步——重建时 --dry-run 只写 json(随提交上线),push 成功后 --send-only 只发推送、不碰文件
+    ap.add_argument("--send-only", action="store_true")
     a = ap.parse_args()
     site = SITES[a.site]
+    if a.send_only:
+        if not a.ids:
+            print("本轮无新条目,不发推送。"); return
+        tok = token()
+        if not tok:
+            print("⚠ 没有 PUSH_TOKEN,跳过发送。", file=sys.stderr); return
+        return send(a.site, tok)
     root = site["root"]
 
     items_all = json.loads((root / site["data"]).read_text(encoding="utf-8"))[site["key"]]
@@ -142,11 +151,14 @@ def main():
     if not tok:
         print("⚠ 没有 PUSH_TOKEN,跳过发送(json 已更新)。", file=sys.stderr)
         return
+    send(a.site, tok)
 
+
+def send(site_key, tok):
     total = {"sent": 0, "gone": 0, "failed": 0}
     offset, guard = 0, 0
     while offset is not None and guard < 25:      # guard:别让 next 分页出 bug 时打转
-        r = post("/send", {"site": a.site, "offset": offset}, tok)
+        r = post("/send", {"site": site_key, "offset": offset}, tok)
         for k in total:
             total[k] += r.get(k, 0)
         if r.get("errs"):

@@ -778,8 +778,9 @@ def regen_chain(new_ids):
                 ["python3", "pipeline/build_crosslinks.py", "--apply", "--write-pod-only"],
                 # 更新提醒:只对本轮收录成功的集发(new_ids 是 add_episode 回报的真实 id,
                 # 不是 added 那个计数器 —— 别拿计数器当列表)
-                ["python3", "pipeline/push_notify.py", "--site", "aipodcast", "--ids"] + new_ids]:
-        if not new_ids and cmd[1].endswith("push_notify.py"): continue   # 合并后重跑:不重复发提醒
+                # 2026-11-21:这里只写 push-latest.json(--dry-run 不发);真正发提醒挪到 push 成功之后(main 末尾)
+                # ——以前在门禁前就发,门禁一拦,订阅者点开是 404(11-20/21 两轮)
+                ["python3", "pipeline/push_notify.py", "--site", "aipodcast", "--dry-run", "--ids"] + new_ids]:
         rc, outp = run_cmd(cmd)
         log(f"  {'✓' if rc == 0 else '✗'} {cmd[1].split('/')[-1]} {('' if rc==0 else outp[-120:])}")
 
@@ -895,13 +896,16 @@ def main():
         log("无成功收录,不提交。"); return
 
     regen_chain(new_ids)
-    if not gates_ok(new_ids): return
 
     # 2026-09-09:此前按 plan 前 added 位拼人名,单集中途失败回滚时会把失败的人写进标题(romanugarte 失败却上了 commit)
     msg = f"chore: 自动保鲜 +{added} 期（{', '.join(i.split('-')[0] for i in new_ids) if new_ids else ''}）"
     if new_people:
         msg += f" +{len(new_people)} 新人物"
         log(f"本轮新建人物 {len(new_people)} 位（头像待补）:{', '.join(new_people)}")
+    # 2026-11-21:门禁没过以前是「放弃提交、改动留在工作区」——第二天 cron 在脏工作区上接着收,
+    # 两天的 12 期混成一堆都没上线(嘉宾名检查误报 Cool→Coxon)。现在与站点验证失败同样处理:转 fix 分支、master 退回。
+    if not gates_ok(new_ids):
+        divert_to_fix_branch(base, "提交前门禁未通过(详见上一条日志)", msg, new_ids); return
 
     # 站点验证(verify_site.js + check_transcript.py):过了才进 master;没过 → fix/auto-<日期> 分支,不推
     ok_v, why_v = site_verify(new_ids)
@@ -915,6 +919,9 @@ def main():
     if bad_verify:
         divert_to_fix_branch(base, why, msg, new_ids); return
     rc2, outp2 = (0, "") if ok else (1, why)
+    if ok and new_ids:
+        rc_n, out_n = run_cmd(["python3", "pipeline/push_notify.py", "--site", "aipodcast", "--send-only", "--ids"] + new_ids)
+        log(f"  {'✓' if rc_n == 0 else '✗'} push_notify.py 发送" + ("" if rc_n == 0 else " " + out_n.strip()[-120:]))
     if not ok:
         notify(f"{added} 期已收录但没上线", f"push 失败:{why[-100:]}。本地已提交,下次 cron 启动会自动补推")
     # 新收录 URL 即时推给 Bing 系(失败不影响主流程)。2026-09-05 前这里没传 --site,脚本直接报

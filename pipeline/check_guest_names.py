@@ -30,7 +30,9 @@ COMMON = {"Most","More","Much","Many","Must","Fun","Fine","Full","First","From",
           # 而这道门禁本来就返回非零 —— postingest 没 set -e 所以一直被忽略。
           # 一个长期误报会让整道门禁失效,比漏报更危险。
           "Too","Than","Think","Thought","Today","Together","Tell","Try","Turn","Time","Times",
-          "Welcome","Would","Want","Way","Why","Who","With","Which","While","Whether","Working"}
+          "Welcome","Would","Want","Way","Why","Who","With","Which","While","Whether","Working",
+          # 2026-11-21 补:Jacob Coxon 那期开场的 "Cool." 被当成「Coxon」误听,连挡 11-20/11-21 两轮 cron(12 期没上线)
+          "Cool","Okay","Ok","Great","Good","Got","Go","Oh","Hi","Hey"}
 
 def lev(a, b):
     if a == b:

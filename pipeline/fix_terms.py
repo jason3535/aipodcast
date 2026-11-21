@@ -66,6 +66,12 @@ RULES = [
     # 2026-11-13 Grok Bot 团队补收 6 期又冒出三种:Grobot ×8(Roshan Dev Docs 期)、Grothbot、Grog bots(分写)。
     (re.compile(BL+r"Gro(?:th)?bots"+BR), "Grok Bots"),
     (re.compile(BL+r"Gro(?:th)?bot"+BR), "Grok Bot"),
+    # 2026-11-21:Groq 是芯片公司,没有 Groq Bot 产品;laurentan-mattpalm / dhh-lexfridm 里都是 Grok Bot。
+    # 术语表早有这条变体,但这里没规则,cron 收录时没修掉、被 check_transcript 拦下。
+    (re.compile(BL+r"Groq ?bots"+BR, re.I), "Grok Bots"),
+    (re.compile(BL+r"Groq ?bot"+BR, re.I), "Grok Bot"),
+    # 同日:Elon 的芯片厂 Terafab 被写成 TerraFab / Terra Fab / terrafab(brettadcock / elon ×2 / aravind)
+    (re.compile(BL+r"Terra ?[Ff]ab"+BR, re.I), "Terafab"),
     (re.compile(BL+r"Gro[gk] bots"+BR), "Grok Bots"),
     (re.compile(BL+r"Grock模型"), "Grok 模型"),
     # 2026-11-15 laurentan-ycombina/aiinside-2026b:大写 B 的 GraphBot、小写 rockbot 漏网(上面两条区分大小写);
