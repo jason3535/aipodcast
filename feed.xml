@@ -6,7 +6,49 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Sat, 21 Nov 2026 02:36:34 -0000</lastBuildDate>
+  <lastBuildDate>Tue, 24 Nov 2026 01:47:18 -0000</lastBuildDate>
+  <item>
+    <title>黄仁勋：英伟达背后的男人 — 我如何建立</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/jensen-howibuil-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jensen-howibuil-2026/</guid>
+    <pubDate>Tue, 24 Nov 2026 01:47:18 -0000</pubDate>
+    <description>英伟达 CEO 黄仁勋坦述自己的成长经历、严苛的领导风格，以及为何他再也不愿重新创办这家公司。  要点: 伟大需要忍受痛苦；忘记昨天是前进的关键。 / 英伟达的成功源于第一性原理思维和弹性多元的供应链。 / AI 创造的机遇多于破坏；危言耸听有害，创新应加速。</description>
+  </item>
+  <item>
+    <title>Dylan Patel 谈 Anthropic 上市与 AI 市场 — Sourcery with Molly O'Shea</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/dylanpatel-sourcery-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dylanpatel-sourcery-2026/</guid>
+    <pubDate>Tue, 24 Nov 2026 01:45:44 -0000</pubDate>
+    <description>Dylan Patel 做客 Sorcery，探讨 Anthropic 上市、AI 市场、数据中心扩张以及塑造行业的监管压力。  要点: 数据中心许可审批而非设备，是推动吉瓦级算力到 2028 年的最大瓶颈。 / 产品胜过模型：Muse 和 Instinct 虽模型较弱，但表现优于 OpenAI 的应用。 / 客观性是商业模式：绝不贩卖观点，即使激怒付费客户。</description>
+  </item>
+  <item>
+    <title>AI、意识与人类的未来 — Yuval Noah Harari</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/suleyman-yuvalnoa-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/suleyman-yuvalnoa-2026/</guid>
+    <pubDate>Tue, 24 Nov 2026 01:44:37 -0000</pubDate>
+    <description>穆斯塔法·苏莱曼与尤瓦尔·诺亚·赫拉利探讨 AI 的矛盾、大脑与直觉的割裂，以及人类可能失去对现实掌控的风险。  要点: AI 可能带来丰裕，但关键问题是收益归谁——AI 还是人类。 / 人类最大的 AI 风险是失去对控制世界的系统的集体理解。 / 发展轨迹并非必然；现在有意识地干预可以将 AI 导向人本主义目标。</description>
+  </item>
+  <item>
+    <title>Anthropic 为何能在公开市场取得成功 — Alex Kantrowitz</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/aaronlevie-alexkant-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/aaronlevie-alexkant-2026/</guid>
+    <pubDate>Tue, 24 Nov 2026 01:43:13 -0000</pubDate>
+    <description>Box CEO Aaron Levie 看好 Anthropic 上市前景，认为前沿 AI 的应用与普及仍处于极早期阶段。  要点: 前沿 AI 市场巨大且处于早期，随着采用扩散，token 消耗将大幅增长。 / 推理已盈利：Anthropic 每美元算力赚 1.72 美元，证明经济模式可行。 / 开源权重模型和路由扩大市场，而非使前沿实验室商品化。</description>
+  </item>
+  <item>
+    <title>为什么“人人都是构建者”行不通 — Lenny’s Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/sherifmansour-lennyspo-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/sherifmansour-lennyspo-2026/</guid>
+    <pubDate>Tue, 24 Nov 2026 01:42:00 -0000</pubDate>
+    <description>Atlassian 的 Sherif 解释为何产品经理不该只忙着写代码，以及为何填补上下文缺口比替团队做决定更重要。  要点: 产品经理负责的是决策速度而非决策本身；核心工作是填补上下文缺口。 / AI 放大优势与劣势；领域专长和品味仍然最重要。 / 将 AI 附加到现有工作流上以演进产品，而非从头重写。</description>
+  </item>
+  <item>
+    <title>Sam Altman 与 Greg Brockman 谈下一个大事件 — 纽约时报播客</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/brockman-newyorkt-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brockman-newyorkt-2026/</guid>
+    <pubDate>Tue, 24 Nov 2026 01:40:14 -0000</pubDate>
+    <description>OpenAI 的 Sam Altman 与 Greg Brockman 畅谈领导力、伙伴关系以及 AI 的未来走向。  要点: 人类必须保持控制权；AI 对齐可以实现，但信心需随能力提升而提高。 / 算力是最大瓶颈；迭代部署是已知唯一的安全路径。 / 现在上市不明智；行业需要共同安全标准，应更谨慎而非更激进。</description>
+  </item>
   <item>
     <title>Grok Bot 问答：与 Lauren Tan 对话 — Matt Palmer</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/laurentan-mattpalm-2026</link>
@@ -174,48 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/tulseedoshi-lennyspo-2026/</guid>
     <pubDate>Sun, 15 Nov 2026 04:06:28 -0000</pubDate>
     <description>Gemini 产品负责人 Tulsee Doshi 解析模型研发为何既是科学也是魔法，以及这对她招募的产品经理意味着什么。  要点: 产品经理因品味和洞察力能穿透 AI 噪音而重获价值。 / 为未来模型构建：60%现在可用，20%初现曙光，20%未来愿景。 / 安全需要监控思维链，人类洞察胜过 AI 垃圾。</description>
-  </item>
-  <item>
-    <title>代码仓库会变成软件工厂吗？——对话 Monaco AI 负责人 Mihail Eric — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/mihaileric-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/mihaileric-latentsp-2026/</guid>
-    <pubDate>Sun, 15 Nov 2026 04:06:28 -0000</pubDate>
-    <description>斯坦福教授、Monaco AI 负责人 Mihail Eric 探讨编程智能体如何重塑软件开发生命周期，以及对新一代工程师意味着什么。  要点: 具备扎实软件功底的 AI 原生工程师，能成为公司最有价值的资产。 / 可验证、结构良好、易于理解的智能体就绪代码库，是软件工厂的基础。 / 代码审查是新瓶颈；安全应优先关注依赖和供应链，而非对所有代码一视同仁。</description>
-  </item>
-  <item>
-    <title>做智能体的工程经理：建立对 AI 生成代码的信任 — Ai insider</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/laurentan-aiinside-2026b</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/laurentan-aiinside-2026b/</guid>
-    <pubDate>Sun, 15 Nov 2026 04:06:28 -0000</pubDate>
-    <description>Lauren Tan 分享如何把 AI 智能体当作工程团队成员，通过验证建立信任，并实现数百个自动合并 PR 的规模化开发。  要点: 验证是智能体最重要的技能：运行代码并测试行为以形成闭环。 / 工程师像管理厨房一样管理智能体：将标准编码为技能并通过 CI 强制执行。 / 信任需逐步建立；硬性执行比软规则更能保证代码质量。</description>
-  </item>
-  <item>
-    <title>Grok Bot 14 个最佳机器人：Peng 与 Lauren 谈智能体集群与信任 — Peter Yang</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/pengzheng-peteryan-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/pengzheng-peteryan-2026/</guid>
-    <pubDate>Fri, 13 Nov 2026 04:03:30 -0000</pubDate>
-    <description>Grok Bot 团队的 Peng 和 Lauren 分享各自的机器人配置——从幕僚长机器人到工程师集群，并探讨信任如何影响把工作交给智能体。  要点: 机器人应是有身份、记忆和工具的持久命名代理，而非临时聊天。 / 编排代理集群：幕僚长委派给负责人，负责人再生成云端代理。 / 逐步建立信任：观察、纠正，再将工作流转化为可复用技能。</description>
-  </item>
-  <item>
-    <title>我如何借助可信智能体一个月向生产环境提交 2500 个 PR — poteto（X）</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/laurentan-potetoon-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/laurentan-potetoon-2026/</guid>
-    <pubDate>Fri, 13 Nov 2026 04:03:30 -0000</pubDate>
-    <description>Lauren 分享如何通过验证技能建立对 AI 智能体的信任，从而以一人之力像软件工厂一样提交数千个 PR。  要点: 信任是瓶颈：打造让智能体自然做对事的环境。 / 验证技能让智能体运行应用、获取追踪并实证自检。 / 设计对智能体友好的框架，让简单路径默认就是正确路径。</description>
-  </item>
-  <item>
-    <title>SpaceXAI 设计师如何用 Grok Bot 与 Figma MCP 加速交付 — How I AI</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/johnbai-howiai-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/johnbai-howiai-2026/</guid>
-    <pubDate>Fri, 13 Nov 2026 04:03:30 -0000</pubDate>
-    <description>Grok Bot 设计团队的 John 与 Peng 演示如何借助 Figma MCP 在健身房完成设计交付，并打造符合设计师标准的个人网站。  要点: AI 应通过自动化任务让你离开电脑，而非把你拴在电脑前。 / 设计师应聚焦品味与愉悦感，把生产性工作交给 AI。 / 从随机想法开始，跳过规格文档，让 AI 引导快速原型制作。</description>
-  </item>
-  <item>
-    <title>Grok Bot 工作坊：注意力列表、智能体团队与云端智能体——Roshan 与 Kevin 分享 — koba</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/roshansadanani-koba-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/roshansadanani-koba-2026/</guid>
-    <pubDate>Fri, 13 Nov 2026 04:03:30 -0000</pubDate>
-    <description>SpaceX AI 产品团队的 Roshan 与 Kevin 演示 Grok Bot 的注意力列表、智能体团队与云端智能体如何服务产品工作流。  要点: 智能体需要独立的电脑和长期记忆，才能像同事一样工作，而非聊天框。 / 多个拥有限定记忆的专用智能体胜过单个通用智能体。 / 影子式注意力清单比传统待办清单更高效。</description>
   </item>
 </channel>
 </rss>
