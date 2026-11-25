@@ -943,5 +943,35 @@
 "t": "Why Neo-Clouds are Great Businesses & The State of Compute with Kush Bavaria, Co",
 "why": "嘉宾Kush Bavaria不在站内人物名单中，且为20VC单人访谈，非名单匹配对象。",
 "at": "2026-11-24"
+},
+"R5-tg3JlpKg|danklein": {
+"t": "I WAS A VIOLENT SETTLER – w/ Fmr. IDF Daniel Klein",
+"why": "视频里是前以色列国防军成员Daniel Klein，谈定居者经历，与UC Berkeley NLP教授Dan Klein同名但身份不符，且非AI技术内容。",
+"at": "2026-11-25"
+},
+"-v_WDzCzBGU|mjordan": {
+"t": "An Insider's TRUTH About The AI Arms Race (with Jordan Hall)",
+"why": "视频嘉宾是 Jordan Hall（前科技创始人），并非 UC Berkeley 教授 Michael I. Jordan，属同名误搜，身份不符。",
+"at": "2026-11-25"
+},
+"gkd5eOQGASU": {
+"t": "China Expert on Jensen’s Return",
+"why": "嘉宾 Jordan Schneider 是 ChinaTalk 主理人，属媒体/政策评论人，非 AI/技术/产品身份，不符合收录标准。",
+"at": "2026-11-25"
+},
+"K8rdrWQRd20": {
+"t": "The brain helped us build AI. Now AI is explaining the brain.",
+"why": "主持人为Hannah Fry，嘉宾Maria Eckstein和Kim Stachenfeld均不在站内名单中，且为双人访谈非单一主嘉宾。",
+"at": "2026-11-25"
+},
+"wDs1SMHR8es": {
+"t": "AlphaGo Researcher: LLMs Won’t Get Us to Reliable Reasoning. Here’s What Will.",
+"why": "嘉宾Thore Graepel不在站内人物名单中，虽为实质性AI技术访谈但无匹配pid。",
+"at": "2026-11-25"
+},
+"dGv7KiZyTfg": {
+"t": "AI Is Not the Same for Everyone: How to Measure AI Readiness | Kian Katanforoosh",
+"why": "嘉宾Kian Katanforoosh不在站内人物名单中，且为单人访谈但非名单人物。",
+"at": "2026-11-25"
 }
 }

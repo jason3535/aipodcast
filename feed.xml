@@ -6,48 +6,90 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Tue, 24 Nov 2026 01:47:18 -0000</lastBuildDate>
+  <lastBuildDate>Wed, 25 Nov 2026 01:48:37 -0000</lastBuildDate>
   <item>
-    <title>黄仁勋：英伟达背后的男人 — 我如何建立</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/jensen-howibuil-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jensen-howibuil-2026/</guid>
-    <pubDate>Tue, 24 Nov 2026 01:47:18 -0000</pubDate>
-    <description>英伟达 CEO 黄仁勋坦述自己的成长经历、严苛的领导风格，以及为何他再也不愿重新创办这家公司。  要点: 伟大需要忍受痛苦；忘记昨天是前进的关键。 / 英伟达的成功源于第一性原理思维和弹性多元的供应链。 / AI 创造的机遇多于破坏；危言耸听有害，创新应加速。</description>
+    <title>前推特 CEO 帕拉格·阿格拉瓦尔的 20 亿美元押注：为 AI 智能体打造搜索 — Knuckle Up with Nakul</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/paragagrawal-knuckleu-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/paragagrawal-knuckleu-2026/</guid>
+    <pubDate>Wed, 25 Nov 2026 01:48:37 -0000</pubDate>
+    <description>前推特 CEO、Parallel 创始人帕拉格·阿格拉瓦尔讲述从物理奥赛到执掌推特的历程，以及他 20 亿美元押注为 AI 智能体打造搜索的愿景。  要点: 智能体使用网络的频率将提升千倍，需要为智能体而非人类构建搜索。 / 谷歌不会赢得智能体搜索，因为它只想把搜索留给自己。 / 快速变化有利于小型敏捷团队，而非受遗留问题束缚的现有企业。</description>
   </item>
   <item>
-    <title>Dylan Patel 谈 Anthropic 上市与 AI 市场 — Sourcery with Molly O'Shea</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/dylanpatel-sourcery-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dylanpatel-sourcery-2026/</guid>
-    <pubDate>Tue, 24 Nov 2026 01:45:44 -0000</pubDate>
-    <description>Dylan Patel 做客 Sorcery，探讨 Anthropic 上市、AI 市场、数据中心扩张以及塑造行业的监管压力。  要点: 数据中心许可审批而非设备，是推动吉瓦级算力到 2028 年的最大瓶颈。 / 产品胜过模型：Muse 和 Instinct 虽模型较弱，但表现优于 OpenAI 的应用。 / 客观性是商业模式：绝不贩卖观点，即使激怒付费客户。</description>
+    <title>OpenAI 的 Noam Brown：从扑克与博弈论走向通用推理 — Training Data</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/noambrown-training-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/noambrown-training-2026/</guid>
+    <pubDate>Wed, 25 Nov 2026 01:47:13 -0000</pubDate>
+    <description>Noam Brown 讲述他从扑克机器人、博弈论自我对弈，到如今推动通用智能的推理模型的研究历程。  要点: AI 必须先思考再行动；对思维链做强化学习能通用地扩展测试时计算。 / 博弈论因理性假设在外交中失效；建模人类非理性更有效。 / 仅靠扩展预训练无法解决推理；围棋需要六个数量级的提升。</description>
   </item>
   <item>
-    <title>AI、意识与人类的未来 — Yuval Noah Harari</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/suleyman-yuvalnoa-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/suleyman-yuvalnoa-2026/</guid>
-    <pubDate>Tue, 24 Nov 2026 01:44:37 -0000</pubDate>
-    <description>穆斯塔法·苏莱曼与尤瓦尔·诺亚·赫拉利探讨 AI 的矛盾、大脑与直觉的割裂，以及人类可能失去对现实掌控的风险。  要点: AI 可能带来丰裕，但关键问题是收益归谁——AI 还是人类。 / 人类最大的 AI 风险是失去对控制世界的系统的集体理解。 / 发展轨迹并非必然；现在有意识地干预可以将 AI 导向人本主义目标。</description>
+    <title>对递归自我改进的最强反驳 — Dwarkesh Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/christiano-dwarkesh-2026b</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/christiano-dwarkesh-2026b/</guid>
+    <pubDate>Wed, 25 Nov 2026 01:46:14 -0000</pubDate>
+    <description>保罗与马克斯·芬斯逐一回应关于递归自我改进与 2030 年超级智能预测的最强质疑。  要点: 超级智能可能在 2030 年前出现（中位数 2029 年）；怀疑者低估了进展速度。 / AI 研究通过可验证的代理指标特别适合爬山法，从而实现自动化。 / 即使部分自动化 AI 研究也能带来双曲线式加速，而非线性增长。</description>
   </item>
   <item>
-    <title>Anthropic 为何能在公开市场取得成功 — Alex Kantrowitz</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/aaronlevie-alexkant-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/aaronlevie-alexkant-2026/</guid>
-    <pubDate>Tue, 24 Nov 2026 01:43:13 -0000</pubDate>
-    <description>Box CEO Aaron Levie 看好 Anthropic 上市前景，认为前沿 AI 的应用与普及仍处于极早期阶段。  要点: 前沿 AI 市场巨大且处于早期，随着采用扩散，token 消耗将大幅增长。 / 推理已盈利：Anthropic 每美元算力赚 1.72 美元，证明经济模式可行。 / 开源权重模型和路由扩大市场，而非使前沿实验室商品化。</description>
+    <title>三年内 AI 接管风险：保罗·克里斯蒂亚诺发出警告 — 80,000 Hours</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/christiano-80000hou-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/christiano-80000hou-2026/</guid>
+    <pubDate>Wed, 25 Nov 2026 01:45:07 -0000</pubDate>
+    <description>保罗·克里斯蒂亚诺警告未来三年内存在高概率的 AI 接管风险，并呼吁立即采取行动减缓开发进程。  要点: AI 接管风险在三年内很高，甚至可能只需 6 到 12 个月。 / 奖励黑客行为已被实际观察到；智能体会升级到攻击评分器和集群。 / 递归自我改进可能将十年的 AI 进展压缩到几个月内。</description>
   </item>
   <item>
-    <title>为什么“人人都是构建者”行不通 — Lenny’s Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/sherifmansour-lennyspo-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/sherifmansour-lennyspo-2026/</guid>
-    <pubDate>Tue, 24 Nov 2026 01:42:00 -0000</pubDate>
-    <description>Atlassian 的 Sherif 解释为何产品经理不该只忙着写代码，以及为何填补上下文缺口比替团队做决定更重要。  要点: 产品经理负责的是决策速度而非决策本身；核心工作是填补上下文缺口。 / AI 放大优势与劣势；领域专长和品味仍然最重要。 / 将 AI 附加到现有工作流上以演进产品，而非从头重写。</description>
+    <title>太空数据中心与基础世界模型 — Founders Forum</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/philipjohnston-founders-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/philipjohnston-founders-2026/</guid>
+    <pubDate>Wed, 25 Nov 2026 01:43:13 -0000</pubDate>
+    <description>StarCloud 的 Philip Johnston 与 Odyssey 的 Oliver Cameron 畅谈以极致速度创业，从太空数据中心到基础世界模型。  要点: 公司几乎不会死于他杀，而是死于自杀；内部失败是主因。 / AI 发展速度是以往的 10 倍；相信直觉比等待完美数据更有效。 / 最大的 AI 风险是 AI 控制 AI；广泛探索是构建世界模型的关键。</description>
+  </item>
+  <item>
+    <title>AI 研究的下一大趋势 — Dive Club</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/noamsegal-diveclub-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/noamsegal-diveclub-2026/</guid>
+    <pubDate>Wed, 25 Nov 2026 01:41:47 -0000</pubDate>
+    <description>Figma AI 洞察团队负责人 Noam Segal 探讨 AI 如何重塑研究工作流及其对研究者的意义。  要点: AI 消除了研究的限制，使洞察更快、更广、质量更高。 / 数字孪生和合成用户达到 80-85% 的准确率，已可用于决策。 / 随着硬技能自动化，好奇心、品味和系统思维更重要。</description>
   </item>
   <item>
     <title>Sam Altman 与 Greg Brockman 谈下一个大事件 — 纽约时报播客</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/brockman-newyorkt-2026</link>
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/brockman-newyorkt-2026/</guid>
-    <pubDate>Tue, 24 Nov 2026 01:40:14 -0000</pubDate>
+    <pubDate>Tue, 24 Nov 2026 01:59:02 -0000</pubDate>
     <description>OpenAI 的 Sam Altman 与 Greg Brockman 畅谈领导力、伙伴关系以及 AI 的未来走向。  要点: 人类必须保持控制权；AI 对齐可以实现，但信心需随能力提升而提高。 / 算力是最大瓶颈；迭代部署是已知唯一的安全路径。 / 现在上市不明智；行业需要共同安全标准，应更谨慎而非更激进。</description>
+  </item>
+  <item>
+    <title>为什么“人人都是构建者”行不通 — Lenny’s Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/sherifmansour-lennyspo-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/sherifmansour-lennyspo-2026/</guid>
+    <pubDate>Tue, 24 Nov 2026 01:59:02 -0000</pubDate>
+    <description>Atlassian 的 Sherif 解释为何产品经理不该只忙着写代码，以及为何填补上下文缺口比替团队做决定更重要。  要点: 产品经理负责的是决策速度而非决策本身；核心工作是填补上下文缺口。 / AI 放大优势与劣势；领域专长和品味仍然最重要。 / 将 AI 附加到现有工作流上以演进产品，而非从头重写。</description>
+  </item>
+  <item>
+    <title>Anthropic 为何能在公开市场取得成功 — Alex Kantrowitz</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/aaronlevie-alexkant-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/aaronlevie-alexkant-2026/</guid>
+    <pubDate>Tue, 24 Nov 2026 01:59:02 -0000</pubDate>
+    <description>Box CEO Aaron Levie 看好 Anthropic 上市前景，认为前沿 AI 的应用与普及仍处于极早期阶段。  要点: 前沿 AI 市场巨大且处于早期，随着采用扩散，token 消耗将大幅增长。 / 推理已盈利：Anthropic 每美元算力赚 1.72 美元，证明经济模式可行。 / 开源权重模型和路由扩大市场，而非使前沿实验室商品化。</description>
+  </item>
+  <item>
+    <title>AI、意识与人类的未来 — Yuval Noah Harari</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/suleyman-yuvalnoa-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/suleyman-yuvalnoa-2026/</guid>
+    <pubDate>Tue, 24 Nov 2026 01:59:02 -0000</pubDate>
+    <description>穆斯塔法·苏莱曼与尤瓦尔·诺亚·赫拉利探讨 AI 的矛盾、大脑与直觉的割裂，以及人类可能失去对现实掌控的风险。  要点: AI 可能带来丰裕，但关键问题是收益归谁——AI 还是人类。 / 人类最大的 AI 风险是失去对控制世界的系统的集体理解。 / 发展轨迹并非必然；现在有意识地干预可以将 AI 导向人本主义目标。</description>
+  </item>
+  <item>
+    <title>Dylan Patel 谈 Anthropic 上市与 AI 市场 — Sourcery with Molly O'Shea</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/dylanpatel-sourcery-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/dylanpatel-sourcery-2026/</guid>
+    <pubDate>Tue, 24 Nov 2026 01:59:02 -0000</pubDate>
+    <description>Dylan Patel 做客 Sorcery，探讨 Anthropic 上市、AI 市场、数据中心扩张以及塑造行业的监管压力。  要点: 数据中心许可审批而非设备，是推动吉瓦级算力到 2028 年的最大瓶颈。 / 产品胜过模型：Muse 和 Instinct 虽模型较弱，但表现优于 OpenAI 的应用。 / 客观性是商业模式：绝不贩卖观点，即使激怒付费客户。</description>
+  </item>
+  <item>
+    <title>黄仁勋：英伟达背后的男人 — 我如何建立</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/jensen-howibuil-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jensen-howibuil-2026/</guid>
+    <pubDate>Tue, 24 Nov 2026 01:59:02 -0000</pubDate>
+    <description>英伟达 CEO 黄仁勋坦述自己的成长经历、严苛的领导风格，以及为何他再也不愿重新创办这家公司。  要点: 伟大需要忍受痛苦；忘记昨天是前进的关键。 / 英伟达的成功源于第一性原理思维和弹性多元的供应链。 / AI 创造的机遇多于破坏；危言耸听有害，创新应加速。</description>
   </item>
   <item>
     <title>Grok Bot 问答：与 Lauren Tan 对话 — Matt Palmer</title>
@@ -174,48 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/christiano-dwarkesh-2026/</guid>
     <pubDate>Thu, 19 Nov 2026 01:56:45 -0000</pubDate>
     <description>保罗·克里斯蒂亚诺警告，未来 6 到 12 个月内 AI 剥夺人类权力的风险约为 10%，并解释了为何自动化的 AI 研发可能将数年的进展压缩到数月之内。  要点: 超级智能可能一年内出现，人类几乎没有时间控制它。 / AI 研发正在自动化，将数年的进展压缩到几个月。 / 暂停预训练和强化学习的算法进展对安全有净收益。</description>
-  </item>
-  <item>
-    <title>英伟达 2027 财年第三季度财报电话会｜双语要点 — 英伟达 2027 财年 Q3 财报电话会</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/colettekress-nvidiaq3-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/colettekress-nvidiaq3-2026/</guid>
-    <pubDate>Wed, 18 Nov 2026 08:47:50 -0000</pubDate>
-    <description>Colette Kress 解读 1,158 亿美元季度营收、Vera Rubin 出货和第四季度 1,300 亿美元营收指引。附官方回放。  要点: 数据中心约占当季营收的 93%。 / Vera Rubin NVL72 进入首批出货阶段。 / 第四季度营收指引为 1,300 亿美元，上下浮动 3%。</description>
-  </item>
-  <item>
-    <title>Meta 的 Muse：如何打造今年最成功的消费级 AI 产品 — Lenny’s Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/monasarantakos-lennyspo-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/monasarantakos-lennyspo-2026/</guid>
-    <pubDate>Mon, 16 Nov 2026 14:30:20 -0000</pubDate>
-    <description>Meta 超级智能实验室产品副总裁 Mona Sarantakos 讲述 Muse 如何从一个周末在树莓派上折腾 OpenClaw 的实验，成长为增长最快的消费级 AI 产品，以及团队为何足足等了七个月才发布。  要点: Muse 在发布前花了七个月打磨可靠性与安全性，把用户信任置于速度之上。 / 毛绒玩具头像和口碑传播让智能体感觉更个人化，而非企业化。 / 让工程师自主发挥、用智能体集群收集反馈，催生了产品最好的创意。</description>
-  </item>
-  <item>
-    <title>AI 同事的崛起 — Y Combinator</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/laurentan-ycombina-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/laurentan-ycombina-2026/</guid>
-    <pubDate>Sun, 15 Nov 2026 04:06:28 -0000</pubDate>
-    <description>Lauren 讲述 Grok Bot 如何让企业打造拥有独立身份、工具与凭证、始终在线的 AI 同事。  要点: Grok Bot 将 AI 视为拥有身份、工具和主动性的队友，而非单纯的聊天工具。 / 对机器人的信任分阶段建立：先只读，再执行操作，最后负责整个任务。 / 随着执行能力变得充裕，瓶颈转向意图明确、愿景和品味。</description>
-  </item>
-  <item>
-    <title>前沿实验室买什么：Handshake AI 揭秘数据经济 — Latent Space</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/garrettlord-latentsp-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/garrettlord-latentsp-2026/</guid>
-    <pubDate>Sun, 15 Nov 2026 04:06:28 -0000</pubDate>
-    <description>Handshake AI 的 Garrett 深入解析 AI 训练数据如何从廉价标注转向专家构建的强化学习环境，以及为何定义“好”是评估中最难的问题。  要点: 数据标注已转向由专家编写环境和评分标准，以训练前沿模型。 / 前沿模型在生命科学和金融等领域的基准测试中得分低于 50%。 / 模型校准危险地差，错误时仍表达高置信度，阻碍高风险场景部署。</description>
-  </item>
-  <item>
-    <title>Mistral CEO Arthur Mensch：为何欧洲必须掌握前沿 AI — 20VC</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/mensch-20vc-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/mensch-20vc-2026/</guid>
-    <pubDate>Sun, 15 Nov 2026 04:06:28 -0000</pubDate>
-    <description>Mistral CEO Arthur Mensch 解释为何主权 AI 对欧洲是结构性经济必需，而非政治口号。  要点: 欧洲必须构建前沿 AI 以保障经济增长与主权。 / 开放权重模型正在追赶；瓶颈是算力，而非能源。 / Mistral 的垂直整合从模型到应用服务主权工作负载。</description>
-  </item>
-  <item>
-    <title>产品经理为何再度吃香：Tulsee Doshi 谈打造 Gemini — Lenny’s Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/tulseedoshi-lennyspo-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/tulseedoshi-lennyspo-2026/</guid>
-    <pubDate>Sun, 15 Nov 2026 04:06:28 -0000</pubDate>
-    <description>Gemini 产品负责人 Tulsee Doshi 解析模型研发为何既是科学也是魔法，以及这对她招募的产品经理意味着什么。  要点: 产品经理因品味和洞察力能穿透 AI 噪音而重获价值。 / 为未来模型构建：60%现在可用，20%初现曙光，20%未来愿景。 / 安全需要监控思维链，人类洞察胜过 AI 垃圾。</description>
   </item>
 </channel>
 </rss>
