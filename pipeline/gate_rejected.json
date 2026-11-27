@@ -973,5 +973,30 @@
 "t": "AI Is Not the Same for Everyone: How to Measure AI Readiness | Kian Katanforoosh",
 "why": "嘉宾Kian Katanforoosh不在站内人物名单中，且为单人访谈但非名单人物。",
 "at": "2026-11-25"
+},
+"5Hb9GhlDNN8|kokotajlo": {
+"t": "“This Could NUKE Trump” Huang National Security Scandal AI Debate | With Daniel ",
+"why": "Piers Morgan Uncensored 是多嘉宾新闻辩论节目，标题虽含 Daniel Kokotajlo，但简介显示为中期选举、特朗普、黄仁勋丑闻等当日",
+"at": "2026-11-27"
+},
+"MsZmV9wzEZ8|satya": {
+"t": "Satya Nadella on the New Algorithm",
+"why": "简介显示为纽约时报活动对谈，主题是数字基础设施脆弱性与全球宕机，非实质性AI/技术访谈；且简介含订阅推广，内容偏新闻对谈。",
+"at": "2026-11-27"
+},
+"w0oOxs0WKNk|jensen": {
+"t": "Jensen Huang, AI & Why Founders Are Irreplaceable | Tobi Lütke, Shopify",
+"why": "标题虽含Jensen Huang，但实际主讲嘉宾是Shopify创始人Tobi Lütke，Jensen仅被提及/讨论，非本集主要嘉宾，不符合收录标准。",
+"at": "2026-11-27"
+},
+"Qe9d9dWyED0|thariq": {
+"t": "The Revolution vs The Renaissance — Thariq Shihipar, OpenAI",
+"why": "标题标注为 OpenAI，与档案中 Anthropic Claude Code 团队的 Thariq Shihipar 机构不符，身份存疑；且简介显示为 AI ",
+"at": "2026-11-27"
+},
+"UGSSg8vv8vg": {
+"t": "Anthropic's IPO: How It Changes Venture | Applied Compute, Bill.com & Mailchimp ",
+"why": "两位嘉宾均不在站内名单中，且为多人对谈节目，非单一主嘉宾的实质性AI访谈。",
+"at": "2026-11-27"
 }
 }

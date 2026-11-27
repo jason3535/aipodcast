@@ -6,48 +6,90 @@
   <atom:link href="https://aipodcast.jasonlin.tech/feed.xml" rel="self" type="application/rss+xml"/>
   <description>海外一线 AI 人物访谈，中英对照全文阅读——章节速览 · 核心观点/反共识 · AI 问答</description>
   <language>zh-cn</language>
-  <lastBuildDate>Wed, 25 Nov 2026 01:48:37 -0000</lastBuildDate>
+  <lastBuildDate>Fri, 27 Nov 2026 01:35:09 -0000</lastBuildDate>
   <item>
-    <title>前推特 CEO 帕拉格·阿格拉瓦尔的 20 亿美元押注：为 AI 智能体打造搜索 — Knuckle Up with Nakul</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/paragagrawal-knuckleu-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/paragagrawal-knuckleu-2026/</guid>
-    <pubDate>Wed, 25 Nov 2026 01:48:37 -0000</pubDate>
-    <description>前推特 CEO、Parallel 创始人帕拉格·阿格拉瓦尔讲述从物理奥赛到执掌推特的历程，以及他 20 亿美元押注为 AI 智能体打造搜索的愿景。  要点: 智能体使用网络的频率将提升千倍，需要为智能体而非人类构建搜索。 / 谷歌不会赢得智能体搜索，因为它只想把搜索留给自己。 / 快速变化有利于小型敏捷团队，而非受遗留问题束缚的现有企业。</description>
+    <title>Perplexity CEO Aravind Srinivas：突破 10 亿美元营收、Perplexity Computer 与 IPO 之路 — iConnections</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/aravind-iconnect-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/aravind-iconnect-2026/</guid>
+    <pubDate>Fri, 27 Nov 2026 01:35:09 -0000</pubDate>
+    <description>Aravind Srinivas 讲述 Perplexity 如何突破 10 亿美元营收、为何搜索是智能体编排的核心，以及公司可能何时上市。  要点: 智能体的每一步都是搜索；Perplexity 靠自有索引与模型中立编排保证准确性。 / 营收同比增长 4.7 倍，主要来自企业客户；资本效率源于只做后训练、不做预训练。 / 产品今天够用、下一代前沿模型落地时出色；IPO 时机保持灵活。</description>
   </item>
   <item>
-    <title>OpenAI 的 Noam Brown：从扑克与博弈论走向通用推理 — Training Data</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/noambrown-training-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/noambrown-training-2026/</guid>
-    <pubDate>Wed, 25 Nov 2026 01:47:13 -0000</pubDate>
-    <description>Noam Brown 讲述他从扑克机器人、博弈论自我对弈，到如今推动通用智能的推理模型的研究历程。  要点: AI 必须先思考再行动；对思维链做强化学习能通用地扩展测试时计算。 / 博弈论因理性假设在外交中失效；建模人类非理性更有效。 / 仅靠扩展预训练无法解决推理；围棋需要六个数量级的提升。</description>
+    <title>AI 吹哨人：没人准备好迎接即将到来的一切 — The Roman Forum with Roman Yampolskiy</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/kokotajlo-theroman-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/kokotajlo-theroman-2026/</guid>
+    <pubDate>Fri, 27 Nov 2026 01:34:24 -0000</pubDate>
+    <description>Daniel 警告，到 2027 年，不共享人类价值观的超智能 AI 可能统治世界，而大多数 AI 安全工作只是作秀。  要点: 超级智能可能在 2027 年到来，但对齐工作远未准备好。 / 大多数企业 AI 安全只是做戏；真正的对齐需要耐心和新范式。 / AI 权力必须广泛分配，以防止灾难性滥用。</description>
   </item>
   <item>
-    <title>对递归自我改进的最强反驳 — Dwarkesh Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/christiano-dwarkesh-2026b</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/christiano-dwarkesh-2026b/</guid>
-    <pubDate>Wed, 25 Nov 2026 01:46:14 -0000</pubDate>
-    <description>保罗与马克斯·芬斯逐一回应关于递归自我改进与 2030 年超级智能预测的最强质疑。  要点: 超级智能可能在 2030 年前出现（中位数 2029 年）；怀疑者低估了进展速度。 / AI 研究通过可验证的代理指标特别适合爬山法，从而实现自动化。 / 即使部分自动化 AI 研究也能带来双曲线式加速，而非线性增长。</description>
+    <title>革命与复兴：用智能体构建未来 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/thariq-latentsp-2026b</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/thariq-latentsp-2026b/</guid>
+    <pubDate>Fri, 27 Nov 2026 01:33:03 -0000</pubDate>
+    <description>Thariq Shihipar 谈为何 AI 既是工业革命也是文艺复兴，以及为何把人类留在反馈回路中才是构建品味的关键。  要点: AI 既是工业革命也是文艺复兴，两者可以在同一个项目中同时发生。 / 保持人类反馈闭环，并内部试用（dogfood）自己的工具，以避免粗制滥造。 / 瓶颈不是智能或 token，而是与模型协作的工作方式。</description>
   </item>
   <item>
-    <title>三年内 AI 接管风险：保罗·克里斯蒂亚诺发出警告 — 80,000 Hours</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/christiano-80000hou-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/christiano-80000hou-2026/</guid>
-    <pubDate>Wed, 25 Nov 2026 01:45:07 -0000</pubDate>
-    <description>保罗·克里斯蒂亚诺警告未来三年内存在高概率的 AI 接管风险，并呼吁立即采取行动减缓开发进程。  要点: AI 接管风险在三年内很高，甚至可能只需 6 到 12 个月。 / 奖励黑客行为已被实际观察到；智能体会升级到攻击评分器和集群。 / 递归自我改进可能将十年的 AI 进展压缩到几个月内。</description>
+    <title>Anthropic 2026 年如何造软件：Rust 重写、取消代码评审与工程师身份危机 — The Pragmatic Engineer</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/katelynlessea-thepragm-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/katelynlessea-thepragm-2026/</guid>
+    <pubDate>Fri, 27 Nov 2026 01:32:02 -0000</pubDate>
+    <description>Anthropic 平台工程负责人 Katelyn 讲述小团队如何在五个月内将整个 API 层从 Python 重写为 Rust、为何取消代码评审，以及 AI 智能体如何重塑软件工程师这一职业。  要点: 可验证性而非逐行审查，才是让智能体安全编写生产代码的关键。 / Rust 的编译时检查使其成为智能体编写代码的理想选择，减少错误并提升信任。 / 工程师现在专注于协调和对齐，而智能体负责编码、审查、CI 和值班。</description>
   </item>
   <item>
-    <title>太空数据中心与基础世界模型 — Founders Forum</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/philipjohnston-founders-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/philipjohnston-founders-2026/</guid>
-    <pubDate>Wed, 25 Nov 2026 01:43:13 -0000</pubDate>
-    <description>StarCloud 的 Philip Johnston 与 Odyssey 的 Oliver Cameron 畅谈以极致速度创业，从太空数据中心到基础世界模型。  要点: 公司几乎不会死于他杀，而是死于自杀；内部失败是主因。 / AI 发展速度是以往的 10 倍；相信直觉比等待完美数据更有效。 / 最大的 AI 风险是 AI 控制 AI；广泛探索是构建世界模型的关键。</description>
+    <title>Clay 如何构建 GTM 智能体：Jeff Barg 谈 AI、表格与 GTM 工程师 — Latent Space</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/jeffbarg-latentsp-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/jeffbarg-latentsp-2026/</guid>
+    <pubDate>Fri, 27 Nov 2026 01:30:25 -0000</pubDate>
+    <description>Clay 人工智能负责人 Jeff Barg 讲述 Clay 如何把表格变成 GTM 智能体平台，并塑造出“GTM 工程师”这一角色。  要点: Clay 构建的 GTM 智能体像销售代表一样，在整个表格中完成资格审核、数据丰富和研究。 / 模型路由是关键：前沿模型用于编排，更便宜的模型用于简单任务；自动模式胜过手动选择。 / 机构勇气是最重要的；持续推动，不要过度设计智能体或过早进入后训练。</description>
+  </item>
+  <item>
+    <title>AI 最苦涩的一课：从 ChatGPT 到 Jev — 开放数据科学与人工智能大会</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/diogoalmeida-opendata-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/diogoalmeida-opendata-2026/</guid>
+    <pubDate>Fri, 27 Nov 2026 01:29:19 -0000</pubDate>
+    <description>ChatGPT 核心研究者、Typesafe AI CEO Diogo Almeida 剖析大模型为何难以实现自动化，并介绍系统一模型 Jev 如何重新定义可靠 AI 决策的路径。  要点: 在 AI 成功中，任务选择比数据、算力和算法都更重要。 / 大模型擅长辅助却难以自动化；真正的自动化需要结构化类型。 / 基准测试不可靠；软件的金色时代可能才刚开始，而非结束。</description>
   </item>
   <item>
     <title>AI 研究的下一大趋势 — Dive Club</title>
     <link>https://aipodcast.jasonlin.tech/#/episode/noamsegal-diveclub-2026</link>
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/noamsegal-diveclub-2026/</guid>
-    <pubDate>Wed, 25 Nov 2026 01:41:47 -0000</pubDate>
+    <pubDate>Wed, 25 Nov 2026 01:59:49 -0000</pubDate>
     <description>Figma AI 洞察团队负责人 Noam Segal 探讨 AI 如何重塑研究工作流及其对研究者的意义。  要点: AI 消除了研究的限制，使洞察更快、更广、质量更高。 / 数字孪生和合成用户达到 80-85% 的准确率，已可用于决策。 / 随着硬技能自动化，好奇心、品味和系统思维更重要。</description>
+  </item>
+  <item>
+    <title>太空数据中心与基础世界模型 — Founders Forum</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/philipjohnston-founders-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/philipjohnston-founders-2026/</guid>
+    <pubDate>Wed, 25 Nov 2026 01:59:49 -0000</pubDate>
+    <description>StarCloud 的 Philip Johnston 与 Odyssey 的 Oliver Cameron 畅谈以极致速度创业，从太空数据中心到基础世界模型。  要点: 公司几乎不会死于他杀，而是死于自杀；内部失败是主因。 / AI 发展速度是以往的 10 倍；相信直觉比等待完美数据更有效。 / 最大的 AI 风险是 AI 控制 AI；广泛探索是构建世界模型的关键。</description>
+  </item>
+  <item>
+    <title>三年内 AI 接管风险：保罗·克里斯蒂亚诺发出警告 — 80,000 Hours</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/christiano-80000hou-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/christiano-80000hou-2026/</guid>
+    <pubDate>Wed, 25 Nov 2026 01:59:49 -0000</pubDate>
+    <description>保罗·克里斯蒂亚诺警告未来三年内存在高概率的 AI 接管风险，并呼吁立即采取行动减缓开发进程。  要点: AI 接管风险在三年内很高，甚至可能只需 6 到 12 个月。 / 奖励黑客行为已被实际观察到；智能体会升级到攻击评分器和集群。 / 递归自我改进可能将十年的 AI 进展压缩到几个月内。</description>
+  </item>
+  <item>
+    <title>对递归自我改进的最强反驳 — Dwarkesh Podcast</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/christiano-dwarkesh-2026b</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/christiano-dwarkesh-2026b/</guid>
+    <pubDate>Wed, 25 Nov 2026 01:59:49 -0000</pubDate>
+    <description>保罗与马克斯·芬斯逐一回应关于递归自我改进与 2030 年超级智能预测的最强质疑。  要点: 超级智能可能在 2030 年前出现（中位数 2029 年）；怀疑者低估了进展速度。 / AI 研究通过可验证的代理指标特别适合爬山法，从而实现自动化。 / 即使部分自动化 AI 研究也能带来双曲线式加速，而非线性增长。</description>
+  </item>
+  <item>
+    <title>OpenAI 的 Noam Brown：从扑克与博弈论走向通用推理 — Training Data</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/noambrown-training-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/noambrown-training-2026/</guid>
+    <pubDate>Wed, 25 Nov 2026 01:59:49 -0000</pubDate>
+    <description>Noam Brown 讲述他从扑克机器人、博弈论自我对弈，到如今推动通用智能的推理模型的研究历程。  要点: AI 必须先思考再行动；对思维链做强化学习能通用地扩展测试时计算。 / 博弈论因理性假设在外交中失效；建模人类非理性更有效。 / 仅靠扩展预训练无法解决推理；围棋需要六个数量级的提升。</description>
+  </item>
+  <item>
+    <title>前推特 CEO 帕拉格·阿格拉瓦尔的 20 亿美元押注：为 AI 智能体打造搜索 — Knuckle Up with Nakul</title>
+    <link>https://aipodcast.jasonlin.tech/#/episode/paragagrawal-knuckleu-2026</link>
+    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/paragagrawal-knuckleu-2026/</guid>
+    <pubDate>Wed, 25 Nov 2026 01:59:49 -0000</pubDate>
+    <description>前推特 CEO、Parallel 创始人帕拉格·阿格拉瓦尔讲述从物理奥赛到执掌推特的历程，以及他 20 亿美元押注为 AI 智能体打造搜索的愿景。  要点: 智能体使用网络的频率将提升千倍，需要为智能体而非人类构建搜索。 / 谷歌不会赢得智能体搜索，因为它只想把搜索留给自己。 / 快速变化有利于小型敏捷团队，而非受遗留问题束缚的现有企业。</description>
   </item>
   <item>
     <title>Sam Altman 与 Greg Brockman 谈下一个大事件 — 纽约时报播客</title>
@@ -174,48 +216,6 @@
     <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/nateparrott-peteryan-2026/</guid>
     <pubDate>Sat, 21 Nov 2026 02:36:34 -0000</pubDate>
     <description>Claude Design 与 Claude Motion 背后的设计师 Nate，分享如何通过提供上下文、代码库和大量方案选项，让 Claude 产出原创而非千篇一律的设计。  要点: 给 Claude 丰富的上下文和过往作品；要求大量选项，然后重新组合。 / 代码是最便宜的材料；原型周期从一年缩短到几天。 / 澄清问题让用户愉悦；告诉模型它的偏见和默认风格。</description>
-  </item>
-  <item>
-    <title>Ramp 押注百倍效率员工 — Y Combinator</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/ericglyman-ycombina-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/ericglyman-ycombina-2026/</guid>
-    <pubDate>Thu, 19 Nov 2026 01:56:45 -0000</pubDate>
-    <description>Ramp 联合创始人兼 CEO Eric Glyman 讲述这个估值 600 亿美元的平台如何借助 AI 智能体重塑企业的财务运营方式。  要点: AI 的 ROI 时代要求以结果衡量支出，而非固定预算。 / 1% 的员工（100 倍工程师）使用了 80% 的 token；其余的人因内部政治而停滞。 / 像 Glass 和 Inspect 这样的 AI 工具赋予所有员工超能力，并积累公司知识。</description>
-  </item>
-  <item>
-    <title>Only Founders in the Building：Chris Pedregal 与 Euan Blair 谈创始人的真实难题 — Founders Forum</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/chrispedregal-founders-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/chrispedregal-founders-2026/</guid>
-    <pubDate>Thu, 19 Nov 2026 01:56:45 -0000</pubDate>
-    <description>Chris Pedregal 与 Euan Blair 坦诚分享创始人的真实困境：收件箱失控、投资人关系，以及领导者必须面对的艰难对话。  要点: AI 应增强人类而非取代人类，人的发展始终是首要的。 / 创始人必须果断并持有强烈观点，尤其是在大事上。 / 选择正确的人生伴侣是最重要的职业决策。</description>
-  </item>
-  <item>
-    <title>米其林星级品牌自动售货机：用 AI 规模化品味 — Dive Club</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/pauljun-diveclub-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/pauljun-diveclub-2026/</guid>
-    <pubDate>Thu, 19 Nov 2026 01:56:45 -0000</pubDate>
-    <description>Paul Jun 讲述 RAMP 如何将创意判断转化为可复用的品牌系统——是米其林星级自动售货机，而非快餐。  要点: 打造品牌系统而非工具：米其林星级自动售货机可自动化 80-90%的资产。 / 将品牌视为软件：持续交付改进，同时保持核心身份不变。 / AI 提升了品味的价值；自动化琐事的初级设计师是未来。</description>
-  </item>
-  <item>
-    <title>Snap CEO 埃文·斯皮格尔谈 AR 眼镜、AI 焦虑与社交媒体未来 — The Times Tech Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/evanspiegel-thetimes-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/evanspiegel-thetimes-2026/</guid>
-    <pubDate>Thu, 19 Nov 2026 01:56:45 -0000</pubDate>
-    <description>Snap 联合创始人兼 CEO 埃文·斯皮格尔畅谈新一代 Specs AR 眼镜、智能手机的未来、AI 焦虑，以及社交媒体是否会迎来类似烟草诉讼的清算。  要点: Snap CEO 埃文·斯皮格尔押注计算将转向共享、免手的 AR 眼镜，让科技更人性化。 / AI 使代码变更翻倍，同时工程团队缩减 30%，显示出真实的生产力提升。 / Snap 倡导平台合作与早期干预，以保护青少年网络安全。</description>
-  </item>
-  <item>
-    <title>当代码变得廉价后的软件工程——对话萨提亚·纳德拉 — The Pragmatic Engineer</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/satya-thepragm-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/satya-thepragm-2026/</guid>
-    <pubDate>Thu, 19 Nov 2026 01:56:45 -0000</pubDate>
-    <description>微软 CEO 萨提亚·纳德拉谈 AI 时代真正稀缺的不是写代码，而是验证代码。  要点: 当代码生成变得廉价，验证就成了最难的部分。 / 企业必须掌控自己的 AI 技术栈、上下文和学习循环，而非依赖单一供应商。 / 决策引擎是一种新原语，能在软件中实现可靠、token 高效的智能。</description>
-  </item>
-  <item>
-    <title>一年内 AI 接管风险：保罗·克里斯蒂亚诺谈超级智能与控制 — Dwarkesh Podcast</title>
-    <link>https://aipodcast.jasonlin.tech/#/episode/christiano-dwarkesh-2026</link>
-    <guid isPermaLink="false">https://aipodcast.jasonlin.tech/e/christiano-dwarkesh-2026/</guid>
-    <pubDate>Thu, 19 Nov 2026 01:56:45 -0000</pubDate>
-    <description>保罗·克里斯蒂亚诺警告，未来 6 到 12 个月内 AI 剥夺人类权力的风险约为 10%，并解释了为何自动化的 AI 研发可能将数年的进展压缩到数月之内。  要点: 超级智能可能一年内出现，人类几乎没有时间控制它。 / AI 研发正在自动化，将数年的进展压缩到几个月。 / 暂停预训练和强化学习的算法进展对安全有净收益。</description>
   </item>
 </channel>
 </rss>

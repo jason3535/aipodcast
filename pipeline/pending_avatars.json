@@ -232,5 +232,14 @@
   "from": "Lenny’s Podcast",
   "added": "2026-11-24",
   "auto": true
+ },
+ {
+  "pid": "jeffbarg",
+  "en": "Jeff Barg",
+  "zh": "杰夫·巴格",
+  "tiEn": "Head of AI, Clay",
+  "from": "Latent Space",
+  "added": "2026-11-27",
+  "auto": true
  }
 ]
